@@ -634,7 +634,7 @@ async function viewInterview() {
   };
 
   async function run(url, body, mine) {
-    if (live.busy || live.ended) return;
+    if (live.busy || live.ended || live.micOpen) return;
     if (mine) add("me", mine, "You");
     setBusy(true);
     const bubble = add("iv", "", "Interviewer");
@@ -660,7 +660,7 @@ async function viewInterview() {
   }
   const send = () => {
     const text = input.value.trim();
-    if (!text) return;
+    if (!text || live.micOpen) return;      // typed text joins the spoken answer instead
     input.value = "";
     run(`/api/interviews/${live.iid}/say`, { text }, text);
   };
@@ -672,23 +672,36 @@ async function viewInterview() {
 
   const mic = document.getElementById("mic");
   if (mic) {
-    let recording = false;
+    let recording = false, pending = false;
+    const idleHint = input.placeholder;
+    // While the mic is open or Whisper is working, nothing else may send or speak.
+    const micState = (state) => {
+      recording = state === "rec";
+      live.micOpen = state !== "idle";
+      mic.classList.toggle("rec", recording);
+      mic.setAttribute("aria-label", recording ? "Stop and send" : "Talk");
+      mic.disabled = state === "wait";
+      ["send", "hint"].forEach(id => { document.getElementById(id).disabled = state !== "idle"; });
+      input.placeholder = recording ? "Listening… click the mic again when you're done." : state === "wait" ? "Transcribing…" : idleHint;
+    };
     mic.onclick = async () => {
-      if (live.busy && !recording) return;
+      if (pending || live.ended || (live.busy && !recording)) return;
+      pending = true;                         // ignore double clicks while a request is in flight
       try {
         if (!recording) {
           await post(`/api/interviews/${live.iid}/listen/start`);
-          recording = true; mic.classList.add("rec"); mic.setAttribute("aria-label", "Stop and send");
+          micState("rec");
         } else {
-          recording = false; mic.classList.remove("rec"); mic.disabled = true;
+          micState("wait");
           const r = await post(`/api/interviews/${live.iid}/listen/stop`);
-          mic.disabled = false; mic.setAttribute("aria-label", "Talk");
-          const text = (input.value.trim() + " " + (r.text || "")).trim();
+          micState("idle");
           if (!r.text) { toast("Didn't catch that. Try again, a little closer to the mic."); return; }
+          const text = (input.value.trim() + " " + r.text).trim();
           input.value = "";
           run(`/api/interviews/${live.iid}/say`, { text }, text);
         }
-      } catch (e) { recording = false; mic.classList.remove("rec"); mic.disabled = false; toast(e.message); }
+      } catch (e) { micState("idle"); toast(e.message); }
+      finally { pending = false; }
     };
   }
   input.focus();

@@ -115,9 +115,19 @@ def voice_ready(case=None) -> dict:
             except Exception as exc:
                 _voice["error"] = str(exc)
                 _voice["rec"] = None
+        elif _voice["stt"] is not None:
+            _voice["stt"].warm_up()             # reload Whisper if the last interview's end unloaded it
         if case is not None and _voice["stt"] is not None:
             _voice["stt"].prompt = voice.case_prompt(case)
     return _voice
+
+
+def voice_quiet() -> None:
+    """Cut any speech and close the mic, e.g. when an interview ends or another one replaces it."""
+    if _voice["tts"] is not None:
+        _voice["tts"].stop()
+    if _voice["rec"] is not None:
+        _voice["rec"].stop()
 
 
 # ---------------- session helpers ----------------
@@ -402,6 +412,7 @@ def start_interview(req: StartReq):
         raise HTTPException(400, f"level must be one of {LEVELS}")
     for s in INTERVIEWS.values():          # only one live interview at a time
         s["closed"] = True
+    voice_quiet()                          # the old interview's speech must not play before the new opening
     voice_error = None
     if req.voice:
         v = voice_ready(c)
@@ -443,7 +454,7 @@ def _stream(s: dict, events):
         with s["lock"]:
             try:
                 for ev in events:
-                    if ev.kind == "say" and tts:
+                    if ev.kind == "say" and tts and not _voice["rec"].active:   # never speak into an open mic
                         tts.feed(ev.text)
                     yield json.dumps({"kind": ev.kind, "text": ev.text, "exhibit_id": ev.exhibit_id,
                                       "title": next((e.title for e in s["iv"].case.exhibits
@@ -510,7 +521,7 @@ def end_interview(iid: str, req: EndReq):
         iv.end()
         s["closed"] = True
         if s["voice"]:
-            _voice["tts"].stop()
+            voice_quiet()
             try:
                 _voice["stt"].unload()      # make room for the grader
             except Exception:

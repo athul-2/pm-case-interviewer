@@ -45,18 +45,25 @@ class Recorder:
         self._chunks: list[np.ndarray] = []
         self._stream = None
 
+    @property
+    def active(self) -> bool:
+        return self._stream is not None
+
     def start(self) -> None:
-        self._chunks = []
+        self.stop()                            # a second start (double click) must not leak a live mic stream
+        chunks: list[np.ndarray] = []          # per-recording list, so a stale callback can't write into it
+        self._chunks = chunks
         self._stream = self._sd.InputStream(samplerate=SR, channels=1, dtype="float32",
-                                            callback=lambda data, *_: self._chunks.append(data.copy()))
+                                            callback=lambda data, *_: chunks.append(data.copy()))
         self._stream.start()
 
     def stop(self) -> np.ndarray:
-        if self._stream:
-            self._stream.stop()
-            self._stream.close()
-            self._stream = None
-        return np.concatenate(self._chunks)[:, 0] if self._chunks else np.zeros(0, np.float32)
+        stream, self._stream = self._stream, None
+        if stream:
+            stream.stop()
+            stream.close()
+        chunks, self._chunks = self._chunks, []
+        return np.concatenate(chunks)[:, 0] if chunks else np.zeros(0, np.float32)
 
 
 def case_prompt(case) -> str:
