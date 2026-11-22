@@ -71,3 +71,7 @@ docs/            user manual and decision log
 The interview engine, grader, web app, CLI and API interviewers all work. Voice works but has had little real-mic testing. The grader separates strong, mid-level and weak scripted candidates on all 6 case types. It has not yet been calibrated against human scores, so treat verdicts as a practice signal, not a hiring prediction. See [docs/DECISIONS.md](docs/DECISIONS.md) for how the design got here.
 
 The cases are practice material. Data marked "illustrative" in them is invented for teaching, and company figures are as of late 2026.
+
+## License
+
+[MIT](LICENSE). Company names in the cases belong to their owners; the cases are independent practice material, not affiliated with or endorsed by those companies.
