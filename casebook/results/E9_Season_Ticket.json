@@ -1,0 +1,175 @@
+{
+  "pun_title": "Season Ticket",
+  "case_type": "Metrics",
+  "asked_at": "By the Authors (JioStar style)",
+  "subject_company": "JioHotstar (JioStar, the Reliance-Viacom18-Star India joint venture)",
+  "round_and_level": "[uncertain] PM round (analytics / product execution), PM to SPM level; synthetic case modelled on JioStar-style metrics questions",
+  "difficulty": "Hard - retention is strongly seasonal (IPL runs roughly late March to early June), plan lengths and telco bundles distort 'churn', and the candidate must define different metrics for the season and the off-season without double standards",
+  "market_and_industry": "India; OTT video streaming and live sports (cricket); mass-market Bharat audience across Tier 1-3, heavy regional-language viewing (Hindi, Tamil, Telugu, Kannada, Bengali, Marathi, Bhojpuri commentary), mostly Android mobile with fast-growing connected-TV (CTV) viewing; many subscriptions come bundled with Jio and other telecom recharges",
+  "time_box_minutes": "25-30",
+  "exact_prompt": "\"You are the PM for subscriptions at JioHotstar. Every IPL we add tens of millions of paying subscribers, and many leave after the final. How would you measure subscriber retention during the IPL and in the off-season?\"",
+  "source_and_verification": "Synthetic (written by the authors in a JioStar style; no public report of this exact question found, Nov 2026). Searches of PracHub, Prepfully, Glassdoor and NextLeap for 'JioHotstar retention metrics' returned no matching reported question. Grounding sources: JioStar Q1 FY27 results (indiantelevision.com, Jul 2026) https://indiantelevision.com/mam/jiostar-q1-revenue-rises-14-per-cent-to-rs-10946-crore-as-ebitda-jumps-31-per-cent/ ; JioHotstar 300 mn subscribers after IPL 2025 (OTTVerse, 2025) https://ottverse.com/jiohotstar-nears-netflix-with-300-million-subscribers-after-ipl-2025-boost/ ; Hotstar subscriber loss after losing IPL rights (TechCrunch, Mar 2023) https://techcrunch.com/2023/03/31/ambani-bats-for-cricket-glory-as-disney-scales-back",
+  "context_as_of": "As of Nov 2026: (1) JioHotstar is the streaming service of JioStar, formed by the Viacom18-Star India merger (completed Nov 2024); JioCinema and Disney+ Hotstar were combined into JioHotstar in Feb 2025. It holds IPL digital and TV rights (through the 2023-27 cycle) and ICC rights in India. (2) Subscribers: JioHotstar said it crossed 100 mn paying subscribers at the end of March 2025 (early IPL 2025) and, per company statements at the APOS 2025 summit, about 300 mn subscribers after IPL 2025 (OTTVerse: https://ottverse.com/jiohotstar-nears-netflix-with-300-million-subscribers-after-ipl-2025-boost/). No official IPL 2026 paid-subscriber number or post-season churn figure was found [uncertain]. (3) Scale: average 530 mn monthly active users in Q1 FY27 (Apr-Jun 2026), +15% YoY; IPL 2026 digital reach about 700 mn and combined TV+digital reach about 1.2 bn; regional-language viewing +33%, CTV viewing +19% (indiantelevision.com, 18 Jul 2026). (4) Pricing for new subscribers from 28 Jan 2026: Mobile Rs 79/month, Rs 149/quarter, Rs 499/year; Super Rs 149/month, Rs 349/quarter, Rs 1,099/year; Premium Rs 299/month, Rs 699/quarter, Rs 2,199/year; existing subscribers keep old prices while auto-renew stays on (JioStar press release: https://cdn.jiostar.com/jiostar/wp-content/uploads/2026/01/JioHotstar-Introduces-Monthly-Plans.pdf). Monthly plans are new in 2026, which makes post-IPL churn visible faster than under the old quarterly-only Mobile plan. (5) Historical proof of seasonality: Disney+ Hotstar lost about 12.5 mn subscribers in one quarter (to 40.4 mn, Jun 2023) after losing IPL rights (TechCrunch). (6) New non-cricket retention levers: Tadka short-form app reached 100 mn users within two months of launch (RIL AGM, Jun 2026); entertainment watch time +16% YoY in Q1 FY27. Flag: subscriber counts mix telco-bundled and direct-pay subscriptions and are company-reported, so they may not be comparable to Netflix-style paid-member counts.",
+  "regulatory_context": "(1) RBI e-mandate rules for recurring payments (card and UPI AutoPay): a pre-debit notification at least 24 hours before each renewal, and an extra authentication factor for renewals above Rs 15,000 (all JioHotstar plans fall below it). The pre-debit alert is a known churn trigger, so 'mandate cancelled after pre-debit notice' is a measurable retention event. (2) NPCI UPI AutoPay: users can pause or revoke mandates from any UPI app, so a subscription can be lost outside JioHotstar's app; track mandate revocations through the payment aggregator. (3) Digital Personal Data Protection Act 2023 and DPDP Rules 2025: consent and purpose limits for using viewing data in retention targeting and win-back messaging; telecom-bundle users' data shared with Jio needs a lawful basis. (4) TRAI/DoT do not regulate OTT pricing directly, but telecom tariff bundles (Jio, Airtel recharges that include JioHotstar) are filed tariffs, so bundle changes affect 'subscribers' without any product change. (5) CCI approved the Viacom18-Star merger in 2024 with voluntary modifications; no retention-specific constraint. (6) Consumer Protection (E-Commerce) Rules and CCPA guidelines on dark patterns (2023) - 'subscription trap' and hard-to-cancel flows are listed dark patterns, so a retention strategy cannot rely on hiding cancellation.",
+  "public_data_anchors": "(1) 530 mn average MAU, Q1 FY27 (Apr-Jun 2026), +15% YoY - indiantelevision.com, 18 Jul 2026: https://indiantelevision.com/mam/jiostar-q1-revenue-rises-14-per-cent-to-rs-10946-crore-as-ebitda-jumps-31-per-cent/ (2) JioStar Q1 FY27 revenue from operations Rs 10,946 cr (+14%), operating EBITDA Rs 933 cr - same source. (3) IPL 2026 digital reach about 700 mn, TV+digital about 1.2 bn; regional viewing +33%; CTV +19% - same source. (4) IPL 2026 opening weekend reach above 515 mn across screens - exchange4media, Mar/Apr 2026: https://www.exchange4media.com/industry-briefing-news/ipl-2026-opening-weekend-reach-crosses-515-million-across-all-screens-jiostar-153468.html (5) About 300 mn subscribers after IPL 2025 (company-stated) - OTTVerse 2025: https://ottverse.com/jiohotstar-nears-netflix-with-300-million-subscribers-after-ipl-2025-boost/ ; 100 mn paying subscribers by end-March 2025 - bestmediainfo: https://bestmediainfo.com/mediainfo/mediainfo-digital/jiohotstar-claims-to-surpass-100-million-paying-subscribers-8896064 (6) 2026 plan prices (Rs 79/149/499 Mobile; Rs 149/349/1,099 Super; Rs 299/699/2,199 Premium) - JioStar press release Jan 2026: https://cdn.jiostar.com/jiostar/wp-content/uploads/2026/01/JioHotstar-Introduces-Monthly-Plans.pdf (7) Disney+ Hotstar fell 12.5 mn subscribers in a quarter to 40.4 mn (Jun 2023) after losing IPL rights - TechCrunch, 2023: https://techcrunch.com/2023/03/31/ambani-bats-for-cricket-glory-as-disney-scales-back (8) JioHotstar FY26 revenue about Rs 31,048 cr - StartupTalky: https://startuptalky.com/news/jiohotstar-fy26-revenue-31048-crore-maus-ipl-growth [uncertain: secondary source]",
+  "framework_applied": "Success Metrics framework (frameworks.md section 5: Company, Users & value, North Star + levers, Guardrails). Step 1 Company and product - JioStar is a scale player monetising through ads and subscriptions; the subscriptions product's goal is to turn IPL's annual spike into durable paid revenue, and its 'season' shape means retention must be judged against the calendar, not month-on-month. Step 2 Users and value - map segments (cricket-only seasonal fans, multi-genre households, telco-bundled users, CTV family accounts) through activation (first match watched), engagement (match-days per week; non-cricket hours), conversion (auto-renew on, plan upgrade) and retention (renewal and carry-over); money comes from subscription fees plus ad CPMs that depend on retained reach. Step 3 North Star - 'Engaged paid subscribers' (paid entitlement plus 2 or more viewing days in the last 28 days), read through two season-specific lenses: in-season Match-day Engagement Rate and off-season IPL-cohort carry-over rate at 90 days after the final; levers decomposed as acquired subs x renewal rate x non-cricket engagement x win-back rate. Step 4 Guardrails - ARPU and discount depth, ad reach, streaming quality (rebuffering, start failures at peak concurrency), notification opt-outs, complaint and dark-pattern risk, and content cost per retained subscriber.",
+  "clarifying_questions": [
+    "Q: Is the goal revenue, subscriber count or engagement? A: Leadership wants more of the IPL subscriber base still paying in the off-season, because off-season ad inventory and subscription revenue fall sharply. Revenue retention matters more than headcount.",
+    "Q: Which subscribers are in scope - direct-pay only, or telco-bundled too? A: Both are counted in the reported number, but you own the direct-pay subscription product; bundles are owned by partnerships. Tell me how you'd treat them.",
+    "Q: What plan mix do we have? A: Since January 2026 we sell monthly, quarterly and annual plans across Mobile, Super and Premium; most IPL acquisitions buy Mobile monthly or quarterly.",
+    "Q: How is 'off-season' defined? A: Roughly June to February, but it is not empty - India bilateral series, ICC events, other sports, entertainment and regional originals all run then.",
+    "Q: Do we want to keep every IPL subscriber, or is it acceptable that some leave and come back next year? A: Good question - leadership hasn't decided. Give us a view.",
+    "Q: Do we have reliable identity across devices and the Jio account? A: Yes, a single JioHotstar account, logged in by mobile number, across mobile and CTV.",
+    "Q: Any constraints - for example no more discounting? A: Finance does not want blanket discounts; ARPU must not fall more than 5% in the year."
+  ],
+  "interviewer_data_reveals": [
+    "Exhibit 1 (illustrative) - IPL 2026 direct-pay acquisition cohort, survival by days after the final (1 Jun 2026): D0 100%; D30 58%; D60 41%; D90 34%; D180 27%. Re-subscribed for IPL 2027 pre-season promo (Mar 2027 forecast): 61% of the original cohort.",
+    "Exhibit 2 (illustrative) - Carry-over at D90 by in-season behaviour: watched only cricket 19%; watched 1-5 hrs of non-cricket content during IPL 38%; watched 5+ hrs non-cricket 63%; CTV household 52%; mobile-only 29%.",
+    "Exhibit 3 (illustrative) - Plan mix of IPL 2026 acquisitions: monthly Mobile 46%, quarterly Mobile 31%, Super 15%, Premium/annual 8%. Auto-renew on at purchase: UPI AutoPay 64%, one-time UPI 36%.",
+    "Exhibit 4 (illustrative) - Off-season reasons for cancelling (exit survey, n=40,000): 'only wanted IPL' 54%; 'price' 18%; 'nothing to watch in my language' 14%; 'payment failure / mandate expired' 9%; other 5%.",
+    "Exhibit 5 (illustrative) - Telco-bundled base: 70% of bundled accounts watched under 1 viewing day per month in July 2026, versus 22% of direct-pay subscribers.",
+    "Exhibit 6 (real) - Q1 FY27 (Apr-Jun 2026): 530 mn average MAU; IPL 2026 digital reach about 700 mn; entertainment watch time +16% YoY (indiantelevision.com, Jul 2026)."
+  ],
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "You are the subscriptions PM at JioHotstar. Every IPL brings tens of millions of paying subscribers, and many leave after the final. How would you measure retention during the IPL and in the off-season?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'll use a success-metrics structure: first the company and the goal of the product, then the users and how they get value across the season, then one North Star with its levers, and finally guardrails. Can I ask a few questions first?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Go ahead."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "What's the business goal - subscriber count, revenue or engagement? Which subscribers are in scope? And does leadership want to keep every IPL subscriber, or is a fan who leaves in June and returns in March acceptable?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Revenue retention matters most. You own direct-pay; bundles are partnerships but are in the reported number. Leadership hasn't decided on the seasonal fan - give us a view. No blanket discounts; ARPU can't drop more than 5%."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Company context: JioStar has IPL and ICC rights and around 530 mn MAU last quarter, with IPL 2026 digital reach near 700 mn. The subscription product's job is to turn a two-month spike into durable revenue that also keeps ad reach high in the off-season. So retention here is not a flat monthly churn number; it has to be read against the cricket calendar, like a stadium's season ticket."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Users. I see four segments: (1) seasonal cricket fans on Mobile monthly or quarterly, mostly Tier 2-3, often watching in Hindi or regional commentary; (2) multi-genre households, often on CTV with Super or Premium; (3) telco-bundled users who never chose to pay; (4) sports-plus fans who also follow India bilateral series and ICC events. Does that match what you see?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Yes. Exhibit 3 shows the IPL 2026 plan mix: 46% monthly Mobile, 31% quarterly Mobile, 15% Super, 8% annual or Premium. 64% bought with UPI AutoPay."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then the journey: activation is the first match watched within 24 hours of paying; engagement in season is match-days watched per week; conversion is auto-renew staying on and any upgrade to CTV; retention is renewal after the season and whether they watch anything non-cricket. Money comes from fees plus ad CPMs on retained reach."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "One measurement trap: 'active subscriber' counts are inflated by quarterly and annual plans that haven't expired yet, and by bundles. So I'll measure retention three ways - entitlement (still paid), engagement (actually watching), and renewal (chose to pay again) - and always by acquisition cohort, aligned to days after the final, not calendar month."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "OK. What is your North Star?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "North Star: Engaged Paid Subscribers - accounts with a paid entitlement and 2 or more viewing days in the trailing 28 days. It joins user value (they are actually watching) with business value (they pay and see ads). I read it through two season lenses."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "In-season lens (IPL weeks): Match-day Engagement Rate - share of paid subs who watched at least 60% of match-days that week - plus the leading indicator that matters most for later: non-cricket discovery rate, the share of IPL subscribers who start at least one non-cricket title during the season."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Off-season lens: IPL-cohort carry-over rate - share of the IPL cohort still paid and engaged at D90 after the final - and season-over-season return rate, the share who are back for the next IPL. I'd present them as a tree:\nEngaged Paid Subs (off-season) = IPL cohort size x renewal rate x engaged share + win-backs\n  renewal rate = auto-renew-on share x payment success x (1 - voluntary cancel)\n  engaged share = f(non-cricket hours in season, language-content fit, CTV)\n  win-backs = lapsed users x reactivation for India series / ICC events"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Here's Exhibit 1: D30 58%, D60 41%, D90 34%, D180 27%. And 61% of the cohort is forecast to rejoin for IPL 2027."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That reshapes the answer to leadership's open question. If 61% come back next March but only 34% stay through D90, a big group is 'seasonal loyal' - they leave every June and return every March. Fighting all of that churn with discounts would cut ARPU. So I'd split the goal: keep the multi-genre segment year-round, and make it cheap and easy for seasonal fans to come back. Two separate retention metrics, not one."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Interesting. What drives carry-over?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Can I see behaviour splits?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Exhibit 2: D90 carry-over is 19% for cricket-only watchers, 38% for 1-5 hrs of non-cricket viewing during IPL, 63% for 5+ hrs. CTV households 52%, mobile-only 29%."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So non-cricket discovery during the season is the biggest lever - it more than triples carry-over (correlation, not proven cause, so I'd test it with a holdout). That's why the in-season metric isn't just match viewing: I'd set a target on 'IPL subscribers with 1+ hour of non-cricket content in season', surfaced through the post-match screen, regional originals and Tadka short-form clips. CTV adoption is the second lever."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Exhibit 4 shows cancellation reasons: 54% 'only wanted IPL', 18% price, 14% nothing in my language, 9% payment failure."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Three useful reads. The 9% payment failure is involuntary churn - fix it with mandate retries and reminders, which is the cheapest retention you can buy; I'd track involuntary churn separately. The 14% language gap is a content-programming signal by language cohort. And the 54% confirm we need the seasonal-return metric so we don't treat them as a failure."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "And bundles? Exhibit 5: 70% of bundled accounts watched under one day in July."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'd report bundled users separately and never let them prop up retention. For them 'retained' has to mean engaged, because payment is passive. A bundle user who watches is also the best conversion target into direct-pay when the telco plan changes."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What are your guardrails?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Five: (1) ARPU and discount depth - must stay within the 5% limit, so retention bought with discounts doesn't count; (2) ad reach and fill rate in the off-season, since ads are half the business; (3) streaming quality at peak - rebuffering and start failures - because a bad final drives churn; (4) notification opt-outs and uninstalls, so win-back pushes don't burn the channel; (5) cancellation-flow complaints and dark-pattern risk under the CCPA 2023 guidelines - cancellation must stay easy. I'd also watch content cost per retained subscriber."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How would you report this weekly?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "A season-aware dashboard: in IPL weeks - Match-day Engagement Rate, non-cricket discovery rate, auto-renew-on share, and quality metrics. Off-season - Engaged Paid Subs, carry-over survival curve by cohort and plan, involuntary churn, return rate during India series, and ARPU. Every number cut by language, plan, device and city tier, and compared with the same weeks last year, not last month."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Summarise."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Measure retention as a season ticket, not a monthly gym membership. North Star: Engaged Paid Subscribers. In season, push match-day engagement and non-cricket discovery; off season, track IPL-cohort carry-over at D90 and season-over-season return. Fix involuntary churn first, use non-cricket discovery and CTV as the main levers, keep bundles separate, and guard ARPU, ad reach, quality and easy cancellation."
+    }
+  ],
+  "answer_and_recommendation": "Ranked metrics: (1) North Star - Engaged Paid Subscribers (paid entitlement + 2 or more viewing days in trailing 28 days), always cut by acquisition cohort and compared with the same week last year. (2) Off-season - IPL-cohort carry-over rate at D90 after the final (illustrative baseline 34%, target 40%), with a survival curve by plan and segment; plus season-over-season return rate (share of the cohort back for the next IPL; illustrative 61%). (3) In-season - Match-day Engagement Rate plus non-cricket discovery rate (share of IPL subscribers with 1+ hour of non-cricket viewing during the season), the strongest leading indicator of carry-over (illustrative 19% vs 63% carry-over). Supporting metrics: auto-renew-on share at purchase, involuntary churn (payment/mandate failures), CTV adoption, language-content fit. Recommendation: split the goal - retain multi-genre and CTV households year-round; treat seasonal fans as returning season-ticket holders and optimise their return cost, not their June churn. First actions: fix involuntary churn (mandate retries, pre-debit reminders), run a holdout test on non-cricket discovery surfaces during IPL, report bundles separately. Risks: chasing carry-over with discounts (mitigate with the ARPU guardrail); correlation in Exhibit 2 not being causal (mitigate with holdouts); win-back spam (mitigate with opt-out guardrails). Closing line: 'Measure JioHotstar retention like a season ticket - keep the households who stay all year, and make the fans who leave in June come back cheaply in March.'",
+  "counter_metrics_guardrails": "(1) ARPU and average discount depth - retention gains bought with blanket discounts don't count (limit: ARPU down no more than 5%). (2) Off-season ad reach, impressions and fill rate - retained but non-viewing subscribers do not help ads. (3) Streaming quality at peak concurrency - video start failures, rebuffering ratio, latency vs TV - since a failed big-match stream drives cancellations. (4) Push-notification opt-out, WhatsApp/SMS block rate and uninstall rate - win-back campaigns must not burn channels. (5) Cancellation complaints and CCPA dark-pattern compliance (subscription trap) - cancellation must stay simple. (6) Content cost per engaged paid subscriber - retention via expensive off-season rights must pay back. (7) Bundled-user engagement reported separately so telco bundles do not inflate retention. Sanity definition rule: 'retained' always requires engagement, not just an unexpired entitlement.",
+  "follow_up_twists": [
+    "Twist: 'Finance proposes a Rs 499 annual Mobile plan pushed hard during IPL to lock users in - good idea?' Response: It lifts entitlement retention mechanically but not engagement; I'd test it and judge it on D180 Engaged Paid Subs and revenue per acquired user, not on 'active subscribers'.",
+    "Twist: 'Carry-over rose from 34% to 41% but ad impressions fell - what happened?' Response: Likely retained-but-dormant subscribers (annual plans or bundles); I'd check the engaged share and viewing days, because the North Star requires viewing, not entitlement.",
+    "Twist: 'An India-Australia series in November brings back 20% of lapsed users - count them as retained?' Response: Count them as win-backs in a separate line; they validate the seasonal-return model but should not be mixed into the D90 carry-over curve."
+  ],
+  "common_pitfalls": [
+    "Using monthly churn or total active subscribers: quarterly and annual plans and telco bundles hide churn until expiry, so the number looks fine in June and collapses later.",
+    "Treating every post-IPL cancellation as failure: many fans reliably return next season; discounting to keep them hurts ARPU without adding value.",
+    "Comparing month-on-month instead of same-period-last-year and by acquisition cohort, which confuses seasonality with real change.",
+    "Ignoring involuntary churn (UPI AutoPay mandate expiry, pre-debit notification cancellations), which is the cheapest churn to fix and often mixed into 'voluntary' churn."
+  ],
+  "skills_tested": "structuring, quant, business sense, prioritisation, communication",
+  "linked_teardown": "None",
+  "uncertain": [
+    "round_and_level",
+    "context_as_of",
+    "public_data_anchors"
+  ]
+}

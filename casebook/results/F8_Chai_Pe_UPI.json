@@ -1,0 +1,162 @@
+{
+  "pun_title": "Chai Pe UPI",
+  "case_type": "Guesstimate",
+  "asked_at": "By the Authors (synthetic, PhonePe-style merchant-payments guesstimate)",
+  "subject_company": "UPI ecosystem in Mumbai (PhonePe, Google Pay, Paytm QR at chai stalls and tapris)",
+  "round_and_level": "PM round (merchant payments / offline acquiring), APM to PM level; synthetic case modelled on PhonePe and Paytm offline-merchant guesstimates",
+  "difficulty": "Medium. There is no public count of Mumbai chai stalls, so the candidate must triangulate supply (stalls x cups x UPI share) with demand (daytime population x chai occasions). They must also handle informal-sector traps: one payer for a group, khata/monthly credit, and cash-preferring customers",
+  "market_and_industry": "India, Mumbai (Greater Mumbai / BMC area, about 1.3-1.45 cr residents and about 2 cr daytime population with commuters); UPI P2M offline micro-payments; street vendors and tapris (unorganised retail, food and beverage); Marathi, Hindi and Bambaiya-speaking customers; feature-phone to smartphone mix among buyers, and QR stickers plus soundboxes among vendors",
+  "time_box_minutes": "15",
+  "exact_prompt": "\"How many UPI transactions happen at chai stalls in Mumbai every day?\"",
+  "source_and_verification": "Synthetic (By the Authors, 2026), styled on PhonePe/Paytm offline-merchant guesstimates. No public source asks this exact question. Related public guesstimates: The Product Folks 'Estimate the total value of transactions processed by Paytm in a week' (https://www.theproductfolks.com/product-management-case-studies/estimate-the-total-value-of-transactions-processed-by-paytm-in-a-week). Data anchors come from press coverage of NPCI, the BMC hawker survey and Mumbai tea-vendor reporting (see public_data_anchors).",
+  "context_as_of": "[uncertain] As of Nov 2026: (1) UPI hit a record 25.47 bn transactions worth Rs 31.53 lakh Cr in Oct 2026, about 822 mn a day and about Rs 1.01 lakh Cr a day (Entrepreneur India, Nov 2026, https://india.entrepreneur.com/business-news/upi-hits-record-25-47-bn-transactions-in-october-daily-value-crosses-inr-1-l-cr). Sep 2026 was 24.07 bn, the first month above 800 mn a day (Free Press Journal). (2) App shares, Sep 2026: PhonePe 45.6%, Google Pay 32.2%, Paytm 8.1% of volume (NPCI via press); the Oct app-wise data was not yet out. (3) P2M is about 63% of UPI volume, and about 86% of P2M payments are below Rs 500 (FY26, secondary reports of NPCI data); Worldline puts the 2025 average P2M ticket at Rs 592. (4) Mumbai street vending: BMC's 2014 survey identified about 1.65 lakh hawkers, of whom about 99,435 completed documentation; BMC began issuing QR-coded ID cards (identity, not payment QR) in June 2026 (Free Press Journal, 2026). Hawker unions claim 3-5 lakh vendors. One 2018 estimate put Mumbai's tea sellers at about 12,000, likely an undercount of tapris and cycle vendors. (5) A cutting chai costs about Rs 10-20 in Mumbai in 2026. Stale-flag: there is no official count of chai stalls; the 2018 tea-seller figure and the Indore cups-per-day anchor are old or undated; Mumbai population figures are projections because Census 2021 has not been published.",
+  "regulatory_context": "[uncertain] (1) UPI P2M MDR: payments up to Rs 2,000 stay at zero MDR, and small merchants (up to about Rs 1 lakh/month via UPI QR) are exempt from the 0.4% fee that NPCI deferred until after Diwali 2026, so chai stalls are not directly affected (The Week, 13 Oct 2026). (2) Tax visibility: in July 2025 Karnataka's commercial tax department sent GST notices to small vendors based on UPI receipts, and some Bengaluru vendors put up 'no UPI, only cash' signs. This shows that tax fear can push vendors back to cash, a real downside risk for the estimate. (3) The Street Vendors (Protection of Livelihood and Regulation of Street Vending) Act 2014 and BMC hawker licensing: many tapris are unlicensed and periodically evicted (Bombay HC orders, 2026), which affects stall count. (4) PM SVANidhi gives street vendors digital-payment cashback incentives that encourage QR adoption. (5) UPI Lite (on-device wallet for small payments) and UPI 123PAY (feature phones) widen who can pay digitally for a Rs 10-15 chai.",
+  "public_data_anchors": "UPI Oct 2026: 25.47 bn transactions, Rs 31.53 lakh Cr, about 822 mn/day (Entrepreneur India, Nov 2026) ; UPI Sep 2026: 24.07 bn, 802 mn/day (Free Press Journal, Oct 2026, https://www.freepressjournal.in/business/upi-transactions-fall-18-in-september-to-2407-billion-ahead-of-october-15-mdr-rollout) ; PhonePe 45.6% volume share, Sep 2026 (NPCI via press) ; P2M about 63% of volume, about 86% of P2M under Rs 500 (FY26, secondary) ; average P2M ticket Rs 592 in 2025 (Worldline, Apr 2026) ; BMC hawker survey: about 1.65 lakh identified, about 99,435 documented; QR ID cards issued from June 2026 (Free Press Journal, https://www.freepressjournal.in/mumbai/mumbai-bmc-issues-qr-enabled-id-cards-to-99435-hawkers-following-hc-orders-targets-august-31-completion) ; about 12,000 tea sellers in Mumbai (2018 estimate, stale) ; one Mumbai vendor sells about 15 L of tea a day (Free Press Journal interview, https://www.freepressjournal.in/mumbai/fpj-interview-a-cup-full-of-dreams-with-cutting-chai) ; Indore consumes about 12 lakh cups of chai a day worth about Rs 12 Cr (Free Press Journal, https://www.freepressjournal.in/indore/indores-unsaid-love-for-chai-city-consumes-over-12-lakh-cups-worth-rs-12-cr-in-a-day; undated) ; Greater Mumbai population about 1.45 cr (2026 projection) and about 2 cr daytime population (Khaleej Times).",
+  "framework_applied": "Guesstimate: Clarify, Pick framework, Constraints/MECE, Calculate, Sanity check (frameworks.md section 6). Step 1 Clarify - 'Mumbai' means Greater Mumbai (BMC area), not the full MMR; 'chai stalls' means street tapris, cycle vendors and small counter stalls (not cafes like Chaayos or Irani restaurants); count UPI payment events (one scan, even for a group), on an average weekday in 2026. Step 2 Pick framework - bottom-up supply side: chai points x transactions per stall x UPI share, because a stall's daily throughput is easier to reason about than individual habits. A demand-side frequency x penetration estimate is the cross-check. Step 3 Constraints/MECE - segment stalls into three non-overlapping location types (high-traffic stations/office hubs, residential/street, low-traffic/cycle vendors), because location drives both volume and UPI share. Physical constraints: a stall's boiling capacity (about 15-30 L a day) and serving hours (about 6 am-11 pm). Step 4 Calculate - about 30,000 chai points x about 180 transactions x about 52% UPI = about 28 lakh a day; round to about 25-28 lakh. Step 5 Sanity check - demand side (2 cr daytime population x 70% adults x 30% buy stall chai x 1.3 occasions x 50% UPI = about 27 lakh), the 1-in-N test (about 1 in 5 adult Mumbaikars pays a chai stall by UPI daily), and a ratio test against Mumbai's estimated share of national UPI.",
+  "clarifying_questions": [
+    "Q: Mumbai as the BMC area (island city plus suburbs) or the whole MMR including Thane and Navi Mumbai? A: Greater Mumbai, the BMC area.",
+    "Q: What counts as a chai stall: tapris and cycle vendors only, or cafes like Chaayos and Irani restaurants too? A: Street tapris, cycle or kettle vendors, and small counter stalls. Exclude sit-down cafes and chains.",
+    "Q: Do we count each UPI payment, or each cup? If one person pays for four colleagues, is that one transaction? A: One payment is one transaction.",
+    "Q: Average weekday or including weekends? A: Average weekday in 2026.",
+    "Q: Does a payment that includes chai plus a biscuit or cigarette count? A: Yes, if it's at a chai stall.",
+    "Q: Should I count vendors who receive UPI to a personal account (P2P QR) rather than a merchant QR? A: Yes, count all UPI received at the stall; many tiny vendors use personal QRs.",
+    "Q: Is the output transactions or value? A: Transactions; mention value as a check."
+  ],
+  "interviewer_data_reveals": [
+    "Exhibit 1 (real, NPCI via press): UPI did about 822 mn transactions a day in Oct 2026; P2M is about 63% of volume; about 86% of P2M payments are under Rs 500.",
+    "Exhibit 2 (real, BMC/press): about 1.65 lakh hawkers identified in BMC's survey; unions claim 3-5 lakh. One 2018 estimate gives about 12,000 tea sellers.",
+    "Exhibit 3 (illustrative, for teaching) - Mumbai chai points by location type: high-traffic (railway stations, BKC, Lower Parel, Andheri MIDC, colleges) 20%; residential/street 60%; low-traffic/cycle vendors 20%. Total about 30,000 chai points.",
+    "Exhibit 4 (illustrative) - cups per stall per day: high-traffic 600, residential 250, low-traffic 100. About 1.6 cups per payment (one person often pays for a group, and some buy chai plus a bun or biscuit).",
+    "Exhibit 5 (illustrative) - UPI share of payments: high-traffic 65% (office-goers, students), residential 45% (regulars on monthly khata, older customers), low-traffic/cycle vendors 25% (labourers, cabbies, mostly cash).",
+    "Exhibit 6 (illustrative) - time-of-day split: 7-10 am 35%, 3-6 pm 30%, rest of day 35%. Peak hour throughput at a busy station tapri is about 120 cups an hour."
+  ],
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "How many UPI transactions happen at chai stalls in Mumbai every day?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "A few clarifications. Is Mumbai the BMC area or the full MMR? And are we counting street tapris only, or cafes like Chaayos too?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "BMC area. Tapris, cycle vendors and small counter stalls only."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "If one person scans to pay for four colleagues, is that one transaction? And is this an average weekday?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "One payment is one transaction. Average weekday, 2026."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'll go supply-side: number of chai points x payments per stall x UPI share. A stall's throughput is bounded by how much tea it can boil, so it's easier to reason about. Then I'll cross-check from the demand side with people x occasions."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Structure: UPI txns/day = sum over location types [stalls x cups/day / cups per payment x UPI share]. Location types (MECE): high-traffic hubs | residential/street | low-traffic and cycle vendors. Location drives both volume and the digital mix."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How many chai stalls are there?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "No official count exists. BMC identified about 1.65 lakh hawkers, and unions claim 3-5 lakh, so the real number is probably about 3 lakh. If about 8% sell chai, that's about 24,000, plus about 6,000 fixed tapris attached to shops and stations. I'll take about 30,000. A 2018 figure of 12,000 tea sellers likely missed the tapris."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Use 30,000, split 20% high-traffic, 60% residential, 20% low-traffic."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Cups per day: one Mumbai vendor reported selling about 15 L a day. At about 60-70 ml per cutting that's about 230 cups, a typical residential stall, so 250. A station tapri does about 600, and a cycle vendor about 100. The weighted average is about 290 cups."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Payments: people often pay for a group, or add a bun maska or biscuit, so about 1.6 cups per payment. That gives about 180 payments per stall a day, and 30,000 x 180 = about 54 lakh payments a day across all modes."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What share is UPI?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "It varies by segment. Office-goers and students at hubs pay about 65% by UPI. Residential stalls are about 45%, because regulars run a monthly khata and older customers pay cash. Cycle vendors serving cabbies and labourers are about 25%."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Weight by payments: hubs carry about 41% of payments, residential about 52% and low-traffic about 7%. So 0.41 x 65% + 0.52 x 45% + 0.07 x 25% = about 52% UPI. 54 lakh x 52% = about 28 lakh UPI transactions a day."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Sanity-check it."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Demand side: about 2 cr daytime population with commuters, 70% adults is 1.4 cr, about 30% buy stall chai on a weekday is 42 lakh people, at about 1.3 occasions each is about 55 lakh payments, and at 50% UPI that's about 27 lakh. Both sides converge."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "1-in-N test: 27 lakh UPI chai payments for about 1.4 cr adults is about 1 in 5 adults paying a chai stall by UPI daily. For Mumbai's office and station culture, that feels right."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Ratio test: India does about 822 mn UPI transactions a day. Greater Mumbai is about 1% of India's population, but with 3-4x the per-capita UPI use it might be about 25-30 mn a day. Chai at 2.7 mn would be about 1 in 10 Mumbai UPI payments. That's on the high side but plausible, given that 86% of P2M payments are under Rs 500. I'd trim my point estimate slightly to about 25 lakh."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Value check: 25 lakh x about Rs 25 (1.6 cups at Rs 12-15) is about Rs 60 Cr a day. Indore is reported at about Rs 12 Cr a day of chai for a city about one-sixth Mumbai's size, so the magnitude fits."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What's the biggest uncertainty?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "The stall count. If the true number is 20,000 or 45,000, the answer moves to about 17 lakh or about 40 lakh. UPI share is second: each 10 points moves it by about 5 lakh."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Suppose GST notices to vendors, like Bengaluru in 2025, hit Mumbai. What happens?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Some vendors would put up 'cash only' signs, and the UPI share could fall 10-20 points within weeks, to about 15-20 lakh. As a PhonePe PM I'd worry about that more than about competitors."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Why does a PhonePe PM care about this number?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "It sizes the micro-merchant opportunity. At a 45-50% app share, that's about 12 lakh PhonePe payments a day at chai stalls alone. Revenue is zero MDR, so the business case is soundbox rental, a merchant lending book built on cash-flow data, and habit formation for users. The real lever is lifting UPI share at residential stalls, where digital khata and UPI Lite could help."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Closing: about 25 lakh UPI transactions a day at Mumbai's chai stalls, range 15-40 lakh, worth about Rs 60 Cr, from about 30,000 chai points doing about 180 payments each, about half via UPI. Stall count is the assumption I'd verify first, with a ward-level field sample."
+    }
+  ],
+  "answer_and_recommendation": "Estimate: about 25 lakh (2.5 mn) UPI transactions a day at Greater Mumbai chai stalls, range 15-40 lakh, worth about Rs 60 Cr a day. Ranked drivers: (1) number of chai points, about 30,000 (no official count; triangulated from BMC hawker survey and union claims); (2) UPI share of payments, about 50% blended (65% at station and office hubs, 45% residential, 25% cycle vendors); (3) payments per stall, about 180 a day (about 290 cups at about 1.6 cups per payment). Demand-side cross-check: 2 cr daytime population x 70% adults x 30% x 1.3 occasions x 50% UPI = about 27 lakh. Risks in the estimate: stall count could be off by 1.5x; tax-visibility fear (as with Karnataka's 2025 GST notices) could cut UPI share; group payments and khata lower payments per cup. Mitigation: a ward-level field count of 5 sample wards, plus PhonePe merchant-category data for tea/beverage QRs. Closing line: 'About 25 lakh UPI payments a day, roughly 1 in 5 adult Mumbaikars scanning at a tapri. The swing factor is how many stalls exist, which I'd verify on the ground before sizing a soundbox or lending play.'",
+  "counter_metrics_guardrails": "Pure guesstimate, so the sanity checks are listed instead: (1) Demand-side triangulation: daytime population x adults x chai-buyer share x occasions x UPI share gives about 27 lakh, within 10% of the supply-side 28 lakh. (2) 1-in-N test: about 1 in 5 adults in Greater Mumbai pays a chai stall by UPI on a weekday, which is plausible; 1 in 2 would be too high. (3) Capacity test: a 600-cup station tapri at 120 cups/hour needs only 5 peak hours, consistent with morning and evening rushes. (4) Ratio test vs national UPI: about 2.5 mn of an estimated 25-30 mn daily UPI payments in Greater Mumbai (about 1 in 10-12), high but consistent with 86% of P2M payments being under Rs 500. (5) Value test: about Rs 60 Cr/day of UPI chai spend vs Indore's reported Rs 12 Cr/day of total chai spend for about one-sixth the population.",
+  "follow_up_twists": [
+    "Twist: 'Estimate PhonePe's share of these and the soundbox revenue.' Response: At about 45-50% share, PhonePe gets about 12 lakh payments a day. If about 60% of its roughly 15,000 chai-stall merchants rent a soundbox at about Rs 100/month, that's only about Rs 1 Cr a year, so the real value is lending and user habit, not fees.",
+    "Twist: 'It's monsoon in July. How does the number change?' Response: Chai demand rises (rain plus commuters stuck at stations), but cycle vendors disappear and some tapris flood, so payments per stall rise about 15% while active stalls fall about 10%, giving a net of roughly +5%.",
+    "Twist: 'How would you increase UPI share at residential stalls?' Response: Target the khata segment: a digital khata with UPI auto-settlement at month-end, UPI Lite for one-tap Rs 10 payments without a PIN, and Marathi/Hindi voice confirmation on the soundbox so vendors trust that money has arrived."
+  ],
+  "common_pitfalls": [
+    "Counting cups instead of payments: a group of four with one payer is one UPI transaction, and khata regulars pay monthly, so cups/payments is about 1.6, not 1.",
+    "Using the stale 2018 '12,000 tea sellers' figure, or including Chaayos, Chai Point and Irani cafes, which the scope excludes.",
+    "Applying a single national UPI-adoption rate (for example the '94% of small merchants have UPI' survey) as the share of payments. A merchant having a QR is not the same as customers using it; cash still dominates with labourers and older regulars.",
+    "Scoping Mumbai as the whole MMR (about 2.6 cr+) without saying so, or using resident population and ignoring about 6 mn daily commuters who drive station and office-hub chai demand."
+  ],
+  "skills_tested": "structuring, quant, empathy, business sense, communication",
+  "linked_teardown": "None (no UPI or PhonePe teardown folder). Loosely related: gokwik_product_teardown covers payments and checkout economics, but for online D2C, not offline micro-merchants.",
+  "uncertain": [
+    "context_as_of",
+    "regulatory_context"
+  ]
+}

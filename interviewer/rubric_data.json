@@ -1,0 +1,1011 @@
+{
+ "rca": {
+  "dimensions": [
+   {
+    "key": "clarify",
+    "name": "Metric clarification and problem scoping",
+    "definition": "Pins down exactly what moved before diagnosing: metric definition (orders placed vs delivered, DAU definition), magnitude, comparison baseline (WoW, YoY), time shape (sudden vs gradual), geography/platform scope, and product context.",
+    "signal": "Narrow before you theorise; refuses to brainstorm on an undefined metric.",
+    "evidence": "Quote the candidate's opening clarifying questions, e.g. 'Is this orders placed or delivered?', 'Compared with last week or the same week last year?', 'Was it a sudden drop on one day or gradual?' and any stated assumption when the interviewer declines to answer.",
+    "weight": 15.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "Starts listing causes immediately; no questions about definition or timeframe. 'Orders could be down because of competition, or the app is slow...'",
+     "2": "Asks one generic question ('What's the timeframe?') but not definition or shape; assumptions unstated.",
+     "3": "Clarifies definition, baseline, magnitude and sudden-vs-gradual; states assumptions when not given. 'I'll assume orders placed, WoW, sudden drop on Thursday.'",
+     "4": "As 3, plus ties clarification to diagnosis ('A sudden one-day drop would point to something breaking, gradual to a competitive or quality shift') and confirms related metrics moved (sessions vs conversion)."
+    },
+    "coach": "Before saying any cause, ask three questions every time: exact definition, comparison baseline, and sudden vs gradual; say your assumption aloud if unanswered.",
+    "phase": true
+   },
+   {
+    "key": "data_check",
+    "name": "Data integrity and measurement check",
+    "definition": "Explicitly verifies the drop is real before investigating the product: logging/instrumentation change, pipeline delay, tracking bug in a new app version, metric definition change, dashboard filter, and normal seasonality or day-of-week effects.",
+    "signal": "Checks the measurement before the product; treats 'is it real?' as a first-class hypothesis.",
+    "evidence": "Quote lines like 'First I'd confirm this isn't a logging or pipeline issue, e.g. did a new release change how events fire?' or 'Is this normal for this week of the year?'",
+    "weight": 10.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "Never questions whether the drop is real.",
+     "2": "Mentions 'check data quality' as a throwaway bucket without specifics.",
+     "3": "Names concrete checks: logging change in new release, pipeline delay, definition change, seasonality/day-of-week compared against last year. 'Is this pattern present last Diwali week too?'",
+     "4": "As 3, plus proposes a cross-check from an independent source ('Do backend order counts match client events?') and sequences it first because it is cheap."
+    },
+    "coach": "Make 'Is the drop real?' your first hypothesis: name one logging check and one seasonality comparison.",
+    "phase": true
+   },
+   {
+    "key": "decompose",
+    "name": "Structured decomposition and segmentation",
+    "definition": "Breaks the metric into a MECE structure: user funnel/journey stages (open app, browse, cart, pay, accept, deliver), metric formula (orders = users x frequency), and segments (region, platform/app version, new vs returning, payment method, time of day, supply side). Also covers internal vs external cause buckets.",
+    "signal": "Uses segmentation to localise the drop ('where and for whom') and a clear internal/external split, not a flat list.",
+    "evidence": "Quote the stated structure ('I'll find where in the order journey and for which customers the drop happened'), the funnel stages named, and segment cuts requested, plus the interviewer's answer to each.",
+    "weight": 20.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "Flat, unstructured list of causes; no funnel or segments.",
+     "2": "Recites a framework (internal/external, or a generic funnel) but segments are generic and not used to localise.",
+     "3": "Maps the specific user journey for this product and requests relevant segment cuts (region, platform/version, new vs returning, payment method, time of day), using results to narrow. 'App opens are flat but checkout fell, so it's after cart.'",
+     "4": "As 3, plus decomposes the metric formula (users x frequency x conversion), covers all sides of the marketplace, and explains why each cut discriminates ('one platform only would point to a release bug')."
+    },
+    "coach": "Draw the product's actual journey and pick only segment cuts that would change your hypothesis; say what each result would imply.",
+    "phase": true
+   },
+   {
+    "key": "hypotheses",
+    "name": "Hypothesis generation and prioritisation",
+    "definition": "Generates plausible causes across buckets (something broke, product got worse, external change: competitor, regulation, weather, outage) and ranks them by fit with the evidence (e.g. a sudden one-day drop fits 'something broke' best) and by likelihood x impact.",
+    "signal": "Picks a most-likely cause and says why; reasons from the data revealed so far rather than listing eight causes with no favourite.",
+    "evidence": "Quote ranking statements ('Given it's sudden and Android-only, my top hypothesis is the Thursday release') and explicit eliminations ('Since it's consistent across iOS and Android, a platform bug is unlikely').",
+    "weight": 20.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "One guess with no reasoning, or no hypotheses.",
+     "2": "Many hypotheses across buckets but no ranking: 'It could be X, Y, Z, W...'",
+     "3": "Ranks top 2-3 hypotheses with reasons tied to evidence. 'Sudden, Bangalore-only, Android-only: the Thursday release is my top suspect, then a local payment gateway issue.'",
+     "4": "As 3, plus explicitly eliminates hypotheses as data arrives, weighs likelihood vs impact, and notes interacting causes (e.g. rain plus partner shortage at dinner peak)."
+    },
+    "coach": "After each data point, say your current top hypothesis and what you just ruled out.",
+    "phase": true
+   },
+   {
+    "key": "validate",
+    "name": "Validation plan and evidence use",
+    "definition": "For leading hypotheses, specifies the data or test that would confirm or refute it and that separates competing explanations (crash rate by app version, payment success rate by gateway, delivery time by zone, competitor promo timing), and updates the hypothesis when the interviewer reveals data.",
+    "signal": "Asks for discriminating data; changes course correctly when evidence contradicts the current hypothesis.",
+    "evidence": "Quote requests for specific cuts/metrics and the candidate's interpretation after each interviewer reply; note any case where the candidate ignored or misread supplied data.",
+    "weight": 15.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "No validation; asserts a cause as fact.",
+     "2": "Says 'I'd look at the data' without naming which metric or cut.",
+     "3": "Names discriminating data for each top hypothesis (crash rate by app version, payment success rate by gateway, delivery ETA by zone) and correctly interprets interviewer answers.",
+     "4": "As 3, plus designs a check that separates two explanations at once, updates course gracefully on surprising data, and may size impact ('if 30% of the drop is Android 5.2 users, rollback recovers ~X orders')."
+    },
+    "coach": "For your top two hypotheses, name the one metric cut that would tell them apart.",
+    "phase": true
+   },
+   {
+    "key": "conclude",
+    "name": "Conclusion, fix and prevention",
+    "definition": "Lands on a root cause (or the leading hypothesis with next check), sizes impact where possible, proposes an immediate fix or mitigation and a longer-term prevention (alerting, release guardrails, A/B holdouts, monitoring dashboards), and summarises crisply as if to leadership.",
+    "signal": "Ends with a clear one-sentence recommendation plus prevention, not an open list.",
+    "evidence": "Quote the final summary ('Orders fell because payment failures on gateway X spiked after Thursday; roll back, then add a payment success-rate alert'), any impact sizing, and prevention steps.",
+    "weight": 12.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "No conclusion; runs out of time mid-list.",
+     "2": "Generic conclusion or fix without a cause ('improve the app experience').",
+     "3": "States the root cause or leading hypothesis, an immediate fix (rollback, gateway failover, incentive for partners) and the next check if unconfirmed.",
+     "4": "As 3, plus prevention (alerting, staged rollout, guardrail metrics), communication to stakeholders, and a crisp leadership summary in one or two sentences."
+    },
+    "coach": "Reserve the last 3 minutes for a one-sentence diagnosis, one immediate fix and one prevention mechanism.",
+    "phase": true
+   },
+   {
+    "key": "communication",
+    "name": "Communication and collaboration",
+    "definition": "Signposts the plan up front, thinks out loud, states assumptions explicitly, checks in at transitions, and treats the interviewer as a data partner.",
+    "signal": "Easy-to-follow narrative; assumptions said aloud so they can be credited or challenged.",
+    "evidence": "Quote roadmap statements ('I'll confirm the metric, localise it, then rank causes'), explicit assumptions, and check-ins ('Does that match what you're seeing?').",
+    "weight": 8.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "Rambling, no signposting; interviewer cannot follow.",
+     "2": "Some structure but assumptions silent; rarely checks in.",
+     "3": "Gives a roadmap upfront, thinks aloud, states assumptions, checks in at transitions.",
+     "4": "As 3, plus concise summaries at each narrowing step and treats interviewer as data partner with targeted, purposeful questions."
+    },
+    "coach": "Open with a one-line roadmap and summarise briefly each time you narrow the problem.",
+    "phase": false
+   }
+  ],
+  "green_flags": [
+   "Asks precise definition questions first ('placed or delivered?', 'WoW or YoY?', 'sudden or gradual?')",
+   "Checks whether the drop is real (logging, pipeline, seasonality) before investigating the product",
+   "States a plan upfront: confirm metric, localise where and for whom, then rank causes",
+   "Uses funnel stages specific to the product and segment cuts that discriminate between causes",
+   "Names a most-likely cause and explains why it fits the evidence shape (sudden, single-region, single-platform)",
+   "Requests specific data that separates two hypotheses and updates correctly on the interviewer's answer",
+   "Considers all sides of a marketplace (customer, restaurant/seller, delivery partner/driver)",
+   "Lands with a one-sentence diagnosis, immediate fix and a prevention mechanism"
+  ],
+  "red_flags": [
+   "Brainstorms causes before defining the metric or timeframe",
+   "Recites internal/external or a generic funnel framework without tailoring it to the product or using it to narrow",
+   "Lists eight-plus causes with no ranking or favourite",
+   "Jumps to solutions (redesign, discounts) before a cause is identified",
+   "Ignores or misreads data the interviewer provides, or keeps asking questions already answered",
+   "Asks too many or irrelevant clarifying questions with no stated purpose",
+   "Never considers data quality or seasonality",
+   "Runs out of time without a conclusion or recommendation"
+  ],
+  "recitation_vs_insight": "Recitation: the candidate announces 'internal vs external factors' or a generic pirate-metrics funnel and walks every bucket with equal depth regardless of what the interviewer revealed; segments are a fixed checklist (region, device, age) asked all at once; hypotheses are generic ('competition', 'bug', 'seasonality') and never ranked. Insight: the structure is tailored to the product's actual journey and economics (e.g. Swiggy's three-sided marketplace, PhonePe payment success rates); each question has a stated purpose ('if it's one platform, that points to a release'); the candidate reasons from the evidence shape to prune branches and ends up discussing only 1-3 live hypotheses; eliminations are explicit. Grader test: for each segment/question asked, did the candidate later use the answer? A high proportion of unused questions indicates recitation. Also score down if the conclusion would be identical regardless of what data the interviewer supplied.",
+  "exemplars": {
+   "1": "Prompt: 'Swiggy orders dropped 20% in Bangalore.' Candidate immediately says it might be Zomato discounts, bad weather or app bugs, suggests running a promotion, asks no questions, never checks data, and ends without a cause.",
+   "2": "Candidate asks the timeframe, announces internal vs external factors and walks a generic checklist (tech, marketing, competition, seasonality, regulation), asks for region/device/age segments all at once, but does not use the answers to narrow; ends with 'it could be any of these, I'd investigate further'.",
+   "3": "Candidate clarifies orders placed, WoW, sudden Thursday drop; checks logging and seasonality; maps the journey and finds checkout down while app opens are flat; asks for platform and payment-method cuts, learns it is one gateway; ranks the payment failure top; proposes gateway failover and a success-rate alert.",
+   "4": "As 3, plus decomposes orders into users x conversion x frequency, checks restaurant and delivery-partner supply, separates release bug vs gateway outage with a single cut (failure rate by gateway and app version), sizes the recoverable orders, recommends failover plus staged-rollout guardrails, and delivers a two-sentence leadership summary; handles a twist (AOV went up) by explaining the mix shift."
+  },
+  "level_expectations": {
+   "APM / entry": "Solid (3) = clean clarification, a correct funnel and a few relevant segments, at least a ranked top hypothesis and a sensible fix. Data-quality check and prevention may be lighter; hints are expected and penalised less. Indian APM/associate PM rounds weight structure and guesstimate-style quantification heavily.",
+   "PM (Meta IC5 / Google L5 / Flipkart PM)": "Solid = all of the APM bar, plus explicit data-integrity check, discriminating validation data, correct updating on revealed data, and a fix with prevention. Should handle a twist (e.g. 'a second metric went up') without restarting.",
+   "Senior PM (IC6+ / L6+ / Swiggy-Zomato Senior PM)": "Solid = drives the case with minimal hints, sizes impact, considers second-order and ecosystem effects (supply side, other surfaces, cannibalisation), frames trade-offs of the fix (rollback vs revenue), and proposes organisational prevention (monitoring, release process). Breadth without prioritisation is scored more harshly at this level. [uncertain: level split is inferred; no source publishes per-level RCA anchors]"
+  },
+  "llm_grading_notes": [
+   "Interviewer-supplied facts: in RCA the interviewer reveals the cause area; the grader must credit the candidate only for asking the discriminating question and interpreting the answer, never for the fact itself. Instruct the model to attribute each fact to speaker turns.",
+   "Length bias: long, exhaustive cause lists look thorough; explicitly score down unranked lists and require a quoted ranking statement for prioritisation >= 3.",
+   "Framework keyword bias: phrases like 'MECE', 'internal vs external', 'funnel' should not raise scores unless followed by product-specific content and narrowing; add a check 'was the answer to each segment question used later?'",
+   "Leniency: small models default to 3s; force evidence quotes per dimension and require a quote for any score >= 3, defaulting to 2 when no quote exists.",
+   "Gate detection: run gate checks as separate yes/no questions before scoring (did the candidate clarify before brainstorming? did they ever check data validity? did they name a most-likely cause?) to avoid the cap being forgotten.",
+   "Order sensitivity: clarification must precede brainstorming; ask the model to locate the turn index of the first clarifying question vs first hypothesis.",
+   "Time/truncation: if the transcript ends before a conclusion, score Conclusion as 1 rather than inferring intent.",
+   "Context window: for Qwen3 8B, pass the transcript with numbered turns and grade dimensions in separate calls or a compact JSON schema to reduce drift; include the 1-4 calibration exemplars as few-shot."
+  ]
+ },
+ "product_design": {
+  "dimensions": [
+   {
+    "key": "goal",
+    "name": "Goal and product motivation",
+    "definition": "States why the product/improvement matters: the company mission or business objective, the goal of this design (e.g. engagement, acquisition, retention, monetisation), and any constraints/assumptions.",
+    "signal": "Direction is grounded in this company's mission, strategy and advantages, not generic; goal chosen deliberately and used later to prioritise.",
+    "evidence": "Quote the sentence where the candidate states the goal/mission and any line where they later reuse that goal to choose a segment, problem or solution (e.g. 'Since our goal is repeat orders in tier-2 cities, I'll prioritise...').",
+    "weight": 10.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "No goal or mission; starts listing features. ('So I'd add a dark mode and a chatbot.')",
+     "2": "Generic or checkbox mission not used later. ('Swiggy's mission is to deliver food, so the goal is engagement.')",
+     "3": "Company-specific goal with reason, stated assumptions, and reused to make a later choice. ('Instamart growth is the priority, so I'll optimise for second-week repeat orders.')",
+     "4": "Explains why this company, with its assets and timing, should build this now; goal visibly drives every downstream choice. ('PhonePe already owns the UPI moment at the counter, so the leverage is...')"
+    },
+    "coach": "In the first 3 minutes, state one company-specific goal in a sentence, then name it again each time you make a choice.",
+    "phase": true
+   },
+   {
+    "key": "segment",
+    "name": "User segmentation and choice",
+    "definition": "Maps the ecosystem/user types, segments them along meaningful (behavioural/motivational/need-based, not just demographic) lines, and picks one target segment with explicit criteria.",
+    "signal": "Non-overlapping segments specific to this product; prioritisation reasoned on more than one criterion (size, pain severity, underserved, strategic fit); optional persona.",
+    "evidence": "Quote the list of segments, the criteria used, and the sentence choosing the target segment with its justification.",
+    "weight": 17.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "No segmentation, or 'all users'.",
+     "2": "Demographic-only or overlapping segments; picks largest without criteria. ('Students, working professionals, elderly. I'll pick students.')",
+     "3": "Need/behaviour-based, non-overlapping segments incl. ecosystem sides; picks one using 2+ named criteria.",
+     "4": "Segments that could only belong to this product; choice argued on pain, size, underservedness and strategic fit; considers other ecosystem sides (merchants, riders, sellers). ('First-time Meesho resellers in tier-3 who sell via WhatsApp...')"
+    },
+    "coach": "Segment by behaviour or need, not age; name two criteria aloud before picking the segment.",
+    "phase": true
+   },
+   {
+    "key": "pain_points",
+    "name": "Pain point identification and prioritisation",
+    "definition": "Walks through the chosen user's journey or context, lists several specific problems (not needs or solutions), and picks the one to solve with stated criteria.",
+    "signal": "Pain points feel discovered from the user's actual day, span different root causes, are separated from solutions, and are prioritised on frequency/severity/goal fit.",
+    "evidence": "Quote the journey steps or scenario, the enumerated pain points, and the sentence selecting the priority pain point and why.",
+    "weight": 18.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "No pain points, or lists solutions disguised as problems.",
+     "2": "1-2 generic pain points that fit any product; no prioritisation.",
+     "3": "3-5 specific pain points from a journey walk-through, distinct root causes, one prioritised with stated criteria (frequency, severity, goal fit).",
+     "4": "Pain points feel discovered (concrete moments in the user's day), separated from solutions, prioritised with a non-obvious but convincing call."
+    },
+    "coach": "Walk one concrete user journey step by step and list at least four problems as frustrations, not features, before choosing one.",
+    "phase": true
+   },
+   {
+    "key": "solutions",
+    "name": "Solution breadth and creativity",
+    "definition": "Generates multiple genuinely distinct solutions tied to the chosen pain point, ranging from incremental to bold, and describes at least one concretely enough to picture (v1/MVP experience).",
+    "signal": "Ideas could fail independently; at least one non-obvious or visionary idea; solutions leverage company-specific assets; concrete v1 description.",
+    "evidence": "Quote each named solution and the concrete description of the chosen one (what the user sees/does).",
+    "weight": 20.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "No solution or a single obvious feature.",
+     "2": "2-3 ideas that are variations of one concept or generic ('use AI to personalise').",
+     "3": "3+ distinct ideas grounded in the priority pain point, incl. at least one bold idea; chosen one described concretely (v1 flow).",
+     "4": "At least one surprising idea leveraging company-specific assets; spectrum from MVP to moonshot; v1 described as a user experience with edge cases."
+    },
+    "coach": "Generate three ideas that could fail independently, deliberately including one bold idea that uses the company's unique assets.",
+    "phase": true
+   },
+   {
+    "key": "tradeoffs",
+    "name": "Prioritisation and trade-offs",
+    "definition": "Chooses among solutions with explicit criteria (impact on goal, effort, risk, confidence) and articulates downsides, risks and what is deliberately deferred.",
+    "signal": "Criteria named before the choice; trade-offs acknowledged (cannibalisation, ecosystem side effects on merchants/drivers, cost, complexity); mitigation or 'what would need to be true' for deferred ideas.",
+    "evidence": "Quote the comparison (e.g. impact/effort reasoning) and any sentence naming a risk, trade-off or mitigation.",
+    "weight": 12.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "Picks a solution with no reason.",
+     "2": "One-dimensional reason ('easiest to build') or a 2x2 with no actual reasoning.",
+     "3": "Compares options on impact vs effort/risk tied to the goal; names at least one trade-off or risk.",
+     "4": "Multi-dimensional comparison, explicit deprioritisation with 'what would need to be true', second-order/ecosystem effects and mitigations (e.g. impact on delivery partners or seller margins)."
+    },
+    "coach": "Before choosing, say the criteria; after choosing, name one downside and how you would mitigate it.",
+    "phase": true
+   },
+   {
+    "key": "metrics",
+    "name": "Success metrics",
+    "definition": "Defines how the chosen solution's success would be measured: a primary metric linked to the stated goal, plus guardrail/counter metrics.",
+    "signal": "Primary metric operationally defined and tied to the goal; 1-3 guardrails that capture plausible harm; not a laundry list.",
+    "evidence": "Quote the named primary metric, its definition, and guardrail metrics with their rationale.",
+    "weight": 10.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "No metrics, or vanity metric only ('downloads').",
+     "2": "Lists many metrics without a primary, or primary not tied to goal.",
+     "3": "One primary metric operationally defined and tied to the goal plus 1-2 guardrails. ('Weekly repeat-order rate among new tier-2 users; guardrail: delivery time and cancellation rate.')",
+     "4": "Primary + guardrails + counter-metric with rationale and a sketch of how to validate (experiment or leading indicator), anticipates metric conflict."
+    },
+    "coach": "Give exactly one primary metric with its definition tied to your goal, plus one or two guardrails, and say why each guardrail matters.",
+    "phase": true
+   },
+   {
+    "key": "communication",
+    "name": "Structure, communication and collaboration",
+    "definition": "Lays out a game plan, signposts transitions, states assumptions, checks in at key decisions, and handles interviewer redirects/pushback by integrating them.",
+    "signal": "Interviewer always knows where the candidate is and why; candidate drives the case without needing hand-holding; adapts when given new information.",
+    "evidence": "Quote the opening plan, transition statements, check-in questions, and the response to any interviewer pushback or redirect.",
+    "weight": 13.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "Hard to follow; no plan; needs the interviewer to drive.",
+     "2": "Followable but reads as a monologue or rigid template; asks interviewer what to do next.",
+     "3": "Opening game plan, clear transitions, check-ins at key decisions, integrates redirects.",
+     "4": "Conversational and adaptive throughout; handles pushback/conflicting-metric follow-ups by linking back to earlier reasoning; interviewer feels like a participant."
+    },
+    "coach": "Open with a 20-second game plan and check in at each of the three choice points instead of asking what to do next.",
+    "phase": false
+   }
+  ],
+  "green_flags": [
+   "States goal and a short game plan in the first 2-3 minutes, with explicit assumptions.",
+   "Segments by need/behaviour/frequency, includes other ecosystem sides (sellers, riders, restaurants), and justifies the chosen segment with 2+ criteria.",
+   "Walks through a concrete user journey and names specific moments of friction; separates problems from solutions.",
+   "Offers a spectrum of solutions (safe MVP, aggressive, moonshot) that could each fail independently.",
+   "Names criteria before choosing and explicitly says what is deprioritised and why.",
+   "Defines one primary metric tied to the goal plus guardrails/counter-metrics.",
+   "Checks in at decision points and folds interviewer pushback into the reasoning.",
+   "India context: designs for low bandwidth, vernacular, low-trust/COD, UPI flows, or tier-2/3 simplicity when the prompt's users warrant it. [uncertain: prep-platform/practitioner accounts]"
+  ],
+  "red_flags": [
+   "Recites Goal-User-Problem-Solution template with generic content that would fit any product.",
+   "Jumps to features before picking a user and problem.",
+   "Demographic-only or overlapping segments; picks the biggest group with no criteria.",
+   "Lists needs or solutions as 'pain points'; only 1-2 pain points.",
+   "Single solution, or ideas that are variants of one concept; 'add AI/personalisation' with no specifics.",
+   "No trade-offs or reasons; prioritises by 'easiest'.",
+   "Laundry list of metrics, or none; vanity metrics only.",
+   "Seeks validation ('Do we have a solution in mind?', 'What do stakeholders want?') or defers to 'I'd do research first'."
+  ],
+  "recitation_vs_insight": "Recitation: every framework step is present but contents are interchangeable across products (segments like 'students/professionals/elderly', pain points like 'hard to find things', solutions like 'AI recommendations'), criteria are named but not actually applied, and the stated goal is never referenced again. Insight: content is product- and company-specific (would need significant rework for a different company - Aced's test), choices are argued with trade-offs, at least one idea or prioritisation call is non-obvious yet defended, and earlier decisions are visibly reused later. Grader test: (1) substitution test - replace the product name with a competitor; if the answer still works, cap User/Pain/Solution at 2; (2) linkage test - does the chosen solution trace to the chosen pain point and segment, and the metric to the goal? (3) reasoning test - is there a 'because' after each choice? Structure alone should earn at most 2 on content dimensions and at most 3 on communication.",
+  "exemplars": {
+   "1": "'Improve Swiggy': candidate immediately lists 5 features (chatbot, dark mode, loyalty points), no goal, no segment, no metrics; asks interviewer which to pick.",
+   "2": "Recites goal-user-problem-solution: goal 'engagement', segments 'students/professionals/families', picks students because largest, pain points 'too many options, high delivery fee', solutions 'AI recommendations, discounts', metric 'DAU'. Structured but generic; fails substitution test.",
+   "3": "Sets goal of repeat orders for new users in tier-2 cities tied to Swiggy's growth; segments by order intent (planned meals, impulse snacks, group orders); picks planned meals with criteria; walks a weeknight dinner journey; 4 specific pains; 3 distinct ideas (meal-plan subscription, 'usual order' one-tap, vernacular voice reorder); picks one-tap on impact/effort; notes restaurant capacity trade-off; metric 14-day repeat rate with guardrails on delivery time and cancellations; checks in twice.",
+   "4": "All of level 3 plus: ecosystem view incl. restaurants and delivery partners, a non-obvious priority call defended on Swiggy-specific assets (existing order history and dense rider network), a moonshot alongside the MVP, explicit 'what would need to be true' for deferred ideas, a counter-metric for cannibalisation, and a crisp answer to an interviewer pushback on cost by revisiting the earlier goal."
+  },
+  "level_expectations": {
+   "APM / entry": "Solid (3) = clear structure, reasonable segmentation with one criterion beyond size, 3+ specific pain points, 3 distinct solutions, one primary metric. Creativity and business linkage can be lighter; hints tolerated once or twice with small deduction. Erez says rubric is broadly consistent across levels, so the shift is in depth, not dimensions.",
+   "PM / mid": "Solid = multi-criteria prioritisation at each step, at least one bold idea, guardrail metrics, trade-offs named unprompted, drives case with minimal steering. Corpwaters: cannot advance beyond mid-level by focusing only on features.",
+   "Senior PM+": "Solid = business-owner lens (strategy, ecosystem, operations, monetisation), company-specific why-now, decisions under ambiguity without asking for validation, second-order effects and rollout risk, crisp handling of conflicting-metric follow-ups. Feature-only answers cap at 2 on Goal and Trade-offs. [level shifts largely interviewer-account/inferred]"
+  },
+  "llm_grading_notes": [
+   "Length bias: long, framework-complete answers can score high on surface coverage; require the substitution and linkage tests before awarding 3+.",
+   "Credit attribution: separate interviewer and candidate turns; never credit segments, pain points or metrics the interviewer proposed unless the candidate adds reasoning.",
+   "Keyword leniency: words like 'north star', 'guardrail', 'persona', 'RICE' are not evidence by themselves; require the actual metric/criteria content.",
+   "Evidence first: make the model quote transcript lines per dimension before scoring; score 1 when no quote can be found.",
+   "Score dimensions independently, then apply gates, then compute overall; do not let a strong communication score lift content dimensions (halo).",
+   "Small model (8B) mitigation: one dimension per pass or a short checklist per dimension; give the 1-4 anchors verbatim; include the four calibration exemplars as few-shot; force JSON output with quote fields.",
+   "India context: do not penalise use of Indian-market references (UPI, COD, tier-2, vernacular) as off-topic; do reward them only when tied to the chosen user.",
+   "Time/landing: detect whether a final solution was chosen; LLMs often miss that the candidate never committed."
+  ]
+ },
+ "product_strategy": {
+  "dimensions": [
+   {
+    "key": "goal",
+    "name": "Goal framing and context-setting",
+    "definition": "Clarifies the company's objective (growth, profit, defend share, ecosystem), the time horizon, constraints and what 'success' means before analysing. States the company's mission or strategic position as the lens.",
+    "signal": "",
+    "evidence": "Quote the candidate's clarifying questions and the explicit goal statement, e.g. 'Is the aim to grow GMV or to reach contribution-margin breakeven in 18 months?' or 'I'll assume a 3-year horizon and that Swiggy's goal is order frequency.' Absence of any goal or horizon statement before ideas is evidence for score 1-2.",
+    "weight": 12.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "Starts listing ideas immediately with no objective, horizon or company context. e.g. 'Flipkart should add AR try-on, a loyalty program and...'",
+     "2": "Asks generic clarifiers ('what's the budget?') or states a vague goal ('grow the business') that is never used later.",
+     "3": "States a specific objective, horizon and key constraint, ties them to the company's strategy, and uses them later to decide. e.g. 'I'll optimise for contribution-margin-positive growth over 2 years, given Zomato's profitability focus.'",
+     "4": "Reframes the question insightfully (e.g. 'the real question is whether this defends our core or opens a new profit pool') and gets the interviewer to agree on success criteria that then drive every later choice."
+    },
+    "coach": "Before any idea, say one sentence: 'Success here means <metric> over <horizon> given <constraint>', and get a nod.",
+    "phase": true
+   },
+   {
+    "key": "insight",
+    "name": "Market, customer and competitive insight",
+    "definition": "Analyses the market (size or trend), the customer segments and their unmet needs, competitors and substitutes, and the company's unique assets or right to win. Brings non-obvious industry or tech insight, such as AI shifts, regulation, UPI or ONDC in India, or quick-commerce dark-store economics.",
+    "signal": "",
+    "evidence": "Quote specific claims about competitors, segments, trends or company assets, and check that each is specific and causally used, e.g. 'Google already has Maps and local-business data, so its wedge into furniture is discovery, not logistics.' Generic lists ('competition, market, profitability') with no 'why it matters' are evidence of recitation.",
+    "weight": 16.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "No market or competitor analysis, or factually wrong claims.",
+     "2": "Generic checklist (market size, competition, trends) with no specifics, or only news-level facts that do not change the answer.",
+     "3": "Names specific segments, competitors and company assets, and explains how each shapes the strategy. e.g. 'Meesho owns tier-3 value buyers via zero commission, so Flipkart's counter should be Shopsy-style pricing, not a brand war.'",
+     "4": "Offers a non-obvious insight that changes how the interviewer sees the problem (Aakash 4/4), such as a structural shift, second-order tech effect or overlooked asset, and builds the strategy on it."
+    },
+    "coach": "For each analysis point, finish the sentence 'so this means we should...'. If you cannot, cut the point.",
+    "phase": true
+   },
+   {
+    "key": "options",
+    "name": "Strategic option generation and creativity",
+    "definition": "Lays out several distinct, credible strategic options before narrowing, covering the realistic set (build/partner/buy/ignore, segments, geographies, pricing models, entry modes). At least one option is ambitious, a '10x' or ecosystem-level move.",
+    "signal": "",
+    "evidence": "Count and quote the options the candidate named, and check they are mutually distinct and company-level, not three variants of one feature. Note any explicit mention of 'do nothing' or 'partner/acquire' alternatives.",
+    "weight": 14.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "A single option, or none.",
+     "2": "Two or three options that are variants of the same idea or feature-level.",
+     "3": "Three or more distinct, company-level options (e.g. build vs partner vs acquire, or different segments), each with a one-line rationale.",
+     "4": "A distinct option set that includes a bold '10x' or ecosystem move alongside pragmatic ones, plus an explicit 'do nothing' baseline. e.g. 'A fourth, bolder option: open our logistics as a platform for D2C brands.'"
+    },
+    "coach": "Always generate three distinct strategic options, one of them bold and one a 'do nothing/partner' baseline, before evaluating any.",
+    "phase": true
+   },
+   {
+    "key": "tradeoffs",
+    "name": "Prioritisation and trade-off reasoning",
+    "definition": "Chooses among options using explicit, stated criteria (impact, feasibility, strategic fit, time to value, cost, risk to the core business) and states what is being sacrificed, including opportunity cost and second-order effects (cannibalisation, partner or ecosystem reactions, regulators).",
+    "signal": "",
+    "evidence": "Quote the stated criteria and the comparison, e.g. 'Partnering is faster but we give up the data loop; given our 12-month goal I accept that.' Also quote any second-order consequence the candidate named.",
+    "weight": 18.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "Picks an option with no criteria, or says 'all are important'.",
+     "2": "Names criteria but applies them superficially, or lists pros and cons without weighing them.",
+     "3": "Compares options against two to four explicit criteria tied to the goal, states what is sacrificed, and picks. e.g. 'Acquisition is fastest but integration risk and Rs 2,000 cr cost outweigh the 6-month gain.'",
+     "4": "Also reasons about second-order effects (competitor response, cannibalisation, partner or regulator reaction) and states the conditions under which the choice would flip."
+    },
+    "coach": "Name two to three criteria tied to the goal, score the options against them out loud, and state explicitly what you are giving up.",
+    "phase": true
+   },
+   {
+    "key": "recommendation",
+    "name": "Recommendation quality and conviction",
+    "definition": "Lands a clear, single recommendation (go/no-go, which option, why now) that follows from the analysis, and defends or updates it under pushback with stated reasons.",
+    "signal": "",
+    "evidence": "Quote the recommendation sentence, e.g. 'My recommendation: enter via partnership in 3 metros, not build.' After the interviewer challenges it, quote the response, noting whether the candidate held the position with reasoning, updated it with an explicit 'what changed', or flip-flopped without reasons.",
+    "weight": 14.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "No recommendation, or 'it depends' at the end.",
+     "2": "A hedged recommendation not clearly linked to the analysis, or one dropped at the first pushback.",
+     "3": "A clear recommendation that follows from the analysis, with a 'why now', defended with reasons under pushback.",
+     "4": "A crisp, memorable recommendation and summary. Under pushback the candidate either defends it with new evidence or updates it explicitly ('Given that partner data is unavailable, I'd switch to build because...'), showing intellectual honesty."
+    },
+    "coach": "Open the conclusion with 'My recommendation is X, because Y', and when challenged, say either 'I'd still do X because...' or 'That changes my view because...'.",
+    "phase": true
+   },
+   {
+    "key": "viability",
+    "name": "Business viability and quantitative grounding",
+    "definition": "Tests whether the strategy makes money or moves the target metric: rough sizing, revenue/monetisation model, unit economics (AOV, take rate, CAC, delivery cost, contribution margin), payback, with sanity checks. This carries extra weight for monetisation questions and for Indian companies.",
+    "signal": "",
+    "evidence": "Quote numbers and arithmetic, e.g. 'At a Rs 250 AOV and 20% take rate we get Rs 50; delivery costs Rs 35, so contribution is thin until batching.' Check the arithmetic is correct, and note any sanity check or the lack of one.",
+    "weight": 10.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "No numbers or business-model discussion, or a major arithmetic error that goes uncorrected.",
+     "2": "Mentions revenue or cost qualitatively, or gives numbers that are not used in the decision.",
+     "3": "Rough sizing or unit economics with stated assumptions and a sanity check, used to support the go/no-go.",
+     "4": "Identifies the one or two economic drivers that decide the case (e.g. delivery cost per order, take rate, CAC payback), quantifies the threshold for success, and links it to the go/no-go criteria."
+    },
+    "coach": "Do one back-of-envelope unit-economics line (revenue per unit minus variable cost per unit) and a sanity check for every recommendation.",
+    "phase": true
+   },
+   {
+    "key": "execution",
+    "name": "Risks, success metrics and execution path",
+    "definition": "Names the main risks with mitigations, defines success and guardrail metrics, and gives a phased plan (pilot, then go/no-go criteria, then scale).",
+    "signal": "",
+    "evidence": "Quote the risks, metrics and phasing statements, e.g. 'North star: repeat orders per user per month; guardrail: restaurant churn; kill if CM is below -Rs 10 after 6 months in pilot cities.'",
+    "weight": 10.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "No risks or metrics.",
+     "2": "Generic risks ('competition', 'execution') or vanity metrics (downloads), with no plan.",
+     "3": "Two or three specific risks with mitigations, a north-star plus guardrail metric, and a phased plan.",
+     "4": "Explicit go/no-go or kill criteria with thresholds and a learning-oriented pilot design. Risks are ranked by likelihood and impact."
+    },
+    "coach": "End with the top two risks and mitigations, one north-star and one guardrail metric, and a pilot with a numeric go/no-go threshold.",
+    "phase": true
+   },
+   {
+    "key": "communication",
+    "name": "Structured communication",
+    "definition": "Signposts an approach tailored to the question, keeps sections MECE, summarises, and checks in with the interviewer at transitions.",
+    "signal": "",
+    "evidence": "Quote the roadmap statement ('I'll cover goal, market, three options, pick one, risks'), the check-ins ('Does that scope work?') and the closing summary. Penalise a framework announced but not followed, or an answer with no closing summary.",
+    "weight": 6.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "Rambling with no discernible structure, or the interviewer has to pull the answer out.",
+     "2": "A recited generic framework that is announced but not tailored, followed loosely, with no summary.",
+     "3": "A tailored roadmap stated upfront, logical transitions, at least one check-in, and a closing summary.",
+     "4": "Concise and well signposted, adapts the structure when the interviewer redirects, and closes with a strong one-line summary of recommendation, rationale and next step."
+    },
+    "coach": "State a three to five step roadmap tailored to the question, check in once after the goal, and close with a one-line summary.",
+    "phase": false
+   }
+  ],
+  "green_flags": [
+   "States the objective and horizon and gets agreement before analysing ('Let's define success as...').",
+   "Names the company's specific unfair advantage or asset and builds the strategy on it.",
+   "Lays out build / partner / buy / do-nothing or several distinct segment options before narrowing.",
+   "Uses explicit comparison criteria and says what is being given up ('I'm accepting slower growth to protect margin').",
+   "Commits to one recommendation with a 'why now' and a phased go/no-go plan.",
+   "Uses back-of-envelope unit economics to test viability (especially at Indian companies), with sanity checks.",
+   "Anticipates competitor response or cannibalisation (e.g. 'Zomato will match within a quarter, so our edge must be supply exclusivity').",
+   "Updates the recommendation transparently when given new data, saying what changed."
+  ],
+  "red_flags": [
+   "Recites a generic framework (SWOT, Porter's, 3Cs) section by section without saying why each part matters for this decision. Exponent calls this 'too frameworky'.",
+   "Jumps to features or solutions before stating the goal or context.",
+   "Ends with 'it depends' or three balanced options and no recommendation.",
+   "Offers only feature-level ideas for a company-level question.",
+   "Gives a recommendation with no downside, cost or risk.",
+   "Uses generic claims ('the market is huge', 'there's a lot of competition') with no specifics.",
+   "Ignores the economics in a monetisation or India case, or makes uncorrected arithmetic errors.",
+   "Reverses the recommendation at the first pushback without reason, or becomes defensive and ignores the interviewer's information."
+  ],
+  "recitation_vs_insight": "Tests a grader can apply to the transcript: (a) Specificity test: replace the company or market name with another. If the sentence still works ('Company X has strong brand and many users'), it is recitation, so do not credit it as insight. (b) Use test: every framework bucket the candidate lists must later influence a choice. Buckets that are named but never referenced in the trade-off or recommendation score 0 for insight. (c) Causal 'because' test: insight statements contain a mechanism ('because dark stores need 1,500+ orders a day to break even, tier-3 is not viable yet'), while recitation lists nouns. (d) Pushback test: insightful candidates can go one level deeper when asked 'why?', while reciters repeat the framework. (e) Customised framework: Exponent lists 'framework rationale and customization' as a criterion. Credit a candidate who says why they chose their structure. Rule: a well-structured answer with no specific, used insight should cap dimension 2 at 2 and the overall score at 'lean hire', however polished it is.",
+  "exemplars": {
+   "1": "Prompt: 'Should Swiggy launch a grocery subscription?' The candidate immediately lists features (discounts, free delivery, recipes), sets no goal, does no competitor or economics analysis, and ends with 'yes, it would help users.' There is no trade-off and no metrics.",
+   "2": "The candidate recites '3Cs plus SWOT', saying generic things in each box ('Swiggy has a strong brand; Zepto and Blinkit are competitors'), and lists two similar options. Their recommendation is 'probably yes, but it depends on execution', with vanity metrics (sign-ups) and no numbers. Structured, but shallow.",
+   "3": "The candidate clarifies the goal (frequency and retention over 12 months) and analyses Instamart's position against Blinkit and Zepto plus Swiggy One overlap. Options: standalone Instamart subscription, bundle into Swiggy One, or no subscription with targeted coupons. Criteria: retention lift, margin impact, cannibalisation. They pick the Swiggy One bundle, estimate per-order delivery-fee subsidy against frequency uplift, and give risks (margin dilution), metrics (orders per subscriber per month; guardrail contribution margin) and a 3-city pilot. They hold the recommendation under pushback.",
+   "4": "As for score 3, plus a non-obvious insight: subscription value comes from shifting order timing to batch dark-store peaks, so the economics improve beyond the fee. They name the break-even frequency threshold, anticipate Blinkit matching within a quarter and design differentiation around it, set explicit kill criteria, and when the interviewer reveals a cash constraint they explicitly update to a narrower pilot, saying what changed. The summary is crisp."
+  },
+  "level_expectations": {
+   "APM / new grad": "'Solid' (3) means a clear goal, a sensible structure, three distinct options, explicit criteria, and a committed recommendation with basic metrics. Lighter tech/industry insight and rough numbers are acceptable. Prep sources note junior answers often jump to one obvious answer (Exponent), and avoiding that is the bar.",
+   "PM (L4-L5 / Flipkart PM / Swiggy PM-APM2)": "'Solid' adds specific competitive insight about the company's real assets, second-order trade-offs, unit economics with sanity checks, and go/no-go criteria. The candidate should hold or update the recommendation under pushback with reasons.",
+   "Senior PM / Group PM (L6+ / Flipkart SPM / Director)": "'Solid' requires an original strategic thesis (a 4 on insight is close to expected), multi-year sequencing, ecosystem, org and partner implications, and portfolio trade-offs (what we stop doing). Blind reports that at L7+ the Google loop is weighted toward design plus strategy. Microsoft senior loops reportedly add a dedicated strategy and roadmap round (InterviewStack). [uncertain: level mapping across companies is approximate]",
+   "per_dimension_shift": "Framing and communication anchors stay roughly constant across levels. Insight, trade-offs and viability expectations rise by about one anchor per level, so an APM 3 is roughly a PM 2 on those dimensions."
+  },
+  "llm_grading_notes": [
+   "Length bias: an 8B model tends to reward long, framework-heavy answers. Mitigation: require the grader to quote evidence for each dimension, and give no credit for a dimension without a quote. Apply the specificity and use tests explicitly.",
+   "Crediting interviewer-supplied facts: the grader must attribute every fact to its speaker. Instruct it to score only CANDIDATE turns and to treat interviewer statements as context. Pre-process the transcript with speaker labels.",
+   "Leniency and central tendency: small models over-assign 3s. Mitigation: use the few-shot calibration exemplars at 1-4, force a gate check before scoring, and require the 'why not one higher' justification.",
+   "Keyword matching: words like 'trade-off', 'unit economics' or 'TAM' are not evidence. Require the actual comparison or arithmetic to be present.",
+   "Arithmetic verification: Qwen3 8B can miss calculation errors. Have it recompute the candidate's key numbers step by step (thinking mode) before scoring viability.",
+   "Recommendation detection: explicitly ask 'Quote the single sentence where the candidate commits to a recommendation; if none, output NONE', and apply the gate on NONE.",
+   "Pushback handling: ask the grader to locate the interviewer challenges and classify the next candidate turn as defend-with-reason, update-with-reason, cave or ignore.",
+   "Format awareness: if the interviewer imposed the structure (interviewer-led), do not penalise dimension 8 for lack of a self-driven roadmap.",
+   "India context: do not penalise rupee or crore units or India-specific references. Credit correct India context (UPI, COD, tier-2/3) as insight only when it is used causally.",
+   "Output in strict JSON per dimension (score, evidence_quotes, rationale, coach_tip), and compute the weighted total and gates in Python, not in the model."
+  ]
+ },
+ "situational": {
+  "dimensions": [
+   {
+    "key": "framing",
+    "name": "Situation framing and clarification",
+    "definition": "Establishes what is actually at stake before deciding: the goal or commitment involved, severity and scope (how many users, which segment, revenue/trust impact), constraints (date, contract, regulatory), reversibility, and who owns what. Converts unknowns into stated assumptions.",
+    "signal": "",
+    "evidence": "Quote the clarifying questions and stated assumptions, e.g. 'Is the date tied to an external commitment like a festive sale or a partner contract?', 'How many users does the bug hit and is it data loss or cosmetic?', 'I'll assume this is a two-way-door decision unless you tell me otherwise.'",
+    "weight": 15.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "Starts answering immediately with no questions or assumptions, or misreads the scenario. 'I would just delay the launch.'",
+     "2": "Asks generic questions not tied to the decision ('What's the company's mission?') or many questions without using the answers; assumptions unstated.",
+     "3": "Asks 2-4 decision-relevant questions on severity, scope, commitment and reversibility, or states assumptions when the interviewer says 'you decide'. 'How many users are affected, and is the date contractual?'",
+     "4": "As 3, plus reframes the real question and links each unknown to how it would change the decision. 'If this is a cosmetic bug, it's a scope question; if it's data loss, it's a trust question. Which is it?'"
+    },
+    "coach": "Before answering, ask the two questions that would change your decision (how bad / how many, and how reversible or fixed the constraint is), then say your assumption aloud if unanswered.",
+    "phase": true
+   },
+   {
+    "key": "options",
+    "name": "Options and trade-off analysis",
+    "definition": "Generates at least two genuinely different courses of action, including non-binary middle paths (scope cut, phased or flagged rollout, beta to a segment, hotfix window, temporary workaround), and states the concrete pros, cons and risks of each against the goal.",
+    "signal": "",
+    "evidence": "Quote the option list and the trade-off sentences, e.g. 'Three options: hold the date with a cut scope, slip two weeks with full scope, or ship to 5% behind a flag. Option one keeps the marketing launch but drops offline mode, which hurts tier-2 users most.'",
+    "weight": 20.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "Only one option considered, or a binary with no pros/cons.",
+     "2": "Two options listed with generic pros/cons ('faster vs better quality') not tied to users or the business in this scenario.",
+     "3": "Two or three distinct options including a middle path (scope cut, flag, phased rollout) with scenario-specific pros, cons and risks.",
+     "4": "As 3, plus surfaces a non-obvious option or second-order effect (precedent for the team, partner trust, festive-sale timing, regulatory exposure) and compares options against stated criteria. 'Shipping to 5% behind a flag gets us the marketing date without exposing all users.'"
+    },
+    "coach": "Every time, name at least one middle-path option (scope cut, flag, staged rollout) before choosing between the two extremes the prompt offers.",
+    "phase": true
+   },
+   {
+    "key": "decision",
+    "name": "Decision and principled reasoning",
+    "definition": "Commits to a specific recommendation, names the decision criteria and their priority (user harm first, then trust, business impact, team cost), and explains why the chosen option wins. Uses data or a test where it would change the call; distinguishes reversible from irreversible decisions; states what would change their mind.",
+    "signal": "",
+    "evidence": "Quote the explicit recommendation and its 'because', e.g. 'I would not launch on Friday. Payments double-charging is a trust issue that is hard to reverse; a two-week slip is recoverable. If the bug were cosmetic I would ship with a hotfix next sprint.'",
+    "weight": 20.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "No decision, or a decision with no reason. 'It depends on many factors.'",
+     "2": "Decision stated, but the reasoning is a slogan ('quality always comes first', 'the customer is king') or follows authority ('whatever leadership wants').",
+     "3": "Clear recommendation with the criteria and why this option wins in this case; notes what data or test would validate it.",
+     "4": "As 3, plus explicit reversibility logic and the conditions that would flip the call, delivered confidently and briefly. 'Delay, because double-charging is hard to undo; if the fix slips past the sale, I'd ship with payments on the old flow.'"
+    },
+    "coach": "Say 'My recommendation is X because Y' within the first third of your answer, and end with 'I'd change my mind if Z'.",
+    "phase": true
+   },
+   {
+    "key": "stakeholders",
+    "name": "Stakeholder alignment and communication",
+    "definition": "Identifies who is affected and who decides (eng, design, leadership, sales/ops, partners such as restaurants, sellers or delivery partners), how and when each is told, how disagreement is resolved (data, shared goal, escalation), and shows influence without authority, including disagree-and-commit once a decision is made.",
+    "signal": "",
+    "evidence": "Quote named stakeholders and the communication/escalation plan, e.g. 'I would first sit with the eng lead to understand the estimate, then go to the VP with two options and my recommendation rather than just the problem; if the VP still chooses the date, I commit and make the risk visible in the launch doc.'",
+    "weight": 15.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "No stakeholders mentioned, or overrides/blames them. 'I'd tell engineering they need to work the weekend.'",
+     "2": "Mentions 'align with stakeholders' or 'communicate with leadership' generically, with no who/how/when.",
+     "3": "Names the key stakeholders, the order of conversations, how disagreement is resolved (data, shared goal), and when to escalate with a recommendation.",
+     "4": "As 3, plus anticipates each stakeholder's incentive, pre-wires the decision, and shows disagree-and-commit or how they would keep the relationship. 'Sales cares about the client demo, so I'd offer them a guided beta for that account.'"
+    },
+    "coach": "Name the first person you would talk to, what you would bring them (options plus your recommendation), and when you would escalate.",
+    "phase": false
+   },
+   {
+    "key": "integrity",
+    "name": "User-centricity and integrity",
+    "definition": "Keeps the end user's interests and trust at the centre of the decision, and refuses options that harm users, mislead them or break privacy, security or legal obligations, even under business or deadline pressure. Considers all sides of a marketplace where relevant.",
+    "signal": "",
+    "evidence": "Quote user-impact reasoning, e.g. 'The question I'd anchor on is what the customer experiences: a late feature they never knew about, or a checkout that fails during dinner peak. The second costs trust with users and restaurants.'",
+    "weight": 10.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "User impact absent, or proposes an option that harms or misleads users.",
+     "2": "Mentions users in passing ('users won't like it') without letting it shape the decision.",
+     "3": "User impact (and, in marketplaces, each side) explicitly drives the trade-off; rejects harmful shortcuts.",
+     "4": "As 3, plus distinguishes segments with different impact (new vs loyal, tier-2 low-bandwidth users, merchants vs buyers) and builds trust-preserving measures (proactive notice, make-goods)."
+    },
+    "coach": "State explicitly what the user (and each marketplace side) experiences under each option, and rule out any option that hides harm from them.",
+    "phase": false
+   },
+   {
+    "key": "execution",
+    "name": "Execution plan and risk mitigation",
+    "definition": "Turns the decision into concrete next steps: sequence and timing (first hour/day for incidents), owners, mitigations (rollback, kill switch, feature flag, staged rollout, support scripts), success and guardrail metrics, and a checkpoint to revisit the decision.",
+    "signal": "",
+    "evidence": "Quote the plan, e.g. 'Roll out to 5% with a kill switch, watch payment success rate and support tickets for 48 hours, with a go/no-go review on Monday; status page and in-app banner within 30 minutes if the outage continues.'",
+    "weight": 10.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "Ends at the decision; no next steps.",
+     "2": "Vague next steps ('monitor it', 'fix it fast') with no owners, metrics or timing.",
+     "3": "Concrete steps with sequence, a mitigation (rollback/flag/staged rollout), and success plus guardrail metrics with a checkpoint.",
+     "4": "As 3, plus time-boxed plan tailored to the scenario (first hour/day/week for incidents), pre-defined kill criteria, and prevention afterwards. 'If payment success drops below 98% in the 5% cohort, we roll back automatically.'"
+    },
+    "coach": "Close with three concrete next steps, one guardrail metric with a rollback trigger, and a checkpoint date.",
+    "phase": true
+   },
+   {
+    "key": "ownership",
+    "name": "Ownership, humility and adaptability",
+    "definition": "Takes ownership of the outcome rather than blaming others or the process, responds to interviewer pushback and twists by updating (or defending) the position with reasons, and names learning or prevention (post-mortem, process fix).",
+    "signal": "",
+    "evidence": "Quote reactions to twists, e.g. 'That changes my answer; if the partner contract has penalties, I'd...', and ownership lines such as 'I committed that date, so I own resetting expectations', 'After it's stable, I'd run a blameless post-mortem.'",
+    "weight": 10.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "Blames others, gets defensive or repeats the same answer when challenged.",
+     "2": "Accepts pushback but either capitulates immediately without reasoning or ignores the new information.",
+     "3": "Engages with the twist: updates or defends the position with reasons, and owns the outcome of their decision.",
+     "4": "As 3, plus names what they would learn or change (blameless post-mortem, process fix) and models disagree-and-commit. 'Fair point, that changes the risk; I'd revise to... and I own the reset with the client.'"
+    },
+    "coach": "When challenged, say whether the new fact changes your answer and why, in one sentence, and own the outcome in first person ('I committed the date, so I reset it').",
+    "phase": false
+   }
+  ],
+  "green_flags": [
+   "States a clear recommendation within the first few minutes and then justifies it ('My call is to slip by a week, here's why').",
+   "Breaks the false binary with a concrete middle path: scope cut, feature flag, staged or segment rollout, or a hotfix window.",
+   "Names decision criteria in priority order and uses reversibility (one-way vs two-way door) to decide how much certainty is needed.",
+   "Says which stakeholder they would speak to first, what they would bring (data, options, a recommendation) and when they would escalate.",
+   "Keeps the user (and every side of a marketplace: customers, restaurants/sellers, delivery partners) at the centre, and refuses shortcuts that erode trust.",
+   "Gives a time-sequenced plan with mitigation and guardrail metrics (e.g. 'kill switch if payment success drops below X').",
+   "Engages a twist by explicitly updating or defending the answer, and owns the outcome without blame.",
+   "States what would change their mind, showing calibrated rather than dogmatic confidence."
+  ],
+  "red_flags": [
+   "Fence-sitting: 'it depends' or 'I'd gather more data' with no decision, even when pushed.",
+   "False binary: only ship vs delay, or side with A vs B, with no middle path considered.",
+   "Slogan reasoning: 'quality always comes first', 'customer obsession', 'disagree and commit' recited as values with no link to the scenario.",
+   "Authority shortcut: 'I'd escalate to my manager' or 'I'd do what the VP says' as the whole answer; or the opposite, overriding the team ('I'm the PM, we ship').",
+   "Blaming engineering, leadership or another team for the situation.",
+   "Ignores user harm, or proposes hiding a problem from users or leadership.",
+   "Framework recitation: walks a memorised acronym (e.g. STAR, CIRCLES, RICE) without applying it, or turns the hypothetical into a long past story without answering it.",
+   "Rambling or over-explaining: many considerations, no prioritisation, runs out of time before the decision."
+  ],
+  "recitation_vs_insight": "Recitation: the candidate announces a generic structure ('First I'd clarify, then list stakeholders, then weigh pros and cons, then decide') and fills each slot with boilerplate that would fit any scenario: 'align stakeholders', 'look at the data', 'put the customer first', 'communicate transparently'. Options are generic ('ship or delay'), and values are named rather than applied (quoting an Amazon LP or 'Googleyness' by name). The decision does not depend on any fact the interviewer gave, and a twist produces the same answer restated. Insight: the answer contains scenario-specific facts and consequences (who exactly is harmed, by how much, how reversible it is), a middle-path option that is particular to the situation, criteria that visibly drive the choice, and explicit conditions under which the call would flip. When the interviewer adds a twist, the recommendation changes or is defended with a new reason. Grader test: (1) Could this paragraph be pasted into a different scenario unchanged? If yes, cap the dimension at 2. (2) Does the decision reference at least one scenario-specific fact? (3) Did the candidate change or defend their answer with a reason after a twist? Mark K. (ex-Google EM, IGotAnOffer) states principled approaches must come across as real, not textbook quotes of best practices; PracHub lists over-rehearsed, word-perfect delivery as a red flag.",
+  "exemplars": {
+   "1": "Candidate says 'I'd ask engineering to work weekends and launch on time because the sale is important', asks no questions, ignores the payment bug, names no stakeholders except telling engineering, and gives no plan. Triggers user-harm and unilateral-override gates.",
+   "2": "Candidate asks one generic question, says 'there's a trade-off between speed and quality', lists ship vs delay with generic pros/cons, and concludes 'I'd talk to stakeholders and look at the data before deciding'. Decision only comes after the interviewer pushes, and is 'delay because quality comes first' with no scenario-specific reason or plan.",
+   "3": "Candidate asks how often the bug fires and whether the sale date is fixed, lays out three options (ship full, delay, ship the old flow for UPI and new flow for cards behind a flag), recommends the flagged partial launch because double-charging is a trust issue that is hard to reverse, names the eng lead, payments team and marketing, sets a guardrail on payment success rate with a rollback, and adjusts sensibly when told the VP wants the full launch.",
+   "4": "As 3, plus reframes the decision as 'what must be true on sale day', quantifies the exposure from the interviewer's data, identifies a second-order risk (support load during sale, refund turnaround obligations), pre-wires the VP with the option set and a clear recommendation, defines kill criteria and a war-room plan for sale day, states the condition that would flip the call, owns the date slip personally and proposes a post-launch review. Delivered concisely, with the decision stated early."
+  },
+  "level_expectations": {
+   "APM / entry": "Solid (3) = clarifies the key unknowns, offers two options with a middle path, makes a reasoned call that protects users, and names who they would talk to. Stakeholder handling can be simpler (consult eng lead, inform manager) and the plan can be lighter; one hint or nudge to commit is acceptable. Google APM and Indian APM rounds weight structured thinking and attitude (humility, bias for action) over organisational savvy.",
+   "PM (mid-level, e.g. Google L5, Meta IC5, Amazon L6 PM, India PM/Senior PM-1)": "Solid (3) = all of the above unprompted, plus explicit decision criteria, reversibility, named stakeholders with an escalation path and a concrete rollout/mitigation plan with guardrail metrics. Should handle at least one twist without losing the thread. Prepfully (Meta): needing steering reads as IC5 rather than IC6.",
+   "Senior PM / Group PM (Google L6+, Meta IC6+, Amazon L7)": "Solid (3) = drives the scenario end to end without prompts, frames second-order and organisational effects (precedent, team health, partner/merchant trust, cross-org dependencies), pre-wires leadership, sets decision principles the team can reuse, and plans prevention or mechanisms (Amazon 'mechanisms that scale', Steinman). Blind (L6) accounts say seniors are expected to break or adapt a framework when it does not fit. A merely correct, mid-level answer reads as lean hire at this level.",
+   "per_dimension_shift": {
+    "Situation framing and clarification": "APM: 2-3 basic questions; PM: questions tied to the decision; Senior: reframes the problem and surfaces hidden stakes.",
+    "Options and trade-off analysis": "APM: two options plus a middle path; PM: scenario-specific risks; Senior: second-order and org-level effects.",
+    "Decision and principled reasoning": "APM: commits with a reason; PM: explicit criteria plus reversibility; Senior: reusable principle and flip conditions.",
+    "Stakeholder alignment and communication": "APM: names eng/design/manager; PM: sequence plus escalation with a recommendation; Senior: incentives, pre-wiring, exec communication.",
+    "User-centricity and integrity": "Same floor at all levels (gate); seniors add segment-level and partner-ecosystem nuance.",
+    "Execution plan and risk mitigation": "APM: basic next steps and a metric; PM: rollout/rollback and guardrails; Senior: mechanisms and prevention.",
+    "Ownership, humility and adaptability": "APM: accepts feedback gracefully; PM: updates with reasons; Senior: owns org outcome and models disagree-and-commit."
+   }
+  },
+  "llm_grading_notes": [
+   "Length and keyword bias: an 8B model tends to reward long answers that mention 'stakeholders', 'data', 'customer' and 'trade-off'. Mitigation: require the grader to quote the exact sentence that is the decision, the specific options, and a scenario-specific fact used in the reasoning; if it cannot quote them, cap the dimension at 2.",
+   "Slogan detection: instruct the grader to apply the paste test (would this sentence fit any scenario?) and to give no credit for naming values or LPs (e.g. 'customer obsession', 'Googleyness', 'disagree and commit') without an applied action.",
+   "Interviewer-supplied content: twists and facts come from the interviewer; credit only how the candidate uses them. Label each turn with its speaker before scoring and never credit an option the interviewer suggested unless the candidate evaluated it.",
+   "Decision extraction first: have the model first output 'Decision: <quote or NONE>' and 'Turn at which decision appeared'; apply the no-decision gate mechanically before scoring other dimensions.",
+   "Gate checks as separate yes/no questions (user harm, override/deferral, blame, unanswered hypothetical, incident without mitigation), each with a quoted justification, before the weighted score; small models are more reliable on binary checks than holistic judgments.",
+   "Leniency and central tendency: small models cluster at 3. Provide the four calibration exemplars as few-shot anchors and require a one-line justification that contrasts the answer with the adjacent anchor ('why 3 not 4').",
+   "Ethics false positives: do not penalise a candidate for choosing to ship on time if they mitigate user harm (flag, partial rollout, disclosure); the gate is for knowingly harmful or deceptive choices, not for the 'ship' choice itself.",
+   "Hybrid answers: a brief past anecdote supporting the hypothetical is fine; only trigger the 'did not answer the hypothetical' gate if no forward-looking action is stated for this scenario.",
+   "Pushback scoring is symmetric: either a reasoned change or a reasoned hold can score high; instruct the model not to reward agreement with the interviewer by itself.",
+   "Multiple scenarios in one transcript: score each scenario separately and average, so one strong answer does not mask a gated one; report the worst gate."
+  ]
+ },
+ "metrics": {
+  "dimensions": [
+   {
+    "key": "goal",
+    "name": "Goal and context framing",
+    "definition": "Before naming any metric, states what the product/feature is for: mission link, who the users are (all sides of a marketplace), the user value delivered, the business goal for this cycle (acquisition, engagement, retention, monetisation) and product stage; states assumptions to narrow scope.",
+    "signal": "Metrics derived from a goal, not from a memorised list; ecosystem awareness (e.g. customers, restaurants, delivery partners for Swiggy/Zomato).",
+    "evidence": "Quote the opening framing, e.g. 'Instamart Buy Again exists to cut time-to-cart for repeat grocery buyers; for this cycle I'll treat the goal as repeat-order frequency, not new users' and any named sides ('restaurants, riders, eaters').",
+    "weight": 15.0,
+    "weight_tradeoff": 15.0,
+    "anchors": {
+     "1": "Starts listing metrics immediately; no product purpose or user named. 'I'd track DAU, MAU, retention, revenue...'",
+     "2": "Generic goal ('increase engagement') with no link to mission or users; one side of a marketplace only.",
+     "3": "States product purpose, users and a specific goal for this cycle with assumptions. 'This feature is for repeat grocery buyers; I'll assume the goal is order frequency, not acquisition.'",
+     "4": "As 3, plus covers all ecosystem sides and explains why this goal fits the product stage and company strategy. 'Zomato is post-growth in metros, so the goal is profitable frequency; restaurants and riders must also win or supply leaves.'"
+    },
+    "coach": "Spend the first 60 seconds saying who the product serves, every side of the ecosystem, and the one goal for this cycle before naming any metric.",
+    "phase": true
+   },
+   {
+    "key": "north_star",
+    "name": "North Star selection and justification",
+    "definition": "Generates 2-4 candidate North Star metrics, compares them on explicit criteria (reflects user value, moves with long-term business value, sensitive to the team's work, hard to game, not a ratio/average that can rise while the ecosystem shrinks) and commits to ONE.",
+    "signal": "Commitment with reasoned rejection of alternatives; awareness of the chosen metric's downside.",
+    "evidence": "Quote the candidate list and the elimination reasoning, e.g. 'GMV is lagging and discount-driven, orders per user is a ratio that rises if light users churn, so I'll pick weekly delivered orders from repeat users' plus the final committed NSM sentence.",
+    "weight": 20.0,
+    "weight_tradeoff": 10.0,
+    "anchors": {
+     "1": "No NSM, or names one with no reasoning; or picks a vanity metric (downloads).",
+     "2": "Picks an NSM with thin reasoning; no alternatives considered, or a ratio/average without noticing the flaw.",
+     "3": "Lists 2-3 candidates, compares on value capture, sensitivity and gameability, commits to one. 'Between GMV, orders and active buyers I pick weekly delivered orders because...'",
+     "4": "As 3, plus names the chosen NSM's blind spot and how the rest of the plan covers it; links NSM to long-term business value. 'Delivered orders can be bought with discounts, so margin is my guardrail.'"
+    },
+    "coach": "Always list three candidate NSMs and kill two out loud with a product-specific reason before committing.",
+    "phase": true
+   },
+   {
+    "key": "operationalise",
+    "name": "Metric operationalisation",
+    "definition": "Defines each key metric precisely enough for a data scientist to build it: numerator, denominator/population, event definition (placed vs delivered), time window (daily/weekly/28-day), unit of analysis, and leading vs lagging nature.",
+    "signal": "Precision and measurability rather than labels like 'engagement' or 'satisfaction'.",
+    "evidence": "Quote the definition sentence, e.g. 'WAU = distinct users with at least one completed UPI payment in a rolling 7-day window, excluding test and merchant accounts.'",
+    "weight": 15.0,
+    "weight_tradeoff": 5.0,
+    "anchors": {
+     "1": "Metrics are vague labels ('engagement', 'satisfaction', 'usage').",
+     "2": "Some metrics defined but missing time window, population or event definition.",
+     "3": "Key metrics have numerator, denominator, event and window. 'Repeat rate = users with 2+ delivered orders in 28 days / users with 1+ in prior 28 days.'",
+     "4": "As 3, plus notes leading vs lagging, measurement caveats (attribution, logging) and how quickly the metric will read in an experiment."
+    },
+    "coach": "For your NSM, say numerator, population, event and time window in one sentence, as if writing the SQL spec.",
+    "phase": true
+   },
+   {
+    "key": "levers",
+    "name": "Levers / input-metric decomposition",
+    "definition": "Breaks the NSM into 2-5 driver or input metrics the team can actually move (funnel steps or a formula such as NSM = active users x frequency x completion rate), and links each to product levers.",
+    "signal": "Understands the difference between output and controllable input metrics; can say what the team would work on.",
+    "evidence": "Quote the decomposition, e.g. 'Weekly bookings = searchers x search-to-book conversion x repeat rate; this feature should move conversion, so that is my primary team metric.'",
+    "weight": 10.0,
+    "weight_tradeoff": 5.0,
+    "anchors": {
+     "1": "No drivers; NSM stands alone.",
+     "2": "Lists supporting metrics but not how they combine or which the team controls.",
+     "3": "Decomposes NSM into 2-5 drivers (formula or funnel) and identifies which this feature moves.",
+     "4": "As 3, plus prioritises the driver with the most headroom and ties each to a concrete product lever. 'Conversion from cart to payment is where Flipkart Pay Later should move the needle; I'd own that.'"
+    },
+    "coach": "Write the NSM as a product of 3-4 drivers and say which one this feature moves.",
+    "phase": true
+   },
+   {
+    "key": "guardrails",
+    "name": "Guardrails and counter-metrics",
+    "definition": "Names 1-3 guardrail/counter metrics, each mapped to a specific way the NSM could be gamed or could harm another part of the ecosystem (other sides, trust and safety, cannibalisation, latency/cost, long-term retention), with an indication of tolerance.",
+    "signal": "Second-order thinking: knows how the chosen metric can mislead.",
+    "evidence": "Quote the guardrail and the failure mode it covers, e.g. 'If we push repeat orders with discounts, contribution margin per order and delivery-partner wait time are my guardrails; I would not launch if cancellations rise more than ~0.5pp.'",
+    "weight": 15.0,
+    "weight_tradeoff": 20.0,
+    "anchors": {
+     "1": "No guardrails.",
+     "2": "Generic guardrails not linked to NSM failure modes ('also watch NPS').",
+     "3": "1-3 guardrails each mapped to a specific risk of the NSM or another stakeholder. 'Pushing AutoPay mandates could raise failed debits and complaints, so those are guardrails.'",
+     "4": "As 3, plus explicit thresholds or decision rules and multi-sided coverage (users, merchants/partners, trust and safety, cost/latency, cannibalisation)."
+    },
+    "coach": "For each guardrail, finish the sentence 'the NSM could go up while things get worse if...' and give a threshold.",
+    "phase": true
+   },
+   {
+    "key": "ship_decision",
+    "name": "Trade-off analysis and ship decision",
+    "definition": "When metrics conflict (A up, B down) or an experiment result is given: checks result validity (sample size/duration, significance vs practical size, novelty/primacy, SRM/instrumentation), segments the effect, quantifies the net impact on the NSM/long-term goal and other stakeholders, then makes an explicit ship / no-ship / ship-with-changes / extend-test decision with conditions and a monitoring plan.",
+    "signal": "Decision quality anchored to the goal and mission, not 'it depends'; guardrails used as decision rules.",
+    "evidence": "Quote the decision sentence and its rationale, e.g. 'I would not ship broadly: the 3% click lift is mostly novelty in week 1 and 7-day retention is down 1% in new users, which is our NSM driver; I'd ship to power users only and re-test with a holdout.'",
+    "weight": 15.0,
+    "weight_tradeoff": 35.0,
+    "anchors": {
+     "1": "No decision, or decides on the up-metric alone. 'Engagement is up, so ship.'",
+     "2": "Lists pros and cons and says 'it depends'; decision vague or not tied to a goal; no validity check.",
+     "3": "Checks validity (duration, significance vs practical size, novelty), segments the effect, weighs against NSM/mission, and makes a clear call with conditions. 'Ship to returning users only, keep a 5% holdout and monitor retention for 4 weeks.'",
+     "4": "As 3, plus quantifies the net effect (e.g. rough value of a retention point vs click lift), considers long-term and ecosystem effects, proposes a way to get both (iterate the variant), and states what result would reverse the decision."
+    },
+    "coach": "End every trade-off with one sentence: decision, scope, monitoring plan and the result that would reverse it.",
+    "phase": true
+   },
+   {
+    "key": "communication",
+    "name": "Prioritisation, synthesis and communication",
+    "definition": "Keeps a short prioritised metric set (NSM + few drivers + guardrails) instead of a dashboard dump, signposts structure, checks in at key points, and closes with a crisp summary within time.",
+    "signal": "Can communicate a metric plan to a team; time management.",
+    "evidence": "Quote the closing summary, e.g. 'To recap: NSM is X, I'd watch Y and Z as drivers, and A and B as guardrails; if forced to pick one it is X.' Also note whether the candidate reached the trade-off part before time.",
+    "weight": 10.0,
+    "weight_tradeoff": 10.0,
+    "anchors": {
+     "1": "Long unprioritised list of metrics; no structure; no close.",
+     "2": "Some structure but recites a framework step by step without tailoring; weak or no summary.",
+     "3": "Signposts plan, keeps metric set short and prioritised, summarises at the end.",
+     "4": "As 3, plus a crisp one-line answer early ('My NSM is X'), adapts plan to interviewer cues and finishes with time for follow-ups."
+    },
+    "coach": "Give your answer first ('My NSM is X'), keep to one NSM, three drivers and two guardrails, and close with a 20-second recap.",
+    "phase": false
+   }
+  ],
+  "green_flags": [
+   "Opens with the product's purpose and all sides of the ecosystem before any metric ('for Swiggy that is eaters, restaurants and delivery partners').",
+   "Lists 2-3 NSM candidates, kills each with a specific reason, and commits to one.",
+   "Defines metrics with window, population and event ('delivered, not placed; weekly; repeat users').",
+   "Maps each guardrail to a concrete way the NSM could mislead, with a threshold.",
+   "In trade-offs, asks how long the test ran and whether the effect is novelty before deciding.",
+   "Segments the conflicting effect (new vs existing users, platform, city tier) and reasons about where the loss comes from.",
+   "Makes a clear call with conditions ('ship to segment X, hold out 5%, revisit in 4 weeks') and states what would reverse it.",
+   "Anchors the decision on mission/long-term value and quantifies roughly which side matters more."
+  ],
+  "red_flags": [
+   "Recites a framework (GAME/AARRR/HEART) step by step and produces a generic dashboard that would fit any product.",
+   "Lists 8-15 metrics with no single NSM or prioritisation.",
+   "Picks a vanity or ratio NSM (downloads, time spent, average order value) without noticing how it can rise while the business worsens.",
+   "No guardrails, or guardrails unrelated to the NSM ('and NPS').",
+   "In trade-offs, answers 'it depends' and never decides, or ships on the up-metric alone.",
+   "Treats a statistically significant result as automatically worth shipping, ignoring effect size, novelty or the down-metric.",
+   "Ignores one side of a marketplace (riders, merchants, sellers) when the change clearly affects them.",
+   "Runs out of time before guardrails or trade-offs."
+  ],
+  "recitation_vs_insight": "Rehearsed answers name the framework steps and fill them with stock metrics (DAU, retention, NPS, revenue) that would apply to any app; insight shows up as product-specific choices with reasons that could only be said about this product. Tests a grader can apply: (1) Substitution test: if the product name were swapped for another app, would the metric list still read as correct? If yes, cap NSM and framing at 2. (2) Rejection test: did the candidate explicitly reject at least one plausible metric with a product-specific reason? (3) Failure-mode test: is each guardrail tied to a named way this NSM could be gamed or harm another side? (4) Decision test (trade-off): does the final call depend on numbers or facts from this conversation, and does the candidate say what would change it? Structured-but-generic answers should land at 2 on most dimensions even if every framework step is present.",
+  "exemplars": {
+   "1": "Prompt: 'How would you measure success of Swiggy Instamart Buy Again shelf?' Candidate immediately lists DAU, MAU, retention, revenue, NPS and clicks on the shelf, gives no goal, no single NSM, no guardrail. On follow-up 'clicks up 8%, basket size down 3%: ship?', says 'yes, engagement is up'.",
+   "2": "Candidate names the GAME framework, states a generic goal ('improve engagement'), lists actions and metrics, picks 'shelf click-through rate' as NSM without alternatives, adds 'NPS' as guardrail. On the trade-off says 'it depends on business priorities; I'd look at more data' and does not decide.",
+   "3": "Candidate frames the shelf as reducing time-to-cart for repeat buyers, compares CTR, items added from shelf, and weekly repeat orders, commits to weekly repeat orders per active buyer with a 7-day window, decomposes into shelf exposure x add-to-cart rate x checkout completion, names basket size and contribution margin as guardrails. On the trade-off asks test duration, sees basket shrinkage is concentrated in high-value users, and recommends shipping to light users only while testing a variant, monitoring basket size.",
+   "4": "As 3, plus covers dark-store/picking load as an ops-side guardrail with a threshold, estimates that the 3% basket drop outweighs the click lift in margin terms, checks novelty by comparing week 1 vs week 2, proposes a variant that shows complementary items to recover basket size, states 'if basket drop persists in light users after 2 weeks, I'd roll back', and summarises in one sentence."
+  },
+  "level_expectations": {
+   "APM / entry": "Solid (3) = clear goal, one well-reasoned NSM, basic definitions, at least one mapped guardrail, and a clear ship decision with reasoning. Driver decomposition and statistical validity checks may be light; hints are expected. Indian APM rounds (Flipkart APM, Swiggy/Zomato associate PM) tend to reward marketplace side coverage and structure over statistical depth [uncertain].",
+   "PM (Meta IC5 / Google L5 / Amazon L6 / Flipkart PM / Swiggy PM)": "Solid = APM bar plus precise operational definitions, driver tree linked to team levers, multi-sided guardrails with thresholds, and trade-off answers that check validity and segment before deciding. Should handle 2-4 trade-off follow-ups without losing the thread (IGotAnOffer reports multiple trade-off follow-ups at Meta).",
+   "Senior PM (Meta IC6 / Google L6 / Amazon L7 / Indian Senior PM, Director track)": "Solid = PM bar plus portfolio-level thinking: cannibalisation across products, long-term vs short-term value, how the NSM shapes team incentives and roadmap, and decisive calls under ambiguity with a stated reversal condition. Driving the conversation with minimal prompting is expected; needing hints to reach guardrails is a strong negative [uncertain]."
+  },
+  "llm_grading_notes": [
+   "Length bias: long metric lists look thorough; score prioritisation and the presence of one committed NSM, not metric count. Penalise lists over ~8 metrics without ranking.",
+   "Framework-name bias: do not award points for naming GAME/HEART/AARRR; apply the substitution test (would the answer fit any product?).",
+   "Interviewer-supplied facts: in trade-off follow-ups the numbers come from the interviewer; credit only the candidate's use of them (segmenting, weighing, deciding), not their restatement.",
+   "Decision detection: a small model may read 'I'd lean towards shipping but need more data' as a decision. Require an explicit call with scope; hedged non-decisions score max 2 on the trade-off dimension.",
+   "Guardrail mapping: check that each guardrail is linked to a stated NSM failure mode; generic 'NPS/CSAT' guardrails score 2.",
+   "Statistical jargon: do not over-reward p-values or power-analysis vocabulary in a PM interview if not tied to the decision; one or two relevant validity checks are enough for a 3.",
+   "Leniency drift: require a verbatim quote for every score of 3 or 4; if no quote supports it, drop one level.",
+   "Gate application: evaluate gates before computing the weighted average and apply caps after; small models tend to forget caps.",
+   "Profile selection: choose the trade-off weight profile when the prompt or a follow-up supplies conflicting metric movements or experiment results; state which profile was used."
+  ]
+ },
+ "guesstimate": {
+  "dimensions": [
+   {
+    "key": "scoping",
+    "name": "Scoping and clarification",
+    "definition": "Pins down exactly what number is being estimated before any math: metric (units vs value, revenue vs GMV vs orders), geography, time period, inclusions and exclusions, and the purpose of the estimate.",
+    "signal": "Avoids solving the wrong problem. Asks few, decision-relevant questions, or states scoping assumptions explicitly when the interviewer says 'you decide'.",
+    "evidence": "Quote the candidate's clarifying questions or scoping statements, e.g. 'Are we estimating daily orders or GMV?', 'I'll take Bangalore city only, food delivery only, excluding Instamart.' Absence of any scope statement before calculation is itself evidence.",
+    "weight": 6.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "Starts calculating immediately. The quantity is ambiguous or wrong (e.g. asked daily orders, sizes annual GMV). No scope statement.",
+     "2": "Asks generic or excessive questions ('What's the population?' 'Can you give me data?') or clarifies only one axis. Scope is stated vaguely.",
+     "3": "Confirms metric, geography and time period in 1-3 crisp questions or explicit statements: 'Daily orders, Bangalore city, food delivery only. I'll exclude grocery.'",
+     "4": "As 3, plus ties scope to the purpose of the estimate and declares exclusions that change the answer: 'If this is for rider capacity planning I'll size peak-hour orders, not the daily average. Is that the goal?'"
+    },
+    "coach": "Before any number, say one sentence that fixes metric, place, period and exclusions ('I'll estimate X per Y in Z, excluding W'). Practise it on 10 prompts until it takes under 30 seconds.",
+    "phase": true
+   },
+   {
+    "key": "approach",
+    "name": "Approach and structure",
+    "definition": "Chooses a fitting decomposition (top-down population funnel, bottom-up supply or unit capacity, frequency x penetration, or a Fermi chain), states it out loud as an equation before plugging numbers, and keeps the tree short (2-3 levels).",
+    "signal": "A logical, followable equation whose drivers multiply to the asked-for unit. The choice of method is justified (e.g. supply-side for a constrained market), and ideally a second method is named for triangulation.",
+    "evidence": "Quote the stated equation or plan, e.g. 'Daily orders = online-ordering households x orders per week / 7 x Swiggy share; I'll cross-check bottom-up from restaurants x orders per restaurant.' Note whether the structure was stated before numbers or emerged piecemeal.",
+    "weight": 22.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "No visible method. Numbers appear in sequence with no equation. The method cannot produce the asked-for unit.",
+     "2": "A generic population x percentage chain with a missing or mis-specified driver (e.g. no frequency term). The structure is recited without saying why it fits.",
+     "3": "States a correct driver equation before plugging in numbers, 2-3 levels deep, with the method choice justified: 'I'll go top-down from households since ordering is a household behaviour.'",
+     "4": "As 3, plus picks the most informative lens (e.g. supply-side for a capacity-constrained market) and names a second method for triangulation: 'Top-down first, then bottom-up from restaurants x orders per outlet to cross-check.'"
+    },
+    "coach": "Say the full driver equation out loud before plugging in any number, then say why that decomposition fits this market (demand-side vs supply-side).",
+    "phase": true
+   },
+   {
+    "key": "segmentation",
+    "name": "Segmentation (MECE where it matters)",
+    "definition": "Splits the population or supply into segments only where behaviour differs materially (city tier, age, income, heavy vs light users, B2B vs B2C). Segments are mutually exclusive and collectively exhaustive, and each gets its own assumption.",
+    "signal": "Segmentation that changes the answer, with no overlap or double counting. No cosmetic segmentation added to look rigorous (CaseInterviewHub 2026; RocketBlocks).",
+    "evidence": "Quote the segments and why they were chosen, e.g. 'Splitting metros vs tier-2 because ordering frequency differs about 3x.' Flag overlaps, e.g. counting 'students' and '18-24 year olds' separately.",
+    "weight": 10.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "No segmentation where behaviour clearly differs (e.g. one average for metro and rural India), or segments overlap and double count.",
+     "2": "Segments are listed but cosmetic: the same assumption is applied to each, or segmentation adds steps without changing the answer.",
+     "3": "2-4 MECE segments chosen because behaviour differs, each with its own assumption: 'Metro heavy users about 3 orders/week, tier-2 about 1/week.'",
+     "4": "As 3, plus explains why this cut is the most decision-relevant and checks exhaustiveness: 'Students, working professionals and families cover all urban adults; I'm leaving out under-15s because they don't order themselves.'"
+    },
+    "coach": "Only split a segment if you can state a different number for it. For each segment, say 'this group differs because...' and drop any segment that gets the same assumption.",
+    "phase": true
+   },
+   {
+    "key": "assumptions",
+    "name": "Assumption grounding",
+    "definition": "Each numeric input is stated explicitly and justified with an anchor: known fact, personal or observed behaviour, analogy, or physical constraint. The candidate notes confidence in the input and avoids implausible numbers.",
+    "signal": "Defensible, explained inputs ('because...'), not arbitrary averages. Recognises which inputs are weakest. Knows basic anchors (India about 1.4B, US about 340M) (CaseInterviewHub 2026; PMMockr 2026; RocketBlocks).",
+    "evidence": "Quote each assumption with its justification, e.g. 'About 35% of Bangalore orders online, roughly the smartphone-owning working-age share.' Count stated-but-unjustified numbers and obviously implausible ones (e.g. '90% of elderly post daily').",
+    "weight": 20.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "Numbers stated without justification, or clearly implausible ('90% of Indians order food online weekly'). Wrong basic anchors (India population '500 million').",
+     "2": "Most numbers are plausible but justified only with 'I think' or 'let's say'. Confidence in individual inputs is not flagged.",
+     "3": "Each key input has an explicit anchor (known fact, observed behaviour, analogy): 'About 35%, roughly the share of the city with a smartphone and disposable income.' Correct basic anchors.",
+     "4": "As 3, plus explicitly ranks which assumptions are weakest and highest-impact and invites correction: 'Order frequency is my shakiest input and drives the answer most. Do you have a view, or shall I proceed at 2 per week?'"
+    },
+    "coach": "Attach a 'because' to every number (fact, observed behaviour or analogy), and at the end name your shakiest, highest-impact assumption.",
+    "phase": true
+   },
+   {
+    "key": "calculation",
+    "name": "Calculation accuracy and hygiene",
+    "definition": "Arithmetic is correct. Units and time periods are tracked at every step (per day vs per week, lakh/crore vs million/billion). Numbers are rounded sensibly to keep the math tractable without false precision.",
+    "signal": "Correct intermediate and final arithmetic, visible units, and self-correction of slips. No order-of-magnitude errors.",
+    "evidence": "Recompute every multiplication and division the candidate states and quote any incorrect line verbatim, e.g. '4.5M x 2 / 7 = 1.3M' (correct) vs '13M x 35% = 45M' (wrong by 10x). Quote unit conversions.",
+    "weight": 15.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "An order-of-magnitude or unit error survives to the final answer (per-week treated as per-day, lakh/million confusion).",
+     "2": "Minor arithmetic slips, some caught only after the interviewer prompts. Units dropped at some steps. Rounding is either excessive or falsely precise (e.g. carrying 337.2M).",
+     "3": "Arithmetic correct throughout. Units and time period are stated at each step. Rounding is sensible: '13M x 35% is about 4.5M people.'",
+     "4": "As 3, plus fast, clean mental math with self-correction narrated ('wait, that's weekly, divide by 7: about 650k a day') and handling of messy numbers by rounding in compensating directions."
+    },
+    "coach": "Say the unit with every intermediate result ('4.5M people', '1.3M orders per day') and round to 1-2 significant figures. Drill lakh/crore to million/billion conversions.",
+    "phase": true
+   },
+   {
+    "key": "sanity",
+    "name": "Sanity check and sensitivity",
+    "definition": "Unprompted plausibility check of intermediate and final results against an independent anchor (per-capita ratio, known benchmark, second method), plus identification of the assumptions the answer is most sensitive to and the resulting range.",
+    "signal": "The candidate catches their own errors before the interviewer does, triangulates, and gives a range ('500-700k'). Names the one or two biggest-swing assumptions (IGotAnOffer 2026; RocketBlocks; Julia Winn 2022; StrategyCase 2026).",
+    "evidence": "Quote the check, e.g. 'That is about one order per 20 residents per day, which feels right for a metro'; 'Bottom-up gives 600k, close to 650k top-down'; 'Most sensitive to order frequency.' Record whether it was unprompted or followed an interviewer prompt.",
+    "weight": 15.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "No check. Accepts an implausible result, or checks only when the interviewer asks 'does that sound right?'",
+     "2": "A token check ('seems reasonable') with no anchor, or a check made only after prompting.",
+     "3": "An unprompted check against an independent anchor or per-capita ratio: 'That's about one order per 20 residents a day, plausible for a metro.' Gives a range.",
+     "4": "As 3, plus triangulates with a second method, names the one or two most sensitive assumptions with their effect on the range, and states what data would refine it: 'Bottom-up gives 600k vs 650k top-down. ±30% on frequency moves it 450-850k. I'd validate frequency with cohort data.'"
+    },
+    "coach": "End every estimate with a per-capita or second-method check plus a range, e.g. 'that's one per N people per day; bottom-up gives X; range A-B, most sensitive to C.'",
+    "phase": true
+   },
+   {
+    "key": "communication",
+    "name": "Communication and synthesis",
+    "definition": "Thinks out loud so every step is followable, checks in at key junctures, commits to a clear final number with units and range, and gives the 'so what' (what the number implies for the business or product decision).",
+    "signal": "Answer-first close, a stated number rather than trailing off, and an implication tied to the purpose (e.g. 'so a 1% conversion lift is worth about X orders a day, worth pursuing'). (CaseInterviewHub 2026; StrategyCase 2026; PrepLounge; Julia Winn 2022.)",
+    "evidence": "Quote the final statement and any implication sentence, and the check-ins ('Does this structure make sense before I plug in numbers?'). Note long unexplained jumps, e.g. a number appearing with no derivation.",
+    "weight": 12.0,
+    "weight_tradeoff": null,
+    "anchors": {
+     "1": "Long silences or unexplained jumps, no final number, or ends with 'Is that right?'",
+     "2": "Explains steps but rambles or loses the thread. The final number is stated without units or range, with no implication.",
+     "3": "Followable think-aloud, at least one check-in at the structure stage, and a clear final answer with units and range: 'So about 650k orders a day, likely 500-700k.'",
+     "4": "As 3, plus answer-first summary and a 'so what' tied to the purpose: 'about 650k a day, so a 2% conversion lift is about 13k orders a day, worth an experiment', delivered concisely."
+    },
+    "coach": "Close answer-first: number, range, then one sentence on what it means for the decision. Never end with 'is that right?'",
+    "phase": false
+   }
+  ],
+  "green_flags": [
+   "States the exact quantity, unit, geography and period before calculating ('daily orders, Bangalore, food only').",
+   "Writes or speaks the driver equation first, then fills it in; names top-down vs bottom-up and why.",
+   "Justifies each input with an anchor ('about 250 working days', 'roughly the smartphone-owning share') and flags the shakiest one.",
+   "Segments only where behaviour differs, e.g. metro vs tier-2 ordering frequency, heavy vs light users.",
+   "Narrates self-corrections on units or arithmetic before the interviewer notices.",
+   "Runs an unprompted per-capita or second-method sanity check and gives a range.",
+   "Closes answer-first with the number, the range and a one-line 'so what' for the business or product decision.",
+   "Uses the interviewer's hint or supplied data immediately and correctly, and objects if a supplied number produces an implausible result (PrepLounge)."
+  ],
+  "red_flags": [
+   "Recites a memorised template ('population, then percentage, then frequency, then price') without adapting it to the question. Memorising frameworks instead of thinking is StrategyCase's #1 mistake.",
+   "Multiplies the full population by an average rate, ignoring non-users (PMMockr 2026).",
+   "Unstated or arbitrary assumptions; numbers appear with no derivation.",
+   "Over-segmentation or decimals that add steps without changing the answer (false precision, e.g. 337.2M).",
+   "Spends most of the time on a sub-estimate that barely affects the total (Julia Winn).",
+   "Never sanity-checks, or accepts an absurd result as reasonable.",
+   "Freezes or asks for data instead of estimating ('I don't know the population, can you tell me?'). This is discomfort with uncertainty (Julia Winn; Tripathi account).",
+   "Trails off without a final number, or ends with 'Is that correct?'"
+  ],
+  "recitation_vs_insight": "Recitation looks like a generic chain (population x % online x frequency x share) delivered in the same order for any prompt, with segment labels but identical assumptions per segment, 'let's assume' numbers with no anchor, and a closing 'seems reasonable' with no comparison. Insight shows up in: (a) a structure chosen for this market's binding constraint (e.g. supply-side for quick-commerce dark-store capacity, frequency x penetration for a habitual service); (b) segments whose assumptions differ, with a stated reason; (c) awareness of which input dominates the answer; (d) a sanity check using an independent anchor or second method that could actually disagree; (e) a so-what tied to the purpose. Grader tests: 1) If you swapped the product name, would the answer be unchanged? If yes, it is recitation and Approach caps at 2. 2) Does every segment have a distinct, justified number? If not, Segmentation caps at 2. 3) Does the sanity check compare against something outside the candidate's own chain? If not, Sanity check caps at 2. 4) Is the most sensitive assumption named? Without it, no 4 on Assumption grounding or Sanity check. Source basis: StrategyCase ('memorizing frameworks instead of thinking', 'picking the wrong structure'); CaseInterviewHub ('segmenting where it does not [matter]' is a listed mistake); RocketBlocks (differentiated assumptions per segment). The tests themselves are inferred.",
+  "exemplars": {
+   "1": "Candidate says 'Bangalore has maybe 1 crore people, say half order every day, so 50 lakh orders, Swiggy has maybe 60%, so 30 lakh.' No scope, no frequency term (assumes daily ordering), no justification, no check, and accepts that about 30% of the city orders Swiggy daily. Gates: implausible result accepted; no structure.",
+   "2": "States 'population x % who order online x orders per week / 7 x Swiggy share', but uses 'let's say' numbers with no anchors, lists segments (students, professionals, families) with the same frequency for each, makes one unit slip caught only after the interviewer asks 'per day or per week?', and ends with 'so about 9 lakh, does that sound right?' with no range or check.",
+   "3": "Confirms weekday, Bangalore city, food only. States the top-down equation. Splits heavy (young professionals, about 3/week) vs occasional users (about 0.5/week) with reasons. Anchors on about 1.3 crore population and smartphone/disposable-income share. Math is correct with units. Checks unprompted: 'about 650k a day is one order per 20 residents, plausible.' Gives a 5-7 lakh range and names order frequency as the most sensitive input.",
+   "4": "Everything in 3, plus asks the purpose ('rider planning or market share?'), triangulates bottom-up (about 20k active restaurants x about 30 Swiggy orders per day, about 6 lakh), reconciles the two methods, shows how ±30% on frequency moves the range, and closes answer-first with a so-what: 'about 6.5 lakh a day; if the goal is lunch-peak rider capacity, roughly 35% falls in a 2-hour window, so plan for about 2.3 lakh orders in that window.' Concise, with one check-in after the structure."
+  },
+  "level_expectations": "Anchors are the same across levels, but what counts as 'solid' (3) shifts [inferred; no source publishes level-specific estimation anchors]. APM / new grad (Flipkart APM, Google APM, campus PM): 3 means correct scope, a stated equation, grounded assumptions, correct math and an unprompted sanity check. The 'so what' and triangulation are bonus (4-level). Moderate nudging on structure is tolerated once. India campus APM screens lean heavily on guesstimates plus RCA as filters (Ananya Malhotra Flipkart APM accounts, 2020, background only; Glassdoor Flipkart APM). PM (L4-L5 / mid-level): 3 additionally needs purpose-aware scoping, segmentation that changes the answer, and naming the most sensitive assumption. A business implication is expected when the prompt has a product context (Julia Winn's Google analytical format links the estimate to behaviour change, metrics and investment worthiness). Senior PM (L6+): estimation is rarely standalone. It is folded into strategy or 'is this worth building' questions. 3 requires the candidate to frame the estimate around the decision (TAM vs SAM vs obtainable, or capacity vs demand), keep the math brief, and spend time on implications, risks and what data would change the call. Over-investing in arithmetic precision at senior level reads as missing judgment (Blind Google L6 thread, Oct 2025: 'operate like a scientist, not just a calculator'). Consulting analogue: undergrad/MBA candidates are held to the 'Good vs Very Good' line on quant reasoning. 'Distinctive' needs the business implication without prompting (StrategyCase).",
+  "llm_grading_notes": "1) Recompute the math: an 8B model tends to trust stated arithmetic. Instruct the grader to recompute every product or quotient and quote incorrect lines verbatim, or pre-compute them with a deterministic Python pass that extracts number expressions from the transcript and flags mismatches over 15% before the LLM scores. 2) Attribution: credit only numbers, structure and checks the candidate produced. If the interviewer supplied the structure, a data point or the sanity check, the grader must not credit it. Separate speaker turns and require evidence quotes from candidate turns only. 3) Length bias: long transcripts with many segments look rigorous. Apply the recitation tests (swap-the-product test, distinct-number-per-segment test) and cap scores where they fail. Reward concision at equal quality. 4) Leniency and central tendency: small models over-assign 3s. Require a quoted transcript span for every score of 3 or higher, and default to 2 if no quote satisfies the 3-anchor. 5) Accuracy vs reasonableness: do not penalise distance from a 'true' value the grader believes it knows (its own facts about Swiggy volumes may be wrong). Judge plausibility of the anchors and the internal consistency. Penalise only absurd anchors (India population off by 3x or more). 6) Prompt-induced checks: distinguish 'unprompted' from 'after interviewer asked' sanity checks. Only unprompted checks can score 3 or higher. 7) Gates first: evaluate must-pass gates before dimension scoring and apply caps after the weighted sum. Output the gate decisions explicitly. 8) Units: lakh/crore and per-day/per-week confusion is common in Indian transcripts. Ask the grader to normalise all numbers to a single unit table before judging. 9) Hallucinated evidence: require exact quotes and verify, by substring match in code, that each quote exists in the transcript. 10) Use the four calibration exemplars as few-shot examples, but vary the prompt domain so the grader does not anchor on Swiggy-specific numbers."
+ }
+}

@@ -1,0 +1,195 @@
+{
+  "pun_title": "App-solutely Separate",
+  "case_type": "Product Strategy",
+  "asked_at": "[uncertain] Swiggy-style (Instamart version); the Amazon Pay standalone-app variant is reported as asked at Razorpay (PracHub, 2026)",
+  "subject_company": "Swiggy Instamart (primary); Amazon Pay India (paired variant)",
+  "round_and_level": "[uncertain] Product strategy / product sense round, 45 min, PM or SPM (the Razorpay variant reportedly at PM level)",
+  "difficulty": "Medium-Hard - looks like a yes/no app question, but a strong answer has to reason about cross-sell economics, cannibalisation, user intent and brand, and should reach a conditional 'both, with a job for each surface' answer backed by a decision rule",
+  "market_and_industry": "India; quick commerce inside a food-delivery super-app (Swiggy vs Blinkit/Eternal vs Zepto); urban Tier 1 metros plus large Tier 2 cities; mid-range Android users with limited phone storage; the Amazon Pay variant is UPI payments/fintech",
+  "time_box_minutes": "30-40",
+  "exact_prompt": "\"Should Instamart live inside the Swiggy app or as a standalone app?\" Paired variant (reported at Razorpay): \"Should Amazon Pay be a standalone app in India, or stay inside the Amazon shopping app?\"",
+  "source_and_verification": "Reported. The casebook outline logs the Instamart prompt as Swiggy-style and the Amazon Pay standalone variant as asked at Razorpay (PracHub, 2026); the PracHub page itself could not be retrieved in this research pass [uncertain]. The real-world triggers are well documented: Swiggy launched a standalone Instamart app in Jan 2025 while keeping the in-app tab (Inc42: https://inc42.com/buzz/over-35-of-swiggy-users-try-multiple-services-but-order-frequency-slips/ ; Storyboard18: https://www.storyboard18.com/brand-marketing/swiggy-instamart-scales-up-to-76-cities-plans-to-launch-standalone-app-52865.htm), and TechCrunch reported in Aug 2024 that Amazon was considering moving Amazon Pay into a standalone app in India (https://techcrunch.com/2024/08/19/amazon-considers-moving-amazon-pay-into-a-standalone-app-in-india/ ; The Morning Context: https://themorningcontext.com/internet/amazon-pay-could-be-a-standalone-app-in-india ; The Captable on super-app retreat: https://the-captable.com/2024/08/zomato-amazon-flipkart-are-shunning-super-app). Year reported: 2026.",
+  "context_as_of": "As of Nov 2026 (swiggy-product-teardown/results/Instamart.json plus web checks). Instamart launched Aug 2020 as a tab in the Swiggy app; a standalone Instamart app launched Jan 2025 and the in-app tab continues, so today Swiggy runs both. Q2 FY27 (Jul-Sep 2026): Instamart GOV Rs 9,230 cr (+31% YoY), 130.3 M orders, 14.8 M MTU, net AOV Rs 506, 1,240 dark stores in 133 cities, contribution margin -1.0% of GOV, adj. EBITDA -Rs 895 cr; Instamart is about 44% of Swiggy B2C GOV. Swiggy platform: 23.5 M average MTU in FY26, more than 35% of transacting users used more than one service, but orders per user per month slipped to 4.07 in FY26 from 4.43 (Inc42, 24 Jul 2026). Instamart's share of orders among the top three quick-commerce players fell from 34.3% (FY24) to 20.9% (FY26) per Zepto's UDRHP (Apparel Resources: https://apparelresources.com/business-news/retail/instamarts-share-among-q-commerce-players-declines-34-21-2-years/). Instamart was moved into a wholly owned subsidiary, Swiggy Instamart Pvt Ltd, from 1 Apr 2026 to shift to an inventory-led model. Rivals: Blinkit and Zepto are standalone-first apps; Eternal keeps Zomato, Blinkit and District as separate apps [uncertain on whether any Blinkit entry point remains in the Zomato app]. Swiggy also tried and shut several standalone side-apps (Genie suspended May 2025, Minis Aug 2025, Pyng Oct 2025; Snacc folded into food/Bolt). Standalone-app adoption share is not disclosed [uncertain]. Amazon Pay variant: Amazon considered a standalone payments app in Aug 2024 because Amazon Pay got too little attention inside the shopping app, with roughly 0.5% of UPI transactions in Jul 2024 (TechCrunch); Amazon Pay UPI has 100 M+ registered users (Inc42) [uncertain on date]; no confirmed standalone launch found as of Nov 2026 [uncertain]. Stale-risk flags: Instamart now reported as discontinued operations/subsidiary, Zomato is Eternal Ltd, numbers move every quarter.",
+  "regulatory_context": "(1) FDI policy on e-commerce (Press Note 2 of 2018): a foreign-owned marketplace cannot run an inventory model, which is why Instamart was moved into an Indian-owned-and-controlled subsidiary in 2026. A separate entity makes a separate app brand cleaner to operate but does not require one. (2) Data sharing between Swiggy and the subsidiary across apps falls under the DPDP Act 2023 and DPDP Rules (notified Nov 2025, main obligations from about May 2027): cross-app login and shared order history need clear consent and purpose limitation [uncertain on exact dates]. (3) CCPA Dark Patterns Guidelines 2023: cross-sell banners and fee drips in either surface must not mislead. For the Amazon Pay variant, regulation is material: (a) NPCI UPI market-share cap of 30% per third-party app, with compliance extended to 31 Dec 2026 [uncertain whether extended again], which favours challengers like Amazon Pay; (b) a standalone UPI app may need new UPI handles/re-registration and NPCI approval for the TPAP set-up (reported in 2024); (c) RBI Payment Aggregator and PPI (wallet) master directions govern Amazon Pay's wallet and merchant acquiring, independent of which app hosts it.",
+  "public_data_anchors": "Instamart Q2 FY27: GOV Rs 9,230 cr, 130.3 M orders, 14.8 M MTU, net AOV Rs 506, 1,240 dark stores / 133 cities, CM -1.0% of GOV - swiggy-product-teardown/results/Instamart.json (from Swiggy Q2 FY27 shareholder letter, Oct 2026) ; Swiggy FY26 average MTU 23.5 M (+33% YoY), more than 35% multi-service users, frequency 4.07 orders/user/month - Inc42, 24 Jul 2026: https://inc42.com/buzz/over-35-of-swiggy-users-try-multiple-services-but-order-frequency-slips/ ; Instamart FY26 orders 412.2 M (FY24 175.5 M), order share among top-3 QC players 20.9% in FY26 vs 34.3% in FY24 - Zepto UDRHP via Apparel Resources (2026) ; Blinkit about 2,751 dark stores (Q2 FY27) - swiggy-product-teardown ; Amazon Pay about 0.5% of UPI transactions in Jul 2024, rank 6 among UPI apps - TechCrunch, 19 Aug 2024 ; UPI about 20 bn monthly transactions (Aug 2025, NPCI) [uncertain on the latest 2026 monthly figure] ; PhonePe and Google Pay together hold more than 80% of UPI volume (NPCI, 2025) [uncertain].",
+  "framework_applied": "Product Strategy: Clarify, Context (4 pillars), Recommend (frameworks.md section 2). This is a strategic decision question ('should we do X'). Step 1 Clarify: success = profitable Instamart growth (incremental MTU and frequency at lower CAC), not app downloads; scope = consumer app surface in India; constraints = Instamart breakeven pressure, a new subsidiary, marketing budget. Step 2 Context: (1) Company positioning - Swiggy is a super-app whose biggest asset is the food user base and Swiggy One; Instamart is 44% of B2C GOV but loss-making; weakness = third in share and frequency slipping; opportunity cost of a second app's marketing. (2) Customers - two jobs: the food user who adds groceries occasionally (served best in-app) and the grocery-first household that wants a fast, uncluttered grocery app (served best standalone). (3) Competition - Blinkit and Zepto are standalone and own 'grocery intent' on the home screen; super-app clutter is Swiggy's weakness; substitutes = Flipkart Minutes, Amazon Now, BigBasket Now, kiranas. (4) Market forces - app store CAC, phone storage on budget Android, cross-app login cost, low switching costs. Step 3 Recommend: reframe from 'tab or app' to 'which surface owns which job': keep the in-app tab as the acquisition and cross-sell engine and make the standalone app the retention home for grocery-first users, with a measured graduation path, success metrics, risks and a kill/scale rule. Contrast with Amazon Pay, where the answer flips because UPI is a daily, intent-led, standalone-category habit.",
+  "clarifying_questions": [
+    "Q: What is the goal - Instamart growth, Swiggy-wide engagement, or Instamart profitability? A: Profitable Instamart growth. Leadership wants more grocery-first users and higher frequency without blowing up CAC.",
+    "Q: Is this a greenfield decision or a review of the current set-up, since Swiggy already has both? A: Treat it as a review: should we keep investing in the standalone app, fold it back, or go further and pull Instamart out of the Swiggy app?",
+    "Q: Which users and cities? A: All Instamart cities, but most volume is in the top 8 metros.",
+    "Q: Do we know how many Instamart orders come from the standalone app? A: Yes, I'll share it (see exhibits).",
+    "Q: Any constraints from the new subsidiary structure? A: Instamart is now a separate legal entity for the inventory model, but shares login, payments, Swiggy One and the rider fleet with Swiggy.",
+    "Q: Time horizon and budget? A: Next 12-18 months; no extra marketing budget beyond the current Instamart plan.",
+    "Q: What does success look like in numbers? A: Your call - propose the metrics.",
+    "Q: Is the Swiggy One membership shared across both surfaces? A: Yes, and it stays shared."
+  ],
+  "interviewer_data_reveals": [
+    "Exhibit 1 (illustrative) - Instamart orders by surface, last quarter: Swiggy app tab 72%, standalone Instamart app 28%. Standalone share was 12% four quarters ago.",
+    "Exhibit 2 (illustrative) - Users by surface: 'tab-only' 9.5 M MTU at 1.9 Instamart orders/month; 'standalone-only' 2.6 M MTU at 4.6 orders/month; 'both' 2.7 M MTU at 4.1 orders/month. (Real anchor: total Instamart MTU 14.8 M and about 2.9 orders/MTU/month in Q2 FY27, Swiggy shareholder letter.)",
+    "Exhibit 3 (illustrative) - Acquisition: 61% of new Instamart users first ordered from a tile inside the Swiggy app; blended CAC Rs 90 via in-app cross-sell vs Rs 340 via app-install campaigns.",
+    "Exhibit 4 (illustrative) - Basket: standalone AOV Rs 560 vs tab AOV Rs 470; standalone users' food order frequency is 0.3 lower per month than matched tab users (possible cannibalisation of food sessions, or just a different user).",
+    "Exhibit 5 (illustrative) - 30-day retention of new users: tab 34%, standalone 47%; but standalone app is uninstalled within 30 days by 22% of installers.",
+    "Exhibit 6 (real) - Market context: Instamart order share among top-3 QC players fell from 34.3% (FY24) to 20.9% (FY26), Zepto UDRHP; Swiggy frequency per user fell to 4.07/month in FY26 (Inc42)."
+  ],
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "Should Instamart live inside the Swiggy app or as a standalone app?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Let me make sure I'm solving the right problem. Swiggy already runs both: a tab since 2020 and a standalone app since January 2025. So is the question whether to keep both, fold the standalone back in, or pull Instamart out of Swiggy completely?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Exactly. Treat it as a review of where we put our effort for the next 12-18 months."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "And what's the goal: Instamart growth, Swiggy-wide engagement, or profitability?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Profitable Instamart growth. More grocery-first users and higher frequency, without raising CAC much."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Constraints? I know Instamart is now a separate subsidiary for the inventory model. Does that change shared login, payments or Swiggy One?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "No. Those stay shared, and there's no extra marketing budget."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Good. I'll use the strategy structure: clarify, then four context pillars (Swiggy's position, customers, competition, market forces), then a recommendation with risks and a decision rule. Do you have data on orders by surface?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Yes. Last quarter 72% of Instamart orders came from the Swiggy tab and 28% from the standalone app, up from 12% a year ago. Tab-only users order about 1.9 times a month, standalone-only users 4.6 times, and people who use both 4.1 times. All illustrative."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Pillar one, Swiggy's position. Its edge over Blinkit and Zepto is the food base, roughly 23.5 million monthly transacting users, plus Swiggy One. More than 35% of users already use more than one service, so the super-app is a real cross-sell engine. The weaknesses: Instamart is third in share, falling from about 34% to 21% of top-3 orders in two years, and it still loses money, so every marketing rupee has an opportunity cost. Overall frequency is also slipping, which tells me cross-sell isn't automatically creating habits."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Where do new Instamart users come from?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'd guess most come through the Swiggy app. Do you have the split?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "61% of new users first ordered from a tile in Swiggy. CAC is about Rs 90 through in-app cross-sell versus Rs 340 through app-install campaigns."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then pulling Instamart out of Swiggy is off the table. We'd give up our cheapest acquisition channel, close to 4x cheaper, at the moment we need to cut losses. Pillar two, customers. I see two jobs. Segment A is the food-first user: they order dinner and sometimes add milk or snacks. For them the tab is perfect, because it rides an existing habit. Segment B is the grocery-first household, someone who orders four or five times a month and wants a clean grocery home screen with search, buy-again and fast reorder, without biryani banners. For them the super-app is clutter, and a dedicated icon on the home screen is what Blinkit and Zepto give them."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Isn't Segment B just a better user anyway, whatever surface they use?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's the key caveat: selection bias. The 4.6 orders a month may be because heavy users chose the app, not because the app made them heavy. So I wouldn't read Exhibit 2 as causal. I'd want a holdout: matched tab users nudged to install versus not, and then compare incremental frequency."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Fair. Pillar three?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Competition. Blinkit and Zepto are standalone-first. Their advantage is intent ownership: when someone thinks 'I need coriander in ten minutes', they tap the Blinkit icon. Swiggy's tab only wins that moment if the user first thinks 'Swiggy'. New threats: Flipkart Minutes and Amazon Now sit inside huge shopping apps, so the super-app approach isn't dead either; BigBasket has its own app; and Swiggy's own MCP integrations put Instamart inside ChatGPT or Claude, where the surface question disappears altogether. So the trend is toward many entry points feeding one shared back end."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "And market forces?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Four quick ones. App-store install cost is high and rising. Phone storage on Rs 10-15k Android phones makes a second app a real ask, and uninstalls punish us. Switching costs between QC apps are near zero, so habit and home-screen presence matter. And building a second app costs engineering and design effort, but that cost is already sunk, because the app exists and shares the back end. What remains is the marketing spend and the cannibalisation risk."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Here's more: standalone AOV is Rs 560 versus Rs 470, but standalone users order food 0.3 times a month less than matched tab users. 22% uninstall within 30 days."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That tells me two things. First, the standalone app may be taking food sessions away, because users who don't open Swiggy see fewer food prompts. That's a real cost for a company whose profit comes from food. Second, a 22% uninstall rate means blanket install pushes waste money. So the app should be a destination users graduate to, not something we push on everyone."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "So what's your recommendation?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "The answer isn't tab or app. It's which surface owns which job. One: the Swiggy tab stays the acquisition and cross-sell engine for every food user, and we keep investing in it. Two: the standalone app becomes the retention home for grocery-first users. We invite users to it only once they cross a threshold, say three Instamart orders in 30 days, with a Swiggy One perk such as an app-only buy-again list. Three: we protect food with a food entry point inside the Instamart app and shared Swiggy One savings, so graduating doesn't cut food frequency. Four: we don't pull Instamart out of Swiggy, and we stop paid install campaigns aimed at cold users."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How would you know it's working?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "North star: incremental Instamart orders per user among graduated users, compared with a holdout that wasn't invited. Inputs: graduation rate, 30-day app retention, uninstall rate and CAC per retained user. Guardrails: food orders per user and combined Swiggy contribution per user, so we don't win groceries by losing biryani, and blended CAC."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What if the holdout shows no lift?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then the app is just a mirror of the tab for people who were heavy anyway. I'd stop spending on it, keep it alive cheaply for users who prefer it, and put the effort into the tab: a persistent grocery entry on the Swiggy home screen, a fast 'reorder groceries' widget and Android home-screen shortcuts. The decision rule: scale the app only if graduated users show at least 15% incremental Instamart frequency with food frequency down no more than 3%."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Risks?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Three. Brand split: two icons can confuse users, so the app is branded 'Instamart by Swiggy', with shared login and one Swiggy One. Data and consent: with Instamart now a separate entity, cross-app data sharing needs clean DPDP-style consent. And attribution fights: teams will argue over credit, so we measure combined contribution per user, not surface-level orders."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Last one. Same question at Razorpay: should Amazon Pay be a standalone app?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "There I'd lean yes, which shows the answer depends on the job. UPI payments are a daily, intent-led habit: scan a QR at the chaiwala, pay a friend, pay the electricity bill. Users already keep a standalone payments app, PhonePe or Google Pay, and Amazon Pay inside a shopping app rarely gets opened for that. It had about 0.5% of UPI volume in 2024. NPCI's 30% cap on any one app also gives challengers room. The risks differ: re-issuing UPI handles, NPCI approval and losing the cashback-on-Amazon loop. So I'd keep Amazon Pay inside Amazon for checkout and launch the standalone app for scan-and-pay and bills, with a UPI Lite or rewards hook. So: Instamart grows best by graduating users out of the super-app, and Amazon Pay needs its own home-screen icon to compete at all."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Good. Wrap it up."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Keep Instamart in Swiggy as the cheap acquisition engine, use the standalone app as a home for grocery-first users they graduate into, prove it with a holdout, and protect food frequency as the guardrail. Scale the app only if the lift is real."
+    }
+  ],
+  "answer_and_recommendation": "Ranked options: (1) Recommended - 'both, with a job each': the Swiggy tab stays the acquisition and cross-sell engine; the standalone Instamart app becomes the retention home that grocery-first users graduate into (trigger: about 3 Instamart orders in 30 days, with app-only perks such as a smart buy-again list and Swiggy One benefits), plus a food entry point inside the Instamart app to protect food frequency; (2) Fallback - fold effort back into the tab (persistent grocery entry on the Swiggy home screen, home-screen shortcut widgets) if a holdout shows no incremental lift from the app; (3) Rejected - pull Instamart out of the Swiggy app, which gives up the cheapest acquisition channel (about 61% of new users and about 4x cheaper CAC in the illustrative data). Risks and mitigation: cannibalised food sessions (food entry point inside Instamart, food-frequency guardrail); 22% early uninstalls (invite only proven users, no cold install ads); brand confusion (Instamart by Swiggy, one login, one Swiggy One); DPDP consent across the new subsidiary (explicit cross-app consent). Decision rule: scale the app if graduated users show at least 15% incremental Instamart frequency versus holdout with food frequency down no more than 3%. Amazon Pay variant: the answer flips to standalone for scan-and-pay and bills because UPI is a daily standalone habit, while checkout stays inside Amazon. Closing line: 'The super-app is where Instamart users are born; the standalone app is where the best ones should live. Graduate them, and prove the lift with a holdout before you spend on installs.'",
+  "counter_metrics_guardrails": "Food orders per user per month and combined Swiggy contribution margin per user (no winning groceries by losing food); blended Instamart CAC and CAC per retained user; standalone app 30-day uninstall rate; Swiggy One renewal rate; Instamart contribution margin per order (app-only discounts must not deepen losses); cross-surface double counting in attribution; support contacts from login/account confusion between apps; consent opt-out rate for cross-app data sharing. For the Amazon Pay variant: Amazon checkout conversion and Amazon Pay share of Amazon checkout payments must not fall when wallet features move out.",
+  "follow_up_twists": [
+    "Twist: 'The CEO wants to pull Instamart out of the Swiggy app to build a stronger brand against Blinkit.' Response: Show that the tab supplies most new users at about a quarter of the CAC; build the brand in the standalone app for graduated users instead of cutting the funnel that feeds it.",
+    "Twist: 'The holdout shows the app adds only 3% frequency.' Response: Then the app mainly serves self-selected heavy users; keep it on low maintenance, stop paid installs and move effort to tab-level fixes like a persistent grocery entry and home-screen shortcuts.",
+    "Twist: 'Zepto launches inside a super-app partner and Blinkit gets a Zomato tab back.' Response: That confirms the many-entry-points trend; our edge is the shared back end and Swiggy One, so add entry points (MCP/agents, widgets) rather than betting on one surface."
+  ],
+  "common_pitfalls": [
+    "Giving a flat yes or no. Swiggy already runs both, so the strong answer assigns a job to each surface and adds a decision rule.",
+    "Reading the standalone app's higher frequency as causal. Heavy users self-select into the app; you need a holdout before scaling.",
+    "Ignoring food cannibalisation. Food is Swiggy's profit engine, so food frequency per user has to be a guardrail.",
+    "Copying Blinkit or Zepto by default. They're standalone-first because they never had a food base; Swiggy's cheapest acquisition is cross-sell. Also, don't carry the Instamart answer over to Amazon Pay, where the job (daily UPI payments) points the other way."
+  ],
+  "skills_tested": "structuring, business sense, prioritisation, quant, empathy, communication",
+  "linked_teardown": "swiggy-product-teardown (swiggy-product-teardown/results/Instamart.json): app_architecture records the dual surface (in-app tab plus standalone app since Jan 2025) with shared account, payments, Swiggy One and fleet; growth_loops names super-app cross-sell and the shared Swiggy One free-delivery benefit as the main loop; Q2 FY27 figures (GOV Rs 9,230 cr, 14.8 M MTU, about 2.9 orders/MTU/month) anchor the exhibits. Killed_experiments_Genie_Minis_Pyng_Crew.json supports the point that standalone side-apps often get folded back.",
+  "uncertain": [
+    "asked_at",
+    "round_and_level",
+    "source_and_verification",
+    "context_as_of",
+    "regulatory_context",
+    "public_data_anchors"
+  ]
+}

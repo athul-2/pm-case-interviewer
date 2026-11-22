@@ -1,0 +1,152 @@
+{
+  "pun_title": "Call Me Maybe",
+  "case_type": "Guesstimate",
+  "asked_at": "Swiggy",
+  "subject_company": "Swiggy (Food Delivery, Instamart, Dineout; customer, delivery-partner and restaurant-partner support)",
+  "round_and_level": "[uncertain] PM round with a folded-in guesstimate (technical/product sense round), APM to PM",
+  "difficulty": "Medium - the order base is public, but the candidate must pick a defensible contact rate by issue type, separate queries from tickets and contacts, and decide whether partner-side support is in scope",
+  "market_and_industry": "India; food delivery and quick commerce (super-app); metros plus 700+ Tier-2/3 cities; support via in-app chat bot, human chat agents and limited voice; multilingual (English, Hindi, regional languages)",
+  "time_box_minutes": "10-15",
+  "exact_prompt": "\"How many customer-support queries does Swiggy get per day?\"",
+  "source_and_verification": "Reported (asked at Swiggy per the casebook item). Searches in Nov 2026 of AmbitionBox, Glassdoor, Prepfully, PracHub and NextLeap did not find a verbatim public post of this exact question [uncertain]; similar reported Swiggy guesstimates include Swiggy orders per hour across India (https://prachub.com/interview-questions/market-sizing-swiggys-nationwide-delivery-throughput-in-a-single-hour), weekly food-delivery orders (https://prachub.com/interview-questions/market-sizing-estimate-swiggys-weekly-food-delivery-order-volume-in-india) and 'DAU of Swiggy in city X' (Glassdoor). Year reported: [uncertain] 2024-26.",
+  "context_as_of": "As of Nov 2026: (1) Q2 FY27 (Jul-Sep 2026): platform average MTU ~27.8 mn (+21% YoY) (Upstox, https://upstox.com/news/market-news/earnings/swiggy-q2-results-loss-narrows-yo-y-to-922-crore-revenue-surges-36-check-numbers/article-202243/); Food Delivery GOV Rs 10,054 cr (+17.7% YoY), food adj. EBITDA Rs 341 cr, 3.4% of GOV (Inc42, https://inc42.com/buzz/swiggy-q2-loss-narrows-16-yoy-to-%E2%82%B9922-cr-revenue-jumps-36/; Open, https://openthemagazine.com/business/swiggy-q2-analysis-have-instamarts-losses-finally-peaked); Instamart 130.3 mn orders in the quarter (+29% YoY), GOV Rs 9,230 cr (local swiggy-product-teardown, Instamart.json). Food orders per quarter are not stated in the coverage found; at ~Rs 430-450 GOV per order they imply ~225-235 mn [uncertain]. (2) Support stack: a PubNub vendor case study says Swiggy handled up to 200,000 customer inquiries a day with peak concurrency of 2,000, its chatbot automated up to 70% of tickets, and resolution time fell from ~5 minutes to ~30 seconds (https://www.pubnub.com/customers/swiggy/); year of that case study not stated [uncertain, likely ~2020-22 when orders were lower]. A 2018 Layer case study reported the bot solving 10% then 25% of queries (https://salestechstar.com/?p=54865). (3) Recurring complaint themes: missing/wrong items, cold/spilled food, ETA slippage, refunds stuck in chatbot loops, fee 'bill shock' (local teardown Food_Delivery_core.json). Flag: Zomato's parent is now Eternal Ltd; competitor support figures are not public either.",
+  "regulatory_context": "(1) Consumer Protection (E-Commerce) Rules, 2020: e-commerce entities must appoint a grievance officer, acknowledge complaints within 48 hours and resolve within one month, and display grievance contact details - this sets the floor for ticket SLAs and logging. (2) CCPA (Central Consumer Protection Authority) dark-pattern guidelines (Nov 2023; 2025 advisory asking platforms to self-audit) - drip pricing and hidden fees generate support queries and regulatory risk. (3) National Consumer Helpline (1915) and the e-Daakhil portal route escalations; the government's 'convergence' programme brings platforms onto the NCH. (4) DPDP Act 2023 and DPDP Rules 2025 govern storing chat transcripts and call recordings. (5) Social Security Code 2020 and state gig-worker laws (Rajasthan 2023, Karnataka 2025) require grievance redressal mechanisms for delivery partners, which adds partner-side support volume. [uncertain on exact implementation dates]",
+  "public_data_anchors": "(1) Swiggy platform average MTU ~27.8 mn, Q2 FY27 - Upstox, Oct 2026 (link above). (2) Food Delivery GOV Rs 10,054 cr in Q2 FY27 (~Rs 109 cr/day) - Inc42, Oct 2026. (3) Instamart 130.3 mn orders in Q2 FY27 (~1.42 mn/day) - swiggy-product-teardown/results/Instamart.json citing the Q2 FY27 shareholder letter. (4) Food MTU 19.2 mn in Q1 FY27 - Swiggy Q1 FY27 shareholder letter https://www.swiggy.com/corporate/wp-content/uploads/2026/07/Q1-FY2027-Shareholder-letter.pdf (as summarised in search results). (5) Up to 200,000 customer inquiries/day, 70% bot automation, peak concurrency 2,000 - PubNub case study (undated) https://www.pubnub.com/customers/swiggy/ (6) Shared fleet ~5-7 lakh monthly active delivery partners - swiggy-product-teardown/results/Food_Delivery_core.json [uncertain]. (7) India anchors: population ~1.45 bn; UPI 20 bn+ transactions/month (frameworks.md).",
+  "framework_applied": "Guesstimate framework (frameworks.md section 6). Step 1 Clarify: queries = customer-initiated support contacts (bot or human, chat or call) about Swiggy consumer orders on a normal weekday; partner support reported separately. Step 2 Framework: bottom-up from orders (orders/day x contact rate by issue type), because order volume is public and support is driven by orders, plus a small non-order add-on. Step 3 Constraints/MECE: segment by business line (Food, Instamart, Dineout/other) and by issue bucket (pre-delivery status/ETA, post-delivery quality/missing items, payments/refunds, cancellations, non-order account/One queries) - buckets are mutually exclusive and cover all customer contacts; capacity constraint check on human agents. Step 4 Calculate: ~4 mn orders/day x ~9% blended contact rate + non-order queries = ~0.4 mn customer queries/day (~0.12 mn reaching humans). Step 5 Sanity check: ratio test against PubNub's 'up to 200k/day' at a smaller order base, 1-in-N test (1 in ~70 MTUs contacts support daily), and a peak-day stress test (rain/NYE/IPL final, 2-3x).",
+  "clarifying_questions": [
+    "Q: Customer queries only, or also delivery partners and restaurant partners? A: Mainly customers; give a rough number for partners at the end.",
+    "Q: Which businesses - Food only, or Instamart and Dineout too? A: All consumer businesses on the Swiggy app.",
+    "Q: Does a query handled fully by the chatbot count? A: Yes, any support conversation a user opens counts; tell me how many reach humans.",
+    "Q: Count queries or tickets - if one user writes three times about the same order? A: Count distinct support conversations (contacts), not messages.",
+    "Q: A normal day or a peak day? A: A normal weekday in 2026; comment on peaks.",
+    "Q: Pan-India? A: Yes, all cities.",
+    "Q: Should I include pre-order queries like 'is my coupon valid' or Swiggy One billing? A: Yes, include non-order queries."
+  ],
+  "interviewer_data_reveals": [
+    "Exhibit 1 (real, derived) - Order base, Q2 FY27: Food GOV Rs 10,054 cr per quarter (~Rs 109 cr/day); Instamart 130.3 mn orders per quarter (~1.42 mn/day); platform MTU ~27.8 mn. Sources: Inc42/Upstox Oct 2026; Swiggy Q2 FY27 shareholder letter via local teardown.",
+    "Exhibit 2 (illustrative) - Share of orders that trigger at least one support contact: Food 10%, Instamart 7%, Dineout 3%.",
+    "Exhibit 3 (illustrative) - Issue mix of order-linked contacts: order status/ETA delay 35%, missing or wrong item 25%, quality/spill/temperature 15%, payment or refund status 15%, cancellation 10%.",
+    "Exhibit 4 (illustrative) - Channel: ~70% of conversations closed by the bot; average human chat handle time ~6 minutes; an agent handles ~60 chats per 8-hour shift with concurrency.",
+    "Exhibit 5 (real, vendor-reported, undated) - PubNub case study: up to 200,000 customer inquiries a day, peak concurrency 2,000, up to 70% automated (https://www.pubnub.com/customers/swiggy/)."
+  ],
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "How many customer-support queries does Swiggy get per day?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Let me clarify a few things first. Do we mean only customers, or also delivery partners and restaurants? All businesses - Food, Instamart, Dineout? And does a chatbot-only conversation count?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Customers mainly, all consumer businesses, and yes, bot conversations count. Give me partners roughly at the end."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "And I'll count a 'query' as one distinct support conversation, so three messages about the same late order is one query. Normal weekday, pan-India, 2026."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Agreed."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Support is driven almost entirely by orders, and Swiggy's order base is public, so I'll go bottom-up: orders per day by business, times the share of orders that lead to a contact, by issue type. Then add non-order queries like Swiggy One billing and coupons. I'll sanity check with an agent-capacity view and a ratio test."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Okay, what's the order base?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Food first. Swiggy reported about Rs 10,000 crore food GOV last quarter. Over ~92 days that's ~Rs 109 crore a day. At an average GOV per order of ~Rs 450, that's about 2.4 million food orders a day. Instamart reported about 130 million orders in the quarter, so ~1.4 million a day. Dineout and others are small - say 0.1 million bookings a day. Total ~4 million orders a day."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Here's some data on contact rates and issue mix."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Thanks. Food at 10%, Instamart 7%, Dineout 3%. That makes sense: food has longer delivery windows, so more 'where is my order', plus quality issues like spills; Instamart is faster but has missing and damaged items. Let me lay it out:\n| Business | Orders/day | Contact rate | Queries/day |\n| Food | 2.4 mn | 10% | 240k |\n| Instamart | 1.4 mn | 7% | ~100k |\n| Dineout/other | 0.1 mn | 3% | ~3k |\n| Order-linked total | 3.9 mn | ~9% | ~345k |"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Why 10% for food? Isn't that high?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Let me build it from the issue buckets rather than accept it blindly. Late or ETA slippage on maybe 15% of orders, of which a quarter contact support - ~3.5%. Missing or wrong items in ~3% of orders, most of whom contact - ~2.5%. Quality, spills, cold food ~2% contacting. Payment failures or refund status ~1.5%. Cancellations ~0.5-1%. That adds up to ~10%. Bolt and shorter deliveries push it down, rain pushes it up, so 10% feels right for a normal day."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Okay. Non-order queries?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Swiggy One renewals and charges, coupon validity, account and login issues, Swiggy Money or UPI refunds, address problems. I'd put these at ~15% on top of order-linked contacts, so ~50k. Total customer queries: ~345k + ~50k = ~400k a day, call it 0.35-0.45 million."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How many of those reach humans?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "If the bot closes ~70%, about 120k reach a human. Capacity check: at ~60 chats per agent per 8-hour shift, that's ~2,000 agent-shifts a day, maybe 2,500 with peak buffers across outsourced BPO partners and in-house teams. That's plausible for a company of Swiggy's size, so the number doesn't break a natural constraint."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Any other sanity check?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Two. A vendor case study, PubNub's, says Swiggy handled up to 200,000 inquiries a day - that was at a smaller order base, probably ~2 million orders a day, which is also a ~10% contact rate. So 400k at ~4 million orders is consistent. Second, a 1-in-N test: 400k against ~28 million monthly transacting users is ~1 in 70 MTUs contacting support each day, which feels reasonable given each MTU orders a few times a month."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What about peaks?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "On a heavy-rain evening in Mumbai or Bengaluru, or New Year's Eve, orders go up maybe 1.5x and delays spike, so contact rate could double. Peak days could be 2-3x - around 1 million queries. That matters more for staffing than the average."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "And partners?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Delivery partners: if ~3-4 lakh are active on a given day and ~10% raise something - payouts, order assignment, customer unreachable, app issues - that's ~35k. Restaurants: ~2 lakh active partners [rough], ~3% a day on payouts, menu changes, order disputes - ~6k. Partners add ~40k, so all stakeholders together are ~450k a day."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Summarise."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "About 4 lakh customer support queries a day, roughly 0.35-0.45 million, from ~4 million orders at a ~9% blended contact rate plus ~15% non-order queries. About 70% are closed by the bot, so ~1.2 lakh reach humans. Add ~40k from partners. Peak days can be 2-3x. The biggest lever on this number is the late-delivery and missing-item rate, not the bot."
+    }
+  ],
+  "answer_and_recommendation": "Estimate: ~400,000 customer-support queries per day (range 0.35-0.45 mn) on a normal 2026 weekday, of which ~120,000 reach human agents (70% bot containment); plus ~40,000 partner queries (delivery partners ~35k, restaurants ~6k), so ~450,000 across all stakeholders. Peak days (heavy rain, NYE, IPL final) 2-3x, up to ~1 mn. Ranked drivers: (1) order-status/ETA-delay contacts (~35% of order-linked queries); (2) missing or wrong items (~25%); (3) payments and refunds (~15%). Recommendation if asked how to reduce it: proactive delay notifications with auto-compensation, photo-based auto-refund for missing items under a threshold, and real-time refund status in the order page. Risks: undated vendor data, assumed AOV for converting food GOV to orders, and definitional ambiguity (tickets vs contacts). Closing line: 'Roughly 4 lakh customer queries a day, 1.2 lakh of them handled by people - and most of the volume is created by late and incomplete orders, so the cheapest support query is the one we prevent.'",
+  "counter_metrics_guardrails": "Pure guesstimate, so sanity checks instead: (1) Ratio test - PubNub's 'up to 200k inquiries/day' at a smaller order base implies ~10% contact rate, matching the ~9% blended rate used. (2) 1-in-N test - ~400k queries vs ~27.8 mn MTU = ~1 in 70 monthly users contacting support daily; with ~4-5 orders per MTU per month this is plausible. (3) Capacity constraint - ~120k human contacts at ~60 chats/agent/shift = ~2,000 agent-shifts/day, consistent with outsourced BPO staffing. (4) Peak-day stress test - rain/NYE 2-3x volume (~1 mn) without changing the base assumptions. If one were measuring in practice, guardrails on support would be: contacts per 100 orders, first-contact resolution, repeat contacts within 48h, CSAT, refund cost per order and grievance-officer SLA compliance (48h acknowledgement).",
+  "follow_up_twists": [
+    "Twist: The interviewer says the bot handles 90%, not 70%. Response: total queries stay ~400k (bot containment does not change demand), but human contacts drop to ~40k and agent-shifts to ~700; watch repeat contacts, since over-containment pushes users back.",
+    "Twist: Estimate it for a heavy-rain day in Bengaluru only. Response: Bengaluru ~12-15% of orders (~0.5 mn), contact rate doubles to ~20% on rain-delay days, so ~100k queries in the city.",
+    "Twist: How would you halve the volume? Response: attack the top two buckets - proactive ETA-delay messages with auto-credits and auto-refunds for missing items - which together drive ~60% of order-linked contacts."
+  ],
+  "common_pitfalls": [
+    "Starting top-down from India's population or smartphone users instead of from Swiggy's public order base - adds needless assumptions.",
+    "Confusing messages, tickets and contacts, or counting bot-resolved conversations as zero.",
+    "Using one flat contact rate without justifying it by issue type, or ignoring that Instamart and Food behave differently.",
+    "Forgetting the peak-day variance (rain, NYE, IPL) and partner-side support, or treating undated vendor numbers (200k/day) as current fact."
+  ],
+  "skills_tested": "structuring, quant, business sense, communication",
+  "linked_teardown": "swiggy-product-teardown (swiggy-product-teardown/results/Instamart.json and Food_Delivery_core.json). Key facts used: Instamart 130.3 mn orders and Food GOV Rs 10,054 cr in Q2 FY27 to size daily orders; pain-point theme of refunds stuck in chatbot loops and missing/wrong items to justify the issue mix; ~5-7 lakh monthly active riders for partner support.",
+  "uncertain": [
+    "round_and_level",
+    "source_and_verification",
+    "context_as_of",
+    "regulatory_context",
+    "public_data_anchors"
+  ]
+}

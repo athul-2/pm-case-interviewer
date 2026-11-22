@@ -1,0 +1,150 @@
+{
+  "pun_title": "Bat Signal",
+  "case_type": "Guesstimate",
+  "asked_at": "Swiggy",
+  "subject_company": "None (Indian cricket-bat market; no single company)",
+  "round_and_level": "[uncertain] PM round with a folded-in guesstimate (or first screening round), APM campus to PM",
+  "difficulty": "Medium - classic consumer-goods sizing, but bats are shared in gully cricket and range from Rs 100 plastic toys to Rs 50,000 English-willow bats, so segmentation by bat type and a replacement cycle are what separate good from average answers",
+  "market_and_industry": "India; sports goods / consumer durables; urban and rural, all tiers; the mass market is tennis/tape-ball street cricket with low-cost poplar or Kashmir-willow bats, plus plastic toy bats for children; premium English-willow bats for serious leather-ball players",
+  "time_box_minutes": "10-15",
+  "exact_prompt": "\"How many cricket bats are bought in India every year?\"",
+  "source_and_verification": "Reported (asked at Swiggy per the casebook item). No verbatim public candidate post for this exact question was found in Nov 2026 searches of AmbitionBox, Glassdoor, Prepfully, PracHub and NextLeap [uncertain]; it is a widely circulated Indian PM/consulting guesstimate. Swiggy PM loops are reported to fold a guesstimate into the technical/product round (Interview Query Swiggy PM guide, https://interviewquery.com/interview-guides/swiggy-product-manager). Year reported: [uncertain] 2024-26.",
+  "context_as_of": "As of Nov 2026: (1) Supply clusters: Kashmir (Anantnag/Bijbehara, Halmulla - Kashmir willow) and Meerut (UP) and Jalandhar (Punjab) - the nerve centres of India's cricket equipment industry with makers like SG and BDM (The Cricket Monthly, https://www.thecricketmonthly.com/story/931747/the-bat-wars). (2) Kashmir output estimates range from ~1 mn bats/year (The National, Mar 2024) to ~3 mn (30 lakh) a year (Scroll; VOA, https://www.voanews.com/amp/indian-kashmir-cricket-bat-industry-faces-raw-material-shortage-/6871369.html; Deccan Herald). Kashmir exports rose from 35,000 bats (2021) to 135,000 (2022) and 195,000 (2023) (Mongabay India, Jun 2024, https://india.mongabay.com/2024/06/kashmiri-willow-bats-swing-for-recognition-amid-quality-concerns/). A single Meerut/Jalandhar firm reportedly makes ~150,000 bats a year (Reuters via search summary) [uncertain]. (3) Kashmir faces a willow shortage as plantations are replaced (VOA; ETV Bharat). (4) Market-size reports conflict: a Fortune Business Insights page cites ~71 mn bats bought in 2024 (attributed to NextLeap, unclear whether India or global) (https://www.fortunebusinessinsights.com/cricket-bat-market-113141) [uncertain]; India bat revenue estimates of USD ~41-47 mn appear to cover organised brands only. Demand spikes around IPL and World Cups (Business Standard, Sep 2023). No official government production statistic was found.",
+  "regulatory_context": "Largely none material for the count, but useful context: (1) Toys (Quality Control) Order 2020 - BIS certification mandatory for toys from 2021, which covers plastic toy bats and raised barriers to cheap Chinese imports; basic customs duty on toys raised to 70% (2023). (2) GST on sports goods [uncertain: reduced to 5% under the Sept 2025 GST rationalisation, from 12%]. (3) J&K curbs on moving raw willow clefts out of the region (long-standing) protect Kashmir bat-makers; a GI tag for Kashmir willow bats has been sought/granted [uncertain on status].",
+  "public_data_anchors": "(1) India population ~1.45 bn; ~300 mn households (frameworks.md India anchors). (2) Kashmir bat output ~3 mn/year (VOA, Scroll, Deccan Herald; industry estimates) vs ~1 mn (The National, Mar 2024). (3) Kashmir bat exports 195,000 in 2023 - Mongabay India, Jun 2024. (4) ~71 mn bats bought in 2024 per Fortune Business Insights citing NextLeap (scope unclear) - https://www.fortunebusinessinsights.com/cricket-bat-market-113141 [uncertain]. (5) [uncertain, from prior knowledge] ~23-24 mn births a year in India, so ~190 mn children aged 3-10; male share of population ~51%.",
+  "framework_applied": "Guesstimate framework (frameworks.md section 6). Step 1 Clarify: 'bat' = any cricket bat bought new in India in a year (wooden and plastic, all price points; exports and second-hand excluded); count units, not value. Step 2 Framework: frequency x penetration (players x bats per player x replacement rate) because bats are a replacement purchase driven by how many people play; top-down population filters to get players. Step 3 Constraints/MECE: segment by bat type which maps to user behaviour - (a) plastic/toy bats for children 3-10, (b) casual tennis/tape-ball wooden bats for gully cricket (shared, ~1 bat per 4 players), (c) serious leather-ball bats for academy/school/club players; groups do not overlap and cover all buyers. Step 4 Calculate: ~15 mn plastic + ~16 mn casual wooden + ~5 mn serious = ~36 mn bats/year. Step 5 Sanity check: supply test against Kashmir ~1-3 mn plus Meerut/Jalandhar and unorganised clusters, ratio test (1 bat per ~40 people a year), and value test (~Rs 1,500 cr retail).",
+  "clarifying_questions": [
+    "Q: Do plastic toy bats count, or only real wooden cricket bats? A: Count all, but show them separately.",
+    "Q: New bats only, or second-hand too? A: New bats only.",
+    "Q: Bought in India for use in India - exclude exports? A: Yes, domestic purchases only.",
+    "Q: Units or value? A: Units; value is a bonus.",
+    "Q: Any particular year, e.g. a World Cup or IPL boost? A: A normal recent year (2025-26).",
+    "Q: Do institutional purchases (schools, academies, clubs) count? A: Yes."
+  ],
+  "interviewer_data_reveals": [
+    "Exhibit 1 (illustrative) - Who plays: ~40% of males aged 8-35 play cricket at least once a month; ~5% of females in that age band; ~2-3% of those players play organised leather-ball cricket.",
+    "Exhibit 2 (illustrative) - Bat sharing and life: a gully group of ~10 players uses 2-3 bats; a casual bat lasts ~2-3 years before cracking or a broken handle; a serious player owns 1-2 bats and replaces one every ~1.5-2 years.",
+    "Exhibit 3 (illustrative) - Price bands: plastic Rs 100-300; poplar/popular-willow tennis bats Rs 300-1,500; Kashmir-willow leather bats Rs 1,500-5,000; English-willow Rs 5,000-50,000+.",
+    "Exhibit 4 (real) - Kashmir produces ~1-3 mn bats a year (The National 2024; VOA/Scroll/Deccan Herald), of which ~195,000 were exported in 2023 (Mongabay India)."
+  ],
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "How many cricket bats are bought in India every year?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "A few clarifications. Do plastic toy bats count, or only wooden ones? New only? Domestic purchases, excluding exports? And do you want units or value?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Count all bats, plastic separately. New only, domestic only, units. Value is a bonus."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "And a normal year, not a World Cup bump, including bats bought by schools and academies?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Yes."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Bats are a replacement purchase, so the number depends on how many people play, how many bats they share, and how often bats break. I'll use frequency x penetration: players x bats per player / bat life. The key segmentation is by type of play, because a child's plastic bat, a gully-cricket tennis bat and an academy leather bat have completely different sharing and replacement patterns:\nBats/year\n- Plastic toy bats (kids 3-10)\n- Casual wooden bats (tennis/tape-ball gully cricket)\n- Serious bats (leather-ball: academies, school/college teams, clubs)"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Sounds good. Start with casual."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "India has ~1.45 billion people, about 51% male, so ~740 million males. Ages 8-35 are roughly 47% of that, ~350 million. What share play cricket at least monthly?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Assume about 40%, and ~5% of females in that age band."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So ~140 million males plus ~5% of ~330 million females, ~15 million - about 155 million players. Take out the serious leather-ball players, which you said are 2-3%, so ~4-5 million, leaving ~150 million casual players."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Do they each own a bat?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "No - that's the key. In gully cricket, a group of 10 shares 2-3 bats, so about 1 bat per 4 players: ~38 million bats in use. If a cheap bat lasts ~2.5 years, about 15-16 million casual bats are bought a year."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Serious players?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "About 5 million academy, school-team, college, club and corporate-league players. Each owns ~1.5 bats and replaces one every ~1.5-2 years, so roughly 0.6 bats per player a year, ~3 million. Add institutional kit bats for schools and academies, maybe 1-2 million. So ~5 million serious bats, of which English willow is a small premium slice, maybe 0.5 million."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "And plastic bats?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "India has ~23-24 million births a year, so ~190 million children aged 3-10. If about 1 in 12 gets a new plastic bat in a year - birthdays, fairs, festivals, often as part of a bat-ball set - that's ~15 million."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Total?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "| Segment | Base | Logic | Bats/year |\n| Casual wooden | 150 mn players | 1 bat per 4, 2.5-yr life | ~16 mn |\n| Serious | 5 mn players + institutions | 0.6/player + kit | ~5 mn |\n| Plastic | 190 mn kids 3-10 | 1 in 12 per year | ~15 mn |\n| Total | | | ~36 mn |\nSo about 35-40 million bats a year, roughly 21 million wooden and 15 million plastic."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Is that believable?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Three checks. Supply: Kashmir makes about 1-3 million bats a year, mostly for serious players, and Meerut and Jalandhar plus unorganised poplar-bat makers across UP, Punjab and South India would need to make another ~18 million cheaper bats - plausible given hundreds of units, where a single larger firm makes ~150,000 a year. Ratio: 36 million bats for 1.45 billion people is ~1 bat per 40 people a year, or 1 per ~7 casual players a year - not absurd. Value: 16 million casual at ~Rs 600, 5 million serious at ~Rs 2,500 and 15 million plastic at ~Rs 150 is ~Rs 2,500 crore at retail, roughly $300 million - in the range that cricket-equipment reports suggest for India once you include the unorganised market."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "I've seen a figure of 71 million. Comment?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That number appears in a market report attributed to an ed-tech source, and it's unclear if it's India-only or global, or includes toy bats bought in sets. If it were India-only, I'd revisit the plastic segment and bat life - for example, a 1.5-year life for casual bats would take wooden bats to ~26 million. I'd keep my range at 35-40 million but flag it as the most sensitive assumption."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Wrap up."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "About 36 million bats a year in India: ~16 million casual tennis-ball bats, ~5 million serious leather-ball bats, ~15 million plastic toy bats. The two most sensitive assumptions are bat sharing in gully cricket and bat life; an IPL or World Cup year could add 10-20% to sales."
+    }
+  ],
+  "answer_and_recommendation": "Estimate: ~36 mn cricket bats bought new in India per year (range 30-45 mn) in a normal year: (1) casual tennis/tape-ball wooden bats ~16 mn (150 mn casual players, 1 bat per 4 players, ~2.5-year life); (2) plastic toy bats ~15 mn (190 mn children 3-10, ~1 in 12 per year); (3) serious leather-ball bats ~5 mn (5 mn organised players at ~0.6 bats/year plus institutional kit), of which English willow ~0.5 mn. Implied retail value ~Rs 2,500 cr (~$300 mn). Most sensitive assumptions: bats per player in gully cricket and replacement cycle; event years (IPL, World Cup at home) lift sales 10-20%. Closing line: 'Roughly 3.5-4 crore bats a year, and more than 80% of them are cheap gully-cricket and toy bats, not the willow bats we see on TV.'",
+  "counter_metrics_guardrails": "Pure guesstimate, so sanity checks instead: (1) Supply-side test - Kashmir ~1-3 mn bats/year (mostly Kashmir-willow) + Meerut/Jalandhar and unorganised poplar clusters must supply ~18 mn cheaper bats; plausible but the upper bound. (2) Ratio test - ~1 bat per 40 people per year; ~1 per 7 casual players per year. (3) Value test - ~Rs 2,500 cr retail across organised and unorganised; organised-brand reports (USD ~41-47 mn for bats) cover only a slice. (4) Cross-check against the ~71 mn figure cited by Fortune Business Insights (scope unclear) - explains the gap via plastic sets and bat life.",
+  "follow_up_twists": [
+    "Twist: How many of these are English willow? Response: only serious players aged 15+ who play leather ball and can pay Rs 5,000+ - ~10% of ~5 mn serious bats, so ~0.5 mn, largely imported clefts finished in Meerut/Jalandhar.",
+    "Twist: Swiggy/Instamart wants to sell bats - how many could it sell in metros? Response: metros ~12-15% of casual demand (~2 mn) plus kids' plastic bats; quick commerce could take 5-10% of that, i.e. ~0.1-0.2 mn bats a year, peaking around IPL and summer vacations.",
+    "Twist: What if this is a home World Cup year? Response: raise casual and plastic purchases ~15-20% (impulse buys) and serious ~5%; the total goes to ~42 mn."
+  ],
+  "common_pitfalls": [
+    "Assuming every player owns a bat - ignores sharing in gully cricket and overstates demand 3-4x.",
+    "Assuming a bat is bought every year by everyone, or using 'every male' as the base instead of people who actually play.",
+    "Forgetting plastic/toy bats or not clarifying whether they count; mixing in exports or second-hand bats.",
+    "Anchoring on Kashmir's ~3 mn output as the whole market, when most mass-market bats are poplar/popular-willow bats from Meerut, Jalandhar and unorganised makers."
+  ],
+  "skills_tested": "structuring, quant, business sense, communication",
+  "linked_teardown": "None",
+  "uncertain": [
+    "round_and_level",
+    "source_and_verification",
+    "context_as_of",
+    "regulatory_context",
+    "public_data_anchors"
+  ]
+}

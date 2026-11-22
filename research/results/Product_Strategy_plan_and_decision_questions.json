@@ -1,0 +1,465 @@
+{
+  "item_name": "Product Strategy (plan and decision questions): market entry, build/partner/buy, competitive response, monetisation, strategic prioritisation",
+  "what_interviewers_test": "Whether the candidate can take an ambiguous, company-level 'what should we do / should we do X' question, anchor it to the company's goals and right to win, generate several credible strategic options, compare them on explicit criteria, and commit to a defended recommendation with risks, metrics and a phased plan. Google treats it as a distinct 'product strategy' round that probes long-term vision, tech/industry insight and assumptions under pushback (Exponent, Aakash Gupta). Meta folds strategy into product sense and execution, so it rewards mission tie-in and trade-offs between competing metrics more than market analysis. Amazon gives strategy a smaller share of the loop and reads it through Think Big, Customer Obsession and Dive Deep. Uber stresses marketplace dynamics (two- or three-sided liquidity). Indian consumer-tech firms (Flipkart, Swiggy, Zomato, PhonePe, Meesho) put more weight on unit economics, path to profitability and India-specific context such as tier-2/3 cities, COD, low AOV and the competitive duopolies (Swiggy vs Zomato, Flipkart vs Amazon/Meesho) [uncertain: India emphasis rests on prep-platform and candidate-report sources only].",
+  "format_variants": "1) Live, candidate-led (most common at Google, Meta, Microsoft, Uber and Indian companies): 30-45 min. The candidate drives structure while the interviewer pushes back on assumptions and direction. Graded on self-driven structure plus a committed recommendation. 2) Live, interviewer-led (more common at Indian companies and in Amazon or hiring-manager rounds): the interviewer sets sub-questions such as 'size it', 'which three metrics would you track as CPO', 'how would you counter Meesho'. Graded more on depth per step, and structure carries less weight. 3) Take-home or presentation (Flipkart screening decks and Swiggy assignments are reported, as are Uber JAM-style presentations and Lenny's '10x growth' take-home): 2-7 days, then a 30-60 min defence. Expect more data, numbers and a crisp storyline, with grading weighted toward defending it under Q&A. For a transcript-only grader, interviewer-led and take-home-defence transcripts should be scored for depth per prompt, and the structure/driving dimension should not be penalised when the interviewer imposed the structure.",
+  "dimensions": [
+    {
+      "name": "1. Goal framing and context-setting",
+      "definition": "Clarifies the company's objective (growth, profit, defend share, ecosystem), the time horizon, constraints and what 'success' means before analysing. States the company's mission or strategic position as the lens.",
+      "signal": "Solves the right problem: does not jump straight to features or brainstorming (Aakash Gupta 1/4 anchor: 'shoot from the hip').",
+      "transcript_evidence": "Quote the candidate's clarifying questions and the explicit goal statement, e.g. 'Is the aim to grow GMV or to reach contribution-margin breakeven in 18 months?' or 'I'll assume a 3-year horizon and that Swiggy's goal is order frequency.' Absence of any goal or horizon statement before ideas is evidence for score 1-2."
+    },
+    {
+      "name": "2. Market, customer and competitive insight",
+      "definition": "Analyses the market (size or trend), the customer segments and their unmet needs, competitors and substitutes, and the company's unique assets or right to win. Brings non-obvious industry or tech insight, such as AI shifts, regulation, UPI or ONDC in India, or quick-commerce dark-store economics.",
+      "signal": "Real, specific insight rather than generic 'the market is big' commentary. Aakash Gupta calls tech insight the area big tech most often marks down, and Exponent lists 'real tech insight' as a criterion.",
+      "transcript_evidence": "Quote specific claims about competitors, segments, trends or company assets, and check that each is specific and causally used, e.g. 'Google already has Maps and local-business data, so its wedge into furniture is discovery, not logistics.' Generic lists ('competition, market, profitability') with no 'why it matters' are evidence of recitation."
+    },
+    {
+      "name": "3. Strategic option generation and creativity",
+      "definition": "Lays out several distinct, credible strategic options before narrowing, covering the realistic set (build/partner/buy/ignore, segments, geographies, pricing models, entry modes). At least one option is ambitious, a '10x' or ecosystem-level move.",
+      "signal": "Goes breadth-first, then depth-first (Exponent / productmanagers substack). Exponent lists creativity as a criterion, and Aakash Gupta says it is 'weighted heavily' and scores feature-level ideas only 2/4.",
+      "transcript_evidence": "Count and quote the options the candidate named, and check they are mutually distinct and company-level, not three variants of one feature. Note any explicit mention of 'do nothing' or 'partner/acquire' alternatives."
+    },
+    {
+      "name": "4. Prioritisation and trade-off reasoning",
+      "definition": "Chooses among options using explicit, stated criteria (impact, feasibility, strategic fit, time to value, cost, risk to the core business) and states what is being sacrificed, including opportunity cost and second-order effects (cannibalisation, partner or ecosystem reactions, regulators).",
+      "signal": "Judgment: can say why A beats B and what A costs. Sushanth Raman (ex-Google/Microsoft PM, via Exponent) calls trade-offs 'the key to a successful PM answer'.",
+      "transcript_evidence": "Quote the stated criteria and the comparison, e.g. 'Partnering is faster but we give up the data loop; given our 12-month goal I accept that.' Also quote any second-order consequence the candidate named."
+    },
+    {
+      "name": "5. Recommendation quality and conviction",
+      "definition": "Lands a clear, single recommendation (go/no-go, which option, why now) that follows from the analysis, and defends or updates it under pushback with stated reasons.",
+      "signal": "Has a point of view. Exponent says the candidate who picks the strongest option and defends it beats the one who presents 'three balanced options', and that a recommendation should follow from the analysis.",
+      "transcript_evidence": "Quote the recommendation sentence, e.g. 'My recommendation: enter via partnership in 3 metros, not build.' After the interviewer challenges it, quote the response, noting whether the candidate held the position with reasoning, updated it with an explicit 'what changed', or flip-flopped without reasons."
+    },
+    {
+      "name": "6. Business viability and quantitative grounding",
+      "definition": "Tests whether the strategy makes money or moves the target metric: rough sizing, revenue/monetisation model, unit economics (AOV, take rate, CAC, delivery cost, contribution margin), payback, with sanity checks. This carries extra weight for monetisation questions and for Indian companies.",
+      "signal": "Commercial judgment and the habit of using numbers to decide, not to decorate.",
+      "transcript_evidence": "Quote numbers and arithmetic, e.g. 'At a Rs 250 AOV and 20% take rate we get Rs 50; delivery costs Rs 35, so contribution is thin until batching.' Check the arithmetic is correct, and note any sanity check or the lack of one."
+    },
+    {
+      "name": "7. Risks, success metrics and execution path",
+      "definition": "Names the main risks with mitigations, defines success and guardrail metrics, and gives a phased plan (pilot, then go/no-go criteria, then scale).",
+      "signal": "Converts strategy into something testable and reversible. Aakash Gupta's 4/4 anchor includes 'addresses measurement and risks'.",
+      "transcript_evidence": "Quote the risks, metrics and phasing statements, e.g. 'North star: repeat orders per user per month; guardrail: restaurant churn; kill if CM is below -Rs 10 after 6 months in pilot cities.'"
+    },
+    {
+      "name": "8. Structured communication",
+      "definition": "Signposts an approach tailored to the question, keeps sections MECE, summarises, and checks in with the interviewer at transitions.",
+      "signal": "Clear thinking that can be followed live. Exponent penalises a 'too frameworky' approach as well as no structure at all.",
+      "transcript_evidence": "Quote the roadmap statement ('I'll cover goal, market, three options, pick one, risks'), the check-ins ('Does that scope work?') and the closing summary. Penalise a framework announced but not followed, or an answer with no closing summary."
+    }
+  ],
+  "weights": {
+    "summary": "No company publishes numeric weights. The table is a recommendation that combines prep-platform and interviewer-account emphasis with inference. The weights sum to 100.",
+    "table": [
+      {
+        "dimension": "Goal framing and context-setting",
+        "weight": 12,
+        "provenance": "prep-platform",
+        "source": "https://www.news.aakashg.com/p/crack-the-product-strategy-interview ; https://www.aced.io/guides/google-product-strategy-interview",
+        "reasoning": "Both sources list structured problem breakdown and context as a top-level criterion. It is a prerequisite, but less differentiating than insight or judgment."
+      },
+      {
+        "dimension": "Market, customer and competitive insight",
+        "weight": 16,
+        "provenance": "prep-platform",
+        "source": "https://www.news.aakashg.com/p/crack-the-product-strategy-interview ; https://www.aced.io/guides/google-product-strategy-interview",
+        "reasoning": "It is one of three areas in Aakash Gupta's rubric and one of four in Exponent's, and Aakash says big tech marks it down most often. Weighted higher for Google."
+      },
+      {
+        "dimension": "Strategic option generation and creativity",
+        "weight": 14,
+        "provenance": "prep-platform",
+        "source": "https://www.news.aakashg.com/p/crack-the-product-strategy-interview ; https://www.aced.io/guides/google-product-strategy-interview ; https://productmanagers.substack.com/p/how-to-ace-googles-product-strategy",
+        "reasoning": "Aakash says it is 'weighted heavily' and it is an Exponent criterion. Slightly below insight, because the topic scope emphasises decision questions."
+      },
+      {
+        "dimension": "Prioritisation and trade-off reasoning",
+        "weight": 18,
+        "provenance": "interviewer-account",
+        "source": "https://www.aced.io/blog/the-key-to-a-successful-pm-interview-answer-tradeoffs ; https://www.tryexponent.com/guides/google-product-manager-interview",
+        "reasoning": "An ex-Google/Microsoft PM account and Google candidate reports ('all about business trade-offs') agree. It is the core of a 'should we do X' question, so it gets the highest weight."
+      },
+      {
+        "dimension": "Recommendation quality and conviction",
+        "weight": 14,
+        "provenance": "prep-platform",
+        "source": "https://www.tryexponent.com/courses/product-strategy/how-to-answer-strategy-questions",
+        "reasoning": "Exponent explicitly rewards a committed, defended position. The topic scope ('plan and decision questions') makes the decision itself central."
+      },
+      {
+        "dimension": "Business viability and quantitative grounding",
+        "weight": 10,
+        "provenance": "inferred",
+        "source": "https://www.productleadership.com/flipkart-product-manager-interview-questions/ ; https://prachub.com/interview-questions/founder-go-no-go-on-indian-e-commerce-market-competition-wedge-and-unit-economics ; https://prachub.com/interview-questions/zomato-revenue-levers-and-a-feasibility-check-on-a-tenfold-one-year-goal",
+        "reasoning": "US prep rubrics do not list it separately, but Indian prompts consistently ask for unit economics and path to profitability. Raise to 15-18 for India companies or monetisation questions, taking the points from creativity and communication."
+      },
+      {
+        "dimension": "Risks, success metrics and execution path",
+        "weight": 10,
+        "provenance": "prep-platform",
+        "source": "https://www.news.aakashg.com/p/crack-the-product-strategy-interview ; https://prachub.com/interview-questions/taking-a-us-only-product-international-market-selection-localization-and-entry-strategy",
+        "reasoning": "Aakash Gupta's top anchor and the market-entry sample answers (go/no-go criteria, guardrails) both include it. Supporting rather than primary."
+      },
+      {
+        "dimension": "Structured communication",
+        "weight": 6,
+        "provenance": "inferred",
+        "source": "https://www.aced.io/guides/google-product-strategy-interview ; https://productmanagers.substack.com/p/how-to-ace-googles-product-strategy",
+        "reasoning": "Communication is assessed everywhere, but much of structure's value is already captured in dimensions 1 and 4, so the weight is kept low to avoid rewarding framework recitation."
+      }
+    ],
+    "disagreements": [
+      "Aakash Gupta (2023) scores only 3 areas (problem breakdown, creative thinking, tech insight), while Exponent (2025-26) uses 4 (framework customisation, problem breakdown, creativity, tech insight). Neither scores trade-offs or the recommendation as a separate area. Interviewer and candidate accounts treat trade-offs as central, so this rubric splits them out.",
+      "Google weights tech/industry insight and long-term vision more heavily. Indian companies weight unit economics more heavily [uncertain]. Amazon reads strategy through Leadership Principles (Think Big, Customer Obsession) rather than a separate strategy rubric.",
+      "Creativity: Aakash rewards '10x' ideas, while Indian interviewers reportedly prefer feasible, numbers-backed moves [uncertain]. The recommended compromise is 14% with ambitious-but-grounded anchors."
+    ],
+    "company_overrides_recommended": {
+      "google": "insight 20, creativity 16, viability 8, communication 4 (others unchanged)",
+      "meta": "framing (mission/user tie-in) 15, trade-offs 20, insight 12, viability 8 (others unchanged; total re-normalise)",
+      "amazon": "framing as customer-backwards 15, viability 12, creativity (Think Big) 14, insight 12",
+      "india (Flipkart/Swiggy/Zomato/PhonePe/Meesho)": "viability 16, risks/metrics 12, creativity 10, communication 4, insight 16 incl. India context",
+      "note": "All overrides are inferred and must be re-normalised to 100."
+    }
+  },
+  "must_pass_gates": [
+    {
+      "gate": "No recommendation: the candidate ends with 'it depends' or a list of options and no committed choice, even when asked.",
+      "cap": "Max 'lean no hire' (overall 2/4)",
+      "source": "https://www.tryexponent.com/courses/product-strategy/how-to-answer-strategy-questions (prep-platform); inferred cap"
+    },
+    {
+      "gate": "Solutions before goal: the candidate brainstorms features with no stated objective or company context in the first third of the answer.",
+      "cap": "Dimension 1 = 1 and overall max 'lean hire'",
+      "source": "https://www.news.aakashg.com/p/crack-the-product-strategy-interview (1/4 anchor)"
+    },
+    {
+      "gate": "Feature-level answer to a company-level question: every option is a UI feature, not a strategic move (entry mode, segment, business model).",
+      "cap": "Max 'lean hire'",
+      "source": "https://www.news.aakashg.com/p/crack-the-product-strategy-interview (creative thinking 2/4)"
+    },
+    {
+      "gate": "No trade-off stated: the recommendation is given without any downside, cost or alternative forgone.",
+      "cap": "Dimension 4 at most 2 and overall max 'lean hire'",
+      "source": "https://www.aced.io/blog/the-key-to-a-successful-pm-interview-answer-tradeoffs (interviewer-account)"
+    },
+    {
+      "gate": "Uncorrected material arithmetic or unit-economics error that drives the go/no-go (e.g. wrong order of magnitude in market size or margin).",
+      "cap": "Max 'lean hire' if uncorrected; no cap if self-corrected",
+      "source": "inferred from India prompts https://prachub.com/interview-questions/founder-go-no-go-on-indian-e-commerce-market-competition-wedge-and-unit-economics"
+    },
+    {
+      "gate": "Recommendation collapses under the first pushback (it reverses with no new information or stated reason), or is abandoned rather than reasoned.",
+      "cap": "Dimension 5 at most 2 and overall max 'lean hire'",
+      "source": "https://www.tryexponent.com/guides/google-product-manager-interview (interviewer challenges direction) ; inferred cap"
+    },
+    {
+      "gate": "Ignores the core business: the recommendation harms the company's main business (cannibalisation, regulatory or brand risk) and the candidate never acknowledges it.",
+      "cap": "Max 'lean hire'",
+      "source": "inferred"
+    }
+  ],
+  "score_anchors": {
+    "Goal framing and context-setting": {
+      "1": "Starts listing ideas immediately with no objective, horizon or company context. e.g. 'Flipkart should add AR try-on, a loyalty program and...'",
+      "2": "Asks generic clarifiers ('what's the budget?') or states a vague goal ('grow the business') that is never used later.",
+      "3": "States a specific objective, horizon and key constraint, ties them to the company's strategy, and uses them later to decide. e.g. 'I'll optimise for contribution-margin-positive growth over 2 years, given Zomato's profitability focus.'",
+      "4": "Reframes the question insightfully (e.g. 'the real question is whether this defends our core or opens a new profit pool') and gets the interviewer to agree on success criteria that then drive every later choice."
+    },
+    "Market, customer and competitive insight": {
+      "1": "No market or competitor analysis, or factually wrong claims.",
+      "2": "Generic checklist (market size, competition, trends) with no specifics, or only news-level facts that do not change the answer.",
+      "3": "Names specific segments, competitors and company assets, and explains how each shapes the strategy. e.g. 'Meesho owns tier-3 value buyers via zero commission, so Flipkart's counter should be Shopsy-style pricing, not a brand war.'",
+      "4": "Offers a non-obvious insight that changes how the interviewer sees the problem (Aakash 4/4), such as a structural shift, second-order tech effect or overlooked asset, and builds the strategy on it."
+    },
+    "Strategic option generation and creativity": {
+      "1": "A single option, or none.",
+      "2": "Two or three options that are variants of the same idea or feature-level.",
+      "3": "Three or more distinct, company-level options (e.g. build vs partner vs acquire, or different segments), each with a one-line rationale.",
+      "4": "A distinct option set that includes a bold '10x' or ecosystem move alongside pragmatic ones, plus an explicit 'do nothing' baseline. e.g. 'A fourth, bolder option: open our logistics as a platform for D2C brands.'"
+    },
+    "Prioritisation and trade-off reasoning": {
+      "1": "Picks an option with no criteria, or says 'all are important'.",
+      "2": "Names criteria but applies them superficially, or lists pros and cons without weighing them.",
+      "3": "Compares options against two to four explicit criteria tied to the goal, states what is sacrificed, and picks. e.g. 'Acquisition is fastest but integration risk and Rs 2,000 cr cost outweigh the 6-month gain.'",
+      "4": "Also reasons about second-order effects (competitor response, cannibalisation, partner or regulator reaction) and states the conditions under which the choice would flip."
+    },
+    "Recommendation quality and conviction": {
+      "1": "No recommendation, or 'it depends' at the end.",
+      "2": "A hedged recommendation not clearly linked to the analysis, or one dropped at the first pushback.",
+      "3": "A clear recommendation that follows from the analysis, with a 'why now', defended with reasons under pushback.",
+      "4": "A crisp, memorable recommendation and summary. Under pushback the candidate either defends it with new evidence or updates it explicitly ('Given that partner data is unavailable, I'd switch to build because...'), showing intellectual honesty."
+    },
+    "Business viability and quantitative grounding": {
+      "1": "No numbers or business-model discussion, or a major arithmetic error that goes uncorrected.",
+      "2": "Mentions revenue or cost qualitatively, or gives numbers that are not used in the decision.",
+      "3": "Rough sizing or unit economics with stated assumptions and a sanity check, used to support the go/no-go.",
+      "4": "Identifies the one or two economic drivers that decide the case (e.g. delivery cost per order, take rate, CAC payback), quantifies the threshold for success, and links it to the go/no-go criteria."
+    },
+    "Risks, success metrics and execution path": {
+      "1": "No risks or metrics.",
+      "2": "Generic risks ('competition', 'execution') or vanity metrics (downloads), with no plan.",
+      "3": "Two or three specific risks with mitigations, a north-star plus guardrail metric, and a phased plan.",
+      "4": "Explicit go/no-go or kill criteria with thresholds and a learning-oriented pilot design. Risks are ranked by likelihood and impact."
+    },
+    "Structured communication": {
+      "1": "Rambling with no discernible structure, or the interviewer has to pull the answer out.",
+      "2": "A recited generic framework that is announced but not tailored, followed loosely, with no summary.",
+      "3": "A tailored roadmap stated upfront, logical transitions, at least one check-in, and a closing summary.",
+      "4": "Concise and well signposted, adapts the structure when the interviewer redirects, and closes with a strong one-line summary of recommendation, rationale and next step."
+    }
+  },
+  "level_expectations": {
+    "APM / new grad": "'Solid' (3) means a clear goal, a sensible structure, three distinct options, explicit criteria, and a committed recommendation with basic metrics. Lighter tech/industry insight and rough numbers are acceptable. Prep sources note junior answers often jump to one obvious answer (Exponent), and avoiding that is the bar.",
+    "PM (L4-L5 / Flipkart PM / Swiggy PM-APM2)": "'Solid' adds specific competitive insight about the company's real assets, second-order trade-offs, unit economics with sanity checks, and go/no-go criteria. The candidate should hold or update the recommendation under pushback with reasons.",
+    "Senior PM / Group PM (L6+ / Flipkart SPM / Director)": "'Solid' requires an original strategic thesis (a 4 on insight is close to expected), multi-year sequencing, ecosystem, org and partner implications, and portfolio trade-offs (what we stop doing). Blind reports that at L7+ the Google loop is weighted toward design plus strategy. Microsoft senior loops reportedly add a dedicated strategy and roadmap round (InterviewStack). [uncertain: level mapping across companies is approximate]",
+    "per_dimension_shift": "Framing and communication anchors stay roughly constant across levels. Insight, trade-offs and viability expectations rise by about one anchor per level, so an APM 3 is roughly a PM 2 on those dimensions."
+  },
+  "green_flags": [
+    "States the objective and horizon and gets agreement before analysing ('Let's define success as...').",
+    "Names the company's specific unfair advantage or asset and builds the strategy on it.",
+    "Lays out build / partner / buy / do-nothing or several distinct segment options before narrowing.",
+    "Uses explicit comparison criteria and says what is being given up ('I'm accepting slower growth to protect margin').",
+    "Commits to one recommendation with a 'why now' and a phased go/no-go plan.",
+    "Uses back-of-envelope unit economics to test viability (especially at Indian companies), with sanity checks.",
+    "Anticipates competitor response or cannibalisation (e.g. 'Zomato will match within a quarter, so our edge must be supply exclusivity').",
+    "Updates the recommendation transparently when given new data, saying what changed."
+  ],
+  "red_flags": [
+    "Recites a generic framework (SWOT, Porter's, 3Cs) section by section without saying why each part matters for this decision. Exponent calls this 'too frameworky'.",
+    "Jumps to features or solutions before stating the goal or context.",
+    "Ends with 'it depends' or three balanced options and no recommendation.",
+    "Offers only feature-level ideas for a company-level question.",
+    "Gives a recommendation with no downside, cost or risk.",
+    "Uses generic claims ('the market is huge', 'there's a lot of competition') with no specifics.",
+    "Ignores the economics in a monetisation or India case, or makes uncorrected arithmetic errors.",
+    "Reverses the recommendation at the first pushback without reason, or becomes defensive and ignores the interviewer's information."
+  ],
+  "recitation_vs_insight": "Tests a grader can apply to the transcript: (a) Specificity test: replace the company or market name with another. If the sentence still works ('Company X has strong brand and many users'), it is recitation, so do not credit it as insight. (b) Use test: every framework bucket the candidate lists must later influence a choice. Buckets that are named but never referenced in the trade-off or recommendation score 0 for insight. (c) Causal 'because' test: insight statements contain a mechanism ('because dark stores need 1,500+ orders a day to break even, tier-3 is not viable yet'), while recitation lists nouns. (d) Pushback test: insightful candidates can go one level deeper when asked 'why?', while reciters repeat the framework. (e) Customised framework: Exponent lists 'framework rationale and customization' as a criterion. Credit a candidate who says why they chose their structure. Rule: a well-structured answer with no specific, used insight should cap dimension 2 at 2 and the overall score at 'lean hire', however polished it is.",
+  "process_signals": {
+    "clarifying_questions": "Expect two to four targeted questions on goal, horizon, constraints and company context, followed by stated assumptions. More than about six before any analysis is stalling. Zero is acceptable only if the candidate explicitly states assumptions instead.",
+    "check_ins": "One or two check-ins at transitions (after the goal, after the options) are positive. Asking permission at every step is a mild negative because it signals low ownership.",
+    "use_of_interviewer_data": "When the interviewer supplies facts (market size, constraints), the candidate should incorporate them and say how they change the analysis. Interviewer-supplied facts must not be credited as the candidate's insight.",
+    "pushback_response": "Google interviewers deliberately challenge assumptions and direction (Exponent). Score how the candidate reasons: defending with evidence or updating with a stated reason is positive, while caving without reason or ignoring the point is negative.",
+    "hint_penalty": "A hint that only redirects scope (e.g. 'focus on India') costs nothing. A hint that supplies a missing step (e.g. 'what about the economics?' or 'have you considered partnering?') lowers that dimension by one anchor, and the candidate can score at most 3 there. If two or more substantive hints were needed, cap the overall score at 'lean hire' [inferred]."
+  },
+  "time_allocation": "For a 30-45 min live case (Aakash Gupta references a 30-minute case; the split is inferred): clarify goal and context 3-5 min (about 10%); market, customer and competitor insight 6-8 min (about 20%); options 5-7 min (about 15%); trade-offs and prioritisation 6-8 min (about 20%); recommendation, risks, metrics and phasing 5-7 min (about 20%); summary and Q&A or pushback 3-5 min (about 15%). Penalty: if no recommendation is stated by the end, apply the no-recommendation gate. If more than 50% of the time goes to framing and market analysis before any options, lower communication by one anchor and flag poor time management.",
+  "hire_thresholds": {
+    "recommended_mapping": "Compute the weighted mean of the 1-4 anchors, then apply the gates. Strong hire: weighted mean of 3.5 or more, no dimension below 3, and a 4 on at least one of insight, trade-offs or recommendation. Hire: 3.0-3.49 with no dimension below 2 and recommendation at least 3. Lean hire: 2.5-2.99, or any gate cap triggered. No hire: below 2.5, or two or more gates triggered.",
+    "provenance": "inferred, aligned with the 4-point per-area scales of Aakash Gupta and Exponent. Google hiring committees use a 4-point scale per interview (published background in Google's how-we-hire page), but the numeric cut-offs here are not published.",
+    "company_level_notes": "Google expects consistent 3s or better, with insight weighted most at L5+. Meta debriefs reportedly emphasise a clear signal per focus area. Amazon's Bar Raiser can veto on Leadership Principle signals regardless of case score. Indian companies often run fewer, longer rounds, where a single weak strategy round can be decisive [uncertain]. For senior levels, raise the Hire bar to a weighted mean of 3.25 or more."
+  },
+  "company_differences": {
+    "Google": "A distinct product strategy round, open-ended ('Should Google enter furniture?', 'Monetise Scholar?', 'acquire a cybersecurity firm?'). Interviewers challenge assumptions and direction. Weighted toward tech insight, long-term vision, creativity and framework customisation (Exponent, Aakash Gupta).",
+    "Meta": "No standalone strategy round is consistently reported. Strategy appears inside product sense ('Should Meta enter dating/jobs?', 'Monetise WhatsApp?') with emphasis on mission tie-in, user problems and trade-offs between competing metrics (Exponent Meta guide, iGotAnOffer).",
+    "Amazon": "Strategy cases play a smaller role than Leadership Principles. Prompts include 'a 3-year strategy for Prime Video' and 'price Prime from scratch'. Graded through Customer Obsession, Think Big and Dive Deep, and working backwards from the customer is expected (Exponent Amazon guide).",
+    "Microsoft": "Strategy is embedded in product design and dedicated strategy rounds ('build a strategy for a new product or improve an existing Microsoft one'). Customer-centricity and enterprise or ecosystem considerations matter. Senior loops add a strategy and roadmap prioritisation round (Exponent, InterviewStack).",
+    "Uber": "Product insight and vision weigh heavily, and recognising marketplace dynamics (rider/driver/eater/merchant liquidity, cross-side effects) is decisive. Some loops use JAM or presentation formats (Exponent Uber guide, Prepfully).",
+    "Indian companies (Flipkart, Swiggy, Zomato, PhonePe, Meesho)": "More interviewer-led and numbers-heavy. Prompts include 'double Swiggy's revenue', 'launch Swiggy Go in Kamla Nagar', 'Instamart in tier-2/3', 'counter Meesho's growth', 'Zomato 10x revenue in a year', and Flipkart go/no-go with CAC, AOV, fulfilment, returns and payment costs. Interviewers probe unit economics, path to profitability, India context (tier-2/3, COD, vernacular users, UPI) and duopoly competitive response. Flipkart may use a take-home deck at screening, and rounds are reported as sometimes unstructured. Strategy and estimation are often combined into one round (jobmentis, productleadership, prachub, Glassdoor). [uncertain: prep-platform and candidate-report sourcing only]"
+  },
+  "calibration_exemplars": {
+    "score_1": "Prompt: 'Should Swiggy launch a grocery subscription?' The candidate immediately lists features (discounts, free delivery, recipes), sets no goal, does no competitor or economics analysis, and ends with 'yes, it would help users.' There is no trade-off and no metrics.",
+    "score_2": "The candidate recites '3Cs plus SWOT', saying generic things in each box ('Swiggy has a strong brand; Zepto and Blinkit are competitors'), and lists two similar options. Their recommendation is 'probably yes, but it depends on execution', with vanity metrics (sign-ups) and no numbers. Structured, but shallow.",
+    "score_3": "The candidate clarifies the goal (frequency and retention over 12 months) and analyses Instamart's position against Blinkit and Zepto plus Swiggy One overlap. Options: standalone Instamart subscription, bundle into Swiggy One, or no subscription with targeted coupons. Criteria: retention lift, margin impact, cannibalisation. They pick the Swiggy One bundle, estimate per-order delivery-fee subsidy against frequency uplift, and give risks (margin dilution), metrics (orders per subscriber per month; guardrail contribution margin) and a 3-city pilot. They hold the recommendation under pushback.",
+    "score_4": "As for score 3, plus a non-obvious insight: subscription value comes from shifting order timing to batch dark-store peaks, so the economics improve beyond the fee. They name the break-even frequency threshold, anticipate Blinkit matching within a quarter and design differentiation around it, set explicit kill criteria, and when the interviewer reveals a cash constraint they explicitly update to a narrower pilot, saying what changed. The summary is crisp."
+  },
+  "coachable_feedback": {
+    "Goal framing and context-setting": "Before any idea, say one sentence: 'Success here means <metric> over <horizon> given <constraint>', and get a nod.",
+    "Market, customer and competitive insight": "For each analysis point, finish the sentence 'so this means we should...'. If you cannot, cut the point.",
+    "Strategic option generation and creativity": "Always generate three distinct strategic options, one of them bold and one a 'do nothing/partner' baseline, before evaluating any.",
+    "Prioritisation and trade-off reasoning": "Name two to three criteria tied to the goal, score the options against them out loud, and state explicitly what you are giving up.",
+    "Recommendation quality and conviction": "Open the conclusion with 'My recommendation is X, because Y', and when challenged, say either 'I'd still do X because...' or 'That changes my view because...'.",
+    "Business viability and quantitative grounding": "Do one back-of-envelope unit-economics line (revenue per unit minus variable cost per unit) and a sanity check for every recommendation.",
+    "Risks, success metrics and execution path": "End with the top two risks and mitigations, one north-star and one guardrail metric, and a pilot with a numeric go/no-go threshold.",
+    "Structured communication": "State a three to five step roadmap tailored to the question, check in once after the goal, and close with a one-line summary."
+  },
+  "llm_grading_notes": [
+    "Length bias: an 8B model tends to reward long, framework-heavy answers. Mitigation: require the grader to quote evidence for each dimension, and give no credit for a dimension without a quote. Apply the specificity and use tests explicitly.",
+    "Crediting interviewer-supplied facts: the grader must attribute every fact to its speaker. Instruct it to score only CANDIDATE turns and to treat interviewer statements as context. Pre-process the transcript with speaker labels.",
+    "Leniency and central tendency: small models over-assign 3s. Mitigation: use the few-shot calibration exemplars at 1-4, force a gate check before scoring, and require the 'why not one higher' justification.",
+    "Keyword matching: words like 'trade-off', 'unit economics' or 'TAM' are not evidence. Require the actual comparison or arithmetic to be present.",
+    "Arithmetic verification: Qwen3 8B can miss calculation errors. Have it recompute the candidate's key numbers step by step (thinking mode) before scoring viability.",
+    "Recommendation detection: explicitly ask 'Quote the single sentence where the candidate commits to a recommendation; if none, output NONE', and apply the gate on NONE.",
+    "Pushback handling: ask the grader to locate the interviewer challenges and classify the next candidate turn as defend-with-reason, update-with-reason, cave or ignore.",
+    "Format awareness: if the interviewer imposed the structure (interviewer-led), do not penalise dimension 8 for lack of a self-driven roadmap.",
+    "India context: do not penalise rupee or crore units or India-specific references. Credit correct India context (UPI, COD, tier-2/3) as insight only when it is used causally.",
+    "Output in strict JSON per dimension (score, evidence_quotes, rationale, coach_tip), and compute the weighted total and gates in Python, not in the model."
+  ],
+  "sources": [
+    {
+      "url": "https://www.news.aakashg.com/p/crack-the-product-strategy-interview",
+      "date": "2023-12-20",
+      "title": "Aakash Gupta, Crack the Product Strategy Interview (3 areas, 1-4 scale)",
+      "verification": "interviewer-account / prep-platform (ex-Google PM author; partial paywall)"
+    },
+    {
+      "url": "https://www.aced.io/guides/google-product-strategy-interview",
+      "date": "2026 (updated)",
+      "title": "Exponent, Google Product Strategy Interview guide (4 criteria, sample questions)",
+      "verification": "prep-platform"
+    },
+    {
+      "url": "https://www.tryexponent.com/courses/google-pm-interview/product-strategy/product-strategy-rubric",
+      "date": "2025-26",
+      "title": "Exponent, Google product strategy rubric (course page; content gated)",
+      "verification": "prep-platform (not fully accessible)"
+    },
+    {
+      "url": "https://www.aced.io/blog/the-key-to-a-successful-pm-interview-answer-tradeoffs",
+      "date": "2026 (updated)",
+      "title": "Sushanth Raman (ex-Google/Microsoft PM), The key to a successful PM interview answer: trade-offs",
+      "verification": "interviewer-account (practitioner guest post)"
+    },
+    {
+      "url": "https://www.tryexponent.com/courses/product-strategy/how-to-answer-strategy-questions",
+      "date": "2025-26",
+      "title": "Exponent, How to answer product strategy questions (point of view, recommendation)",
+      "verification": "prep-platform (search-snippet only)"
+    },
+    {
+      "url": "https://www.tryexponent.com/guides/google-product-manager-interview",
+      "date": "2025-26",
+      "title": "Exponent, Google PM interview guide (interviewers challenge assumptions)",
+      "verification": "prep-platform"
+    },
+    {
+      "url": "https://productmanagers.substack.com/p/how-to-ace-googles-product-strategy",
+      "date": "2020-10-08",
+      "title": "How to Ace Google's Product Strategy Interview (Exponent guest post)",
+      "verification": "prep-platform; background only (pre-2022)"
+    },
+    {
+      "url": "https://igotanoffer.com/en/advice/pm-interview-grading-rubrics",
+      "date": "2024-25",
+      "title": "iGotAnOffer PM interview grading rubrics (explicitly NOT actual company rubrics)",
+      "verification": "prep-platform (403 on fetch; snippet only)"
+    },
+    {
+      "url": "https://www.tryexponent.com/guides/meta-product-manager-interview",
+      "date": "2025",
+      "title": "Exponent, Meta PM interview guide",
+      "verification": "prep-platform"
+    },
+    {
+      "url": "https://www.tryexponent.com/guides/amazon-product-manager-interview",
+      "date": "2025",
+      "title": "Exponent, Amazon PM interview guide (strategy smaller role; Prime Video prompt)",
+      "verification": "prep-platform"
+    },
+    {
+      "url": "https://www.tryexponent.com/guides/microsoft-product-manager-interview",
+      "date": "2025",
+      "title": "Exponent, Microsoft PM interview guide",
+      "verification": "prep-platform"
+    },
+    {
+      "url": "https://interviewstack.io/preparation-guide/microsoft/product_manager/senior",
+      "date": "2025",
+      "title": "InterviewStack, Microsoft Senior PM prep guide (strategy and roadmap round)",
+      "verification": "prep-platform"
+    },
+    {
+      "url": "https://tryexponent.com/guides/uber-pm-interview",
+      "date": "2025",
+      "title": "Exponent, Uber PM interview guide (marketplace dynamics)",
+      "verification": "prep-platform"
+    },
+    {
+      "url": "https://www.teamblind.com/post/google-pm-interview-criteria-rxwuuqkm",
+      "date": "2023-24",
+      "title": "Blind, Google PM interview criteria thread (L7+ design plus strategy)",
+      "verification": "interviewer-account / candidate report (anonymous)"
+    },
+    {
+      "url": "https://prachub.com/interview-questions/taking-a-us-only-product-international-market-selection-localization-and-entry-strategy",
+      "date": "2025",
+      "title": "PracHub, Taking a US-only product international (entry modes, go/no-go)",
+      "verification": "prep-platform"
+    },
+    {
+      "url": "https://prachub.com/interview-questions/founder-go-no-go-on-indian-e-commerce-market-competition-wedge-and-unit-economics",
+      "date": "2025",
+      "title": "PracHub, Founder go/no-go on Indian e-commerce (unit economics)",
+      "verification": "prep-platform"
+    },
+    {
+      "url": "https://prachub.com/interview-questions/zomato-revenue-levers-and-a-feasibility-check-on-a-tenfold-one-year-goal",
+      "date": "2025",
+      "title": "PracHub, Zomato revenue levers and 10x feasibility",
+      "verification": "prep-platform"
+    },
+    {
+      "url": "https://www.productleadership.com/flipkart-product-manager-interview-questions/",
+      "date": "2025",
+      "title": "Product Leadership, Flipkart PM interview questions",
+      "verification": "prep-platform"
+    },
+    {
+      "url": "https://www.productleadership.com/zepto-product-manager-interview-questions/",
+      "date": "2025",
+      "title": "Product Leadership, Zepto PM interview (quick-commerce economics)",
+      "verification": "prep-platform"
+    },
+    {
+      "url": "https://www.hackingthecaseinterview.com/pages/swiggy-case-interview",
+      "date": "2026",
+      "title": "Hacking the Case Interview, Swiggy case interview",
+      "verification": "prep-platform"
+    },
+    {
+      "url": "https://www.interviewquery.com/interview-guides/swiggy-product-manager",
+      "date": "2025",
+      "title": "Interview Query, Swiggy PM interview guide",
+      "verification": "prep-platform (429 on fetch; snippet only)"
+    },
+    {
+      "url": "https://www.jobmentis.com/de/interviews/phonepe/pm",
+      "date": "2025",
+      "title": "JobMentis, PhonePe PM interview (strategy/estimation round)",
+      "verification": "prep-platform"
+    },
+    {
+      "url": "https://www.jobmentis.com/de/interviews/zomato/pm",
+      "date": "2025",
+      "title": "JobMentis, Zomato PM interview",
+      "verification": "prep-platform"
+    },
+    {
+      "url": "https://dataford.io/questions/if-you-were-the-pm-for-a-competitor-how-would-you-counter-meeshos-growth-strategy",
+      "date": "2025",
+      "title": "Dataford, Counter Meesho's growth strategy question",
+      "verification": "prep-platform"
+    },
+    {
+      "url": "https://www.glassdoor.com/Interview/Flipkart-Interview-E300494-RVW92041340.htm",
+      "date": "2024-10",
+      "title": "Glassdoor, Flipkart PM interview review (rounds incl. product strategy)",
+      "verification": "candidate report"
+    },
+    {
+      "url": "https://lennysnewsletter.com/p/my-favorite-interview-questions-from",
+      "date": "2023-24",
+      "title": "Lenny's Newsletter, favourite PM interview questions (10x growth take-home; being persuaded)",
+      "verification": "interviewer-account (hiring managers; paywalled excerpt)"
+    },
+    {
+      "url": "https://www.google.com/about/careers/applications/how-we-hire/",
+      "date": "ongoing",
+      "title": "Google Careers, How we hire (structured interviews, rubrics)",
+      "verification": "published (background; no PM strategy weights)"
+    }
+  ],
+  "uncertain": [
+    "what_interviewers_test",
+    "weights",
+    "must_pass_gates",
+    "level_expectations",
+    "hire_thresholds",
+    "company_differences",
+    "process_signals",
+    "time_allocation"
+  ]
+}

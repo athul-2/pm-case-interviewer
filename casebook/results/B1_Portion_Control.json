@@ -1,0 +1,169 @@
+{
+  "pun_title": "Portion Control",
+  "case_type": "Product Design",
+  "asked_at": "Swiggy",
+  "subject_company": "Swiggy (Food Delivery)",
+  "round_and_level": "[uncertain] Product sense / design round (about 45-60 min), PM or APM level",
+  "difficulty": "Medium - the pain is easy to empathise with, but Swiggy does not cook the food, so the candidate must design around a two-sided marketplace (restaurant incentives, measuring quantity objectively, refund abuse) rather than a pure UI fix",
+  "market_and_industry": "India; food delivery (Swiggy vs Zomato duopoly); urban Tier 1 metros plus fast-growing Tier 2; price-sensitive users on mid-range Android phones; English/Hinglish UI with limited vernacular",
+  "time_box_minutes": "30-40",
+  "exact_prompt": "\"A lot of Swiggy users complain that the quantity of food they receive is smaller than they expected. Design a solution.\"",
+  "source_and_verification": "Reported (Swiggy PM interview, per the casebook outline); no primary transcript found. Adjacent reported prompts: Swiggy AOV strategy question on PracHub (https://prachub.com/interview-questions/swiggy-product-strategy-getting-customers-to-spend-more-per-order) and the Swiggy PM interview guide on Dataford (https://dataford.io/interview-guides/swiggy/product-manager). Evidence the pain is real: user threads on DesiDime (https://www.desidime.com/discussions/swiggy-food-issue), TechEnclave 'The Enshittification of Swiggy' (https://techenclave.com/t/the-enshittification-of-swiggy/269349?page=5), and the 2022 DoCA meeting that raised price-versus-quantity disparity with Swiggy, Zomato and NRAI (https://bsppd.business-standard.com/article/current-affairs/why-s-govt-asking-food-delivery-apps-to-ramp-up-complaint-redressal-system-122061500090_1.html). Year reported unknown [uncertain].",
+  "context_as_of": "As of Nov 2026 (from the swiggy-product-teardown research folder plus web checks): Swiggy Food Delivery GOV Rs 10,054 cr in Q2 FY27 (Jul-Sep 2026), +17.7% YoY, food adjusted EBITDA Rs 341 cr (3.4% of GOV) (https://www.investywise.com/swiggy-shareholders-letter-for-q2-fy27/). Food MTU about 18.3 M in Q4 FY26. Food AOV about Rs 420-450 [uncertain]. Platform fee about Rs 17.58 incl. GST since Mar 2026, plus delivery, packaging, small-cart and surge fees [uncertain]. With fees and menu markups (online prices are often above dine-in prices), users judge 'value' harder, which makes a small portion feel worse. Menu content (item names, descriptions, photos) is restaurant-supplied. Swiggy's menu quality check makes quantity mandatory only for cakes (weight and flavour); other categories have no required portion field (UrbanPiper Swiggy QC guide, https://help.urbanpiper.com/ordering-channels/swiggy/manage-and-publish-your-menu/swiggy-quality-check). Some restaurants offer Half/Full or S/M/L variants, but labels are not standardised ('Half' biryani can be 250 g or 500 g). Bolt (10-minute food, more than 10% of orders) and Toing (Rs 99-149 budget meals) widen the value range. Zomato says the aggregator does not decide menu items, prices or descriptions (South First: https://thesouthfirst.com/news/hungry-for-fair-pricing-chennais-food-delivery-bill-burns-bigger-holes/). Stale-risk flags: fee levels change often; Zomato is now part of Eternal Ltd.",
+  "regulatory_context": "(1) Consumer Protection Act 2019 and Consumer Protection (E-Commerce) Rules 2020: marketplaces must ensure accurate seller-provided descriptions and run grievance redressal. In Nov 2025 the Chandigarh District Consumer Commission held Swiggy/Instamart liable (Rs 2,000) for a 180 g shortfall in an orange order, rejecting the 'mere intermediary' defence (Tribune: https://www.tribuneindia.com/news/chandigarh/180-gm-shortfall-in-oranges-costs-delivery-firm-2k ; LiveLaw: https://www.livelaw.in/consumer-cases/chandigarh-consumer-commission-holds-swiggy-instamart-liable-for-short-delivery-orders-compensation-310692 ; Business Standard column: https://www.business-standard.com/opinion/columns/consumer-protection-delivery-platform-liable-for-shortfall-in-quantity-125112300681_1.html). That was groceries, but the principle raises Swiggy's exposure on food quantity too. (2) DoCA (Department of Consumer Affairs) has pushed Swiggy and Zomato on complaint redressal, including price versus quantity disparity (2022). (3) FSSAI labelling and display regulations and e-commerce FBO guidelines require accurate food information; FSSAI received about 21K complaints against delivery apps over five years (Inc42: https://inc42.com/buzz/fssai-received-21k-complaints-against-food-delivery-apps-in-five-years-govt). (4) Legal Metrology (Packaged Commodities) Rules mainly cover pre-packaged goods; freshly prepared restaurant food is generally not covered [uncertain]. (5) The CCPA dark-patterns guidelines (2023) mean misleading photos or 'drip pricing' framing are a regulatory risk. Implication: a portion-transparency feature is both a consumer-trust win and legal de-risking.",
+  "public_data_anchors": "Swiggy Food GOV Rs 10,054 cr in Q2 FY27, +17.7% YoY; food adj. EBITDA Rs 341 cr (3.4% of GOV) - Q2 FY27 shareholder letter summary, Oct 2026: https://www.investywise.com/swiggy-shareholders-letter-for-q2-fy27/ ; Food MTU about 18.3 M in Q4 FY26 (+21% YoY) - swiggy-product-teardown/Food_Delivery_core.json [uncertain] ; Food AOV about Rs 420-450 [uncertain] ; about 2.5-3 lakh active restaurant partners [uncertain] ; platform fee Rs 17.58 incl. GST from Mar 2026 [uncertain] ; Swiggy logged 3,631 consumer complaints on the National Consumer Helpline in one year vs 2,828 for Zomato, of which up to 803 were deficiency in service (2022, Moneylife: https://moneylife.in/article/after-3000-consumer-complaints-union-govt-asks-swiggy-zomato-to-furnish-resolution-framework/67465.html) ; FSSAI about 21K complaints against food delivery apps in five years (Inc42) ; Chandigarh commission Rs 2,000 compensation for a 180 g shortfall, Nov 2025 (Tribune).",
+  "framework_applied": "Product Design: CIRCLES + List and Trim (frameworks.md section 1). C - Comprehend: the goal is trust and repeat orders, not refunds; scope is the expectation-setting step (menu) and the post-delivery step; I am Swiggy, not the restaurant; constraint: Swiggy cannot control cooking. I - Identify: list value-seekers ordering for one, families/groups ordering to share, health/protein trackers, and first-time triers of a restaurant; pick the group/family orderer (high AOV, high pain because 'serves 2' failures leave someone hungry). R - Report needs as JTBD: 'When I order dinner for my family of four, I want to know how many people a dish will actually feed, so I can order the right amount once without overspending or running short.' C - Cut: prioritise 'know the real quantity before ordering' over 'get compensated after' (it prevents the problem, it happens on every order, and today's workaround of reading reviews is weak). L - List: safe (standardised portion fields: serves N, grams or pieces, mandatory for top categories); ambitious (verified 'real portion' from customer photos plus a portion-accuracy score that feeds ranking and refunds); visionary (Swiggy 'Portion Standard' certified containers and a size-recommender that builds the cart for N people). E - Evaluate on impact vs effort. S - Summarise: ship standardised portion fields plus a post-order portion rating in phase 1, add the verified-portion score in phase 2, measure portion complaints per 1,000 orders and 30-day repeat rate.",
+  "clarifying_questions": [
+    "Q: What is the goal - fewer complaints and refunds, or higher repeat orders and trust? A: Trust and repeat rate. Refund cost matters but is secondary.",
+    "Q: Is the complaint that portions shrank over time (shrinkflation) or that they don't match what the menu led users to expect? A: Mostly the expectation gap. Users can't judge the quantity from the menu, and the photo looks bigger.",
+    "Q: Which categories and segments complain most? A: Biryani, curries and thalis, combos and 'serves 2' items; group and family orders; Tier 1 metros. (Illustrative.)",
+    "Q: Am I Swiggy, and can I put requirements on restaurants? A: You are Swiggy's food PM. You can change menu requirements and ranking, but restaurants must stay happy since Zomato competes for them.",
+    "Q: Any constraints on time or team? A: One quarter for a first release, one pod. Ops can help with restaurant onboarding.",
+    "Q: Is this the full journey or one step? A: Your choice, but justify it.",
+    "Q: How do we hear about it today - ratings, support tickets? A: Through low ratings and help chat under 'quantity issue'. Refunds are discretionary and inconsistent."
+  ],
+  "interviewer_data_reveals": [
+    "Exhibit 1 (illustrative) - Complaint mix in Food help chat, last 90 days: missing item 31%, quality/taste 24%, quantity/portion 18%, delay 15%, other 12%. Portion complaints are about 4 per 1,000 orders and are the fastest-growing type (+35% YoY).",
+    "Exhibit 2 (illustrative) - Portion complaints by category (per 1,000 orders): Biryani 9.1, Thali/Combo 7.4, Curries 6.8, Pizza 1.2, Burgers 0.9, Beverages 0.5. Branded QSRs with fixed SKUs barely complain; independent restaurants drive about 80% of portion complaints.",
+    "Exhibit 3 (illustrative) - Menu data coverage: only 22% of items list any quantity (grams, pieces or serves N); 9% use 'Half/Full' with no definition; among items with explicit grams or 'serves N', the complaint rate is 60% lower.",
+    "Exhibit 4 (illustrative) - Behaviour after a portion complaint: 30-day repeat rate with that restaurant falls from 38% to 11%; 30-day repeat rate on Swiggy overall falls from 72% to 64%. Refund cost for portion complaints is about Rs 6 cr per quarter.",
+    "Exhibit 5 (illustrative) - Group orders (cart above Rs 800 or 3+ mains) are 14% of orders but 33% of portion complaints."
+  ],
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "Swiggy users say the food quantity they get is smaller than they expected. Design a solution."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Let me restate it. Users feel the portion delivered is smaller than the menu led them to expect. First, the goal. Are we trying to cut refunds, or build trust so people reorder?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Trust and repeat orders."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Second, is this real shrinkflation, or an expectation gap where the menu doesn't tell people what they'll get?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Mostly the expectation gap. Menus rarely state quantity and photos flatter."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That matters a lot. Swiggy doesn't cook, so we can't control the ladle. But we do own the menu, the ranking and the after-order experience. So I'll focus on setting accurate expectations before the order and closing the loop after it. I'll assume I'm Swiggy's food PM, with one pod and a quarter for v1, and that I can set menu requirements for restaurants as long as I don't push them to Zomato. Fair?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Fair. (Shares Exhibits 1 and 2: portion complaints are about 4 per 1,000 orders, growing 35% YoY, concentrated in biryani, thalis and curries from independent restaurants.)"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's useful. Branded QSRs like Domino's or McDonald's don't have this problem because a 'regular pizza' is a fixed SKU. The problem is the long tail of independent restaurants, where 'Chicken Biryani - Half' means something different at every place. Now the users. I see four segments. Solo value-seekers, like a hostel student ordering a Rs 199 meal who wants to feel full. Families or groups ordering to share, ordering for three or four on a weekend. Fitness trackers counting protein or calories. And first-time triers of a new restaurant."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Who would you pick?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Can I check one thing: what share of complaints come from group orders?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "(Shares Exhibit 5) Group orders are 14% of orders but 33% of portion complaints."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then I'll pick the family or group orderer. Picture a parent in Pune ordering Sunday dinner for four with an Rs 900-1,200 cart. The pain is high: if a 'serves 2' biryani actually serves one and a half, someone goes hungry, and they reorder or cook at 9 pm. They're also high value, with large carts, and often Swiggy One members. The JTBD: when I order dinner for my family, I want to know how many people each dish will really feed, so I can order the right amount once, without overspending or running short."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What are their pain points?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Four. One: no comparable unit. Half, Full, Regular and Family pack mean nothing across restaurants. Two: photos are styled or stock, not what arrives. Three: no way to plan quantity for N people, so they over-order 'to be safe' or under-order. Four: after delivery, a complaint is a chatbot fight with an arbitrary refund, and nothing changes at the restaurant. I'll prioritise the first three, knowing the real quantity before ordering. That affects every order, current workarounds like reading reviews or asking on WhatsApp are weak, and it prevents the complaint rather than paying for it. Number four supports it as a feedback loop."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "(Shares Exhibit 3) Only 22% of items list any quantity, and items that do get 60% fewer complaints."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's strong evidence that disclosure itself works. Now solutions, from safe to visionary."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Safe: standardised portion fields. Make 'serves N', plus either grams or piece count, mandatory for the top complaint categories: biryani, thali, curries and combos. Add Swiggy definitions for Half and Full by category. Restaurants fill them in the partner app with prompts, such as 'Is your Half biryani about 350 g?'. Users see a 'Serves 2 · approx. 600 g' chip on every dish card."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Ambitious: a 'Real Portion' score. After delivery, ask one question: 'Was the quantity as expected? Less / As expected / More', with an optional photo. That builds a portion-accuracy score per item. We show 'Portion as described: 92%' on the menu, feed it into ranking, and use it for automatic partial refunds when a restaurant repeatedly under-delivers. Restaurants with a bad score get a nudge to fix the listing or the portion."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Visionary, two ideas. A 'Feeding 4?' cart planner: tell Swiggy the group size and appetite, and it uses portion data to suggest the right number of dishes. And a Swiggy Portion Standard: subsidised, volume-marked containers such as 500 ml and 750 ml, so 'serves 2' is physically standardised. The packaging partner programme could also cut spillage."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How do you choose?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "On impact versus effort. Portion fields: high impact given the 60% lower complaint rate, low to medium effort. It's a schema change plus partner-app prompts, and the long tail will need ops nudges. Real Portion score: high impact because it creates accountability and fixes refunds, medium effort. The risks are rating abuse and refund fraud, so weight by order history and require a photo for refunds. Cart planner: medium impact, medium effort, and it only works once portion data exists. Standard containers: potentially high impact but high effort and capex, and restaurant adoption is slow, especially in Tier 2. Edge cases include items sold by piece, like momos or rotis, which are easy, versus gravies, which vary. Grams for a gravy dish can mislead, so 'serves N' should come first and grams second. On competition, Zomato hasn't standardised this either, so it's a trust differentiator."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Restaurants will push back. They'll say it exposes them."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'd make it a win for them. Items with portion info convert better because there's less uncertainty, and I'd test that. Accurate listings get a ranking boost and fewer refund debits charged to them. Ops pre-fills from comparable restaurants, so the restaurant only confirms. I'd start with independent restaurants in the top three complaint categories in two cities, Bengaluru and Pune, not the whole catalogue."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What do you recommend and how will you measure it?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Phase 1, this quarter: mandatory portion fields for the top categories plus the one-tap portion question after delivery, as an A/B test by restaurant cluster. Phase 2: turn the ratings into the Real Portion score in ranking and refunds. Phase 3: the cart planner. The North Star for this work is portion complaints per 1,000 orders, aiming for -30%, with 30-day repeat rate for affected users as the business outcome. Supporting metrics: share of top-category items with portion info, aiming for 80%+; menu-to-cart conversion on those items; and refund cost per order. Guardrails: restaurant churn to Zomato, menu conversion and AOV not falling, and portion-rating fraud rate."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Risks?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Three. First, restaurants overstate portions to look good. The Real Portion score keeps them honest, because overstating gets punished by ratings. Second, users game the 'less' rating for refunds. Weight by account trust, cap refunds, and require photos. Third, AOV could dip if users realise one dish is enough. I'd accept that, because trust lifts frequency, but I'd watch it. There's also a regulatory benefit. Consumer commissions have already held Swiggy liable for short quantity on Instamart, so accurate disclosure reduces legal exposure."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "To close: we can't control the kitchen, but we can control the promise. Make every dish state who it feeds, let customers verify it after every order, and reward restaurants that deliver what they list."
+    }
+  ],
+  "answer_and_recommendation": "Ranked options: (1) Recommended - standardised portion disclosure ('Serves N' plus grams or pieces, with Swiggy-defined Half/Full by category), mandatory for the top complaint categories, plus a one-tap post-delivery portion rating; (2) Phase 2 - a 'Real Portion' accuracy score shown on the menu and used in ranking and automated, capped refunds; (3) Phase 3 / visionary - a 'Feeding N?' cart planner and a Swiggy Portion Standard container programme. Why: the problem is mainly an expectation gap on independent-restaurant menus, Swiggy owns the menu and the feedback loop, and items with explicit quantity show about 60% fewer complaints (illustrative). Rollout: A/B by restaurant cluster in Bengaluru and Pune on biryani, thali, curries and combos, then national. Success: portion complaints per 1,000 orders -30%, 30-day repeat rate for complainers +5 pp, 80%+ portion coverage in target categories. Risks and mitigations: restaurant pushback (ops pre-fill, ranking boost, fewer refund debits); overstated listings (rating-based score); refund abuse (trust weighting, photo proof, caps); AOV dip (accept and monitor). Closing line: \"We can't control the kitchen, but we can control the promise - tell users exactly who a dish feeds, verify it after every order, and reward restaurants that deliver what they list.\"",
+  "counter_metrics_guardrails": "Menu-to-cart conversion and order volume for target categories (disclosure should not scare users off); AOV and items per cart (watch for the 'I need fewer dishes' effect); restaurant churn or de-listing to Zomato and partner NPS; refund cost per order and fraud rate on portion claims; rating-prompt fatigue (response rate and app rating); the share of restaurants gaming listings (stated vs rated portion gap); support contact rate overall (complaints should not shift to 'quality' or 'missing item').",
+  "follow_up_twists": [
+    "Twist: 'Restaurants refuse to fill the fields.' Response: Pre-fill from category benchmarks and let them confirm, make it a ranking and badge benefit, and phase it in as mandatory only for high-complaint items.",
+    "Twist: 'How do you know the rating isn't just hungry people being angry?' Response: Normalise per restaurant against category baselines, weight by user trust history, and validate with photo samples. The score is relative, not absolute.",
+    "Twist: 'Leadership worries this lowers AOV.' Response: Show that complainers' 30-day repeat rate drops 8 pp (illustrative). Lifetime frequency is worth more than one oversized cart, and the cart planner can upsell correctly sized combos."
+  ],
+  "common_pitfalls": [
+    "Treating it as a refund or support problem only ('auto-refund quantity complaints'). That pays for the problem without preventing it, and it invites fraud.",
+    "Proposing that Swiggy weigh or inspect food. Swiggy doesn't cook, can't police 3 lakh kitchens, and rider pickup checks add delivery time.",
+    "Ignoring the restaurant side of the marketplace. A mandate without incentives pushes partners to Zomato.",
+    "Assuming it's shrinkflation without clarifying. The data shows an expectation gap driven by missing menu information, concentrated in independent restaurants and group orders.",
+    "Using grams as the only unit. Gram weight for gravies and rice dishes misleads; 'serves N' is the user's mental model."
+  ],
+  "skills_tested": "empathy, structuring, prioritisation, business sense, execution, communication",
+  "linked_teardown": "swiggy-product-teardown (swiggy-product-teardown/results/Food_Delivery_core.json): pain_points lists fee 'bill shock', menu markups above dine-in prices and refunds stuck in chatbot loops, and opportunities proposes photo-evidence auto-refunds under Rs 150. These support the 'value perception' framing and the photo-verified portion score. Scale anchors (Q2 FY27 food GOV Rs 10,054 cr, about 2.5-3 lakh restaurants) also come from this file.",
+  "uncertain": [
+    "round_and_level",
+    "source_and_verification",
+    "context_as_of",
+    "regulatory_context",
+    "public_data_anchors"
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "pun_title": "Capped Crusader",
+  "case_type": "Product Strategy",
+  "asked_at": "By the Authors (synthetic 2026 regulatory case)",
+  "subject_company": "PhonePe (Walmart-backed UPI TPAP; also lending, insurance, wealth/Share.Market, Pincode, Indus Appstore, merchant devices). Google Pay and Paytm are reference competitors; NPCI is the regulator-operator.",
+  "round_and_level": "PM round 2 or hiring-manager round (strategy under regulation), PM to SPM / Group PM level; also asked in fintech APM rounds as a 'threat response' case. [uncertain]",
+  "difficulty": "Hard - the obvious answers (lobby, or create a second app) are weak or look like gaming the rule; a strong answer reframes PhonePe's goal away from UPI share, sizes the volume it must shed, and sequences regulatory, product and monetisation moves around a live IPO.",
+  "market_and_industry": "India; fintech / UPI payments (consumer TPAP, merchant acquiring, distribution of credit, insurance and investments); national scale from metros to Bharat; Android-heavy, vernacular-first users in Tier-2/3; zero-MDR UPI economics.",
+  "time_box_minutes": "30-35",
+  "exact_prompt": "NPCI has confirmed it will enforce the 30% cap on any single UPI app's share of transaction volume. PhonePe sits at about 46%. You are PhonePe's head of strategy. What do you do?",
+  "source_and_verification": "Level: synthetic (written by the casebook authors on the 2026 regulatory news). The cap itself is real: NPCI proposed a 30% volume cap for third-party UPI apps in Nov 2020 and has extended the compliance deadline three times, most recently to 31 Dec 2026 (Business Today, Dec 2024: https://www.businesstoday.in/tech-today/news/story/npci-extends-30-upi-market-share-cap-deadline-on-3rd-party-apps-to-december-2026-459171-2024-12-31; Inc42: https://inc42.com/buzz/npci-extends-upi-market-cap-deadline-two-years). The premise that NPCI 'will' enforce it is hypothetical; no enforcement decision was found as of Nov 2026. NextLeap, The Product Folks and Glassdoor were not searched directly for this prompt. Year: 2026. [uncertain]",
+  "context_as_of": "As of Nov 2026. Cap: proposed Nov 2020 for TPAPs, measured on transaction volume (reported as a rolling 3-month basis); deadline moved from Dec 2022 to Dec 2024 to 31 Dec 2026; reports say a TPAP above the cap could be barred from onboarding new users while existing users keep transacting (https://www.cxodigitalpulse.com/phonepes-upi-scale-trails-paytms-monetisation-in-fy26-results/). Shares: PhonePe about 46.2% and Google Pay 32.7% of UPI volume in May 2026; combined 78.9%, down from about 86% in May 2024 (https://voice.lapaas.com/upi-may-phonepe-googlepay-share/; https://www.outlookbusiness.com/economy-and-policy/phonepe-google-pay-combined-upi-market-share-drops-below-80-for-first-time); Paytm about 7.9%. PhonePe crossed 10 bn monthly UPI transactions in Mar-Apr 2026 (https://www.angelone.in/news/unlisted-companies/phonepe-maintains-upi-lead-with-over-10-billion-transactions-in-april-2026) and has 50M+ registered merchants. Financials: FY26 operating revenue Rs 7,920 cr (+11%), net loss Rs 2,792 cr (+62%), driven by investment in Share.Market, Pincode, insurance and Indus Appstore, and hit by the halt of card-funded rent payments (https://www.outlookbusiness.com/corporate/phonepe-fy26-losses-rs-2792-cr-revenue-rises-11-pc-lending-wealth-insurance-grow-ipo-plans). IPO: SEBI approval reported around Jan 2026; listing paused in Mar 2026 subject to market conditions; CEO Sameer Nigam has called the cap an overhang on the IPO (https://inc42.com/buzz/proposed-upi-market-cap-rule-hindering-phonepes-ipo-plans-says-ceo-sameer-nigam). Stale-risk: no NPCI decision for Dec 2026 was found; IPO timing may have changed after the last report. [uncertain]",
+  "regulatory_context": "1) NPCI TPAP volume cap of 30% (Nov 2020 circular; deadline 31 Dec 2026): applies to third-party app providers, not to banks' own apps; enforcement would likely block new-user onboarding above the cap rather than cut off existing users (as reported). 2) Zero MDR on UPI and RuPay debit P2M transactions (since Jan 2020): PhonePe earns almost nothing per UPI transaction, so volume is a cost centre funded by other businesses; the government's low-value P2M incentive scheme pays a small amount per eligible transaction. 3) RBI Payment Aggregator directions (2025) and the halt of card-funded rent / education payments through PAs cut a revenue line. 4) RBI digital lending directions (2022, updated 2025): PhonePe can distribute credit as a lending service provider, with default loss guarantee limits. 5) IRDAI broking licence for insurance distribution; SEBI broker rules for Share.Market. 6) SEBI ICDR for the IPO: the cap must be disclosed as a material risk in the offer document. 7) NPCI multi-brand and plugin rules: UPI Plugin/SDK flows inside merchant apps and UPI Circle, UPI Lite and credit lines on UPI each have their own operating guidelines; whether plugin volume counts toward PhonePe's cap is a rules question to confirm with NPCI. [uncertain]",
+  "public_data_anchors": "1) UPI processed 21,860 crore (218.6 bn) transactions in FY26 (Business Today, Mar 2026: https://www.businesstoday.in/india/story/upi-processes-21860-crore-transactions-in-fy26-peak-growth-seen-in-dec-jan-months-523412-2026-03-31); 22.6 bn in Mar 2026, a record. 2) PhonePe 46.2% and Google Pay 32.7% of UPI volume, May 2026; combined 78.9% vs about 86% in May 2024 (Lapaas, Outlook Business, Jun 2026). 3) PhonePe 10 bn+ UPI transactions a month (Angel One, Apr 2026). 4) Derived: at about 21.5-22 bn monthly UPI volume, a 30% cap is about 6.5 bn transactions a month for PhonePe, so it would need to shed about 3.5 bn a month, about 35% of its current volume (derived, illustrative; ignores market growth). 5) PhonePe FY26 operating revenue Rs 7,920 cr (+11%), net loss Rs 2,792 cr (Outlook Business, 2026). 6) PhonePe 50M+ registered merchants (Pulse, 2026). 7) Paytm about 7.9% UPI share, May 2026 (Lapaas). 8) Cap deadline extensions: Dec 2022, Dec 2024, Dec 2026 (Inc42, Business Today). [uncertain]",
+  "framework_applied": "Product Strategy: Clarify, Context (4 pillars), Recommend (frameworks.md section 2); a strategic-plan question forced by regulation. Step 1 Clarify - success = keep PhonePe's revenue and IPO valuation growing while complying; scope = UPI TPAP business plus the businesses it feeds; constraints = the cap's mechanics (rolling 3-month volume, onboarding freeze), the IPO timeline, no rule-gaming. Step 2a Company positioning - PhonePe's moat is reach (about 46% of UPI volume, 50M+ merchants) but UPI earns near-zero MDR; revenue (Rs 7,920 cr) comes from merchant devices, distribution of credit, insurance and wealth; a quick check shows it must shed about 35% of volume to comply. Step 2b Customers - consumers (P2P-heavy, low-value P2M, high-value monetisable users), merchants (kiranas on SmartSpeakers, large merchants on PG), partners (banks, lenders, insurers). Step 2c Competition - Google Pay (32.7%, also capped), Paytm (rebuilding), Navi, super.money, CRED, bank apps and merchant-app plugins (Swiggy UPI, Flipkart's super.money) are the natural absorbers of shed volume; trend = UPI credit lines, UPI Lite, agentic payments. Step 2d Market forces - NPCI and RBI hold the power; users have zero switching costs; banks and PSP partners can tilt routing; entry cost for a TPAP is low now that plugins exist. Step 3 Recommend - reframe: 'Stop treating UPI share as the scoreboard - make PhonePe the most profitable 30% of UPI and the distribution layer for everything that rides on top of it.' Phased plan: shape the rule, re-weight volume toward monetisable users, grow revenue per user, and keep the IPO story independent of share.",
+  "clarifying_questions": [
+    {
+      "q": "What exactly does enforcement mean - is volume measured on a rolling 3 months, and what happens if we stay above 30%?",
+      "a": "Rolling 3-month volume share. Above the cap, you can't onboard new UPI users; existing users can keep transacting. Glide path to be announced - assume 12 months."
+    },
+    {
+      "q": "Does the cap count all PhonePe-switched volume - P2P, P2M, UPI Lite, credit lines on UPI, and UPI plugin flows inside merchant apps?",
+      "a": "P2P and P2M from the PhonePe app count. Plugin flows inside other apps are counted against that app, not PhonePe. UPI Lite counts."
+    },
+    {
+      "q": "What is the company goal right now - IPO valuation, profitability, or user growth?",
+      "a": "IPO in the next 12-18 months, with a credible path to profit. That's the priority."
+    },
+    {
+      "q": "Where does our revenue come from today, and how much is tied to UPI volume?",
+      "a": "Exhibit 2 has the split. Direct UPI revenue is small."
+    },
+    {
+      "q": "Is Google Pay also above the cap and facing the same rule?",
+      "a": "Yes, at about 33%, so it has to shed a little volume as well."
+    },
+    {
+      "q": "Are structural options like a separate app or entity allowed?",
+      "a": "Legal says NPCI would treat a second app under the same group as one TPAP. Don't plan on it."
+    },
+    {
+      "q": "What's the regulatory stance on advocacy - can we push for changes?",
+      "a": "You can engage through industry bodies, but NPCI wants to see competition improve, not lobbying alone."
+    }
+  ],
+  "interviewer_data_reveals": "All numbers are illustrative (invented for teaching) unless a source is cited.\n\nExhibit 1 - PhonePe UPI volume mix, monthly (illustrative; total of about 10 bn matches Angel One, Apr 2026):\n| Type | Bn txns | Share of PhonePe volume |\n| P2P transfers | 3.6 | 36% |\n| P2M under Rs 200 (kirana, chai, auto) | 4.3 | 43% |\n| P2M Rs 200+ | 1.6 | 16% |\n| Recharges and bills | 0.5 | 5% |\nTotal: 10.0 bn; UPI total about 21.7 bn a month; PhonePe share about 46%.\n\nExhibit 2 - PhonePe FY26 revenue mix (total Rs 7,920 cr is real per Outlook Business; split illustrative):\n| Line | Rs cr | Share |\n| Merchant devices (SmartSpeaker, POS) and PG | 2,700 | 34% |\n| Lending distribution | 1,700 | 21% |\n| Recharges, bills, commissions | 1,400 | 18% |\n| Insurance distribution | 900 | 11% |\n| Wealth / Share.Market | 700 | 9% |\n| UPI incentives and other | 520 | 7% |\n\nExhibit 3 - User value tiers (illustrative):\n| Tier | Users | Avg UPI txns/month | Annual revenue per user |\n| Financial-product users (loan/insurance/SIP) | 4 cr | 55 | Rs 900 |\n| Active merchant payers (P2M heavy) | 18 cr | 30 | Rs 60 |\n| P2P-only / dormant-ish | 28 cr | 12 | Rs 8 |\n\nExhibit 4 - Survey of PhonePe users (illustrative): 62% also have Google Pay or a bank app installed; 41% say they'd 'just use another app' if PhonePe asked them to; 74% of SmartSpeaker kiranas accept any UPI app because the QR is interoperable.",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "NPCI has confirmed it will enforce the 30% cap on any single UPI app. PhonePe is at about 46%. You're head of strategy. What do you do?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Let me restate: PhonePe must bring its share of UPI volume from about 46% to 30%, and you want the strategy. First, the mechanics. How is share measured, and what happens above the cap?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Rolling three months. Above the cap you can't onboard new users; existing users keep transacting. Assume a 12-month glide path."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So the penalty is a growth freeze, not a shutdown. What counts - P2P, P2M, UPI Lite, plugin flows inside other apps?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "P2P, P2M and Lite in the PhonePe app count. Plugin flows inside other apps count against those apps."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Useful. And what's the company goal right now?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "IPO in 12-18 months with a credible path to profit."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Last one: is a second app or entity possible? I'm asking only to rule it out."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "NPCI would count group apps as one TPAP. Rule it out."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Good, so no gaming. My plan: PhonePe's position and the size of the problem, then users and merchants, then who absorbs the volume, then market forces, then a phased recommendation."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Size first. UPI runs about 21.5-22 billion transactions a month. 30% of that is about 6.5 billion; PhonePe does over 10 billion. So it must shed roughly 3.5 billion a month, about 35% of its volume, unless UPI grows faster than PhonePe. UPI grew strongly through FY26, so part of the gap closes if PhonePe simply grows slower than the market."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Here's the volume mix. Exhibit 1."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "P2P is 36% and small-ticket P2M under Rs 200 is 43%. Those are the transactions UPI was built for, but under zero MDR they earn PhonePe almost nothing. Let me see where money actually comes from."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Exhibit 2."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "This is the key insight. UPI incentives are about 7% of revenue. The other 93% - devices, lending, insurance, wealth, bills - depends on users and merchants, not on PhonePe's share of every transaction. Merchant SmartSpeakers earn rental whichever app the customer pays with, because the QR is interoperable. So the cap threatens reach and the IPO narrative more than it threatens revenue directly."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Customers next.\n| Segment | Volume | Value to PhonePe |\n| Financial-product users | high | very high, Rs 900 a year |\n| Merchant payers | high | modest, Rs 60 |\n| P2P-only users | medium | near zero, Rs 8 |\n| Kirana merchants | - | high via device rental and credit |\nUsing Exhibit 3, P2P-only users are 28 crore of the base but generate little. Financial-product users are 4 crore and generate most of the consumer revenue."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Who picks up the volume you shed?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Competition. Google Pay is capped too, so it can't absorb much. The natural absorbers are Paytm at about 8%, Navi, super.money, CRED, bank apps and merchant-app plugins like Swiggy UPI. Combined PhonePe and Google Pay share already fell from about 86% to 79% in two years, so the market is fragmenting on its own. Exhibit 4 says 41% of users would just switch apps if asked - switching costs are near zero."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Market forces. NPCI and RBI have the most power - they write the rule. Users and merchants have high bargaining power because UPI is interoperable. Banks matter as PSP partners. Entry barriers for new UPI apps are low now that plugins exist. And the IPO adds another stakeholder: investors who want to know the growth story survives the cap."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "So what's the strategy?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "My reframe: stop treating UPI share as the scoreboard. PhonePe should become the most profitable 30% of UPI and the distribution layer for what rides on top of UPI - credit, insurance, wealth and merchant services. Four moves, in sequence."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Move 1, shape the rule, now. Through the industry body, propose that the cap apply to new-user onboarding only, with a multi-year glide path, and that NPCI measure share on P2M rather than P2P. Back it with data: combined share fell 7 points in two years without a cap. But I wouldn't bet the company on it - it's been deferred three times, not withdrawn."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Move 2, re-weight volume toward monetisable users. Stop paying cashback and acquisition for P2P-only and dormant users - the Rs 8-a-year tier. Let marginal P2P volume drift to bank apps and others. Concentrate engagement on the 4 crore financial-product users and the 18 crore merchant payers. Shedding the lowest-value P2P brings share down without touching revenue much."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Move 3, grow revenue per user and per merchant independent of share. Credit on UPI and pre-approved loans for heavy payers, insurance bundled at the moment of payment, SIPs from the payment screen, and merchant credit for kiranas using their SmartSpeaker cash-flow data. Target: lift annual revenue per active user enough that 30% of the volume earns more than 46% does today."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Move 4, build infrastructure that grows with UPI, not with PhonePe's app share. Offer PhonePe's payment gateway, plugin SDK and merchant devices to other apps and banks. Since plugin volume counts against the host app, PhonePe can earn on UPI flows it powers without them counting toward its cap. NPCI should be fine with it, because it diversifies the front ends."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Isn't Move 2 just giving away users to Google Pay?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Google Pay is capped too, so it can't take much. Most shed volume goes to bank apps, Paytm and plugins. And I'm not dropping users - I'm stopping spend on them. If a P2P-only user later wants a loan, PhonePe is still installed."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How does this affect the IPO?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "It improves the story. Today the risk factor reads 'our share must fall 35%'. After this, the equity story is revenue per user, merchant base and distribution growth, with share compliance as a managed transition. I'd disclose the cap plan in the offer document and show cohort revenue per user rising."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What do you explicitly not do?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "No second app or spin-off - NPCI would see it as gaming and it would put our licence relationship at risk. No cutting off existing users or merchants. And no price war on cashback to hold share - that burns money to defend a metric that's being capped."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Risks?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "One, users we stop subsidising also stop opening the app, which hurts cross-sell - watch financial-product conversion in that cohort. Two, NPCI counts plugin volume differently than we assume - confirm the rule in writing before building Move 4. Three, credit push raises defaults - keep lending as a distribution partner with bank balance sheets, within RBI's digital lending rules. Four, the onboarding freeze bites in Tier-3 growth markets - prioritise compliance before the freeze kicks in."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "When would your answer change?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "If NPCI defers again or makes the cap apply only to new users, I'd slow Move 2 and keep growing - but I'd still execute Moves 3 and 4, because they make PhonePe less dependent on a single regulatory decision."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "To close: the cap forces PhonePe to shed about a third of its UPI volume, but UPI volume earns about 7% of its revenue. So the strategy is to shape the rule's glide path, let low-value P2P drift away, grow revenue per user through credit, insurance and wealth, and power other apps' UPI through plugins and gateways. I'd measure success by UPI share on track to 30% within the glide path, revenue per monthly active user, financial-product penetration, and merchant base growth."
+    }
+  ],
+  "answer_and_recommendation": "Reframe: PhonePe should stop treating UPI share as its scoreboard and become 'the most profitable 30% of UPI plus the distribution layer on top of it'. Ranked moves: (1) Re-weight volume toward monetisable users - stop cashback and acquisition spend on P2P-only and dormant users (about Rs 8 of annual revenue per user, illustrative) and let low-value P2P drift to bank apps, Paytm and plugins; this does most of the share reduction (needed: about 3.5 bn transactions a month, about 35% of volume, derived) with little revenue loss. (2) Grow revenue per user and per merchant independent of share - credit on UPI, insurance and SIPs at the moment of payment, kirana credit from SmartSpeaker cash-flow data. (3) Become infrastructure - PhonePe PG, plugin SDK and merchant devices for other apps and banks, whose volume counts against the host app (confirm with NPCI). In parallel: shape the rule through industry bodies (new-user-only cap, multi-year glide path, P2M-based measurement) without relying on another deferral. Not doing: a second app or spin-off (seen as gaming), cutting off existing users, a cashback war to hold share. Risks and mitigation: cross-sell falls in unsubsidised cohorts (track conversion); plugin-counting rule differs (written confirmation first); credit quality (partner balance sheets, RBI digital lending rules); onboarding freeze in Tier-3 (comply early). IPO: disclose a managed transition and lead the equity story with revenue per user and merchant base. Closing line: 'The cap takes a third of PhonePe's volume but only a sliver of its revenue - so trade share for depth, and own the rails others run on.'",
+  "counter_metrics_guardrails": "1) Rolling 3-month UPI volume share vs the 30% glide-path target (compliance). 2) Revenue per monthly active user and per merchant (the new North Star). 3) Financial-product penetration and conversion among cohorts whose cashback was cut - guard against losing cross-sell. 4) Payment success rate and app rating - shedding volume must not come from worse reliability. 5) Merchant churn and SmartSpeaker active rate. 6) Loan default and delinquency rates on UPI credit (RBI and partner-bank guardrail). 7) Grievance and complaint volume with NPCI and RBI ombudsman. 8) Ecosystem health: share of shed volume going to Google Pay (should stay low) vs bank apps, Paytm and plugins - NPCI's real goal is fragmentation.",
+  "follow_up_twists": [
+    {
+      "twist": "NPCI says plugin volume powered by PhonePe's SDK will count toward PhonePe's cap after all. Does Move 4 die?",
+      "response": "It shrinks to the non-UPI parts - payment gateway, cards, devices and merchant credit - which still grow with the ecosystem, and I'd rely more on revenue per user from Move 2 and 3."
+    },
+    {
+      "twist": "The IPO bankers want share kept above 40% until listing for the valuation. What do you say?",
+      "response": "Holding share for a listing date only to cut it afterwards is a disclosure and credibility risk; I'd rather list on a compliant plan with revenue per user rising, which is a more durable valuation story."
+    },
+    {
+      "twist": "Google Pay is also capped and decides to sell its UPI user base to a bank. How does that change your plan?",
+      "response": "A bank app absorbing Google Pay volume speeds fragmentation and helps PhonePe comply; I'd pitch PhonePe's PG and devices to that bank as an infrastructure partner."
+    }
+  ],
+  "common_pitfalls": [
+    "Leading with 'lobby NPCI' or 'wait for another deferral' - the cap has been deferred three times but never withdrawn, and the interviewer wants a plan that works if it bites.",
+    "Proposing a second app, a spin-off or a brand split to stay under 30% - NPCI would treat group apps as one TPAP and it reads as gaming the rule.",
+    "Treating UPI share as the revenue engine - under zero MDR it earns PhonePe little; devices, lending, insurance and wealth carry the P&L.",
+    "Forgetting the IPO and the onboarding-freeze mechanics - the penalty is a growth freeze and a valuation overhang, not a shutdown."
+  ],
+  "skills_tested": [
+    "business sense",
+    "structuring",
+    "quant",
+    "prioritisation",
+    "execution",
+    "communication"
+  ],
+  "linked_teardown": "swiggy-product-teardown (swiggy-product-teardown/results/Swiggy_UPI_Money_payments.json). Key fact used: Swiggy UPI runs on NPCI's UPI Plugin (Yes Bank and Juspay) so in-app payment volume counts against the host app rather than PhonePe or Google Pay, and the teardown notes NPCI's market-share caps were deferred - the basis for the plugin/infrastructure move. Otherwise only loosely linked.",
+  "uncertain": [
+    "round_and_level",
+    "source_and_verification",
+    "context_as_of",
+    "regulatory_context",
+    "public_data_anchors"
+  ]
+}

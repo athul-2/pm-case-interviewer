@@ -1,0 +1,183 @@
+{
+  "pun_title": "Terminal Velocity",
+  "case_type": "Guesstimate",
+  "asked_at": "Flipkart",
+  "subject_company": "Kempegowda International Airport Bengaluru (BLR Airport), operated by Bangalore International Airport Ltd (BIAL); not a Flipkart product",
+  "round_and_level": "[uncertain] PM round 1 or screening guesstimate, APM campus and PM (0-4 yrs) levels",
+  "difficulty": "Medium - BLR publishes annual traffic, so the anchor is easy; the difficulty is converting daily flow into an 8 AM stock with dwell times, the morning departure wave, the domestic/international split and staff, which most candidates forget",
+  "market_and_industry": "India; aviation and airports (Bengaluru, Tier-1 metro; India's 2nd or 3rd busiest airport by passengers in 2026); two terminals (T1 and T2); domestic-heavy (~84% of passengers), dominated by IndiGo and Air India group",
+  "time_box_minutes": "10-15",
+  "exact_prompt": "How many people are inside Bengaluru airport at 8 AM on a weekday?",
+  "source_and_verification": "[uncertain] Level: reported (listed in the casebook item as asked at Flipkart). No public post with this exact wording was found on NextLeap, The Product Folks, AmbitionBox, Glassdoor, PracHub, LinkedIn or Medium in a Nov 2026 search. A close Flipkart PM guesstimate on PracHub asks for daily aircraft movements at Mumbai airport: https://prachub.com/interview-questions/fermi-estimate-aircraft-movements-per-day-at-mumbais-main-airport . Airport-occupancy questions are a classic Indian PM and consulting guesstimate. Year reported: not confirmed (likely 2024-2026).",
+  "context_as_of": "As of Nov 2026: (1) BLR Airport handled 44.47 mn passengers in FY 2025-26, +6.2% YoY - domestic 37.24 mn (+3.3%) and international 7.23 mn (+23.9%) - and crossed 400 mn lifetime passengers in April 2026 (BIAL release via Deccan Herald: https://www.deccanherald.com/india/karnataka/bengaluru/bengaluru-airport-crosses-400-mn-passenger-milestone-records-strong-fy-2025-26-growth-4005121 ; ACI Asia-Pacific: https://www.aci-asiapac.aero/media-centre/news/blr-airport-records-strong-growth-in-fy-2025-26-driven-by-surge-in-international-traffic-and-cargo-momentum). (2) CY2025 traffic was 43.82 mn, up 8% from 40.73 mn in 2024; peak day 1,37,317 passengers on 23 Nov 2025; average 765 and peak 837 daily air traffic movements (The Week/PTI, 12 Jan 2026: https://www.theweek.in/wire-updates/business/2026/01/12/bangalore-airport-sees-8-pc-rise-in-passenger-traffic-to-43.82-mn-in-2025.html). (3) A later report cites a new single-day record of 1,39,111 passengers (reported around May 2026) and Bengaluru overtaking Mumbai as India's 2nd-busiest airport in a month (Aviation A2Z, 28 May 2026: https://aviationa2z.com/index.php/2026/05/28/bengaluru-overtakes-mumbai-to-become-2nd-busiest-airport-in-india/) - treat the ranking as monthly, not annual. (4) Two terminals: T1 (older, domestic) and T2 (opened 2022-23, domestic plus all international). Flag: the T1/T2 split of airlines changes periodically; the 1,39,111 record could not be matched to an official BIAL release.",
+  "regulatory_context": "Shapes the definition of 'inside': (1) BCAS and CISF access control - only ticketed passengers (with ID or DigiYatra) and badge-holding staff enter the terminal building; visitor entry tickets are restricted, so meeters and greeters wait outside in the forecourt and arrival pickup areas. (2) Reporting-time norms set by airlines (check-in closes 45-60 min before domestic departure, 60-75 min international) and DigiYatra adoption cut dwell time. (3) Immigration (Bureau of Immigration) and customs for international passengers add 30-60 minutes. Otherwise none material.",
+  "public_data_anchors": "1) FY2025-26 traffic 44.47 mn passengers (37.24 mn domestic, 7.23 mn international) - BIAL via Deccan Herald, Apr 2026 (link above). Average day = 44.47 mn / 365 = ~1.22 lakh passengers (arrivals plus departures), i.e. ~61,000 departing passengers a day. 2) Peak day 1,37,317 passengers (23 Nov 2025); average 765 daily air traffic movements, peak 837 (PTI via The Week, 12 Jan 2026, link above). 3) CY2025 43.82 mn vs. CY2024 40.73 mn (same source). 4) Reported single-day record 1,39,111 passengers (Aviation A2Z, May 2026, link above). 5) [uncertain] BLR's airport ecosystem is often described as employing 25,000-30,000+ people across BIAL, airlines, ground handlers, CISF, immigration, F&B and retail - no current official figure was found; treat as an assumption.",
+  "framework_applied": "Guesstimates: Clarify, Pick framework, Constraints/MECE, Calculate, Sanity check (frameworks.md section 6). Step 1 Clarify - 'inside' = inside the T1 and T2 terminal buildings (landside check-in halls plus airside gates), at 8 AM on a normal Tuesday; people = passengers plus staff; exclude forecourt, parking, cargo terminal, and people inside parked aircraft. Step 2 Pick framework - bottom-up flow x dwell (Little's Law: people inside = arrival rate into the building x average time spent inside), using BLR's published daily traffic. Step 3 Constraints and MECE - split passengers into domestic departures, international departures, domestic arrivals, international arrivals; add staff by shift; apply the morning departure wave (6-10 AM) as the natural peak. Step 4 Calculate - ~9,500 passengers + ~8,000 staff = ~17,500 people (range 14,000-22,000). Step 5 Sanity check - an average-day passenger-hours method (~1.26 lakh passenger-hours a day / ~20 operating hours = ~6,300 average, x1.5 morning peak = ~9,500) and a ratio test (~8% of daily passenger throughput present at once).",
+  "clarifying_questions": [
+    {
+      "q": "What counts as 'inside the airport' - only the terminal buildings, or the forecourt, parking, cargo complex and aircraft on the ground too?",
+      "a": "Inside the passenger terminal buildings, T1 and T2, both landside and airside. Leave out forecourt, parking, cargo and aircraft."
+    },
+    {
+      "q": "Should I count only passengers, or staff as well?",
+      "a": "Everyone - passengers and staff."
+    },
+    {
+      "q": "Is this a normal weekday, not a long weekend or festive peak?",
+      "a": "A normal Tuesday in a non-holiday month."
+    },
+    {
+      "q": "Can meeters, greeters and drivers come inside the terminal at BLR?",
+      "a": "No. Only ticketed passengers and badge holders enter; greeters wait outside the arrivals exit."
+    },
+    {
+      "q": "Do you want a point estimate or a range?",
+      "a": "A point estimate with a range."
+    },
+    {
+      "q": "Do I know the airport's annual traffic, or should I derive it?",
+      "a": "Use what you know; I'll correct you if you're badly off."
+    }
+  ],
+  "interviewer_data_reveals": "Exhibit 1 - Real anchors (cite sources):\n| Anchor | Value | Source |\n|---|---|---|\n| FY2025-26 passengers | 44.47 mn (37.24 mn domestic, 7.23 mn international) | BIAL, Apr 2026 |\n| Average passengers per day | ~1.22 lakh (arrivals + departures) | derived: 44.47 mn / 365 |\n| Peak day (CY2025) | 1,37,317 on 23 Nov 2025 | BIAL via PTI, Jan 2026 |\n| Air traffic movements | avg 765 per day, peak 837 | BIAL via PTI, Jan 2026 |\n\nExhibit 2 - Hourly passenger flow around 8 AM (illustrative):\n| Stream | Daily volume | Share of daily in the 7-9 AM window, per hour | Flow per hour at 8 AM | Dwell inside terminal | People inside at 8 AM |\n|---|---|---|---|---|---|\n| Domestic departures | ~51,000 | ~8% | ~4,200 | ~1.5 h (arrive ~100 min before, leave at boarding) | ~6,300 |\n| International departures | ~10,000 | ~4% (most long-haul leave late night) | ~400 | ~3 h | ~1,200 |\n| Domestic arrivals | ~51,000 | ~7% | ~3,500 | ~0.4 h (deplane, baggage) | ~1,400 |\n| International arrivals | ~10,000 | ~5% | ~500 | ~1 h (immigration, baggage, customs) | ~500 |\n| Passengers total | ~1.22 lakh | | | | ~9,400 |\n\nExhibit 3 - Staff inside the terminals (illustrative):\n| Group | Badge holders working in terminals | On duty at 8 AM (morning shift + overlap) |\n|---|---|---|\n| Airline and ground-handling (check-in, gates, baggage, ramp-side staff in the building) | ~7,000 | ~2,800 |\n| CISF security and airport police | ~3,000 | ~1,200 |\n| Immigration and customs | ~800 | ~300 |\n| F&B and retail (incl. duty free) | ~4,500 | ~1,800 |\n| Housekeeping, facilities, BIAL operations, help desks | ~4,500 | ~1,900 |\n| Total | ~20,000 | ~8,000 |\n\nExhibit 4 - Result (illustrative): ~9,400 passengers + ~8,000 staff = ~17,400, rounded to ~17,500 (range 14,000-22,000).",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "Let's do a quick one. How many people are inside Bengaluru airport at 8 AM on a weekday?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Let me clarify the boundary first. Do you mean inside the terminal buildings, or the whole campus - forecourt, parking, cargo, aircraft?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Inside the passenger terminals, T1 and T2, landside and airside."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "And people means passengers plus everyone working there - airline staff, CISF, shops?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Yes, everyone."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Is it a normal weekday, and can greeters enter the terminal at BLR?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Normal Tuesday. Greeters stay outside."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Good. My approach is Little's Law: people inside = rate at which people enter x how long they stay. I'll do that for four passenger streams - domestic and international, departing and arriving - and then add staff by shift. Structure:\n  People inside at 8 AM\n  |- Passengers\n  |   |- Departing: domestic | international\n  |   |- Arriving: domestic | international\n  |- Staff on duty\n      |- Airlines and ground handling | CISF | immigration | F&B and retail | facilities"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Why not just take daily traffic and divide by 24?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Because a passenger isn't inside for an hour - a domestic flyer is there about 90 minutes, an arriving one 25 minutes - and 8 AM is the peak of the morning departure wave. Dwell and timing matter more than the daily total."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Anchor: BLR handled about 44.5 million passengers in FY26 - roughly 37 million domestic and 7 million international. That's ~1.22 lakh a day, so ~61,000 departing and ~61,000 arriving; domestic ~51,000 each way, international ~10,000 each way."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "That's close to the published number. Go on."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Domestic departures: Bengaluru has a strong morning wave - business travellers to Delhi, Mumbai, Hyderabad on 6-9 AM flights. I'll assume ~8% of daily domestic departures per hour in that window, ~4,200 passengers an hour. They arrive ~100 minutes before and leave at boarding ~20 minutes before departure, so ~1.5 hours inside. 4,200 x 1.5 = ~6,300."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "International departures: most long-haul flights - Gulf, Europe, Singapore - leave late night or early morning, so at 8 AM maybe ~400 an hour, with a 3-hour dwell for check-in, immigration and security: ~1,200."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Domestic arrivals: first-wave arrivals land 7-9 AM, ~3,500 an hour; deplaning plus baggage is ~25 minutes, so ~1,400. International arrivals: ~500 an hour, about an hour with immigration and customs: ~500. Passengers total ~9,400."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Now the staff."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "This needs a natural-capacity view. Busy Indian airports have tens of thousands of badge holders; for BLR I'll assume ~20,000 work inside the terminals - airlines and ground handling ~7,000, CISF ~3,000, immigration and customs ~800, F&B and retail ~4,500, facilities and BIAL ~4,500. They run three shifts, and 8 AM sits in the morning shift with some overlap from the night shift handing over, so ~40% are on duty: ~8,000."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Why 40% rather than a third?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Morning is the heaviest shift - more check-in counters and security lanes open for the departure wave - and the shift handover around 6-8 AM means some overlap. I'd say 35-45%."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Total: ~9,400 passengers + ~8,000 staff = ~17,500 people inside at 8 AM. Range 14,000-22,000, mostly driven by the staff estimate and dwell time."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Sanity-check it."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Two checks. First, passenger-hours: on an average day, 61,000 departures x ~1.6 hours plus 61,000 arrivals x ~0.5 hours = ~1.26 lakh passenger-hours. Over ~20 active hours that's ~6,300 passengers inside on average; with a 1.5x morning peak, ~9,500 - matches. Second, ratio: ~9,400 passengers inside is ~8% of daily throughput at once, which fits a 90-minute dwell at a peak hour. And ~17,500 people across two terminals sized for ~45-50 million passengers a year doesn't strain capacity - it's busy, not gridlocked."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What changes on a peak day like the Friday before a long weekend?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Daily traffic goes from ~1.22 lakh to ~1.37-1.39 lakh, the record, and dwell rises because queues get longer - say +15% on passengers and +20% on dwell, so ~13,000 passengers. Staff barely change, so ~21,000 people."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Close it out."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "About 17,500 people are inside BLR's terminals at 8 AM on a weekday - ~9,500 passengers, mostly domestic flyers in the morning departure wave, and ~8,000 staff on the morning shift. It's built from BLR's 44.5 million FY26 passengers and checks out on passenger-hours."
+    }
+  ],
+  "answer_and_recommendation": "Estimate: ~17,500 people (range 14,000-22,000) inside BLR's T1 and T2 terminals at 8 AM on a normal weekday. Ranked components: (1) domestic departing passengers in the morning wave, ~6,300 (4,200/hour x 1.5 h); (2) staff on the morning shift, ~8,000 (~40% of ~20,000 terminal badge holders - the least certain input); (3) domestic arrivals ~1,400 plus international departures ~1,200 and arrivals ~500. Built from FY26 traffic of 44.47 mn passengers (~1.22 lakh a day). Risks in the estimate: the staff count is an assumption (no official figure found); dwell time shifts with DigiYatra and queue lengths; the morning-wave share (6-10% of daily departures per hour) depends on airline schedules. Closing line: 'About 17,500 people - roughly 9,500 passengers and 8,000 staff - are inside Bengaluru airport at 8 AM, and the passenger half reconciles with BLR's 44.5 million passengers a year through a passenger-hours check.'",
+  "counter_metrics_guardrails": "Pure guesstimate - sanity checks used instead of guardrails: (1) Passenger-hours method: (61,000 x 1.6 h + 61,000 x 0.5 h) / 20 active hours = ~6,300 average inside, x1.5 morning peak = ~9,500 - matches the stream-by-stream build. (2) Ratio test: ~9,400 inside is ~8% of daily passenger throughput present at once - consistent with a ~90-minute departure dwell at the peak hour; if the answer implied 30%+, dwell would be wrong. (3) Peak-day stress test: on the record day (~1.37-1.39 lakh passengers), passengers inside rise to ~13,000 and the total to ~21,000 - still within two terminals designed for ~45-50 mn passengers a year. (4) Staff-to-passenger ratio: ~8,000 staff for ~9,400 passengers (~0.85:1) at a peak moment - plausible because staff headcount is fixed by counters, lanes and shops, not by passenger count.",
+  "follow_up_twists": [
+    {
+      "twist": "How would the answer change at 2 AM?",
+      "response": "Domestic flow nearly stops but the international bank peaks - ~1,500 international departures an hour x 3 h plus ~1,500 arrivals in immigration - so ~6,000 passengers plus a thinner night shift of ~5,000 staff: ~11,000."
+    },
+    {
+      "twist": "Flipkart wants to put a quick-commerce dark store or vending kiosk airside. How many potential buyers does it see?",
+      "response": "Only airside departing passengers matter - ~70% of the ~7,500 departing passengers inside, ~5,000 at a time, with ~1 hour of free dwell - so size it on ~18,000-20,000 airside passengers in the 6-10 AM wave, not on the 17,500 headline."
+    },
+    {
+      "twist": "What if DigiYatra cuts security wait by 15 minutes for half of passengers?",
+      "response": "Departing dwell drops from ~1.5 h to ~1.375 h on average, cutting ~500 domestic passengers inside - about 3% of the total - unless people simply arrive at the same time and spend longer at the gates, which is the more likely behaviour."
+    }
+  ],
+  "common_pitfalls": [
+    "Dividing daily passengers by 24 (~5,000) - it ignores both dwell time and the 8 AM morning departure peak, so it undercounts passengers by about half.",
+    "Forgetting staff entirely - at 8 AM staff are almost as many as passengers, so leaving them out roughly halves the answer.",
+    "Counting meeters, greeters and drivers inside the terminal - BCAS access control keeps them outside at BLR, so including them double-counts the forecourt crowd.",
+    "Treating all passengers as having the same dwell - international departures stay ~3 hours and domestic arrivals ~25 minutes, a 7x difference, so the domestic/international and departing/arriving split matters more than the T1/T2 split."
+  ],
+  "skills_tested": [
+    "structuring",
+    "quant",
+    "business sense",
+    "communication"
+  ],
+  "linked_teardown": "None",
+  "uncertain": [
+    "round_and_level",
+    "source_and_verification",
+    "public_data_anchors"
+  ]
+}

@@ -1,0 +1,235 @@
+{
+  "pun_title": "Hunger Pains",
+  "case_type": "RCA",
+  "asked_at": "Swiggy",
+  "subject_company": "Swiggy (Food Delivery). Same as asked_at.",
+  "round_and_level": "PM round 1 (product sense / RCA), APM campus and PM (0-3 yrs) levels. NextLeap and PracHub list it as a Swiggy PM question; it is also a staple of APM screening rounds. [uncertain]",
+  "difficulty": "Medium - the prompt is a classic and the structure is well known, but scoring well needs you to separate a seasonal dip (Diwali week) from a real product failure and size each one.",
+  "market_and_industry": "India; food delivery (Swiggy vs Eternal's Zomato duopoly); metro and Tier-1 core with growing Tier-2/3; Android-heavy user base; UPI-dominant payments.",
+  "time_box_minutes": "25-30",
+  "exact_prompt": "As a PM at Swiggy, you observed that the number of orders went down by 20% last week as compared to all the weeks before. How would you go about finding the root cause?",
+  "source_and_verification": "Level: reported (asked at Swiggy). Sources: NextLeap problem page 'As a PM at Swiggy, you observed that the number of orders went down by 20% last week as compared to all the weeks before' (https://nextleap.app/problem/as-a-pm-at-swiggy-you-observed-that-the-number-of/discussion); PracHub 'Diagnosing a sudden 20% week-over-week fall in Swiggy orders' (https://prachub.com/interview-questions/diagnosing-a-sudden-20percent-week-over-week-fall-in-swiggy-orders-with-metrics); ProductManagementExercises Q11338 (https://www.productmanagementexercises.com/11338/swiggy-observed-number-orders-compared-before-would-analysis); Medium PM Club write-up (https://medium.com/@pmclub/swiggys-orders-have-dropped-by-20-pm-interview-root-cause-analysis-0209596e3374); HelloPM RCA guide uses a daily-drop variant (https://hellopm.co/how-to-approach-rca-questions/). The Product Folks has a related 'Swiggy orders dropped by 30% in Bangalore' case. Year first reported: about 2021-2022, still circulating in 2025-26. [uncertain]",
+  "context_as_of": "As of Nov 2026 (from the local swiggy-product-teardown, Food_Delivery_core.json, researched Oct-Nov 2026): Swiggy Food Delivery GOV was Rs 10,054 cr in Q2 FY27 (Jul-Sep 2026), +17.7% YoY, with Sep 2026 exit growth above 20%; Food adjusted EBITDA Rs 341 cr (3.4% of GOV). Food MTU was 18.3M in Q4 FY26. Food AOV is about Rs 420-450. Bolt (10-minute food) is more than 10% of food orders and live in 700+ cities. The platform fee rose from Rs 2 (Apr 2023) to Rs 17.58 incl. GST (Mar 2026); 18% GST on delivery fees applies from 22 Sep 2025. Payments include Swiggy UPI (in-app NPCI plugin), cards, wallets, COD. Zomato is now a brand of Eternal Ltd and leads with about 55-58% share; low-commission challengers (Rapido Ownly, magicpin, ONDC) compete on value orders. Swiggy exposes MCP servers for ordering from ChatGPT/Claude/Gemini (Jan 2026). Calendar flag: Diwali 2026 falls on Sun 8 Nov 2026, so 'last week' in a Nov 2026 interview overlaps the festival week, a known food-delivery dip as households eat at home. Sources: https://www.investywise.com/swiggy-shareholders-letter-for-q2-fy27/ ; https://inc42.com/buzz/swiggy-q2-loss-narrows-16-yoy-to-%E2%82%B9922-cr-revenue-jumps-36/ ; https://www.restaurantindia.in/news/restaurant-india-news-swiggy-s-bolt-hits-10-pc-of-all-orders-as-quick-commerce-changes-how-india.n14446 . Stale-risk: MTU and share estimates differ across sources; Swiggy's own Q2 FY27 shareholder letter was not parsed directly. [uncertain]",
+  "regulatory_context": "1) NPCI/UPI: UPI is the main payment rail; NPCI technical changes (e.g., API rate limits on balance checks and status polling effective Aug 2025, and periodic bank/PSP downtime) can raise payment failures without any Swiggy change. In-app UPI plugin flows depend on the PSP bank and NPCI's SDK. 2) GST: 18% GST on delivery fees from 22 Sep 2025 raised the bill by about Rs 2.6 per order. 3) Labour: Code on Social Security in force from 21 Nov 2025 (aggregators pay 1-2% of turnover, capped at 5% of gig payouts); Karnataka, Rajasthan and Telangana gig-worker laws; gig strikes (e.g., Dec 25 and Dec 31, 2025) can cut rider supply and so orders. 4) CCPA dark-patterns guidelines (2023) constrain hidden fees (drip pricing), which matters if fee changes are suspected. 5) FSSAI hygiene rules and municipal closures can switch off restaurants. None of these is the answer in this case, but they are the external levers a candidate should name. [uncertain]",
+  "public_data_anchors": "1) Food GOV Rs 10,054 cr in Q2 FY27, +17.7% YoY (Swiggy Q2 FY27 shareholder letter summary, Oct 2026: https://www.investywise.com/swiggy-shareholders-letter-for-q2-fy27/). 2) Implied weekly food GOV: about Rs 773 cr per week (10,054 / 13 weeks); at AOV about Rs 430 that is roughly 1.8 crore food orders a week, about 2.6 million a day (derived, illustrative). 3) A 20% drop is about 36 lakh lost orders and about Rs 155 cr GOV in one week (derived). 4) Food MTU 18.3M in Q4 FY26 (+21% YoY) (local teardown, Food_Delivery_core.json). 5) Bolt share of food orders: more than 10% (Restaurant India, 2025-26: https://www.restaurantindia.in/news/restaurant-india-news-swiggy-s-bolt-hits-10-pc-of-all-orders-as-quick-commerce-changes-how-india.n14446). 6) Platform fee Rs 17.58 incl. GST since Mar 2026 (local teardown). 7) UPI processes about 20 bn+ transactions a month in 2025-26 (NPCI, https://www.npci.org.in/what-we-do/upi/product-statistics). 8) About 5.4 lakh average monthly transacting delivery partners (Swiggy DRHP, FY24). [uncertain]",
+  "framework_applied": "Root Cause Analysis: Clarify, 4 cause buckets, Hypothesise-Test-Repeat (frameworks.md section 4). Step 1 Clarify - metric: orders placed vs confirmed vs delivered, Food only or all of Swiggy; time frame: sudden, starting Monday of Diwali week; scope: all cities, Android vs iOS, new vs repeat, Food vs Instamart. Step 2 Buckets in order - (1) Data: check the order event pipeline and dashboard against the payments ledger; (2) Internal: map the funnel (app open -> restaurant/menu -> add to cart -> checkout -> payment success -> order placed) and look for releases, A/B tests, fee changes, marketing pauses; (3) External: Diwali seasonality, NPCI/bank UPI downtime, Zomato promotions, rider strikes, weather; (4) Behaviour: festive home cooking, fee fatigue. Step 3 Hypothesise-test-repeat - wide questions first ('Is the drop in both Food and Instamart?', 'Is traffic flat?') then narrow to the payment step on Android. Step 4 Land - two combined causes (Diwali seasonality about 8 points, Android Swiggy UPI default regression about 12 points), validated with YoY Diwali comparison and before/after payment-success cohorts, then a fix (rollback to UPI intent fallback) and prevention (payment-success guardrail on staged rollout).",
+  "clarifying_questions": [
+    {
+      "q": "How are we defining 'orders' - placed, confirmed by the restaurant, or delivered? And is this Food Delivery only, or Food plus Instamart and Bolt?",
+      "a": "Orders successfully placed (payment captured or COD confirmed). Food Delivery including Bolt. Instamart is a separate metric."
+    },
+    {
+      "q": "Is the 20% drop measured week over week against a stable baseline, and was it sudden or gradual within the week?",
+      "a": "Sudden. Daily orders fell from Monday of last week and stayed down all seven days; the prior 8 weeks were flat to slightly up."
+    },
+    {
+      "q": "What calendar week is this, and was there anything unusual - festivals, IPL, long weekends, weather?",
+      "a": "It was the week of 2-8 November 2026, which ends with Diwali on Sunday 8 November. You tell me whether that matters."
+    },
+    {
+      "q": "Is the drop uniform across cities and tiers, or concentrated?",
+      "a": "It shows up in every top-10 city and in Tier-2. Slightly deeper in North and West India."
+    },
+    {
+      "q": "Is it the same on Android, iOS and web?",
+      "a": "Good question. Android is down about 23%, iOS about 9%."
+    },
+    {
+      "q": "Are new and repeat users, and Swiggy One members vs non-members, affected equally?",
+      "a": "Repeat users and One members are down too, roughly in line with the overall number."
+    },
+    {
+      "q": "Did anything ship last week - app releases, A/B tests, fee or pricing changes, campaign changes?",
+      "a": "Android app version 4.98 rolled out to 100% the previous Friday. No fee change. Marketing spend was normal."
+    },
+    {
+      "q": "Has the drop also appeared in Instamart?",
+      "a": "Instamart orders are up 15% week over week - festive gifting, diyas and sweets."
+    }
+  ],
+  "interviewer_data_reveals": "All numbers are illustrative (invented for teaching) unless a source is cited.\n\nExhibit 1 - Weekly Food orders placed (illustrative, in lakh):\n| Week | Orders | WoW |\n| W-4 | 182 | +1% |\n| W-3 | 183 | +0.5% |\n| W-2 | 184 | +0.5% |\n| W-1 (Diwali week, 2-8 Nov 2026) | 147 | -20% |\n(Scale anchored to Q2 FY27 food GOV of Rs 10,054 cr / AOV about Rs 430, roughly 1.8 crore orders a week.)\n\nExhibit 2 - Data integrity check (illustrative): order events in the analytics warehouse match the payments ledger and restaurant POS confirmations within 0.3% for W-1. No pipeline lag. Conclusion: the drop is real.\n\nExhibit 3 - Funnel, W-2 vs W-1, all platforms (illustrative):\n| Step | W-2 | W-1 | Change |\n| App sessions (crore) | 9.2 | 8.5 | -8% |\n| Session -> menu view | 62% | 61% | flat |\n| Menu -> add to cart | 38% | 37% | flat |\n| Cart -> payment initiated | 71% | 70% | flat |\n| Payment initiated -> order placed | 93% | 80% | -13 pts |\n\nExhibit 4 - Payment success by platform and method, W-1 (illustrative):\n| Segment | W-2 | W-1 |\n| Android - Swiggy UPI (in-app plugin) | 91% | 64% |\n| Android - other UPI apps (intent) | 94% | 93% |\n| Android - cards / wallets / COD | 95% | 95% |\n| iOS - all methods | 94% | 93% |\nAndroid share of Swiggy UPI payments rose from 22% to 61% of Android payments in W-1.\n\nExhibit 5 - Release note (illustrative): Android 4.98 (rolled to 100% on Fri 30 Oct) made Swiggy UPI the pre-selected default and moved 'Pay with other UPI apps' below the fold. Error logs show a spike in 'U16 / risk threshold' and 'PSP timeout' declines for users whose bank accounts were linked before a PSP SDK upgrade.\n\nExhibit 6 - Seasonality (illustrative): Diwali week in 2025 (Diwali on Mon 20 Oct 2025) showed food orders about 8% below the prior 4-week average, then recovered the next week. Sessions in W-1 2026 are down 8%, matching that pattern.\n\nExhibit 7 - External checks (illustrative): no NPCI-wide UPI outage logged for W-1; Zomato ran normal festive offers, no new price war; no rider strike; rider login hours down 4% (festive leave) but delivery time flat.",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "You're a PM at Swiggy. Orders dropped 20% last week compared to all the weeks before. Find out why."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Let me restate it: Swiggy's weekly order count fell 20% last week against a stable trend. Before I hypothesise, I'd like to clarify three things - the metric, the time frame and the scope. First, the metric: by orders do we mean placed, confirmed by the restaurant, or delivered? And is this Food including Bolt, or all of Swiggy?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Orders placed, meaning payment captured or COD confirmed. Food including Bolt."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Good, so cancellations after placement and delivery failures are out of scope. Second, time frame - sudden or gradual, and which week?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Sudden, from Monday. It's the week of 2 to 8 November 2026."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's Diwali week - Diwali is Sunday the 8th. I'll keep seasonality as a strong hypothesis, but a 20% drop is bigger than I'd expect from the festival alone, so I won't stop there. Third, scope: is it uniform across cities, platforms and user types?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "All top-10 cities and Tier-2, a bit deeper in North and West. Android is down about 23%, iOS about 9%. Repeat and One members are down in line."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That platform gap is the most useful clue so far. Diwali would hit Android and iOS users roughly equally; an extra 14-point gap on Android points at something platform-specific. Here's my plan. I'll go through four buckets in order:\n1. Data / instrumentation - is the drop real?\n2. Internal - funnel step, releases, tests, pricing, marketing.\n3. External - seasonality, UPI/bank outages, competitors, rider supply, weather.\n4. Consumer behaviour - festive home cooking, fee fatigue.\nCauses can combine, so I'll try to size each one. Shall I start with data?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Go ahead."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'd reconcile the order count on the dashboard with the payments ledger and the restaurant POS confirmations. If the analytics event broke in the new Android build, the dashboard would drop but the ledger wouldn't."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "They reconcile within 0.3%. The drop is real."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then it's real lost demand or lost conversion. Next, a wide question to cut the board in half: are app sessions down, or are people coming in and failing to order? Can I see the funnel?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Sessions down 8%. Menu view, add-to-cart and payment-initiated rates are flat. Payment initiated to order placed went from 93% to 80%."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So there are two separate effects:\n- Top of funnel: 8% fewer sessions. That fits Diwali - people are home, eating sweets and family meals.\n- Bottom of funnel: a 13-point drop in payment success. Festivals don't make payments fail, so that's internal or a dependency.\nRoughly, 0.92 (sessions) x 0.86 (payment success ratio, 80/93) gives about 0.79, so these two together explain nearly the whole 20%. Can I break payment success by platform and method?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Android Swiggy UPI fell from 91% to 64%. Other UPI apps on Android, cards, wallets, COD and iOS are all flat."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That isolates it to one path: the in-app Swiggy UPI plugin on Android. Two possibilities - an NPCI or bank-side outage hitting that PSP, or our own change. Was there a UPI incident from NPCI or our partner bank last week?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "No NPCI-wide outage logged."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then I'd look at our own releases. Did anything ship on Android around the start of the drop?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Android 4.98 went to 100% on Friday 30 October."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "What changed in payments in 4.98?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "It pre-selected Swiggy UPI as the default and moved 'other UPI apps' below the fold. Error logs show PSP timeouts and risk-threshold declines for accounts linked before an SDK upgrade."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That explains the mechanism. Before, about a fifth of Android users paid through Swiggy UPI, mostly people who'd set it up recently. The release pushed everyone onto it as the default, including users whose old linked accounts break on the new SDK. They hit a failure, many retry once, and at Diwali-week patience a share give up or go to Zomato. Can I check how much of Android payments moved to Swiggy UPI?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "From 22% to 61% of Android payments."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Let me size it. Android is about 80% of orders. If 61% of Android payments use Swiggy UPI and its success fell 27 points, the lost share is about 0.8 x 0.61 x 0.27, roughly 13% of orders before retries; with some users successfully retrying on another method, net loss is about 11-12 points. Now the remaining 8 points: I want to confirm that's really seasonality. Do we have last year's Diwali week?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Diwali week 2025 ran about 8% below its prior 4-week average and recovered the following week."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then that matches the 8% session drop. Quick sanity check on the other external factors so I'm not missing a third cause: competitor promotions, rider supply, weather?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Zomato ran normal festive offers. Rider login hours dipped 4% but delivery times were flat. No major weather event."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Good - supply didn't constrain demand, so riders aren't the cause. And the iOS drop of 9% is roughly the pure seasonal effect, which is a nice natural control: iOS didn't get 4.98, so iOS shows what Diwali alone does. Android's 23% is seasonal plus the payment bug."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "So what's your root cause?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Two causes combined:\n| Cause | Bucket | Contribution | Evidence |\n| Android 4.98 made Swiggy UPI the default; plugin fails for older linked accounts | Internal (release) + dependency | about 12 pts | Payment success 91% -> 64% only on that path; timing matches release; iOS unaffected |\n| Diwali week seasonality | External | about 8 pts | Sessions -8%; matches Diwali 2025; iOS -9% |\nThe first is the actionable one. To validate it, I'd check three things: payment success for Android users still on 4.97 vs those on 4.98; the order rate for users who saw a failure vs those who didn't; and whether this week, after Diwali, sessions recover but payment success stays low."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What would you do about it?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Immediately: flip a remote config to stop pre-selecting Swiggy UPI and restore 'other UPI apps' at the top - no app release needed. Add an automatic fallback: on a Swiggy UPI decline, offer one-tap intent payment to PhonePe or GPay. For affected users, send a 'your payment didn't go through - here's Rs 50 off' recovery push, targeting users who failed and didn't reorder. Prevention: make payment success by method a guardrail metric in staged rollouts, so a release halts at 5% if any method drops more than 2 points."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Anything you'd say to leadership about the 8%?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Don't chase it with discounts. It's a predictable festival dip that recovers next week; in future, the forecast should expect it so it doesn't trigger a false alarm. If we want to win Diwali week, a better play is festive occasions - sweets, party platters, Bolt snacks for guests - rather than blanket coupons."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Good. Wrap up."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "To close: of the 20% drop, about 12 points is a self-inflicted payment failure from Android 4.98 defaulting users to Swiggy UPI, and about 8 points is normal Diwali seasonality. Roll back the default today, add the fallback, recover failed users, and make payment success a release guardrail so this can't ship silently again."
+    }
+  ],
+  "answer_and_recommendation": "Ranked causes: (1) Android app 4.98 pre-selected Swiggy UPI (in-app plugin) as the default payment method; the plugin fails for users with accounts linked before an SDK upgrade, cutting Android Swiggy UPI payment success from 91% to 64% - about 12 of the 20 points (illustrative). (2) Diwali-week seasonality (Diwali Sun 8 Nov 2026): sessions -8%, matching Diwali 2025 and the iOS-only drop of 9% - about 8 points. (3) Ruled out but checked: data pipeline (reconciles within 0.3%), competitor promotions, rider supply (delivery time flat), fees (no change), NPCI outage (none logged). Recommendation: remote-config rollback of the default within hours; automatic fallback to UPI intent apps on a plugin decline; a recovery push and small credit to users who failed and did not reorder; root-cause the SDK/linked-account issue with the PSP bank before re-enabling the default for a 5% cohort. Prevention: payment success by method as a mandatory staged-rollout guardrail with auto-halt. Risks: rolling back the default slows Swiggy UPI adoption (a strategic goal, since it lowers MDR and builds a payments relationship) - mitigate by re-enabling only for users with recently verified accounts; recovery credits may be gamed - cap per user. Closing line: 'Twelve points of this drop are ours and fixable today; eight points are Diwali and will come back on their own - let's fix the first and stop worrying about the second.'",
+  "counter_metrics_guardrails": "1) Payment success rate by method and platform (primary guardrail for any checkout or payments release). 2) Swiggy UPI adoption share - watch that the rollback does not permanently kill adoption. 3) Order cancellation and refund rate - ensure the recovery credit does not cause duplicate or fraudulent orders. 4) Average delivery time and rider utilisation during festival weeks - make sure a demand rebound does not overwhelm reduced rider supply. 5) Contribution margin per order - recovery coupons should not exceed the lost order's margin. 6) Zomato share signal (app-download and order panel data) - to check if failed users churned to the competitor rather than reordered. 7) Customer support contacts tagged 'payment debited, order not placed' and refund TAT - the real trust cost of the bug.",
+  "follow_up_twists": [
+    {
+      "twist": "What if iOS were down 20% too, with payment success flat everywhere?",
+      "response": "Then it's demand, not conversion - I'd compare against Diwali 2025 YoY; if YoY Diwali week was only -8%, look for an extra external factor like a rider strike, a Zomato price war or a city-level shutdown, and check sessions by acquisition channel."
+    },
+    {
+      "twist": "Leadership says Swiggy UPI is strategic and doesn't want to roll back the default. What do you do?",
+      "response": "Keep the default only for users whose accounts were linked or verified after the SDK upgrade (where success is at baseline), and auto-fallback to intent apps for everyone else - that protects the 12 points without abandoning the strategy."
+    },
+    {
+      "twist": "Suppose the drop were only in Bengaluru and only for late-night orders.",
+      "response": "That smells like a local supply or policy issue - rider supply after a Karnataka gig-worker rule, a city-level fee change, or a police curfew on late-night restaurant hours - so I'd check rider logins, restaurant availability and serviceable radius by hour in Bengaluru."
+    }
+  ],
+  "common_pitfalls": [
+    "Stopping at 'it's Diwali' - seasonality explains only part of the drop; the platform gap (Android -23% vs iOS -9%) shows a second cause, and a strong candidate sizes both.",
+    "Jumping to fee hikes, Zomato or bad food quality without first checking the funnel - none of these explain a sudden one-week drop with flat cart rates.",
+    "Interrogating with a laundry list ('Was there a bug? Was there rain? Was there a strike?') instead of wide splitting questions like 'Are sessions down or conversion down?'.",
+    "Comparing to the previous week instead of the same festival week last year - the prompt's 'all previous weeks' baseline is misleading during a festival."
+  ],
+  "skills_tested": [
+    "structuring",
+    "quant",
+    "prioritisation",
+    "business sense",
+    "communication",
+    "execution"
+  ],
+  "linked_teardown": "swiggy-product-teardown (swiggy-product-teardown/results/Food_Delivery_core.json). Key facts used: Q2 FY27 food GOV Rs 10,054 cr (+17.7% YoY) to size weekly orders; Swiggy UPI as an in-app NPCI plugin at checkout; Bolt above 10% of orders; platform-fee ladder (to rule out a fee change). Also Delivery_partner_app_labour.json for rider-supply and strike context.",
+  "uncertain": [
+    "round_and_level",
+    "source_and_verification",
+    "context_as_of",
+    "regulatory_context",
+    "public_data_anchors"
+  ]
+}

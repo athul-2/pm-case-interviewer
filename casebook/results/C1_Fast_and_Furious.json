@@ -1,0 +1,223 @@
+{
+  "pun_title": "Fast and Furious",
+  "case_type": "Product Strategy",
+  "asked_at": "By the Authors (synthetic case built on 2025-26 news)",
+  "subject_company": "Swiggy (Food Marketplace, Bolt). Competitors in frame: Blinkit Bistro (Eternal), Zepto Cafe, Swish, Rapido's Ownly.",
+  "round_and_level": "PM round 2 (product strategy / business sense), PM to SPM level; also usable as a hiring-manager discussion for APM campus with a narrower scope. [uncertain]",
+  "difficulty": "Hard - the five named rivals run three different models (owned dark kitchens, dark-store cafes, zero-commission marketplace), so a strong answer has to unbundle 'speed' from 'price' and resist the urge to match every move.",
+  "market_and_industry": "India; food delivery and quick food (10-minute food); metro-first (Bengaluru, Delhi NCR, Mumbai, Hyderabad), with Bolt extending to Tier-2; Android-heavy, UPI-dominant; office-goers, students and late-night snackers are the core quick-food users.",
+  "time_box_minutes": "30-35",
+  "exact_prompt": "10-minute food is here: Blinkit's Bistro, Swiggy's own Bolt, Zepto Cafe, Swish and Rapido's Ownly are all fighting for the quick meal. You lead strategy for Swiggy Food. How do you respond?",
+  "source_and_verification": "Level: synthetic (written by the casebook authors from 2025-26 news). No reported interview instance was found in this research pass; NextLeap, The Product Folks, PracHub and Glassdoor were not searched directly for this prompt (search tooling was limited), so treat it as unreported. News anchors used: Swish Series B (TechCrunch, Mar 2026: https://techcrunch.com/2026/03/23/bengaluru-food-startup-swish-raises-38m-in-its-third-round-in-18-months/); Ownly 50k daily orders (Angel One, 2026: https://www.angelone.in/news/unlisted-companies/rapido-s-ownly-plans-multi-city-expansion-as-it-crosses-50-000-daily-orders); Zomato and Zepto walking away from 10-minute food (Outlook Business: https://www.outlookbusiness.com/corporate/zomato-zepto-walk-away-from-10-minute-food-delivery-swiggy-still-betting-big-on-scale). Year: 2025-26. [uncertain]",
+  "context_as_of": "As of Nov 2026. Swiggy: Food GOV Rs 10,054 cr in Q2 FY27 (+17.7% YoY), food adjusted EBITDA Rs 341 cr (3.4% of GOV) (https://www.investywise.com/swiggy-shareholders-letter-for-q2-fy27/). Bolt (launched Oct 2024; restaurants within about 2 km, items that take about 2-4 minutes to prepare) is more than 10% of food orders and live in 700+ cities; Swiggy says it lifts retention (https://inc42.com/buzz/bolt-boosting-swiggys-customer-retention-food-delivery-biz-ceo). Snacc (owned-kitchen 10-15 minute app, Jan 2025) was shut in Feb 2026; its kitchens became Instamart pods. 99 Store is about 1 in 7 food orders (Aug 2026); Toing is a budget app in 11+ cities. Swiggy sold its Rapido stake (about Rs 2,400 cr) over the conflict created by Ownly. Rivals: Blinkit Bistro (Eternal, Dec 2024, standalone app, now charges a convenience fee); Zomato's own 10-minute food (Zomato Quick/Everyday) was wound down in 2025. Zepto Cafe hit 100k orders a day in Feb 2025 (https://qsrmedia.com/food-services/news/zepto-cafe-hits-100000-daily-orders-target) but scaled back in mid-2025 over kitchen staffing and supply issues (https://startuptalky.com/news/zepto-cafe-scales-back/). Swish (owned neighbourhood kitchens) raised $38M led by Hara Global and Bain Capital Ventures in Mar 2026, at a reported ~$139M valuation, and reports 1M+ orders a month across ~50 pincodes in Bengaluru and Delhi NCR (https://inc42.com/features/swish-buys-itself-more-time-at-the-quick-food-table/). Rapido's Ownly (zero-commission, flat fee to restaurants) passed 50k daily orders in Bengaluru, about 10% of the city's food delivery, launched in Hyderabad in late Sep 2026 and plans metros from Oct-Dec 2026. Stale-risk: Bistro and Zepto Cafe 2026 volumes are not disclosed; the Food_Delivery_core teardown calls Snacc 'absorbed into Bolt' while the value-formats teardown says it was shut separately - the latter is better sourced. [uncertain]",
+  "regulatory_context": "1) Labour Ministry pressure (Jan 2026) led Blinkit, Zepto, Instamart and others to drop '10-minute' branding over rider safety; any Swiggy response must sell 'fast' without a timer promise that riders bear. 2) Code on Social Security (in force Nov 2025): aggregators pay 1-2% of turnover (capped at 5% of gig payouts) into a welfare fund; Karnataka's platform-worker law and cess add Bengaluru-specific cost, the city where Swish and Ownly are strongest. 3) FSSAI: owned or dark kitchens need licences and face hygiene raids; restaurant-supplied Bolt shifts that liability to partners. 4) CCI: ongoing scrutiny of food aggregators' restaurant parity, exclusivity and private labels (NRAI complaints) - a constraint on exclusive Bolt deals or on Swiggy launching its own kitchen brands. 5) CCPA dark-patterns guidelines (2023): fee drip and false urgency ('ready in 10 min' timers) must be honest. 6) GST: 18% on delivery fees from 22 Sep 2025 weighs more on low-AOV quick-food baskets. [uncertain]",
+  "public_data_anchors": "1) Swiggy Food GOV Rs 10,054 cr, Q2 FY27, +17.7% YoY; food adjusted EBITDA Rs 341 cr, 3.4% of GOV (Oct 2026, https://www.investywise.com/swiggy-shareholders-letter-for-q2-fy27/). 2) Swiggy handles about 2-2.2M food orders a day; Zomato 2.5M+ (2026 press, https://www.angelone.in/news/unlisted-companies/rapido-s-ownly-plans-multi-city-expansion-as-it-crosses-50-000-daily-orders). 3) Bolt more than 10% of food orders, 700+ cities (https://www.restaurantindia.in/news/restaurant-india-news-swiggy-s-bolt-hits-10-pc-of-all-orders-as-quick-commerce-changes-how-india.n14446). So Bolt is roughly 2-2.5 lakh orders a day (derived). 4) Ownly: 50k+ daily orders in Bengaluru, about 10% city share, up from 40k in Jul 2026 and about 5k in Mar 2026 (Angel One / Moneycontrol, 2026). 5) Swish: $38M Series B, Mar 2026; 1M+ orders a month (about 33k a day) in ~50 pincodes (TechCrunch, Inc42, 2026). 6) Zepto Cafe: 100k orders a day in Feb 2025, 120-130k at peak, then scaled back (QSR Media 2025; StartupTalky 2025). 7) 99 Store: about 1 in 7 Swiggy food orders, 500+ cities (Business Today, Aug 2026). 8) Swiggy food AOV about Rs 420-450; quick-food baskets typically Rs 150-250 (local teardown; quick-food AOV is an estimate). [uncertain]",
+  "framework_applied": "Product Strategy: Clarify, Context (4 pillars), Recommend (frameworks.md section 2); this is a strategic-plan question framed as a threat. Step 1 Clarify - success = protect food order share and frequency without breaking the 5%-of-GOV EBITDA path; scope = quick food (sub-15-minute meals and snacks) in metros first; constraint = no new owned-kitchen capex after Snacc, rider-safety rules on '10-minute' claims. Step 2a Company positioning - Swiggy runs an asset-light marketplace with 2.5-3 lakh restaurants, Bolt already >10% of orders, Instamart pods and a shared fleet; weakness = margin gap to Zomato and Instamart burn. Step 2b Customers - three jobs hide under '10-minute food': impulse snack/beverage, 'I'm starving now' solo meal, and cheapest-possible meal; only the first two care about minutes. Step 2c Competition - unbundle rivals by model: owned kitchens (Swish, Zepto Cafe, Bistro) win on speed and consistency but have burned money and shrunk; zero-commission Ownly attacks price and restaurant loyalty, not speed. Step 2d Market forces - restaurants (suppliers) gain leverage when Ownly offers zero commission; riders' bargaining power and regulation cap speed promises; entry cost for owned kitchens is high (Rs 30-60 lakh per kitchen, illustrative), for marketplaces low. Step 3 Recommend - reframe: 'Speed is a feature Swiggy already owns at marketplace scale; the real threat is Ownly's price attack on restaurants, so defend the supply side and win the occasion, not the clock.' Phased execution, risks and the conditions under which Swiggy would build kitchens.",
+  "clarifying_questions": [
+    {
+      "q": "What does winning look like - order share, food GOV growth, or profit? And over what horizon?",
+      "a": "Protect Swiggy's share of quick-meal orders in the top 8 metros over the next 12 months, without pushing food adjusted EBITDA below about 3% of GOV."
+    },
+    {
+      "q": "Is 'quick food' defined by delivery time or by occasion? Do we count a 25-minute Bolt order?",
+      "a": "Define it as orders promised in 15 minutes or less. Bolt is the only Swiggy format today."
+    },
+    {
+      "q": "Which competitor is actually hurting us? Do we see share loss in data?",
+      "a": "Our Bengaluru food share has dropped about 3 points in six months; Delhi NCR is flat. Exhibit 1 has the detail."
+    },
+    {
+      "q": "Are owned kitchens on the table after Snacc, or is leadership against capex?",
+      "a": "Not ruled out, but the board wants a clear case; Snacc lost money and was shut after 13 months."
+    },
+    {
+      "q": "Any constraints from regulation or riders I should respect?",
+      "a": "Yes. We dropped '10-minute' branding on Instamart in Jan 2026 after Labour Ministry pressure. Don't propose a timer promise that loads risk onto riders."
+    },
+    {
+      "q": "Are we responding as Swiggy Food only, or can I use Instamart pods and Swiggy One?",
+      "a": "You can use the whole Swiggy asset base: Instamart pods, One membership, the shared fleet and Toing/99 Store."
+    },
+    {
+      "q": "Is the restaurant side in scope? Ownly's pitch is zero commission to restaurants.",
+      "a": "Yes - restaurant economics are in scope."
+    }
+  ],
+  "interviewer_data_reveals": "All numbers are illustrative (invented for teaching) unless a source is cited.\n\nExhibit 1 - Bengaluru food order share, Apr vs Oct 2026 (illustrative):\n| Platform | Apr 2026 | Oct 2026 |\n| Zomato | 52% | 51% |\n| Swiggy | 41% | 38% |\n| Ownly | 4% | 8% |\n| Swish + others | 3% | 3% |\n(Ownly at about 10% of Bengaluru is reported by Angel One/Moneycontrol, 2026; the other splits are illustrative.)\n\nExhibit 2 - Where Swiggy's lost Bengaluru orders went (illustrative, survey of 2,000 lapsed users):\n| Reason | Share |\n| Cheaper on Ownly (same restaurant) | 46% |\n| Faster on Swish/Bistro/Zepto Cafe | 14% |\n| Ordering less / cooking | 22% |\n| Moved to Zomato | 18% |\n\nExhibit 3 - Bolt vs regular Swiggy food order (illustrative unless noted):\n| Metric | Bolt | Regular |\n| AOV | Rs 230 | Rs 440 |\n| Delivery time (median) | 11 min | 31 min |\n| Cost per delivery | Rs 32 | Rs 48 |\n| Contribution per order | Rs 9 | Rs 30 |\n| 30-day repeat rate of new users | 58% | 44% |\n(Bolt >10% of orders and better retention are reported by Swiggy; all values here are illustrative.)\n\nExhibit 4 - Restaurant economics on a Rs 300 order (illustrative):\n| Item | Swiggy | Ownly |\n| Commission | 20% (Rs 60) | 0% |\n| Fixed fee to restaurant | 0 | about Rs 25 per order (illustrative flat fee) |\n| Restaurant keeps | Rs 240 | Rs 275 |\nRestaurants pass part of that Rs 35 gap to customers as lower menu prices on Ownly.\n\nExhibit 5 - Owned-kitchen benchmarks (illustrative, triangulated from Snacc/Zepto Cafe press): capex Rs 40 lakh per kitchen; break-even at about 900 orders a day at Rs 200 AOV; Zepto Cafe's mid-2025 scale-back and Snacc's shutdown both cite low AOV and kitchen staffing.",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "Ten-minute food is everywhere now - Bistro, Zepto Cafe, Swish, Rapido's Ownly, and our own Bolt. You run strategy for Swiggy Food. How do we respond?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Let me restate it: several players are going after the quick-meal occasion with different models, and you want Swiggy's response. Before I answer, I'd like to pin down what success means and what's in scope. Is the goal share, growth or profit?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Protect our quick-meal share in the top metros over 12 months without dropping food EBITDA below about 3% of GOV."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Got it. Two more: is the hurt showing in our data, and is the restaurant side in scope? Ownly isn't really a 10-minute player, it's a zero-commission one."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Bengaluru share is down about 3 points in six months; NCR is flat. Restaurants are in scope. Here's Exhibit 1."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Interesting - in Exhibit 1 Ownly doubles from 4% to 8% while Swish and others stay flat. So the share we're losing in Bengaluru is going to the zero-commission player, not the 10-minute kitchens. Last constraints: are owned kitchens on the table, and how should I treat the '10-minute' branding issue?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Kitchens aren't banned, but the board remembers Snacc. And no timer promises that load risk on riders."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Clear. My plan: first Swiggy's own position, then customers, then a competitor map by business model, then market forces, then a recommendation. I'll spend most time on the competitor unbundling, because I think the prompt lumps together very different threats."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Company first. Swiggy is an asset-light marketplace: 2.5-3 lakh restaurants, about 10,054 crore of quarterly food GOV, a shared fleet with Instamart, and 1,240 Instamart pods. Bolt already does more than 10% of food orders in 700+ cities, so roughly 2 lakh-plus quick orders a day. That's bigger than any single rival named. Weaknesses: thinner margins than Zomato, Instamart losses that food has to fund, and a failed owned-kitchen bet in Snacc."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Quick TAM check: if Swiggy and Zomato together do about 4.5-5 million food orders a day and quick food is about 10-15% of that, it's 5-7 lakh orders a day today. At Rs 200-250 per order that's about Rs 5,000-6,500 crore a year - real, but it's a slice of food delivery, not a separate market."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Fine. Who's the customer?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'd split '10-minute food' into three jobs. Job A, impulse: 'When I'm at my desk at 4 pm, I want a chai and samosa now, so I don't break my flow.' Job B, urgent hunger: 'When I get home at 10 pm starving, I want a hot meal in minutes, not 40.' Job C, cheapest meal: 'When I'm a student near month-end, I want a filling meal under Rs 150.' A and B care about minutes. C cares about rupees. Ownly and Toing serve C; Swish, Bistro and Zepto Cafe serve A and B."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Here's survey data on lapsed Bengaluru users. Exhibit 2."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "This confirms it. 46% left because the same restaurant was cheaper on Ownly, and only 14% because something was faster. So in Bengaluru our bigger leak is price, through restaurant economics, not speed."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Now competitors, by model:\n| Model | Players | Wins on | Weak on |\n| Owned dark kitchens | Swish, Bistro | consistency, true 10-min | capex, narrow menu, low AOV |\n| Dark-store cafe | Zepto Cafe | piggybacks grocery pods | staffing, scaled back in 2025 |\n| Restaurant marketplace, fast lane | Swiggy Bolt | menu breadth, no capex | depends on restaurant prep |\n| Zero-commission marketplace | Ownly | restaurant margin, lower menu prices | thin service, Bengaluru-heavy |\nThe owned-kitchen players have a history of shrinking: Snacc shut, Zomato Quick shut, Zepto Cafe pulled back. Swish is the exception with fresh capital - $38M in March - but it's about 33k orders a day in 50 pincodes."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "So you'd ignore Swish?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Not ignore - watch. Swish proves the job exists, and it's well funded in exactly our densest pincodes. But matching it means building kitchens, which is the Snacc trap. Ownly is the structural threat: it changes what restaurants earn and lets them price lower off-Swiggy. If it reaches all metros by early 2027 as planned, the leak spreads."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Market forces. Suppliers: restaurants gain bargaining power because Ownly gives them a credible zero-commission alternative. Buyers: users multi-home - most have Swiggy, Zomato and one more app - so switching costs are near zero. New entrants: owned kitchens are expensive, about Rs 40 lakh each in Exhibit 5, but marketplaces are cheap to start if you already have riders, which Rapido does. Riders and regulators cap how hard anyone can push a 10-minute timer."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Let me give you Bolt's unit economics. Exhibit 3."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Bolt earns only Rs 9 per order against Rs 30 for regular food, but new users acquired on Bolt repeat at 58% against 44%. So Bolt is a frequency and retention engine, not a profit engine. That says: grow Bolt in occasions where it adds orders, not where it replaces a Rs 440 dinner with a Rs 230 snack."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "OK. What do we do?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "My reframe: Swiggy shouldn't fight a 10-minute war, it already won that at marketplace scale with Bolt. It should defend restaurant economics against Ownly and win the occasion, not the clock. Three moves, ranked."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Move 1, defend supply - a 'Swiggy Flex' restaurant plan: for value restaurants (AOV under Rs 250), offer a flat per-order fee instead of a percentage commission in Bengaluru and Hyderabad, paired with menu-price parity on Swiggy. Restaurants keep close to Ownly economics, users stop seeing cheaper prices elsewhere. Fund it with ads: restaurants on Flex get fewer free ranking boosts and buy visibility instead."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Move 2, own the occasion with Bolt: make Bolt the default rail for Job A and B - a 'Bolt lane' on the home screen at 3-6 pm and after 10 pm, a Swiggy One perk of free Bolt delivery on two snack orders a week, and a curated 'ready in minutes' menu at 2,000 high-throughput restaurants. Market it as 'ready fast', not '10 minutes', so riders aren't held to a timer."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Move 3, a capped kitchen option: only where restaurant supply is thin and quick-food demand is dense - think 15-20 pods in Bengaluru tech corridors - co-locate a short menu (coffee, sandwiches, wraps) in existing Instamart pods, run by a QSR partner, not Swiggy staff. That avoids Snacc's capex and staffing problem. Trigger to scale: over 900 orders per pod per day at positive contribution in 90 days."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Isn't Move 1 a commission cut that kills your EBITDA?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "It's targeted. Value restaurants under Rs 250 AOV are maybe 15-20% of GOV. If flat fees lower take rate there by 5 points, that's about 1 point of food GOV in take rate, partly recovered by ads and by not losing those orders to Ownly. I'd pilot in Bengaluru first and keep EBITDA above the 3% guardrail."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What do you explicitly not do?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Three things. No standalone 10-minute app - we tried Snacc and Toing already splits attention. No city-wide owned-kitchen build. And no matching Ownly with a blanket zero-commission promise, which would reprice our whole restaurant base."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Risks?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "First, Bolt cannibalising regular dinners: watch AOV per user and keep Bolt lanes to snack hours. Second, rider-safety backlash: no timers, and track rider incidents and late-order penalties per Bolt trip. Third, Flex becoming a race to the bottom: cap it to value restaurants with price parity. Fourth, Swish gets acquired by Zomato or Zepto and scales: then revisit Move 3 faster."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "When would your answer change?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "If owned-kitchen players show positive unit economics at 10k-plus orders a day per city, I'd accelerate kitchens - possibly by partnering with or acquiring Swish rather than building. If Ownly stalls outside Bengaluru, I'd pull back Flex to a local defence."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "To close: the headline is 'ten-minute food', but our data says price, through restaurant economics, is the bigger leak. So: defend supply with a flat-fee plan for value restaurants, make Bolt the default for snack occasions without timer promises, and keep a capped, partner-run kitchen option in Instamart pods. I'd measure success by Bengaluru share recovered to 41%, Bolt-led 30-day repeat, and food EBITDA held above 3% of GOV."
+    }
+  ],
+  "answer_and_recommendation": "Ranked options: (1) Defend restaurant supply against Ownly with 'Swiggy Flex', a flat per-order fee plan for value restaurants (AOV under Rs 250) in Bengaluru and Hyderabad, tied to menu-price parity and funded partly by ads - highest impact because 46% of lapsed Bengaluru users cite cheaper prices on Ownly (illustrative Exhibit 2). (2) Make Bolt the default for snack and late-night occasions: home-screen Bolt lanes at 3-6 pm and after 10 pm, a Swiggy One perk of free Bolt delivery on snack orders, a curated 'ready fast' menu - Bolt already does more than 10% of orders and lifts retention. (3) A capped, partner-run kitchen pilot in 15-20 Instamart pods in dense tech corridors, scaled only past ~900 orders per pod per day at positive contribution. Recommendation: do 1 and 2 now, 3 as a 90-day pilot. Not doing: a standalone 10-minute app, a city-wide owned-kitchen build, blanket zero commission. Risks and mitigation: Bolt cannibalises dinners (limit lanes to snack hours, watch AOV per user); rider safety and regulatory backlash on timers (brand 'ready fast', no countdown, track incidents); Flex race to the bottom (cap eligibility, parity clause); Swish acquired by a rival (fast-track pod pilot or consider partnering). Closing line: 'Ten-minute food is the headline, but restaurant economics are the leak - Swiggy should defend supply, own the snack occasion with Bolt, and only build kitchens where the numbers prove it.'",
+  "counter_metrics_guardrails": "1) Food adjusted EBITDA as % of GOV, held above 3% (the board's guardrail). 2) Take rate on Flex restaurants vs control, and Flex share of GOV (cap at about 20%). 3) AOV per user and dinner-order share for Bolt users - detects Bolt cannibalising Rs 440 dinners with Rs 230 snacks. 4) Rider safety: accidents, speeding flags and penalties per 1,000 Bolt trips; rider earnings per hour. 5) Order accuracy, food temperature complaints and cancellation rate on Bolt - speed must not cost quality. 6) Restaurant churn to Ownly and menu-price parity breaches. 7) Ad load and ranking quality - funding Flex with ads must not clutter the feed into lower conversion. 8) Pod kitchen contribution per order and orders per pod per day (kill trigger).",
+  "follow_up_twists": [
+    {
+      "twist": "Zomato acquires Swish next quarter and puts it inside Blinkit. What now?",
+      "response": "That validates owned kitchens for Eternal's grocery pods; I'd fast-track my Instamart-pod pilot in the same pincodes with a QSR partner and lean on Bolt's breadth, because a 50-pincode kitchen network still can't match 2.5 lakh restaurants."
+    },
+    {
+      "twist": "The CFO says no commission changes at all - EBITDA comes first. What's your answer without Move 1?",
+      "response": "Then defend through the user side: a One-member price-match on the top 500 Ownly-listed restaurants in Bengaluru funded by restaurant co-investment, and accept a slower share recovery, with a trigger to revisit Flex if Ownly crosses 15% city share."
+    },
+    {
+      "twist": "Government bans any delivery promise under 20 minutes. Does your strategy survive?",
+      "response": "Yes - the strategy never rested on the clock; Bolt becomes 'quick-prep menu with priority dispatch', and the moat is restaurant breadth and pre-cooked selection, which a time ban hits owned-kitchen players harder."
+    }
+  ],
+  "common_pitfalls": [
+    "Treating all five rivals as one '10-minute' threat - Ownly competes on restaurant commission and price, not speed, and the data shows it is the one taking share.",
+    "Recommending Swiggy build dark kitchens to match Swish or Bistro - ignores that Snacc was shut in Feb 2026, Zomato Quick was wound down and Zepto Cafe scaled back.",
+    "Answering with a 'faster Bolt' or a countdown timer - ignores the Jan 2026 Labour Ministry push against '10-minute' branding and rider-safety risk.",
+    "Optimising Bolt orders without checking unit economics - Bolt's low AOV can cannibalise higher-margin dinners and drag food EBITDA."
+  ],
+  "skills_tested": [
+    "structuring",
+    "business sense",
+    "prioritisation",
+    "quant",
+    "empathy",
+    "communication"
+  ],
+  "linked_teardown": "swiggy-product-teardown (swiggy-product-teardown/results/Food_Delivery_core.json, Value_formats_Toing_99_Store_Snacc.json, Blinkit.json, Zepto.json, Corporate_capital_leadership_moves.json). Key facts used: Bolt >10% of food orders in 700+ cities with better retention; Snacc shut Feb 2026 with kitchens repurposed as Instamart pods; 99 Store about 1 in 7 orders and Toing as the Ownly counter; Swiggy exited its Rapido stake over the Ownly conflict; Q2 FY27 food GOV Rs 10,054 cr and 3.4% EBITDA.",
+  "uncertain": [
+    "round_and_level",
+    "source_and_verification",
+    "context_as_of",
+    "regulatory_context",
+    "public_data_anchors"
+  ]
+}

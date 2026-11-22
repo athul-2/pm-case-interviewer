@@ -1,0 +1,185 @@
+{
+  "pun_title": "Aisle Be There",
+  "case_type": "Product Design",
+  "asked_at": "Zepto (AmbitionBox 2024)",
+  "subject_company": "Zepto (dark-store operations)",
+  "round_and_level": "[uncertain] Product sense / ops-product case round, PM level (the AmbitionBox entry is under 'Product Manager'); likely an onsite round. The level is not stated in the report.",
+  "difficulty": "Medium-Hard. It's an unusual 'design a physical layout' prompt: the candidate has to see that the user is the picker, not the shopper, and turn shelf layout into a data product that keeps working as demand changes.",
+  "market_and_industry": "India; quick commerce; Zepto dark stores (about 1,139 stores as of Mar 31, 2026), typically 2,500-4,000 sq ft in metro neighbourhoods, holding a few thousand SKUs across ambient, chilled, frozen, FnV and high-value zones; pickers use handheld Android scanners and the in-house store app.",
+  "time_box_minutes": "30-35",
+  "exact_prompt": "Design the planogram for a Zepto dark store.",
+  "source_and_verification": "Level: reported. The AmbitionBox Zepto Product Manager interview page lists the question 'Design Planogram in darkstore' (https://www.ambitionbox.com/interviews/zepto-interview-questions/product-manager; question page https://www.ambitionbox.com/interviews/question/design-a-planogram-for-a-dark-store-O33glFvK). Year: [uncertain] 2024, per this casebook's outline; the AmbitionBox page does not show a date in the search excerpt. Related Zepto PM interview reports on LinkedIn mention 5 rounds including real case studies (https://www.linkedin.com/posts/pratap-ranjan-2945271a5_pminterview-careergrowth-productthinking-activity-7435242516397985792-BmLl).",
+  "context_as_of": "As of Nov 2026: (1) Zepto had 1,139 dark stores as of Mar 31, 2026, only +110 net in FY26, indicating a shift from adding stores to getting more from each one; it averaged about 2,140 orders per store per day in Q4 FY26, about 60% higher than Blinkit and about 2x Instamart (Nomura, via local teardown). A planogram is one of the main levers for that throughput. (2) FY26 revenue Rs 22,624 cr and adjusted EBITDA -Rs 5,042 cr; IPO pending with an Rs 8,010 cr fresh issue, of which Rs 1,628.9 cr is for new dark stores (DRHP, via local teardown). (3) Store formats: secondary sources cite 1,500-4,000 sq ft per store, and a 1,200 sq ft demo store was shown at the India AI Impact Summit in Feb 2026 (https://www.businesstoday.in/amp/technology/news/story/inside-zeptos-dark-store-a-glimpse-of-quick-commerce-at-india-ai-impact-summit-2026-516796-2026-02-18). (4) [uncertain] Secondary blogs describe a pick-and-pack time of about 3 minutes, pickers locating items in about 12 seconds, a store app called 'Packman', and fast movers re-slotted near packing daily; none of these come from Zepto itself. (5) Zepto Cafe runs inside many stores, which takes floor space and adds a hot-food zone. Stale-risk flags: store count is from the DRHP as of Mar 2026; layout claims are from secondary sources.",
+  "regulatory_context": "(1) FSSAI licensing and storage rules: food has to be kept apart from non-food (cleaning chemicals, pesticides), at the right temperature (chilled 0-5 C, frozen at or below -18 C), off the floor and away from pests; FSSAI and state FDAs suspended several dark-store licences in 2025 for hygiene lapses, so zoning is a compliance requirement, not just a speed choice. (2) Zepto Cafe in-store needs separate food-handling areas and FSSAI compliance for prepared food. (3) Drugs and Cosmetics rules: OTC and pharmacy items, if stocked, need a licence and may need separate storage. (4) Fire safety and municipal rules on aisle widths, exits and storage height for a commercial space; [uncertain] specifics vary by city. (5) Legal Metrology: price and MRP labelling on packaged goods. Otherwise none material on the layout itself.",
+  "public_data_anchors": "1) Zepto: 1,139 dark stores (Mar 31, 2026); about 2,140 orders per store per day in Q4 FY26, about 60% more than Blinkit and about 2x Instamart (Nomura, via swiggy-product-teardown/results/Zepto.json); FY26 revenue Rs 22,624 cr. 2) Peak load: at 2,140 orders a day with about 15% in the peak hour (illustrative share), a store handles about 320 orders an hour, or about 5 a minute, which the layout must support. 3) Store size: commonly cited as 2,500-4,000 sq ft; a 1,200 sq ft demo store was shown at the India AI Impact Summit, Feb 2026 (https://www.businesstoday.in/amp/technology/news/story/inside-zeptos-dark-store-a-glimpse-of-quick-commerce-at-india-ai-impact-summit-2026-516796-2026-02-18). 4) [uncertain] Pick and pack time of about 3 minutes and item-locate time of about 12 seconds (secondary blogs, e.g. https://www.braincuber.com/blog/blinkit-zepto-quick-commerce-operations-handbook). 5) Competitor scale: Blinkit 2,751 stores and Instamart 1,240 stores (Q2 FY27 results, via local teardown).",
+  "framework_applied": "CIRCLES + List and Trim (frameworks.md, section 1). C - Comprehend: a planogram is the map of which SKU sits in which bin; the goal is to minimise pick time per order at peak (to protect the 10-minute promise) while preventing wrong picks, keeping food-safety zoning and using limited space; scope is a standard 2,500-3,000 sq ft metro store; I am the dark-store product PM building the system, not drawing one store by hand. I - Identify: list pickers, packers, inbound and replenishment associates, store manager and category or ads teams; pick pickers at peak, because pick time is the largest controllable part of in-store time. R - Report needs: 'When I get a 7-item order at 8pm, I want the items in one short loop in a logical order, so I can finish in under 2 minutes without mistakes'. C - Cut: travel distance and search time (primary), plus picking errors from similar-looking SKUs (secondary). L - List: safe (a velocity-based static planogram, ABC slotting with zone rules), ambitious (affinity-aware dynamic re-slotting with a guided pick path), visionary (a self-learning digital twin per store that re-slots weekly, simulates layouts and later adds goods-to-person automation). E - Evaluate: impact vs effort, edge cases (festive spikes, new launches, Cafe) and competitors. S - Summarise: ship a velocity-plus-affinity planogram engine with guided pick paths in 10 Mumbai stores, measuring pick time per item and picking accuracy.",
+  "clarifying_questions": [
+    {
+      "q": "By planogram, do you mean the physical layout of one store, or a system that generates layouts across stores?",
+      "a": "Start with how you'd lay out one store, then tell me how you'd make it scale across 1,000+ stores."
+    },
+    {
+      "q": "What's the goal: picker speed, accuracy, space use, or freshness?",
+      "a": "Speed at peak is the headline, because it protects the delivery promise. Accuracy and freshness matter too."
+    },
+    {
+      "q": "What size and format of store?",
+      "a": "A standard metro store, about 3,000 sq ft, roughly 4,000 SKUs, with ambient, chilled, frozen, FnV and a small Cafe counter."
+    },
+    {
+      "q": "Who picks, and how: one picker per order, or batch or zone picking?",
+      "a": "Today one picker per order with a handheld scanner, then hands off to a packer at the dispatch counter."
+    },
+    {
+      "q": "Are there constraints: racks and fridges fixed, or can we move them?",
+      "a": "Cold units are fixed for this exercise; racks and bins are movable."
+    },
+    {
+      "q": "How often can we re-slot?",
+      "a": "Re-slotting costs labour, so tell me how often you'd do it and why."
+    },
+    {
+      "q": "Do brands pay for placement in dark stores?",
+      "a": "No. Ads pay for placement in the app, not on the shelf, since customers never see the shelf."
+    }
+  ],
+  "interviewer_data_reveals": "Exhibit 1 (illustrative): one Mumbai store at peak (7-10pm). 300 orders an hour, average 6.5 items per order; in-store time 3 min 10 s, made up of picking 2 min 15 s (walking about 60%, searching and scanning 40%), packing 35 s and handoff 20 s. Exhibit 2 (illustrative): SKU velocity (ABC). The top 10% of SKUs (about 400) make up 62% of picks; the next 20% make up 25%; the bottom 70% make up 13%. Top movers: milk, bread, eggs, onion, tomato, coriander, chips, Coke, Maggi, curd. Exhibit 3 (illustrative): basket affinity. 41% of orders contain milk, and 55% of those also contain bread or eggs; chips + soft drink appear together in 18% of orders; 70% of orders span 3 or more temperature zones. Exhibit 4 (illustrative): picking errors. 1.4% of orders have a wrong item; 60% of those are look-alikes (variants of the same brand, such as Amul Taaza vs Amul Gold, or 500 ml vs 1 L), and these sit next to each other on the shelf today. Exhibit 5 (real): Zepto about 2,140 orders per store per day (Q4 FY26, Nomura).",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "Design the planogram for a Zepto dark store."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Let me make sure I have it right. A planogram is the map of which product goes on which shelf and bin. In a normal supermarket it's designed for shoppers and brands pay for eye level. In a dark store no customer walks the aisles, so the shelf is designed for the person picking the order. Is the goal picker speed at peak?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Speed at peak is the headline, because it protects the delivery promise. Accuracy and freshness matter too."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then my objective is to minimise in-store time per order at peak without increasing wrong picks, while respecting food-safety zoning. One store or a system?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Lay out one store, then tell me how it scales across 1,000+ stores."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'll assume a 3,000 sq ft metro store, about 4,000 SKUs, fixed cold units, movable racks, one picker per order with a scanner, and I'm the PM for the dark-store product, so my output is a planogram engine plus the picker app experience, not a hand drawing. Can I see where time goes today?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Exhibit 1."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So in-store time is 3 min 10 s, and picking is 2 min 15 s of that, with walking about 60% of picking time. That's the biggest lever. Now users: pickers; packers at the dispatch counter; inbound and replenishment associates who put stock away; the store manager; and category teams. I'll pick pickers at peak, because they own the biggest chunk of time, and I'll keep replenishment as a constraint, since a layout that's fast to pick but slow to restock fails at 8pm when shelves empty."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Picker needs as JTBD: 'When I get a 7-item order at 8pm, I want all items in one short loop in a sensible order, so I finish in under 2 minutes without a mistake.' Pain points: walking back and forth across zones, searching for an item that moved, and grabbing the wrong variant. Replenishment associate: 'When the milk bin is low, I want it next to the backstock, so I refill it in 30 seconds.' Can I see demand data?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Exhibits 2, 3 and 4."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Clear picture. The top 10% of SKUs make 62% of picks, milk is in 41% of orders, 70% of orders span three or more temperature zones, and 60% of errors are look-alike variants sitting next to each other. So I'll prioritise travel distance first and look-alike errors second:\n| Need | Pain | Frequency | Feasibility | Fit |\n| Short pick path | High | Every order | High: data exists | Speed |\n| No look-alike errors | Medium-high | 1.4% of orders | High | Accuracy, refunds |\n| Fast restock | Medium | Every hour at peak | Medium | Availability |"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Here's the layout I'd draw for one store, as a text diagram:\n[Inbound dock] -> [Backstock + FnV prep] at the back\n[Frozen | Chilled dairy wall] along one side (fixed cold units)\n[Golden zone: A-class ambient, about 400 SKUs] in a U around the packing station\n[B-class aisles] behind the golden zone\n[C-class long tail] at the far end, upper and lower shelves\n[High-value cage: electronics, cosmetics, premium] near the manager desk\n[Non-food: cleaning, pet, pesticides] in a separate aisle away from food\n[Cafe counter] near dispatch, separate prep area\n[Packing + dispatch] at the front by the rider door.\nWithin a rack, A-class items go at waist-to-shoulder height, heavy items like atta and oil at the bottom, and light items on top."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Fine, that's a sensible static layout. Is that your answer?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's the safe option. Let me give three. Safe: a velocity-based static planogram with ABC slotting, zone rules and the layout above, refreshed monthly. Ambitious: an affinity-aware dynamic planogram. It slots items that are bought together near each other, such as bread and eggs next to the dairy wall, and chips next to soft drinks, re-slots the top movers weekly and for festivals, separates look-alike variants into different bins or rows, and pairs it with a guided pick path in the picker app that sequences items in walking order with bin photos. Visionary: a self-learning digital twin per store. It simulates every candidate layout on last week's orders, picks the one that minimises walking time minus re-slotting labour, adapts by store (an office-area store sells more snacks, a family area more atta), and later supports zone picking and goods-to-person automation for the long tail."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How do you decide?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Impact vs effort:\n| Option | Impact on pick time | Effort | Notes |\n| Static ABC planogram | Medium: about 15-20% less walking | Low | Quick win, decays as demand shifts |\n| Dynamic affinity + guided path | High: about 30% less walking, fewer errors | Medium: slotting engine + app | Best ratio |\n| Digital twin + automation | Very high long-term | High: simulation, capex | Phase 3 for top stores |\nEdge cases: festivals change the top movers (Diwali sweets and dry fruits, Holi colours, Ganesh Chaturthi in Mumbai), so the engine needs an event mode; new product launches don't have history, so they start in a 'new' bay; Cafe items are made, not picked, so their timing matters at dispatch, not in the aisles. Re-slotting isn't free; moving 400 SKUs takes hours, so I'd re-slot only when the predicted saving beats the labour cost, and do it off-peak, typically 2-5am."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Wouldn't dynamic re-slotting confuse pickers who memorise the store?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Yes, that's the real risk. Fast pickers rely on memory. Three mitigations: keep the A-class core stable and re-slot mostly the B and C tiers; limit changes to a small number per night; and put the location in the app with a bin photo and a light or sound cue at the bin, so pickers don't have to remember. Then pick-time data tells us whether churn is costing more than it saves."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What about the temperature zones? You said 70% of orders span three or more."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's why the U-shape puts the golden zone between the chilled wall and the packing station, so a typical milk-bread-chips-onion order is one loop. Frozen is picked last so it stays cold, which the guided path enforces. And for orders with frozen items, the packer can add those at the counter from a small reach-in freezer of the top frozen SKUs."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How would you roll it out?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Ship the dynamic planogram engine plus the guided pick path in 10 Mumbai stores for 6 weeks against 10 matched controls. Weeks 1-2: set up ABC and affinity slotting from 90 days of orders, physically re-slot overnight, separate look-alikes. Weeks 3-6: weekly re-slotting of B and C tiers with labour budgets. After that, a template engine creates the starting planogram for new stores, which matters since Zepto's IPO money funds new stores."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Metrics?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "North Star for this product: in-store time per order at peak (order received to handoff), target from 3 min 10 s to under 2 min 30 s. Supporting: walking distance per item from scanner pings, pick time per item, wrong-item rate (from 1.4% to under 0.7%), replenishment time per bin, picks per labour-hour. Guardrails: re-slotting labour hours per week, stock-outs from bins that weren't refilled, picker attrition and complaints, food-safety audit results, and customer on-time delivery."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Wrap up."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "In a dark store the shelf is designed for the picker, not the shopper. I'd build a planogram engine that places fast movers and items bought together in a short loop around the packing station, keeps food-safety zones, separates look-alike variants, and re-slots the long tail weekly, with a guided pick path in the app. Pilot in 10 Mumbai stores aiming to cut in-store time by about 40 seconds and halve wrong picks. At Zepto's 2,000+ orders per store per day, those seconds are what keep the 10-minute promise and lift orders per store, which is the metric Zepto is now growing on rather than store count."
+    }
+  ],
+  "answer_and_recommendation": "Ranked options: (1) an affinity-aware dynamic planogram engine with a guided pick path in the picker app (best impact-to-effort); (2) a static velocity-based ABC planogram with zone rules (quick win, decays over time); (3) a per-store digital twin with simulation-based re-slotting and later goods-to-person automation. Recommendation: pilot option 1 in 10 Mumbai stores for 6 weeks against matched controls, targeting in-store time from about 3 min 10 s to under 2 min 30 s and wrong-item rate from 1.4% to under 0.7% (illustrative). Layout principles: inbound and backstock at the back; a golden zone of about 400 A-class SKUs in a U around the packing station next to the chilled wall; B and C tiers further back; non-food separated from food per FSSAI; a high-value cage; Cafe prep separate near dispatch; frozen picked last. Risks and mitigation: pickers losing memorised locations (keep the A-core stable, cap nightly moves, bin photos and light cues); re-slotting labour (only when predicted saving beats cost, off-peak); festival demand shifts (event mode); food-safety violations (hard zoning constraints in the engine). Closing line: 'In a dark store the shelf works for the picker, not the shopper. Every second we take out of the aisle goes to the rider and the customer.'",
+  "counter_metrics_guardrails": "Guardrails: wrong-item and missing-item rate (must fall, not rise, as layouts change); re-slotting labour hours per store per week and the overnight re-slot completion rate; bin-level stock-outs at peak caused by slower replenishment; picker attrition, fatigue and injury (heavy items kept at low levels, no overreaching); FSSAI audit results and temperature-excursion incidents for chilled and frozen items; customer on-time delivery and order cancellation rate; space use (SKUs per sq ft) so that speed gains don't shrink the assortment.",
+  "follow_up_twists": [
+    {
+      "twist": "Diwali week: dry fruits and sweets become the top movers overnight.",
+      "response": "Use the event mode: pre-slot festive SKUs into a temporary golden bay at the front 3-5 days before, using last year's demand plus city data, and move them back after the festival."
+    },
+    {
+      "twist": "A brand offers to pay for the best shelf location.",
+      "response": "Decline physical placement, since no customer sees the shelf; sell visibility in the app (search and listing ads), which Zepto already does, and keep the shelf for speed."
+    },
+    {
+      "twist": "The store is only 1,200 sq ft (a new compact format).",
+      "response": "Trim the assortment to the top 1,500-2,000 SKUs with the long tail served from a nearby larger store or a later slot, and use vertical space and a two-picker zone split at peak."
+    }
+  ],
+  "common_pitfalls": [
+    "Designing a supermarket planogram for shoppers and brands (eye-level placement, end caps, impulse aisles) when no customer enters a dark store.",
+    "Drawing a pretty layout and stopping there: interviewers want the data logic (velocity, affinity, zoning rules) and how it scales to 1,000+ stores and changing demand.",
+    "Ignoring replenishment and food-safety zoning: a layout that is fast to pick but slow to restock, or that puts cleaning chemicals beside snacks, fails in practice.",
+    "Re-slotting constantly without counting the labour and picker-memory cost.",
+    "Forgetting temperature zones: most orders span chilled, frozen and ambient, so the path design matters more than any single shelf."
+  ],
+  "skills_tested": "structuring, prioritisation, quant, execution, business sense, communication",
+  "linked_teardown": "swiggy-product-teardown (swiggy-product-teardown/results/Zepto.json): Zepto had 1,139 dark stores as of Mar 31, 2026, with about 2,140 orders per store per day in Q4 FY26 (about 60% above Blinkit and 2x Instamart, Nomura), and a pivot from adding stores to raising orders per store.",
+  "uncertain": [
+    "round_and_level",
+    "source_and_verification",
+    "context_as_of",
+    "regulatory_context",
+    "public_data_anchors"
+  ]
+}

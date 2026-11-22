@@ -1,0 +1,234 @@
+{
+  "pun_title": "Share and Share Alike",
+  "case_type": "RCA",
+  "asked_at": "By the Authors (synthetic, PhonePe-style prompt built on real NPCI app-wise share data)",
+  "subject_company": "PhonePe",
+  "round_and_level": "PM round / hiring manager round, PM to SPM level (payments or growth PM)",
+  "difficulty": "Hard - the decline is slow and real, total volume is still growing, the challengers' growth is subsidy-driven, and the answer must weigh whether PhonePe should even defend share given zero-MDR economics and the NPCI 30% cap.",
+  "market_and_industry": "India; fintech / UPI payments (third-party app providers); all tiers, with challenger growth in high-frequency, small-ticket P2M payments by young, deal-seeking urban and Tier-2 users; Android-heavy",
+  "time_box_minutes": "30-35",
+  "exact_prompt": "You are a PM at PhonePe. NPCI's monthly app-wise data shows our UPI market share slipping month on month, while Navi and super.money keep growing. Why is this happening?",
+  "source_and_verification": "Synthetic case written by the authors in PhonePe interview style (2026), built on real NPCI app-wise data as reported by MediaNama/ProductGrowth (Oct 2026), Outlook Business (Jun 2026), NiftyTrader (May 2026 data), Entrackr (Oct 2024 data) and The Ken. No public report of this exact interview question was found on NextLeap, The Product Folks, AmbitionBox, Glassdoor or PracHub. Data sources: https://productgrowth.in/insights/fintech/phonepe-google-pay-upi-share-september-2026/ ; https://www.outlookbusiness.com/economy-and-policy/phonepe-google-pay-combined-upi-market-share-drops-below-80-for-first-time ; https://www.niftytrader.in/markets/?p=27711 ; https://the-ken.com/the-collection/sachin-bansal-loosens-the-phonepe-google-pay-grip-that-npcis-upi-cap-couldnt/",
+  "context_as_of": "As of Nov 2026: UPI hit a record 25.47 bn transactions worth Rs 31.53 lakh crore in Oct 2026 (NPCI via Entrepreneur India); NPCI had not yet published the Oct app-wise split, so Sep 2026 is the latest app data. Sep 2026 (share of 23.93 bn transactions through listed apps): PhonePe 10.91 bn, 45.57% (vs 46.47% in Sep 2025); Google Pay 7.71 bn, 32.23% (vs 35.43%); Paytm 1.94 bn, 8.1%; Navi 1.14 bn (~4.8%, derived; 1.08 bn in Aug 2026); super.money 405.1 M (~1.7%, derived). PhonePe + Google Pay combined fell below 80% for the first time in May 2026 (79%) and was 77.8% in Sep 2026. PhonePe was ~48.7% in May 2024 and 47.66% in Oct 2024. Navi grew from ~0.21% share (May 2024) to ~3.6% (May 2026), becoming the #4 UPI app; growth widely attributed to cashback and rewards on scan-and-pay plus its lending ecosystem. super.money (Flipkart) entered the top 5 in Feb 2025, ~1.8% share by May 2026; one report says it plateaued and pivoted to RuPay credit card cashback [uncertain]. BHIM ~1% share after ~10x growth in two years. PhonePe IPO: SEBI nod (Jan 2026), listing paused in Mar 2026 citing market volatility; CEO Sameer Nigam said in Oct 2026 the IPO is 'hopefully not too far away' (YourStory). Stale-risk: the Oct 2026 app split, any NPCI decision on the 30% cap before 31 Dec 2026 [uncertain].",
+  "regulatory_context": "NPCI 30% volume cap on any third-party app provider (TPAP), proposed Nov 2020, compliance deadline extended (third time) to 31 Dec 2026; the cap is computed on a rolling 3-month basis, does not apply to bank apps, and a TPAP above the cap would have to stop onboarding new users. As of Nov 2026 no 2026 decision on enforcement or further extension was found [uncertain]. Zero MDR on UPI P2M (government policy since Jan 2020) means TPAPs earn nothing per UPI transaction, so share is defended with cross-sell (lending, insurance, wealth, ads, devices like the SmartSpeaker) rather than per-transaction revenue; the government incentive scheme for low-value P2M UPI partly offsets cost. NPCI has been easing feature-parity rules and promoting smaller apps (20 new TPAPs approved in 2024; possible early/exclusive feature rollouts for smaller apps, per Outlook Business). RBI-permitted RuPay credit card on UPI and credit lines on UPI let challengers bundle credit rewards with UPI. RBI digital lending directions govern Navi's and PhonePe's lending cross-sell. Cashback and rewards are unregulated in amount but must be non-deceptive under CCPA dark-pattern guidelines.",
+  "public_data_anchors": [
+    "UPI Oct 2026: 25.47 bn transactions, Rs 31.53 lakh crore (NPCI via Entrepreneur India, Nov 2026) https://india.entrepreneur.com/business-news/upi-hits-record-25-47-bn-transactions-in-october-daily-value-crosses-inr-1-l-cr",
+    "Sep 2026 app-wise (of 23.93 bn via listed apps): PhonePe 10.91 bn / 45.57%; Google Pay 7.71 bn / 32.23%; Paytm 1.94 bn / 8.1%; Navi 1.14 bn; super.money 405.1 M (MediaNama via ProductGrowth, 24-26 Oct 2026) https://productgrowth.in/insights/fintech/phonepe-google-pay-upi-share-september-2026/",
+    "Sep 2025 baseline: PhonePe 46.47%, Google Pay 35.43%; PhonePe+GPay combined 81.9% (Sep 2025) -> 78.3% (Aug 2026) -> 77.8% (Sep 2026) (same source)",
+    "May 2026: PhonePe 46.2%, Google Pay 32.7%, Navi ~3.6%, super.money ~1.8%; PhonePe+GPay 79%, first time below 80% (NiftyTrader; Outlook Business, 17 Jun 2026) https://www.outlookbusiness.com/economy-and-policy/phonepe-google-pay-combined-upi-market-share-drops-below-80-for-first-time",
+    "Navi + super.money combined ~5.5% within about two years of launch; top three (PhonePe, GPay, Paytm) 87% in May 2026 vs 95.2% in Jan 2024 (Outlook Business, Jun 2026)",
+    "Oct 2024: PhonePe 7.9 bn / 47.66% of volume and 49.76% of value; Navi 157.5 M; CRED 152.3 M (Entrackr, Nov 2024) https://entrackr.com/news/phonepe-g-pay-lead-upi-market-share-navi-surpasses-cred-to-enter-top-4-7589760",
+    "Navi transactions 709 M (Jan 2026) -> 824 M (May 2026); super.money 298 M -> 419 M (NewsBytes, 2026) https://www.newsbytesapp.com/news/business/rewards-and-cashback-boost-upi-growth-for-select-fintechs/tldr",
+    "NPCI 30% TPAP cap deadline 31 Dec 2026 (NPCI statement, Dec 2024, via Business Today) https://www.businesstoday.in/tech-today/news/story/npci-extends-30-upi-market-share-cap-deadline-on-3rd-party-apps-to-december-2026-459171-2024-12-31"
+  ],
+  "framework_applied": "RCA: Clarify -> 4 cause buckets -> Hypothesise-test-repeat -> Land it. (1) Clarify metric: NPCI volume share = PhonePe-originated UPI transactions / transactions via listed TPAPs and bank apps, monthly; volume vs value share; P2P vs P2M; absolute volume still growing. Time frame: gradual ~0.1 pt/month erosion since 2024, not a cliff. Scope: which payment types, ticket sizes, user cohorts and geographies lose share. (2a) Data: NPCI denominator changes (listed-app vs total UPI), reclassification of UPI Lite or autopay, transactions routed via PhonePe PSP but initiated on other apps. (2b) Internal: funnel install -> UPI onboarding -> first payment -> monthly active payer -> transactions per payer; product changes (ads/clutter, loan cross-sell, app speed), deliberate reduction of cashback, merchant (QR/SmartSpeaker) coverage, IPO-driven profitability focus. (2c) External: challengers subsidising scan-and-pay with cashback (Navi, super.money), RuPay credit card and credit-line on UPI, NPCI pro-competition stance and the 30% cap, Google Pay also losing share, BHIM growth. (2d) Behaviour: multi-homing - users keep PhonePe but route small, frequent QR payments to whichever app pays a reward; deal-seeking young users. (3) Hypothesise-test: is PhonePe losing users or losing wallet share among the same users? Decompose share = active payers x transactions per payer. (4) Land: root cause is wallet-share leakage of small-ticket P2M transactions by multi-homing users to cashback-funded challengers, enabled by zero-MDR economics where PhonePe has chosen not to pay per transaction; validate with multi-homing panels and ticket-size cohorts.",
+  "clarifying_questions": [
+    {
+      "q": "Are we looking at volume share or value share, and of which denominator - all UPI, or listed apps only?",
+      "a": "Volume share of transactions through NPCI-listed apps, the number in NPCI's monthly app-wise table. Value share is roughly stable."
+    },
+    {
+      "q": "Is our absolute volume falling, or only share?",
+      "a": "Only share. PhonePe crossed 10 bn transactions a month and is still growing, just slower than the market."
+    },
+    {
+      "q": "How fast is the slip and since when?",
+      "a": "Gradual: from about 47.7% in Oct 2024 to about 45.6% in Sep 2026, roughly 0.1 point a month, with no single cliff."
+    },
+    {
+      "q": "Is Google Pay losing share at the same rate?",
+      "a": "Faster, actually: GPay lost about 3.2 points year on year to Sep 2026; PhonePe lost about 0.9."
+    },
+    {
+      "q": "Which payment types are we losing: P2P, P2M, small-ticket QR, bill payments?",
+      "a": "Mostly small-ticket P2M scan-and-pay under Rs 200. P2P share is stable."
+    },
+    {
+      "q": "Are we losing users, or are users splitting payments across apps?",
+      "a": "Monthly active payers are still growing, about 13% a year. Panels show more of our users also have Navi or super.money installed."
+    },
+    {
+      "q": "Did we change anything - rewards, app experience, onboarding - in this period?",
+      "a": "We have run very little cashback since 2023, and added more financial-services cross-sell on the home screen. No major outage."
+    }
+  ],
+  "interviewer_data_reveals": [
+    "Exhibit 1 (real, NPCI via press): PhonePe volume share 48.7% (May 2024) -> 47.66% (Oct 2024) -> 46.47% (Sep 2025) -> 46.2% (May 2026) -> 45.57% (Sep 2026). Google Pay 35.43% (Sep 2025) -> 32.7% (May 2026) -> 32.23% (Sep 2026). Navi ~0.21% (May 2024) -> ~3.6% (May 2026) -> ~4.8% (Sep 2026, derived from 1.14 bn / 23.93 bn). super.money ~1.8% (May 2026), ~1.7% (Sep 2026, derived).",
+    "Exhibit 2 (real): PhonePe Sep 2026 volume 10.91 bn, still growing in absolute terms; PhonePe volume grew ~21% YoY (from ~9.0 bn in Sep 2025, derived) while listed-app UPI volume grew ~23%.",
+    "Exhibit 3 (illustrative): share change by ticket size, Sep 2025 -> Sep 2026: <Rs 100 P2M -2.8 pts; Rs 100-500 P2M -1.0; >Rs 500 P2M -0.2; P2P +0.1; bill payments/recharge -0.3.",
+    "Exhibit 4 (illustrative): share = active payers x transactions per payer. PhonePe monthly active payers +13% YoY; transactions per payer +7% YoY vs market +10% (market payers +12%). So wallet share, not user count, is the gap.",
+    "Exhibit 5 (illustrative, panel of 50k PhonePe users): share also using Navi or super.money for UPI 9% (Sep 2025) -> 21% (Sep 2026). Among these multi-homers, PhonePe's share of their transactions fell from 78% to 55%; for single-homers it is flat.",
+    "Exhibit 6 (illustrative): challenger multi-homers skew 18-30, Tier-1/2 cities, heavy food/grocery/kirana QR users; they move the small transactions that earn a cashback or reward, and keep rent, P2P and bill payments on PhonePe.",
+    "Exhibit 7 (illustrative): estimated challenger subsidy - Navi spends an estimated Rs 0.5-2 per rewarded transaction; at ~1.1 bn transactions/month that is a large but lending-funded acquisition cost."
+  ],
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "You are a PM at PhonePe. NPCI's monthly table shows our UPI share slipping month on month, while Navi and super.money grow. Why?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Let me first make sure I understand the metric, the time frame and the scope, then go through data, internal, external and behaviour causes. Are we talking about volume share in NPCI's app-wise table, and is our absolute volume falling or just share?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Volume share among listed apps. Absolute volume is still growing; we did 10.91 bn transactions in September, share 45.57%."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So this is a 'growing slower than the market' problem, not a decline. How fast, and since when?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Roughly 47.7% in October 2024, 46.5% in September 2025, 45.6% in September 2026. Steady, no cliff."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "About 0.1 point a month, sustained over two years. A slow, steady erosion usually means a structural competitive or behaviour shift rather than an outage or a bug. Before I go there: is Google Pay moving the same way?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Google Pay is losing faster, about 3.2 points year on year versus our 0.9."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That is important. Whatever is happening is hitting both incumbents, more so Google Pay, so it is unlikely to be something PhonePe-specific like an app release. Here is my tree:\n\nPhonePe share down\n1. Data: denominator change (listed apps vs total UPI), reclassification of UPI Lite/autopay\n2. Internal: fewer new users onboarding, lower activity per user, product clutter, less cashback, merchant coverage\n3. External: challengers paying cashback, credit on UPI (RuPay card, credit lines), NPCI pro-competition stance and 30% cap\n4. Behaviour: users multi-homing and routing some payments to whichever app rewards them\n\nShare decomposes as active payers x transactions per payer, so I'd like to check which side moved."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "On data first?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Quickly: NPCI's app table divides by listed-app volume, about 23.9 bn in September, not total UPI of about 24.1 bn. If that denominator or any category definition changed, share could move mechanically. But a two-year trend reported consistently across sources, with GPay moving too, is unlikely to be a measurement artefact. I would confirm with our own switch data and move on."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Agreed, the data is clean. Monthly active payers are up about 13% year on year."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then we are not losing users. If share is falling while payers grow, transactions per payer must be growing slower than the market's. Is that right?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Yes. Our transactions per payer are up about 7%; the market's are up about 10%."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So it is a wallet-share problem: our users are making more UPI payments overall, but more of them go through another app. Which payment types are we losing?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Mostly P2M scan-and-pay under 100 rupees, then 100 to 500. P2P and bills are flat."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That is exactly the payment type challengers subsidise. Small QR payments at kiranas, chai stalls and food are high frequency and cheap to reward: a scratch card or a few rupees of cashback per scan moves them. Rent, P2P to family and bill payments are habitual and stay on the primary app. Do we know how many of our users also use Navi or super.money?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Our panel says 21% of PhonePe users now also pay with Navi or super.money, up from 9% a year ago. Among them, our share of their transactions fell from 78% to 55%. Single-homers are flat."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That is the mechanism. Rough check: if those 21% are heavier payers, say a quarter of our volume, losing 23 points of their transactions costs us about 6% of our volume, or roughly 2.5-3 points of share. We only lost about 1 point net, which suggests we are also picking up some share from Google Pay users, so the gross leakage to challengers is bigger than the headline. So the root cause is multi-homing on small-ticket P2M, driven by rewards. Now, why can challengers pay and we don't?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Go on."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Because UPI has zero MDR, nobody earns money on the transaction itself. Navi pays cashback because UPI is its acquisition funnel for personal loans, home loans and mutual funds, so a rupee of cashback is a customer acquisition cost recovered through lending. super.money is Flipkart's funnel for RuPay credit cards and credit on UPI, and it can lean on Flipkart's user base. PhonePe, ahead of an IPO, has deliberately kept cashback low and monetises through lending distribution, insurance, ads and merchant SmartSpeakers. So our share loss is partly a choice, not just a failure."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Is there anything regulatory?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Two things. NPCI's 30% cap on any third-party app has a 31 December 2026 deadline. If it is enforced, an app above 30% would have to stop onboarding new users, so NPCI actively welcomes challenger growth, and has been easing feature-parity and approving new apps. Second, RuPay credit cards on UPI and credit lines on UPI let challengers bundle credit rewards, which a pure debit-UPI experience cannot match. Neither causes the decline directly, but both shape it and lower PhonePe's incentive to fight hard for share."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Any internal product reasons?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I would test two. First, home-screen clutter from cross-sell: if time to pay, from app open to payment confirmation, has gone up, users with a lighter challenger app may default to it at the counter. Second, payment success rate and speed versus challengers at peak, because a single failure at a shop moves people. If both are flat versus competitors, internal factors are secondary."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Say time-to-pay is flat and success rates are on par."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then I land it like this. Root cause: multi-homing users, mainly young urban and Tier-2 heavy QR payers, are routing small-ticket scan-and-pay transactions to Navi and super.money because those apps pay cashback funded by lending and credit-card economics, while PhonePe has chosen not to subsidise zero-MDR transactions. It is wallet-share leakage, not user loss: active payers are growing, P2P and bills are stable, and the loss sits in sub-Rs 500 P2M. Contributing: an NPCI and policy environment that favours challengers, and Google Pay ceding share faster, which lets challengers grow without hitting PhonePe hard."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "To validate: (1) panel or device-graph analysis of multi-homers, comparing PhonePe share of their transactions before and after their first challenger payment; (2) geo or time correlation between challenger cashback campaigns and our sub-Rs 100 P2M share; (3) a holdout test where a cohort of at-risk multi-homers gets targeted rewards, to measure how much share is price-elastic."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "So should PhonePe fight back with cashback?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Not across the board. Share itself does not pay; the 30% cap even penalises it. What matters is keeping the users who generate lending, insurance and wealth revenue. I would target rewards only at high-LTV multi-homers, make the pay moment faster (a lighter scan-first mode, UPI Lite for small payments), and give users a reason to stay through credit: RuPay credit card on UPI and credit lines with rewards, which is exactly what challengers use. Measure success on revenue-generating active users and cross-sell, not NPCI share."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What would change your diagnosis?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "If active payers were falling rather than rising, I would look at onboarding and acquisition, for example a new-user cap or Android distribution deals. If the loss were in P2P or bills, it would point to product trust or reliability, not rewards. And if share losses spiked in one month, I would check outages and the NPCI data first. My closing line: we are not losing customers, we are losing their small change to apps that pay for it, and we should only buy it back where it leads to revenue."
+    }
+  ],
+  "answer_and_recommendation": "Ranked causes: (1) Root cause - wallet-share leakage of small-ticket P2M (scan-and-pay under Rs 500) by multi-homing PhonePe users to Navi and super.money, which pay cashback and rewards funded by lending and credit-card cross-sell; PhonePe has deliberately kept cashback low on zero-MDR UPI (real NPCI data: Navi ~0.2% -> ~4.8% share in 28 months, PhonePe 47.7% -> 45.6%; panel split illustrative). (2) Contributing - policy and regulatory tailwinds for challengers: the NPCI 30% TPAP cap deadline (31 Dec 2026), feature-parity easing, new app approvals and RuPay credit/credit lines on UPI. (3) Contributing - market structure: Google Pay is ceding share faster (-3.2 pts YoY vs PhonePe -0.9), so the 'others' bucket grows mainly at GPay's expense; possible secondary product friction from cross-sell clutter (to verify). Recommendation: do not chase NPCI share with blanket cashback; protect high-LTV payers with targeted rewards for at-risk multi-homers, make the payment moment faster (scan-first mode, UPI Lite), and match the credit-on-UPI hook (RuPay card, credit lines with rewards); track revenue-generating active users. Risks: share falling further could weaken merchant leverage and the 'default app' habit (mitigate with SmartSpeaker merchant lock-in and success-rate leadership); targeted rewards may be gamed (cap rewards per user and tie them to cross-sell). Closing line: 'We are not losing customers, we are losing their small change to apps that pay for it; we should only buy it back where it turns into revenue.'",
+  "counter_metrics_guardrails": [
+    "Monthly active payers and new-user onboarding (to confirm share loss is not becoming user loss)",
+    "Revenue per active user from lending, insurance, wealth and ads (the real business metric behind share)",
+    "Reward cost per incremental transaction and per retained high-LTV user (subsidy efficiency)",
+    "Payment success rate and time-to-pay versus competitors (reliability guardrail)",
+    "Merchant-side share: SmartSpeaker and QR coverage, merchant churn",
+    "P2P and bill-payment share (the habitual core must stay stable)",
+    "Distance from the NPCI 30% cap on a rolling 3-month basis (regulatory guardrail)",
+    "Fraud and abuse rate on reward campaigns"
+  ],
+  "follow_up_twists": [
+    {
+      "twist": "NPCI announces it will enforce the 30% cap from January 2027 with no further extension.",
+      "response": "Then share defence becomes counterproductive; I would focus on revenue per user, shift growth to non-UPI products, and plan for a no-new-onboarding scenario by maximising activation of the existing base and pushing merchant and credit products."
+    },
+    {
+      "twist": "Navi stops cashback next quarter. Do you expect share to come back?",
+      "response": "Partly: price-driven small-ticket payments will drift back, but habits formed over a year and credit products tied to Navi will stick, so I would expect a partial recovery and use that window to win back multi-homers with a faster pay flow."
+    },
+    {
+      "twist": "The CEO wants share back above 47% by the IPO. What would it cost?",
+      "response": "Roughly 1.5 points of ~24 bn monthly transactions is ~360 M transactions a month; at Rs 0.5-1 of reward each that is ~Rs 18-36 Cr a month of burn for a metric that does not earn revenue, so I would propose revenue-generating users as the IPO story instead."
+    }
+  ],
+  "common_pitfalls": [
+    "Treating it as a crisis or a decline: absolute volume is still growing; it is relative share among a growing market",
+    "Blaming a PhonePe app bug or outage for a steady two-year trend that also hits Google Pay, harder",
+    "Recommending blanket cashback without noting zero MDR, IPO profitability goals and the NPCI 30% cap, which make share a weak goal",
+    "Ignoring multi-homing: users have not left PhonePe; they split small-ticket payments",
+    "Confusing volume share with value share, or quoting stale 2024 shares (~48%) as current"
+  ],
+  "skills_tested": [
+    "structuring",
+    "quant",
+    "business sense",
+    "prioritisation",
+    "communication"
+  ],
+  "linked_teardown": "None",
+  "uncertain": [
+    "context_as_of",
+    "regulatory_context"
+  ]
+}

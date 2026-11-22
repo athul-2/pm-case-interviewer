@@ -1,0 +1,207 @@
+{
+  "pun_title": "Too Many Cooks",
+  "case_type": "Situational",
+  "asked_at": "Zepto style (classic stakeholder-prioritisation question; Zepto framing by the Authors)",
+  "subject_company": "Zepto (quick commerce). The case is set on the dark-store and checkout product team in H2 2026, after the updated DRHP and the reported IPO deferral.",
+  "round_and_level": "PM round or hiring-manager round (situational / prioritisation under capacity constraints), APM campus to PM; SPM candidates get the follow-up where the CEO overrides the decision. [uncertain]",
+  "difficulty": "Medium - the structure is familiar, but a strong answer needs to put all three asks into one currency (rupees per sprint point and deadline risk), find a descope instead of choosing one team, and say no clearly to the others.",
+  "market_and_industry": "India; quick commerce (10-minute-style grocery and essentials, now marketed as fast rather than 10-minute); metro and Tier-1 heavy (66 cities, 1,139 dark stores as of Mar 2026); young, price-sensitive, multi-homing users on Android; dark-store pickers using handheld scanner/phone apps.",
+  "time_box_minutes": "15-20",
+  "exact_prompt": "You're the PM for Zepto's order-fulfilment and checkout pod. In the same week, Ops, Marketing and Finance each come to you with something 'urgent', and you have one two-week sprint. How do you decide what gets built?",
+  "source_and_verification": "Level: classic. Competing-stakeholder prioritisation with limited capacity is a standard PM interview prompt across prep sites: PracHub 'Prioritizing competing requests when team capacity is constrained' (https://prachub.com/interview-questions/prioritizing-competing-requests-when-team-capacity-is-constrained) and 'Ranking competing asks from several stakeholder teams with limited capacity' (https://prachub.com/interview-questions/ranking-competing-asks-from-several-stakeholder-teams-with-limited-capacity); Dataford 'How do you balance competing priorities when multiple stakeholders have urgent requests' (https://dataford.io/questions/how-do-you-balance-competing-priorities-when-multiple-stakeholders-have-urgent-requests). No dated report of this exact prompt at Zepto was found; the Zepto framing and the three specific asks are by the Authors. NextLeap, The Product Folks, AmbitionBox and Glassdoor were not directly searchable in this session. Year: classic (2024-2026 prep sites).",
+  "context_as_of": "As of Nov 2026 (from local teardown research citing Zepto's updated DRHP, Jun 2026, via Outlook Business, Inc42, Business Today and Zerodha Daily Brief). 1) FY26 operating revenue Rs 22,623.6 cr (FY25 Rs 11,109.9 cr); net loss Rs 5,905 cr; adjusted EBITDA loss about Rs 79 per order (Rs 136 in FY25). 2) Q4 FY26: about 2.33 mn daily orders; about 35% of quick-commerce orders vs Blinkit about 46% and Instamart about 19%; about 2,140 orders per store per day; NRV per order about Rs 387. 3) 1,139 dark stores in 66 cities (31 Mar 2026), over 36% run by franchise partners; DRHP earmarks Rs 1,629 cr for about 1,900 new stores (Business Today, 9 Jun 2026, https://www.businesstoday.in/latest/corporate/story/inside-zeptos-1bn-ipo-revenue-surge-mounting-losses-cac-pressures-ed-cloud-535709-2026-06-09). 4) Ad revenue about Rs 1,636 cr, growing over 150% YoY. 5) SEBI approved the IPO on 8 May 2026; reports from 1 Aug 2026 say it was deferred by 2-3 quarters; Zepto Club paid loyalty launched Jul 2026; the 10-minute claim was dropped in Jan 2026 after the Labour Ministry pushed. 6) CCPA fined Zepto for drip pricing (disclosed Aug 2026). Stale-risk: IPO timing and the current free-delivery threshold may have changed after Sep 2026. [uncertain]",
+  "regulatory_context": "1) CCPA Guidelines for Prevention and Regulation of Dark Patterns (Nov 2023): drip pricing and basket sneaking are banned; Zepto has already been fined, so any Marketing or Finance ask that touches fees, coupons or checkout must show the full price upfront. 2) GST and e-invoicing: refunds, credit notes and fee invoices must reconcile with GST returns - a Finance ask about refund reconciliation has a real filing deadline. 3) SEBI ICDR / listing readiness: as an IPO-bound company with an approved DRHP, auditors' observations on revenue recognition and internal financial controls need to be closed before the next filing - this makes some Finance asks non-negotiable. 4) Code on Social Security 2020 (in force 21 Nov 2025) and draft rules: platform-worker registration and aggregator contributions; relevant if an Ops ask changes rider or picker workflows. 5) FSSAI: expiry and batch tracking at dark stores. These turn 'urgent' into 'compliance-urgent' for some asks. [uncertain]",
+  "public_data_anchors": "1) About 2.33 mn daily orders in Q4 FY26 (UDRHP via Business Today, Jul 2026). 2) 1,139 dark stores, 66 cities, about 2,140 orders/store/day (same). 3) NRV per order about Rs 387; adjusted EBITDA about -Rs 79/order in FY26 (Outlook Business / Inc42, Jun 2026). 4) Per-order cost structure (Zerodha Daily Brief, 2026): gross margin about Rs 72, rider cost about Rs 46, dark-store cost about Rs 34 per order. 5) Ad revenue about Rs 1,636 cr in FY26. 6) IPO fresh issue Rs 8,010 cr (Outlook Money, 2026). Derived (illustrative): a 0.5 percentage-point fall in missing-item refunds on 2.33 mn orders/day at about Rs 60 average refund saves about Rs 7 lakh/day, or about Rs 2.1 cr/month - enough to dominate most sprint asks. [uncertain]",
+  "framework_applied": "Situational: SODS (frameworks.md section 3). Values shown without naming them: customer obsession (missing items hurt users most), frugality and ownership (protect a loss-making P&L), bias for action (ship a descoped version, not nothing). S - Scope: one 2-week sprint, 6 engineers, about 50 points; three asks totalling about 80 points; first convert each ask into impact per day, deadline type (hard external vs internal) and the cost of waiting one sprint. O - Options: (1) do the single highest-value ask fully (focus vs coverage); (2) split capacity three ways (coverage vs nothing shipping well); (3) do the hard-deadline and highest-value items, descope the third to a no-code or config version and sequence the rest into the next sprint (speed vs completeness). D - Decision: option 3 - Finance's audit-critical refund reconciliation as a minimal export (hard deadline), Ops' picker substitution fix (largest rupee impact and user pain), Marketing's campaign via existing CMS and coupon config with a thin build; explicitly NOT building the custom gamified campaign page or Finance's full automated dashboard this sprint. S - Success: hypothesis that the Ops fix cuts missing-item refunds by 0.5 pp; leading signals are pick accuracy, missing-item refund rate and substitution acceptance; Finance closes the audit point on time; campaign launches on date with brand KPIs; re-prioritise if the substitution fix shows no movement in a 3-store pilot within 4 days.",
+  "clarifying_questions": [
+    {
+      "q": "What does each team actually need, and what problem is behind it?",
+      "a": "Ops: pickers' app should flag low stock and offer a substitute before packing, because missing-item refunds are rising. Marketing: a custom campaign page with stacked coupons for a big FMCG brand partnership. Finance: automated refund-to-GST reconciliation, because auditors flagged unreconciled refunds."
+    },
+    {
+      "q": "What's the team capacity, and how big is each ask?",
+      "a": "Six engineers, a designer, about 50 points per sprint. Ops is about 25 points, Marketing about 30, Finance about 25 - 80 in total."
+    },
+    {
+      "q": "Are any deadlines external and fixed?",
+      "a": "Finance: the auditors need a reconciled refund report before quarter close in 3 weeks. Marketing: the brand campaign goes live in 12 days, and the brand has committed ad spend."
+    },
+    {
+      "q": "What's the business impact of each, in rupees or users?",
+      "a": "Ops: missing-item refunds are 1.8% of orders, up from 1.2%. Marketing: the brand commits about Rs 4 cr of ad spend if the campaign runs on date. Finance: about Rs 60 lakh/month of refunds unreconciled; impact is an audit qualification risk, not cash."
+    },
+    {
+      "q": "Is there any workaround for each - manual process, existing tool, another team?",
+      "a": "Finance analysts could reconcile manually with a data export, painfully. Marketing has a CMS with templates and a coupon engine, but not stacked coupons. Ops has no workaround."
+    },
+    {
+      "q": "What are the company's priorities this half?",
+      "a": "Path to profitability before the IPO: lower loss per order, better retention, and ad revenue growth."
+    },
+    {
+      "q": "Who decides if the leaders disagree with my call?",
+      "a": "You make the call; escalations go to the Business Head, who expects a written trade-off."
+    }
+  ],
+  "interviewer_data_reveals": "Exhibit 1 - The asks (illustrative): Ops 'picker substitution and low-stock flag' 25 pts, Marketing 'custom campaign page + stacked coupons' 30 pts, Finance 'automated refund-GST reconciliation' 25 pts; capacity 50 pts. Exhibit 2 - Impact per day (illustrative): Ops - missing-item refunds 1.8% of about 2.33 mn orders/day at about Rs 60 average refund = about Rs 25 lakh/day; a 0.5 pp cut saves about Rs 7 lakh/day (about Rs 2.1 cr/month), plus NPS and repeat-rate effect. Marketing - Rs 4 cr of brand ad commitment, about Rs 0.33 cr/day over a 12-day campaign, but only if it launches on date. Finance - Rs 60 lakh/month unreconciled; cash impact near zero, audit risk high. Exhibit 3 - Descoped versions (illustrative): Marketing on existing CMS template + single brand coupon (no stacking) = 8 pts; Finance minimal reconciled export + manual review = 8 pts (full automation 25 pts next sprint); Ops cannot be descoped below about 20 pts without losing the substitution flow. Exhibit 4 - Missing-item root cause (illustrative): 60% of missing items are inventory-system 'phantom stock', 25% picker errors, 15% damage. Real anchors: 2.33 mn daily orders, 1,139 dark stores, NRV/order about Rs 387 (UDRHP via Business Today, 2026).",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "Ops, Marketing and Finance each have something urgent. You have one sprint. What do you do?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "My first instinct is not to rank the teams, but to put the three asks into one currency. Every team will say theirs is urgent, so I need to know what each is really worth, what happens if it waits a sprint, and whether a smaller version solves most of it. I'll scope, lay out options, decide, and say how we'll measure it. Can I ask about the asks and capacity?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Go ahead."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "What does each team want, and what's the problem underneath? And how big is each versus our capacity?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Ops wants a picker-app low-stock flag and substitution flow because missing-item refunds are up. Marketing wants a custom campaign page with stacked coupons for a big FMCG brand. Finance wants automated refund-to-GST reconciliation because auditors flagged it. About 25, 30 and 25 points. You have 50."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So 80 points of asks for 50 of capacity - I'm cutting about 40% no matter what. Next, deadlines: which are external and fixed?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Finance needs a reconciled report before quarter close in 3 weeks. Marketing's campaign goes live in 12 days; the brand has committed ad spend."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "And impact in rupees?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Missing-item refunds are 1.8% of orders, up from 1.2%. The brand commits about Rs 4 cr of ad spend. Finance has about Rs 60 lakh a month unreconciled - that's audit risk, not cash."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Let me put that in a table. Ops: 1.8% of about 2.33 mn orders a day at roughly Rs 60 a refund is about Rs 25 lakh a day in refunds. Even a 0.5-point cut saves about Rs 7 lakh a day, or Rs 2 cr a month - and every missing item is a user who might switch to Blinkit. Marketing: Rs 4 cr, but it's all-or-nothing on the launch date. Finance: little cash, but an audit qualification for an IPO-bound company is a board-level problem. So I have one 'biggest value', one 'hard date with revenue' and one 'hard date with compliance'."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "So which one wins?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I don't think it's one. Let me lay out options. Option 1: do Ops fully plus whatever fits - Rs 2 cr a month saved, but we miss the campaign and risk the audit. Option 2: split 50 points three ways - everything is half-built and nothing ships well. Option 3: ask, for each one, what the smallest version is that meets the real deadline, and see if they all fit."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What are the smaller versions?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "For Marketing: can the campaign run on our existing CMS template with a single brand-funded coupon instead of stacking? For Finance: can we ship a reconciled data export that analysts review manually this quarter, and automate next sprint? For Ops: is there a smaller substitution flow?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Marketing on the template with one coupon is 8 points. Finance's export is 8 points. Ops can't go below about 20 without losing substitution."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then the sprint is: Ops 20-25, Finance 8, Marketing 8 - 36 to 41 points, inside 50, with buffer for bugs, which every sprint needs. That's option 3, and it's my decision."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Marketing will say a template page with one coupon kills the campaign."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'd go to the Marketing head with the trade-off, not a no. Stacked coupons also carry risk for us - after the CCPA drip-pricing fine, a complicated coupon stack at checkout is exactly where pricing confusion shows up. What the brand pays for is visibility and redemption. I'd offer a strong placement - home banner, search takeover and the brand's coupon - and ask whether the brand's contract requires stacking. If it does, we can talk, but I'd guess it doesn't."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "And Ops - why do they get the most points?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Because it's the largest rupee impact, it compounds daily, and it hurts users directly. But before we build, I'd check the root cause of missing items. If most of them come from phantom stock in the inventory system, a picker substitution flow treats the symptom. Do we have a breakdown?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "60% phantom stock, 25% picker error, 15% damage."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That changes the Ops build. The highest-value part is the low-stock flag that triggers a stock recount and hides the SKU from the storefront before it's ordered - that tackles phantom stock. The substitution flow handles what's left. I'd ask Ops to agree to that scope and pilot it in 3 high-refund stores first."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What are you explicitly not doing?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "No stacked-coupon engine, no custom campaign micro-site, no full Finance automation this sprint - that's first in next sprint's backlog. And I'm not taking any new 'urgent' asks mid-sprint without dropping something of equal size, and I'll say that in writing to all three leads."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How do you communicate it?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "One short written note to all three leads and the Business Head together, so nobody hears it second-hand: the three asks, the rupee impact and deadline for each, what we're building, what we're not, and when the rest is scheduled. Then a 15-minute call to take objections. Each lead gets something on their real deadline, so most of the heat goes away."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How do you know it worked?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Ops: missing-item refund rate falls from 1.8% toward 1.3% in pilot stores within a week, and pick accuracy goes up, with order-to-dispatch time not getting worse. Marketing: campaign live on day 12 and coupon redemptions and the brand's ad spend realised. Finance: audit point closed before quarter close. If the pilot stores show no movement after 4 days, I re-prioritise - maybe the fix is in inventory sync, not the picker app."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Wrap up."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I didn't choose a team. I put three 'urgent' asks into rupees and deadlines, found the smallest version that meets each real deadline, and gave most of the sprint to the fix with the biggest daily value - the missing-item problem, scoped at its real root cause. Marketing and Finance get what they need on time, and their full versions are first in line next sprint."
+    }
+  ],
+  "answer_and_recommendation": "Ranked: 1) Ops - low-stock flag with auto-recount and storefront hide, plus picker substitution flow, about 20-25 points, piloted in 3 high-refund stores (largest daily value: about Rs 25 lakh/day of missing-item refunds, illustrative; targets the 60% phantom-stock root cause). 2) Finance - minimal reconciled refund export with manual analyst review, 8 points, to close the auditor's observation before quarter close (hard compliance deadline for an IPO-bound company); full automation scheduled first in the next sprint. 3) Marketing - campaign on the existing CMS template with a single brand-funded coupon and strong placements, 8 points, live on day 12 (protects about Rs 4 cr of brand ad commitment). Total about 36-41 of 50 points, leaving buffer. Not doing: stacked-coupon engine, custom micro-site, full Finance automation, and any new mid-sprint 'urgent' asks without an equal swap. Risks: the brand insists on stacking (check the contract; offer stronger placement); the Ops fix doesn't move refunds because the problem is inventory sync (4-day pilot check, then re-scope); Finance's manual review is error-prone (pair analysts with a validation script). Closing line: 'Everyone's ask was urgent, so I priced them. Each team gets what its deadline really needs this sprint, and the biggest money goes to the problem our users feel every day.'",
+  "counter_metrics_guardrails": "Ops: missing-item refund rate (primary), with guardrails on order-to-dispatch time and delivery time (the recount step must not slow picking), substitution acceptance rate and post-substitution complaints, and storefront availability (hiding SKUs too aggressively cuts conversion). Marketing: campaign coupon redemption and brand spend realised, with guardrails on discount cost per order, margin per order and CCPA-safe price display (no drip fees). Finance: audit observation closed; guardrail on analyst hours and reconciliation error rate. Team-level: sprint predictability (committed vs delivered points), unplanned work, and stakeholder satisfaction in the next planning review.",
+  "follow_up_twists": [
+    {
+      "twist": "The CEO says the brand partnership is strategic and Marketing must get the full stacked-coupon page.",
+      "response": "Show the trade-off in rupees - about Rs 2 cr/month of refund savings delayed a sprint vs the extra value of stacking - and offer to swap Ops' substitution half (not the low-stock flag) for the coupon engine, with the CEO's decision recorded."
+    },
+    {
+      "twist": "Mid-sprint, Ops reports a dark-store picker app crash on a new Android build.",
+      "response": "That's a production incident, not a priority debate: fix it immediately from buffer, and if it needs more, drop the Ops substitution half, not Finance's audit item."
+    },
+    {
+      "twist": "Finance now says the auditor wants full automation, not a manual export.",
+      "response": "Confirm in writing with the auditor; if true, Finance becomes the hard-deadline item and Marketing moves to pure no-code (CMS banner and existing coupon only)."
+    }
+  ],
+  "common_pitfalls": [
+    "Ranking teams by seniority or volume of escalation instead of putting all asks into one currency (rupees per day, deadline type, cost of waiting).",
+    "Splitting the sprint equally three ways - everything ships half-built and nobody's deadline is met.",
+    "Taking each ask at face value - the Ops ask treats picker errors, but most missing items come from phantom stock; scoping to the root cause doubles its value.",
+    "Saying 'no' without a date - each stakeholder needs to know when their full version will be built.",
+    "Ignoring compliance: an audit observation for an IPO-bound company, and coupon stacking after a CCPA drip-pricing fine, are not ordinary backlog items."
+  ],
+  "skills_tested": [
+    "prioritisation",
+    "quant",
+    "communication",
+    "business sense",
+    "structuring",
+    "execution"
+  ],
+  "linked_teardown": "blinkit_product_teardown (blinkit_product_teardown/results/C1_Zepto.json). Key facts used: Zepto's UDRHP figures - about 2.33 mn daily orders, 1,139 dark stores, about Rs 387 NRV/order, adjusted EBITDA about -Rs 79/order, the CCPA drip-pricing fine and the reported IPO deferral - which make missing-item refunds, coupon design and audit readiness real-money and compliance trade-offs. Also R1_Order_accuracy_quality_expired_items.json for missing-item and quality complaints as a retention driver.",
+  "uncertain": [
+    "round_and_level",
+    "context_as_of",
+    "regulatory_context",
+    "public_data_anchors"
+  ]
+}

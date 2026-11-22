@@ -1,0 +1,183 @@
+{
+  "pun_title": "Check Out Your Rivals",
+  "case_type": "Product Strategy",
+  "asked_at": "By the Authors (GoKwik-style synthetic case)",
+  "subject_company": "GoKwik (D2C checkout and RTO suite); rivals Shopify (Shop Pay, UCP) and Razorpay (Magic Checkout)",
+  "round_and_level": "SPM / Group PM strategy round or founder/CEO round, 45 min (synthetic; suits senior PM or strategy roles at D2C SaaS and fintech)",
+  "difficulty": "Hard - a platform-squeeze question with three moving parts (Shopify controls the checkout surface, Razorpay bundles checkout with gateway margin, agentic commerce bypasses checkout UI), and the candidate has to give a build/partner/exit portfolio answer instead of 'build more features'",
+  "market_and_industry": "India; D2C e-commerce enablement / checkout SaaS and payments (fintech-adjacent); merchants mainly on Shopify; shoppers skew COD-heavy Tier 2-3, mobile-first, UPI and OTP flows",
+  "time_box_minutes": "35-45",
+  "exact_prompt": "\"Shopify is reportedly bringing Shop Pay to India and Razorpay is bundling Magic Checkout with its gateway. If you're GoKwik's head of product, what do you build, what do you partner on, and what do you exit?\"",
+  "source_and_verification": "Synthetic (written by the authors in GoKwik style; no reported interview source). Grounded in gokwik_product_teardown research: Shop Pay India entry reportedly by Q1 2027 (Inc42, 15 Oct 2026, unconfirmed by Shopify) [uncertain]; Shopify-Google Universal Commerce Protocol announced 11 Jan 2026 at NRF; Razorpay Magic Checkout pricing about 0.65-0.75% add-on (razorpay.com/magic); GoKwik pricing page (gokwik.co, Emerging plan Rs 3,000/month + 3.5%); GoKwik x PayU ChatGPT shopping (28 Jul 2026). Year: 2026.",
+  "context_as_of": "As of Nov 2026 (gokwik_product_teardown/results). GoKwik (founded 2020, Gurugram; CEO Chirag Taneja) sells KwikCheckout (OTP login, network address prefill, COD risk scoring with 70+ interventions), KwikPass (identity), KwikEngage (WhatsApp/AI voice), Kwik Ads (agentic Meta ads, 2026), Kwik Ship (May 2026) and Return Prime. Claims 20,000+ brands (likely installs, not active payers) and 220M+ shopper identities/signals (the website also says 50M+); ARR $30M+ (Mar 2025, company-reported); Adj. EBITDA positive in Oct 2026 (non-GAAP, unaudited); total funding about $68-72M, last valued about $481M (Jun 2025). It is not a payment aggregator and partners with PayU (integrated stack Mar 2026; ChatGPT multi-brand shopping Jul 2026). Rivals: Razorpay Magic Checkout bundles checkout with its gateway at a reported 0.65-0.75% add-on, and Razorpay is heading to an IPO (DRHP Jun 2026, SEBI nod reported Nov 2026); Shopflo was acquired by Pine Labs (Jun 2026, about Rs 88 cr reported); Shiprocket (Fastrr checkout) listed in Aug 2026; Juspay Breeze and Snapmint also compete. Shopify: Shop Pay (one-tap wallet) reportedly launching in India by Q1 2027 [uncertain]; UCP and Agentic Storefronts let shoppers buy inside Gemini, Google AI Mode, Copilot and ChatGPT using Shopify's own checkout APIs; Shopify Payments penetration 68% globally (Q3 2026). GoKwik's Shopify App Store rating is 4.7 (400 reviews), with complaints about support, KYC and billing. Its core dependency: third-party checkouts replace or overlay Shopify checkout, so Shopify API or policy changes can squeeze them. Stale-risk flags: Shop Pay India timing unconfirmed; GoKwik financials vary across aggregators; the $22.5M 2026 round is unverified.",
+  "regulatory_context": "(1) RBI Payment Aggregator directions: GoKwik isn't a PA, so it relies on licensed partners (PayU and others) for settlement; becoming a PA would need RBI authorisation and net-worth requirements (Rs 15 cr at application, Rs 25 cr within three years) [uncertain on current thresholds], which is a reason to partner rather than build. (2) RBI card-on-file tokenisation (2022): checkout layers can't store raw card data, which limits wallet-style one-click without network tokens. (3) DPDP Act 2023 and DPDP Rules (notified Nov 2025, main obligations from about 13 May 2027): the cross-merchant identity network (SSO, address prefill, fingerprinting) needs specific, informed consent and clear fiduciary/processor roles, and the Oct 2025 privacy policy relies on consent-by-use, a material risk to GoKwik's data moat. (4) CCPA Dark Patterns Guidelines 2023: CCPA probed COD fees as drip pricing (Oct 2025) and fined platforms in 2026; GoKwik's COD-fee and hidden-COD levers expose merchants and possibly GoKwik. (5) Consumer Protection (E-Commerce) Amendment Rules 2026 (effective 1 Jan 2027) further restrict hidden fees. (6) NBFC partner rules for BNPL/EMI (RBI digital lending guidelines 2022/2025): GoKwik 'does not extend credit', so it carries low direct exposure.",
+  "public_data_anchors": "GoKwik: 20,000+ brands claimed (gokwik.co, Nov 2026); 220M+ shopper identities/signals vs 50M+ shoppers on the same site; ARR $25M (Dec 2024) and $30M+ (Mar 2025), company-reported; FY24 operating revenue about Rs 84.9-109.8 cr depending on source, net loss about Rs 85 cr; Adj. EBITDA positive Oct 2026 (non-GAAP); valuation about $481M post-money (Jun 2025, Entrackr) ; pricing: Emerging plan Rs 3,000/month + 3.5% on transactions for 0-2,000 orders/month (gokwik.co pricing page) ; Razorpay Magic Checkout about 0.65-0.75% add-on to gateway MDR (razorpay.com/magic, reported) ; Shopflo acquired by Pine Labs, Jun 2026 (about Rs 88 cr reported) ; Shopify Payments penetration 68% of GMV (Shopify Q3 2026) ; Shop Pay claims up to 50% higher conversion vs guest checkout (Shopify) ; UCP announced 11 Jan 2026 (Shopify/Google, NRF) ; Shopify App Store: Kwik COD & Checkout 4.7 stars, 400 reviews (Nov 2026) ; vendor case studies: Sanfe RTO 34% to about 10%, Swiss Beauty RTO 15% to 9% (GoKwik-published, not independently audited) - all via gokwik_product_teardown/results/GoKwik_company.json, Razorpay_Magic_Checkout.json and Shopify_Shop_Pay_and_Universal_Commerce_Protocol.json.",
+  "framework_applied": "Product Strategy: Clarify, Context (4 pillars), Recommend (frameworks.md section 2). A strategic-plan question framed as a portfolio (build/partner/exit) under a competitive threat. Step 1 Clarify: success = defensible net revenue retention and path to IPO-grade profitability, not checkout installs; scope = Indian D2C merchants, mostly Shopify; constraint = not a PA, limited capital, DPDP deadline May 2027. Step 2 Context: (1) Company positioning - GoKwik's real assets are the cross-merchant shopper identity graph and COD/RTO risk models, not the checkout UI; strengths = scale, COD expertise, suite breadth; weaknesses = no gateway margin, vendor-claimed metrics, Shopify dependence, SMB support. (2) Customers - enterprise D2C brands with high COD/RTO need proven RTO reduction; SMBs mostly want cheap, simple checkout; shoppers want fast, trusted checkout. (3) Competition - Shopify owns the surface and can launch Shop Pay plus agentic checkout; Razorpay and Pine Labs/Shopflo bundle checkout with payments; Shiprocket bundles with logistics; trend = agentic commerce and checkout commoditisation. (4) Market forces - Shopify has extreme supplier power; merchants have high buyer power on price (0.65% vs 3.5%); low switching cost for checkout UI; DPDP raises the cost of the identity network. Step 3 Recommend: reframe from 'better checkout' to 'the COD trust and identity layer that plugs into any checkout': Build = RTO/COD risk API, lift measurement and a DPDP-grade consent network; Partner = Shopify (be the COD/risk extension inside Shop Pay India and checkout extensibility), PayU for payments, agentic platforms; Exit = the price war for low-COD SMB checkout and the idea of becoming a PA; with phasing, risks and conditions that change the answer.",
+  "clarifying_questions": [
+    "Q: What does GoKwik want to optimise: revenue growth, profitability, or defensibility ahead of an IPO? A: Defensible revenue. We've just hit adjusted EBITDA breakeven and want a story that survives Shop Pay.",
+    "Q: How certain is Shop Pay's India launch and what will it include? A: Assume it launches in Q1 2027 with one-tap prepaid checkout; COD support is unclear.",
+    "Q: What's our revenue mix by merchant segment? A: Illustrative: enterprise and mid-market (above 2,000 orders/month) are 70% of revenue and 15% of merchants; SMBs are 85% of merchants and 30% of revenue.",
+    "Q: Which products earn the money? A: Checkout plus COD/RTO suite is about 70% of revenue; Engage, KwikPass, Ship, Return Prime and Ads the rest (illustrative).",
+    "Q: Are we willing to become a payment aggregator? A: Not decided. It's on the table but would need RBI authorisation and capital.",
+    "Q: Which platforms besides Shopify matter? A: WooCommerce and custom stacks are a small share; Shopify is about 85% of merchants (illustrative).",
+    "Q: Constraints? A: Headcount roughly flat, and the DPDP consent obligations land around May 2027."
+  ],
+  "interviewer_data_reveals": [
+    "Exhibit 1 (illustrative) - Merchant segments: Enterprise/mid-market (15% of merchants, 70% of revenue, COD share of orders 55-65%, net revenue retention 118%); SMB (85% of merchants, 30% of revenue, COD share 35%, logo churn 4.5% per month).",
+    "Exhibit 2 (illustrative) - Lost-deal reasons last two quarters: price vs Razorpay Magic 46%, 'bundled with our gateway' 21%, support 14%, couldn't prove lift 12%, other 7%.",
+    "Exhibit 3 (real, vendor-claimed) - RTO outcomes from GoKwik case studies: Sanfe 34% to about 10%; Swiss Beauty 15% to 9%; Pepe Jeans -40% RTO (GoKwik-published, not independently audited).",
+    "Exhibit 4 (illustrative) - Where value is created per Rs 1,000 COD order for a typical fashion D2C brand: RTO avoided Rs 38, conversion uplift Rs 22, address prefill/speed Rs 6. Checkout UI features are commoditised; RTO savings are not.",
+    "Exhibit 5 (real) - Price points: GoKwik Emerging plan Rs 3,000/month + 3.5%; Razorpay Magic about 0.65-0.75% add-on (gokwik.co; razorpay.com/magic).",
+    "Exhibit 6 (illustrative) - Module attach: 38% of enterprise merchants use 2+ modules; their logo churn is a third of single-module merchants."
+  ],
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "Shopify and Razorpay are pushing native checkouts. What should GoKwik build, partner on, or exit?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Let me clarify the threat first. Is the Shopify piece Shop Pay launching in India, plus agentic checkout through UCP, and the Razorpay piece Magic Checkout bundled cheaply with its gateway?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Yes. Assume Shop Pay arrives in Q1 2027 with one-tap prepaid checkout. COD support is unclear."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "And what are we optimising for: growth, profit, or defensibility?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Defensible revenue. We just hit adjusted EBITDA breakeven and want a story that survives Shop Pay."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Can I see how revenue splits across merchant segments?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Enterprise and mid-market are 15% of merchants and 70% of revenue, with COD at 55-65% of their orders and 118% net revenue retention. SMBs are 85% of merchants and 30% of revenue, 35% COD and 4.5% monthly logo churn. Illustrative."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's already telling. I'll use the strategy structure: four context pillars, then a build/partner/exit recommendation. Pillar one, GoKwik's position. Its mission is to raise conversion and cut COD losses for Indian D2C. It earns SaaS fees plus a take on checkout GMV, about 70% from checkout and COD. Its real assets aren't the checkout screen. They're the cross-merchant shopper identity graph and the RTO risk models trained on hundreds of millions of orders. Weaknesses: no gateway, so no payments margin to subsidise price; vendor-claimed metrics no one can verify; heavy Shopify dependence; and weak SMB support."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Why do we lose deals?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'd guess price. Do you have reasons?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "46% price versus Razorpay Magic, 21% bundled with their gateway, 14% support, 12% couldn't prove lift."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So two-thirds of losses are about bundling and price. GoKwik can't win those structurally: Razorpay can charge 0.65% because the gateway MDR pays the bill, while we charge 3.5% on the SMB plan. And 12% 'couldn't prove lift' is the one we can fix, because it's about evidence, not price. Pillar two, customers. Three types. Enterprise D2C fashion and beauty brands with heavy COD: RTO is a P&L line for them, a 30% RTO can wipe out the margin, so they pay for risk reduction. SMBs with low COD: they mostly want a cheap, fast checkout, and Shop Pay or Magic is good enough. Shoppers: they want one-tap and trust, and they don't know GoKwik's brand."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Here's value per Rs 1,000 COD order: RTO avoided Rs 38, conversion uplift Rs 22, prefill and speed Rs 6."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That confirms where to stand. The UI layer, prefill and speed, is worth about Rs 6, and that's exactly what Shop Pay commoditises. The RTO layer is worth Rs 38 and nobody native does it well for Indian COD. Pillar three, competition. Shopify controls the surface: it owns checkout extensibility, app rules and now agentic checkout, so it can make overlays harder at any time. Razorpay and Pine Labs-Shopflo bundle checkout with payments. Shiprocket bundles with logistics and has IPO money. The big trend is agentic commerce: when a shopper buys inside Gemini or ChatGPT through UCP, there's no checkout UI to replace at all. So any strategy built on owning the checkout screen is shrinking."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "And market forces?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Pillar four. Supplier power: Shopify is a dominant supplier, roughly 85% of our merchants, and it's also becoming a competitor. Buyer power: merchants have high price power because switching checkout is an uninstall away. Threat of entry: low barriers for a checkout UI, high barriers for a risk graph trained on years of COD outcomes. Regulation cuts both ways. DPDP consent by May 2027 threatens the identity network if we don't fix consent, and CCPA's dark-pattern stance on COD fees means our 'COD fee' lever needs to become transparent."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "So what's the plan?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Reframe: GoKwik should stop selling a checkout and start selling COD trust: the risk and identity layer that plugs into any checkout, including Shop Pay, Magic and AI agents. BUILD: one, a RTO and COD risk API that works headless, at order creation, inside any checkout or agent order, and pre-dispatch through Kwik Ship. Two, a lift ledger: holdout-based proof of incremental RTO savings and conversion per merchant, which addresses the 12% 'couldn't prove lift' and lets us price on outcomes. Three, a DPDP-grade consent network: explicit cross-brand opt-in and a consent dashboard, so the identity graph becomes legally durable when rivals' graphs may not be."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "And partner?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "PARTNER: one, Shopify. Instead of fighting Shop Pay, try to become the COD and risk extension inside it through checkout extensibility and functions, because Shop Pay is prepaid-first and India's D2C is still COD-heavy. Two, PayU for payments, already live, so we never need a PA licence; negotiate gateway revenue share so we can bundle price against Razorpay. Three, agentic platforms, ChatGPT through PayU already and UCP next, offering trusted COD or verified prepaid for agent-placed orders. Four, carriers through Kwik Ship, so risk scores reach the dispatch step."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What do you exit?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "EXIT: one, the price war for low-COD SMB checkout. Don't chase Razorpay to 0.65% for merchants who mostly need a fast prepaid button. Move them to a self-serve, low-touch risk-only plan or let them go, which also fixes the support complaints concentrated in that tail. Two, the idea of becoming a payment aggregator: RBI licensing and capital for a margin Razorpay already owns. Three, any new standalone point product that doesn't strengthen the identity or risk graph. Attach rate matters: multi-module merchants churn at a third of the rate."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Won't exiting SMBs shrink the shopper network?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Partly. Some SMB volume feeds the graph. That's why I'd keep a free or cheap risk-API tier for SMBs instead of dropping them, because it keeps their order outcomes in the network without us subsidising a full checkout and CSM support. The graph needs their data, not our checkout UI on their store."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How would you sequence this?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Phase 1, next two quarters: ship the headless risk API and the lift ledger to the top 300 enterprise merchants, launch DPDP consent, and open Shopify partnership talks before Shop Pay lands. Phase 2, Q1-Q2 2027: price enterprise on outcomes, a share of verified RTO savings, and move SMBs to the risk-only plan. Phase 3: risk for agentic orders across UCP and ChatGPT, then sell the risk API to non-Shopify platforms and marketplaces."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Metrics?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "North star: verified RTO savings delivered per month across merchants, because that's the value we capture. Inputs: share of revenue from risk/identity products versus checkout UI, enterprise net revenue retention, modules per merchant, and risk API calls from non-GoKwik checkouts. Guardrails: shopper conversion on merchants using the risk API, false-positive COD blocks on genuine buyers, consent opt-in rate, and gross margin."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Risks?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Shopify could refuse a partnership or build COD risk itself. Mitigation: the API also works server-side through order webhooks and Kwik Ship, so we don't need checkout access. Outcome pricing could lower revenue at first. Mitigation: a floor fee plus a savings share. Consent friction could shrink the graph. Mitigation: value exchange for shoppers, faster checkout and COD eligibility, in return for opt-in. And if Shop Pay launches with strong COD and Shopify opens its own risk scoring, I'd accelerate the move to non-Shopify platforms and marketplaces, where our COD data is still unique."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Close it."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "GoKwik can't win a checkout price war against companies that give checkout away. It should own what Shopify and Razorpay don't have, Indian COD trust: build the risk API, proof and consent; partner with Shopify, PayU and AI agents for distribution; and exit cheap SMB checkout and the PA dream."
+    }
+  ],
+  "answer_and_recommendation": "Reframe: from 'India's best checkout' to 'the COD trust and identity layer that plugs into every checkout'. BUILD (ranked): (1) headless RTO/COD risk API usable at order creation, inside any checkout or agent order, and pre-dispatch via Kwik Ship; (2) a holdout-based 'lift ledger' that proves incremental RTO savings and conversion per merchant, enabling outcome-based pricing; (3) a DPDP-grade cross-brand consent network to make the identity graph legally durable before May 2027. PARTNER: Shopify (be the COD/risk extension in Shop Pay India and checkout extensibility), PayU (payments and gateway revenue share; no PA licence), agentic platforms (ChatGPT via PayU, then UCP) and carriers. EXIT: the price war for low-COD SMB checkout (move SMBs to a cheap risk-only tier that still feeds the graph), the idea of becoming a payment aggregator, and point products that don't strengthen the graph. Risks and mitigation: Shopify blocks or copies (server-side/webhook risk API and non-Shopify expansion); outcome pricing dents near-term revenue (floor fee plus savings share); consent friction shrinks the graph (shopper value exchange); vendor claims lose credibility (independent holdout audits). Conditions that change the answer: if Shop Pay launches without COD and invites partners, double down on Shopify; if Shopify builds native COD risk, pivot harder to marketplaces and non-Shopify platforms. Closing line: 'Don't fight for the checkout button that Shopify and Razorpay give away. Own Indian COD trust, prove it with holdouts, and plug it into every checkout, including the ones run by AI agents.'",
+  "counter_metrics_guardrails": "Shopper checkout conversion on merchants using the risk API (risk controls must not cut good orders); false-positive COD blocks or hidden-COD rate for genuine first-time buyers; CCPA-compliant fee disclosure (COD fees shown upfront); consent opt-in and withdrawal rates under DPDP; gross margin and Adj. EBITDA (outcome pricing must not push back into losses); enterprise logo churn and net revenue retention; SMB churn after tier migration and the share of network order outcomes lost; support ticket resolution time; dependency share of revenue from Shopify merchants.",
+  "follow_up_twists": [
+    "Twist: 'Shopify launches Shop Pay in India with built-in COD and its own fraud scoring.' Response: Our edge narrows to Indian COD data depth, so sell the risk API to marketplaces, WooCommerce, custom stacks and logistics players, and offer Shopify our scores as a data partner rather than compete for the surface.",
+    "Twist: 'Razorpay offers enterprise brands Magic Checkout free for a year.' Response: Don't match on price. Offer a holdout-tested RTO guarantee (pay only on verified savings) and position our risk API to run alongside Magic Checkout instead of replacing it.",
+    "Twist: 'Investors want GoKwik to become a payment aggregator to capture MDR.' Response: That means RBI authorisation, capital and competing in Razorpay's strongest area; a negotiated revenue share with PayU captures most of the economics without the licence risk."
+  ],
+  "common_pitfalls": [
+    "Answering 'build a better checkout with more features'. The UI layer is being commoditised by Shop Pay and gateway bundles, and agentic checkout removes the UI altogether.",
+    "Trying to match Razorpay on price. Razorpay subsidises checkout with gateway MDR, and GoKwik has no payments margin to fund a 0.65% price.",
+    "Treating the shopper network as a secure moat without addressing DPDP consent, or taking vendor case-study numbers (+40% conversion) as proof instead of asking for holdout evidence.",
+    "Exiting SMBs entirely without noticing that their order outcomes feed the risk graph. Keep them on a cheap risk-only tier instead."
+  ],
+  "skills_tested": "structuring, business sense, prioritisation, quant, execution, communication",
+  "linked_teardown": "gokwik_product_teardown (gokwik_product_teardown/results/ and teardown_proof_problem.md): key facts used are GoKwik's 3.5% Emerging-plan fee vs Razorpay Magic's about 0.65-0.75% gateway-bundled add-on, the claim that Shop Pay is coming to India by Q1 2027 (Inc42, unconfirmed), Shopify's control of checkout extensibility and UCP, GoKwik's non-PA status and PayU partnership, the DPDP and CCPA COD-fee exposure, and the teardown's 'Proof Problem' thesis (merchants can't verify lift, so price fills the vacuum), which motivates the lift-ledger build.",
+  "uncertain": [
+    "source_and_verification",
+    "context_as_of",
+    "regulatory_context"
+  ]
+}

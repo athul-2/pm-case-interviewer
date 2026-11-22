@@ -1,0 +1,152 @@
+{
+  "pun_title": "Lost in Translation",
+  "case_type": "Product Design",
+  "asked_at": "Razorpay (PracHub, reported Oct 2025)",
+  "subject_company": "Hypothetical new-entrant OTT platform for native-language content (reference players: STAGE, aha, Hoichoi, Sun NXT, ManoramaMAX, JioHotstar)",
+  "round_and_level": "PM interview at Razorpay; PracHub lists the round as 'Other'; role: Product Manager. Level not stated (likely PM / APM) [uncertain]",
+  "difficulty": "Medium (PracHub rating) - an open-ended consumer design question outside Razorpay's core payments domain, so it tests product sense, segmentation and the economics of content",
+  "market_and_industry": "India; OTT / video streaming (media and entertainment); native-language and dialect audiences in Tier 2-4 towns and diaspora (e.g. Haryanvi, Rajasthani, Bhojpuri, Telugu, Bengali, Malayalam); mobile-first on entry-level Android plus growing connected TV; price-sensitive (Rs 1-3 a day)",
+  "time_box_minutes": "35-45",
+  "exact_prompt": "Design an over-the-top (OTT) video streaming platform centered on content in its viewers' native language. Explain who you would build it for, which problems you'd solve first, what the first version includes, and how you'd measure success.",
+  "source_and_verification": "Verification: reported. PracHub, 'Designing a Streaming App Built Around Native-Language Films and Shows' - Razorpay, Product Manager, Product Design & Strategy, Medium, dated 17 Oct 2025 (page updated 23 Oct 2026): https://prachub.com/interview-questions/designing-a-streaming-app-built-around-native-language-films-and-shows ; company listing: https://prachub.com/companies/razorpay/positions/product-manager . PracHub's listed follow-ups: early churn within two weeks; when to add a second language; a big streamer buying exclusive rights in your language. The prompt above is a paraphrase of the PracHub text. Not found on NextLeap, The Product Folks, AmbitionBox or Glassdoor (searched Nov 2026).",
+  "context_as_of": "As of 2026-11-11. (1) Market: the Ormax OTT Audience Report 2026 (fieldwork Jun-Jul 2026, n=15,000) sizes India's OTT universe at 664.9 mn (45% of the population, +11% YoY), with 172.6 mn active paid subscriptions (+16%), connected TV audience 206.9 mn (+60%), and average watch time 14.9 hrs/week. Micro dramas grew 50% (https://www.ormaxmedia.com/stories/the-ormax-ott-audience-report-2026.html). (2) Incumbent: JioHotstar (after the JioCinema + Disney+ Hotstar merger into JioStar, Feb 2025) averaged 451 mn MAU in FY26 (RIL AGM, Jun 2026), with about 300 mn paid subscriptions claimed at the Aug 2025 AGM (https://www.indiainfoline.com/news/business/jiohotstar-now-worlds-second-biggest-streaming-platform-with-300-million-paid-users-says-akash-ambani). JioStar reported about 440 mn monthly users in a later quarter [uncertain on date]. JioHotstar launched 'Tadka', a micro-drama tab, on 3 Apr 2026, and claimed 100 mn users in 8 weeks (https://www.hollywoodreporter.com/business/business-news/jiohotstar-tadka-100-million-users-india-microdrama-market-1236619270/). Bigg Boss in six languages reached 90 mn+ viewers in three weeks. (3) Native-language specialists: STAGE (Haryanvi, Rajasthani, Bhojpuri; $12.5 mn Series B led by Goodwater and Blume, Mar 2025; 4.4 mn paying households; Rs 180 cr ARR; plans for 18 more dialects) (https://www.tribuneindia.com/news/business/lights-camera-culture-stage-secures-12-5m-series-b-to-lead-indias-regional-ott-revolution). Regional platforms aha, Hoichoi, Sun NXT and ManoramaMAX have high paid shares (up to 85% of ManoramaMAX users pay, Ormax 2025). (4) Demand signal: the Telugu film The RajaSaab was the most-watched non-Hindi Indian film on OTT in H1 2026 (17.5 mn viewers; Ormax watchlist). A secondary claim that regional languages passed 50% of OTT time spent in CY2025 is unverified. (5) International comparison: HSBC (Jan 2026) estimated Netflix at about 20 mn and Prime Video at about 65 mn paying users in India. Possibly stale: JioHotstar MAU and paid numbers (company-reported); STAGE metrics (self-reported, Mar 2025).",
+  "regulatory_context": "(1) IT (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021, Part III: OTT publishers must follow the Code of Ethics, classify content by age (U, U/A 7+, U/A 13+, U/A 16+, A), add content descriptors and parental locks, and join a three-tier grievance system (self-regulatory body plus MIB oversight). (2) Draft IT (Digital Code) Rules 2026 and the March 2026 draft Second Amendment propose tighter obscenity rules and mandatory age classification across platforms; still drafts as of the latest sources [uncertain on final status] (https://vajiramandravi.com/current-affairs/draft-it-rules-2026-for-online-obscenity/). The Broadcasting Services (Regulation) Bill draft (2023) appears shelved. (3) Enforcement risk: MIB blocked 25 OTT apps for obscene content in July 2025 and 5 more in Feb 2026 [uncertain on counts], which matters for low-cost regional platforms where adult-leaning content is a common growth shortcut. (4) MIB accessibility guidelines for OTT (6 Feb 2026) expect subtitles, audio description and accessible players. (5) Payments: RBI e-mandate rules for recurring card/UPI Autopay (additional factor of authentication above Rs 15,000; pre-debit notification) shape subscription design. UPI Autopay is key for Bharat pricing. (6) DPDP Rules 2025 (notified 13 Nov 2025; full compliance about May 2027): consent for viewing-data personalisation, children's data (verifiable parental consent under 18). (7) Copyright Act and licensing: music and film rights per language; dubbing needs derivative rights.",
+  "public_data_anchors": "1) OTT universe 664.9 mn; paid subscriptions 172.6 mn; CTV 206.9 mn; 14.9 hrs/week (Ormax OTT Audience Report 2026: https://www.ormaxmedia.com/stories/the-ormax-ott-audience-report-2026.html). 2) JioHotstar about 451 mn average MAU in FY26 (RIL AGM, Jun 2026, via HDFC Sky); about 300 mn paid (Aug 2025 AGM). 3) Tadka micro dramas 100 mn users in 8 weeks after its 3 Apr 2026 launch (Hollywood Reporter). 4) STAGE: 4.4 mn paying households, Rs 180 cr ARR, $12.5 mn Series B, Mar 2025 (Tribune India / Inc42). That implies roughly Rs 400 ARR per household, about Rs 1.1 a day. 5) Netflix about 20 mn, Prime Video about 65 mn paying users in India (HSBC, Jan 2026, via Ragalahari/Outlook Business) [uncertain]. 6) The RajaSaab (Telugu) 17.5 mn OTT viewers, Jan-Jun 2026 (Ormax watchlist PDF: https://www.ormaxmedia.com/data/library/TheIndiaOTTWatchlist-OrmaxStreamView-Jan-Jun2026.pdf). 7) Up to 85% of ManoramaMAX users are paid (Ormax 2025). 8) India population about 1.45 bn; Hindi-belt dialect speakers - Bhojpuri about 50 mn+ and Rajasthani about 25 mn+ native speakers per Census 2011 [uncertain - old census].",
+  "framework_applied": "CIRCLES + List-and-Trim + JTBD (frameworks.md section 1), with a content-economics check because the prompt asks about catalogue and pricing. C - Comprehend: goal = a new entrant reaching paid retention in one language market (not reach); scope = discovery, playback, pricing, catalogue supply for V1; who am I = founding PM of a new native-language OTT; constraints = a limited content budget, a phone-first audience, 2G/4G networks, giants with deep pockets (JioHotstar). I - Identify: viewers (dialect-belt families in Tier 2-4 towns, migrant workers in metros missing home-language content, diaspora, Gen-Z regional viewers on micro dramas) and suppliers (local creators, regional studios, legacy film libraries); pick Haryanvi/Rajasthani-style dialect families in small towns plus migrants in NCR (underserved by Hindi-default giants, high emotional pull). R - Report needs as JTBD: find stories in my own boli, not dubbed Hindi; watch without buffering on cheap data; pay small amounts without a card; watch together on the family TV; trust that the content is family-safe. C - Cut: prioritise 'a steady supply of authentic dialect stories' plus 'cheap, easy payment', because content drives retention and the paywall drives the business. L - List: safe = curated licensed regional films plus a dialect-first UI, voice search and Rs 1/day UPI Autopay; ambitious = a creator-studio programme commissioning low-cost originals and micro dramas in each dialect, with data-led greenlighting; visionary = AI-assisted dubbing/subtitling into micro-dialects plus a community 'gaon screening' mode on CTV. E - Evaluate: impact vs effort plus content cost per watch hour, edge cases (dialect variation, piracy, adult-content pressure), competitors (STAGE, Tadka, YouTube, ShareChat/Moj). S - Summarise: launch in one dialect with originals plus a library and Rs 1/day UPI pricing, measured by paid subscribers watching 3+ hours/week, with guardrails on churn, content cost per hour and playback quality.",
+  "clarifying_questions": "1) Q: Which market and languages - one language or many, home region or diaspora? A: India; your call, but justify it. 2) Q: Goal for V1 - reach, engagement or paid subscribers? A: A new entrant needs to prove people will pay and stay. 3) Q: Who am I - a new startup, or a big company's new product? A: Venture-funded startup, about Rs 100 cr for 2 years. 4) Q: Devices - phone only, or smart TV and web too? A: Phone first, but CTV is growing fast. 5) Q: Catalogue - licensed, originals, creators or a mix? A: Open; content cost is your biggest constraint. 6) Q: Should I cover technical issues like low-bandwidth streaming and native-script UI? A: Briefly, yes. 7) Q: Ads or subscription? A: Your call; justify it.",
+  "interviewer_data_reveals": "Exhibit 1 - Language-market screen (illustrative): \n| Language | Native speakers (mn) | Served by big OTTs? | Paying intent (survey) | Content cost/hr (Rs lakh) |\n| Telugu | 80+ | Yes (aha, JioHotstar, Prime) | High | 40-150 |\n| Bengali | 95+ | Partly (Hoichoi) | Medium | 15-50 |\n| Haryanvi | 10-15 | Barely (STAGE) | Medium-high | 3-8 |\n| Rajasthani | 25+ | Barely (STAGE) | Medium | 3-8 |\n| Bhojpuri | 50+ | YouTube-heavy | Low-medium | 2-6 |. Exhibit 2 - Beta cohort, Haryanvi, 3 months (illustrative): installs 1.2 mn; trial started 28%; trial-to-paid 34%; week-2 drop-off among paid users 41%; reasons for drop: 'finished the 2-3 shows I liked' 46%, 'buffering' 21%, 'payment failed on renewal' 14%. Exhibit 3 - Content consumption (illustrative): originals are 22% of the catalogue hours but 61% of watch time; micro-drama episodes (1-2 min) have 3x the completion rate of 2-hour films on phones; 18% of watch time is on CTV, rising monthly. Exhibit 4 - Real anchors: 664.9 mn OTT users, 172.6 mn paid subscriptions (Ormax 2026); STAGE 4.4 mn paying households and Rs 180 cr ARR (Mar 2025); Tadka 100 mn users in 8 weeks (2026).",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "Design an OTT platform built around native-language content. Who's it for, what do you solve first, what's in V1, and how do you measure success?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Let me restate: a streaming product where the main proposition is content in the viewer's own language, not dubbed Hindi or English. First, some clarifications. Is this India? And are we a startup or part of a large company?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "India. A venture-funded startup with roughly Rs 100 crore for two years."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then the goal for V1 should be proving that one language audience will pay and keep watching - paid retention rather than reach - because we can't outspend JioHotstar on reach. Device - phone first?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Yes, phone first, but connected TV is growing. Content cost is your biggest constraint. Ads or subscription is your call."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Context I'll use: Ormax 2026 puts India's OTT audience at about 665 mn, but only about 173 mn paid subscriptions. The giants serve Hindi, Tamil, Telugu and Malayalam reasonably well, but dialect audiences are mostly left to YouTube. STAGE's numbers - about 4.4 mn paying households on roughly Rs 1 a day - show the dialect space can pay. Now, segments. Viewers: (1) Telugu/Tamil/Malayalam viewers in big markets, already well served; (2) dialect-belt families in small towns - Haryanvi, Rajasthani, Bhojpuri, Bundeli; (3) migrants in metros who miss home-language stories; (4) diaspora; (5) Gen-Z regional viewers who now watch micro dramas. Suppliers: local creators and theatre groups, regional studios, and legacy film libraries."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Which language would you pick?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Could you share any data on the language markets?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Here's a screen. Telugu has 80 mn+ speakers but is well served and content costs Rs 40-150 lakh an hour. Bengali is partly served. Haryanvi and Rajasthani are barely served, with medium-high paying intent and Rs 3-8 lakh per hour. Bhojpuri is big but YouTube-heavy, with low paying intent."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'll choose Rajasthani as the launch language, with Haryanvi as a possible alternative. It's underserved and has decent paying intent; content is 10-20x cheaper per hour than Telugu, so Rs 100 crore buys a real library; and there's a large migrant base in Delhi, Mumbai, Surat and the Gulf. My persona: Mahendra-ji's family in Nagaur - parents, two kids, one shared Rs 9k Android phone and a new 32-inch smart TV - plus his brother, who drives in Surat and watches on breaks."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Okay, what are their needs?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "As JTBD: (a) When we sit down as a family in the evening, we want stories in our own boli with our own culture, so we feel it's ours. (b) When I'm on a slow connection, I want it to play without buffering, so I don't give up. (c) When I pay, I want small, predictable amounts by UPI, without a card. (d) When my kids are around, I want to trust the content is family-safe. (e) When I finish what I came for, I want to find the next thing quickly, in my language, even by voice."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "We ran a beta. Trial-to-paid is 34%, but 41% of paying users drop off in week 2. Of those, 46% said they 'finished the 2-3 shows they liked', 21% blamed buffering and 14% had renewal payment failures."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's very telling. Users are willing to pay, but the catalogue runs dry - that's need (a), supply depth. Buffering is need (b), and payment failures are need (c). On pain, frequency, workarounds and business fit: catalogue depth is the main problem, and the workaround is YouTube, which is free. Payment failure is lower pain but the easiest fix. So my priorities are a steady supply of authentic content, then reliable cheap payment and playback."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Solutions?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Three. SAFE - a dialect-first V1: licence the back catalogue of Rajasthani films and folk music; the UI in Rajasthani and Hindi in Devanagari; voice search in the dialect; adaptive bitrate down to 240p plus downloads for offline viewing; and Rs 1-a-day pricing with UPI Autopay (about Rs 299 a year) and a sachet Rs 9 weekly pass. AMBITIOUS - 'Apno Studio': a creator programme that commissions low-cost originals at Rs 3-8 lakh an hour from local writers and theatre talent, with a weekly release calendar so there's always something new, and micro-drama formats for phones. Greenlighting is data-led, based on which trailers, songs and themes get watched. VISIONARY - AI-assisted dubbing and subtitling into neighbouring dialects (Marwari to Mewari to Haryanvi) to reuse each original across markets, plus a 'gaon screening' CTV mode for a group or community watch."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Evaluate them."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Impact vs effort:\n| Idea | Impact on paid retention | Effort/cost | Key risk |\n| Dialect-first V1 + low-bandwidth player + Rs 1/day UPI Autopay | Medium - fixes buffering and payment, not catalogue depth | Low-medium | Library runs out fast |\n| Apno Studio originals + weekly release calendar + micro dramas | High - originals are 22% of hours but 61% of watch time in the beta | Medium-high, but cheap per hour in dialects | Hit rate; quality control |\n| AI dubbing across dialects + community CTV | High, and a long-term cost advantage | High; quality risk | Dubbing feels inauthentic, which breaks the core promise |\nEdge cases: dialect variation inside Rajasthan (Marwari vs Mewari), piracy on Telegram and WhatsApp, pressure to grow with adult content (which the IT Rules 2021 Code of Ethics and MIB enforcement make risky; 25 apps were blocked in 2025), shared phones and kids' profiles. Competitors: STAGE is the direct rival in this space; JioHotstar's Tadka shows the big players are moving into short-form regional content; YouTube is the free substitute."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What's V1, then?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "V1 is the safe option plus the core of Apno Studio: launch in Rajasthani with a licensed library and at least two originals plus four micro-drama series a month on a fixed weekly calendar, a low-bandwidth player with downloads, a native-script UI with voice search, family and kids' profiles with age ratings, and Rs 1-a-day UPI Autopay with smart retries on renewal. The AI dubbing and community mode come in V2, once we know which originals travel."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How would you measure success?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "North star: paid subscribers who watch at least 3 hours a week - that captures both money and value. Supporting metrics: trial-to-paid conversion (34% to 40%), week-4 and month-3 paid retention, originals' share of watch time, new-release watch rate in the first 7 days, renewal payment success rate (above 95%), and CTV share of watch time. Guardrails: content cost per watch hour (must fall as originals get reused), rebuffering ratio and video start time on 2G/3G, churn after price changes, complaints and age-rating violations, and piracy leak rate for new originals."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Follow-up: a month after launch, users sign up but stop watching within two weeks. What do you do first?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Split the drop by reason: catalogue exhausted, playback or payment. From the beta, catalogue is about half of it, so I'd shift the release plan to weekly episodic content and micro dramas rather than big films, and add 'continue watching' and 'new this week' notifications in the dialect. In parallel, fix the 14% renewal failures with UPI Autopay retries and pre-debit notifications."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "When would you add a second language?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "When the first one hits target paid retention - say 35% of paid users still active at month 3 - and content cost per watch hour is below a threshold. I'd pick the next language by overlap: Haryanvi shares talent and audience with Rajasthani, so originals can be reused through dubbing and the cost of entry is lower."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "JioHotstar starts buying exclusive rights to the biggest new Rajasthani films. Your response?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Don't fight on big film rights - they'll outbid us. Our edge is a steady supply of low-cost originals, creator relationships with exclusive first-look deals, and community depth. I'd also explore licensing our originals to them, or bundling with telcos, to monetise reach. Big films are an occasional event; our weekly originals are the habit."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Summarise."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "We'd build for dialect audiences the giants don't serve, starting with Rajasthani families and migrants. The core problem is catalogue depth, followed by playback and payment, so V1 is a dialect-first, low-bandwidth app at Rs 1 a day, with a weekly calendar of cheap originals and micro dramas. Success is paid subscribers watching 3+ hours a week, with guardrails on content cost per hour, playback quality and age-rating compliance. My closing line: the giants translate content into your language - we make it in your language, so nothing gets lost in translation."
+    }
+  ],
+  "answer_and_recommendation": "Ranked options: (1) RECOMMENDED V1 - a dialect-first platform launched in one underserved language (Rajasthani, Haryanvi as alternative), combining a licensed library with 'Apno Studio' originals and micro dramas on a fixed weekly release calendar, a low-bandwidth player with downloads, a native-script UI with dialect voice search, family/kids' profiles with IT Rules age ratings, and Rs 1/day UPI Autopay pricing plus a Rs 9 weekly pass. (2) V2 - AI-assisted dubbing and subtitling into neighbouring dialects, to reuse originals and cut cost per watch hour. (3) V3 - a community CTV 'gaon screening' mode and telco or JioHotstar licensing and bundles for reach. Why: the beta shows paying intent (34% trial-to-paid) but catalogue exhaustion drives 46% of week-2 churn, and originals deliver 61% of watch time from 22% of hours; dialect content is 10-20x cheaper per hour than Telugu. Risks and mitigation: hit-rate risk (data-led greenlighting, many small bets); giants' exclusivity (originals and creator first-look deals); piracy (forensic watermarking, quick releases); adult-content temptation and MIB blocking (strict Code of Ethics compliance and self-regulatory body membership); payment failures (UPI Autopay retries, pre-debit notifications). Closing line: 'The giants translate into your language; we make it in your language - so nothing gets lost in translation.'",
+  "counter_metrics_guardrails": "NSM: paid subscribers watching 3+ hours/week. Guardrails: (1) content cost per watch hour - spending more to raise watch time must not break the economics; (2) playback quality - rebuffering ratio, video start time and failure rate on 2G/3G; (3) paid churn after price or plan changes, and renewal payment failure rate; (4) age-rating and Code of Ethics violations, grievance complaints - protects against MIB action; (5) originals' piracy leak rate within 7 days of release; (6) catalogue freshness - new-release watch share should not fall as micro dramas grow; (7) cannibalisation of long-form watch time by micro dramas (track both, as with Shorts vs long-form on YouTube); (8) DPDP consent withdrawals and children's-data compliance.",
+  "follow_up_twists": "1) 'Signups are strong but users stop watching within two weeks.' -> Split by reason (catalogue exhausted, playback, payment); move to weekly episodic and micro-drama releases with 'new this week' prompts in the dialect, and fix renewal failures with UPI Autopay retries. 2) 'When do you add a second language?' -> Only after month-3 paid retention and cost per watch hour hit target; pick the neighbouring dialect with shared talent and audience (Haryanvi after Rajasthani) to reuse originals through dubbing. 3) 'A large streamer buys exclusive rights to the biggest new releases in your language.' -> Don't fight on tentpoles. Win on a steady supply of cheap originals, creator first-look deals and community. Consider licensing or bundling with the giant for reach.",
+  "common_pitfalls": "1) Picking Hindi, Tamil or Telugu because they are big - those markets are well served by JioHotstar, Prime and aha, and content costs Rs 40-150 lakh an hour; a new entrant cannot win on spending. 2) Treating 'native language' as dubbing or subtitles over Hindi/English content - the value is authentic culture and stories, and AI dubbing used too early can break that promise. 3) Ignoring content economics (cost per watch hour, release cadence, library depth) and designing only UI features such as language toggles and recommendations. 4) Growing with adult-leaning regional content - it may lift installs short term but invites MIB blocking under the IT Rules 2021 and kills family trust.",
+  "skills_tested": "structuring, prioritisation, business sense, empathy, quant, communication",
+  "linked_teardown": "None",
+  "uncertain": [
+    "round_and_level",
+    "context_as_of",
+    "regulatory_context",
+    "public_data_anchors"
+  ]
+}

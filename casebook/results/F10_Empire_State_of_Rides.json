@@ -1,0 +1,154 @@
+{
+  "pun_title": "Empire State of Rides",
+  "case_type": "Guesstimate",
+  "asked_at": "Uber (classic)",
+  "subject_company": "Uber (New York City ride-hail, TLC-licensed high-volume for-hire service)",
+  "round_and_level": "[uncertain] Phone screen or PM round estimation question, APM to PM level; classic question, round not confirmed",
+  "difficulty": "Easy-Medium - a well-known classic; the challenge is choosing demand-side vs supply-side, handling residents vs visitors/commuters, and separating Uber from Lyft and taxis",
+  "market_and_industry": "US; ride-hailing / urban mobility; New York City (five boroughs), TLC-regulated high-volume for-hire vehicles (HVFHV); smartphone app users, mostly Manhattan and airport trips",
+  "time_box_minutes": "10-15",
+  "exact_prompt": "\"How many Uber rides happen in New York City per day?\"",
+  "source_and_verification": "Classic - a staple estimation prompt in PM and consulting prep (estimation-question guides such as Exponent https://www.tryexponent.com/courses/pm/estimation/introduction-estimation-questions, IGotAnOffer https://app.igotanoffer.com/blogs/product-manager/estimation-interview-questions and RocketBlocks https://www.rocketblocks.me/guide/pm/estimation-interviews.php cover this family of 'rides per day in a city' questions). No verbatim Uber-specific Glassdoor report was confirmed in this search. Year: [uncertain] widely circulated since the mid-2010s.",
+  "context_as_of": "As of Nov 2026: (1) NYC TLC licenses Uber and Lyft as High-Volume For-Hire Services (HVFHS) and publishes trip-level records monthly; the HVFHV dataset runs from Feb 2019 onward (TLC data dictionary: https://www.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_hvfhs.pdf). (2) TLC Chair David Do testified in Sept 2025 that the high-volume sector completed about 20 million trips in June 2025, similar to June 2024 - about 667k/day (TLC testimony: https://home4.nyc.gov/assets/tlc/downloads/pdf/agency_hearing_testimon_9_15_25.pdf). (3) An analysis of TLC data put Uber + Lyft HV trips at about 647,821 per day in Sept 2025, +1.2% YoY, with a 76.6% combined share of legal NYC for-hire trips in Aug 2025 (Auto Marketplace Substack: https://automarketplace.substack.com/p/nyc-taxi-medallions-continue-gaining). (4) A third-party analysis of 2025 TLC records counts about 243M HVFHV trips, Uber 176.0M (72%) vs Lyft 67.6M (28%) - about 480k Uber trips/day (dev.to: https://dev.to/ramakrishnachilaka/the-15-per-ride-you-didnt-know-about-what-243-million-nyc-taxi-rides-reveal-2b73) [uncertain, single-author analysis]. (5) Uber also dispatches yellow taxis through its app (since 2024); those are counted as taxi trips, not HVFHV. (6) Congestion pricing started 5 Jan 2025 with a $1.50 per-trip charge on HVFHV trips in the Manhattan zone below 60th St (Uber: https://www.uber.com/us/en/blog/congestion-surcharge). (7) Waymo has begun AV testing in NYC with a TLC/DOT permit [uncertain]; it is not a material trip volume yet. Stale-risk flags: the 2025 Uber/Lyft split is from a third-party analysis; recompute from TLC monthly files for an exact 2026 figure.",
+  "regulatory_context": "(1) TLC licensing: Uber and Lyft are High-Volume For-Hire Services; every trip is reported to TLC, which is why exact numbers exist. (2) Vehicle license cap/pause on new HVFHV licenses since 2018 (with EV and wheelchair-accessible exceptions), which caps supply; TLC publishes periodic license pause reports (Feb 2026: https://www.nyc.gov/assets/tlc/downloads/pdf/license-pause-report-2026-02.pdf). (3) Driver minimum pay standard (per-minute and per-mile rates since 2019, amended June 2025) and utilization rules that limit cruising time, pushing platforms to restrict driver log-ins. (4) Congestion charges: $1.50/trip MTA congestion pricing charge (Manhattan below 60th St, since 5 Jan 2025) on top of the New York State congestion surcharge of $2.75 per HVFHV trip south of 96th St [uncertain amount]. These raise fares and modestly damp demand, but do not change the order of magnitude.",
+  "public_data_anchors": "- NYC population: about 8.3-8.5 million (US Census estimate, 2024-25) [uncertain exact].\n- NYC visitors: about 64-65 million per year (NYC Tourism + Conventions, 2025) [uncertain].\n- HVFHV sector: about 20 million trips in June 2025, about 667k/day - TLC testimony, 15 Sep 2025.\n- Uber + Lyft HV trips: about 647,821/day in Sept 2025, +1.2% YoY - Auto Marketplace Substack (TLC data), 2025.\n- Uber + Lyft share of legal NYC for-hire trips: 76.6% (Aug 2025) - same source.\n- 2025 HVFHV trips: about 243M; Uber 176.0M (72%), Lyft 67.6M (28%) - dev.to analysis of TLC records [uncertain].\n- Implied Uber NYC trips/day: 176.0M / 365 = about 482k/day - derived.\n- Reported Uber figure: 'over half a million' daily NYC trips vs Lyft 200k+ (pulse.bot citing Uber documents, undated) [uncertain].\n- Congestion pricing HVFHV charge: $1.50/trip from 5 Jan 2025 - Uber blog.",
+  "framework_applied": "Guesstimate framework (frameworks.md section 6: Clarify, Pick framework, Constraints/MECE, Calculate, Sanity check). Clarify: Uber-app trips (UberX, Comfort, XL, Black, Pool/Share) completed within NYC's five boroughs, average weekday-weekend day in 2026; exclude Uber Eats and taxis hailed through the Uber app. Pick framework: frequency x penetration on the demand side (people in the city x % who ride Uber x rides per day), because it needs the fewest assumptions; use a supply-side capacity check (drivers x trips per shift) as the second view. Constraints/MECE: segment people present in NYC MECE into residents (by borough density: Manhattan vs outer boroughs), inbound commuters, and visitors; natural constraint = active vehicles x trips/hour under the TLC license pause. Calculate: about 330k resident trips + about 60k commuter trips + about 110k visitor trips = about 500k/day. Sanity check: supply-side 40-45k active drivers x about 15 trips x 72% Uber share = about 470k; matches TLC-implied about 480k/day.",
+  "clarifying_questions": "1. Q: Uber-branded rides only, or all ride-hail including Lyft? A: Uber only.\n2. Q: Which geography - the five boroughs, or the metro area including New Jersey and Long Island? A: The five boroughs; count a trip if it starts in NYC.\n3. Q: Include yellow taxis booked through the Uber app, and Uber Eats deliveries? A: No to both - rides in Uber's own TLC-licensed vehicles.\n4. Q: An average day, or a peak day like New Year's Eve? A: An average day across the week.\n5. Q: All products - UberX, XL, Comfort, Black, shared? A: Yes, all ride products.\n6. Q: Count a shared ride as one trip per passenger or per vehicle trip? A: Per passenger request - but shared is small, don't worry about it.\n7. Q: Current year? A: Yes, 2026.",
+  "interviewer_data_reveals": "Exhibit 1 - People in NYC on an average day (illustrative, rounded from public figures): residents 8.4M (Manhattan 1.6M, outer boroughs 6.8M); inbound commuters about 1.5M on a weekday (about 1.1M averaged over the week); visitors present on an average day about 0.7M (about 65M visitors/year x about 4 nights / 365).\nExhibit 2 - Resident ride-hail behaviour (illustrative): adults (18+) about 80% of residents; share of adults who use Uber at least monthly: Manhattan 50%, outer boroughs 25%; average Uber rides per monthly user: about 6/month.\nExhibit 3 - Visitor behaviour (illustrative): about 50% of visitors use ride-hail during their stay; about 1.5 ride-hail trips per using visitor per day (including airport legs); Uber share of visitor ride-hail about 75%.\nExhibit 4 - Supply side (illustrative): about 80k TLC-licensed HVFHV vehicles; about 50-55% active on an average day; average driver completes about 15 trips per day across a 9-10 hour shift.\nReal anchors on request: HVFHV sector about 20M trips in June 2025 (TLC testimony, Sep 2025); Uber + Lyft about 648k trips/day in Sep 2025 (Substack analysis of TLC data); Uber about 72% of 2025 HVFHV trips (third-party analysis).",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "How many Uber rides happen in New York City per day?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Let me clarify a few things first. Is this Uber only, or all ride-hail including Lyft?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Uber only."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Five boroughs, trips starting in the city? And do we exclude yellow taxis booked through the Uber app and Uber Eats?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Five boroughs, yes. Exclude taxis and Eats - just Uber's own rides."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "And an average day across the week in 2026, not New Year's Eve?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Correct, an average day."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'll use a frequency x penetration framework on the demand side: people in NYC on a given day, times the share who use Uber, times how often. Then I'll cross-check from the supply side with drivers x trips per shift, which has a natural capacity limit because TLC caps the number of licensed vehicles.\nSegments, MECE by who is physically in the city:\n- Residents: Manhattan vs outer boroughs (density and car ownership drive behaviour)\n- Inbound commuters\n- Visitors (tourists and business travellers)"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Here's who is in the city on an average day. [Exhibit 1.]"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Residents first. 8.4M people, about 80% adults, so about 6.7M adults. Manhattan has about 1.6M residents, so about 1.3M adults; outer boroughs about 5.4M adults."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Here's resident behaviour. [Exhibit 2.]"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Manhattan: 50% of 1.3M = 650k monthly users. Outer boroughs: 25% of 5.4M = 1.35M. Total about 2.0M monthly Uber users among residents. At 6 rides a month, that's 12M rides a month, or about 400k a day. Hmm - that feels high for residents alone, because 6 is the average for active users and some of those 'monthly users' ride once. Let me trim the average to 5 rides a month: 10M a month, about 330k a day."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Why trim?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Ride frequency is skewed - a few heavy users in Manhattan take 15-20 a month, but the median user takes 2-3. 5 is a more defensible mean, and I'd rather err low and correct with the sanity check."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Commuters: about 1.1M on an average day. Most come by train - NJ Transit, LIRR, Metro-North - so ride-hail is a last-mile or late-night option. Say 4% take one Uber trip a day: about 45k. Add some intra-day work trips, call it 60k."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Visitors? [Exhibit 3.]"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "About 700k visitors present on an average day. 50% use ride-hail, that's 350k, at 1.5 trips a day = 525k ride-hail trips. Hmm, that's very high. Let me check - 1.5 trips per day for every using visitor seems too many when the subway is the default for tourists. I'll take 1.5 per day only on arrival and departure days, closer to 0.4 on average across the stay. 350k x 0.4 = 140k ride-hail trips, at 75% Uber share = about 105-110k Uber trips."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Adding up:\n| Segment | Uber trips/day |\n| Residents | about 330k |\n| Commuters | about 60k |\n| Visitors | about 110k |\n| Total | about 500k |"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Wait - your resident number is all ride-hail users. Did you apply Uber share there?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Good catch. I defined residents as 'Uber users', so the 2M already excludes Lyft-only users, but many people use both apps. If I'd started from ride-hail users I'd apply roughly a 70-75% Uber share. I'll keep the resident figure but note it as the softest assumption."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Now cross-check it from supply. [Exhibit 4.]"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "About 80k licensed HVFHV vehicles, about 50-55% active on a given day - say 42k. Each does about 15 trips in a shift: 42k x 15 = about 630k ride-hail trips a day across Uber and Lyft. With Uber at about 72-75% of trips, that's about 455-470k Uber trips. My demand-side 500k is within 10%."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Here's a real anchor: TLC said the high-volume sector did about 20 million trips in June 2025."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "20M / 30 = about 667k a day for Uber + Lyft. At about 72% Uber, that's about 480k a day - right between my supply-side 460k and demand-side 500k. So I'll land at about 480-500k, call it half a million."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How does it vary across the week?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Weekdays are driven by commutes and airport runs; Friday and Saturday nights are the peak, maybe 20-25% above a Tuesday. Rain or a subway outage spikes demand further, but supply is capped by the license pause, so surge pricing - not trips - absorbs most of it."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What is the riskiest assumption?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Resident frequency - a change from 5 to 6 rides a month moves the total by about 65k. The supply side is tighter because TLC caps vehicles, which is why I trust the capacity check more as the anchor."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Land it."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "About 500,000 Uber rides happen in NYC on an average day - roughly two-thirds from residents, the rest from commuters and visitors. Supply-side capacity of about 42k active vehicles doing about 15 trips each, at a 72% Uber share, gives about 460k, and TLC's reported about 20M high-volume trips a month implies about 480k for Uber. So: about half a million, plus or minus 10%."
+    }
+  ],
+  "answer_and_recommendation": "Estimate: about 480,000-500,000 Uber rides per average day in NYC (range 430k-550k). Build: residents about 330k (2.0M monthly Uber users x 5 rides/month / 30) + commuters about 60k + visitors about 110k = about 500k. Supply-side cross-check: about 42k active HVFHV vehicles x 15 trips x 72-75% Uber share = about 455-470k. Real-data check: TLC about 20M HVFHV trips in June 2025 = about 667k/day x 72% Uber = about 480k/day. Ranked sensitivities: (1) resident ride frequency; (2) Uber's share vs Lyft (about 72%); (3) visitor trips per day. Risks: Uber/Lyft split is from a third-party analysis of TLC data; weekend and weather swings of +20-25%. Closing line: 'About half a million Uber rides a day - and since TLC caps the fleet, the real ceiling is supply, not demand.'",
+  "counter_metrics_guardrails": "Pure guesstimate, so sanity checks instead of guardrails: (1) Supply-side capacity test - about 42k active vehicles x about 15 trips/day x 72% Uber = about 455k; the demand-side 500k must not exceed what the capped fleet can physically deliver by much. (2) Ratio test - 500k Uber trips vs about 10M people in the city on a given day = about 1 in 20 people taking an Uber trip daily; plausible for Manhattan-heavy usage, too high if it were 1 in 5. (3) Real-data test - TLC's about 20M HVFHV trips in June 2025 (about 667k/day) x 72% = about 480k. (4) Comparison test - NYC subway carries about 3.5-4M riders on a weekday [uncertain], so Uber at about 0.5M is roughly 1/8 of subway volume, which fits its premium price.",
+  "follow_up_twists": "1. 'How would congestion pricing change your number?' - The $1.50 per-trip charge below 60th St is small against a $25-30 average fare, so trips dipped only marginally; TLC data show the HV sector roughly flat YoY in 2025, while shifting some demand to the subway.\n2. 'What if Waymo launches robotaxis in Manhattan?' - Near-term volume is tiny versus the about 80k-vehicle fleet; the real effect is on supply cost per trip and on the license-cap politics, not on the daily count in 2026-27.\n3. 'Estimate Uber's daily NYC gross bookings.' - About 480k trips x about $28 average fare including surcharges [uncertain] = about $13-14M per day, or about $5bn a year.",
+  "common_pitfalls": "1. Using only residents and forgetting visitors and commuters - NYC has about 0.7M visitors in town on an average day who over-index on airport and late-night trips.\n2. Counting all ride-hail and forgetting to apply Uber's about 72% share vs Lyft, or including yellow taxis booked via the Uber app.\n3. Assuming every visitor takes 1-2 Ubers every day - most tourists use the subway; the realistic average is well under one trip per visitor-day.\n4. Skipping the supply-side check - the TLC license pause caps vehicles, so a demand estimate of 1M+ trips is physically impossible with about 42k active cars.",
+  "skills_tested": "quant, structuring, business sense, communication",
+  "linked_teardown": "None",
+  "uncertain": [
+    "round_and_level",
+    "source_and_verification",
+    "context_as_of",
+    "regulatory_context",
+    "public_data_anchors",
+    "follow_up_twists"
+  ]
+}

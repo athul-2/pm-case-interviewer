@@ -1,0 +1,227 @@
+{
+  "pun_title": "Gold Rush",
+  "case_type": "Metrics",
+  "asked_at": "Zomato style (classic membership-metrics prompt in Indian consumer-internet PM loops; a near variant 'how would you measure success for Zomato Pro' is listed in Zomato PM prep)",
+  "subject_company": "Zomato Gold, the paid delivery membership of Zomato food delivery (parent Eternal Ltd, formerly Zomato Ltd).",
+  "round_and_level": "PM round (product sense / metrics), APM campus to PM; SPM variants add the 'is Gold profitable / incremental?' twist and causal-measurement depth. [uncertain]",
+  "difficulty": "Medium-Hard - the obvious answers (member count, Gold GOV share) are traps; a strong answer measures incrementality against a counterfactual, handles self-selection of heavy users, and weighs Gold's cost (waived delivery fees on orders that would have happened anyway).",
+  "market_and_industry": "India; food delivery; urban metros and Tier-1/2 cities, with growth increasingly from smaller cities at lower AOV; UPI-first payments; duopoly with Swiggy (Swiggy One / One BLCK) plus magicpin and ONDC-based rivals; price-sensitive users who multi-home across apps.",
+  "time_box_minutes": "20-25",
+  "exact_prompt": "You're the PM for Zomato Gold. How would you measure its success?",
+  "source_and_verification": "Level: classic. Membership-success prompts for Zomato Gold / Pro / Swiggy One circulate in Indian PM prep; no dated report of this exact wording was found in this session. Closest: Grapevine 'PM interview tips for Zomato' lists 'how would you measure success for Zomato Pro' among metrics prompts (https://www.grapevine.in/post/pm-interview-tips-for-zomato-c0ab36a0-13fe-4b73-af27-3a6c8180aa19); Prepfully Zomato PM question bank (https://prepfully.com/interview-questions/zomato/product-manager?page=11); Exponent Zomato PM interview experiences (https://www.tryexponent.com/experiences/zomato-product-manager-interview-668683); PracHub Zomato product-sense prompts (https://prachub.com/interview-questions/zomato-product-sense-choose-a-segment-and-prioritize-consumer-app-improvements). Year: 2023-2026 (classic). NextLeap, The Product Folks, AmbitionBox and Glassdoor were not directly searchable in this session. [uncertain]",
+  "context_as_of": "As of Nov 2026. 1) History: Gold launched 2017 as a dining 'buy one get one' membership; extended to delivery in 2019, which drew the NRAI '#logout' protest (Business Standard, https://www.business-standard.com/article/companies/nrai-says-no-to-zomato-gold-launching-on-food-delivery-119092100191_1.html); replaced by Zomato Pro / Pro Plus (2020-22), then relaunched as Gold in Jan 2023 at Rs 149 for three months with free delivery and no-surge benefits (IIFL, https://www.indiainfoline.com/news/business/zomato-shares-crack-15-on-relaunch-of-gold-subscription-program). 2) Scale (dated): Inc42 reported 3.8 mn Gold members and Gold orders at ~40% of food GOV in 2023, with Gold orders worse on contribution margin than non-Gold orders (https://inc42.com/?p=423632). No newer official member count found [uncertain]. 3) Benefits (2025-26): free delivery above a minimum order within a distance band (threshold cut from Rs 199 to Rs 99 around Aug 2025; Inc42 describes it as a lasting strategy, https://inc42.com/features/zomato-business-model-commissions-platform-fees-and-ad-revenue/); distance band reportedly cut from 10 km to 7 km for both Gold and Swiggy One (Benzinga, date unclear); Gold does NOT waive the platform fee (Rs 14.90 + GST from 20 Mar 2026, local teardown); periodic Rs 1 Gold promos (e.g., Independence Day 2025, Startuppedia). Dining benefits moved with dining-out to the District app [uncertain]. 4) Business: Zomato food NOV ~Rs 11,445 cr in Q2 FY27 (+21.5% YoY, fifth straight quarter of faster growth), adj EBITDA ~Rs 627 cr (~5.5% of NOV) (local teardown, Eternal Q2 FY27). Eternal is now led by group CEO Albinder Dhindsa (from Feb 2026); food CEO Aditya Mangla. 5) Competition: Swiggy One plus the premium invite-only One BLCK tier (Outlook Business, https://www.outlookbusiness.com/news/swiggy-launches-one-blck-amidst-growing-competition-from-zomato-gold-zepto-pass); Zepto Pass in quick commerce. Stale-risk: current Gold price varies by city and promo (aggregators list ~Rs 99-299 per 3 months); 2023 member and GOV-share figures are old. [uncertain]",
+  "regulatory_context": "1) CCPA dark-patterns guidelines (Nov 2023): subscription traps (hard cancellation), false urgency on Gold upsells, and drip pricing (platform fee shown late to members who think 'free delivery' means free) are banned practices - a Gold metric that rewards forced or auto-added memberships is a compliance risk. 2) RBI e-mandate rules for recurring card/UPI payments (pre-debit notification; additional factor of authentication above Rs 15,000) shape auto-renewal design; most Gold plans are prepaid, so renewal is an active choice. 3) CCI: the antitrust probe of Zomato and Swiggy (parity clauses, private labels) and NRAI disputes - restaurant-funded member discounts are a known flashpoint (2019 #logout). 4) GST: 18% on delivery fees from Sep 2025 raises the cost of each waived delivery fee for Zomato. 5) Gig-worker rules (Code on Social Security levy, Karnataka/Rajasthan acts): rider cost per order is partly regulated, so Gold-driven peak demand has a labour cost. 6) DPDP Act 2023/Rules: targeting Gold upsells with order-history data needs valid consent. [uncertain]",
+  "public_data_anchors": "1) Gold relaunch Jan 2023 at Rs 149 for 3 months (IIFL, Jan 2023). 2) 3.8 mn Gold members; Gold orders ~40% of food GOV; Gold orders worse on contribution margin (Inc42, 2023, https://inc42.com/?p=423632). 3) Gold free-delivery threshold cut from Rs 199 to Rs 99 (Aug 2025; Startuppedia and Inc42). 4) Platform fee Rs 14.90 + GST (~Rs 17.6) from 20 Mar 2026, not waived by Gold (local teardown Eternal_Zomato_District.json). 5) Zomato food NOV ~Rs 11,445 cr in Q2 FY27, +21.5% YoY; adj EBITDA ~Rs 627 cr, ~5.5% of NOV (local teardown, Eternal Q2 FY27, Oct 2026). 6) Food AOV ~Rs 420-450 and last widely cited food MTU ~20-21 mn (FY25) (local teardown) [uncertain]. Derived (illustrative): a waived delivery fee of ~Rs 30-40 on a ~Rs 430 order is ~7-9% of order value - which is why non-incremental Gold orders are costly.",
+  "framework_applied": "Success Metrics (frameworks.md section 5). 1) Company and product: Eternal's food business is profitable and growing ~21% YoY; Gold's job is to win share of wallet and frequency from multi-homing users versus Swiggy One, while keeping food's ~5% NOV margin. 2) Users and value: members (activation = first Gold order after purchase; engagement = orders per member per month; conversion = trial-to-paid; retention = renewal), restaurants (incremental orders vs any discount they fund), riders (more orders per hour vs peak load); Zomato earns membership fees plus commission and fees on extra orders, and pays for waived delivery fees. 3) North Star: Monthly incremental Gold orders - orders by active Gold members above what the same users would have placed without Gold (measured with a holdout or matched cohort). Formula: active paid members x (orders per member - counterfactual orders per member). Supporting: paid renewal rate, Zomato share of wallet among members, contribution per Gold order, trial-to-paid conversion. 4) Guardrails: Gold programme contribution (fees + margin on incremental orders - delivery subsidy on all Gold orders), restaurant economics, non-member experience (ETA, rider availability), platform-fee/'hidden fee' complaints, cancellation ease (dark-pattern risk), rider earnings.",
+  "clarifying_questions": [
+    {
+      "q": "Which Gold are we talking about - the delivery membership today, or the older dining Gold?",
+      "a": "Today's Gold: a paid food-delivery membership with free delivery above a minimum order within a distance band, plus member offers."
+    },
+    {
+      "q": "What's the goal of Gold right now - more orders, more retention, or profitability?",
+      "a": "Leadership's goal is to grow frequency and share of wallet against Swiggy One without hurting food delivery's margin."
+    },
+    {
+      "q": "Who funds the benefit - Zomato, restaurants, or both?",
+      "a": "Zomato funds the delivery-fee waiver; some partner restaurants fund extra member discounts."
+    },
+    {
+      "q": "Is this a 'measure an existing programme' question or a launch?",
+      "a": "Existing programme. Tell me how you'd know if it's working."
+    },
+    {
+      "q": "How do users get Gold - paid, Rs 1 trials, bundled?",
+      "a": "Mostly paid quarterly plans, but a large share joined through Rs 1 or heavily discounted promos. Exhibit 1 has the split."
+    },
+    {
+      "q": "Do we have a holdout - users eligible for Gold who weren't shown the offer?",
+      "a": "Yes, a 5% long-running holdout that never sees Gold promotions."
+    },
+    {
+      "q": "Any constraint on cities or segments?",
+      "a": "All cities, but you can segment by metro vs Tier-2."
+    }
+  ],
+  "interviewer_data_reveals": "Real numbers cite a source; all others are illustrative (invented for teaching).\n\nExhibit 0 - Real anchors: Gold orders ~40% of food GOV and 3.8 mn members (Inc42, 2023); Gold threshold cut to Rs 99 (Aug 2025); platform fee Rs 14.90 + GST not waived by Gold (Mar 2026); food NOV Rs 11,445 cr, +21.5% YoY, Q2 FY27 (Eternal via local teardown).\n\nExhibit 1 - Membership base (illustrative):\n| Acquisition route | Share of members | 90-day paid renewal |\n| Full-price paid | 45% | 61% |\n| Discounted promo (Rs 49-99) | 30% | 38% |\n| Rs 1 trial | 25% | 14% |\n\nExhibit 2 - Orders per user per month (illustrative):\n| Group | Before joining | After joining | Holdout (matched, never shown Gold) |\n| Members who joined | 4.1 | 5.6 | - |\n| Matched holdout users | 4.0 | 4.4 | 4.4 |\nIncremental orders per member = 5.6 - 4.4 = 1.2/month (not 5.6 - 4.1 = 1.5, which includes the natural trend).\n\nExhibit 3 - Economics per member per month (illustrative): membership fee ~Rs 40/month; delivery fees waived ~Rs 32 x 5.6 orders = ~Rs 180; contribution on incremental orders ~Rs 45 x 1.2 = ~Rs 54. Net programme contribution ~Rs 40 + 54 - 180 = ~-Rs 86 per member per month, unless share-of-wallet gains from Swiggy are counted.\n\nExhibit 4 - Share of wallet (illustrative, panel of dual-app users): Zomato's share of a member's combined Zomato+Swiggy orders went from 55% to 71% after joining Gold; holdout moved 54% to 56%.\n\nExhibit 5 - Segment split (illustrative): metro members +0.8 incremental orders/month; Tier-2 members +1.9, driven by the Rs 99 threshold unlocking low-AOV orders.",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "How would you measure the success of Zomato Gold?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'll go in four steps: what Gold is for in Zomato's business, who gets value from it, a north star with its formula, and guardrails. First, some clarifications. Is this today's Gold - the delivery membership with free delivery above a minimum order?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Yes."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "What's the goal right now - more orders, retention, or profit?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Grow frequency and share of wallet against Swiggy One, without hurting food delivery's margin."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "And who pays for the benefit?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Zomato funds the delivery-fee waiver; some restaurants fund extra member discounts."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Good. Company context: Zomato's food business is profitable - about Rs 11,445 cr NOV last quarter, growing about 21%, with an adjusted EBITDA margin around 5.5% of NOV. Most heavy users have both Zomato and Swiggy installed and switch on price. Gold is the lock-in tool: pay once, and Zomato becomes the default. So Gold succeeds if it makes members order more, and order more on Zomato rather than Swiggy, without the delivery subsidy eating the margin. Does that match how you see it?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "It does."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Now the sides of the marketplace. Members: activation is the first Gold order after buying; engagement is orders per month; conversion is trial to paid; retention is renewal. Restaurants: do they get extra orders, or just the same orders at a discount they fund? Riders: more orders per hour, but also more peak load. Zomato earns the membership fee plus commission and fees on extra orders, and pays the waived delivery fee on every Gold order, including the ones that would have happened anyway. That last point is the heart of the case."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Why is that the heart of it?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Because Gold attracts people who already order a lot. In 2023, Inc42 reported Gold orders at about 40% of food GOV, and Gold orders were worse on contribution margin than non-Gold orders. If I measured Gold by member count or Gold's share of GOV, it would look great even if Gold just gave free delivery to people who'd have ordered anyway. So success has to be measured against a counterfactual. Do we have a holdout?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "A 5% long-running holdout that never sees Gold promotions."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then my north star is Monthly Incremental Gold Orders: orders by active paid members above what the same kind of user would place without Gold, measured against the holdout or a matched cohort. It captures user value - members order more because it's cheaper and easier - and business value - extra orders and share won from Swiggy."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Formula: Monthly Incremental Gold Orders = Active paid members x (Orders per member per month - Counterfactual orders per member per month).\nLevers:\n- Active paid members = Eligible users reached x Trial or purchase rate x Trial-to-paid conversion x Renewal rate.\n- Orders per member = Benefit value felt (delivery threshold, distance band, member offers) x Restaurant selection inside the benefit x Delivery reliability.\n- Counterfactual orders = from the holdout; this is what stops us crediting Gold for the natural trend."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Here's Exhibit 2. Members went from 4.1 to 5.6 orders a month after joining. Matched holdout users went from 4.0 to 4.4."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So the naive lift is 1.5 orders, but the holdout rose 0.4 on its own - seasonality, Zomato's general growth. The true incremental lift is 5.6 minus 4.4, which is 1.2 orders per member per month. That's the number I'd steer by. About 20% of the apparent lift wasn't Gold at all."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Is 1.2 good?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Depends on what it costs. Can I see the economics?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Exhibit 3. Fee about Rs 40 a month per member, delivery waived about Rs 32 across 5.6 orders, contribution about Rs 45 on each incremental order."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Waived fees are about Rs 180 a month; the fee plus contribution on 1.2 extra orders is about Rs 94. So on direct economics, Gold loses about Rs 86 per member per month. That's the danger. But it leaves out share of wallet - orders that would have gone to Swiggy. Do we have that?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Exhibit 4. Among dual-app users, Zomato's share of a member's orders went from 55% to 71%; the holdout moved 54% to 56%."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's a 14-point incremental share gain, which is the strategic goal - taking orders from Swiggy, not just making people eat more. So I'd add 'share of wallet among members versus holdout' as the first supporting metric, and recompute programme economics counting share-shifted orders as incremental. If it's still negative, the fix is in the benefit design, not the measurement."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What else goes on the dashboard?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Supporting metrics: one, paid renewal rate, split by how the member joined; two, trial-to-paid conversion for Rs 1 and promo joiners; three, contribution per Gold order; four, share of wallet among members versus holdout. Can I see the membership split?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Exhibit 1. Full-price members are 45% and renew at 61%; promo joiners 30% at 38%; Rs 1 trials 25% at 14%."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So the Rs 1 trials inflate the member count but rarely turn into paying members. That's why the north star counts active paid members, not total members. I'd also look at the incremental lift for trial users before the next Rs 1 campaign - if they mostly order on promo and lapse, that's a subsidy, not acquisition."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Anything by segment?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'd expect Tier-2 and metro to differ, because the Rs 99 threshold matters more where AOVs are lower."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Exhibit 5. Metro members plus 0.8 incremental orders; Tier-2 members plus 1.9."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So Gold works hardest in Tier-2, where the threshold unlocks small orders that didn't happen before - and that's where Zomato's growth is coming from. In metros, the lift is smaller and mostly share-shift, so the benefit design there might move toward reliability or member-only restaurant offers rather than more fee waivers."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Guardrails?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Six. One, Gold programme contribution - fees plus margin on incremental orders minus the subsidy - tracked monthly so growth can't hide losses. Two, restaurant economics: incremental orders per partner restaurant versus the discount they fund, given the NRAI history. Three, non-member experience: ETA and rider availability for non-members at peak, so Gold demand doesn't degrade everyone else. Four, fee-transparency complaints: Gold doesn't waive the Rs 14.90 platform fee, and members who expect 'free' delivery and see fees feel cheated - also a drip-pricing risk under the CCPA rules. Five, cancellation ease and auto-renew complaints, as a dark-pattern guard. Six, rider earnings per hour at peak."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Summarise."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Gold succeeds if it makes members order more on Zomato instead of Swiggy, at a cost the food business can carry. The north star is Monthly Incremental Gold Orders - active paid members times orders per member above a holdout - which is about 1.2 extra orders per member a month in this data, not the 1.5 a before-after view shows. The supporting metrics are share of wallet against the holdout, paid renewal by join route, trial-to-paid conversion and contribution per Gold order. The guardrails are programme contribution, restaurant economics, non-member ETAs, fee-transparency and cancellation complaints, and rider earnings. Member count and Gold's GOV share are vanity metrics here."
+    }
+  ],
+  "answer_and_recommendation": "Ranked metrics: (1) North star - Monthly Incremental Gold Orders = active paid members x (orders per member - counterfactual orders from a holdout or matched cohort); illustrative ~1.2 incremental orders per member per month vs a naive 1.5. (2) Share of wallet among members vs holdout (Zomato share of a dual-app user's food orders; illustrative +14 points) - the strategic test against Swiggy One. (3) Paid renewal rate by join route (full price / promo / Rs 1 trial), with trial-to-paid conversion. Also: contribution per Gold order and total Gold programme contribution. Rejected as headline metrics: total member count (inflated by Rs 1 trials), Gold share of GOV (~40% in 2023, Inc42, but reflects self-selection of heavy users), raw orders per member (no counterfactual). Recommendation: steer by incremental orders and share of wallet; review Gold programme economics monthly; redesign benefits where lift is low (metros: reliability and member-only offers rather than more fee waivers) and lean in where lift is high (Tier-2, Rs 99 threshold). Risks and mitigation: holdout contamination (users see Gold via friends or ads) - use geo or long-term user holdouts and matched cohorts as a cross-check; Rs 1 trials inflate the base - count only active paid members; restaurant backlash over funded discounts - report incremental orders per restaurant back to partners; members feel misled by the platform fee - show the all-in price and what Gold saves per order. Closing line: 'Gold works if it changes behaviour, not if it rewards behaviour that was already there - so I'd measure incremental orders and share won from Swiggy against a holdout, and keep programme contribution as the guardrail.'",
+  "counter_metrics_guardrails": "1) Gold programme contribution per member per month: membership fee + contribution on incremental orders - delivery-fee subsidy on all Gold orders (illustrative -Rs 86 before share-of-wallet gains). 2) Contribution per Gold order vs non-Gold order (2023 Inc42: Gold orders worse on CM). 3) Restaurant economics: incremental orders per partner restaurant vs restaurant-funded member discount; partner churn and complaints (NRAI history). 4) Non-member experience: peak-hour ETA, rider assignment time and cancellation rate for non-members. 5) Fee-transparency complaints: members surprised by platform, packaging or surge fees not covered by Gold (CCPA drip-pricing risk). 6) Cancellation and auto-renew complaints, refund requests on memberships (dark-pattern / subscription-trap guard). 7) Rider earnings per hour and incident rate at peak. 8) Cannibalisation of District or other Eternal surfaces if member offers shift spend rather than add it.",
+  "follow_up_twists": [
+    {
+      "twist": "Incremental orders are up, but Gold programme contribution is getting worse every month. What do you do?",
+      "response": "Find which members drive the subsidy without lift - likely metro heavy users and Rs 1 trialists - and tighten benefits for them (distance band, threshold) while keeping the Tier-2 threshold that creates real incremental orders."
+    },
+    {
+      "twist": "Swiggy launches a cheaper One plan. Which metric tells you first if it's hurting Gold?",
+      "response": "Share of wallet among members vs holdout and renewal intent - they move before member count does, because members multi-home before they cancel."
+    },
+    {
+      "twist": "Leadership wants to add Blinkit free delivery to Gold. How would you measure it?",
+      "response": "Same incremental logic per business - incremental Blinkit orders and Zomato food orders vs a holdout - plus a cross-sell guardrail that Blinkit benefits don't cut food frequency or add a subsidy larger than the lift."
+    }
+  ],
+  "common_pitfalls": [
+    "Using member count or Gold's share of GOV as success - both reward self-selection of heavy users and Rs 1 trials, not real behaviour change.",
+    "Measuring before vs after joining without a holdout - it credits Gold with Zomato's general growth and seasonality (Exhibit 2: 1.5 naive vs 1.2 true).",
+    "Ignoring the cost side - the delivery waiver applies to every Gold order, including ones that would have happened anyway, so a 'successful' Gold can lose money.",
+    "Forgetting the other sides - restaurants funding member discounts (the 2019 #logout backlash) and non-members whose ETAs suffer at peak."
+  ],
+  "skills_tested": [
+    "structuring",
+    "quant",
+    "business sense",
+    "prioritisation",
+    "communication",
+    "empathy"
+  ],
+  "linked_teardown": "swiggy-product-teardown (swiggy-product-teardown/results/Eternal_Zomato_District.json). Key facts used: Zomato food NOV ~Rs 11,445 cr in Q2 FY27 (+21.5% YoY) with ~5.5% adj EBITDA margin; platform fee Rs 14.90 + GST from Mar 2026 not waived by Gold; Gold as Zomato's frequency and lock-in lever against Swiggy One; growth coming from Tier-2 cities at lower AOV.",
+  "uncertain": [
+    "round_and_level",
+    "source_and_verification",
+    "context_as_of",
+    "regulatory_context",
+    "public_data_anchors"
+  ]
+}

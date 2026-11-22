@@ -1,0 +1,247 @@
+{
+  "pun_title": "Return to Sender",
+  "case_type": "RCA",
+  "asked_at": "By the Authors (synthetic, Meesho-style prompt)",
+  "subject_company": "Meesho",
+  "round_and_level": "PM round 1 (product sense / RCA), APM campus to PM level",
+  "difficulty": "Medium - the metric is well known, but a strong answer must separate mix shift (more new Tier-3 COD buyers) from true rate deterioration (logistics, risk-model, fraud) and avoid the 'just add a COD fee' trap.",
+  "market_and_industry": "India; value e-commerce / social commerce marketplace; Tier-3 and below towns, Hindi and regional-language users, low-end Android phones, COD-first first-time online shoppers",
+  "time_box_minutes": "25-30",
+  "exact_prompt": "You are the PM for checkout and delivery at Meesho. Over the last six weeks, the RTO (return-to-origin) rate on cash-on-delivery orders in Tier-3 towns has risen sharply. Diagnose what is going on.",
+  "source_and_verification": "Synthetic, written by the authors in the style of Meesho PM interviews (2026). No public report of this exact question was found on NextLeap, The Product Folks, AmbitionBox, Glassdoor, PracHub or LinkedIn; RTO/COD RCA prompts for Meesho, Flipkart/Shopsy and D2C brands are a common pattern in Indian PM interview prep. Facts are drawn from the local Meesho teardown research (meesho_product_teardown, Nov 2026) and Meesho investor disclosures.",
+  "context_as_of": "As of Nov 2026: Meesho is listed (IPO Dec 2025) and reports quarterly. Q2 FY27 (Jul-Sep 2026): 284M annual transacting users, 819M orders (+17% YoY), NMV Rs 12,911 Cr (+23%), revenue Rs 4,132 Cr (+34%), contribution margin 6.0% of NMV (Meesho Q2 FY27 shareholder letter, NSE filing 28 Oct 2026). Prepaid share ~37% so COD ~63% of orders (Q1 FY27 disclosure), down from ~72% COD pre-IPO (RHP). Valmo, Meesho's asset-light logistics orchestration arm, carries ~50% of volume (below 50% from Q4 FY26, The Ken May 2026); allocation is cheapest provider per lane. TrustMesh risk model blocks or restricts high-risk COD orders and is credited with lower RTO and cancellations, but Meesho no longer discloses an RTO rate. Pre-IPO delivery success was ~78% for COD vs ~97% for prepaid (RHP via Upstox). The Mega Blockbuster Sale moved into Q3 FY27 (Oct 2026, Diwali season), so a six-week window ending Nov 2026 overlaps festive peak. Growth is concentrated in Tier-3 and below (Mall NMV +89% in Tier 3 and below). Sources: https://nsearchives.nseindia.com/corporate/MEESHO_28102026171517_MLshareholdersletter28102026.pdf ; https://static-assets.meesho.com/investor-relations/1784806298911/Q1ShareholdersLetter.pdf ; meesho_product_teardown/results/Logistics_Valmo.json. Stale-risk: RTO rate and Valmo share are not disclosed every quarter; COD share is from Q1 FY27 and may have moved [uncertain].",
+  "regulatory_context": "Consumer Protection (E-Commerce) Rules and the CCPA Guidelines for Prevention and Regulation of Dark Patterns (2023): drip pricing and hidden COD/handling fees are treated as dark patterns; the Department of Consumer Affairs began probing COD fees charged by Flipkart, Amazon and others in Oct 2025. E-Commerce Amendment Rules 2026 (effective 1 Jan 2027, per teardown research) tighten fee disclosure [uncertain on final text]. Practical effect: Meesho cannot simply add a COD surcharge to push RTO cost onto buyers. RBI rules shape the prepaid alternative: UPI is free to users (zero MDR on UPI P2M), refunds to UPI must follow RBI TAT for failed transactions (T+1 auto-reversal for failed UPI), which matters for an 'instant refund' prepaid promise. Labour codes (in force Nov 2025) and gig-worker social-security provisions raise last-mile cost per attempt. DPDP Act 2023 constrains how address/phone signals are used for risk scoring (consent and purpose limitation).",
+  "public_data_anchors": [
+    "Orders: 819M in Q2 FY27, ~8.9M/day; NMV per order ~Rs 158 (Meesho Q2 FY27 shareholder letter, Oct 2026) https://nsearchives.nseindia.com/corporate/MEESHO_28102026171517_MLshareholdersletter28102026.pdf",
+    "Prepaid share ~37% (COD ~63%) in Q1 FY27 vs COD ~72% pre-IPO (Meesho Q1 FY27 letter; RHP) https://static-assets.meesho.com/investor-relations/1784806298911/Q1ShareholdersLetter.pdf",
+    "Delivery success COD ~78% vs prepaid ~97% in the RHP period, i.e. COD failure ~22% vs ~3% (RHP via Upstox, 2025)",
+    "Fulfilment cost ~Rs 37.70 per order (Q1 FY26, updated prospectus); one RTO burns forward + reverse freight (~Rs 80) with zero revenue, wiping out the contribution of 8-10 delivered orders (derived estimate, teardown)",
+    "Valmo share of shipped orders 64.5% H1 FY26 -> below 50% Q4 FY26 -> ~50% Q1 FY27 (RHP via Axis; The Ken May 2026; Q1 FY27 call)",
+    "Customer returns ~7.85% of shipped orders (H1 FY26, RHP via Axis) - separate from RTO",
+    "Contribution margin 4.6% (Q1 FY27) -> 6.0% of NMV (Q2 FY27); Valmo scale-up after a 3PL partner exit cost ~100-110 bps of CM in Q2-Q3 FY26 (Inc42/Medianama)"
+  ],
+  "framework_applied": "RCA: Clarify -> 4 cause buckets -> Hypothesise-test-repeat -> Land it. (1) Clarify metric: RTO% = COD orders shipped that return undelivered / COD orders shipped, by ship-date cohort; time frame: rise over ~6 weeks, step or ramp; scope: Tier-3 only, COD only, which states, carriers, categories. (2a) Data/instrumentation: check RTO status mapping after a Valmo/3PL status-code or pin-code-tier remap; check the denominator (shipped vs placed). (2b) Internal: funnel order placed -> confirmed -> shipped -> out-for-delivery -> delivery attempts -> delivered/RTO; product changes (TrustMesh threshold relaxed, COD limit raised, festive coupon on COD, new-user acquisition campaign), logistics changes (cheapest-lane reallocation, new micro-partner, fewer attempts), mix (more first-time buyers). (2c) External: Diwali/wedding peak load, monsoon/floods, cash crunch, competitor COD offers (Flipkart Shopsy, Amazon Bazaar), fraud rings. (2d) Consumer behaviour: impulse/duplicate ordering across apps, longer transit causes changed-mind refusals. (3) Hypothesise-test: decompose into mix vs rate, then split rate by carrier lane x promise days x buyer tenure. (4) Land: root cause = a cheapest-lane shift to a new Valmo micro-partner cluster during festive peak lengthened Tier-3 transit and cut attempts, amplified by a festive new-buyer COD cohort admitted by a relaxed TrustMesh threshold; validate with lane-level before/after and fix with speed-aware routing plus pre-dispatch confirmation.",
+  "clarifying_questions": [
+    {
+      "q": "How is RTO defined here: share of shipped COD orders that come back undelivered, or share of placed orders? And by order date or ship date?",
+      "a": "Shipped COD orders that return to origin, by ship-date cohort. Cancellations before dispatch are excluded."
+    },
+    {
+      "q": "How big is 'sharply', and was it a step change on a date or a ramp?",
+      "a": "Tier-3 COD RTO went from ~18% to ~25% over six weeks. It ramps, but there is a visible step in week 3."
+    },
+    {
+      "q": "Is it only Tier-3 and only COD, or are prepaid and Tier-1/2 also moving?",
+      "a": "Prepaid RTO is flat at ~3%. Tier-1/2 COD rose only about 1 point. Tier-4/rural rose about 4 points."
+    },
+    {
+      "q": "Is it all states, or concentrated in a few clusters?",
+      "a": "Concentrated: UP, Bihar and Jharkhand Tier-3 pin codes explain most of the increase. South and West Tier-3 are roughly flat."
+    },
+    {
+      "q": "Any changes on our side in that window: app release, TrustMesh model, COD limits, logistics allocation?",
+      "a": "A new TrustMesh model version shipped in week 2, and logistics re-allocated some North-East-UP lanes to new Valmo partners in week 3. Also the Mega Blockbuster Sale ran in this window."
+    },
+    {
+      "q": "What are the main RTO reason codes, and do we trust them?",
+      "a": "Customer refused, customer not reachable, address issue, and 'delivery attempt failed'. Reason codes are entered by the delivery agent, so treat them with some caution."
+    },
+    {
+      "q": "Has order volume or the share of first-time buyers changed?",
+      "a": "Tier-3 COD orders are up ~30% vs the prior six weeks because of the sale; first-time buyer share rose from ~22% to ~30%."
+    }
+  ],
+  "interviewer_data_reveals": [
+    "Exhibit 1 (illustrative): Tier-3 COD RTO by week - W0 18.1%, W1 18.4%, W2 19.6%, W3 22.8%, W4 24.0%, W5 24.6%, W6 25.1%. Prepaid Tier-3 flat at 3.0-3.2%.",
+    "Exhibit 2 (illustrative) - mix vs rate decomposition, W0 vs W6: first-time buyers 22% -> 30% of Tier-3 COD; RTO among first-time 30% -> 33%; among repeat 15% -> 22%. Holding rates constant, mix alone explains ~1.2 pts of the 7-pt rise; rate change explains ~5.8 pts.",
+    "Exhibit 3 (illustrative) - RTO by carrier lane, UP/Bihar/Jharkhand Tier-3, W6: legacy 3PL lanes 19%; existing Valmo partners 20%; new Valmo partners onboarded in W3 31%. New partners carry ~35% of these lanes' volume.",
+    "Exhibit 4 (illustrative) - promised vs actual delivery days, Tier-3 North: median transit 5.1 -> 7.4 days; average delivery attempts per RTO order 2.4 -> 1.3; share of RTOs with 'customer not reachable' 28% -> 41%.",
+    "Exhibit 5 (illustrative) - RTO vs transit days (all Tier-3 COD): delivered in <=4 days 12% RTO; 5-6 days 19%; 7+ days 34%.",
+    "Exhibit 6 (illustrative) - TrustMesh: new model in W2 approved ~6% more COD orders in Tier-3; RTO among these newly approved orders 38%, but they are only ~5% of volume (explains ~1 pt).",
+    "Exhibit 7 (illustrative) - Data check: RTO status codes reconcile with warehouse return scans within 0.3 pts; no pin-code tier remap in the window.",
+    "Real anchors the interviewer may quote: COD ~63% of orders (Q1 FY27), pre-IPO COD delivery success ~78% vs prepaid ~97% (RHP), fulfilment cost ~Rs 38-43 per order."
+  ],
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "You own checkout and delivery at Meesho. RTO on COD orders in Tier-3 towns has risen sharply over the last six weeks. Diagnose."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Before I go into causes, I want to pin down the metric, the time frame and the scope, then rule out data issues, then walk internal and external factors. First, how are we defining RTO: share of shipped COD orders that return undelivered, by ship date?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Yes, shipped COD orders that return to origin, by ship-date cohort. Pre-dispatch cancellations are excluded."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Good, so TrustMesh blocks or buyer cancellations before packing are not in this number. How sharp, and was it a step or a ramp?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "From about 18% to 25% over six weeks. Mostly a ramp, with a clear step in week 3."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "A 7-point rise is roughly 40% more failed deliveries. At about Rs 80 of forward plus reverse freight per RTO, that is serious money on Tier-3 volume. Is prepaid moving too, and other tiers?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Prepaid is flat at about 3%. Tier-1/2 COD is up about 1 point. Tier-4 and rural are up about 4 points."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That tells me it is not a platform-wide checkout or app bug, because prepaid would move too, and it is not purely a buyer-intent change across India. It is concentrated in COD in smaller towns, which points to either who we are delivering to or how we are delivering. Is it all states?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "No. UP, Bihar and Jharkhand Tier-3 pin codes explain most of it. South and West Tier-3 are roughly flat."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Geographic concentration is a strong clue. Let me lay out my tree so we can eliminate branches quickly.\n\nRTO rise (Tier-3 COD, North)\n1. Data: status-code mapping, tier remap, denominator change\n2. Internal\n   a. Mix: more first-time / risky buyers (sale, acquisition, TrustMesh change)\n   b. Rate: logistics (lane reallocation, new partners, transit days, attempts), product (COD limit, address capture, confirmation flow)\n3. External: festive load, weather, cash availability, competitor COD offers, fraud rings\n4. Behaviour: impulse or duplicate orders across apps, changed mind during long transit\n\nI will start with data, then split mix versus rate, since that halves the board."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Sounds good. On data: RTO status codes reconcile with warehouse return scans within 0.3 points, and nothing changed in the pin-code tier mapping."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then the rise is real. Next, mix versus rate. Did volume or the share of first-time buyers change?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Tier-3 COD orders are up about 30% because of the Mega Blockbuster Sale. First-time buyers went from 22% to 30% of Tier-3 COD."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "First-time COD buyers always RTO more, so some rise is expected. Do you have RTO by tenure so I can separate mix from rate?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "First-time: 30% to 33%. Repeat: 15% to 22%."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That is the key finding. If only mix had changed, holding rates constant, we would get roughly 1.2 points of the 7. The other ~5.8 points come from rates going up, and the biggest jump is among repeat buyers, from 15 to 22%. Repeat buyers have already accepted COD parcels from us before, so their intent has not suddenly collapsed. Something in delivery got worse. Did anything change in logistics allocation for these states?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "In week 3, some UP, Bihar and Jharkhand lanes were reallocated to newly onboarded Valmo partners because they were cheapest per lane ahead of festive volume."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That lines up with the week-3 step. Can I see RTO split by carrier lane for those states?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Legacy 3PL lanes 19%, existing Valmo partners 20%, new Valmo partners 31%. The new partners carry about 35% of those lanes."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Quick check: an 11-12 point excess on 35% of volume in the affected states is about 4 points there, and those states are most of the Tier-3 rise. So the new partner cluster is the largest single driver. My hypothesis is mechanism, not just correlation: new partners have thin capacity during the festive peak, so transit gets longer and they make fewer delivery attempts. Do you have transit days and attempts?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Median transit in Tier-3 North went from 5.1 to 7.4 days. Attempts per RTO order fell from 2.4 to 1.3. 'Customer not reachable' went from 28% to 41% of RTO reasons."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That is the mechanism. COD is a free option for the buyer: the longer the parcel takes, the more likely they have bought elsewhere, spent the cash, or forgotten, and with one attempt instead of two or three, any missed call becomes an RTO. A falling attempt count with rising 'not reachable' also makes me suspicious that some agents mark 'not reachable' without really trying, which is common when partners are overloaded and paid per delivery. Is there RTO by transit-day bucket?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Delivered within 4 days: 12% RTO. 5-6 days: 19%. 7 or more days: 34%."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So transit time is causally plausible and steep. One more branch before I land it: you said a new TrustMesh model shipped in week 2. Did it approve more risky COD orders?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "It approved about 6% more Tier-3 COD orders. Those newly approved orders RTO at 38%, but they are only about 5% of volume."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So TrustMesh adds about 1 point and explains the week-2 uptick before the week-3 step. That is a contributing factor, not the root cause. On external factors: the festive sale explains the volume surge and the first-time mix, and it is what stressed the new partners. I would still check two things quickly: whether competitor COD offers in the same window (Flipkart Big Billion Days, Amazon Great Indian Festival, Shopsy) caused duplicate ordering, which would show up as 'refused' rather than 'not reachable', and whether any floods hit eastern UP or Bihar. But refused did not rise as much as not reachable, so competitor duplication is secondary."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Fair. Land it."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Root cause: in week 3, cheapest-lane allocation moved about a third of North Tier-3 volume to newly onboarded Valmo micro-partners just as festive volume rose 30%. They lacked capacity, so median transit went from about 5 to 7.4 days and delivery attempts halved, and on a COD order a long, single-attempt delivery becomes an RTO. That explains roughly 4 of the 7 points. Two contributing factors: festive first-time buyer mix (~1.2 points) and a looser TrustMesh threshold (~1 point). The remainder is noise or other lanes."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "To validate, I would check three things: (1) a difference-in-differences comparing reallocated lanes vs comparable non-reallocated Tier-3 North lanes before and after week 3; (2) RTO by transit bucket within the same buyer tenure, to confirm transit drives RTO and not just risky buyers; (3) GPS and call logs for 'not reachable' RTOs on new partners, to measure fake attempts."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Fixes. Now: move the worst new-partner lanes back to proven carriers or cap their daily volume, and require a minimum of two attempts plus a logged call before a COD order can be marked RTO. Next two weeks: roll back the TrustMesh threshold for Tier-3 first-time COD, or instead of blocking, route those orders to a pre-dispatch vernacular voice/WhatsApp confirmation plus a prepaid nudge. Structural: make lane allocation cost-plus-RTO aware, so a lane is priced as freight cost plus expected RTO cost, with onboarding ramps and volume caps for new partners before peak."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Why not just add a COD fee in Tier-3 to cut RTO?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Three reasons. Regulators treat extra COD charges as a dark pattern, and they have been probing COD fees since late 2025. It punishes the honest repeat buyer, whose RTO rose because of our delivery, not their intent. And Tier-3 first-time buyers use COD as insurance, so a fee lowers conversion more than it lowers RTO. A better lever is making prepaid credible, for example an instant UPI refund and free return promise for first prepaid orders."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How do you stop this recurring next festive season?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Three guardrails. A lane-level RTO and transit-day alert on Valmo partners, with automatic volume throttling when RTO exceeds the lane's baseline by 5 points. A 'new partner ramp' rule: no new partner gets more than, say, 10% of a lane's volume in a peak month. And TrustMesh model releases evaluated on RTO and on false-positive rate for genuine new users, with a holdout, not just approval rate. My closing line: the RTO spike is a delivery problem dressed up as a buyer problem; fix the lanes first, then make COD a choice the buyer can make with a better option beside it."
+    }
+  ],
+  "answer_and_recommendation": "Ranked causes: (1) Root cause - week-3 cheapest-lane reallocation of North Tier-3 (UP/Bihar/Jharkhand) volume to newly onboarded Valmo micro-partners during the festive peak; thin capacity raised median transit from ~5 to ~7.4 days and halved delivery attempts, so 'customer not reachable' RTOs surged (~4 of the 7 points, illustrative). (2) Contributing - festive sale mix shift toward first-time COD buyers (~1.2 pts). (3) Contributing - new TrustMesh model admitting ~6% more risky Tier-3 COD orders (~1 pt). Recommendation: immediately cap or revert new-partner lanes and enforce minimum attempts plus logged calls before RTO; replace risky-order blocking/approval with pre-dispatch vernacular confirmation and a prepaid nudge; make lane allocation price expected RTO cost, with ramp caps for new partners. Risks: reverting lanes raises cost per order (mitigate by targeting only lanes over threshold; ~Rs 2-3 extra freight is far below the ~Rs 80 cost of an RTO); confirmation calls may lower conversion (A/B test with conversion guardrail); partners may game attempt logging (GPS + call-log audit). Closing line: 'This is a delivery problem dressed up as a buyer problem: fix the lanes first, then give COD buyers a prepaid option they can trust.'",
+  "counter_metrics_guardrails": [
+    "Conversion rate and COD order volume for Tier-3 first-time buyers (fixes must not choke genuine demand)",
+    "TrustMesh false-positive rate: genuine new buyers blocked or denied COD (invisible lost activation)",
+    "Logistics cost per delivered order and contribution margin per order (lane reversion must not erase CM gains)",
+    "Delivery promise accuracy and median transit days by tier",
+    "Valmo partner earnings and churn (throttling must not drive good partners out)",
+    "Buyer complaint rate and NPS for delivery (confirmation calls must not feel like harassment)",
+    "Customer return rate (prepaid nudges must not shift failures from RTO to post-delivery returns)"
+  ],
+  "follow_up_twists": [
+    {
+      "twist": "Lane-level data shows no difference between new and old partners; the rise is uniform across carriers.",
+      "response": "Then logistics is not the driver; I would go back to the demand side - check the TrustMesh change and acquisition channels (e.g. a festive install campaign or influencer link bringing low-intent COD buyers) and compare RTO by acquisition source."
+    },
+    {
+      "twist": "The CFO says reverting lanes costs Rs 3 more per order; is it worth it?",
+      "response": "Yes on those lanes: cutting RTO by ~10 points saves ~Rs 8 per shipped order (0.10 x ~Rs 80), more than double the Rs 3 freight increase, and it protects buyer retention; I would revert only lanes above the RTO threshold."
+    },
+    {
+      "twist": "'Refused at door' is the reason growing, not 'not reachable'.",
+      "response": "That shifts me toward buyer intent: duplicate ordering during competitor festive sales, cash shortage, or product-expectation mismatch; I would check refusals by category and seller rating and test an open-box or pre-dispatch confirmation flow."
+    }
+  ],
+  "common_pitfalls": [
+    "Jumping to 'buyers in small towns are fraudulent' or 'add a COD fee' without decomposing mix vs rate; the repeat-buyer RTO rise points to supply-side delivery failure",
+    "Treating the festive sale as the root cause; it is the stressor that exposed the lane allocation, and it does not explain why repeat buyers' RTO rose",
+    "Over-weighting the TrustMesh model change because it is the most recent product launch; its volume share limits it to ~1 point",
+    "Trusting agent-entered RTO reason codes at face value; falling attempts with rising 'not reachable' can signal fake attempts",
+    "Forgetting that RTO is measured on shipped orders, so tightening pre-dispatch blocks can 'improve' RTO while hurting activation"
+  ],
+  "skills_tested": [
+    "structuring",
+    "quant",
+    "business sense",
+    "prioritisation",
+    "execution",
+    "communication",
+    "empathy"
+  ],
+  "linked_teardown": "meesho_product_teardown - key facts used: COD ~63% of orders, pre-IPO COD delivery success ~78% vs prepaid ~97%, one RTO costs ~Rs 80 and wipes out 8-10 orders of contribution, Valmo cheapest-lane allocation and the TrustMesh risk model (teardown_trust_tax.md and results/Logistics_Valmo.json).",
+  "uncertain": [
+    "context_as_of",
+    "regulatory_context"
+  ]
+}

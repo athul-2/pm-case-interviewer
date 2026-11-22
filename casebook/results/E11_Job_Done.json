@@ -1,0 +1,166 @@
+{
+  "pun_title": "Job Done",
+  "case_type": "Metrics",
+  "asked_at": "Meesho",
+  "subject_company": "Meta (Facebook Jobs / local jobs on Facebook Marketplace)",
+  "round_and_level": "[uncertain] PM round (product sense / metrics), APM to PM level; reported in a Meesho PM loop",
+  "difficulty": "Medium - a two-sided marketplace where the true outcome (a hire) happens off-platform, so the candidate must pick a measurable proxy, plus serious fairness, scam and ad-discrimination risks",
+  "market_and_industry": "US; social media / two-sided local jobs marketplace (Facebook Marketplace, Groups, Pages); focus on entry-level, hourly, trade and service roles for small and local businesses (restaurants, retail, warehouses, home services), job seekers 18+ mostly on mobile",
+  "time_box_minutes": "20-25",
+  "exact_prompt": "\"Meta launches Jobs on Facebook. Define its goal, the north-star metric and the counter-metrics.\"",
+  "source_and_verification": "Reported (asked at Meesho, per the casebook item; no public Meesho-specific post found in Nov 2026 searches of Glassdoor, Prepfully, NextLeap and AmbitionBox [uncertain]). Meesho PM prep guides list north-star vs vanity metric questions as a common theme (Interview Query: https://www.interviewquery.com/interview-guides/meesho-product-manager). Real-world grounding: Meta relaunched local job listings on Facebook in the US on 13-14 Oct 2025 (TechCrunch: https://techcrunch.com/?p=3057206 ; Storyboard18: https://www.storyboard18.com/digital/meta-revives-facebook-job-listings-after-two-year-break-82599.htm). Year reported: [uncertain] likely 2025-26, after the relaunch.",
+  "context_as_of": "As of Nov 2026: (1) History - Facebook launched job posts in the US and Canada in 2017, expanded to 40+ countries in 2018, narrowed back to the US and Canada in Feb 2022 (also ending free posting via the Jobs API), and removed all job-posting features on 22 Feb 2023 (TechCrunch; SHRM https://www.shrm.org/mena/topics-tools/news/talent-acquisition/meta-shelves-jobs-facebook). (2) Relaunch - in Oct 2025 Meta brought back local job listings in the US only: a Jobs tab in Marketplace plus listings in Groups and Pages, focused on entry-level, trade and service roles, visible to users 18+, filters for category, distance and job type, recommendations based on browsing, and applicants chatting with employers in Messenger to set up interviews; posting from Marketplace, a Page or Meta Business Suite is free (TechCrunch, Oct 2025; influencermarketinghub https://influencermarketinghub.com/facebook-local-job-listings-to-marketplace-and-groups/). TechCrunch links the move to Zuckerberg's 'return to OG Facebook' push and to competition with LinkedIn (1 bn+ members). (3) Meta scale - Facebook 3 bn+ MAU; Meta family DAP 3.64 bn in Sep 2026; Q3 2026 revenue $64.6 bn (Meta release, 21 Oct 2026). (4) Competitors for hourly jobs: Indeed, LinkedIn, ZipRecruiter, Snagajob, Craigslist and local Facebook Groups. Flag: no public Meta metrics on Jobs usage exist; all funnel numbers in this case are illustrative.",
+  "regulatory_context": "(1) US anti-discrimination law - Title VII, ADEA (age) and ADA: job ads and recommendations must not discriminate. Meta's 2019 settlement with the ACLU, NFHA and others created the 'Special Ad Category' for housing, employment and credit ads (no targeting by age, gender or ZIP), and the 2022 DOJ settlement on housing ads required Meta's Variance Reduction System for ad delivery fairness. Organic job recommendations based on browsing need fairness audits by protected class proxies. (2) State pay-transparency laws (California, Colorado, New York, Washington, Illinois and others) require salary ranges in postings, so a 'pay shown' rate is both a quality and compliance metric. (3) FTC rules and enforcement on job scams and deceptive business-opportunity offers; FTC data show job-scam losses rising - scam prevalence is a must-have counter-metric. (4) Child labour: listings visible only to 18+ (Meta's own rule), consistent with FLSA youth-employment limits. (5) FCRA applies if any screening or background-check feature is added. (6) State privacy laws (CCPA/CPRA) govern using browsing data for job recommendations.",
+  "public_data_anchors": "(1) Facebook has 3 bn+ monthly active users; LinkedIn has 1 bn+ members - TechCrunch, 14 Oct 2025 https://techcrunch.com/?p=3057206 (2) Meta family daily active people 3.64 bn (Sep 2026), Q3 2026 revenue $64.60 bn - Meta investor release, 21 Oct 2026 https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/ (3) Facebook Jobs timeline: launched 2017 US/Canada; 40+ countries 2018; US/Canada only from Feb 2022; fully removed 22 Feb 2023; relaunched (US, local jobs, 18+) Oct 2025 - TechCrunch and SHRM https://www.shrm.org/mena/topics-tools/news/talent-acquisition/meta-shelves-jobs-facebook (4) US small businesses about 33-34 mn (SBA Office of Advocacy) [uncertain: from memory, not re-verified in this session]. No public Meta Jobs usage numbers were found.",
+  "framework_applied": "Success Metrics framework (frameworks.md section 5). Step 1 Company and product - Meta wants Facebook to be useful in daily local life again ('OG Facebook'), deepen Marketplace and Messenger use and give small businesses more reasons to run Pages and ads; Jobs serves that by connecting local businesses with local workers for free. Step 2 Users and value - job seekers (activation: browse and first application; engagement: saved jobs, alerts; conversion: employer reply and interview; retention: return to apply again or after a hire), employers/small businesses (activation: first post; engagement: replying to applicants; conversion: hire; retention: repeat posting, Page and ads use); Meta monetises indirectly through Marketplace engagement, Messenger and later boosted job posts. Step 3 North Star - Weekly employer-applicant conversations: applications that get a two-way Messenger reply from the employer within 72 hours; formula = active seekers x apply rate x employer response rate x conversation rate; supporting: time to first employer reply, listings with pay shown, interview-scheduled rate, self-reported hires. Step 4 Guardrails - scam and fraud prevalence, fairness of recommendations, applicant spam per employer, seeker satisfaction, Marketplace commerce health, Messenger spam reports.",
+  "clarifying_questions": [
+    "Q: Which market and which jobs - all roles or local hourly roles? A: US only, local entry-level, trade and service jobs, like the Oct 2025 relaunch.",
+    "Q: Is it free for employers, and is monetisation a near-term goal? A: Free to post now; boosted listings may come later, but year one is about adoption and outcomes.",
+    "Q: Where does it live - a standalone app or inside Facebook? A: A Jobs tab in Marketplace, plus listings shared in Groups and Pages; applicants talk to employers in Messenger.",
+    "Q: Can we observe hires? A: Not directly - the hire happens offline. We can see applications, Messenger threads and an optional 'I got hired' / 'position filled' signal.",
+    "Q: Who is the priority side - seekers or employers? A: Supply of good listings is the constraint today; small businesses post, but many don't reply.",
+    "Q: Any constraints? A: Legal has flagged discrimination and scam risk as the top two concerns after the 2023 shutdown.",
+    "Q: What happened last time - why was it shut down? A: Meta didn't say publicly; assume low employer engagement and quality issues compared with Indeed and LinkedIn."
+  ],
+  "interviewer_data_reveals": [
+    "Exhibit 1 (illustrative) - Weekly funnel, first 6 months after launch: 40 mn users viewed a job listing -> 9 mn opened a listing detail -> 2.4 mn applied -> 0.9 mn applications got any employer reply -> 0.5 mn got a reply within 72 h -> 0.18 mn interviews scheduled in Messenger.",
+    "Exhibit 2 (illustrative) - Employer side: 1.2 mn active listings; 38% of employers replied to at least one applicant in 7 days; median applicants per listing 14, but the top 10% of listings received 60% of applications.",
+    "Exhibit 3 (illustrative) - Listing quality: listings with pay range shown get 2.1x more applications and 1.6x more employer replies; 4.5% of listings removed as scams (fake work-from-home, advance-fee) within 48 h.",
+    "Exhibit 4 (illustrative) - Seeker outcomes: seekers who got a reply within 72 h returned to Jobs in week 4 at 46% vs 17% for those with no reply; self-reported hire signal tapped by 6% of applicants.",
+    "Exhibit 5 (real) - Facebook 3 bn+ MAU; LinkedIn 1 bn+ members (TechCrunch, Oct 2025)."
+  ],
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "Meta launches Jobs on Facebook. Define its goal, the north-star metric and the counter-metrics."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'll structure it in four parts: why Meta is doing this, who the users are on both sides and what value they get, a North Star with its formula, and the counter-metrics. Can I clarify scope first?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Yes."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Which market and role types? Is it free? Where does it live in the app? And can we see hires?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "US only, local entry-level, trade and service jobs. Free to post. A Jobs tab in Marketplace plus Groups and Pages, applicants chat in Messenger. Hires happen offline; there's an optional 'hired' signal. Legal's top concerns are discrimination and scams."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Company context: Facebook has over 3 bn MAU and Meta is pushing a 'return to OG Facebook' - being useful in people's local lives. Jobs fits because hourly hiring already happens informally in local Facebook Groups. For Meta, it deepens Marketplace and Messenger use and gives small businesses another reason to be active on Facebook, which supports ads later. It was shut down in 2023, so this time it must show real outcomes, not just listings."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Goal: help local job seekers and small businesses find each other and start a hiring conversation quickly and safely on Facebook."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Users. Seekers: hourly and entry-level workers, students over 18, career switchers, often mobile-only, who want nearby jobs with clear pay and fast replies. Employers: owners of restaurants, shops, salons, contractors - no HR team, little time, and they want a few good local applicants, not hundreds. Is it fair to say supply quality and employer responsiveness are the constraints?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Yes, that's right."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Journeys. Seeker: activation is the first application; engagement is browsing, saving and job alerts; conversion is an employer reply and an interview; retention is coming back to apply or returning as a customer of Facebook. Employer: activation is the first post; engagement is replying to applicants; conversion is a hire; retention is posting again. Meta earns indirectly now and possibly via boosted job posts later."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Here's the funnel - Exhibit 1. Weekly: 40 mn viewed a listing, 9 mn opened one, 2.4 mn applied, 0.9 mn got any reply, 0.5 mn within 72 hours, 0.18 mn scheduled an interview."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "The biggest leak is after the application: only about 37% of applications get any reply, about 21% within 72 hours. An application into silence is a bad experience and a reason the first version died. So the North Star should be the moment both sides get value - a real two-way conversation, not views or applications."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "North Star: Weekly Hiring Conversations - applications where the employer replies in Messenger within 72 hours and the applicant responds, creating a two-way thread. It's the closest measurable proxy to a hire, it needs both sides to act, and it rewards quality over volume."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Formula:\nWeekly Hiring Conversations = weekly active seekers x apply rate x (applications per applier) x employer 72-hour reply rate x applicant response rate\nSupporting metrics: time to first employer reply; listings with pay shown; interview-scheduled rate; self-reported hires and 'position filled' rate; employer repeat-post rate."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Why not hires as the North Star?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Hires are the true outcome, but they happen offline and only about 6% tap the 'hired' signal, so it's sparse and biased. I'd use it as a lagging validation metric - check that Hiring Conversations correlate with self-reported hires and 'position filled' - and keep the North Star on something we measure reliably every week."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Exhibit 2: 1.2 mn active listings, 38% of employers reply to anyone within 7 days, and the top 10% of listings get 60% of applications."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Two levers. First, employer responsiveness: reply templates, quick 'interested / not a fit' buttons, and nudges in the Page inbox - aim the 72-hour reply rate up. Second, concentration: 60% of applications on 10% of listings means many seekers are competing for the same jobs and many employers get none. Recommendations should spread applicants by distance and fit, and cap visibility for listings already flooded."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Exhibit 3: listings with pay shown get 2.1x applications and 1.6x replies. 4.5% of listings are removed as scams within 48 hours."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Pay shown is a quality lever and, in states like California, Colorado and New York, a legal requirement - I'd require a pay range at posting. 4.5% scam removal is a serious counter-metric: job scams target exactly this audience, and removals within 48 hours means people already saw them. I'd track scam prevalence as views of scam listings per 1,000 job views, not just removals."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "So what are your counter-metrics?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Five. (1) Safety: scam prevalence, user reports and money lost - the North Star must not grow by letting fake 'work-from-home' jobs through. (2) Fairness: recommendation and delivery parity across age, gender and race proxies - Meta's 2019 settlement created the Special Ad Category for employment ads, and organic recommendations need the same audits. (3) Employer overload: applications per listing per day and employer 'mute' rates - too many low-fit applications drives employers away. (4) Seeker experience: share of applications with no reply in 7 days and seeker satisfaction. (5) Ecosystem: Marketplace commerce engagement and Messenger spam reports - Jobs must not crowd out buying and selling or turn Messenger into a spam channel."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Exhibit 4: seekers who got a reply within 72 hours return at 46% in week 4 versus 17% without."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That supports the North Star - a quick reply drives seeker retention - although the groups may differ, so I'd confirm with an experiment that raises employer reply rates, for example a reply-nudge test, and check week-4 seeker return."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Targets for year one?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Illustrative: raise the 72-hour employer reply rate from about 21% to 35% of applications, double Weekly Hiring Conversations, get pay shown on 90% of listings, and keep scam prevalence below an agreed threshold, with fairness audits each quarter. Monetisation through boosted posts only after reply rates are healthy."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Summarise."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Goal: connect local job seekers and small businesses quickly and safely. North Star: Weekly Hiring Conversations - applications that turn into a two-way Messenger thread within 72 hours - validated against self-reported hires. Levers: employer reply rate, pay transparency, spreading applicants across listings. Counter-metrics: scam prevalence, fairness parity, employer overload, unanswered applications, and Marketplace and Messenger health."
+    }
+  ],
+  "answer_and_recommendation": "Goal: help local job seekers and small businesses in the US find each other and start a hiring conversation quickly and safely on Facebook. Ranked metrics: (1) North Star - Weekly Hiring Conversations: applications where the employer replies in Messenger within 72 hours and the applicant responds (illustrative baseline 0.5 mn/week from 2.4 mn applications). Formula: weekly active seekers x apply rate x applications per applier x employer 72-hour reply rate x applicant response rate. (2) Lagging validation - self-reported hires and 'position filled' rate, interview-scheduled rate (illustrative 0.18 mn/week). (3) Supply-quality supporting metrics - employer 72-hour reply rate (target about 21% -> 35%), listings with pay shown (target 90%), employer repeat-post rate, application spread across listings. Recommendation: make employer responsiveness and listing quality the first-year focus; require pay ranges; build fairness audits and scam detection into launch; delay monetisation (boosted listings) until reply rates are healthy. Risks: scams targeting entry-level seekers (mitigate with verification, review before publishing instead of within 48 hours, prevalence metric); discriminatory recommendations (mitigate with parity audits and Special Ad Category rules); employer overload (mitigate with application caps and fit-based ranking). Closing line: 'Jobs on Facebook works when an application turns into a real conversation within three days - safely and fairly - so I'd measure that, not listings or clicks.'",
+  "counter_metrics_guardrails": "(1) Scam and fraud prevalence - scam-listing views per 1,000 job views, reports, removals before first view, and user-reported money lost. (2) Fairness - parity of job recommendations and listing reach across age, gender and race proxies; compliance with the Special Ad Category for any paid job ads (no age, gender or ZIP targeting). (3) Employer overload - applications per listing per day, low-fit application share, employer mute/close rates. (4) Seeker experience - share of applications with no reply in 7 days, seeker CSAT, block/report rates of employers. (5) Pay transparency compliance - share of listings with pay range, mandatory in pay-transparency states. (6) Ecosystem health - Marketplace buy/sell engagement and Messenger spam reports must not fall as Jobs grows. (7) Privacy - complaints or opt-outs about job recommendations based on browsing data.",
+  "follow_up_twists": [
+    "Twist: 'Weekly Hiring Conversations doubled, but self-reported hires didn't move - why?' Response: Conversations may be shallow or scam-driven; I'd check interview-scheduled rate, conversation length and scam reports, and tighten the North Star to threads with an interview time set.",
+    "Twist: 'Leadership wants to launch paid boosted job posts in month three.' Response: I'd wait until the employer reply rate and scam prevalence hit thresholds, then test boosts with the guardrail that organic seekers' reply rates don't drop.",
+    "Twist: 'Should we expand Jobs to India?' Response: Possibly, given WhatsApp and Facebook Groups already carry informal hiring, but I'd first prove US outcomes and handle India-specific risks - job-fraud prevalence, DPDP consent, and competition from Apna and WorkIndia."
+  ],
+  "common_pitfalls": [
+    "Choosing listings posted, job views or applications as the North Star - vanity metrics that grew in the first version without proving value, and that reward spam.",
+    "Insisting on 'hires' as the North Star without noting that hires happen offline and are sparsely reported.",
+    "Measuring only the seeker side and ignoring employer responsiveness, which is the real constraint in local hiring marketplaces.",
+    "Leaving out scams and discrimination - the two risks most specific to jobs on Meta given its 2019 ad-discrimination settlement and the rise of job scams."
+  ],
+  "skills_tested": "structuring, business sense, prioritisation, quant, empathy, communication",
+  "linked_teardown": "None",
+  "uncertain": [
+    "round_and_level",
+    "source_and_verification",
+    "public_data_anchors"
+  ]
+}

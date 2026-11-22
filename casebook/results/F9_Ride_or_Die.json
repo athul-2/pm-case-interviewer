@@ -1,0 +1,163 @@
+{
+  "pun_title": "Ride or Die",
+  "case_type": "Guesstimate",
+  "asked_at": "By the Authors (synthetic, Swiggy-style)",
+  "subject_company": "Swiggy (Food Delivery and Instamart delivery partner fleet, Bengaluru)",
+  "round_and_level": "[uncertain] PM round or hiring-manager round (supply-side / ops-flavoured guesstimate), APM campus to PM level; synthetic case, so the round is a recommendation",
+  "difficulty": "Medium - the maths is simple, but the candidate must define 'earn' (gross vs net, full-time vs blended), model the supply-side constraint (orders per hour, not demand), and subtract rider-borne costs",
+  "market_and_industry": "India; food delivery and quick commerce (gig logistics); Bengaluru (Tier 1 metro); riders are mostly young migrant men on petrol or rented EV two-wheelers, Kannada/Hindi/Tamil/Telugu speaking, budget Android phones, many multi-apping across Swiggy, Zomato, Zepto and Blinkit",
+  "time_box_minutes": "10-15",
+  "exact_prompt": "\"Estimate how much a Swiggy delivery partner in Bengaluru earns in a month.\"",
+  "source_and_verification": "Synthetic (written by the authors in Swiggy style); no verbatim public report of this exact question was found on NextLeap, The Product Folks, AmbitionBox, Glassdoor or PracHub (searched Nov 2026). Close public cousins: the June 2025 Samir Arora post on rider pay-per-order maths (Outlook Business, https://www.outlookbusiness.com/start-up/e-commerce/only-rs-38-per-order-samir-arora-reveals-basic-maths-behind-delivery-partners-pay) and the Jan 2026 Deepinder Goyal earnings-per-hour disclosure (Business Today, https://www.businesstoday.in/amp/latest/corporate/story/look-at-the-full-picture-deepinder-goyal-breaks-down-delivery-partner-earnings-with-hard-facts-509252-2026-01-02). Year: 2026 (synthetic).",
+  "context_as_of": "As of Nov 2026: (1) Swiggy runs one delivery partner app and shared fleet across Food Delivery, Instamart (about 1,240 dark stores in 133 cities, Q2 FY27) and Bolt; riders are independent gig workers paid per order (base + distance + wait/surge/rain pay) plus daily and weekly incentive targets (swiggy-product-teardown, Delivery_partner_app_labour.json). (2) Swiggy's DRHP disclosed about 5.4 lakh average monthly transacting delivery partners in FY24. (3) At Davos (20 Jan 2026) Swiggy said it paid out over Rs 5,000 crore to delivery partners 'last year' (Storyboard18: https://storyboard18.com/brand-makers/davos-2026-gig-economy-emerges-as-indias-third-pillar-swiggy-paid-delivery-partners-over-rs-5000-crore-last-year-87924.html). (4) Peer anchor: Zomato said average delivery-partner earnings per hour (excluding tips) were Rs 102 in 2025 vs Rs 92 in 2024, tips about Rs 2.6/hour; unions say net of fuel and vehicle cost it is about Rs 81/hour (Business Today, 2 Jan 2026, link above; Indian Startup News: https://indianstartupnews.com/news/avg-earnings-per-hour-were-rs-102-zomato-ceo-deepinder-goyal-debunks-delivery-partners-low-pay-concerns-10969509). (5) Swiggy recruitment listings for Bengaluru advertise 'up to Rs 60,000/month' (ceiling, not average); some Koramangala Swiggy biker listings on apna.co quote a fixed Rs 37,000 + Rs 2,000 attendance incentive (likely third-party fleet roles). (6) Labour flashpoints: nationwide gig strikes on 25 and 31 Dec 2025; Swiggy offered up to Rs 10,000 over 31 Dec-1 Jan. (7) Swiggy raised its customer platform fee to Rs 17.58/order in Mar 2026 (Business Today: https://www.businesstoday.in/technology/story/swiggy-hikes-platform-fee-to-rs-1758-per-order-follows-zomatos-recent-increase-522031-2026-03-24). Stale-risk flags: Swiggy does not publish an EPH figure, so the Zomato EPH is a proxy; the 'last year' in the Rs 5,000 cr figure is undated (likely CY2025 or FY25); per-order rate cards change frequently and are city-specific.",
+  "regulatory_context": "(1) Code on Social Security, 2020 took effect 21 Nov 2025: aggregators contribute 1-2% of annual turnover (capped at 5% of payouts to gig workers) to a central social security fund; analysts estimate about Rs 260 cr/year for Swiggy, Rs 2-3/order, largely passed to customers rather than cut from rider pay. (2) Karnataka Platform-Based Gig Workers (Social Security and Welfare) Act, 2025: welfare board constituted by a 27 Jan 2026 notification; a 13 Feb 2026 order fixes a welfare fee of 1% of the payout capped at Rs 0.50 per two-wheeler delivery; on 3 Jul 2026 the Karnataka High Court refused to stay the Act and directed Swiggy, Zomato, Zepto, Blinkit and others to deposit Q2 fees with the court registry (Business Today: https://www.businesstoday.in/latest/corporate/story/karnataka-hc-directs-swiggy-zomato-zepto-and-others-to-deposit-gig-workers-welfare-fee-within-3-weeks-540983-2026-07-04 ; The News Minute: https://www.thenewsminute.com/karnataka/karnataka-directs-gig-platforms-to-pay-mandatory-welfare-fee-as-per-gig-workers-act). The fee is paid by the platform, so it does not reduce the rider's take-home in this estimate. (3) No statutory minimum hourly pay for Bengaluru delivery riders was found as of Nov 2026 [uncertain]. (4) Riders are not employees, so no PF/ESI deductions apply; income is typically below the income-tax threshold. Net effect: regulation shapes platform cost, not the rider's monthly number, in the near term.",
+  "public_data_anchors": "- Zomato average rider EPH, excl. tips: Rs 102 (2025), Rs 92 (2024); tips Rs 2.6/hour - Business Today, 2 Jan 2026 (link in context_as_of). Use as a Swiggy proxy, since the two match each other's incentives.\n- Union counter-claim: about Rs 81/hour net of fuel and vehicle costs - Indian Startup News / DT Next, Jan 2026.\n- Swiggy payouts to delivery partners: over Rs 5,000 cr in 'last year' - Storyboard18, 20 Jan 2026.\n- Swiggy average monthly transacting delivery partners: about 5.4 lakh (FY24, DRHP) - swiggy-product-teardown/results/Delivery_partner_app_labour.json.\n- Implied national average: Rs 5,000 cr / 5.4 lakh / 12 = about Rs 7,700 per transacting partner per month (blended across part-timers, all cities, multi-appers) - derived.\n- Samir Arora's ceiling maths: 2 orders/hour x 10 hours x 26 days = 520 orders; Rs 20,000/month implies about Rs 38/order - Outlook Business, 10 Jun 2025.\n- TeamLease estimate: full-time metro rider about Rs 20,000-30,000 gross, about Rs 21,000 net after fuel and vehicle - cited in search summaries, 2025-26 [uncertain].\n- Shriram Finance explainer: full-time Swiggy riders Rs 15,000-50,000/month; part-timers Rs 7,000-25,000 - https://www.shriramfinance.in/two-wheeler-loan/articles/monthly-earnings-with-bike-on-zomato-swiggy-blinkit (undated).\n- Advertised ceiling: 'up to Rs 60,000/month' on Swiggy rider recruitment and app listings (2026).\n- Bengaluru petrol price: about Rs 103/litre (2025-26) [uncertain]; EV scooter rental for riders about Rs 4,000-6,000/month [uncertain].",
+  "framework_applied": "Guesstimate framework (frameworks.md section 6: Clarify, Pick framework, Constraints/MECE, Calculate, Sanity check). Clarify: 'earn' = monthly take-home in Rs; split gross vs net of fuel; target a typical full-time rider, then give a blended average across all active riders; Food + Instamart combined; 2026. Pick framework: bottom-up (one rider's activity x time), with earnings per hour as the unit - orders/hour x pay/order + incentives, x hours/day x days/month. Constraints/MECE: natural capacity constraint of about 1.5-2.2 orders/hour (pickup wait, traffic, drop); segment riders MECE by hours worked (full-time 9-11 h, part-time peak-only 4-5 h, weekend/student 2-3 h), because hours, not job title, drive earnings. Calculate: full-time about Rs 27,000 gross, about Rs 20,000-21,000 net; blended about Rs 14,000 gross. Sanity check: ratio test vs Swiggy's own Rs 5,000 cr payout / 5.4 lakh partners = Rs 7,700/month nationally, which should sit below a Bengaluru blended number; and cross-check against Zomato EPH Rs 102 and TeamLease Rs 21k net.",
+  "clarifying_questions": "1. Q: Gross payout from Swiggy, or take-home after fuel and bike costs? A: Give both, but land on take-home.\n2. Q: A typical full-time rider, or the average across everyone who logs in? A: Start with a full-time rider; then give me the blended average.\n3. Q: Food delivery only, or including Instamart orders on the same app? A: Both - it is one fleet.\n4. Q: Do I include incentives, surge, rain pay and tips? A: Yes, include incentives and surge; tips are small, mention them.\n5. Q: Own petrol bike or rented EV? A: Assume a mix; you pick the dominant case.\n6. Q: Exclusive to Swiggy, or multi-apping? A: Estimate Swiggy earnings only; note multi-apping as a twist.\n7. Q: Time frame - a normal month, not Diwali or IPL season? A: A normal non-festive month in 2026.",
+  "interviewer_data_reveals": "Exhibit 1 - Rider segments in Bengaluru (illustrative): Full-time (9-11 h/day, 26 days) 30% of active riders; Part-time peak-only (4-5 h/day, 24 days) 45%; Weekend/student (2-3 h/day, 10 days) 25%.\nExhibit 2 - Per-order pay card, Bengaluru (illustrative, typical 2026 structure): food order base Rs 25 + Rs 6/km beyond 4 km, average food order pays about Rs 40 incl. distance; Instamart order base about Rs 20-25 (short radius, 2-3 km), often batched; rain/peak surge +Rs 10-20/order in active windows.\nExhibit 3 - Throughput (illustrative): food 1.6-1.8 orders/hour (pickup wait about 8-10 min); Instamart 2.5-3 orders/hour with batching; full-timer mix about 60% food / 40% Instamart orders.\nExhibit 4 - Incentives (illustrative): daily target (e.g. 20 orders) unlocks Rs 150-250; weekly target unlocks Rs 1,000-1,500; incentives are about 15-25% of gross for a full-timer, near zero for weekend riders.\nExhibit 5 - Costs (illustrative): about 90-110 km/day for a full-timer; petrol bike at 45 km/litre and Rs 103/litre = about Rs 220/day; maintenance + phone data about Rs 1,500/month; EV rental alternative Rs 4,500-5,500/month incl. battery swaps.\nReal anchors handed over on request: Zomato EPH Rs 102 (2025, excl. tips; Business Today, Jan 2026); Swiggy paid partners over Rs 5,000 cr in the last year (Storyboard18, Jan 2026); 5.4 lakh avg monthly transacting partners (FY24 DRHP).",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "Estimate how much a Swiggy delivery partner in Bengaluru earns in a month."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Before I start, a few clarifications. By 'earns', do you mean gross payout from Swiggy, or take-home after fuel and bike costs?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Give me both, but land on take-home."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "And is this a typical full-time rider, or the average across everyone who logs in during the month? Those are very different numbers."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Start with a full-time rider, then give me the blended average."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Food only, or including Instamart orders? And a normal month, not Diwali or the New Year's Eve surge?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Both verticals, it is one fleet. A normal non-festive month in 2026. Ignore other apps."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Great. I'll use a bottom-up framework with earnings per hour as my unit, because riders are paid per order and the binding constraint is supply-side: how many orders one person can physically complete in an hour. Structure:\nMonthly earnings = (orders/hour x pay/order + incentives/hour) x hours/day x days/month - costs.\nThen I'll segment riders MECE by hours worked - full-time, part-time peak-only, and weekend/student - because hours drive earnings far more than anything else."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Why not start from Swiggy's total delivery cost and divide by riders?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's a good sanity check at the end, but it blends Tier 3 part-timers with Bengaluru full-timers. Bottom-up gives me the Bengaluru full-timer directly. I'll use the top-down number to sanity-check."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Fine. Here is the segment split and a typical pay card. [Hands over Exhibits 1 and 2.]"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Orders per hour first. A food order takes about 8-10 minutes waiting at the restaurant, 10 minutes to the customer in Bengaluru traffic, plus a few minutes to reach the next restaurant - so about 1.7 food orders an hour. Instamart is a 2-3 km radius with batching, so closer to 2.5-3 an hour."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Here's throughput and the mix. [Exhibit 3: 60% food / 40% Instamart for a full-timer.]"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So a blended rate of about 2 orders an hour. But a rider is not busy every hour - lunch 12-3 and dinner 7-11 are dense, the afternoon lull is thin. Across a 10-hour shift I'll take 1.8 orders an hour average, so about 18 orders a day. That passes a common-sense check: daily incentive targets are typically pitched around 18-22 orders."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Pay per order: food averages about Rs 40 including distance, Instamart about Rs 25. Weighted: 0.6 x 40 + 0.4 x 25 = Rs 34 per order. Add peak and rain surge on maybe a fifth of orders at Rs 15, that's about Rs 3 more, so Rs 37 per order."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What about incentives?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "For a full-timer who hits daily targets most days, incentives add roughly 20% on top of per-order pay. So per order effective is about Rs 37 x 1.2 = about Rs 44."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "That's the incentive structure in Exhibit 4 - 15-25% for full-timers. Go on."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Earnings per hour = 1.8 x Rs 44 = about Rs 80 on paper. Hmm, that's below the Rs 102 EPH Zomato disclosed for 2025, and Bengaluru should be at or above the national average. Let me revisit: Zomato's EPH is measured over logged-in hours where riders tend to log in at peaks. I'll raise my effective throughput to about 2.1 orders in counted hours and keep Rs 44 - that's about Rs 92, and add a Bengaluru metro premium to land near Rs 100-105 per hour gross."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Why a metro premium?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Longer distances and higher surge frequency in Bengaluru - traffic, rain, and a richer customer base - and riders are harder to retain because of alternative jobs, so the platforms pay more. I'll use Rs 105 per hour gross, including incentives, excluding tips."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Hours: a full-timer does about 10 hours on the app, 26 days a month - 260 hours. Gross = 260 x Rs 105 = Rs 27,300. Tips add about Rs 3/hour, so about Rs 800 - call gross about Rs 28,000."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Now take-home. Here are costs. [Exhibit 5.]"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "A full-timer rides about 100 km a day. At 45 km/litre and Rs 103/litre that's about Rs 230 a day, times 26 = Rs 6,000. Maintenance, tyres, phone data about Rs 1,500. Total about Rs 7,500. Net = Rs 28,000 - 7,500 = about Rs 20,500 a month. If he rents an EV at about Rs 5,000 all-in, net is slightly better, around Rs 22,000."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "And the blended average?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Using the segments:\n| Segment | Share | Hours/month | EPH | Gross/month |\n| Full-time | 30% | 260 | Rs 105 | Rs 27,300 |\n| Part-time peak | 45% | 110 (4.5 h x 24) | Rs 110 (peaks only) | Rs 12,100 |\n| Weekend/student | 25% | 25 (2.5 h x 10) | Rs 100 | Rs 2,500 |\nWeighted: 0.3 x 27,300 + 0.45 x 12,100 + 0.25 x 2,500 = 8,190 + 5,445 + 625 = about Rs 14,300 gross. Part-timers earn a slightly higher EPH because they only ride the dense peaks."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Sanity-check that."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Ratio test from the top down: Swiggy said it paid over Rs 5,000 crore to partners last year. Divided by about 5.4 lakh average monthly transacting partners, that's Rs 5,000 cr / 5.4 lakh / 12 = about Rs 7,700 a month nationally. My Bengaluru blended Rs 14,300 is about 1.9x that - plausible, since the national pool includes Tier 2/3 cities with lower order density and lots of riders who also work for Zomato or Zepto. If my blended number were below Rs 7,700, I'd have a problem."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Second check: the TeamLease estimate of about Rs 20,000-30,000 gross and about Rs 21,000 net for a full-time metro rider matches my Rs 28,000 gross / Rs 20,500 net. Third: my full-timer does about 18-21 orders a day, about 520 a month - the same ceiling Samir Arora used, and well below the 'up to Rs 60,000' recruitment ads, which need 13-14 hour days at peak incentive."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What would most change your number?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Orders per hour. A 10% change there moves earnings 10% directly. It depends on restaurant wait times and batching - which, interestingly, is the product lever too: cutting pickup wait by 3 minutes lifts rider EPH by roughly 10-15% without changing the rate card."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Land it."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "A full-time Swiggy delivery partner in Bengaluru earns about Rs 27,000-28,000 a month gross, including incentives, and takes home about Rs 20,000-21,000 after fuel and bike costs - roughly Rs 80 an hour net. The blended average across all active riders is about Rs 14,000 gross, because most riders work only peaks or weekends. The biggest driver is orders per hour, which Swiggy controls through batching and pickup wait times."
+    }
+  ],
+  "answer_and_recommendation": "Estimate: full-time Bengaluru Swiggy rider about Rs 27,000-28,000/month gross (260 hours x about Rs 105 EPH incl. incentives, + about Rs 800 tips) and about Rs 20,000-21,000/month net after about Rs 7,500 of fuel, maintenance and data (about Rs 80/hour net). Blended across all active Bengaluru riders: about Rs 14,000/month gross. Range: full-time net Rs 17,000-25,000 depending on hours, incentive attainment and petrol vs EV. Ranked drivers of the estimate: (1) orders per hour (pickup wait, batching, order density); (2) hours logged (full-time vs peak-only); (3) incentive attainment (daily/weekly targets are about 15-25% of full-timer gross). Product implication if asked: the highest-leverage lever for rider earnings is cutting unpaid restaurant wait time and smarter batching, not raising the per-order rate. Risks: Zomato EPH used as a proxy for Swiggy; national payout figure is undated; costs vary by vehicle. Closing line: 'About Rs 28,000 gross and Rs 20,000 in hand for a full-timer, Rs 14,000 on average across everyone - and the number moves one-for-one with orders per hour.'",
+  "counter_metrics_guardrails": "Pure guesstimate, so sanity checks instead of guardrails: (1) Ratio test - Swiggy's Rs 5,000 cr+ annual payout / 5.4 lakh avg monthly transacting partners = about Rs 7,700/month nationally; the Bengaluru blended Rs 14,300 must sit above it, and does at about 1.9x. (2) Benchmark test - Zomato 2025 EPH Rs 102 excl. tips vs the estimate's Rs 105 for Bengaluru; union net figure Rs 81/hour vs the estimate's about Rs 80/hour net. (3) Capacity test - 18-21 orders/day and about 520/month is within Samir Arora's 2-orders/hour x 10 hours x 26 days ceiling. (4) Ceiling test - the result is well below the advertised 'up to Rs 60,000', which would need 13-14 hour days at maximum incentives.",
+  "follow_up_twists": "1. 'He also works for Zomato.' - Multi-apping raises his total earnings per hour by filling lulls (about 10-20%), but lowers his Swiggy earnings and makes per-platform social security contributions harder to attribute.\n2. 'It's the monsoon month.' - Rain surge pushes per-order pay up 20-40% in active windows but throughput falls; net effect is roughly +10-15% gross for riders who stay online, and a supply shortfall for Swiggy.\n3. 'Swiggy cuts the base pay by Rs 5 but cuts pickup wait by 3 minutes - better or worse for the rider?' - 3 minutes on about a 30-minute cycle is about 10% more orders per hour, worth about Rs 4-5 per order-equivalent, so roughly neutral to slightly positive for full-timers, but riders will perceive it as a pay cut, so communicate EPH, not per-order pay.",
+  "common_pitfalls": "1. Quoting the 'up to Rs 60,000' recruitment ad or a fixed-salary job listing as the answer - those are ceilings or third-party fleet roles, not typical gig earnings.\n2. Starting from demand (Bengaluru orders / riders) instead of supply-side capacity - rider earnings are bounded by orders per hour, not by how many orders the city places.\n3. Forgetting rider-borne costs (fuel, EV rental, maintenance, data), which are 25-30% of a full-timer's gross; gross is not take-home.\n4. Giving a single 'average rider' number without segmenting by hours - the blended average (about Rs 14k) and the full-timer number (about Rs 28k) differ by 2x, and interviewers probe this.",
+  "skills_tested": "quant, structuring, business sense, empathy (supply-side rider view), communication",
+  "linked_teardown": "swiggy-product-teardown (swiggy-product-teardown/results/Delivery_partner_app_labour.json) - key facts used: about 5.4 lakh average monthly transacting delivery partners (FY24 DRHP) for the top-down sanity check; per-order + distance + surge + weekly-incentive payout structure; shared Food/Instamart fleet; Karnataka welfare fee and Social Security Code levy borne by the platform.",
+  "uncertain": [
+    "round_and_level",
+    "regulatory_context",
+    "public_data_anchors"
+  ]
+}

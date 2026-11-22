@@ -1,0 +1,206 @@
+{
+  "pun_title": "Two's Company",
+  "case_type": "Product Strategy",
+  "asked_at": "Swiggy (reported on PracHub, posted May 2026)",
+  "subject_company": "A restaurant owner choosing between Swiggy and Zomato (Eternal Ltd); the candidate plays the restaurant, not the platform",
+  "round_and_level": "PM round (product / decision making), rated Medium on PracHub; APM to PM level [uncertain on round]",
+  "difficulty": "Medium - easy to answer with national market share and headline commissions; a strong answer works from the owner's goal and a per-order P&L in their own delivery radius, rejects the false either/or, and handles exclusivity and zero-commission entrants",
+  "market_and_industry": "India; food delivery marketplaces (Swiggy, Zomato, plus Rapido Ownly, magicpin and ONDC). Restaurant side: independent and cloud-kitchen owners in Tier 1 and Tier 2 cities; price-sensitive, thin margins, owner-run on an Android phone",
+  "time_box_minutes": "25-30",
+  "exact_prompt": "\"You are opening a new restaurant in India and need to decide whether to list it on Zomato or on Swiggy. How would you make that decision?\"",
+  "source_and_verification": "Reported. PracHub lists 'Picking a Delivery Platform for a New Restaurant: Zomato vs. Swiggy', tagged Swiggy, Product Manager, Product / Decision Making, Medium, posted 20 May 2026, updated 23 Oct 2026 (https://prachub.com/interview-questions/picking-a-delivery-platform-for-a-new-restaurant-zomato-vs-swiggy). Its hint is to judge each app from your own address rather than national numbers; listed follow-ups are exclusivity for lower commission, steady orders but thin margins, and premium dine-in vs delivery-only. PracHub content is candidate-reported; round not confirmed [uncertain]. Year: 2026.",
+  "context_as_of": "As of Nov 2026: Swiggy Q2 FY27 (Jul-Sep 2026) food delivery GOV Rs 10,054 cr, +17.7% YoY, food adjusted EBITDA Rs 341 cr (3.4% of GOV); about 2.5 lakh restaurant partners (Jan 2026 release); Bolt (10-minute food from restaurants within about 2 km) is over 10% of food orders (Swiggy shareholder letter, via https://www.investywise.com/swiggy-shareholders-letter-for-q2-fy27/ [uncertain on exact figures]). Zomato (parent Eternal Ltd; group CEO Albinder Dhindsa since Feb 2026) Q2 FY27 food NOV about Rs 11,445 cr, +21.5% YoY, food adjusted EBITDA about Rs 627 cr (5.5% of NOV) [uncertain]. Duopoly split is commonly estimated at Zomato about 55-58%, Swiggy about 42-45%, with wide city-by-city variation [uncertain]. Customer platform fees are about Rs 17.6 incl. GST on both apps since Mar 2026. New entrant: Rapido's zero-commission Ownly launched in Bengaluru (Mar 2026), passed 50,000 daily orders, moved into the main Rapido app in Jul 2026 and entered Hyderabad in Sep 2026 with about 10,000 restaurants; NRAI signed an MoU with Ownly (https://www.businesstoday.in/latest/trends/story/no-platform-fees-20000-restaurants-rapidos-ownly-food-delivery-goes-live-within-the-main-app-545689-2026-07-28 ; https://telanganatoday.com/rapidos-ownly-enters-hyderabad-with-zero-commission-food-delivery-model). Zomato says it removed price-parity requirements by Apr 2026 and has no exclusivity in standard contracts (https://www.business-standard.com/industry/news/zomato-price-parity-cci-case-why-nrai-oppose-explained-126071500578_1.html). Stale-risk: Eternal reports NOV, not GOV, so the two are not directly comparable; share splits are estimates.",
+  "regulatory_context": "Moderately material. (1) CCI antitrust case (ordered 2022) on Swiggy and Zomato: the DG report (late 2024) found preference for exclusive partners and price-parity clauses; final CCI decision still pending as of Jul 2026, with NRAI seeking interim relief against price parity and exclusivity (https://www.business-standard.com/industry/news/zomato-price-parity-cci-case-why-nrai-oppose-explained-126071500578_1.html) [uncertain on later developments]. This matters when a platform offers lower commission for exclusivity. (2) GST: aggregators collect and pay 5% GST on restaurant food sold through them under section 9(5); GST on delivery fees at 18% since 22 Sep 2025, which raises customer cost. (3) Income-tax TDS under section 194-O (0.1% since Oct 2024) and GST TCS on e-commerce payouts affect reconciliation [uncertain on current rates]. (4) FSSAI licence or registration is required to list; FSSAI hygiene rating display. (5) Gig-worker codes (Social Security Code platform levy, Karnataka and Rajasthan cess) mostly hit customer fees, not the restaurant directly. (6) ONDC is a government-backed open network that zero-commission or low-commission apps can plug into.",
+  "public_data_anchors": "1) Swiggy food GOV Rs 10,054 cr in Q2 FY27, +17.7% YoY; food adjusted EBITDA 3.4% of GOV (Swiggy Q2 FY27). 2) Zomato food NOV about Rs 11,445 cr, +21.5% YoY; food adjusted EBITDA about 5.5% (Eternal Q2 FY27) [uncertain]. 3) Swiggy about 2.5 lakh restaurant partners (Jan 2026 corporate release). 4) Restaurant commission typically about 15-25% of order value on both platforms, plus payment gateway, ads and discount co-funding (industry and NRAI reporting) [uncertain]. 5) Customer platform fee about Rs 17.6 incl. GST on both apps (Mar 2026). 6) Rapido Ownly: zero commission, over 50,000 daily orders in Bengaluru about 5 months after launch; 10,000 restaurants in Hyderabad (Sep 2026), target 30,000; customer delivery fee about Rs 30 in early reports (https://www.angelone.in/news/unlisted-companies/rapido-s-ownly-plans-multi-city-expansion-as-it-crosses-50-000-daily-orders). 7) Food AOV about Rs 420-450 on both apps (casebook swiggy-product-teardown) [uncertain].",
+  "framework_applied": "Product Strategy: Clarify, Context (4 pillars), Recommend (frameworks.md section 2); a strategic decision question ('should we do X'), asked from the restaurant owner's side. Step 1 Clarify - the owner's goal (volume to fill the kitchen, profit per order, or building a brand and direct customers), restaurant type and location (cuisine, price point, delivery-only vs dine-in, city and pin code), whether listing on both is allowed, and kitchen capacity for two order streams; constraints are working capital for ads and discounts and the owner's time. Step 2 Context - (1) Company (the restaurant): an AOV of about Rs 350-450, food cost about 30-35%, so after a 20-25% commission plus ads and discounts, net payout is about 55-65% of menu price; strengths are its menu and kitchen, weaknesses are no brand and no customer data yet; TAM check of orders within a 3-5 km radius; (2) Customers: delivery users in the radius and which app they use (Zomato tends to lead in many north and west metros, Swiggy is competitive in Bengaluru and southern cities [uncertain]); office lunch vs late-night vs family dinner occasions; (3) Competition: the 40-80 similar restaurants already listed in the radius, their ratings and ad intensity; platform features like Swiggy Bolt, Zomato Gold, Dineout vs District; substitutes are Rapido Ownly, magicpin/ONDC and direct WhatsApp or own-website ordering; (4) Market forces: the platforms have high supplier-side power over small restaurants (ranking, ads, commissions), customers multi-home, entry is cheap but visibility is expensive, and exclusivity deals trade commission for dependence. Step 3 Recommend - reframe: 'Swiggy or Zomato' is a false choice; list on both, then concentrate ad and discount money on whichever delivers better contribution per order in your own pin code after an 8-week test, refuse exclusivity unless the discount is large and the platform dominates locally, and use a zero-commission channel plus direct ordering to own repeat customers.",
+  "clarifying_questions": [
+    {
+      "q": "What kind of restaurant is it: cuisine, price point, and is it dine-in or delivery-only?",
+      "a": "A North Indian and biryani delivery-first kitchen with a small dine-in, average order about Rs 400, in HSR Layout, Bengaluru."
+    },
+    {
+      "q": "What does the owner want most in year one: order volume, profit per order, or building a brand?",
+      "a": "Profit. The owner has put in Rs 40 lakh and wants to break even within 12 months."
+    },
+    {
+      "q": "Can we list on both platforms, or is the owner being offered an exclusive deal?",
+      "a": "Both are allowed. One platform has offered 4 points lower commission for 12 months of exclusivity."
+    },
+    {
+      "q": "How many orders a day can the kitchen handle at peak without hurting prep time?",
+      "a": "About 120 orders a day, with a peak of about 25 an hour at dinner."
+    },
+    {
+      "q": "What budget is there for ads and launch discounts?",
+      "a": "About Rs 1.5 lakh a month for the first three months."
+    },
+    {
+      "q": "Are there other channels around, like Rapido Ownly or magicpin?",
+      "a": "Ownly is live in Bengaluru with zero commission. You can consider it."
+    }
+  ],
+  "interviewer_data_reveals": [
+    {
+      "exhibit": "Exhibit 1 - Local demand in a 4 km radius of HSR Layout (illustrative)",
+      "data": "| Metric | Swiggy | Zomato |\n|---|---|---|\n| Monthly active orderers in radius | 1.6 lakh | 1.5 lakh |\n| North Indian / biryani share of orders | 22% | 25% |\n| Competing biryani restaurants listed | 64 | 58 |\n| Avg ad spend share of GOV for top-10 biryani outlets | 6% | 5% |\n| Late-night (11 pm-2 am) order share | 9% | 12% |"
+    },
+    {
+      "exhibit": "Exhibit 2 - Per-order P&L on a Rs 400 order (illustrative, commission bands from industry reporting)",
+      "data": "| Line | Swiggy | Zomato | Ownly |\n|---|---|---|---|\n| Menu price | 400 | 400 | 400 |\n| Commission (incl. payment gateway) | 22% = 88 | 23% = 92 | 0 (subscription about Rs 25/order equivalent) [illustrative] |\n| Ads (share of GOV) | 5% = 20 | 4% = 16 | 0 |\n| Restaurant-funded discount | 30 | 30 | 10 |\n| GST/TDS reconciliation and penalties | 5 | 5 | 2 |\n| Net payout | 257 | 257 | 363 |\n| Food and packaging cost | 150 | 150 | 150 |\n| Contribution per order | 107 | 107 | 213 |"
+    },
+    {
+      "exhibit": "Exhibit 3 - Results of an 8-week test on both apps (illustrative)",
+      "data": "| Week 5-8 average | Swiggy | Zomato |\n|---|---|---|\n| Orders per day | 38 | 46 |\n| Menu-to-order conversion | 11% | 13% |\n| Rating | 4.2 | 4.1 |\n| Repeat rate (30-day) | 24% | 21% |\n| Incremental orders per Rs 1,000 ad spend (holdout test) | 5.5 | 4.2 |\n| Contribution per day | Rs 4,066 | Rs 4,922 |"
+    },
+    {
+      "exhibit": "Exhibit 4 - Real anchors",
+      "data": "Swiggy food GOV Rs 10,054 cr (+17.7%) and Zomato food NOV about Rs 11,445 cr (+21.5%) in Q2 FY27. Swiggy about 2.5 lakh restaurant partners. Rapido Ownly: zero commission, over 50,000 daily orders in Bengaluru. Zomato says it dropped price-parity clauses by Apr 2026; CCI final order on exclusivity still pending."
+    }
+  ],
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "You own a restaurant. Should you list on Swiggy or Zomato?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Before I pick, I'd want to know what kind of restaurant this is, what the owner wants most, and whether listing on both is an option. Then I'll look at the restaurant's economics, local customers, competition and the power of the platforms, and make a call. What's the restaurant?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "A North Indian and biryani delivery-first kitchen with a small dine-in, average order about Rs 400, in HSR Layout, Bengaluru."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "And the owner's goal for year one: volume, profit, or brand?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Profit. Rs 40 lakh invested, break even within 12 months."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Can we list on both, and is anything stopping us?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Both are allowed. But one platform has offered 4 points lower commission for 12 months of exclusivity."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's the real decision then: both, or exclusive with one. Last two: kitchen capacity and budget?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "About 120 orders a day, peak about 25 an hour. Ads and launch discounts budget about Rs 1.5 lakh a month for three months. And Rapido's Ownly is live in Bengaluru."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Good. My working goal: maximise contribution per day, within 120 orders, and reach break-even in 12 months. Let me start with the restaurant's own economics, because that's what decides this, not national market share. On a Rs 400 order, food and packaging are maybe Rs 150. Platforms take roughly 20-25% commission, plus ads, plus the discounts I co-fund. So my net payout is around 55-65% of menu price. At 120 orders a day that's the difference between making money and not."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "(Shares Exhibit 2.) Here's an illustrative per-order P&L."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So on Swiggy and Zomato contribution is similar, about Rs 107 per order, and Ownly is about double because there's no commission and less discounting. But Ownly's volume is the unknown. Contribution per order isn't the whole story; I need orders per day too. Break-even maths: if fixed costs like rent, staff and EMI are about Rs 3.5 lakh a month, I need about Rs 11,700 contribution a day, which is roughly 110 orders on Swiggy or Zomato at Rs 107, close to kitchen capacity. So the mix of channels matters a lot."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Now customers. Who orders biryani and North Indian in a 4 km radius of HSR? Office workers at lunch, young professionals late at night, families on weekends. Each platform's share differs by area, so I'd use local data, not national. Do we have any?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "(Shares Exhibit 1.) Illustrative local data."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "In HSR the two platforms are about even on active orderers, 1.6 vs 1.5 lakh. Zomato has a slightly higher share of biryani orders and more late-night orders, which suits biryani. Swiggy has more competing biryani outlets and higher ad intensity, so visibility will cost more there. That doesn't justify picking one. It tells me both have enough demand and the difference will show up in conversion and ad cost."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Competition: 58-64 biryani outlets per app nearby, including big chains with ad budgets I can't match. My edge has to be rating, speed and a hero dish. Platform features matter too: Swiggy's Bolt helps if I can make a few items in under 5 minutes, and Zomato's Gold users are heavy late-night orderers. Substitutes: Ownly at zero commission, and direct orders on WhatsApp from my dine-in customers."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Market forces: both platforms have strong power over a new restaurant; they control ranking, and ads feel compulsory. Customers multi-home, so a user who sees me on only one app is lost on the other. That's why exclusivity is risky: I'd be cutting myself off from roughly half of nearby customers for 4 points of commission."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Run the numbers on exclusivity."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Four points on a Rs 400 order is Rs 16 more per order. Say exclusivity also brings a ranking boost and I get 70 orders a day on that one app instead of about 40 on each app when I'm on both. Exclusive: 70 times about Rs 123 is about Rs 8,600 a day. Both: 80-85 orders at Rs 107 is about Rs 8,500-9,100. Roughly the same, but exclusivity locks me in for 12 months with all the risk on one partner. CCI is also still looking at these exclusivity deals. I'd say no unless the discount were much bigger, around 8-10 points, or one app clearly dominated my pin code."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So my recommendation: don't choose. List on both, run an 8-week test with equal effort, then put most of my ad and discount money where the incremental contribution is better. And add Ownly as a third channel to test zero-commission volume."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "(Shares Exhibit 3.) After 8 weeks, here's what happened."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Zomato gives more orders, 46 vs 38 a day, and higher contribution per day. But Swiggy's ads are more efficient: 5.5 incremental orders per Rs 1,000 vs 4.2, and repeat rate is higher. So I wouldn't move all money to Zomato. I'd keep Zomato as the volume base with modest ads, shift more of the incremental ad budget to Swiggy where it buys orders more cheaply, and use Swiggy's repeat customers to build a loyal base. Then I'd push dine-in and repeat customers to direct WhatsApp ordering or Ownly, where contribution is double."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What are the risks?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Kitchen overload at dinner peak with three channels: I'd cap orders per hour and pause the lowest-margin channel at peak, since a ratings drop hurts on both apps. Discount dependence: platforms push me to co-fund offers, so I'd set a contribution floor per order and refuse offers below it. Price-parity pressure: if one app wants identical menu prices everywhere, I'd note Zomato says it has dropped that, and keep direct prices a little lower for regulars. And Ownly's volume might not last, so it's a supplement, not the base."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How will you track it?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "One number: contribution per day across all channels. Under it, orders per day per channel, ad spend per incremental order, net payout as a % of menu price, rating and kitchen prep time, and 30-day repeat rate. I'd review every month and rebalance."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Close it out."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "For a delivery-first biryani kitchen in HSR, the answer is both, not either. List on Swiggy and Zomato, turn down the exclusivity offer unless it's worth at least 8-10 points, run an 8-week test, and then put ad money where each rupee buys the most incremental contribution. Keep a zero-commission and direct channel for repeat customers, because that's how I get to break-even inside 12 months."
+    }
+  ],
+  "answer_and_recommendation": "Ranked options: (1) RECOMMENDED - list on both Swiggy and Zomato, run an 8-week equal-effort test, then allocate ad and discount budget by incremental contribution per rupee in your own pin code (illustratively, Zomato as the volume base, more incremental ad money on Swiggy where holdout tests show better ROI and repeat rate). (2) Add a zero-commission channel (Rapido Ownly in Bengaluru/Hyderabad, or magicpin/ONDC) and direct WhatsApp ordering for repeat and dine-in customers, where contribution per order is about double. (3) Exclusivity with one platform only if the commission cut is large (about 8-10 points or more), that platform clearly dominates the local radius, and the lock-in is short; otherwise reject it, as a 4-point cut roughly equals the volume lost from the other app. Reframe: 'Swiggy or Zomato' is the wrong question; the right question is 'where does my next rupee of ad spend buy the most contribution in my 4 km radius?'. Risks and mitigation: kitchen overload (hourly order caps, pause the lowest-margin channel at peak), discount dependence (contribution floor per order), price-parity pressure (Zomato says it dropped parity clauses; keep direct prices slightly lower), new-entrant volume risk (treat Ownly as a supplement). Closing line: 'List on both, prove it in eight weeks, and spend where each rupee earns the most; that's how a new kitchen breaks even in a duopoly.'",
+  "counter_metrics_guardrails": "Guardrails for the owner: (1) contribution per order after commission, ads and discounts (floor of about Rs 90 on a Rs 400 order, illustrative); (2) rating per platform and kitchen prep time at peak (multi-channel volume must not drop ratings below 4.0); (3) order cancellation and rejection rate (platforms penalise rejections in ranking); (4) ad spend per incremental order from holdout tests, not platform-attributed ROAS; (5) share of orders that are repeat or direct (dependence on platforms); (6) payout reconciliation gaps and penalties per week. If asked from Swiggy's side: restaurant churn and active-days per partner, commission take rate vs restaurant contribution, and exclusivity share, as a regulatory guardrail given the CCI case.",
+  "follow_up_twists": [
+    {
+      "twist": "You're now the Swiggy PM. How do you win this restaurant over Zomato?",
+      "response": "Don't buy exclusivity; win the ad budget by showing holdout-based incremental orders per rupee, a launch boost for new kitchens with good ratings, Bolt eligibility for fast items, and clear, reconcilable payouts, since restaurants allocate money by proven ROI."
+    },
+    {
+      "twist": "Orders are steady but margins are thin.",
+      "response": "Cut restaurant-funded discounts first, raise contribution with combos and menu engineering (higher-margin hero dishes), shift spend to the more efficient platform, and move repeat customers to direct or zero-commission channels."
+    },
+    {
+      "twist": "It's a premium dine-in restaurant, not a delivery kitchen.",
+      "response": "Then delivery is a side channel; I'd list on one or both with a short delivery menu, and focus on dine-out discovery (Swiggy Dineout vs Zomato's District) where the platform fee structure and audience matter more than delivery commission."
+    }
+  ],
+  "common_pitfalls": [
+    "Picking the platform with higher national market share (Zomato about 55-58%) without checking the restaurant's own delivery radius, cuisine and price point.",
+    "Comparing only headline commission rates and ignoring ads, discount co-funding and payment deductions, which together decide the net payout.",
+    "Accepting exclusivity for a few points of commission without valuing the lost customers on the other app and the lock-in risk.",
+    "Answering as a Swiggy PM instead of as the restaurant owner, or forgetting kitchen capacity when adding channels."
+  ],
+  "skills_tested": "structuring, quant, business sense, prioritisation, empathy, communication",
+  "linked_teardown": "swiggy-product-teardown - Restaurant_partner_app_Ads_platform.json and Eternal_Zomato_District.json: restaurant commissions about 15-25%, ads felt as near-mandatory for visibility, about 2.5 lakh Swiggy restaurant partners, Zomato's estimated 55-58% food share, and the CCI exclusivity/price-parity findings",
+  "uncertain": [
+    "round_and_level",
+    "source_and_verification",
+    "context_as_of",
+    "regulatory_context",
+    "public_data_anchors",
+    "framework_applied"
+  ]
+}

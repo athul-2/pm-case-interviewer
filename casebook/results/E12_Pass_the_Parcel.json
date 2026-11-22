@@ -1,0 +1,160 @@
+{
+  "pun_title": "Pass the Parcel",
+  "case_type": "Metrics",
+  "asked_at": "DoorDash-style (classic question; listed among DoorDash PM interview questions on prep sites, not tied to a single verified candidate report)",
+  "subject_company": "DoorDash (DashPass subscription; US)",
+  "round_and_level": "[uncertain] PM round (product sense / analytical metrics), PM to Senior PM; also used for APM and product analyst screens",
+  "difficulty": "Medium - the metrics themselves are familiar, but a strong answer must separate the causal lift of membership from self-selection by heavy users and balance frequency against lost delivery-fee revenue and margin",
+  "market_and_industry": "US; on-demand delivery marketplace (restaurants, grocery, convenience, retail); consumer subscription/loyalty program with three sides: consumers, merchants, Dashers",
+  "time_box_minutes": "20-25",
+  "exact_prompt": "\"How do you measure the success of DoorDash DashPass?\" (common variant: \"Design metrics for measuring the success of DoorDash's subscription, DashPass.\")",
+  "source_and_verification": "Classic. Listed as a DoorDash PM question on prep aggregators: CleverPrep DoorDash PM page (https://www.cleverprep.com/companies/doordash/product-manager), Jobmentis DoorDash interviews ('Measure DashPass success', HEART) (https://www.jobmentis.com/en-gb/interviews/doordash), Leland DoorDash PM guide (https://www.joinleland.com/library/a/doordash-product-manager-interview); related PracHub cases on DoorDash north star and a grocery-subscription go/no-go (https://prachub.com/interview-questions/doordash-grocery-subscription-strategy-make-the-go-or-no-go-call). Year reported: [uncertain] recurring 2022-2026. No verbatim candidate report with date was found.",
+  "context_as_of": "As of Nov 2026: (1) DoorDash Q3 2026 (released 29 Oct 2026): Total Orders 993 mn (+28% Y/Y; +17% excluding Deliveroo), Marketplace GOV $33.9 bn (+36% Y/Y), revenue $4.6 bn (+34%), GAAP net income $466 mn, adjusted EBITDA $1,060 mn (3.1% of GOV), net revenue margin 13.6%; Q4 2026 GOV guidance $35.4-36.4 bn (SEC 8-K Ex 99.1: https://www.sec.gov/Archives/edgar/data/0001792789/000179278926000062/proddashex991-pressrelease.htm). The release says DoorDash 'continued to drive strong growth in U.S. DashPass paid memberships' and that DashPass growth helped drive a 9% reduction in transaction fees per order; members count paid, trial and partnership accounts. (2) Same release: DoorDash agreed to acquire Instacart (Maplebear) at $65/share (26% premium) - a pending deal that would change the grocery side of membership (Instacart+ overlap). Flag: deal not closed as of this writing. (3) Membership scale: over 35 mn DashPass, Wolt+ and Deliveroo Plus members at end-2025 (Q4 2025 release, https://s22.q4cdn.com/280253921/files/doc_financials/2025/q4/Q4-2025-Earnings-Press-Release.pdf); Q2 2026: U.S. paid DashPass members grew more in the prior 12 months than in the previous 24 combined, and members placed ~75% of U.S. grocery and retail orders (Q2 2026 release, https://www.businesswire.com/news/home/20260805026190/en/). No DashPass-only count is disclosed. (4) Product: [uncertain, from prior knowledge] $9.99/month or $96/year; $0 delivery fee and reduced service fees on eligible orders above a minimum subtotal; free or discounted access through partners (Chase cards, Lyft, student plan, Affirm/Klarna-style bundles). Pricing may have changed; verify on doordash.com/dashpass.",
+  "regulatory_context": "(1) FTC Negative Option ('click-to-cancel') rule: finalized Oct 2024 but vacated by the 8th Circuit in July 2025; FTC still enforces ROSCA, and many states (California ARL amendments effective July 2025, New York, Minnesota and others) require clear disclosure, consent and easy online cancellation for auto-renewing subscriptions - so 'cancellation friction' cannot be a retention lever and cancellation-flow complaints are a guardrail. (2) Fee caps and fee-transparency rules: NYC and other cities cap third-party delivery commissions; California SB 478 (junk-fee law, July 2024) requires all-in pricing, which affects how DashPass savings are displayed. (3) Dasher pay laws: NYC minimum pay rate for delivery workers and Seattle PayUp ordinance raise cost per order, which raises the cost of waiving delivery fees. (4) State privacy laws (CCPA/CPRA) govern use of order data for targeting membership offers. [uncertain on the latest status of each state law]",
+  "public_data_anchors": "(1) Q3 2026: Total Orders 993 mn (~10.8 mn/day), Marketplace GOV $33.9 bn, revenue $4.6 bn, net revenue margin 13.6%, adj. EBITDA $1.06 bn - DoorDash 8-K, 29 Oct 2026 https://www.sec.gov/Archives/edgar/data/0001792789/000179278926000062/proddashex991-pressrelease.htm (2) Implied average order value ~ $34 (33.9 bn / 993 mn), Q3 2026 - derived from the same release. (3) >35 mn DashPass + Wolt+ + Deliveroo Plus members, end-2025 - Q4 2025 press release https://s22.q4cdn.com/280253921/files/doc_financials/2025/q4/Q4-2025-Earnings-Press-Release.pdf (4) DashPass members ~75% of U.S. grocery and retail orders, Q2 2026 - https://www.businesswire.com/news/home/20260805026190/en/ (5) DashPass growth drove a 9% reduction in transaction fees per order, Q3 2026 - 8-K above. (6) [uncertain] DashPass price $9.99/month or $96/year (doordash.com, prior knowledge).",
+  "framework_applied": "Success Metrics framework (frameworks.md section 5). Step 1 Company and product: DoorDash is a mature, profitable multi-category local-commerce marketplace; DashPass exists to raise order frequency, retention and category breadth by removing per-order fee friction. Step 2 Users and value: consumers (savings, convenience, habit), merchants (more and larger orders, members-only promotions), Dashers (denser, steadier demand); walk the member journey - discover/trial, convert to paid, engage (orders per member, categories), renew/retain; money comes from membership fees plus commission and ads on incremental orders, minus waived delivery fees. Step 3 North Star: incremental orders from members per month = active paid members x (member order rate - matched non-member order rate); levers = trial starts, trial-to-paid, paid churn, order rate lift, category breadth; supporting metrics include member share of orders and contribution margin per member. Step 4 Guardrails: contribution profit per order, non-member experience and fees, Dasher earnings per hour and ETA, merchant margins, cancellation-flow complaints and refund rates.",
+  "clarifying_questions": [
+    "Q: Is DashPass new, or are we measuring an established program? A: Established - millions of US members; leadership wants a scorecard and one North Star for the program.",
+    "Q: What is the goal - growth in members, order frequency, or profitability? A: Long-term consumer engagement and share of wallet across categories, without destroying unit economics.",
+    "Q: Scope - US DashPass only, or Wolt+ and Deliveroo Plus too? A: US DashPass only; include restaurant and non-restaurant (grocery, convenience, retail) orders.",
+    "Q: Do partner-funded members (Chase, Lyft, students) count? A: Yes, but report them separately - they behave differently from self-paid members.",
+    "Q: Who consumes this metric - the DashPass product team or the exec team? A: The DashPass GM and their team; they own pricing, benefits, sign-up and cancellation flows.",
+    "Q: Can we run holdouts or geo experiments? A: Yes, DoorDash has experimentation infra; long-running holdouts are possible in limited markets.",
+    "Q: Time horizon? A: Quarterly review, with a 12-month view on retention and member lifetime value."
+  ],
+  "interviewer_data_reveals": [
+    "Exhibit 1 (illustrative) - Member funnel, one quarter: 10 mn users saw a DashPass offer -> 2.0 mn started a free trial (20%) -> 1.1 mn converted to paid (55% of trials) -> month-3 paid retention 78%, month-12 retention 52%.",
+    "Exhibit 2 (illustrative) - Order rate: members average 5.8 orders/month vs 1.6 for all non-members; matched non-members (same pre-period frequency and geo) average 4.1. Implied causal lift ~1.7 orders/month, not 4.2.",
+    "Exhibit 3 (illustrative) - Unit economics per member order: delivery fee waived ~$3.00, service fee discount ~$1.20; membership fee amortised ~$1.65 per order at 5.8 orders/month; contribution profit per member order $0.40 lower than per non-member order.",
+    "Exhibit 4 (illustrative) - Category breadth: 31% of members ordered from a non-restaurant category in the quarter vs 9% of non-members.",
+    "Exhibit 5 (real) - Members placed ~75% of DoorDash's U.S. grocery and retail orders in Q2 2026 (DoorDash Q2 2026 release); Q3 2026 Total Orders 993 mn and net revenue margin 13.6% (DoorDash 8-K, 29 Oct 2026)."
+  ],
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "How do you measure the success of DoorDash DashPass?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'll go in four steps: what DoorDash and DashPass are trying to achieve, who gets value on each side, a North Star with its formula and levers, and then guardrails. Can I clarify a few things first?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Go ahead."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Is this an established program, and are we optimising for member count, frequency or profit? Also, US only, and do partner-funded members like Chase or Lyft count?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Established, US only. The goal is long-term engagement and share of wallet without wrecking unit economics. Partner members count but report them separately."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Step 1, company and product. DoorDash is now a mature, profitable local-commerce company - about 993 million orders in Q3 2026, $33.9 billion GOV, and it's expanding into grocery and retail, with the Instacart deal announced. DashPass is the loyalty engine: a monthly fee in exchange for $0 delivery and lower service fees. It converts DoorDash from an occasional app into the default habit, and it's the bridge that pulls restaurant users into grocery and retail. So success means members order more, across more categories, for longer - and the extra orders pay for the waived fees."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Fine. Who are the users?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Three sides. Consumers: they get savings and remove the 'is the fee worth it' hesitation on each order. Merchants: they get more orders and bigger baskets, and can run member-only offers. Dashers: denser, steadier demand means more orders per hour. For the member journey I'd track: discover (offer impressions), trial start, trial-to-paid conversion, engagement (orders per member per month, categories used), and retention (monthly paid churn, renewal for annual plans). Money comes from the subscription fee, commission and ads on the extra orders, minus waived delivery fees and service-fee discounts. Does that match how you see it?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Yes. Here's the funnel and order-rate data."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Thanks. Two things jump out. Trial-to-paid at 55% and month-12 retention at 52% look healthy. But members ordering 5.8 times versus 1.6 for non-members overstates the effect - heavy users self-select into DashPass. Against matched non-members at 4.1, the real lift is about 1.7 orders a month. So I would never use raw member-vs-non-member gaps as the success metric."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "So what's your North Star?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Incremental orders from DashPass members per month. Formula: active paid members x (member order rate - counterfactual order rate). The counterfactual comes from a long-running holdout or matched cohorts. It's where user value meets business value: members only order more if the program is really making ordering easier and cheaper, and every incremental order brings commission and ads."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Why not just member count or retention?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Member count can be bought with free trials and partner bundles that never order. Retention alone can be high for people who were going to order anyway. Incremental orders captures both: it grows only if we add the right members and they change their behaviour."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Break it into levers."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Tree:\nIncremental member orders/month\n- Active paid members = trial starts x trial-to-paid x (1 - monthly churn), split self-paid vs partner\n- Order-rate lift per member = restaurant lift + non-restaurant lift (grocery, convenience, retail)\n- Quality of orders = share of orders above the fee-waiver threshold, basket size\nSupporting metrics: trial-to-paid rate, 3- and 12-month paid retention, orders per member per month, % of members ordering from 2+ categories (Exhibit 4 shows 31% vs 9%), and contribution profit per member per month."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Which supporting metric matters most right now?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Given DoorDash's push into grocery and retail, I'd prioritise multi-category adoption among members. Restaurant frequency is already high for members; the new growth is in getting a member to do their weekly grocery top-up on DoorDash. The fact that members already place about 75% of US grocery and retail orders says DashPass is the on-ramp."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What about profitability?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Exhibit 3 says a member order earns $0.40 less contribution than a non-member order. That's fine only if the incremental 1.7 orders a month more than make up for it. So my business-side metric is incremental contribution profit per member per month: (lift orders x contribution per order) + fee revenue - fee waivers on orders that would have happened anyway. If that turns negative, we fix the benefit design, for example raising the minimum subtotal or adjusting service-fee discounts."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Guardrails?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Four. One, unit economics: contribution profit per order and per member, so we don't buy frequency at a loss. Two, non-member and marketplace health: non-member fees and conversion should not get worse to make DashPass look good, and ETAs and Dasher earnings per active hour should hold as demand spikes. Three, merchants: member-only promos must not squeeze restaurant margins - watch merchant churn and promo funding share. Four, trust: cancellation complaints, accidental-renewal refunds and 'free trial surprise charge' tickets - under ROSCA and state auto-renewal laws, cancellation must stay easy, so retention must come from value, not friction."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How would you know a change, say a lower price, worked?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Run it as a geo or user-level experiment with the North Star as the primary metric and contribution per member as the co-primary. Read short-term trial starts, but decide on 90-day paid retention and incremental orders, because cheaper plans often lift sign-ups and then churn."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Summarise."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "DashPass succeeds if it makes members order more, across more categories, for longer, and pays for itself. North Star: incremental orders from members per month, measured against a holdout. Top supporting metrics: multi-category adoption, 12-month paid retention, and incremental contribution profit per member. Guardrails: per-order contribution, ETA and Dasher earnings, merchant margins and cancellation complaints. I'd review it quarterly, split self-paid versus partner members."
+    }
+  ],
+  "answer_and_recommendation": "Ranked metrics: (1) North Star - incremental orders from DashPass members per month = active paid members x (member order rate - holdout/matched order rate). (2) Multi-category adoption - % of members ordering from 2+ categories (restaurant + grocery/convenience/retail) per quarter, the main growth lever given DoorDash's grocery push and pending Instacart deal. (3) Incremental contribution profit per member per month - proves the waived fees are paid for. Supporting: trial-to-paid, 3/12-month paid retention, orders per member, basket size versus waiver threshold, separate views for self-paid vs partner members. Recommendation: institutionalise a small long-running holdout to measure causal lift, and set annual targets on incremental orders and contribution rather than member count. Risks: holdouts cost revenue (mitigate with small, rotating geo holdouts); partner members inflate counts (report separately); Instacart integration may cannibalise or double-count members (dedupe at the household level). Closing line: 'DashPass wins when members order more because of it, not just because heavy users joined - so I'd measure incremental orders, broaden them across categories, and make sure each member pays for the fees we waive.'",
+  "counter_metrics_guardrails": "(1) Contribution profit per order and per member (fees waived vs lift). (2) Non-member conversion and fee levels - DashPass should not be propped up by making non-members' experience worse. (3) Delivery ETA, late-order rate and Dasher earnings per active hour during demand spikes. (4) Merchant churn, merchant-funded promo share and restaurant margin on member-only offers. (5) Trust: cancellation-flow complaints, accidental-renewal refunds, chargebacks and trial-to-charge disputes (ROSCA / state auto-renewal laws). (6) Cannibalisation: share of member orders that would have happened anyway (measured by holdout); basket size drifting down to just above the waiver threshold.",
+  "follow_up_twists": [
+    "Twist: Member count is up 20% but incremental orders are flat. Response: the growth is coming from low-intent trials or partner bundles; segment by acquisition channel, tighten partner eligibility, and fix onboarding to the first two orders.",
+    "Twist: Finance says DashPass is unprofitable. Response: compute incremental contribution per member from the holdout; if negative, change benefit design (minimum subtotal, service-fee discount, annual-plan pricing) before cutting acquisition.",
+    "Twist: The Instacart acquisition closes - how do metrics change? Response: dedupe members across DashPass and Instacart+ at household level, make grocery category adoption a top supporting metric, and watch Shopper/Dasher capacity guardrails."
+  ],
+  "common_pitfalls": [
+    "Using raw member vs non-member order frequency as proof of success - it is mostly self-selection by heavy users; insist on a holdout or matched cohort.",
+    "Choosing member count or sign-ups as the North Star - easily inflated by free trials and partner bundles.",
+    "Ignoring the cost side: waived delivery fees and Dasher pay rules mean higher frequency can still lose money.",
+    "Proposing cancellation friction as a retention lever - it violates ROSCA/state auto-renewal laws and damages trust; also forgetting merchant and Dasher sides of the marketplace."
+  ],
+  "skills_tested": "structuring, business sense, quant, prioritisation, communication",
+  "linked_teardown": "None (US case; no local teardown folder covers DoorDash). Closest analogue for India-context follow-ups: swiggy-product-teardown (Swiggy One membership notes in Food_Delivery_core.json).",
+  "uncertain": [
+    "round_and_level",
+    "source_and_verification",
+    "context_as_of",
+    "regulatory_context",
+    "public_data_anchors"
+  ]
+}

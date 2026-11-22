@@ -1,0 +1,229 @@
+{
+  "pun_title": "Tube Trouble",
+  "case_type": "RCA",
+  "asked_at": "PhonePe",
+  "subject_company": "YouTube (Google)",
+  "round_and_level": "PM round 1 (RCA / product sense), APM to PM level [uncertain]",
+  "difficulty": "Easy-Medium - a classic metric-drop RCA; the challenge is ruling out day-of-week seasonality and instrumentation before chasing product causes, and narrowing a huge surface (devices, formats, geos) with a few wide questions.",
+  "market_and_industry": "US; video streaming / user-generated video and social media (ad-supported, plus YouTube Premium); surfaces: mobile app (Android/iOS), connected TV, desktop web; formats: long-form, Shorts, live",
+  "time_box_minutes": "20-25",
+  "exact_prompt": "YouTube's total time spent is down 20% day over day. How would you diagnose it?",
+  "source_and_verification": "Reported: candidates list a 'YouTube time spent / watch time dropped - do an RCA' question for PhonePe PM interviews; we could not find a public URL that names PhonePe for this exact prompt [uncertain]. Closely related public versions: Exponent (Media.net senior product analyst, 'time spent on YouTube per user is decreasing, solve RCA as a PM') https://www.tryexponent.com/experiences/media-net-senior-product-analyst-interview-776d20 ; Exponent (Google, 'YouTube comments up, watch time down') https://www.tryexponent.com/questions/1543/youtube-comments-up-watch-time-down-actions ; PracHub ('Diagnose why YouTube engagement fell by half') https://prachub.com/interview-questions/diagnose-why-youtube-engagement-fell-by-half-and-decide-how-to-respond ; Twice the Impact PM newsletter RCA on low YouTube watch time https://twicetheimpactpm.beehiiv.com/p/rca-low-watch-time-youtube . Level: classic question, reported 2024-2026.",
+  "context_as_of": "As of Nov 2026: YouTube is the largest single media distributor on US TV screens; Nielsen's The Gauge put YouTube (main, excluding YouTube TV) at a record 15.8% of US TV viewing time in Aug 2026 (released 22 Oct 2026), about 2x Netflix (7.7%), up from ~12.7% in Jan 2026 and 14.2% in Jul 2026 (Nielsen; TheWrap). Nielsen applies a one-time methodology adjustment from the Sep 2026 interval, so Sep onwards figures are not directly comparable [uncertain]. Connected TV is YouTube's fastest-growing surface in the US; Shorts competes with TikTok and Instagram Reels. Real precedent: on 17 Feb 2026 a global YouTube outage blanked the homepage and app ('something went wrong'), with ~300k+ US Downdetector reports; YouTube attributed it to an issue with its recommendations system affecting the homepage, app, YouTube Music and YouTube Kids, and fixed it within hours (Engadget, Tom's Guide, Android Central, Feb 2026). Sources: https://www.nielsen.com/news-center/2026/tv-viewing-cools-off-in-nielsens-august-gauge-reports-as-sports-take-a-breather-and-school-resumes/ ; https://www.thewrap.com/media-platforms/tv/youtube-netflix-disney-tv-viewership-nielsen-gauge-august-2026/ ; https://www.engadget.com/big-tech/youtube-is-down-for-thousands-of-users-in-the-us-020718165.html",
+  "regulatory_context": "None material for a one-day drop. Background only: COPPA (FTC) governs made-for-kids content (no personalised ads, comments off), so a policy enforcement change on kids content could move watch time; state age-verification and teen social-media laws (e.g. Utah, Texas, Florida) and the proposed federal Kids Online Safety Act could add friction for minors; none would plausibly cause a 20% overnight drop without notice.",
+  "public_data_anchors": [
+    "YouTube 15.8% of US TV viewing time in Aug 2026, a record; Netflix 7.7% (Nielsen The Gauge, released 22 Oct 2026) https://www.nielsen.com/news-center/2026/tv-viewing-cools-off-in-nielsens-august-gauge-reports-as-sports-take-a-breather-and-school-resumes/",
+    "YouTube share of US TV time ~12.7% (Jan 2026), 13.4% (Apr 2026), 13.8% (May 2026), 14.2% (Jul 2026) (Nielsen via TheWrap / Advanced Television) https://www.advanced-television.com/2026/07/29/nielsen-youtube-takes-13-8-of-us-tv-watch-time-in-may/",
+    "Outage precedent: 17 Feb 2026, up to ~338k US Downdetector reports; cause stated as an issue with the recommendations system (Engadget / Tom's Guide, Feb 2026) https://www.tomsguide.com/live/youtube-outage-february-17-2026",
+    "Nielsen: total time spent streaming fell 7% in Mar 2026 vs Feb, showing normal month-to-month seasonality in viewing (TheWrap, 2026) https://www.thewrap.com/media-platforms/streaming/nielsen-media-distributor-gauge-march-2026/",
+    "YouTube US user base: roughly 240-250M+ users (third-party estimates, 2025-26) [uncertain]"
+  ],
+  "framework_applied": "RCA: Clarify -> 4 cause buckets -> Hypothesise-test-repeat -> Land it. (1) Clarify metric: total watch time (minutes of video played) across all surfaces, US, yesterday vs the day before; decompose = DAU x sessions per user x watch time per session. Time frame: one-day 20% drop, sudden; compare to the same day last week to strip day-of-week. Scope: which platforms (Android, iOS, web, CTV), formats (long-form, Shorts, live), entry points (home feed, search, subscriptions, Up Next autoplay), app versions, regions. (2a) Data: logging change in the new app version, delayed pipeline partition, timezone cut-off, bot-filter change. (2b) Internal: funnel app open -> home feed loads -> video start -> watch duration -> next video (autoplay); releases, recommendations model or config push, A/B ramp, ad-load change, outages. (2c) External: comparison-day effect (a big event the day before, e.g. a Sunday or a holiday), competitor launches, ISP/CDN or CTV-platform outage (Roku, Fire TV, Samsung), app store issues, news events. (2d) Behaviour: fatigue or a shift to Shorts or TikTok - too slow to explain a 20% overnight drop. (3) Hypothesise-test: wide splits by platform, then entry point, then app version / server config. (4) Land: root cause is a recommendations-service config push that left the home feed empty or stale on Android and CTV, cutting video starts from home and autoplay; validate with config-change timing, affected vs unaffected cohorts and home-feed error rates.",
+  "clarifying_questions": [
+    {
+      "q": "What exactly is 'time spent': total watch time of videos played, or time in app? Total or per user?",
+      "a": "Total minutes of video watched, all US users, all surfaces."
+    },
+    {
+      "q": "Day over day: which two days, and how does yesterday compare with the same day last week?",
+      "a": "Monday versus Sunday. Versus last Monday, it is down about 12%; a normal Monday is about 9% below Sunday."
+    },
+    {
+      "q": "Is it a sudden drop at a point in time, or across the whole day?",
+      "a": "Watch time was normal until about 2 pm ET on Monday, then dropped and stayed low through the evening."
+    },
+    {
+      "q": "Is it all platforms, or specific ones (Android, iOS, web, connected TV)?",
+      "a": "Android app and connected TV are down sharply; iOS and desktop are roughly normal."
+    },
+    {
+      "q": "Are fewer people coming, or are they watching less once they come?",
+      "a": "DAU is down only about 2%; sessions per user flat; watch time per session down sharply."
+    },
+    {
+      "q": "Did anything ship yesterday: app release, server-side model or config change, experiment ramp?",
+      "a": "No new app version went out. There were several server-side changes, including a recommendations config push around 1:45 pm ET."
+    },
+    {
+      "q": "Is it all formats and entry points, or one?",
+      "a": "Search and subscriptions watch time are normal. Home feed and Up Next/autoplay watch time are down heavily. Shorts is down a little."
+    }
+  ],
+  "interviewer_data_reveals": [
+    "Exhibit 1 (illustrative) - total US watch time index: last Sunday 100, last Monday 91, this Sunday 100, this Monday 80. DoD -20% headline, but versus last Monday -12%. The normal Sunday -> Monday dip is ~9%.",
+    "Exhibit 2 (illustrative) - hourly watch time vs last Monday: within +/-2% until 2 pm ET; -18% to -22% from 2 pm to midnight.",
+    "Exhibit 3 (illustrative) - by platform vs last Monday (post-2 pm): Android -28%, connected TV -25%, iOS -3%, desktop web -2%.",
+    "Exhibit 4 (illustrative) - decomposition (post-2 pm, Android + CTV): DAU -2%, sessions/user -1%, video starts per session -27%, watch time per start -2%.",
+    "Exhibit 5 (illustrative) - by entry point: home feed starts -55%, Up Next/autoplay starts -40%, search starts +6%, subscriptions +4%, Shorts feed -6%.",
+    "Exhibit 6 (illustrative) - home feed health on Android + CTV: feed load errors 0.4% -> 9%; share of home feeds returning fewer than 5 recommendations 1% -> 31% after the 1:45 pm config push; iOS and web clients use a different serving path and show no change.",
+    "Exhibit 7 (illustrative) - data check: client event counts reconcile with server-side playback logs within 1%; no pipeline delay; no external outage on Downdetector for CDN, Roku or Fire TV.",
+    "Real precedent the interviewer may cite: 17 Feb 2026 global outage traced to the recommendations system (Engadget/Tom's Guide)."
+  ],
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "YouTube's time spent is down 20% day over day. Diagnose."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I will clarify the metric, the time frame and the scope first, then rule out data issues, then look at internal and external causes. When we say time spent, is that total minutes of video watched across all users and surfaces, and is this the US?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Yes, total watch minutes, US, all surfaces."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Which two days are we comparing? Day-over-day comparisons are dangerous for a consumer video app because weekends and weekdays behave very differently."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Monday versus Sunday."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then part of this is expected; Sunday is usually a heavier viewing day than Monday, especially on TV. How does this Monday compare with last Monday?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Down about 12% against last Monday. Normally Monday is about 9% below Sunday."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So close to half of the headline drop is just day-of-week, and the real anomaly is about 12%. That is still huge for YouTube, which on TV alone is about 16% of all US TV viewing time per Nielsen. Was the drop spread across the whole day, or did it start at a specific time?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Normal until around 2 pm Eastern, then down about 20% for the rest of the day."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "A sharp step at a point in time points to something that changed, a release, a config push, an outage or a logging change, rather than gradual behaviour shifts like fatigue or competition. My tree:\n\nWatch time down ~12% vs last Monday (step at 2 pm)\n1. Data: logging change, pipeline delay, bot filtering, timezone cut-off\n2. Internal: app release, server-side model/config, experiment ramp, ad load, outage of a YouTube service\n3. External: CDN/ISP or TV-platform outage, app store issue, a competing event\n4. Behaviour: fatigue, shift to Shorts/TikTok (unlikely to step at 2 pm)\n\nAnd I will decompose watch time as users x sessions x video starts per session x minutes per start."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Go ahead."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Data first: do client-side watch events reconcile with server-side playback or CDN logs? If the drop is only in client logging, users are watching but we are not counting."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "They reconcile within 1%. No pipeline delay."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So the drop is real. Next, the widest split I can think of: is it all platforms?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Android down 28%, connected TV down 25%, iOS and desktop roughly normal."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That rules out a global outage of video serving or the CDN, and a broad behaviour change, because iOS and web users would also be affected. Something specific to Android and TV clients, or to a backend path those clients share. Did an app version roll out on Android or TV?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "No new app versions yesterday."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then it is more likely server-side. Before I go there, which part of the funnel moved: fewer users, fewer sessions, fewer videos per session, or shorter views?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "DAU down 2%, sessions flat, video starts per session down 27%, watch time per start roughly flat."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So people are opening the app as usual, and once they start a video they watch it as usual, but they start far fewer videos. That is a discovery problem: the surfaces that feed video starts are broken. Is it home feed, search, subscriptions, autoplay?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Home feed starts down 55%, Up Next autoplay down 40%, search and subscriptions up slightly."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That is a clean signature. Home and Up Next are both powered by the recommendations system; search and subscriptions are not, and they are up slightly because people who find an empty home feed go and search instead. On TV this is particularly damaging because TV viewing is lean-back, mostly home feed and autoplay. Were there server-side changes to recommendations around 2 pm?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "A recommendations config push went out around 1:45 pm. Since then, about 31% of home feeds on Android and TV return fewer than five recommendations, and feed load errors went from 0.4% to 9%. iOS and web use a different serving path."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then I can land it. Root cause: the 1:45 pm recommendations config push broke the serving path used by Android and connected-TV clients, so home feeds came back empty or thin and Up Next had fewer candidates. Users still opened YouTube but started about a quarter fewer videos, which knocked about 20% off watch time from 2 pm on those surfaces, around 12% of the day's total. The other half of the 20% headline is normal Sunday-to-Monday seasonality. This is similar to the real February 2026 outage, which YouTube attributed to its recommendations system."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How would you confirm it?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Three checks. One, timing: the config push timestamp versus the start of the drop at hourly or minute granularity. Two, cohorts: if the push was staged by data centre or by a percentage of traffic, compare users served by the new config versus the old one. Three, the mechanism: home-feed item counts and error rates by client. The definitive test is rolling the config back; if home starts recover within an hour, we have it."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "And what about ad revenue?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Watch time drives ad impressions, so revenue probably fell in proportion, especially on CTV where ad prices are higher. Once we roll back, I would also check whether advertisers' delivery pacing over-delivered later in the day, and whether creators saw a dip in views they will ask about."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How do you prevent this?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Treat recommendation configs like code: staged rollout with a canary on a small share of traffic, automatic guardrails on home-feed item count, feed error rate and video starts per session that block or roll back a push, and a fallback feed, for example popular plus subscriptions, when recommendations return too few items, so the screen is never empty. Also fix the dashboard to show week-over-week by default, so day-of-week does not inflate alarms. My closing line: half of the drop was the calendar, the other half was an empty home screen on Android and TV, and the fix is a rollback today and a fallback feed and canary guardrails so it cannot happen silently again."
+    }
+  ],
+  "answer_and_recommendation": "Ranked causes (illustrative case data): (1) Root cause - a recommendations config push at ~1:45 pm ET broke the serving path for Android and connected-TV clients; home feeds returned empty or thin and Up Next lost candidates, cutting video starts per session ~27% and watch time ~20% on those surfaces from 2 pm, roughly 12% of the day's US total. (2) Comparison artefact - about half of the 20% headline is normal Sunday-to-Monday seasonality; week-over-week the anomaly is ~12%. (3) Ruled out or minor - data/logging (reconciles within 1%), app releases (none), external outages (none on CDN/TV platforms), behaviour shifts (cannot produce a 2 pm step). Recommendation: roll back the config now and confirm recovery in home-feed starts; quantify ad-revenue and creator-view impact; then add canary rollouts with automatic guardrails on feed item count, feed errors and starts per session, a fallback feed when recommendations fail, and week-over-week as the default comparison. Risks: rollback may revert a genuine model improvement (re-ship behind a canary); a fallback feed may lower engagement quality if overused (monitor watch time per start). Closing line: 'Half the drop was the calendar, the other half was an empty home screen on Android and TV: roll back today, and make sure a recommendations failure can never show a blank screen again.'",
+  "counter_metrics_guardrails": [
+    "Video starts per session and home-feed item count / feed load error rate by client (early warning metrics for the recommendations path)",
+    "Watch time per start and satisfaction surveys (a fallback feed must not degrade quality)",
+    "Ad impressions, ad revenue and CTV ad delivery pacing",
+    "Creator views and revenue for the affected window",
+    "Search and subscription starts (should normalise after rollback; persistent rise would signal residual feed issues)",
+    "Shorts vs long-form watch-time mix (fixes on one surface should not cannibalise the other)",
+    "Crash rate and latency on Android and CTV clients"
+  ],
+  "follow_up_twists": [
+    {
+      "twist": "The drop is the same on all platforms and all entry points, and started at midnight.",
+      "response": "A uniform drop at a day boundary points to data first: a pipeline or timezone change, a bot-filter update or a dashboard definition change; I would reconcile against server playback logs before anything else."
+    },
+    {
+      "twist": "Watch time is down, but DAU is down by the same 20% and only on CTV.",
+      "response": "That is an access problem, not discovery: check TV platform app store or sign-in issues (Roku, Fire TV, Samsung, LG), a CTV app update, or a carriage dispute, and compare by TV OS."
+    },
+    {
+      "twist": "There was no config push, and the drop is only on long-form while Shorts watch time is up.",
+      "response": "Look for a ranking or experiment change that promotes Shorts in the home feed or Up Next; total time may be cannibalised rather than lost, so check total time per user and ad revenue per minute before calling it a problem."
+    }
+  ],
+  "common_pitfalls": [
+    "Taking 'day over day' at face value and missing that Sunday-to-Monday is a normal dip; always compare with the same day last week",
+    "Jumping to competitors (TikTok, Netflix) or user fatigue for a one-day step change that starts at a specific hour",
+    "Skipping the data check; client logging changes in an app release are a common false alarm",
+    "Asking a laundry list of narrow questions ('was there a bug in the player?') instead of wide splits by platform, funnel step and entry point",
+    "Stopping at 'there was an outage' without explaining the mechanism (fewer video starts from home and autoplay) and how to prevent recurrence"
+  ],
+  "skills_tested": [
+    "structuring",
+    "quant",
+    "communication",
+    "execution",
+    "business sense"
+  ],
+  "linked_teardown": "None",
+  "uncertain": [
+    "round_and_level",
+    "source_and_verification",
+    "context_as_of",
+    "public_data_anchors"
+  ]
+}

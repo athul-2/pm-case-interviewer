@@ -1,0 +1,144 @@
+{
+  "pun_title": "First Swipe",
+  "case_type": "Product Design",
+  "asked_at": "Google Pay/NPCI style (classic; not tied to a dated company report)",
+  "subject_company": "Google Pay / PhonePe / BHIM (NPCI) - hypothetical: PM at a UPI app (TPAP) designing for first-time rural users",
+  "round_and_level": "PM product-sense round; APM campus to PM at payments/fintech companies (Google Pay, PhonePe, Paytm, NPCI/BHIM) [uncertain]",
+  "difficulty": "Medium-Hard - requires deep empathy for low-literacy, low-trust users, plus knowledge of UPI rails (PIN setup, 123PAY, UPI Lite, Aadhaar face auth) and fraud trade-offs",
+  "market_and_industry": "India; fintech / digital payments (UPI); rural Bharat (villages and Tier 4+ towns); Hindi and regional languages (e.g. Bhojpuri, Marathi, Telugu), often low literacy; entry-level Android (Rs 6-10k) shared within the family, plus 200 mn+ feature-phone users; patchy 2G/4G",
+  "time_box_minutes": "30-40",
+  "exact_prompt": "You are a PM at Google Pay. Design a UPI experience for a first-time user in rural India.",
+  "source_and_verification": "Verification: classic. A widely circulated Bharat/fintech design prompt; no dated, company-tagged report with this exact wording found (searched NextLeap, The Product Folks, PracHub, AmbitionBox, Glassdoor, Medium; Nov 2026). Closest material: NextLeap PhonePe case-study submission on rural users (https://assets.nextleap.app/submissions/NL_PhonePe-b85599a7-8fe6-405d-8dd9-40a4ee60f064.pdf); Design for Bharat UPI-education project (https://parallelhq.com/design-for-bharat/instapy); CSBC/Dvara research on constrained UPI users, 2022 (https://csbc.org.in/projects/understanding-constrained-users-experience-of-upi-based.php). Year: circulating since about 2020-22 [uncertain].",
+  "context_as_of": "As of 2026-11-11. (1) UPI hit a record 25,466.70 mn transactions worth Rs 31,52,929.46 cr in Oct 2026, with 758 banks live (NPCI: https://www.npci.org.in/product/upi/product-statistics), about +23% YoY by volume (secondary reports). (2) At Global Fintech Festival (Oct 2025) NPCI launched Aadhaar face authentication to set or reset a UPI PIN without a debit card, explicitly aimed at first-time users and people without cards, plus on-device biometric (fingerprint/face) authentication for payments as an opt-in alternative to the PIN (Biometric Update: https://www.biometricupdate.com/202510/india-introduces-face-authentication-for-payments-in-upi). A reported Rs 5,000 cap on biometric payments is unconfirmed. (3) PhonePe launched UPI 123PAY for feature phones on 31 Aug 2026, working over SMS without internet, preloaded on Lava and itel handsets, targeting 200 mn+ feature-phone users (Business Today: https://www.businesstoday.in/technology/news/story/phonepe-brings-internet-free-upi-payments-to-feature-phones-expanding-digital-access-across-india-552459-2026-09-01). (4) Hello UPI (voice payments in Hindi and English, Sept 2023) still lists regional languages as planned (Paytm blog: https://paytm.com/blog/payments/upi/hello-upi). (5) UPI Lite allows small PIN-less payments. Limits reported at Rs 1,000 per transaction and Rs 5,000 wallet balance [uncertain - verify on NPCI]. (6) UPI MDR: from 15 Oct 2026, NPCI reportedly applies 0.4% on payments above Rs 2,000 to large merchants. Small merchants and rural/semi-urban QR payments are exempt, so rural P2M stays free (Finimize: https://finimize.com/content/india-ends-free-upi-for-some-large-merchant-payments) [uncertain on final details]. (7) Fraud is the main trust barrier: 12.64 lakh UPI fraud incidents, about Rs 981 cr lost, in FY25, down from 13.42 lakh in FY24 (Parliament data via YourStory: https://yourstory.com/2025/12/upi-frauds-peak-in-fy24-show-signs-of-decline-parliament-data). Possibly stale: UPI Lite limits, the biometric cap, Google Pay's own market share.",
+  "regulatory_context": "(1) NPCI UPI procedural guidelines: onboarding needs mobile-number-to-bank binding by SIM and device, with PIN set via debit card, Aadhaar OTP, or (since Oct 2025) Aadhaar face authentication. App design cannot skip these steps. (2) RBI's 2-factor authentication rule (Authentication Mechanisms for Digital Payment Transactions Directions, 2025 [uncertain on title/date]) allows biometrics as a factor; UPI Lite is the exception for small-value PIN-less payments. (3) NPCI per-user and per-app limits: the P2P daily limit is Rs 1 lakh, and the first-24-hour cooling limit for new users or devices is Rs 5,000 [uncertain]. This is a natural safety rail for a first-time user. (4) RBI/NPCI moves to curb collect-request fraud: P2P collect requests were limited or phased out in 2025 [uncertain]. Push-only payments are safer for novices. (5) UIDAI rules for Aadhaar authentication (consent, FaceRD app). (6) DPDP Act 2023 / DPDP Rules 2025 (notified 13 Nov 2025, full compliance about May 2027): consent for contacts, location or voice data used for the vernacular assistant. (7) RBI Ombudsman and limited-liability rules for unauthorised electronic transactions shape the 'report fraud' and refund flows. (8) MDR from Oct 2026 exempts rural and semi-urban QR payments, so no fee friction for a village merchant [uncertain].",
+  "public_data_anchors": "1) UPI Oct 2026: 25,466.70 mn transactions, Rs 31,52,929.46 cr, 758 banks (NPCI: https://www.npci.org.in/product/upi/product-statistics). 2) UPI Sept 2026: 24.07 bn; Aug 2026: 24.51 bn (New Indian Express, 1 Oct 2026). 3) UPI fraud FY25: 12.64 lakh incidents, about Rs 981 cr (Parliament data via YourStory, Dec 2025). 4) LocalCircles survey: 1 in 5 UPI users faced fraud; 51% of victims did not report it (Business Standard, Jun 2025: https://www.business-standard.com/finance/news/upi-transaction-fraud-india-survey-one-in-five-users-hit-localcircles-125062601141_1.html). 5) Feature-phone users: 200 mn+ (PhonePe, Aug 2026); RBI estimated 400 mn+ in Mar 2022 when 123PAY launched (BloombergQuint). 6) UPI share of digital payments by volume: 83.7% in FY25 (IANS, May 2025). 7) India population about 1.45 bn; urban share about 36% (frameworks.md anchors). 8) In the first 20 days after the 123PAY launch, about 37,000 users joined and made about 22,000 transactions (Forrester blog) - a sign of slow organic feature-phone adoption.",
+  "framework_applied": "CIRCLES + List-and-Trim + JTBD (frameworks.md section 1). C - Comprehend: goal = activate first-time rural users into a habit (first successful payment, then 5+ payments in 30 days) safely; scope = from install/onboarding through the first payments and the first problem; I am the PM at Google Pay; constraints = NPCI onboarding rules, shared low-end phones, 2G areas, low literacy. I - Identify: list smallholder farmers, MGNREGA/DBT beneficiaries, rural women in SHGs, village shopkeepers, migrant workers' families receiving remittances, elderly pensioners; pick the rural woman in an SHG who receives DBT/remittance money and pays the village kirana (high pain: walks to the bank or BC agent; high value: daily small payments). R - Report needs as JTBD: set up without a debit card; know the money reached; pay without fear of losing money; check balance without a trip to the bank; get help in her language. C - Cut: prioritise 'pay without fear' and 'get set up and make the first payment', because fear of mistakes and fraud blocks every later step. L - List: safe = a voice-first Hindi/regional onboarding with Aadhaar face PIN setup, plus a 'practice payment' of Re 1 and confirmations by voice and picture; ambitious = a 'Saathi' trusted-helper mode (a family member or agent can guide, with spending caps and confirmations); visionary = a voice/IVR plus 123PAY assistant that works on feature phones and through the village kirana as an assisted-adoption hub. E - Evaluate: impact vs effort, edge cases (shared phone, SIM swap, no Aadhaar-bank seeding, illiteracy), competitors (PhonePe 123PAY, Paytm Soundbox merchants, BHIM). S - Summarise: ship voice-first onboarding plus a Re 1 practice payment and 'Saathi' safety caps; pilot in 2 districts with SHG/BC partners; NSM = 30-day activated users (5+ successful payments); guardrails = fraud loss rate, wrong-recipient rate, support tickets.",
+  "clarifying_questions": "1) Q: What is the goal - new user acquisition, activation, or transaction growth? A: Activation: many rural installs never complete a first payment. 2) Q: Who is 'first-time' - first smartphone, first bank account, or first digital payment? A: Has a bank account (often Jan Dhan) and a basic smartphone, but has never made a digital payment. 3) Q: Smartphone only, or feature phones too? A: Focus on smartphones; mention feature phones if relevant. 4) Q: Which regions and languages? A: Start with the Hindi belt (UP, Bihar); design for regional languages to scale. 5) Q: Do they have a debit card? A: Many don't, or don't know where it is. 6) Q: Constraints on what we can change? A: NPCI rules (device binding, PIN, limits) are fixed; everything inside the app is open. 7) Q: Any offline channels? A: We can partner with bank BC agents, SHGs and kirana merchants already accepting Google Pay QR. 8) Q: Timeline? A: One quarter to pilot.",
+  "interviewer_data_reveals": "Exhibit 1 - Rural onboarding funnel, new installs in UP/Bihar (illustrative): app install 100 -> language picked 92 -> mobile verified / SIM bound 71 -> bank account found 58 -> UPI PIN set 31 -> first payment 19 -> 5+ payments in 30 days 9. Exhibit 2 - Reasons for drop at PIN setup, survey n=800 (illustrative): 'no debit card / don't know card details' 46%; 'OTP or Aadhaar step confusing' 22%; 'afraid of entering numbers wrongly' 18%; 'bank not linked to mobile number' 14%. Exhibit 3 - Reasons for not making a first payment (illustrative): 'scared money will go to the wrong person' 38%; 'heard about fraud in the village' 27%; 'nobody to ask' 20%; 'shop doesn't take UPI' 6%; other 9%. Exhibit 4 - Pilot of assisted onboarding by BC agents (illustrative): PIN-set rate rose from 31% to 64%; 30-day activation rose from 9% to 22%. Exhibit 5 - Real anchors: UPI 25.47 bn transactions in Oct 2026 (NPCI); 12.64 lakh UPI fraud incidents in FY25 (Parliament); Aadhaar face-auth PIN setup live since Oct 2025 (NPCI at GFF 2025).",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "You're a PM at Google Pay. Design a UPI experience for a first-time rural user."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Let me restate: design the first-time journey for a rural user, from setup through the first payments, so they actually use UPI. A few questions first. What's the goal - installs, activation, or volume?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Activation. Lots of rural installs never complete a first payment."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "And 'first-time' means first digital payment, with a bank account and a basic smartphone? Do they have debit cards?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Yes, usually a Jan Dhan account. Many don't have a debit card, or don't know where it is. Smartphone focus, but feel free to mention feature phones."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Constraints: NPCI rules on device binding, PIN and limits are fixed. Languages: Hindi first, regional later. Can we work with offline partners, like BC agents or the village kirana?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Yes, BC agents, SHGs and merchants with our QR are all fair game. One quarter to pilot."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "My assumptions: entry-level Android, often shared; 2G or patchy 4G; low reading literacy, but good with voice and pictures; strong word-of-mouth in the village, for trust and for fear. Users I could design for: (1) smallholder farmers receiving PM-KISAN and crop payments, (2) women in SHGs who receive DBT or remittances and buy daily essentials, (3) village shopkeepers accepting payments, (4) elderly pensioners, (5) young migrant workers sending money home. I'll pick the SHG woman, let's call her Sunita, 34, in a village near Gonda. She walks 6 km to a bank or BC agent to withdraw cash, and buys daily goods at the local kirana. High pain, high frequency, and she shapes household adoption and influences other women in the SHG."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Okay. What does Sunita need?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "As JTBD: (a) When I first open the app, I want to get set up without a card or English, so I can start. (b) When I pay someone, I want to be sure it went to the right person, so I don't lose money. (c) When I get a strange call or message, I want to know if it's a fraud, so I'm not cheated. (d) When money comes in from my husband in Surat, I want to know it arrived and check my balance, so I don't need to go to the bank. (e) When I'm stuck, I want someone in my language to help. Do we have funnel data?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Here: of 100 installs, 92 pick a language, 71 bind the SIM, 58 find the bank account, 31 set a PIN, 19 make a first payment, 9 make 5+ payments in 30 days. At PIN setup, 46% say no card or no card details. Before first payment, 38% fear sending money to the wrong person and 27% have heard of fraud."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So there are two cliffs. PIN setup, 58 to 31, is mainly the debit card issue, need (a). First payment, 31 to 19 then to 9, is fear, needs (b) and (c). Prioritising: both are high pain and happen at the very start, so everything after depends on them. The card problem now has a rail-level fix: NPCI's Aadhaar face authentication for PIN setup since Oct 2025, so feasibility is high. Fear has no workaround except asking a relative, so I'll make 'pay without fear' my core need, and 'set up without a card' the enabler."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Solutions?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Three. SAFE - 'Bolke Shuru Karo' onboarding: voice-led in Hindi or Bhojpuri with pictures, no text-heavy screens, and face-auth PIN setup by default (card and OTP as fallbacks), plus a guided 'Re 1 practice payment' to a trusted contact or to Google Pay, with a cash-back of Re 1. Every payment confirms the receiver's name and photo out loud, with a large green tick and a voice note, 'Rs 50 Ramesh Kirana ko pahunch gaye'. AMBITIOUS - 'Saathi Mode': for the first 30 days, a set daily cap (say Rs 2,000), no collect requests at all, a 10-second 'pause and check' on first-time payees, an in-app 'Is this fraud?' button that plays common scam patterns in her language, and an optional trusted helper - a son or SHG leader - who gets a heads-up for large payments. VISIONARY - 'Gaon ka UPI Saathi': the village kirana or BC agent becomes an assisted-onboarding point. They help with setup on the user's own phone, without ever seeing the PIN, and earn a small incentive per activated user. This is paired with a voice/IVR or 123PAY path for family members on feature phones."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Evaluate them."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Impact vs effort:\n| Idea | Impact on activation | Effort | Key risk |\n| Voice onboarding + face PIN + Re 1 practice + spoken confirmations | High - attacks both cliffs | Medium (voice in 2-3 languages, face-auth integration) | ASR accuracy in dialects |\n| Saathi Mode safety caps + fraud check + trusted helper | High on first payment and retention | Medium | Helper abuse; caps frustrating for remittance users |\n| Assisted adoption via kirana/BC agents + IVR | Very high (pilot showed 9% to 22%) | High - ops, incentives, agent fraud | Agents misuse access |\nEdge cases: shared phones (app lock with face or pattern; a separate profile is not possible because UPI is bound to the SIM), SIM swap fraud, account not seeded to Aadhaar or mobile, no signal at the shop (UPI Lite for small payments), and users who can't read numbers (voice read-back of amounts in words). Competition: PhonePe has 123PAY on feature phones and huge merchant reach. Paytm has Soundbox voice confirmations at shops, which shows that hearing a payment builds trust."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What's your pick?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Ship the safe option plus the core of Saathi Mode as one 'first 30 days' experience, and pilot the assisted-agent model in parallel in two districts. Reason: the safe option fixes the PIN cliff with a rail NPCI already supports, and the practice payment plus spoken confirmations make the first payment feel safe. Saathi caps reduce the downside of a mistake while she learns. The agent model has the biggest uplift, but it's operationally heavy, so I'd prove it in a pilot first."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Metrics?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "North star: 30-day activated rural users, meaning at least 5 successful payments within 30 days of install. Supporting metrics: PIN-set rate (31% to 60%), time to first payment, practice-to-real-payment conversion, share of payments to merchants versus people (we want P2M to grow, which means she's using it in daily life), and voice-assistant completion rate. Guardrails: fraud loss per 1,000 new users, wrong-recipient complaints, support tickets per new user, the rate at which users hit caps and abandon, and helper-mode misuse reports."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Risks?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "(1) Fraud targets novices, for example 'scan this QR to receive money'. Mitigation: block collect requests in Saathi Mode, and give a clear voice warning: 'Paise lene ke liye PIN kabhi nahi daalna' - never enter your PIN to receive money. (2) Face-auth fails because of lighting or Aadhaar mismatch. Mitigation: fall back to the card or OTP path, plus agent help. (3) Agent misuse. Mitigation: agents never see the PIN, the user sets it on her own screen, incentives are paid only after 30-day activation, and there are random audit calls. (4) DPDP: voice and contact data need consent and minimal retention. Rollout: Gonda and Gaya, 50,000 new users, A/B testing each component, with SHG partners."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Twist: leadership asks why bother - rural users bring low transaction value and no MDR."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "The long-term value isn't MDR. It's the next 200-300 mn users and the cross-sell: credit lines on UPI, insurance, gold savings, and PM-KISAN and DBT flows. Merchants in rural areas only accept UPI if their customers pay with it, so activating Sunita also activates the village kirana."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Another twist: what about her husband's mother, who only has a feature phone?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Extend the same experience through UPI 123PAY - IVR in her language or a preloaded app - with the same voice confirmations. Google Pay could partner with feature-phone makers as PhonePe did in Aug 2026, or link her as a 'Saathi' to Sunita."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Close it out."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "For a first-time rural user like Sunita, the real barriers are setup without a card and fear of losing money. I'd ship voice-first onboarding with Aadhaar face PIN setup, a Re 1 practice payment, spoken confirmations, and a 30-day Saathi safety mode, while piloting assisted onboarding through the village kirana. We'd measure 30-day activated users with fraud and support guardrails. My closing line: the first swipe has to feel as safe as handing cash across the counter - after that, the habit takes care of itself."
+    }
+  ],
+  "answer_and_recommendation": "Ranked options: (1) RECOMMENDED - 'Bolke Shuru Karo': voice-first onboarding in regional languages with Aadhaar face-auth PIN setup (card/OTP fallback), a guided Re 1 practice payment, and spoken plus pictorial confirmations of receiver and amount, bundled with (2) 'Saathi Mode', a 30-day safety mode: daily cap, no collect requests, pause-and-check for new payees, an 'Is this fraud?' button, an optional trusted helper. (3) Pilot - 'Gaon ka UPI Saathi': assisted onboarding by village kirana/BC agents, paid per 30-day activated user, plus an IVR/123PAY path for feature-phone family members. Why: these attack the two funnel cliffs (PIN setup 58 to 31; first payment 31 to 19) using rails NPCI already offers. Risks and mitigation: novice-targeted fraud (block collect requests, voice warnings, caps); face-auth failure (fallbacks plus agent help); agent misuse (PIN never shown, incentives after 30 days, audits); dialect ASR errors (button fallback, read-back); DPDP consent for voice and contacts. Rollout: 2 districts (e.g. Gonda, Gaya), about 50k users, A/B test per component, with SHG and BC partners. Closing line: 'The first swipe has to feel as safe as handing cash across the counter.'",
+  "counter_metrics_guardrails": "NSM: 30-day activated rural users (5+ successful payments in 30 days). Guardrails: (1) fraud loss rate and fraud incidents per 1,000 new users - must fall even as activation rises; (2) wrong-recipient / reversal requests per 1,000 payments; (3) support tickets and calls per new user, and time to resolve; (4) cap-hit abandonment - users who hit the Saathi cap and stop using the app (a sign the caps are too tight, e.g. for remittance receivers); (5) failed-transaction rate on 2G (a technical decline must not be read as fraud); (6) helper/agent misuse complaints and audit failure rate; (7) uninstall rate in the first 7 days; (8) DPDP consent withdrawals for voice data.",
+  "follow_up_twists": "1) 'Activation is up but fraud complaints doubled in the pilot district.' -> Segment by fraud type. Tighten Saathi defaults (longer pause for new payees, lower cap, collect blocked), run community scam-awareness sessions through SHGs, and keep activation as the NSM only with fraud loss per user as a hard guardrail. 2) 'Make it work with zero internet.' -> UPI Lite for small payments where offline is supported, a 123PAY IVR or SMS path, and queued voice confirmations once she is back online. 3) 'How do you know voice is better than a simpler UI?' -> A/B test voice-led vs icon-only onboarding in the same district on PIN-set rate, time to first payment and 30-day activation, with a minimum detectable effect set in advance.",
+  "common_pitfalls": "1) Designing for 'Bharat' as one segment, without picking a persona and context (a farmer, an SHG woman and a migrant worker have different jobs-to-be-done). 2) Assuming English or text-heavy screens with icons alone are enough; ignoring voice, read-back of amounts and shared phones. 3) Proposing changes to NPCI rails (removing PINs, removing device binding) instead of using what exists: Aadhaar face auth, UPI Lite, 123PAY, Hello UPI. 4) Optimising activation alone without fraud guardrails: novices are the main fraud targets, and one fraud story can stop a whole village from adopting.",
+  "skills_tested": "empathy, structuring, prioritisation, business sense, execution, communication",
+  "linked_teardown": "meesho_product_teardown - its Bharat persona (a Telugu-speaking tailor in a Tier-4 Telangana town who uses UPI only to receive money) and its vernacular voice agents taking about 300K seller calls a day support the voice-first, receive-before-pay design [uncertain - indirect link]",
+  "uncertain": [
+    "round_and_level",
+    "context_as_of",
+    "regulatory_context",
+    "linked_teardown"
+  ]
+}

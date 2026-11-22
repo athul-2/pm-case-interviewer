@@ -1,0 +1,202 @@
+{
+  "pun_title": "Zero Sum Game",
+  "case_type": "Metrics",
+  "asked_at": "By the Authors (synthetic, 2026 news case)",
+  "subject_company": "Rapido (Roppen Transportation Services) - its food delivery platform Ownly, live in Bengaluru (full scale from about March 2026) and Hyderabad (Sept 2026), integrated into the main Rapido app since July 2026.",
+  "round_and_level": "PM round (metrics / marketplace health), PM level; APM campus version can skip the payout-economics maths. [uncertain]",
+  "difficulty": "Medium-Hard - the trap is to equate 'zero commission' with 'restaurant health' or to count restaurants signed up; the candidate must define restaurant health as incremental, profitable, sustained demand for the restaurant, and guard the consumer, rider and Rapido economics that pay for the zero.",
+  "market_and_industry": "India; food delivery (restaurant marketplace) entering a Zomato-Swiggy duopoly; Bengaluru and Hyderabad first, expansion planned to Delhi NCR, Mumbai, Pune, Kolkata, Ahmedabad, Surat; supply = NRAI-member chains and small independent restaurants and cloud kitchens; demand = Rapido's ride users, value-seeking (AOV ~Rs 250 vs ~Rs 400-420 on rivals), including first-time online food orderers; Android-heavy.",
+  "time_box_minutes": "20-25",
+  "exact_prompt": "Rapido's Ownly charges restaurants zero commission. If restaurants aren't paying a commission, how do you know whether the restaurant side of Ownly is healthy? Which metrics would you track?",
+  "source_and_verification": "Level: synthetic (authors' case built on 2026 news). No dated interview report of this prompt was found (Firecrawl credits exhausted; WebSearch used). News sources: Inc42, 9 Jun 2025 (https://inc42.com/buzz/rapido-food-delivery-play-ownly-zomato-swiggy-duopoly) on terms and NRAI partnership; Business Today, 28 Jul 2026 (https://www.businesstoday.in/latest/trends/story/no-platform-fees-20000-restaurants-rapidos-ownly-food-delivery-goes-live-within-the-main-app-545689-2026-07-28) on ~20,000 restaurants and in-app integration; Angel One citing Moneycontrol, 21 Aug 2026 (https://www.angelone.in/news/unlisted-companies/rapido-s-ownly-plans-multi-city-expansion-as-it-crosses-50-000-daily-orders) on 50,000+ daily orders; Kotak Neo, 26 Sep 2026 (https://www.kotakneo.com/news/sectors/ownly-launches-in-hyderabad-with-lower-cost-food-delivery-model/) on Hyderabad, AOV and expansion plans. Year: 2026.",
+  "context_as_of": "As of 11 Nov 2026. 1) Model: zero commission and no platform or packaging charges to restaurants; restaurants pay a per-order delivery charge (2025 terms: Rs 10 for orders under Rs 100, flat Rs 25 + GST above Rs 100) and may use their own fleet at zero cost; restaurants must keep Ownly menu prices equal to their in-store prices and list at least four meals under Rs 150; no platform-funded discounting at launch; long-term plan is a flat restaurant subscription, 'always zero commission' (Inc42, Jun 2025). 2) Built with NRAI (National Restaurant Association of India), whose members say incumbents charge 25-35% commission plus ads and packaging fees (other reports say 16-30%). 3) Scale: ~20,000 restaurants listed and Ownly moved inside the Rapido app (Business Today, 28 Jul 2026); ~40,000 daily orders in July and 50,000+ by Aug 2026 in Bengaluru, ~10% of the city's estimated 500-600K daily food orders (Angel One/Moneycontrol, 21 Aug 2026). 4) Hyderabad launch Sept 2026 with 10,000 restaurants (target 30,000); AOV ~Rs 250 vs Rs 400-420 on Swiggy/Zomato; ~15% of new Bengaluru orders from people who had never ordered food online; ~25% delivered within 20 minutes; delivery fees to consumers not yet charged in Bengaluru but planned; expansion to Delhi NCR, Mumbai, Pune, Kolkata, Ahmedabad, Surat 'by next quarter'; Rapido expects profitability next financial year (Kotak Neo, 26 Sep 2026). 5) Example: Bengaluru chain Empire grew from ~136 daily Ownly orders (first month, Mar 2026) to 1,700+ by July (Angel One). 6) Competitive responses: Swiggy's Toing value app, Zomato's Bistro, Flipkart's ONDC-powered food pilot in Bengaluru; Swiggy sold its Rapido stake (~Rs 2,400 cr, Sep 2025) citing the conflict of interest (swiggy-product-teardown). Stale-risk: restaurant-side delivery charges may have changed since the 2025 terms; city list for expansion is a plan, not confirmed launches. [uncertain]",
+  "regulatory_context": "1) Competition law: the CCI's investigation of Zomato and Swiggy (DG report reported in 2024) flagged exclusivity and price-parity arrangements; Ownly's own rule that menu prices equal in-store prices is a parity condition in the other direction (Ownly vs offline), which is pro-consumer but should be monitored and not extended to 'no cheaper elsewhere online' clauses. 2) GST: since 1 Jan 2022 food aggregators collect and pay 5% GST on restaurant services under Section 9(5); from Sept 2025 the GST Council brought local delivery services by e-commerce operators under 9(5) at 18% - affects the delivery charge billed to restaurants and consumers. 3) FSSAI: food business operators listed on e-commerce must hold valid FSSAI licences/registration and aggregators must display licence and hygiene details; delisting non-compliant restaurants is the platform's duty. 4) Gig workers: Code on Social Security 2020 (in force from 21 Nov 2025) aggregator contribution of 1-2% of turnover, Karnataka Platform-based Gig Workers Act 2025 (welfare fee, transparency) and Telangana's gig-worker law - Rapido's rider cost is the real cost behind zero commission, in exactly Ownly's two launch states. 5) Legal Metrology / Consumer Protection (E-Commerce) Rules 2020: total price including delivery and GST must be shown upfront; CCPA dark-pattern guidelines (2023) apply when consumer delivery fees are introduced. 6) DPDP Act 2023 for customer data shared with restaurants (restaurants want customer data for direct marketing; Ownly must manage consent). [uncertain]",
+  "public_data_anchors": "1) Ownly Bengaluru daily orders: ~40,000 (Jul 2026) -> 50,000+ (Aug 2026), ~10% of an estimated 500-600K daily city orders (Angel One citing Moneycontrol, 21 Aug 2026). 2) Restaurants: ~20,000 listed (Business Today, 28 Jul 2026); Hyderabad 10,000 at launch, target 30,000 (Kotak Neo, 26 Sep 2026). 3) AOV ~Rs 250 on Ownly vs Rs 400-420 on Swiggy/Zomato (Kotak Neo, Sep 2026). 4) 15% of new Bengaluru orders from first-time online food orderers; ~25% delivered within 20 minutes (Kotak Neo, Sep 2026). 5) Restaurant delivery charge: Rs 10 below Rs 100, Rs 25 + GST above Rs 100 (Inc42, Jun 2025). 6) Incumbent commission 25-35% per NRAI insiders (Inc42, Jun 2025) or 16-30% (other reports). 7) Delivery is ~85-90% of running cost for aggregators (Aravind Sanka via Kotak Neo). 8) Zomato >2.5M daily food orders, Swiggy ~2-2.2M nationally (Angel One, Aug 2026). 9) Rapido >30M monthly transacting users (Inc42, Jun 2025). 10) Empire chain: 136 -> 398 -> 685 -> 1,100+ -> 1,700+ daily Ownly orders, Mar-Jul 2026 (Angel One). Arithmetic anchor [E]: on a Rs 250 order, a 25% commission costs a restaurant ~Rs 62 vs ~Rs 25-30 delivery charge on Ownly - about Rs 35 more per order to the restaurant.",
+  "framework_applied": "Success Metrics (frameworks.md section 5), scoped to the restaurant side. Step 1 Company and product: Rapido is a ride-hailing company using idle rider capacity and a 30M+ user base to enter food; Ownly's goal is to win restaurants with zero commission and pass lower prices to diners, and to monetise later via subscriptions and consumer delivery fees - so restaurant health is the moat. Step 2 Users and value: restaurants (activation = live menu and first 10 orders; engagement = daily orders, acceptance; conversion = profitable net payout per order; retention = still live and active at 90 days, promoting Ownly), plus diners and riders whose health bounds the restaurant side; money = delivery charges now, subscriptions and consumer fees later. Step 3 NSM for the restaurant side: weekly healthy active restaurants - restaurants with at least N orders a day over the trailing 4 weeks, order acceptance >= 95%, menu-price parity held, and positive net contribution from Ownly orders; formula for restaurant value = orders x AOV x (1 - delivery charge share - packaging - discounts) - incremental cost; supporting = orders per active restaurant, incremental (not cannibalised) orders, net realisation per Rs 100 vs incumbents, 90-day restaurant retention, repeat-customer rate per restaurant, order concentration. Step 4 Guardrails: consumer ETA and food-quality complaints, rider earnings and cost per delivery vs fees (Rapido's economics), parity violations, restaurant churn when fees or subscriptions start.",
+  "clarifying_questions": [
+    {
+      "q": "Is the goal to grow restaurant supply, keep restaurants profitable, or prepare for monetisation (subscriptions)?",
+      "a": "All three, in order: the next two quarters are about city expansion, and leadership wants restaurants to be 'better off on Ownly' because a subscription is coming next year."
+    },
+    {
+      "q": "Which restaurants matter most - chains, independents, cloud kitchens?",
+      "a": "Independents and small chains are the majority of listings; a few chains drive a big share of orders."
+    },
+    {
+      "q": "What do restaurants pay today, and what does the diner pay?",
+      "a": "A per-order delivery charge of roughly Rs 10-25; diners see menu prices equal to in-store and, in Bengaluru, no delivery fee yet."
+    },
+    {
+      "q": "Do we see a restaurant's orders on Zomato and Swiggy, or only ours?",
+      "a": "Only ours, but many restaurants share their POS data, and we can survey them."
+    },
+    {
+      "q": "Which cities?",
+      "a": "Bengaluru (mature, ~50,000 orders a day) and Hyderabad (two months old). Answer for Bengaluru but say what changes in a new city."
+    },
+    {
+      "q": "Is this a dashboard for the restaurant-growth team or an investor narrative?",
+      "a": "The team's dashboard - what would make you worry."
+    }
+  ],
+  "interviewer_data_reveals": "All numbers are illustrative (invented for teaching) unless a source is cited.\n\nExhibit 1 - Real context (sourced): ~20,000 restaurants listed (Jul 2026); 50,000+ daily orders in Bengaluru (Aug 2026); AOV ~Rs 250 vs Rs 400-420 on rivals (Sep 2026).\n\nExhibit 2 - Restaurant distribution, Bengaluru, last 4 weeks (illustrative):\n| Segment | Share of listed restaurants | Share of orders | Avg orders/day |\n| Zero orders | 38% | 0% | 0 |\n| 1-4/day | 34% | 12% | 2 |\n| 5-29/day | 22% | 38% | 11 |\n| 30+/day | 6% | 50% | 55 |\n\nExhibit 3 - Net realisation per Rs 250 order (illustrative): Ownly - delivery charge Rs 25, packaging Rs 12, no discount -> restaurant keeps ~Rs 213 (85%). Incumbent - commission 25% Rs 62, ads ~Rs 10, discount co-fund ~Rs 15, packaging Rs 12 -> keeps ~Rs 151 (60%) on a menu price typically marked up 15-20%.\n\nExhibit 4 - Source of Ownly orders, surveyed restaurants (illustrative): 45% moved from Zomato/Swiggy, 30% new customers to the restaurant, 25% replaced dine-in, takeaway or the restaurant's own WhatsApp orders.\n\nExhibit 5 - Operations (illustrative): restaurant acceptance rate 91%; 6% of orders cancelled by the restaurant (item out of stock); 4% of audited menus priced above in-store; 90-day retention of restaurants that got 5+ orders a day in month one: 88%, vs 41% for those with under 2.",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "Ownly charges restaurants zero commission. How do you know the restaurant side is healthy? Which metrics?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "The trap is that 'zero commission' sounds like health by itself. A restaurant is healthy on Ownly if it gets enough incremental, profitable orders to keep it live and promoting us. I'll go: what Ownly is for, the restaurant's journey and how money flows, a North Star for the restaurant side with levers, and guardrails on the other sides. Can I clarify a few things?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Go ahead."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "What's the goal - more restaurants, profitable restaurants, or readiness for a subscription? And what do restaurants pay today?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Expansion for now, but restaurants must be 'better off on Ownly' because a subscription is coming next year. They pay a per-order delivery charge, roughly Rs 10-25. Diners pay menu price, no delivery fee yet in Bengaluru."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Step 1. Rapido is using riders who are idle between ride peaks and a 30 million-plus user base to enter food, against a duopoly where restaurants pay 16-35% commission. Ownly's promise: no commission, in-store prices for diners. It earns very little per order today, so the restaurant side is its moat and its future revenue - a subscription only works if restaurants are measurably better off."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Walk me through the restaurant's journey."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Activation: menu live with parity pricing, and the first 10 orders delivered well. Engagement: orders per day, acceptance rate, prep time. Conversion, in a zero-commission world, means net profit: what the restaurant keeps per order after delivery charge, packaging and any discount, compared with alternatives. Retention: still live and active at 90 days, and putting Ownly stickers on the counter. Money for Rapido: delivery charges now, consumer fees and subscriptions later. Right?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Right. Here's the restaurant distribution (Exhibit 2)."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "This is the key picture. 38% of listed restaurants got zero orders in four weeks, and the top 6% get half of all orders. So '20,000 restaurants' is a vanity number - a restaurant with no orders is not 'healthy' just because it pays us nothing. I'd never use listed restaurants as the metric."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "So what's the North Star for the restaurant side?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Weekly healthy active restaurants: restaurants that over the trailing four weeks averaged at least five orders a day, accepted at least 95% of orders, kept menu parity, and had positive net contribution from Ownly orders. It's where restaurant value - enough profitable volume to be worth a tablet on the counter - meets Ownly's growth: these are the restaurants who will pay a subscription."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Why five orders a day?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Exhibit 5 tells us: restaurants with 5+ orders a day in month one are retained at 88% at 90 days vs 41% under two. It's a threshold we'd calibrate city by city, and raise for chains."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Break restaurant value into levers."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "For one restaurant, monthly value from Ownly = orders x AOV x net realisation - extra cost, where net realisation = 1 - (delivery charge + packaging + discounts) / order value. And orders = visibility x conversion x repeat. So the levers are:\n1. Orders per active restaurant (demand).\n2. Net realisation per Rs 100 vs the restaurant's other channels (price advantage).\n3. Incrementality - share of orders that are new to the restaurant (true value).\n4. Repeat-customer rate per restaurant (habit).\n5. Operational quality - acceptance, prep time, cancellations."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Exhibit 3 has the payout comparison."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "On a Rs 250 order the restaurant keeps about Rs 213 on Ownly vs about Rs 151 on an incumbent - 85% vs 60%. Even if the incumbent's menu is marked up, Ownly is better per order. So per-order economics aren't the problem; volume and incrementality are. Net realisation is a metric to keep in front of restaurants, not the one to optimise."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "And Exhibit 4, sources of orders?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "45% moved from Zomato and Swiggy, 30% are new customers, 25% replaced dine-in, takeaway or the restaurant's own WhatsApp orders. That last 25% is a concern - a takeaway that becomes a delivery costs the restaurant Rs 25 and packaging for no new revenue. And a shift from Zomato is good for the restaurant's margin but not new demand. So I'd track incremental order share - new customers plus shifted-from-higher-cost channels - and specifically watch cannibalisation of dine-in and direct orders."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What are your top supporting metrics?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "1. Orders per active restaurant per day, and the distribution - share of restaurants with zero orders (38%) should fall.\n2. 90-day restaurant retention of activated restaurants.\n3. Incremental order share (from restaurant POS data or surveys).\n4. Repeat-customer rate per restaurant - 30-day repeat of a diner to the same restaurant.\n5. Acceptance rate and restaurant-caused cancellations - 91% and 6% are too weak today.\nAnd net realisation per Rs 100 as the proof point for the subscription."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Guardrails?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Four sides.\nDiners: if we push restaurants to accept everything, quality slips - so ETA, food-quality and missing-item complaints, and diner repeat rate.\nParity: 4% of audited menus are priced above in-store - that breaks our core promise. Guardrail: parity violation rate, with delisting.\nRiders and Rapido: zero commission is paid for by rider costs. Cost per delivery vs delivery charges and fees, rider earnings per hour - especially under Karnataka's and Telangana's gig-worker laws.\nConcentration: if the top 6% of restaurants carry half the orders, one chain leaving hurts. Guardrail: top-50 share of orders.\nAnd a future guardrail: restaurant churn and sentiment when consumer fees or the subscription start."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Hyderabad is two months old. Same metrics?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Same North Star, but earlier in the funnel: time to first 10 orders, share of listed restaurants with any order, and the month-one five-order threshold. 10,000 listings mean nothing until those move."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Leadership wants to announce 50,000 restaurants. Your view?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Fine for PR, but internally I'd announce healthy active restaurants and the average restaurant's saving vs commission. A city with 30,000 listings and 40% at zero orders is a sign we're adding supply faster than demand."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Summarise."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Restaurant-side North Star: weekly healthy active restaurants - at least five orders a day, 95% acceptance, menu parity, positive contribution. Levers: orders per restaurant, incremental order share, repeat customers per restaurant, operational quality, with net realisation as the proof. Guardrails: diner quality, parity violations, rider cost and earnings, order concentration, and churn when we monetise. One line: zero commission is the hook - healthy restaurants are the ones Ownly makes money for, not the ones it stops charging."
+    }
+  ],
+  "answer_and_recommendation": "Restaurant-side North Star: weekly healthy active restaurants - restaurants that over the trailing 4 weeks averaged >= 5 orders a day (calibrated by city and segment), accepted >= 95% of orders, held menu-price parity with in-store, and earned positive net contribution from Ownly orders. Restaurant value formula: orders x AOV x net realisation - incremental cost; orders = visibility x conversion x repeat. Top 3 supporting metrics (ranked): (1) orders per active restaurant and the share of listed restaurants with zero orders - volume is the binding constraint (illustratively 38% at zero); (2) incremental order share - new customers plus orders shifted from higher-cost aggregators, minus cannibalised dine-in/takeaway/direct orders; (3) 90-day retention of activated restaurants, with repeat-customer rate per restaurant. Proof metric for monetisation: net realisation per Rs 100 vs incumbents (illustratively ~85% vs ~60%). Risks: supply growing faster than demand during city expansion (track healthy, not listed); restaurants cheating parity (audits, delisting); rider economics not covered by fees (cost-per-delivery guardrail); churn when the subscription starts (pilot subscription on restaurants above the health threshold first). Closing line: 'Zero commission gets a restaurant onto Ownly; a healthy restaurant is one that earns more because of Ownly - so I'd count restaurants we make money for, not restaurants we stop charging.'",
+  "counter_metrics_guardrails": "Diner side: delivery ETA (share under 30 min), food-quality and missing-item complaints per 1,000 orders, restaurant-caused cancellations, diner 30-day repeat. Promise integrity: menu-price parity violation rate from audits (illustratively 4%), hidden-charge complaints once consumer delivery fees start (CCPA). Rider and Rapido economics: cost per delivery vs delivery charge plus consumer fee, rider earnings per hour and utilisation in off-peak windows, gig-law compliance costs in Karnataka and Telangana. Marketplace structure: share of orders from the top 50 restaurants (concentration risk), share of listed restaurants with zero orders (supply outrunning demand). Restaurant cannibalisation: share of Ownly orders replacing dine-in, takeaway or direct orders (restaurant pays delivery for no new revenue). Monetisation readiness: restaurant churn and NPS when subscriptions or fees are introduced, compared to a holdout. Compliance: FSSAI licence validity of listed restaurants.",
+  "follow_up_twists": [
+    {
+      "twist": "Rapido introduces a Rs 999/month restaurant subscription. What do you measure?",
+      "response": "Subscription take-up and 90-day churn among healthy restaurants vs a holdout, and whether net realisation stays well above incumbents after the fee - if a restaurant's Ownly profit doesn't exceed the fee by a clear margin, it will leave."
+    },
+    {
+      "twist": "Zomato cuts commission to 10% for small restaurants in Bengaluru.",
+      "response": "Watch orders per restaurant and the incremental order share for small independents; Ownly's edge shifts from cost to demand, so the response is driving orders to small restaurants, not matching price."
+    },
+    {
+      "twist": "Healthy active restaurants rose, but diner repeat rate fell.",
+      "response": "Check whether we lowered the bar on quality (acceptance pushed, prep time up, complaints up) or concentrated demand on a few restaurants; restaurant health that costs diner repeat isn't health."
+    }
+  ],
+  "common_pitfalls": [
+    "Counting listed or onboarded restaurants (20,000+) as health - many get zero orders; a restaurant that pays nothing but earns nothing is not healthy.",
+    "Assuming zero commission means restaurants are better off - the delivery charge, packaging and cannibalised dine-in or takeaway orders can make an Ownly order worth less than it looks.",
+    "Optimising per-order net realisation when volume and incrementality are the binding constraints.",
+    "Ignoring who pays for 'zero' - rider cost and Rapido's unit economics, plus diner experience, must be guardrails, or the restaurant side collapses when fees or subscriptions arrive."
+  ],
+  "skills_tested": [
+    "structuring",
+    "business sense",
+    "quant",
+    "prioritisation",
+    "empathy",
+    "communication"
+  ],
+  "linked_teardown": "swiggy-product-teardown (swiggy-product-teardown/results/Restaurant_partner_app_Ads_platform.json, Value_formats_Toing_99_Store_Snacc.json and Corporate_capital_leadership_moves.json). Key facts used: zero-commission entrants like Ownly pressure commission rates for small restaurants, Swiggy's Toing was launched partly to fight Ownly, and Swiggy exited its Rapido stake (~Rs 2,400 cr, Sep 2025) citing the conflict of interest after Ownly. [uncertain]",
+  "uncertain": [
+    "round_and_level",
+    "context_as_of",
+    "regulatory_context",
+    "linked_teardown"
+  ]
+}

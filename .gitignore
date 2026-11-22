@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.DS_Store
+
+# Your own data stays on your machine
+sessions/*
+!sessions/.gitkeep
+custom_cases/*
+!custom_cases/.gitkeep
+settings.json
+usage.jsonl
+launcher/server.log
+*.app/
+.env

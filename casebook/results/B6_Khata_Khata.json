@@ -1,0 +1,144 @@
+{
+  "pun_title": "Khata Khata",
+  "case_type": "Product Design",
+  "asked_at": "Khatabook/Paytm style (classic; not tied to a dated company report)",
+  "subject_company": "Khatabook / OkCredit / Paytm for Business-style merchant ledger app (hypothetical: you are the PM at a Khatabook-like merchant fintech)",
+  "round_and_level": "PM product-sense round; APM campus to PM (2-5 yrs) at fintech or Bharat-focused consumer companies [uncertain]",
+  "difficulty": "Medium - the domain is familiar, but strong answers must handle trust between neighbours, low digital literacy and the RBI rules on lending, not just build a ledger",
+  "market_and_industry": "India; merchant fintech / SMB SaaS for kirana (neighbourhood grocery) stores; Tier 2-4 towns and urban colonies; Hindi plus regional languages; low-to-mid Android phones (Rs 7-12k), shared family phone, patchy 4G",
+  "time_box_minutes": "30-40",
+  "exact_prompt": "You are a PM at a merchant fintech like Khatabook. Design a product that helps kirana owners manage customer credit (udhaar).",
+  "source_and_verification": "Verification: classic. A widely used Bharat fintech design prompt; no dated, company-tagged report of this exact wording was found. Nearest evidence: Prepfully and AmbitionBox list Khatabook PM interview questions (mostly general product sense) - https://prepfully.com/interview-questions/khatabook/product-manager , https://www.ambitionbox.com/interviews/khatabook-office-interview-questions ; Khatabook Senior PM work on merchant loan disbursals on a 10M+ MAU merchant app - https://peerlist.io/saketbhardwaj/project/scaling-loan-disbursals-71-at-khatabook . Searched NextLeap, The Product Folks, PracHub, Glassdoor, Medium (Nov 2026); no exact match. Year: circulating since about 2021-22 [uncertain].",
+  "context_as_of": "As of 2026-11-11. (1) Khatabook (Adj Utility Apps Pvt Ltd, MS Dhoni-backed) has moved from a free digital udhaar ledger into invoicing, inventory and merchant loans. FY24 operating revenue Rs 102.7 cr, net loss Rs 116.24 cr (YourStory, Nov 2024: https://cwv.yourstory.com/2024/11/ms-dhoni-backed-khatabook-clocks-rs-1027-cr-revenue-cuts-losses-7-in-fy24). Consolidated FY25 figures were not found and sources conflict, so treat them as stale or unknown. Khatabook ran layoffs in 2022 and 2023 to reach profitability (Inc42: https://inc42.com/buzz/khatabook-fires-over-40-employees-restructuring-exercise). (2) OkCredit, the main rival: FY25 operating revenue Rs 23.3 cr (+64%), net loss Rs 23.2 cr (-34%), 100 mn+ lifetime downloads claimed, merchants in 2,800+ cities, about $84 mn raised (Inc42, 24 Oct 2025: https://inc42.com/buzz/tiger-global-backed-okcredit-narrows-fy25-loss-by-34-to-inr-23-cr/). (3) Monetisation for the category has meant lending, subscriptions (premium invoicing, GST) and payments, not the ledger itself. Kirana-tech startups have pivoted to lending as demand for pure tools waned (DealStreetAsia: https://dealstreetasia.com/?p=321791). (4) Kiranas are under pressure from quick commerce. One survey found 82% of buyers had shifted at least 25% of their kirana purchases to quick commerce (Datum Intelligence via Outlook Business: https://www.outlookbusiness.com/explainers/kirana-stores-are-losing-the-battle-against-zepto-blinkit-and-instamart). Distributors claimed about 2 lakh kirana closures (https://www.outlookbusiness.com/start-up/news/nearly-2-lakh-kirana-stores-close-as-battle-for-survival-against-quick-commerce-players-intensifies). Udhaar is one of the few things quick commerce cannot copy. (5) UPI is now everywhere at the counter: 25.47 bn transactions in Oct 2026 (NPCI). A udhaar product should therefore settle dues by UPI collect or QR, not cash alone. Possibly stale: Khatabook user counts (a '910k DAU' claim found on a blog is unverified) and any FY25/FY26 financials.",
+  "regulatory_context": "(1) RBI (Digital Lending) Directions, 2025, issued 8 May 2025, replacing the 2022 guidelines and the 2023 Default Loss Guarantee (DLG) circular (https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12848). If the product offers credit to the kirana owner (working capital) or BNPL to their customers, a regulated entity (bank or NBFC) must be the lender and the app is a Lending Service Provider. That brings a Key Fact Statement, direct disbursal to the borrower, grievance officer disclosure, a cooling-off period and limited data collection. DLG cover cannot be given on revolving credit lines, and must be invoked within 120 days of default. The DLG cap is 5% of the portfolio [uncertain - from the 2023 circular, carried forward]. Implication: a customer 'udhaar line' that the app itself underwrites would be unregulated lending. Keep the ledger as a record of the shopkeeper's own informal credit, and route any financed credit through a partner NBFC. (2) DPDP Act 2023 and DPDP Rules 2025, notified 13 Nov 2025: Data Protection Board live now, consent managers from Nov 2026, most obligations from about May 2027 (AZB: https://www.azbpartners.com/bank/indias-digital-personal-data-protection-act-phased-rollout-and-key-compliance-milestones/). Customer phone numbers and their debts are personal data. Reminders need a lawful basis, and using a customer's repayment history for credit scoring needs clear notice and consent. (3) Recovery conduct: RBI's fair-practices rules ban harassment by agents of regulated lenders. Even for informal udhaar, the product should avoid shaming or public-default features (WhatsApp group shaming, etc.). (4) NPCI rules on UPI collect requests and the Oct 2026 MDR on large merchants: small merchants (up to Rs 1 lakh/month via QR) are exempt, so repayment by UPI stays free for kiranas [uncertain on final MDR details] (https://finimize.com/content/india-ends-free-upi-for-some-large-merchant-payments). (5) GST is not material unless invoicing is in scope.",
+  "public_data_anchors": "1) About 13 mn kirana and neighbourhood stores in India (Invest India: https://investindia.gov.in/team-india-blogs/modernization-kirana-stores-india; OkCredit's 2026 blog says 13-14 mn). 2) About 33% of surveyed customers regularly buy on store credit (Flourish/Bain-linked survey, via Invest India/Business Today) [uncertain on exact study year]. 3) Kiranas handle about 70-90% of grocery/FMCG retail, estimates vary (Invest India; Grant Thornton). 4) UPI Oct 2026: 25,466.70 mn transactions worth Rs 31,52,929.46 cr, 758 banks live (NPCI: https://www.npci.org.in/product/upi/product-statistics). 5) Khatabook FY24 revenue Rs 102.7 cr, loss Rs 116.24 cr (YourStory, Nov 2024). 6) OkCredit FY25 revenue Rs 23.3 cr, loss Rs 23.2 cr, 100 mn+ downloads claimed (Inc42, Oct 2025). 7) 82% of buyers moved at least 25% of their kirana spend to quick commerce (Datum Intelligence, via Outlook Business, 2025). 8) Khatabook merchant app: 10M+ MAU, per a former PM's portfolio (Peerlist) [uncertain].",
+  "framework_applied": "CIRCLES + List-and-Trim + JTBD (frameworks.md section 1). C - Comprehend: goal = merchant retention and repayment-collection rate (a lending-ready base), not revenue on day one; scope = the udhaar journey from credit given to money collected; I am the PM at a Khatabook-like app; constraints = no in-house lending licence, low-literacy users, cheap Android phones. I - Identify: list kirana owners in metros, Tier 2-4 kiranas, pharmacies, dairy/milk vendors and wholesalers; pick the Tier 2-4 owner-operated kirana with 100-300 credit customers (high pain, high value, most udhaar). R - Report needs as JTBD: record credit in 3 seconds while the counter is busy; remember who owes what without the paper bahi; collect without hurting the relationship; decide whom to give credit to; get working capital when dues are locked up. C - Cut: prioritise 'collect without awkwardness' plus 'record in under 3 seconds', because they are painful, frequent and fit the business goal (recovered money builds trust and the data for lending). L - List: safe = one-tap voice/photo entry plus automatic WhatsApp/SMS reminders with a UPI pay link; ambitious = a customer-side 'Mera Khata' view with UPI autopay on salary day plus a shared trust score; visionary = an NBFC-backed udhaar line where the lender funds customer credit and the kirana gets paid upfront. E - Evaluate: impact vs effort grid, plus edge cases (disputed entries, shared phones, migrant customers) and competitors (OkCredit, Vyapar, Paytm/PhonePe merchant apps, quick commerce). S - Summarise: ship the safe option with a 'gentle nudge' reminder ladder plus the customer view as phase 2, pilot in 2 Hindi-belt districts, with collection rate (days to recover) as the NSM-like success metric and guardrails on customer churn from the store and complaints.",
+  "clarifying_questions": "1) Q: What is the goal - acquisition, engagement or monetisation? A: Grow active merchants and the money they actually recover; monetisation can come later. 2) Q: Who am I - an existing ledger app, or a payments app like Paytm adding a ledger? A: An existing ledger app with about 10 mn merchants, but many have gone inactive. 3) Q: Which merchants - metro or Bharat? A: Your call, but most of our base is Tier 2-4 towns in the Hindi belt. 4) Q: Is lending in scope? Do we have an NBFC licence? A: No licence. We have one NBFC partner for merchant loans. 5) Q: Is the problem recording credit, or collecting it? A: Find out - that is part of the case. 6) Q: Device and language constraints? A: Android phones from Rs 7-12k, often shared with family. Hindi first, then Marathi, Bengali and Telugu. 7) Q: Timeline and team? A: One squad (1 PM, 4 engineers, 1 designer) and 2 quarters to show impact. 8) Q: Are customers (borrowers) users too, or only the merchant? A: Today only the merchant; customers just get SMS.",
+  "interviewer_data_reveals": "Exhibit 1 - Merchant base (illustrative): registered 10 mn; monthly active 2.2 mn (22%); merchants who send at least one reminder a month 0.6 mn. Exhibit 2 - Udhaar profile of a median active Tier-3 kirana (illustrative): 140 credit customers; Rs 85,000 outstanding at any time; average dues age 38 days; 12% of dues older than 90 days (treated as bad debt); 25-30% of daily sales on credit. Exhibit 3 - Why merchants churned, exit survey n=1,200 (illustrative): 'typing entries takes too long at rush hour' 34%; 'customers ignored reminders / got angry' 27%; 'went back to the paper bahi, my son handles the phone' 18%; 'no benefit, I still have to collect cash' 13%; other 8%. Exhibit 4 - Reminder experiment (illustrative): plain SMS reminder -> 9% paid within 7 days; WhatsApp reminder in Hindi in the shopkeeper's voice note plus a UPI link -> 21%; reminder sent within 2 days of salary day (1st-7th) -> 26%. Exhibit 5 - Real anchors: about 13 mn kiranas (Invest India); about 33% of customers regularly use store credit (Flourish/Bain); UPI 25.47 bn transactions in Oct 2026 (NPCI).",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "You're a PM at a Khatabook-like app. Design a product that helps kirana owners manage customer credit - udhaar."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Let me restate it: help a kirana owner give, track and recover credit to customers. Before solving, I'd like to clarify the goal, who we are, and the constraints. Is the goal to grow active merchants, or to monetise, for example through lending?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Grow active merchants and the money they actually recover. Monetisation later. We have about 10 mn registered merchants, but only around 22% are monthly active."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's useful: retention is the problem, not acquisition. Do we have a lending licence, and are customers users of our app or only the merchant?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "No licence. There's one NBFC partner for merchant loans. Customers only get SMS today. The team is one squad for two quarters."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Assumptions, then: Hindi-belt Tier 2-4 towns, cheap Android phones that are often shared, no in-house lending, and a two-quarter build. I'll scope this to the full udhaar loop: give, record, remind, collect. Now the users. I see five: (1) metro kirana owners with staff, (2) owner-operated Tier 2-4 kiranas, (3) pharmacies and dairy vendors with monthly accounts, (4) small wholesalers giving credit to retailers, (5) the customers who borrow. I'll pick the owner-operated Tier 2-4 kirana. That's where credit is most common (25-30% of sales), the relationship is most personal, and digital literacy is lowest, so pain and value are both highest."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Fine. What do they need?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Let me make the persona concrete: Ramesh-ji, 48, runs a store in Sitapur with 140 credit customers, about Rs 85,000 outstanding, a paper bahi, and a son who 'handles the phone'. As JTBD: (a) When the counter is crowded, I want to note credit in seconds, so I don't lose the entry or the next sale. (b) When dues pile up, I want to remind people without sounding rude, so I get paid and keep the customer. (c) When someone asks for credit, I want to know if they're good for it, so I don't lose money. (d) When my money is stuck in udhaar, I want working capital to restock, so my shelves aren't empty. (e) When a customer disputes the amount, I want proof both sides trust, so we don't fight. Do you have any data on why merchants leave?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Here's an exit survey. 34% say typing entries takes too long at rush hour. 27% say customers ignored reminders or got angry. 18% went back to paper. 13% say there's no benefit because they still have to collect cash."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So 61% of churn is two needs: speed of recording (a) and awkward collection (b), and the 13% 'no benefit' is also really (b). I'll prioritise on pain, frequency, workarounds, feasibility and fit with the goal. Recording happens dozens of times a day, and the workaround - paper - is free, so if entry is slower than paper we lose. Collection is less frequent but it's where the money is, and recovered money is what makes the app worth keeping. Credit-worthiness (c) and working capital (d) matter, but they depend on having good ledger data first. So I'll focus on (a) and (b), with collection as the north star."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Why not lead with lending? That's where the money is."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Because lending runs on clean, recent ledger data, and with 22% MAU we don't have it. Also, under the RBI's 2025 Digital Lending Directions we'd be a Lending Service Provider, and an NBFC would have to underwrite. If collection and data are fixed first, the lending product gets better risk data and a warmer funnel. I'll come back to it as the visionary option."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Okay. Solutions?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Three ideas, from safe to visionary. SAFE - 'Bolo aur Likho' plus a smart reminder ladder: entry by voice in Hindi ('Sharma-ji, 240 rupees, aata') or by photographing the bill, with a contact auto-suggested from the last 5 customers, so it takes under 3 seconds. Reminders are WhatsApp-first in a respectful tone, optionally in the shopkeeper's own recorded voice, with a UPI pay link and QR, and timed to salary day. They escalate gently: friendly note, then a balance statement, then a call prompt for the owner. Never public shaming. AMBITIOUS - 'Mera Khata' for customers: a no-install WhatsApp/web view where the customer sees every entry, confirms or disputes it, and can set UPI Autopay for small amounts on the 5th. That builds two-sided trust and gives us a verified ledger. VISIONARY - 'Udhaar Line by an NBFC': for customers with good repayment history, the partner NBFC funds the credit, the kirana is paid by UPI at the counter, and the customer repays the NBFC. The kirana is freed from the risk of credit and gets cash flow."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How do you choose?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Impact vs effort, in text:\n| Idea | Impact on retention/recovery | Effort | Risk |\n| Voice/photo entry + reminder ladder | High (hits 61% of churn reasons) | Low-Med (speech-to-text in Hindi, WhatsApp Business API) | Low |\n| Mera Khata + disputes + UPI Autopay | High (trust + recovery, viral to customers) | Med (customer-side flows, mandates) | Med - disputes may surface conflict |\n| NBFC Udhaar Line | Very high revenue, medium reach | High (partner integration, KFS, underwriting, collections) | High - regulatory and credit risk, can damage the neighbour relationship |\nEdge cases: shared family phones (need a PIN or simple lock for the ledger), customers without WhatsApp (SMS fallback plus IVR voice), migrant workers who leave town, entries the customer disputes, and festival-season credit spikes. Competitors: OkCredit has the same basics, Vyapar is billing-led, Paytm and PhonePe own the QR at the counter. Our edge has to be collection performance."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Here's data from a reminder test. Plain SMS gets 9% paid within 7 days. WhatsApp in Hindi with the shopkeeper's voice and a UPI link gets 21%. Sent within two days of salary day, 26%."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That supports the safe option's core: channel, voice and timing more than double recovery at almost no cost. It also tells me the reminder ladder should run on a schedule tied to salary day, defaulting to the 1st-7th, with an option for weekly-wage customers on Saturdays."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What would you recommend?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Ship the safe option this quarter and Mera Khata next quarter. Hold the NBFC line until we have six months of verified repayment data. Why: it attacks 61% of stated churn and lifts recovery about 2-3x in the test, which is exactly our goal - active merchants who get their money back. Mera Khata then turns each merchant's 140 customers into viewers of our product, and gives us confirmed entries that a future lender can trust."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How will you measure success?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "North star: rupees of udhaar recovered through the app per active merchant per month. Supporting metrics: median days to recover, share of dues older than 90 days (target: 12% down to 8%), entry time (target under 3 seconds), voice-entry accuracy above 90%, merchant 30-day retention (22% up to 30% MAU), and reminders sent per merchant. Guardrails: customer churn from the store (do repeat visits per customer fall after reminders?), opt-outs and complaints per 1,000 reminders, disputed entries, and WhatsApp quality rating so our number isn't blocked."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What are the risks?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Three. (1) Reminders feel like harassment and the shopkeeper loses customers. Mitigation: the merchant approves the tone, frequency is capped at once a week, there's never any public shaming, and customers can opt out. (2) Voice recognition fails on dialects and noise. Mitigation: fall back to a number pad, confirm with a read-back in a large font, and train on Awadhi and Bhojpuri speech. (3) Privacy under the DPDP Rules: customers' debts are personal data. Mitigation: a consent notice in the first reminder, no resale of data, and lending use only with explicit opt-in. Rollout: pilot in two districts, for example Sitapur and Gorakhpur, with an A/B test across 20,000 merchants for 6 weeks, then scale by language."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Twist: Paytm launches a free ledger inside its Soundbox app that every kirana already has. What now?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Paytm owns payments, but a ledger lives or dies on entry speed and recovery. I would integrate rather than fight: auto-close a customer's dues when a matching UPI credit lands, from any app's QR, and make our recovery rate visibly better. If Paytm copies the features, our data advantage from Mera Khata confirmations and our NBFC route to credit are harder to copy."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Summarise for me."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "We focus on the owner-operated Bharat kirana, whose two biggest pains are slow entry and awkward collection. We ship voice/photo entry and a respectful, salary-day-timed WhatsApp reminder with a UPI link, then a customer-side Mera Khata. We measure rupees recovered per merchant, with guardrails on customer churn and complaints. Lending comes after the data is earned, through an NBFC partner, inside the RBI's digital lending rules. In one line: help Ramesh-ji get his money back without losing his neighbours."
+    }
+  ],
+  "answer_and_recommendation": "Ranked options: (1) RECOMMENDED - 'Bolo aur Likho' voice/photo entry under 3 seconds plus a respectful reminder ladder in the regional language, on WhatsApp with SMS/IVR fallback, a UPI pay link, timed to salary day: low-medium effort, addresses 61% of churn reasons, 2-3x recovery in the illustrative test. (2) Phase 2 - 'Mera Khata' customer view with entry confirmation and disputes, plus UPI Autopay for small dues: builds two-sided trust and verified data. (3) Phase 3 - NBFC-funded 'Udhaar Line' for proven customers, under the RBI Digital Lending Directions 2025 with the app as LSP: the monetisation engine, gated on 6 months of verified repayment data. Risks and mitigation: reminders felt as harassment (merchant-approved tone, weekly cap, opt-out, no public shaming); dialect ASR errors (keypad fallback, read-back, dialect training data); DPDP privacy (notice and consent, no data resale, opt-in for any credit use); regulatory overreach (never underwrite in-house; the NBFC holds the credit). Rollout: 2-district Hindi-belt pilot, A/B across about 20k merchants for 6 weeks, then scale by language. Closing line: 'We win when Ramesh-ji gets his money back faster without losing a single customer - collection first, data second, credit third.'",
+  "counter_metrics_guardrails": "NSM: rupees of udhaar recovered in the app per active merchant per month. Guardrails: (1) customer retention at the store - repeat visits per credit customer in the 30 days after a reminder must not fall; (2) reminder opt-out and complaint rate per 1,000 reminders, plus WhatsApp Business quality rating (avoid the number being blocked); (3) disputed-entry rate - a rising rate means entry errors or misuse; (4) voice-entry error rate and manual edit rate; (5) merchant time-in-app per entry, which should fall, not rise; (6) for any later lending: 30+ and 90+ day delinquency, complaints against the NBFC, and the share of KFS-acknowledged loans (RBI compliance); (7) DPDP: consent-withdrawal requests and data-access complaints.",
+  "follow_up_twists": "1) 'Leadership wants revenue in 6 months.' -> Charge a small premium for branded reminders and bulk statements, and launch the NBFC merchant working-capital loan using ledger cash-flow data, but keep customer-side credit out until there is enough repayment history. 2) 'Merchants say customers get angry at reminders.' -> Make the default a 'statement' message rather than a demand, let the shopkeeper record it in their own voice, cap frequency, and measure store repeat visits as the guardrail. 3) 'Quick commerce is taking the kirana's best customers - does udhaar even matter?' -> Yes. Credit and trust are the kirana's moat against quick commerce. A product that makes udhaar safe and easy to collect strengthens the one thing Blinkit and Zepto cannot offer.",
+  "common_pitfalls": "1) Jumping to 'give customers a BNPL credit line from our app' - ignores the lack of a licence, the RBI Digital Lending Directions (LSP, KFS, DLG limits) and the default risk. 2) Designing a feature-rich bookkeeping app (GST, inventory) for a merchant whose problem is a 3-second entry at a crowded counter; complexity is why people go back to paper. 3) Aggressive recovery features (public defaulter lists, group shaming, repeated automated calls) that break the neighbour relationship and invite complaints. 4) Treating the customer as only a phone number: the other side of the ledger is the lever for trust, disputes and payment.",
+  "skills_tested": "empathy, structuring, prioritisation, business sense, execution, communication",
+  "linked_teardown": "blinkit_product_teardown - the teardown documents quick-commerce pressure on kiranas in smaller cities (e.g. Outlook Business 'Blinkit Goes Big in Smaller Cities: Can It Sustain in Kirana Strongholds?'); used to frame udhaar as the kirana's defensible moat [uncertain - indirect link]",
+  "uncertain": [
+    "round_and_level",
+    "regulatory_context",
+    "public_data_anchors",
+    "linked_teardown"
+  ]
+}

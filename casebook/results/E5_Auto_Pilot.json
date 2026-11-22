@@ -1,0 +1,190 @@
+{
+  "pun_title": "Auto Pilot",
+  "case_type": "Metrics",
+  "asked_at": "By the Authors (classic prompt, PhonePe style)",
+  "subject_company": "PhonePe (UPI app; UPI Autopay recurring mandates for subscriptions, SIPs, insurance, loan EMIs, utility and credit-card bills, FASTag).",
+  "round_and_level": "PM round (metrics / product sense), APM and PM levels; common at UPI apps and payment companies (PhonePe, Paytm, Google Pay, Razorpay, Cashfree). [uncertain]",
+  "difficulty": "Medium-Hard - a two-sided feature (payer and merchant) whose value shows up as payments that do not happen visibly; the candidate must define success through successful debits rather than mandate counts, and handle RBI/NPCI rules (AFA limits, pre-debit notice, off-peak execution, retries) and user-trust guardrails.",
+  "market_and_industry": "India; fintech / UPI payments; PhonePe has about 46% of UPI volume; Autopay users range from metro OTT and SIP subscribers to Bharat users with loan EMIs and insurance premiums; mostly Android, multilingual, and many low-balance accounts where failed debits are common.",
+  "time_box_minutes": "15-20",
+  "exact_prompt": "You're the PM for UPI Autopay on PhonePe. How would you define success for it?",
+  "source_and_verification": "Level: classic (a standard 'define success metrics for feature X' prompt applied to a well-known Indian payments feature; no dated candidate report of this exact wording at PhonePe was found). Close analogues: PracHub success-metric prompts (e.g. https://prachub.com/interview-questions/success-metrics-and-a-north-star-for-instagrams-shopping-feature) and Indian fintech PM guides on success metrics. Context sources: Inc42 on NPCI Autopay mandate portability (31 Aug 2026, https://inc42.com/buzz/npci-to-let-users-port-upi-autopay-mandates-across-apps-report/); Business Standard on NPCI's 1 Aug 2025 Autopay execution rules (https://www.business-standard.com/finance/personal-finance/upi-apps-to-limit-balance-checks-autopay-from-aug-1-how-changes-help-you-125072900572_1.html). Year: 2026 (prompt framed by the authors).",
+  "context_as_of": "As of Nov 2026. 1) UPI scale: about 23.66 bn transactions worth about Rs 29.88 lakh cr in July 2026 (NPCI data as reported by Mint). 2) Share: PhonePe about 46% and Google Pay about 33% of UPI volume in May 2026 (Outlook Business, https://www.outlookbusiness.com/economy-and-policy/phonepe-google-pay-combined-upi-market-share-drops-below-80-for-first-time); NPCI's 30% market-share cap deadline is 31 Dec 2026 (ThePrint, https://theprint.in/economy/npci-extends-market-cap-deadline-for-upi-apps-for-another-two-years-till-2026/2426963/). 3) Autopay growth: the top 10 banks processed about 1.8 bn UPI e-mandate transactions in July 2026, over 3x the 585 mn of July 2025 (Inc42, 31 Aug 2026). 4) Mandate portability: NPCI is reportedly letting users port Autopay mandates between UPI apps, and merchants port them between gateways, without re-registration, to be announced at Global Fintech Fest (Sep 2026) (Inc42 citing Mint); this turns PhonePe's mandate base from a moat into something users can move. Razorpay documentation describes interoperability under NPCI circular OC-163 (https://razorpay.com/docs/payments/recurring-payments/interoperability). 5) Failure problem: more than 20 mn Autopay mandates a month were reported revoked due to low customer balances (Business Standard, 2025, https://www.business-standard.com/amp/finance/news/upi-autopay-revocations-hit-20-mn-monthly-over-low-customer-balances-125090700500_1.html). 6) PhonePe IPO: SEBI cleared the confidential DRHP on 20 Jan 2026; the issue is a pure offer for sale; the DRHP flags regulatory risk to 20-25% of revenues (Outlook Business; Entrackr, https://entrackr.com/news/phonepe-files-updated-drhp-walmart-to-sell-9-stake-via-ofs-11020697). Stale-risk: whether portability went live after GFF 2026, and the exact mandate base, were not confirmed; reported mandate counts conflict (100 mn vs 1.27 bn). [uncertain]",
+  "regulatory_context": "1) RBI e-mandate framework for recurring payments: registration needs Additional Factor of Authentication (UPI PIN); subsequent debits up to Rs 15,000 per transaction run without AFA; RBI raised the no-AFA limit to Rs 1 lakh for mutual-fund subscriptions, insurance premiums and credit-card bill payments (Dec 2023). 2) Pre-debit notification at least 24 hours before each debit, with an option to opt out or cancel; exemption for auto-replenishment of NETC FASTag and RuPay NCMC (2024). 3) NPCI API discipline from 1 Aug 2025: Autopay executions only in non-peak hours (peak roughly 10 am-1 pm and 5-9:30 pm), one attempt plus up to three retries per mandate within TPS limits; set-up is allowed any time. 4) Users must be able to view, pause, modify and revoke mandates in the app; NPCI's UPI Help and a planned unified mandate view across apps raise the bar for transparency. 5) Mandate portability (NPCI, 2026): users can move mandates to another app. 6) NPCI 30% volume cap for third-party apps, deadline 31 Dec 2026 - Autopay volume counts toward share. 7) Dispute handling: unauthorised-debit complaints go through UDIR/ODR timelines; RBI TAT harmonisation for failed transactions. 8) DPDP Act 2023 for using mandate data for cross-sell. [uncertain]",
+  "public_data_anchors": "1) UPI: about 23.66 bn transactions and Rs 29.88 lakh cr in July 2026 (NPCI via Mint, Aug 2026). 2) PhonePe about 46.3% and Google Pay about 32.8% of UPI volume, May 2026 (Outlook Business, 2026). 3) About 1.8 bn UPI e-mandate transactions processed by the top 10 banks in July 2026 vs 585 mn in July 2025 (Inc42, 31 Aug 2026). 4) More than 20 mn Autopay mandates revoked per month due to low balance (Business Standard, 2025). 5) No-AFA limits: Rs 15,000 general; Rs 1 lakh for MF, insurance and credit-card bills (RBI, Dec 2023). 6) Reported total mandates: 'crossed 1.27 bn in Nov 2025' (Razorpay blog) vs 'about 100 mn' (Pulse summary) - conflicting; not usable without NPCI confirmation. [uncertain] 7) Historical: UPI Autopay e-mandates grew 32% to about 6 mn in Dec 2021 (Business Standard, Jan 2022) - shows how fast the base grew. Not public: PhonePe's own active-mandate count, debit success rate and cancellation rate - all such numbers in the walkthrough are illustrative.",
+  "framework_applied": "Success Metrics framework (frameworks.md section 5: Company, Users and value, North Star plus levers, Guardrails). 1) Company and product: PhonePe is India's largest UPI app, preparing for an IPO and facing NPCI's market-share cap; UPI P2M is zero-MDR, so Autopay matters because it creates a recurring, sticky relationship that feeds monetisable lines (bill pay, insurance, SIPs/wealth, lending EMIs, merchant services) and defends share as mandates become portable. 2) Users and value: payers (never miss a payment, no surprises, full control), merchants and billers (collect recurring revenue reliably, low churn), banks/NPCI (stable, off-peak load); walk the payer through activation (create and approve a mandate), engagement (debits executed with pre-debit notices), conversion (successful debit), retention (mandate stays active, more mandates added), and the merchant through integrate, register customers, collect, retain. 3) North Star: successful on-schedule Autopay debits per month, broken into active mandates x debits due per mandate x execution success rate; supporting metrics: mandate creation and approval rate, first-debit success, failure split (insufficient balance, bank decline, technical), retry recovery, mandate survival, mandates per user, merchant coverage. 4) Guardrails: unrecognised-debit complaints and disputes, user-initiated revocations after a debit, failed debits hitting low-balance users, pre-debit notification delivery, compliance with off-peak execution and retry limits, and net mandate port-outs to rival apps.",
+  "clarifying_questions": [
+    {
+      "q": "Is Autopay new on PhonePe, or are we defining success for a mature feature?",
+      "a": "It's live and growing. Leadership wants to know whether it's healthy and what to optimise next."
+    },
+    {
+      "q": "What's the goal for PhonePe: volume share, monetisation, or engagement/stickiness?",
+      "a": "Stickiness and monetisation - Autopay should anchor bill pay, insurance, SIPs and lending on PhonePe."
+    },
+    {
+      "q": "Which side are we measuring: payers, merchants, or both?",
+      "a": "Both, but start with payers."
+    },
+    {
+      "q": "Which use cases dominate: OTT subscriptions, SIPs, insurance, loan EMIs, bills?",
+      "a": "By count, subscriptions and utility/credit-card bills; by value, SIPs, insurance and EMIs."
+    },
+    {
+      "q": "Are mandates created inside PhonePe (e.g. for PhonePe bill pay or insurance) as well as on third-party merchants via the PhonePe app?",
+      "a": "Both. Most are created when a merchant checkout sends the user to PhonePe to approve."
+    },
+    {
+      "q": "Any recent changes I should factor in?",
+      "a": "NPCI's off-peak execution and retry rules, and portability - users can now move mandates to another app."
+    },
+    {
+      "q": "Is there a time frame or a specific decision this feeds?",
+      "a": "Quarterly OKRs for the Autopay team."
+    }
+  ],
+  "interviewer_data_reveals": "Exhibit 1 (illustrative) - Funnel last quarter: mandate requests sent to PhonePe 100 (index); user opened and saw request 88; approved with UPI PIN 71 (approval rate 71%); first debit successful 62 (87% of approved). Exhibit 2 (illustrative) - Debits due last month: 100 (index); successful on first attempt 81%; recovered by retries 6%; final failure 13%. Failure split: insufficient balance 58%, bank decline/technical 27%, mandate paused or revoked before debit 15%. Exhibit 3 (illustrative) - Mandate survival: 6-month survival 64%; of cancellations, 41% happen within 48 hours after a debit ('didn't recognise / didn't want it'), 33% are linked to subscription end, 26% after repeated failures (auto-cancel). Exhibit 4 (illustrative) - By segment: Tier-3+ users have first-attempt debit success of 71% vs 86% in metros; balance-insufficient failures are 2x higher on accounts with average balance under Rs 2,000. Exhibit 5 (illustrative) - Since portability launched: 0.8% of active mandates ported out per month, 0.3% ported in; complaints about 'unrecognised Autopay debit' 1.9 per 10,000 debits. Real anchors: about 1.8 bn e-mandate transactions at the top 10 banks in July 2026 (3x YoY); 20 mn+ revocations a month for low balance (2025).",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "You're the PM for UPI Autopay on PhonePe. Define success."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "A few questions first. Is this a new feature, or a mature one where we're defining health and what to improve?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Mature and growing. Leadership wants to know whether it's healthy and what to optimise."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "And why does PhonePe care about Autopay - volume share, money, or stickiness? UPI merchant payments are zero-MDR, so it can't just be transaction count."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Stickiness and monetisation. Autopay should anchor bill pay, insurance, SIPs and lending on PhonePe."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Payers first, then merchants? And any recent changes - I'm aware NPCI moved Autopay execution to off-peak hours with a retry limit in 2025, and that mandate portability was announced in 2026."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Yes to both. Payers first. Portability is live - users can move mandates to another app."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Context then. PhonePe has about 46% of UPI volume, is preparing to list, and faces NPCI's 30% cap deadline at the end of 2026. Autopay is growing fast: the top 10 banks processed about 1.8 billion e-mandate transactions in July 2026, three times a year earlier. For PhonePe it's valuable because a mandate is a recurring relationship: the user trusts PhonePe with money leaving their account every month, and that underpins bill pay, insurance, SIPs and loan EMIs, which do make money. With portability, that relationship can now walk to another app, so reliability and trust are the moat."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Three sides. Payers want to never miss a payment, never be surprised, and stay in control. Merchants and billers want to collect reliably with low churn. Banks and NPCI want stable, off-peak load. Payer journey: activation is approving the mandate with a UPI PIN; engagement is getting a pre-debit notice and the debit going through; retention is the mandate surviving and the user adding more mandates. Merchant journey: integrate, get customers to approve, collect, retain. Does that match?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Yes. What's your North Star?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Successful on-schedule Autopay debits per month. Not mandates created: a mandate that's created but fails or gets cancelled delivers no value to anyone. A successful debit means the user's SIP, premium or bill got paid without effort, and the merchant got paid. Formula: active mandates x debits due per mandate x execution success rate. And active mandates = new mandates approved + ported in - cancelled - ported out."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Supporting metrics by lever:\n- Creation: request-to-view rate, approval rate (PIN entered), time to approve.\n- Execution: first-attempt success rate, retry recovery rate, failure split (insufficient balance, bank/technical, paused).\n- Survival: 30/90/180-day mandate survival, cancellations within 48 hours of a debit.\n- Depth: mandates per active user, share of users with 2+ mandates, high-value categories (SIP, insurance, EMI).\n- Merchant side: merchants live, collection success rate per merchant, merchant churn.\n- Ecosystem: share of PhonePe's own bill-pay, insurance and SIP products paid by Autopay."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Here's the funnel. Of 100 mandate requests, 88 are viewed, 71 approved, 62 have a successful first debit. Monthly debits: 81% succeed first time, retries recover 6%, 13% fail. What do you read?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Two leaks. Approval: 17 of 88 people who see the request don't approve. I'd look at whether that's confusion - the screen asks a PIN for something that looks like a payment - or the amount shown being the maximum, which scares people. Execution: 13% final failure is high. What's the failure split?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Insufficient balance 58%, bank decline or technical 27%, paused or revoked before debit 15%."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Insufficient balance is the big one, and it's partly a user problem PhonePe can help with: a smarter pre-debit notice that says 'Rs 2,499 SIP due tomorrow, your balance may be low' with a top-up or 'pay from another account' option. NPCI allows one attempt plus three retries, off-peak only, so retry timing matters - retrying after typical salary-credit dates or in the early morning off-peak window may recover more. Bank declines at 27% I'd split by issuer bank and push the worst banks through NPCI."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Tier-3 users have 71% first-attempt success against 86% in metros, and failures are twice as high on accounts with under Rs 2,000 average balance."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's a guardrail as much as a lever. Failed debits on low-balance accounts can trigger bank charges and loan-EMI bounce penalties - real harm for Bharat users. So I wouldn't just push more retries. I'd add balance-aware reminders and let users pick a debit date near their income date."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Now survival. 6-month survival is 64%, and 41% of cancellations happen within 48 hours after a debit."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That pattern means 'I didn't recognise this' or 'I forgot I signed up' - a trust problem. I'd measure unrecognised-debit complaints and cancellations within 48 hours of a debit as guardrails, and fix with clearer pre-debit notices naming the merchant and product, and a single 'my mandates' page showing everything active. That's also what NPCI is pushing with a unified mandate view. Cancellations because a subscription ended are healthy, so I'd separate them out."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What about portability? 0.8% of active mandates port out monthly and 0.3% port in."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Net port-out is a new competitive metric. 0.5% a month net is about 6% of the base a year walking to rivals, probably to apps paying cashback for switching. I'd track net port flow by category and segment, and the reasons. The defence is reliability and control, not paying for mandates."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What guardrails would you put on the North Star?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Five. Unrecognised-debit complaints and disputes per 10,000 debits. Cancellations within 48 hours of a debit. Failed debits on low-balance accounts, because pushing success via aggressive retries harms users. Compliance: 100% pre-debit notices delivered at least 24 hours before, and every execution and retry within NPCI's off-peak and retry rules - a breach risks NPCI action. And net port-outs. Also cost per successful debit, since PhonePe bears notification and processing cost on a zero-MDR rail."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Wrap up."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "North Star: successful on-schedule Autopay debits per month, driven by active mandates x debits due x success rate. Top three supporting metrics: mandate approval rate, first-attempt-plus-retry debit success with the failure split, and 90-day mandate survival excluding natural subscription ends. Guardrails: unrecognised-debit complaints, post-debit cancellations, low-balance failure harm, NPCI compliance, and net port-outs. From the data, my first priorities are balance-aware pre-debit notices and better retry timing for the 13% failure, and clearer approval and notification screens for the trust leak. Closing line: 'Autopay succeeds when payments happen without the user thinking about them - and fail without the user being hurt or surprised.'"
+    }
+  ],
+  "answer_and_recommendation": "Ranked top 3 metrics: 1) North Star - successful on-schedule Autopay debits per month (active mandates x debits due per mandate x execution success rate; active mandates = approved + ported in - cancelled - ported out). 2) Debit success rate (first attempt plus retry recovery) with the failure split - insufficient balance, bank/technical, paused/revoked - by segment (illustrative: 81% first-attempt, 6% recovered, 13% final failure; Tier-3 71% vs metro 86%). 3) Mandate approval rate and 90-day mandate survival, excluding natural subscription ends (illustrative: 71 of 88 viewed requests approved; 64% 6-month survival). Supporting: mandates per active user, share of PhonePe's own insurance/SIP/bill-pay paid by Autopay, merchant collection success and merchant churn, net port flow. Recommendation: define success as successful debits, not mandate count; prioritise (a) balance-aware pre-debit notices with top-up or alternate-account options and retry timing aligned to income dates within NPCI's one-attempt-plus-three-retries, off-peak rule, (b) clearer approval screens and merchant-named pre-debit notices plus a single 'my mandates' control page to cut post-debit cancellations and complaints, (c) bank-level failure escalation. Risks and mitigations: pushing success with aggressive retries harms low-balance users (bounce charges) - cap retries per user and use balance signals with consent; portability lets rivals buy mandates with cashback - compete on reliability and control and track net port-outs; NPCI non-compliance on execution windows - automated scheduler checks; the 30% market-share cap may make volume growth itself a regulatory question - focus on value per user. Closing line: 'Autopay succeeds when payments happen without the user thinking about them - and fail without the user being hurt or surprised.'",
+  "counter_metrics_guardrails": "1) Unrecognised or unauthorised-debit complaints and disputes per 10,000 debits (UDIR/ODR). 2) Mandate cancellations within 48 hours of a debit (surprise or regret signal). 3) Failed-debit rate on low-balance accounts and repeated failures per user (bank bounce charges, EMI penalties) - so 'success rate' is not pushed by aggressive retries. 4) Compliance: pre-debit notification delivered at least 24 hours ahead for 100% of applicable debits; executions and retries only in NPCI off-peak windows and within the retry cap; AFA limits respected (Rs 15,000, or Rs 1 lakh for MF, insurance and credit-card bills). 5) Net mandate port-outs to rival apps after NPCI portability. 6) Cost per successful debit (notifications, processing, support) on a zero-MDR rail. 7) Merchant-side guardrail: collection success rate and merchant churn, so payer-friendly changes (easy pause) do not quietly break merchants' revenue. 8) Share of total UPI volume relative to NPCI's 30% cap, as a strategic constraint rather than a target.",
+  "follow_up_twists": [
+    {
+      "twist": "Debit success is up 4 points, but complaints about unrecognised debits doubled. What happened and what do you do?",
+      "response": "Likely more retries or debits on mandates users forgot about; I'd check which merchants and retry paths drive complaints, pause the change for those, and make pre-debit notices name the merchant and product clearly - trust beats a few points of success rate."
+    },
+    {
+      "twist": "A rival app offers Rs 100 cashback to port your Autopay mandates. Do you match?",
+      "response": "Not across the board - I'd measure who ports (high-value SIP and insurance mandates matter most), defend those with reliability and control features and targeted retention offers, and track net port flow by category."
+    },
+    {
+      "twist": "How would you measure success for merchants (e.g. an OTT app or an AMC) using PhonePe Autopay?",
+      "response": "Mandate approval rate at their checkout, collection success rate on due dates, involuntary churn (failures leading to cancellation) and time to resolve disputes - compared with card and NACH mandates."
+    }
+  ],
+  "common_pitfalls": [
+    "Choosing 'mandates created' as the North Star - a created mandate that fails or is cancelled delivers no value; successful debits are where user and business value meet.",
+    "Treating every failure as PhonePe's fault: most failures are insufficient balance, which needs reminders and scheduling, not more retries (which NPCI caps and which hurt low-balance users).",
+    "Ignoring the rules - AFA limits, 24-hour pre-debit notice, off-peak execution and the retry cap shape both the metrics and the levers.",
+    "Missing trust and portability: post-debit cancellations and unrecognised-debit complaints are the leading signs of churn, and mandates can now move to rival apps."
+  ],
+  "skills_tested": [
+    "structuring",
+    "business sense",
+    "empathy",
+    "quant",
+    "prioritisation",
+    "communication"
+  ],
+  "linked_teardown": "None",
+  "uncertain": [
+    "round_and_level",
+    "context_as_of",
+    "regulatory_context",
+    "public_data_anchors"
+  ]
+}

@@ -1,0 +1,360 @@
+{
+  "item_name": "Product Design / Improvement (incl. favourite-product critique)",
+  "what_interviewers_test": "Whether the candidate can decide what to build and why: frame a goal tied to the company's mission/business, pick a specific user segment, surface real (not generic) pain points, generate distinct solutions, choose one with explicit criteria and trade-offs, and say how success would be measured. Meta (Product Sense) leans on segmentation rigour, mission alignment and a follow-up conflicting-metric/trade-off probe; Google (Product Design / Product Sense, plus 'favourite product') adds bold/visionary thinking, user empathy for non-obvious needs and, in the favourite-product variant, constructive critique versus competitors. Amazon tests it through customer obsession / working backwards rather than a dedicated round; Uber uses a jam session / presentation; Indian consumer-tech companies (Swiggy, Flipkart, Zomato, Meesho) test empathy for Indian (often Bharat/tier-2/3) users and tie design to business outcomes and metrics. [uncertain: India specifics are from prep aggregators and a few candidate reports]",
+  "format_variants": "Live, candidate-led is the default (Meta Product Sense 45 min with ~35 min core case; Google ~45 min; corpwaters reports 25-30 min of case in a 30-min slot). Interviewer-led variants: interviewer redirects to a segment or asks follow-ups (Meta almost always shifts into a conflicting-metric scenario at the end). Favourite-product variant: candidate picks a product, explains why it works for a specific user, critiques it, and proposes improvements; often 15-20 min inside a longer round. AI-era variant (Meta 'Product Sense with AI', piloted from late 2025; Google/AI-native firms): ~30 min case then ~30 min prototyping with an AI tool; prototype judged on linkage to earlier reasoning, not polish. Take-home (more common at Indian startups and for senior roles [uncertain]): written PRD/deck; expectations shift toward depth of user research, rollout and metrics because time is not constrained. For a transcript-only grader, treat the prototyping portion as out of scope and score only spoken reasoning.",
+  "dimensions": [
+    {
+      "name": "Goal and product motivation",
+      "definition": "States why the product/improvement matters: the company mission or business objective, the goal of this design (e.g. engagement, acquisition, retention, monetisation), and any constraints/assumptions.",
+      "signal_sought": "Direction is grounded in this company's mission, strategy and advantages, not generic; goal chosen deliberately and used later to prioritise.",
+      "transcript_evidence": "Quote the sentence where the candidate states the goal/mission and any line where they later reuse that goal to choose a segment, problem or solution (e.g. 'Since our goal is repeat orders in tier-2 cities, I'll prioritise...')."
+    },
+    {
+      "name": "User segmentation and choice",
+      "definition": "Maps the ecosystem/user types, segments them along meaningful (behavioural/motivational/need-based, not just demographic) lines, and picks one target segment with explicit criteria.",
+      "signal_sought": "Non-overlapping segments specific to this product; prioritisation reasoned on more than one criterion (size, pain severity, underserved, strategic fit); optional persona.",
+      "transcript_evidence": "Quote the list of segments, the criteria used, and the sentence choosing the target segment with its justification."
+    },
+    {
+      "name": "Pain point identification and prioritisation",
+      "definition": "Walks through the chosen user's journey or context, lists several specific problems (not needs or solutions), and picks the one to solve with stated criteria.",
+      "signal_sought": "Pain points feel discovered from the user's actual day, span different root causes, are separated from solutions, and are prioritised on frequency/severity/goal fit.",
+      "transcript_evidence": "Quote the journey steps or scenario, the enumerated pain points, and the sentence selecting the priority pain point and why."
+    },
+    {
+      "name": "Solution breadth and creativity",
+      "definition": "Generates multiple genuinely distinct solutions tied to the chosen pain point, ranging from incremental to bold, and describes at least one concretely enough to picture (v1/MVP experience).",
+      "signal_sought": "Ideas could fail independently; at least one non-obvious or visionary idea; solutions leverage company-specific assets; concrete v1 description.",
+      "transcript_evidence": "Quote each named solution and the concrete description of the chosen one (what the user sees/does)."
+    },
+    {
+      "name": "Prioritisation and trade-offs",
+      "definition": "Chooses among solutions with explicit criteria (impact on goal, effort, risk, confidence) and articulates downsides, risks and what is deliberately deferred.",
+      "signal_sought": "Criteria named before the choice; trade-offs acknowledged (cannibalisation, ecosystem side effects on merchants/drivers, cost, complexity); mitigation or 'what would need to be true' for deferred ideas.",
+      "transcript_evidence": "Quote the comparison (e.g. impact/effort reasoning) and any sentence naming a risk, trade-off or mitigation."
+    },
+    {
+      "name": "Success metrics",
+      "definition": "Defines how the chosen solution's success would be measured: a primary metric linked to the stated goal, plus guardrail/counter metrics.",
+      "signal_sought": "Primary metric operationally defined and tied to the goal; 1-3 guardrails that capture plausible harm; not a laundry list.",
+      "transcript_evidence": "Quote the named primary metric, its definition, and guardrail metrics with their rationale."
+    },
+    {
+      "name": "Structure, communication and collaboration",
+      "definition": "Lays out a game plan, signposts transitions, states assumptions, checks in at key decisions, and handles interviewer redirects/pushback by integrating them.",
+      "signal_sought": "Interviewer always knows where the candidate is and why; candidate drives the case without needing hand-holding; adapts when given new information.",
+      "transcript_evidence": "Quote the opening plan, transition statements, check-in questions, and the response to any interviewer pushback or redirect."
+    }
+  ],
+  "weights": {
+    "recommended": [
+      {
+        "dimension": "Goal and product motivation",
+        "weight": 10,
+        "provenance": "interviewer-account + inferred",
+        "source": "https://www.lennysnewsletter.com/p/the-definitive-guide-to-mastering",
+        "reasoning": "Erez rubric makes it a must-pass dimension but allots only 3-5 of ~35 min; Aced 'business acumen' is 1 of 5 equal dimensions (20%). Recommended 10% because in a transcript most of the business framing is also credited inside segment/solution choices."
+      },
+      {
+        "dimension": "User segmentation and choice",
+        "weight": 17,
+        "provenance": "interviewer-account + prep-platform",
+        "source": "https://www.lennysnewsletter.com/p/the-definitive-guide-to-mastering ; https://www.aced.io/courses/google-pm-interview/product-sense/product-sense-rubric ; https://www.aced.io/blog/meta-product-sense-interview",
+        "reasoning": "Erez gives 8-10 min (~27% of time) to segmentation; Aced folds segmentation and pain points into 'user-centricity' (20%); Meta candidate accounts single out segmentation clarity. Split user-centricity across two dimensions."
+      },
+      {
+        "dimension": "Pain point identification and prioritisation",
+        "weight": 18,
+        "provenance": "interviewer-account + prep-platform",
+        "source": "https://www.lennysnewsletter.com/p/the-definitive-guide-to-mastering ; https://www.aced.io/courses/google-pm-interview/product-sense/product-sense-rubric ; https://corpwaters.substack.com/p/the-ultimate-guide-to-product-sense",
+        "reasoning": "Erez 8-10 min (~27%); corpwaters expects 5-7 problems then a reasoned selection; Aced user-centricity. Slightly above segmentation because generic pain points are the most cited failure."
+      },
+      {
+        "dimension": "Solution breadth and creativity",
+        "weight": 20,
+        "provenance": "interviewer-account + prep-platform",
+        "source": "https://www.lennysnewsletter.com/p/the-definitive-guide-to-mastering ; https://www.aced.io/courses/google-pm-interview/product-sense/product-sense-rubric ; https://docs.google.com/document/d/e/2PACX-1vTd_Za2HHhidLf82CuD038-d5Z9doBaMhilYgUK7O8xC3gNw3TWzyuKA33d82y2WTymHcYI6YDJf22C/pub",
+        "reasoning": "Erez solution development 8-10 min; Aced 'product taste' 20%; Google accounts stress bold ideas. Highest single weight, all sources agree it is core."
+      },
+      {
+        "dimension": "Prioritisation and trade-offs",
+        "weight": 12,
+        "provenance": "prep-platform + inferred",
+        "source": "https://igotanoffer.com/en/advice/pm-interview-grading-rubrics ; https://www.aced.io/courses/google-pm-interview/product-sense/product-sense-rubric",
+        "reasoning": "IGotAnOffer (ex-Meta coach) rubric has an explicit trade-off criterion; Aced scores deprioritisation inside product taste; Erez embeds it in 'prioritized choice'. Separated here so an 8B grader can find the evidence."
+      },
+      {
+        "dimension": "Success metrics",
+        "weight": 10,
+        "provenance": "prep-platform + inferred",
+        "source": "https://www.aced.io/blog/meta-product-sense-interview ; https://corpwaters.substack.com/p/the-ultimate-guide-to-product-sense",
+        "reasoning": "Disagreement: Erez's product sense rubric has no metrics dimension (metrics belong to Meta's Analytical round), while Meta candidate accounts report feedback on metrics depth and corpwaters lists metrics/guardrails as a strong-answer marker. 10% is a compromise; raise to 15% for Indian companies and Google where metrics are reported inside design rounds [uncertain]."
+      },
+      {
+        "dimension": "Structure, communication and collaboration",
+        "weight": 13,
+        "provenance": "interviewer-account + prep-platform",
+        "source": "https://www.lennysnewsletter.com/p/the-definitive-guide-to-mastering ; https://www.aced.io/courses/google-pm-interview/product-sense/product-sense-rubric ; https://corpwaters.substack.com/p/the-ultimate-guide-to-product-sense",
+        "reasoning": "Erez 'clear communication' and Aced 'communication & collaboration' are both full dimensions (20% in Aced). Reduced to 13% because the grader should not reward structure alone (see recitation_vs_insight)."
+      }
+    ],
+    "total": 100,
+    "source_disagreements": [
+      "No company publishes numeric weights. Erez (Lenny's, Apr 2025) and Aced (2026) both imply equal-weighted dimensions with a must-pass bar on each ('excellence in one area can't compensate for weakness in another'); IGotAnOffer (Oct 2026) says an exceptional area may sometimes offset a borderline one but minimum bar still applies.",
+      "Metrics: Erez rubric excludes them; Meta-reported feedback and corpwaters include them.",
+      "Aced adds 'prototyping ability' (AI-era) as a full dimension; excluded here because the grader sees only the transcript. If a prototype narration exists, fold it into Solution breadth.",
+      "Corpwaters warns against over-fixating on mission; Aced rewards strong mission/business linkage. Resolution: credit goal framing only when it is used to drive later choices."
+    ],
+    "alternative_equal_weight_view": "If following Erez/Aced literally: 5 dimensions x 20% (communication, motivation/business, segmentation+pain points as user-centricity, solution/taste, plus prototyping or metrics). [uncertain]"
+  },
+  "must_pass_gates": [
+    {
+      "gate": "Jumps to solutions before choosing a target user segment and a specific pain point",
+      "cap": "max Lean No Hire (overall <=2/4)",
+      "source": "https://www.lennysnewsletter.com/p/the-definitive-guide-to-mastering ; https://docs.google.com/document/d/e/2PACX-1vTd_Za2HHhidLf82CuD038-d5Z9doBaMhilYgUK7O8xC3gNw3TWzyuKA33d82y2WTymHcYI6YDJf22C/pub"
+    },
+    {
+      "gate": "No goal or mission stated and no criteria used for any choice (all choices arbitrary)",
+      "cap": "max Lean Hire (overall <=2.5/4)",
+      "source": "https://www.lennysnewsletter.com/p/the-definitive-guide-to-mastering ; https://www.aced.io/courses/google-pm-interview/product-sense/product-sense-rubric"
+    },
+    {
+      "gate": "Only one solution proposed (no breadth) or all ideas are variants of one concept",
+      "cap": "Solution dimension <=2 and overall max Lean Hire",
+      "source": "https://www.aced.io/courses/google-pm-interview/product-sense/product-sense-rubric ; https://corpwaters.substack.com/p/the-ultimate-guide-to-product-sense"
+    },
+    {
+      "gate": "Any must-pass dimension (segmentation, pain points, solution, communication) scored 1",
+      "cap": "overall max No Hire regardless of average",
+      "source": "https://www.lennysnewsletter.com/p/the-definitive-guide-to-mastering (each dimension must reach passing score)"
+    },
+    {
+      "gate": "Never lands: runs out of time without a chosen solution",
+      "cap": "max Lean No Hire",
+      "source": "https://corpwaters.substack.com/p/the-ultimate-guide-to-product-sense ; https://www.aced.io/blog/meta-product-sense-interview [inferred cap level]"
+    },
+    {
+      "gate": "Solution not connected to the chosen pain point/segment (drift)",
+      "cap": "max Lean Hire",
+      "source": "https://www.lennysnewsletter.com/p/the-definitive-guide-to-mastering (listing features without tying to pain points)"
+    },
+    {
+      "gate": "Answers with 'I would first do user research' instead of generating own ideas",
+      "cap": "max Lean No Hire",
+      "source": "https://pmtechlessons.substack.com/p/product-sense-during-interviews [interviewer-account]"
+    }
+  ],
+  "score_anchors": {
+    "Goal and product motivation": {
+      "1": "No goal or mission; starts listing features. ('So I'd add a dark mode and a chatbot.')",
+      "2": "Generic or checkbox mission not used later. ('Swiggy's mission is to deliver food, so the goal is engagement.')",
+      "3": "Company-specific goal with reason, stated assumptions, and reused to make a later choice. ('Instamart growth is the priority, so I'll optimise for second-week repeat orders.')",
+      "4": "Explains why this company, with its assets and timing, should build this now; goal visibly drives every downstream choice. ('PhonePe already owns the UPI moment at the counter, so the leverage is...')"
+    },
+    "User segmentation and choice": {
+      "1": "No segmentation, or 'all users'.",
+      "2": "Demographic-only or overlapping segments; picks largest without criteria. ('Students, working professionals, elderly. I'll pick students.')",
+      "3": "Need/behaviour-based, non-overlapping segments incl. ecosystem sides; picks one using 2+ named criteria.",
+      "4": "Segments that could only belong to this product; choice argued on pain, size, underservedness and strategic fit; considers other ecosystem sides (merchants, riders, sellers). ('First-time Meesho resellers in tier-3 who sell via WhatsApp...')"
+    },
+    "Pain point identification and prioritisation": {
+      "1": "No pain points, or lists solutions disguised as problems.",
+      "2": "1-2 generic pain points that fit any product; no prioritisation.",
+      "3": "3-5 specific pain points from a journey walk-through, distinct root causes, one prioritised with stated criteria (frequency, severity, goal fit).",
+      "4": "Pain points feel discovered (concrete moments in the user's day), separated from solutions, prioritised with a non-obvious but convincing call."
+    },
+    "Solution breadth and creativity": {
+      "1": "No solution or a single obvious feature.",
+      "2": "2-3 ideas that are variations of one concept or generic ('use AI to personalise').",
+      "3": "3+ distinct ideas grounded in the priority pain point, incl. at least one bold idea; chosen one described concretely (v1 flow).",
+      "4": "At least one surprising idea leveraging company-specific assets; spectrum from MVP to moonshot; v1 described as a user experience with edge cases."
+    },
+    "Prioritisation and trade-offs": {
+      "1": "Picks a solution with no reason.",
+      "2": "One-dimensional reason ('easiest to build') or a 2x2 with no actual reasoning.",
+      "3": "Compares options on impact vs effort/risk tied to the goal; names at least one trade-off or risk.",
+      "4": "Multi-dimensional comparison, explicit deprioritisation with 'what would need to be true', second-order/ecosystem effects and mitigations (e.g. impact on delivery partners or seller margins)."
+    },
+    "Success metrics": {
+      "1": "No metrics, or vanity metric only ('downloads').",
+      "2": "Lists many metrics without a primary, or primary not tied to goal.",
+      "3": "One primary metric operationally defined and tied to the goal plus 1-2 guardrails. ('Weekly repeat-order rate among new tier-2 users; guardrail: delivery time and cancellation rate.')",
+      "4": "Primary + guardrails + counter-metric with rationale and a sketch of how to validate (experiment or leading indicator), anticipates metric conflict."
+    },
+    "Structure, communication and collaboration": {
+      "1": "Hard to follow; no plan; needs the interviewer to drive.",
+      "2": "Followable but reads as a monologue or rigid template; asks interviewer what to do next.",
+      "3": "Opening game plan, clear transitions, check-ins at key decisions, integrates redirects.",
+      "4": "Conversational and adaptive throughout; handles pushback/conflicting-metric follow-ups by linking back to earlier reasoning; interviewer feels like a participant."
+    }
+  },
+  "level_expectations": {
+    "APM / entry": "Solid (3) = clear structure, reasonable segmentation with one criterion beyond size, 3+ specific pain points, 3 distinct solutions, one primary metric. Creativity and business linkage can be lighter; hints tolerated once or twice with small deduction. Erez says rubric is broadly consistent across levels, so the shift is in depth, not dimensions.",
+    "PM / mid": "Solid = multi-criteria prioritisation at each step, at least one bold idea, guardrail metrics, trade-offs named unprompted, drives case with minimal steering. Corpwaters: cannot advance beyond mid-level by focusing only on features.",
+    "Senior PM+": "Solid = business-owner lens (strategy, ecosystem, operations, monetisation), company-specific why-now, decisions under ambiguity without asking for validation, second-order effects and rollout risk, crisp handling of conflicting-metric follow-ups. Feature-only answers cap at 2 on Goal and Trade-offs. [level shifts largely interviewer-account/inferred]"
+  },
+  "green_flags": [
+    "States goal and a short game plan in the first 2-3 minutes, with explicit assumptions.",
+    "Segments by need/behaviour/frequency, includes other ecosystem sides (sellers, riders, restaurants), and justifies the chosen segment with 2+ criteria.",
+    "Walks through a concrete user journey and names specific moments of friction; separates problems from solutions.",
+    "Offers a spectrum of solutions (safe MVP, aggressive, moonshot) that could each fail independently.",
+    "Names criteria before choosing and explicitly says what is deprioritised and why.",
+    "Defines one primary metric tied to the goal plus guardrails/counter-metrics.",
+    "Checks in at decision points and folds interviewer pushback into the reasoning.",
+    "India context: designs for low bandwidth, vernacular, low-trust/COD, UPI flows, or tier-2/3 simplicity when the prompt's users warrant it. [uncertain: prep-platform/practitioner accounts]"
+  ],
+  "red_flags": [
+    "Recites Goal-User-Problem-Solution template with generic content that would fit any product.",
+    "Jumps to features before picking a user and problem.",
+    "Demographic-only or overlapping segments; picks the biggest group with no criteria.",
+    "Lists needs or solutions as 'pain points'; only 1-2 pain points.",
+    "Single solution, or ideas that are variants of one concept; 'add AI/personalisation' with no specifics.",
+    "No trade-offs or reasons; prioritises by 'easiest'.",
+    "Laundry list of metrics, or none; vanity metrics only.",
+    "Seeks validation ('Do we have a solution in mind?', 'What do stakeholders want?') or defers to 'I'd do research first'."
+  ],
+  "recitation_vs_insight": "Recitation: every framework step is present but contents are interchangeable across products (segments like 'students/professionals/elderly', pain points like 'hard to find things', solutions like 'AI recommendations'), criteria are named but not actually applied, and the stated goal is never referenced again. Insight: content is product- and company-specific (would need significant rework for a different company - Aced's test), choices are argued with trade-offs, at least one idea or prioritisation call is non-obvious yet defended, and earlier decisions are visibly reused later. Grader test: (1) substitution test - replace the product name with a competitor; if the answer still works, cap User/Pain/Solution at 2; (2) linkage test - does the chosen solution trace to the chosen pain point and segment, and the metric to the goal? (3) reasoning test - is there a 'because' after each choice? Structure alone should earn at most 2 on content dimensions and at most 3 on communication.",
+  "process_signals": {
+    "clarifying_questions": "1-3 targeted questions on scope, platform, goal or constraints (e.g. 'Is this for Swiggy's core app or Instamart? Any goal - growth or retention?'). Zero questions is a minor deduction unless assumptions are stated; 6+ questions or questions asking the interviewer to make decisions is a deduction. If candidate states assumptions instead, credit equally.",
+    "check_ins": "Brief check-ins at segment choice, pain point choice and solution choice are positive; asking 'what should I do next?' is negative (Erez).",
+    "use_of_interviewer_data": "If the interviewer supplies a constraint or redirect, strong candidates incorporate it immediately and explain impact; ignoring or resisting redirects is a red flag (Meta accounts). Do not credit the candidate for content the interviewer supplied.",
+    "pushback_and_hints": "Defending a choice with reasons, or changing it with explicit reasoning, both positive. Hint penalty: one light nudge (e.g. 'what about other users?') -> -0.5 on that dimension; a substantive hint that supplies the missing step -> that dimension capped at 2; repeated hand-holding (3+ substantive hints) -> overall capped at Lean No Hire (corpwaters: needing hand-holding is a red flag). [penalty sizes inferred]",
+    "followups": "Meta-style end-of-round conflicting-metric or trade-off probes are part of the score (Aced); grade them under Trade-offs and Metrics."
+  },
+  "time_allocation": "For ~35 min of case time (Erez): clarify + game plan 3-5 min; goal/motivation 3-5; segmentation 8-10; pain points 8-10; solutions + prioritisation 8-10; metrics/wrap-up 2-4 (metrics allotment inferred). For a 25-30 min case (corpwaters) compress proportionally. Penalties: no chosen solution by the end -> gate cap (Lean No Hire); spending >40% of time on segmentation/clarification -> communication <=2; no metrics because of time -> Metrics 1 but no gate.",
+  "hire_thresholds": {
+    "scale_mapping": "Per-dimension 1-4 -> weighted average. Strong Hire: weighted >=3.5 and no dimension <3. Hire: >=3.0 and no dimension <2. Lean Hire: 2.5-2.99, or >=3.0 with one dimension at 2 on a core step. Lean No Hire: 2.0-2.49. No Hire: <2.0 or any must-pass gate at No Hire level. [inferred from equal-must-pass rule in Erez and Aced; no published numeric thresholds]",
+    "company_scales": "Meta interviewers rate competencies Below Expectations / Meets / Strong / Exceptional plus an overall Strong Hire / Hire / Leaning No (IGotAnOffer, ex-Meta coach). Google uses Strong No Hire to Strong Hire 4-point style per Aced and candidate reports; hiring committee is not additive. Aced: acing three dimensions and falling flat on two is not a hire.",
+    "level_differences": "Same thresholds, but anchors are read against level expectations: an APM 3 on Trade-offs would be a 2 for Senior PM.",
+    "india": "No published thresholds found for Swiggy/Flipkart/Zomato/PhonePe/Meesho; candidate reports suggest a single weak core round (product sense) is hard to recover from. [uncertain]"
+  },
+  "company_differences": {
+    "Google": "Product Design + Favourite Product; rewards bold/big-picture ideas over incremental fixes, user empathy for non-obvious needs, competitor-aware critique in the favourite-product variant; AI prototyping increasingly present. (Aced, Nikka 2020 background)",
+    "Meta": "Product Sense: mission alignment ('connect people'), crisp segmentation and justified prioritisation, ends with conflicting-metric/trade-off follow-up; 2025+ 'Product Sense with AI' round adds prototyping. Metrics depth beyond NSM expected. (Aced Meta blog, Erez)",
+    "Amazon": "No standalone product sense round in most loops; design reasoning assessed via customer obsession, working backwards (PR/FAQ) and product challenge rounds; ability to go from vision to tactical detail. [prep-platform]",
+    "Microsoft": "Design questions within loops often include scenario/user-empathy framing and inclusive design; limited recent source evidence found. [uncertain]",
+    "Uber": "Jam session (group or presentation with PM panel) on an Uber-specific problem; collaboration and marketplace (rider/driver) thinking judged live; format reports disagree. [prep-platform]",
+    "Indian companies": "Swiggy: empathy, pain points, scalable design, often segment-specific prompts (first-time user search, order frequency). Flipkart: e-commerce design (search, discovery, group buy) with metrics and trade-off defence; AI product sense rounds probing evals and guardrails reported. Zomato: design often blended with monetisation/strategy. Meesho: Bharat/tier-2/3 simplicity, non-tech-savvy sellers. PhonePe: UPI ecosystem knowledge. Common India bar difference: stronger expectation to tie design to business outcome and unit economics, and to multi-sided ecosystems (restaurants, riders, sellers). [uncertain: aggregator and practitioner sources, no published rubrics]"
+  },
+  "calibration_exemplars": {
+    "1": "'Improve Swiggy': candidate immediately lists 5 features (chatbot, dark mode, loyalty points), no goal, no segment, no metrics; asks interviewer which to pick.",
+    "2": "Recites goal-user-problem-solution: goal 'engagement', segments 'students/professionals/families', picks students because largest, pain points 'too many options, high delivery fee', solutions 'AI recommendations, discounts', metric 'DAU'. Structured but generic; fails substitution test.",
+    "3": "Sets goal of repeat orders for new users in tier-2 cities tied to Swiggy's growth; segments by order intent (planned meals, impulse snacks, group orders); picks planned meals with criteria; walks a weeknight dinner journey; 4 specific pains; 3 distinct ideas (meal-plan subscription, 'usual order' one-tap, vernacular voice reorder); picks one-tap on impact/effort; notes restaurant capacity trade-off; metric 14-day repeat rate with guardrails on delivery time and cancellations; checks in twice.",
+    "4": "All of level 3 plus: ecosystem view incl. restaurants and delivery partners, a non-obvious priority call defended on Swiggy-specific assets (existing order history and dense rider network), a moonshot alongside the MVP, explicit 'what would need to be true' for deferred ideas, a counter-metric for cannibalisation, and a crisp answer to an interviewer pushback on cost by revisiting the earlier goal."
+  },
+  "coachable_feedback": {
+    "Goal and product motivation": "In the first 3 minutes, state one company-specific goal in a sentence, then name it again each time you make a choice.",
+    "User segmentation and choice": "Segment by behaviour or need, not age; name two criteria aloud before picking the segment.",
+    "Pain point identification and prioritisation": "Walk one concrete user journey step by step and list at least four problems as frustrations, not features, before choosing one.",
+    "Solution breadth and creativity": "Generate three ideas that could fail independently, deliberately including one bold idea that uses the company's unique assets.",
+    "Prioritisation and trade-offs": "Before choosing, say the criteria; after choosing, name one downside and how you would mitigate it.",
+    "Success metrics": "Give exactly one primary metric with its definition tied to your goal, plus one or two guardrails, and say why each guardrail matters.",
+    "Structure, communication and collaboration": "Open with a 20-second game plan and check in at each of the three choice points instead of asking what to do next."
+  },
+  "llm_grading_notes": [
+    "Length bias: long, framework-complete answers can score high on surface coverage; require the substitution and linkage tests before awarding 3+.",
+    "Credit attribution: separate interviewer and candidate turns; never credit segments, pain points or metrics the interviewer proposed unless the candidate adds reasoning.",
+    "Keyword leniency: words like 'north star', 'guardrail', 'persona', 'RICE' are not evidence by themselves; require the actual metric/criteria content.",
+    "Evidence first: make the model quote transcript lines per dimension before scoring; score 1 when no quote can be found.",
+    "Score dimensions independently, then apply gates, then compute overall; do not let a strong communication score lift content dimensions (halo).",
+    "Small model (8B) mitigation: one dimension per pass or a short checklist per dimension; give the 1-4 anchors verbatim; include the four calibration exemplars as few-shot; force JSON output with quote fields.",
+    "India context: do not penalise use of Indian-market references (UPI, COD, tier-2, vernacular) as off-topic; do reward them only when tied to the chosen user.",
+    "Time/landing: detect whether a final solution was chosen; LLMs often miss that the candidate never committed."
+  ],
+  "sources": [
+    {
+      "title": "The definitive guide to mastering product sense interviews (Ben Erez, Lenny's Newsletter)",
+      "url": "https://www.lennysnewsletter.com/p/the-definitive-guide-to-mastering",
+      "date": "2025-04-01",
+      "verification": "interviewer account (ex-Meta PM, coach)"
+    },
+    {
+      "title": "Rubric for Product Sense Interviews (Aced, formerly Exponent)",
+      "url": "https://www.aced.io/courses/google-pm-interview/product-sense/product-sense-rubric",
+      "date": "2026 (undated page, accessed 2026-11-15)",
+      "verification": "prep platform"
+    },
+    {
+      "title": "PM Interview Grading Rubrics (IGotAnOffer, with ex-Meta coaches Noah W., Khalid A.)",
+      "url": "https://igotanoffer.com/en/advice/pm-interview-grading-rubrics",
+      "date": "2026-10-05",
+      "verification": "prep platform with interviewer input"
+    },
+    {
+      "title": "Meta product sense interview guide (Aced blog)",
+      "url": "https://www.aced.io/blog/meta-product-sense-interview",
+      "date": "2026",
+      "verification": "prep platform aggregating candidate accounts"
+    },
+    {
+      "title": "The Ultimate Guide to Product Sense Interviews (Mikhail Shcheglov, Corporate waters)",
+      "url": "https://corpwaters.substack.com/p/the-ultimate-guide-to-product-sense",
+      "date": "2024-08-25",
+      "verification": "interviewer account (500+ interviews)"
+    },
+    {
+      "title": "Product sense during interviews (PM Tech Lessons)",
+      "url": "https://pmtechlessons.substack.com/p/product-sense-during-interviews",
+      "date": "undated [uncertain]",
+      "verification": "interviewer account (search snippet only)"
+    },
+    {
+      "title": "Google APM Interview Guide (Allen Nikka)",
+      "url": "https://docs.google.com/document/d/e/2PACX-1vTd_Za2HHhidLf82CuD038-d5Z9doBaMhilYgUK7O8xC3gNw3TWzyuKA33d82y2WTymHcYI6YDJf22C/pub",
+      "date": "2020-09-16",
+      "verification": "candidate account; background only (pre-2022)"
+    },
+    {
+      "title": "Building for Next Billion Users - AMA with Shikhar Saxena (Meesho), The Product Folks",
+      "url": "https://www.theproductfolks.com/product-management-blog/building-for-next-billion-users-ama-with-shikhar-saxena",
+      "date": "undated [uncertain]",
+      "verification": "practitioner account (India)"
+    },
+    {
+      "title": "Swiggy PM interview guide (Interview Query)",
+      "url": "https://www.interviewquery.com/guides/swiggy-product-manager",
+      "date": "2025 [uncertain]",
+      "verification": "prep platform (search snippet)"
+    },
+    {
+      "title": "Flipkart PM interview guide (Interview Query)",
+      "url": "https://www.interviewquery.com/guides/flipkart-product-manager",
+      "date": "2025 [uncertain]",
+      "verification": "prep platform (search snippet)"
+    },
+    {
+      "title": "Meesho PM interview guide (Interview Query)",
+      "url": "https://www.interviewquery.com/interview-guides/meesho-product-manager",
+      "date": "2025",
+      "verification": "prep platform (search snippet)"
+    },
+    {
+      "title": "Prepfully Meta PM Product Sense with AI guide",
+      "url": "https://prepfully.com/interview-guides/meta-pm-product-sense-with-ai",
+      "date": "2025-2026",
+      "verification": "prep platform (search snippet)"
+    },
+    {
+      "title": "Uber PM Jam Session (Prepfully)",
+      "url": "https://prepfully.com/interview-guides/uber-pm-jam-session",
+      "date": "2025 [uncertain]",
+      "verification": "prep platform (search snippet)"
+    },
+    {
+      "title": "Amazon PM interview guide (RocketBlocks)",
+      "url": "https://www.rocketblocks.me/blog/amazon-pm-interviews.php",
+      "date": "undated [uncertain]",
+      "verification": "prep platform (search snippet)"
+    }
+  ],
+  "uncertain": [
+    "what_interviewers_test",
+    "format_variants",
+    "weights",
+    "hire_thresholds",
+    "company_differences",
+    "process_signals",
+    "level_expectations",
+    "green_flags"
+  ]
+}

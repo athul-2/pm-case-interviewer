@@ -1,0 +1,192 @@
+{
+  "pun_title": "Going Out, Measuring In",
+  "case_type": "Metrics",
+  "asked_at": "By the Authors (synthetic, Eternal style)",
+  "subject_company": "Eternal Ltd (formerly Zomato Ltd) - its going-out app District (dining-out reservations and pay-at-restaurant, movie tickets, live events and concerts, sports ticketing, activities/'play' and retail store deals); Eternal also runs Zomato (food delivery), Blinkit (quick commerce) and Hyperpure.",
+  "round_and_level": "PM round (product sense / metrics), APM campus to PM level; SPM variant adds the AI-agent disintermediation twist. [uncertain]",
+  "difficulty": "Medium-Hard - District is a multi-category, low-frequency, high-ticket marketplace with three or four supply sides (restaurants, cinemas, event organisers, venues), so a single NSM must work across categories, and the company is chasing a June 2027 breakeven while discounting heavily on dining.",
+  "market_and_industry": "India; going-out / experiences marketplace (dining-out, cinema ticketing, live events, sports, activities); premium urban consumers in Tier-1 cities (Delhi NCR, Mumbai, Bengaluru, Hyderabad, Pune, Chennai, Kolkata) expanding into Tier-2 for movies; smartphone-first, English/Hinglish; high AOV relative to food delivery.",
+  "time_box_minutes": "25",
+  "exact_prompt": "You are the PM for District, Eternal's going-out app. Define the success metrics for District. What is the North Star, how does it break down, and what would you watch to make sure you aren't fooling yourself?",
+  "source_and_verification": "Level: synthetic (written by the authors in an Eternal interview style, 2026). No dated report of this exact prompt was found this session (Firecrawl credits exhausted; WebSearch used). Analogues: 'define success metrics for Zomato Dining Out / BookMyShow / Swiggy Dineout' style prompts common in Indian PM prep. Context sources: Ventura Securities on Eternal Q2 FY27 (25 Oct 2026, https://www.venturasecurities.com/blog/eternal-why-ai-could-affect-district-differently-from-zomato-and-blinkit/); Inc42 Q2 FY27 coverage (https://inc42.com/buzz/eternals-q2-profit-surges-92-yoy-to-%E2%82%B9125-cr/); Storyboard18 on District Q1 FY26 (21 Jul 2025, https://www.storyboard18.com/digital/district-now-accounts-for-20-of-eternals-business-deepinder-goyal-75719.htm); Lapaas Voice District Q1 FY27 revenue (23 Jul 2026, https://lapaasvoice.com/district-q2-revenue-jumps-53-6-as-going-out-business-gains-momentum/).",
+  "context_as_of": "As of 11 Nov 2026. 1) Naming: Zomato Ltd became Eternal Ltd in March 2025; District launched as a standalone app in Nov 2024 and absorbed Zomato's dining-out and the Paytm Insider/TicketNew assets acquired in Aug 2024 (about Rs 2,048 cr). 2) Q2 FY27 (Jul-Sep 2026, results 21 Oct 2026): going-out NOV Rs 3,259 cr, +58% YoY; adjusted revenue about Rs 304 cr, +61%; adjusted EBITDA loss reported as about Rs 64 cr (one source) or roughly flat at Rs 55 cr (another) - definitions differ; management says District is on track for breakeven by June 2027 and targets about Rs 28,000 cr NOV by FY30; Eternal stopped reporting GOV from the June 2026 quarter and uses NOV as the primary operating metric (Inc42, Ventura, Oct 2026). 3) Board approved transferring the going-out business to wholly owned subsidiary Zomato Entertainment Pvt Ltd (21 Oct 2026). 4) Deepinder Goyal placed District in a 'medium-to-high' risk category from AI agents (an agent could book a table without opening District), vs low risk for Zomato and Blinkit (Ventura, Oct 2026). 5) Earlier anchors: Q1 FY26 annualised NOV about Rs 8,000 cr, ~2M average monthly transacting customers transacting ~2x a month (Storyboard18, Jul 2025); Q4 FY26 adjusted EBITDA loss about Rs 81 cr with NOV +46% YoY; District CEO said cross-category transactions nearly doubled in 8 months (Aug 2026); District added retail stores/shopping deals and is pushing sports and events; dining-out to be removed from the Zomato app once the transition completes. Stale-risk: Q2 FY27 MTC, category split and take rate not found; loss figure conflicts between sources. [uncertain]",
+  "regulatory_context": "1) GST on cinema tickets after the Sept 2025 GST rationalisation: tickets up to Rs 100 at 5%, above Rs 100 at 18%; convenience fees attract 18% - shapes price and ticket mix. 2) State ticket-price and convenience-fee rules: Karnataka notified a Rs 200 cap on cinema tickets in 2025 (subject to litigation), Tamil Nadu regulates ticket prices; convenience-fee practices have faced consumer-court and CCPA scrutiny. 3) Ticket scalping / black-marketing of event tickets (e.g., police probe after the Coldplay India tour, 2024-25) - platform duty to prevent bot buying and resale; anti-touting measures. 4) Restaurant service charge: CCPA guidelines (July 2022) and the Delhi High Court (March 2025) held service charge cannot be made mandatory - matters when District shows a pay-at-restaurant bill. 5) CCPA Dark Patterns Guidelines (Nov 2023): false urgency ('only 2 seats left'), drip pricing of convenience fees, basket sneaking of insurance/donations. 6) DPDP Act 2023 / Rules (Nov 2025, phased) for location and payment data. 7) Payments: pay-at-restaurant uses UPI/cards under RBI payment aggregator rules; cashback-funded discounts must be disclosed honestly. [uncertain]",
+  "public_data_anchors": "1) District / going-out NOV Rs 3,259 cr in Q2 FY27, +58% YoY; adjusted revenue ~Rs 304 cr, +61%; implied take ~9.3% of NOV [E: 304 / 3,259] (Inc42 and Ventura, Oct 2026). 2) Going-out revenue Rs 318 cr in Q1 FY27 (+53.6% YoY vs ~Rs 207 cr) (Lapaas Voice, Jul 2026) - note this differs from the Q2 'adjusted revenue' definition. 3) Target NOV ~Rs 28,000 cr by FY30; breakeven by June 2027 (Eternal Q2 FY27 commentary). 4) Q1 FY26: annualised NOV ~Rs 8,000 cr; ~2M average monthly transacting customers; ~2 transactions per customer per month; long-term ambition of $3B topline and $150M adjusted EBITDA in about five years (Storyboard18, Jul 2025). 5) Q4 FY26 adjusted EBITDA loss ~Rs 81 cr; NOV +46% YoY (press, 2026). 6) Paytm entertainment ticketing (Insider + TicketNew) acquired Aug 2024 for ~Rs 2,048 cr. 7) Eternal Q2 FY27 consolidated net profit Rs 125 cr (+92% YoY); ad and promotion spend Rs 1,138 cr (+41%) (exchange4media, Oct 2026).",
+  "framework_applied": "Success Metrics (frameworks.md section 5). Step 1 Company and product: Eternal is a profitable listed consumer-internet group; District is its third growth engine (going-out), aiming for breakeven by June 2027 and Rs 28,000 cr NOV by FY30, and its strategic job is to own the 'leave the house' wallet of Eternal's premium users across categories. Step 2 Users and value: consumers (activation = first attended experience; engagement = transactions per month and categories used; conversion = booking/payment through District; retention = 90-day repeat), restaurants (bookings and pay-at-restaurant bills that are incremental, ROI on discounts), cinemas and organisers (sell-through, fee economics, anti-fraud); money = commissions and convenience fees on NOV (~9% take) plus ads, minus discounts. Step 3 NSM: monthly attended experiences - dining bills paid through District plus tickets scanned at entry, counted per month; formula = MTC x transactions per MTC x attendance rate, by category; supporting = cross-category MTC share, pay-at-restaurant attach rate, 90-day repeat, take rate net of discount, event sell-through. Step 4 Guardrails: contribution margin per transaction (breakeven), discount as % of NOV, restaurant partner ROI and churn, no-show and refund rate, ticket fraud and complaints, cannibalisation of Zomato delivery orders.",
+  "clarifying_questions": [
+    {
+      "q": "What is District's goal for the next 12 months - NOV growth, breakeven, or becoming the default going-out app?",
+      "a": "Grow NOV fast but hit adjusted EBITDA breakeven by June 2027, as promised to investors. Leadership also wants District to be the default app for all going-out, not just movies."
+    },
+    {
+      "q": "Which categories are in scope?",
+      "a": "Dining-out (table booking and pay-at-restaurant), movies, events and concerts, sports, activities ('play') and the new store deals. Use dining and movies as the big two."
+    },
+    {
+      "q": "Is a 'transaction' a booking or a completed experience - e.g., a table booked vs a bill paid?",
+      "a": "Today the dashboard counts bookings and payments separately; table bookings without a bill paid via District are common."
+    },
+    {
+      "q": "How does District make money per category?",
+      "a": "Dining: commission on bills paid through District plus restaurant ads, but District funds part of the discount. Movies: convenience fee and cinema commission. Events: ticketing fee, sometimes District is the promoter."
+    },
+    {
+      "q": "What is the competitive context?",
+      "a": "BookMyShow leads movies and events; Swiggy Dineout and EazyDiner compete in dining; restaurants also push their own direct bookings."
+    },
+    {
+      "q": "Is this for a team scorecard or to evaluate a specific launch?",
+      "a": "Team scorecard; then I may ask you about a launch."
+    }
+  ],
+  "interviewer_data_reveals": "All numbers are illustrative (invented for teaching) unless a source is cited.\n\nExhibit 1 - Real headline (sourced): Q2 FY27 NOV Rs 3,259 cr (+58% YoY), adjusted revenue ~Rs 304 cr (+61%), adjusted EBITDA loss ~Rs 55-64 cr; breakeven target June 2027 (Eternal Q2 FY27 via Inc42/Ventura).\n\nExhibit 2 - Category mix for one month (illustrative):\n| Category | Share of transactions | Share of NOV | Net take after discount |\n| Dining (pay-at-restaurant) | 38% | 52% | 3% |\n| Movies | 48% | 28% | 11% |\n| Events and sports | 9% | 17% | 9% |\n| Play and others | 5% | 3% | 12% |\n\nExhibit 3 - Dining funnel (illustrative, one city-month): table bookings 1.0M -> showed up 78% -> bill paid through District 52% of bookings -> diner used a District discount 90% of paid bills.\n\nExhibit 4 - Cross-category (illustrative): 22% of MTC used 2+ categories in the last 90 days; their 90-day repeat is 71% vs 38% for single-category users.\n\nExhibit 5 - Restaurant survey (illustrative): 35% of partner restaurants say District diners were already regulars; restaurants with >25% of covers from District discounts report lower margins and are 2x more likely to churn.",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "You're the PM for District. Define its success metrics."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'll go company and product first, then users and value on each side, then a North Star broken into levers, and guardrails. A few questions first - what's the goal for the next year, and which categories count?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Grow fast but break even by June 2027. Dining, movies, events, sports and play. Dining and movies are the big two."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "And is a dining transaction a table booking or a bill paid through District?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "We count them separately today. Lots of bookings never pay through us."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That will matter. Step 1: Eternal is profitable at the group level - Rs 125 crore net profit last quarter - and District is the third engine. NOV was about Rs 3,259 crore in Q2, up 58%, with roughly Rs 304 crore of adjusted revenue, so about a 9% take, and it still loses around Rs 55-64 crore a quarter. Its strategic job is to own the 'going-out' wallet of Eternal's most premium users - the occasions where they leave the house. And there's a known risk: Deepinder flagged District as medium-to-high risk from AI agents that could book without opening the app. So District needs to own the transaction at the venue, not just the discovery."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Good. Users?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Four sides.\nConsumer (young professionals and couples in metros): activation = first attended experience; engagement = experiences per month and number of categories; conversion = paying through District, not only booking; retention = 90-day repeat.\nRestaurants: value = incremental covers and bills, return on the discounts they co-fund, fewer no-shows.\nCinemas: sell-through of seats, especially weekday shows.\nOrganisers and venues: sell-through, fair fee, fraud-free entry.\nMoney: commission and convenience fees on NOV plus ads, minus the discounts District funds. Does that match?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Yes. Here's the category mix (Exhibit 2)."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So movies are half of transactions but dining is half of NOV - and dining nets only about 3% after discounts against 11% for movies. Any NOV-based North Star would push us to buy dining NOV with discounts, which is the breakeven risk."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "So what's the North Star?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Monthly attended experiences: dining bills paid through District plus tickets scanned at entry, per month. It's where user value meets business: the user actually went out and it went well, and District captured the transaction at the venue, which is also the defence against an AI agent that only books. I'm deliberately not counting a table booking that never pays, or a ticket that's refunded."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Why not NOV, which we report to investors?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "NOV stays the business output and the investor metric. But one Rs 20,000 concert ticket and one Rs 300 weekday movie are both one night out; NOV over-weights the large, lumpy events and discount-heavy dining bills. A count of attended experiences tracks habit. I'd show NOV and contribution right beside it."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Break it down."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Monthly attended experiences = monthly transacting customers x transactions per customer x attendance rate.\nBy category:\n- Dining: bookings x show-up rate x pay-through-District rate + walk-in pay-at-restaurant.\n- Movies: tickets sold x (1 - cancellation) - scanned is near 100%.\n- Events: tickets sold x sell-through x scanned at gate.\nAnd the cross-category lever: transactions per customer rises most when a customer uses a second category."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Here's the dining funnel (Exhibit 3)."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "78% show up, but only 52% of bookings end in a bill paid through District, and 90% of paid bills used a District discount. Two readings: the leak after the table is the biggest lever for the North Star - getting the payment is where we earn - and discount dependence is near total, which is the margin problem. So pay-at-restaurant attach rate is my first supporting metric, and discount as % of dining NOV sits right next to it."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "And Exhibit 4?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Multi-category users repeat at 71% vs 38%. That's the reason District exists as one app. So my second supporting metric is the share of MTC who used 2+ categories in 90 days - 22% today. The natural bridge is movies to dining: dinner before a show."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "List your supporting metrics."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "In priority order:\n1. Pay-at-restaurant attach rate (paid bills / bookings) - capture.\n2. Cross-category share of MTC (2+ categories in 90 days) - habit.\n3. 90-day repeat rate of new MTC, by acquisition category - retention.\n4. Net take rate after District-funded discounts, by category - path to June 2027 breakeven.\n5. Event sell-through and weekday cinema occupancy - supply-side value."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Guardrails?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "For each way the North Star could be gamed:\n- Pushing paid bills with bigger discounts: guardrail on discount as % of NOV and contribution margin per experience.\n- Restaurants: Exhibit 5 says 35% of District diners were already regulars - we may be discounting the restaurant's own customers. Guardrail: restaurant partner ROI (incremental covers via a holdout), partner churn, and share of covers on discount.\n- Consumers: no-show rate, refund and cancellation rate, complaints about convenience fees or surprise charges.\n- Events: bot/scalping incidents and gate-fraud rate - one bad concert damages trust for a year.\n- Group: Zomato delivery orders per District user vs control - a dinner out may replace a delivery order, which is fine if group contribution rises.\n- AI risk: share of transactions starting inside District vs from external links or agents."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What would you do about restaurants complaining that discounts hurt them?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Move from blanket discounts to measured incrementality: run holdouts at restaurant level, show each partner incremental covers and revenue per rupee of discount, and target discounts at off-peak slots and new diners. The guardrail is partner churn and the share of restaurants with negative ROI."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Summarise."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "North Star: monthly attended experiences - bills paid and tickets scanned through District. Levers: MTC x transactions per MTC x attendance, driven by pay-at-restaurant attach, cross-category share and 90-day repeat, with net take rate as the business lever. Guardrails: contribution per experience and discount % of NOV for breakeven, restaurant ROI and churn, no-shows and refunds, ticket fraud, and group cannibalisation. One line: District wins when people actually go out more often through it - and we pay for that with value, not discounts."
+    }
+  ],
+  "answer_and_recommendation": "North Star: monthly attended experiences - dining bills paid through District plus tickets scanned at entry (excluding refunded tickets and unpaid table bookings). Formula: monthly transacting customers x transactions per customer x attendance rate, broken down by category (dining = bookings x show-up x pay-through + walk-in pay; movies = tickets x (1 - cancellations); events = tickets x sell-through x scanned). Top 3 supporting metrics: (1) pay-at-restaurant attach rate - the biggest leak (illustratively 52% of bookings) and the defence against AI-agent disintermediation; (2) cross-category share of MTC (2+ categories in 90 days) - multi-category users repeat ~2x (illustrative); (3) net take rate after District-funded discounts by category - the path to the June 2027 breakeven. Also: 90-day repeat, event sell-through, weekday cinema occupancy; NOV stays the reported business output. Risks: buying NOV with dining discounts (discount % NOV and contribution guardrails); BookMyShow and Swiggy Dineout competing on cashback (compete on cross-category convenience and venue-side payment); AI agents booking outside the app (measure in-app start share and own the payment). Closing line: 'District's North Star is nights out that actually happened through District - growing it with cross-category habit and venue-side payment, not discounts, is how it reaches breakeven by June 2027.'",
+  "counter_metrics_guardrails": "Economics: contribution margin per attended experience, District-funded discount as % of NOV (by category), adjusted EBITDA trajectory to the June 2027 breakeven. Restaurant side: incremental covers per rupee of discount (holdout-based), share of District covers that were already regulars, partner churn, share of covers on discount, payout timeliness. Cinema and organiser side: seat sell-through, refund liability, gate-fraud and bot/scalping incidents per 10,000 tickets, organiser NPS. Consumer side: no-show rate for table bookings, cancellation and refund rate, convenience-fee and surprise-charge complaints (CCPA dark-pattern exposure), app rating. Group: Zomato delivery orders and Blinkit spend per District user vs matched control (cannibalisation vs halo). Strategic: share of District transactions initiated inside the app vs via external links or AI agents. Sharper NSM definition itself is a guardrail: count bills paid and tickets scanned, not bookings.",
+  "follow_up_twists": [
+    {
+      "twist": "The CEO says: 'Investors track NOV; why not just make NOV the North Star?'",
+      "response": "Keep NOV as the reported output, but run the team on attended experiences plus net take rate, because NOV can be bought with dining discounts that delay the June 2027 breakeven."
+    },
+    {
+      "twist": "Coldplay-scale concert next month will add Rs 200 cr NOV in a day. How do you read your metrics?",
+      "response": "Report tentpole events separately and normalise them out of trend lines; judge the event on sell-through, gate fraud and how many first-time buyers transact again in another category within 90 days."
+    },
+    {
+      "twist": "An AI assistant can now book tables directly with restaurants. What metric do you add?",
+      "response": "Track the share of experiences where District owns the payment at the venue and the in-app start share; shift the product to being the payment and rewards layer an agent has to use."
+    }
+  ],
+  "common_pitfalls": [
+    "Making NOV or GOV the North Star - Eternal itself moved from GOV to NOV, and NOV can still be inflated with District-funded dining discounts that hurt breakeven.",
+    "Counting table bookings as success - many never pay through District, and the bill paid at the venue is where District earns and stays relevant against AI agents.",
+    "Treating District as one product with one funnel - dining, movies and events have very different frequency, ticket size and take, so the formula must be broken down by category.",
+    "Forgetting the supply side - restaurants funding discounts for diners who were already regulars is the quiet churn risk."
+  ],
+  "skills_tested": [
+    "structuring",
+    "business sense",
+    "prioritisation",
+    "quant",
+    "communication"
+  ],
+  "linked_teardown": "None",
+  "uncertain": [
+    "round_and_level",
+    "context_as_of",
+    "regulatory_context"
+  ]
+}

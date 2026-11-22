@@ -1,0 +1,163 @@
+{
+  "pun_title": "Razor Sharp",
+  "case_type": "Guesstimate",
+  "asked_at": "Razorpay (as listed on The Product Folks)",
+  "subject_company": "Razorpay (Razorpay Software Ltd)",
+  "round_and_level": "[uncertain] Screening or PM round, APM to PM level; often used to test whether a candidate understands payment-gateway economics (TPV vs revenue). The round is not given in the source",
+  "difficulty": "Medium. The arithmetic is simple, but the candidate must define TPV (gross value of payments processed, not revenue), segment merchants by size (a power-law distribution), and reconcile a bottom-up number with Razorpay's disclosed annualised TPV of about $180 bn",
+  "market_and_industry": "India; fintech - online payment aggregator and gateway (UPI, cards, netbanking, wallets), plus payouts and banking (RazorpayX), offline POS (Ezetap) and checkout (Magic Checkout); merchant base skewed to digital-first SMBs, D2C brands and startups, with enterprise clients carrying most of the value",
+  "time_box_minutes": "15",
+  "exact_prompt": "\"Estimate the value of transactions processed by Razorpay in a day.\"",
+  "source_and_verification": "Reported. The Product Folks case 'Estimate the value of transactions processed by Razorpay in a day', tagged Razorpay: https://www.theproductfolks.com/product-management-case-studies/estimate-the-value-of-transactions-processed-by-razorpay-in-a-day (undated; it uses about 500,000 businesses as of Sep 2021, so it was likely written in 2021-22). Its approach is three merchant tiers at $500/$2,000/$5,000 per day, which works out to about $1.1 bn a day, roughly 2x Razorpay's disclosed run-rate. A sibling case exists for Paytm weekly value: https://www.theproductfolks.com/product-management-case-studies/estimate-the-total-value-of-transactions-processed-by-paytm-in-a-week. Not checked on Glassdoor, AmbitionBox or NextLeap for this exact wording.",
+  "context_as_of": "[uncertain] As of Nov 2026: (1) Scale: Razorpay reports annualised TPV of over $180 bn (as of end-2024), with a target of $400 bn by 2030 (Inc42, 6 Nov 2026, https://inc42.com/features/mdr-and-ai-inside-the-two-acronyms-that-could-shape-razorpays-₹6000-cr-ipo/). CEO Harshil Mathur said in Mar 2026 that Razorpay handles roughly 1 bn transactions a quarter, worth about $45 bn TPV (Business Today, 12 Mar 2026, https://www.businesstoday.in/latest/corporate/story/idea-is-to-evolve-razorpay-beyond-a-payments-provider-into-a-financial-operating-system-for-businesses-says-harshil-mathur-520358-2026-03-12). An unsourced brand profile claims $210 bn for 2025; treat it as unverified. (2) About half of Razorpay's payment flow runs over UPI (Inc42). About 80% of clients are SMBs, digital-first brands and startups; it served 105 of India's 119 unicorns (2025). Merchant counts in the press range from 7 mn to 12 mn+ registered (most inactive). (3) Financials: FY25 revenue Rs 3,783 Cr (+65% YoY); FY26 not yet public. (4) IPO: confidential DRHP filed with SEBI in June 2026; Rs 5,000-6,000 Cr IPO at about $5 bn valuation reported approved, listing expected Jan-Mar 2027, when audited TPV should become public. Stale-flag: the $180 bn figure dates from end-2024 and TPV has probably grown since; the FX rate used to convert to rupees changes the INR answer by about 10%.",
+  "regulatory_context": "[uncertain] (1) RBI Payment Aggregator regulation: Razorpay operates as an RBI-authorised online payment aggregator, which requires net-worth, escrow (nodal) account and merchant KYC/due-diligence rules; settlement runs on T+1 or T+2 via escrow, so TPV is not Razorpay's money. (2) Zero MDR on UPI and RuPay debit cards (since Jan 2020) keeps gateway revenue on UPI near zero, which is why TPV and revenue diverge. (3) NPCI's 0.4% MDR on P2M UPI payments above Rs 2,000 (capped at Rs 300; Rs 5 flat for railways, telecom, insurance and fuel; small merchants up to Rs 1 lakh/month exempt) was due on 15 Oct 2026 but was deferred until after Diwali, with no new date announced as of mid-Oct 2026 (The Week, 13 Oct 2026, https://www.theweek.in/news/biz-tech/2026/10/13/npci-defers-upi-mdr-until-after-diwali.amp.html). Analysts estimate Rs 192-461 Cr of annual revenue upside for Razorpay. (4) RBI card-on-file tokenisation and e-mandate (AFA) rules shape card and recurring volumes. (5) SEBI IPO disclosure will make TPV auditable from 2027.",
+  "public_data_anchors": "Razorpay annualised TPV of over $180 bn (end-2024) and a $400 bn target by 2030 (Inc42, 6 Nov 2026) ; about 1 bn transactions and about $45 bn TPV per quarter (Business Today, 12 Mar 2026) ; about half of payment flow on UPI (Inc42, Nov 2026) ; FY25 revenue Rs 3,783 Cr (+65%) (Inc42) ; UPI Oct 2026: 25.47 bn transactions, Rs 31.53 lakh Cr, about 822 mn/day and about Rs 1.01 lakh Cr/day (Entrepreneur India, Nov 2026, https://india.entrepreneur.com/business-news/upi-hits-record-25-47-bn-transactions-in-october-daily-value-crosses-inr-1-l-cr) ; P2M average UPI ticket about Rs 592 in 2025 (Worldline 2025 review, Apr 2026, https://worldline.com/en-in/home/top-navigation/media-relations/press-releases/worldline-reports-that-india-digital-payments-cross-new-milestones-as-upi-reaches-228-billion-transactions-in-2025) ; Sep 2026 UPI app shares: PhonePe 45.6%, Google Pay 32.2%, Paytm 8.1% (NPCI via press).",
+  "framework_applied": "Guesstimate: Clarify, Pick framework, Constraints/MECE, Calculate, Sanity check (frameworks.md section 6). Step 1 Clarify - 'transaction value' means gross TPV (all payments processed through Razorpay rails), not revenue; an average day in 2026; India only; include payment gateway, offline POS and payouts, and state each part. Step 2 Pick framework - bottom-up by merchant tier: number of active merchants x average daily TPV per merchant, summed over tiers, because merchant value is power-law distributed. Step 3 Constraints/MECE - four non-overlapping segments (enterprise, mid-market, active long-tail SMB, offline/payouts), using active rather than registered merchants, and a transaction-count cross-check (count x average ticket). Step 4 Calculate - about Rs 4,700 Cr a day, or about $0.53 bn. Step 5 Sanity check - against disclosed annualised TPV ($180 bn / 365 = about $0.49 bn a day), an average-ticket test (Rs 4,700 Cr / about 1.1 cr transactions = about Rs 4,300 a transaction), and a share-of-UPI ratio test.",
+  "clarifying_questions": [
+    "Q: By 'value of transactions' do you mean gross payment volume (TPV) or Razorpay's revenue? A: Gross value processed.",
+    "Q: Average day or a peak day like Big Billion Days or an IPL final? A: Average day, 2026.",
+    "Q: India only, or including Razorpay's Malaysia and cross-border business? A: India, which is almost all of it.",
+    "Q: Does it include RazorpayX payouts (salaries, vendor payments) and offline POS? A: Include payment gateway and POS; mention payouts separately.",
+    "Q: Should I count refunds and failed transactions? A: Successful payments only, gross of refunds.",
+    "Q: Rupees or dollars? A: Either, but state the FX rate.",
+    "Q: Can I use public numbers? A: Use what you know, but I want to see the build."
+  ],
+  "interviewer_data_reveals": [
+    "Exhibit 1 (real, Business Today Mar 2026): Razorpay handles about 1 bn transactions a quarter, about $45 bn TPV.",
+    "Exhibit 2 (real, Inc42 Nov 2026): annualised TPV over $180 bn (end-2024); about half of flow on UPI; about 80% of clients are SMBs, D2C brands and startups.",
+    "Exhibit 3 (illustrative, for teaching) - active merchant tiers: enterprise (airlines, insurers, food and quick commerce, edtech, brokers) about 5,000 merchants; mid-market (D2C brands, SaaS, regional chains) about 50,000; active long-tail SMBs (tutors, salons, small Shopify/website stores, freelancers) about 10 lakh; registered-but-dormant accounts are excluded.",
+    "Exhibit 4 (illustrative) - average daily TPV per merchant: enterprise Rs 50 lakh; mid-market Rs 2 lakh; long-tail Rs 8,000; offline POS plus other flows about Rs 400 Cr a day in total.",
+    "Exhibit 5 (illustrative) - payment-method mix by value: UPI 35%, cards 35%, netbanking 15%, wallets/EMI/BNPL/other 15%. UPI is about half by count but lower by value because of smaller tickets."
+  ],
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "Estimate Razorpay's daily transaction value."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Before I start: do you mean gross payment volume flowing through Razorpay, its TPV, or its revenue? These differ by about 50x."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Gross value processed."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "An average day in 2026, India only? And should I include RazorpayX payouts and offline POS?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Average day, India. Include gateway and POS; mention payouts separately."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'll go bottom-up by merchant tier, because merchant value follows a power law: a few thousand enterprise merchants carry most of the value, while lakhs of small merchants carry most of the count. Then I'll cross-check with transaction count x ticket size."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Structure: Daily TPV = sum over tiers of (active merchants x avg daily TPV per merchant). Tiers: Enterprise | Mid-market | Active long-tail SMB | Offline POS and other. Cross-check: transactions per day x average ticket."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How many merchants does Razorpay have?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Press figures say 7-12 mn registered, but most are dormant. Only active merchants matter. I'd assume about 10 lakh process at least one payment a day."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Here's a split: about 5,000 enterprise, 50,000 mid-market, 10 lakh active long-tail."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Enterprise: think of a food-delivery app, an airline, an insurer, a stockbroker. A Rs 50 lakh average a day is reasonable, since the biggest do crores while smaller enterprises do a few lakh. 5,000 x Rs 50 lakh = Rs 2,500 Cr."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Mid-market D2C and SaaS: a brand doing Rs 6 Cr a month is Rs 2 lakh a day. 50,000 x Rs 2 lakh = Rs 1,000 Cr."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Long tail: a tutor or a small online store doing Rs 8,000 a day. 10 lakh x Rs 8,000 = Rs 800 Cr."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Offline POS through Ezetap and other flows: about Rs 400 Cr. Total is about Rs 4,700 Cr a day, about $0.53 bn at Rs 88 to the dollar."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How confident are you?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Let me cross-check with counts. Razorpay has said about 1 bn transactions a quarter, about 1.1 cr a day. Rs 4,700 Cr / 1.1 cr is about Rs 4,300 a transaction. That matches $45 bn / 1 bn = $45 a transaction. A gateway ticket is much larger than a UPI QR payment of about Rs 600, which makes sense with insurance premiums, flights and broker deposits in the mix."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Top-down check: $180 bn annualised / 365 is about $0.49 bn a day. My bottom-up is within 10%, and TPV has likely grown since end-2024."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Ratio test against UPI: India's UPI runs about Rs 1 lakh Cr a day. Razorpay at Rs 4,700 Cr is about 5% of that, and only about half of it is UPI, so its UPI slice is about 2-3% of UPI value. That is plausible, because most UPI is P2P and offline QR, which Razorpay doesn't touch."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "The Product Folks answer gets $1.1 bn a day. Why is yours half that?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "It gives every small business $500 a day, about Rs 44,000. That is far too high for India's long tail, and it treats 20% of merchants as large. The power-law split fixes that."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What would change on Big Billion Days or an IPL final?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "E-commerce and fantasy-gaming spikes could push a peak day to 1.5-2x, so Rs 7,000-9,000 Cr. Salary days at month-end also spike RazorpayX payouts, which I'm keeping separate."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Final number and range?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "About Rs 4,700 Cr a day ($0.5-0.55 bn), with a range of Rs 4,000-6,500 Cr. The upper end allows for 2025-26 growth that Razorpay hasn't disclosed yet. The biggest swing factor is enterprise TPV per merchant: plus or minus Rs 10 lakh moves the total by Rs 500 Cr."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Why does this matter to a PM there?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "TPV is the base for revenue at a take rate of about 0.2-0.3% blended, since UPI has zero MDR. That's why the 0.4% MDR on P2M UPI above Rs 2,000 matters: the share of UPI value above Rs 2,000 becomes a direct revenue lever."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Closing: Razorpay processes about Rs 4,500-5,000 Cr a day, about half a billion dollars, from about 1.1 cr transactions at about Rs 4,300 each. Roughly half of that value comes from about 5,000 enterprise merchants."
+    }
+  ],
+  "answer_and_recommendation": "[uncertain] Estimate: about Rs 4,700 Cr a day (about $0.53 bn at Rs 88/$), range Rs 4,000-6,500 Cr. Ranked drivers: (1) enterprise merchants, about 5,000 at about Rs 50 lakh/day each, give about Rs 2,500 Cr, more than half of value; (2) mid-market D2C/SaaS, about 50,000 x Rs 2 lakh = Rs 1,000 Cr; (3) active long-tail SMBs, about 10 lakh x Rs 8,000 = Rs 800 Cr, plus about Rs 400 Cr of POS and other flows. Cross-checks: disclosed $180 bn annualised TPV gives about $0.49 bn/day; about 1.1 cr transactions/day x about Rs 4,300 average ticket. Risks in the estimate: TPV last disclosed for end-2024; FX rate; TPV definition (payouts in or out). Mitigation: show the range and the definition explicitly. Closing line: 'About half a billion dollars a day. Half of it comes from about 5,000 enterprise merchants, so enterprise retention and take rate, not merchant count, drive Razorpay's economics.'",
+  "counter_metrics_guardrails": "Pure guesstimate, so the sanity checks are listed instead: (1) Disclosure check: $180 bn annualised / 365 = about $0.49 bn/day, within 10% of the bottom-up. (2) Average-ticket test: Rs 4,700 Cr / about 1.1 cr transactions = about Rs 4,300, consistent with $45 bn / 1 bn transactions per quarter (about $45). (3) Ratio test vs UPI: Razorpay's total is about 5% of India's UPI daily value (Rs 1.01 lakh Cr, Oct 2026), and its UPI portion is about 2-3%, plausible because most UPI is P2P and offline QR. (4) Revenue test: at a 0.2-0.3% blended take rate, Rs 4,700 Cr/day x 365 gives Rs 3,400-5,100 Cr a year of gateway revenue, which brackets FY25 revenue of Rs 3,783 Cr. (5) Long-tail test: Rs 8,000/day per small merchant is about Rs 2.4 lakh a month, a believable top-quartile SMB, whereas $500/day (about Rs 44,000) is not.",
+  "follow_up_twists": [
+    "Twist: 'Now estimate Razorpay's daily revenue.' Response: Apply a blended take rate of about 0.2-0.3% (UPI at zero MDR, cards about 1.8-2% gross with most passed to issuers and networks), giving about Rs 10-14 Cr a day, about Rs 3,700-5,100 Cr a year, which brackets the FY25 revenue of Rs 3,783 Cr.",
+    "Twist: 'The 0.4% UPI MDR above Rs 2,000 goes live. How much does it add?' Response: Razorpay's UPI value is about Rs 1,650 Cr/day (35% of Rs 4,700 Cr). If about 40% of that (about Rs 650 Cr/day) is P2M above Rs 2,000 and Razorpay keeps about half the 0.4%, that is about Rs 1.3 Cr a day, or about Rs 475 Cr a year, at the top of analysts' Rs 192-461 Cr range.",
+    "Twist: 'A top-5 enterprise client moves to Juspay plus direct bank PGs.' Response: Each top client can be Rs 50-200 Cr a day, so losing one cuts TPV by 1-4%; this is why multi-gateway routing and enterprise stickiness (payouts, Magic Checkout, RazorpayX) matter more than SMB acquisition."
+  ],
+  "common_pitfalls": [
+    "Estimating revenue instead of TPV, or mixing the two; they differ by about 50-100x because UPI carries zero MDR.",
+    "Using registered merchants (7-12 mn) instead of active ones, and assigning a uniform per-merchant value, which inflates the answer 2-5x (as in the $1.1 bn/day Product Folks answer).",
+    "Applying a UPI QR-sized ticket (Rs 200-600) to gateway payments, which ignores insurance premiums, flights, broker deposits and B2B invoices, and gives a value that is too low for the count.",
+    "Forgetting the FX rate and the date of the disclosure: $180 bn is an end-2024 run-rate, and converting at Rs 83 vs Rs 95 moves the INR answer by about 15%."
+  ],
+  "skills_tested": "structuring, quant, business sense, communication",
+  "linked_teardown": "None directly. gokwik_product_teardown (gokwik_product_teardown/report.md) is loosely relevant: it notes that Razorpay bundles Magic Checkout with its gateway (a 0.65-0.75% add-on vs GoKwik's about 3.5%) and cross-subsidises checkout with payments revenue, which shows why TPV share matters.",
+  "uncertain": [
+    "round_and_level",
+    "context_as_of",
+    "regulatory_context",
+    "answer_and_recommendation"
+  ]
+}

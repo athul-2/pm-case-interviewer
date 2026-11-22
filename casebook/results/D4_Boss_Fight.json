@@ -1,0 +1,199 @@
+{
+  "pun_title": "Boss Fight",
+  "case_type": "Situational",
+  "asked_at": "Classic (Indian startup PM rounds; reported generically, no single company of record)",
+  "subject_company": "Illustrative: 'Bazaarly', a Series B Bharat-focused value-commerce app (Tier-2/3, Hindi-first, COD-heavy), founder-led. The same case works for any founder-led Indian consumer startup (quick commerce, D2C, fintech).",
+  "round_and_level": "Hiring-manager or founder/CXO round (situational / stakeholder management), PM and SPM; also asked of APMs in a lighter form ('your manager disagrees with you'). Placement is based on the generic reports, not a specific company. [uncertain]",
+  "difficulty": "Medium - the structure is simple, but scoring well needs you to (a) question your own data before the founder's idea, (b) separate the founder's goal from the founder's feature, (c) propose a cheap, time-boxed test with a pre-agreed kill/scale rule, and (d) commit to execute if overruled, without sounding either insubordinate or spineless.",
+  "market_and_industry": "India; value / social commerce for Bharat (Tier-2/3/4 towns), first-time online shoppers on Rs 8,000-15,000 Android phones, Hindi and regional-language UI, COD-heavy (about 60%+ of orders), WhatsApp as the main sharing channel; funded startup under pressure to show a path to profitability before the next round.",
+  "time_box_minutes": "15-20",
+  "exact_prompt": "Your founder wants a feature the data says will not work. How do you handle it? (Opened as: 'Our founder came back from a China trip convinced we must launch group buying - team up with friends for a lower price - for every user before Diwali. Your pilot data says it won't work. What do you do?')",
+  "source_and_verification": "Level: classic. The generic prompt is a staple of PM behavioural/situational rounds; no dated report tying it to one Indian company was found. Closest public versions: Dataford 'How would you respond if a senior stakeholder asked for a feature that conflicts with your data' (https://dataford.io/questions/how-would-you-respond-if-a-senior-stakeholder-asked-for-a-feature-that-conflicts-with-your-data-at-product-design); Educative 'Grokking the PM Interview - Managing Executive Disagreement' (https://www.educative.io/courses/grokking-the-product-management-interview/question-managing-executive-disagreement); PracHub 'Persuading Unconvinced Stakeholders With Evidence' (https://prachub.com/interview-questions/persuading-unconvinced-stakeholders-with-evidence-pm-behavioral-story); Mind the Product 'Seven tactics to say no effectively' (https://mindtheproduct.com/seven-tactics-to-say-no-effectively). The group-buying framing is the authors' India-specific setting. Year: evergreen; this write-up 2026. NextLeap, The Product Folks, AmbitionBox and Glassdoor were not searchable in this session (search tool credit limits). [uncertain]",
+  "context_as_of": "As of Nov 2026. The company in the case is illustrative; the real-world context the answer leans on: 1) Group buying in India has a mixed record. DealShare (group-buying origin) shrank and restructured after 2023; Citymall (community group buying, Tier-2/3) kept raising on a community-leader model; Meesho scaled back its Superstore grocery bet in 2022, closing about 90% of cities and keeping Nagpur and Mysore, then returned to grocery as a capped 'Horizon 2' bet in FY27 (Meesho Q1/Q2 FY27 shareholder letters, via meesho_product_teardown/results/New_bets.json). 2) Pinduoduo/Temu proved team purchase works where it is cheap to share and logistics are dense; Indian Tier-2/3 logistics and COD returns change the maths. 3) Funding climate: Indian startups are judged on contribution margin and a path to EBITDA break-even ahead of IPOs (Meesho listed Dec 2025; Razorpay, PhonePe, Flipkart in the pipeline), so 'growth at any cost' features get more scrutiny. Stale-risk: DealShare/Citymall details are from the authors' general knowledge and were not re-verified in this session. [uncertain]",
+  "regulatory_context": "Not the core of the case, but it limits how the founder's feature can be built: 1) CCPA Guidelines for Prevention and Regulation of Dark Patterns (Nov 2023) - false urgency (fake 'team closes in 10 min' timers), forced action (must share to unlock price) and drip pricing are named patterns; a group-buy countdown must reflect real data. 2) Consumer Protection (E-Commerce) Rules 2020 - clear total price, return/refund terms, seller details; the 'team price' and solo price must both be shown honestly. 3) DPDP Act 2023 and DPDP Rules (notified Nov 2025, phased) - importing a user's contacts to find team members needs clear, specific consent. 4) FDI marketplace rules (Press Note 2 of 2018) - an inventory-free marketplace cannot fund or set seller prices, so the team discount must be structured as seller-funded or platform coupon within rules. Otherwise 'None material' for the stakeholder-handling core. [uncertain]",
+  "public_data_anchors": "1) Meesho Horizon 2 (new initiatives) adjusted EBITDA burn rose from Rs 13 cr (Q2 FY26) to Rs 42 cr (Q2 FY27); Meesho discloses no adoption or retention metrics for those bets (Meesho shareholder letters, via local meesho teardown New_bets.json, research date 7 Nov 2026). 2) Meesho Superstore scaled back in 2022 - about 90% of cities closed (same source). 3) UPI processed 25.47 bn transactions worth Rs 31.53 lakh cr in Oct 2026, a record (Inc42, Nov 2026, https://inc42.com/buzz/upi-transactions-rise-5-8-mom-to-record-25-47-bn-in-october/) - useful for the prepaid-vs-COD sub-argument. All pilot numbers in the case are illustrative.",
+  "framework_applied": "Situational: SODS (frameworks.md section 3). Values first: for a founder-led startup, show ownership, bias for action and intellectual honesty ('disagree and commit') without making it a turf war. S - Scope: find the founder's real goal (new-user growth before the next round? AOV? virality?), the decision's reversibility, the deadline (Diwali), how 'won't work' was measured and whether the data is actually good enough to say no. O - Options: (A) build it as asked for everyone - speed and founder alignment vs. burning a quarter on a likely loser; (B) refuse and keep the roadmap - protects focus vs. damages trust and ignores a possibly right instinct; (C) reframe: agree on the goal, fix the pilot's flaws, run a 3-4 week time-boxed test on the segment where the founder's thesis is strongest, with a kill/scale threshold signed off in advance - speed vs. confidence balanced. D - Decision: C, with the founder co-owning the success criteria; NOT doing: a public 'data says no' fight in the all-hands, a full rollout on gut feel, or an endless test. If the founder still overrules, disagree in writing once, then commit and build guardrails. S - Success: hypothesis 'team buying lifts new-buyer acquisition in Tier-3 at contribution margin of at least -Rs 5/order'; leading signals: team completion rate, invite-to-install, first-order conversion of invitees, D30 repeat, contribution margin per order, RTO rate; double down, iterate or kill at day 28.",
+  "clarifying_questions": [
+    {
+      "q": "What outcome does the founder want from group buying - new users, order frequency, AOV, or a story for the next fundraise?",
+      "a": "He wants cheap new-user acquisition in Tier-3 before Diwali; CAC on Meta and YouTube has doubled in a year. He also thinks it will be a good story for the Series C."
+    },
+    {
+      "q": "What exactly does 'the data says it won't work' mean - what was tested, where, for how long, and what did we measure?",
+      "a": "A 6-week pilot in 3 Tier-2 cities (Indore, Lucknow, Coimbatore), team size 3, 24-hour window, 15% team discount, shown to existing users only."
+    },
+    {
+      "q": "Is the pilot result clean - right users, enough sample, no bugs in sharing?",
+      "a": "About 41,000 users exposed. The share-to-WhatsApp link opened the web store, not the app, for about a third of invitees. Nobody has looked at that closely."
+    },
+    {
+      "q": "How reversible is the decision and what does it cost?",
+      "a": "Full build for all users is about 2 squads for 8 weeks; the discount is platform-funded. A narrower test is about 1 squad for 3 weeks."
+    },
+    {
+      "q": "What is the hard date and what else is on the roadmap for that window?",
+      "a": "Diwali sale starts in about 7 weeks. The same squads own COD-to-prepaid nudges, which are forecast to cut RTO losses by Rs 3-4 cr a quarter."
+    },
+    {
+      "q": "How does the founder like to decide - data, demos, or conviction - and has he overruled teams before?",
+      "a": "He is a conviction-led ex-operator who respects field evidence; he overruled the team on vernacular voice search last year and was right."
+    },
+    {
+      "q": "What is my decision right here - am I the decider, or the recommender?",
+      "a": "The founder decides; you own the recommendation and execution."
+    }
+  ],
+  "interviewer_data_reveals": "All numbers are illustrative (invented for teaching) unless a source is cited.\n\nExhibit 1 - Pilot results, 6 weeks, 3 Tier-2 cities, existing users only (illustrative):\n| Metric | Group-buy | Control (solo price) |\n| Users exposed | 41,000 | 40,500 |\n| Teams started / user | 9.2% | - |\n| Team completion rate | 18% | - |\n| Orders per exposed user | 0.31 | 0.29 |\n| New installs via invite per 100 exposed | 1.6 | - |\n| Contribution margin / order | -Rs 22 | Rs 6 |\n| RTO (return to origin) rate | 27% | 24% |\n| Share of group-buy orders from users who would have bought anyway (cannibalisation) | about 70% | - |\n\nExhibit 2 - Data-quality issue found in the scope step (illustrative):\n| Invite link path | Share of invitees | Invitee first-order conversion |\n| Opened the app (deep link worked) | 66% | 7.8% |\n| Fell to mobile web, team context lost | 34% | 0.9% |\n\nExhibit 3 - Segment cut (illustrative):\n| Segment | Team completion | Invite installs / 100 exposed | Contribution margin / order |\n| Metro + Tier-2, repeat buyers | 14% | 0.8 | -Rs 29 |\n| Tier-3/4, first 30 days on app | 31% | 4.1 | -Rs 9 |\n| Categories: kitchen, home, kids' wear | 29% | 3.2 | -Rs 7 |\n| Categories: phones accessories, beauty | 11% | 0.9 | -Rs 31 |\n\nExhibit 4 - Opportunity cost (illustrative): COD-to-prepaid nudges forecast Rs 3-4 cr a quarter saved in RTO losses; group buying full build would delay them by one quarter.\n\nTakeaway the interviewer wants: the pilot was tested on the wrong users with a broken link, so 'the data says no' is weaker than the PM first claimed; but even the best segment loses money, so a full rollout is not justified. A narrow, fixed, time-boxed test is.",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "Your founder is back from a trip and wants group buying - team up with two friends, get a lower price - live for every user before Diwali. Your pilot says it doesn't work. What do you do?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'll treat this as a decision we make together, not a contest. At a founder-led startup I want to show ownership and honesty: bring the evidence, be open to being wrong, and commit once a call is made. I'll go through scope, options, my decision, and how we'd know it worked. First, scope. What is he actually trying to achieve - new users, frequency, AOV, or something for the fundraise?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Cheap new users in Tier-3 before Diwali. CAC has doubled in a year. And yes, he likes it as a Series C story."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So the goal is acquisition efficiency, and the feature is his hypothesis for getting there. That matters, because I can agree with the goal and still question the feature. Next, I want to stress-test my own data before I use it against him. What did the pilot test, on whom, and for how long?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Six weeks, Indore, Lucknow, Coimbatore, team of three, 24-hour window, 15% off, existing users only. Here are the results."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "(Reads Exhibit 1.) Team completion 18%, orders per user barely moved from 0.29 to 0.31, contribution margin went from plus Rs 6 to minus Rs 22, and about 70% of team orders were people who'd have bought anyway. On its face that's a no. But two things bother me. One: his goal is new users, and we tested it on existing users only - the wrong population. Two: was the invite flow working?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Good catch. A third of invite links fell through to mobile web and lost the team context."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "(Reads Exhibit 2.) Invitees who landed in the app converted at 7.8% versus 0.9% on web. So the pilot under-measured the very mechanism he cares about. I'd be overclaiming if I walked in saying 'the data says it won't work'. The honest version is: 'the data says it doesn't work for existing users at a 15% platform-funded discount, and it didn't test new-user acquisition properly.' Can I see a segment cut?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "(Hands over Exhibit 3.)"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Tier-3/4 new users: completion 31%, 4.1 invite installs per 100 exposed, margin minus Rs 9. Kitchen, home and kids' wear look similar. Metro repeat buyers and beauty are clearly bad. So the founder's instinct may be right for a narrow slice - first-time Bharat shoppers in sharable, low-ticket categories - and wrong for 'every user'. Last scope question: what does a full build cost, and what does it push out?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Two squads for eight weeks. It delays COD-to-prepaid nudges, worth Rs 3-4 crore a quarter in RTO savings."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then here are the options.\nA - Build it for everyone by Diwali. Pros: speed, founder alignment, a big-launch story. Cons: two squads for a feature losing Rs 22 an order on average, Rs 3-4 crore of RTO savings pushed out, and a hard-to-reverse public launch.\nB - Say no and keep the roadmap. Pros: focus, protects margin. Cons: ignores real signal in Tier-3, damages trust with the founder, and we may be killing a good idea because of a broken deep link.\nC - Reframe: agree on the goal, fix the pilot's flaws, and run a time-boxed test on the segment where his thesis is strongest, with kill and scale rules we agree before launch. Pros: fast, cheap, gives him a fair shot. Cons: maybe no full Diwali-wide launch, and he has to accept a test."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "He'll say 'tests are for people without conviction'."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'd meet that head-on but privately - one-on-one, not in the all-hands. I'd say: 'I think you might be right about Tier-3, and our first pilot wasn't a fair test - we used the wrong users and broke the invite link. Give me three weeks and one squad to test it properly where you think it works best. If it hits numbers we agree on today, we scale it into Diwali. If not, we've lost three weeks, not a quarter.' Conviction-led founders usually respect someone who shows where their own data was weak and puts a date on the answer."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What exactly would you test?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Test design:\n- Who: new users in their first 30 days, Tier-3/4 pincodes, 50/50 split with a holdout.\n- What: 2-person teams instead of 3, a 48-hour window, discount 10% funded partly by sellers in kitchen, home and kids' wear only.\n- Fix: deep links that open the app, with a lightweight web fallback that keeps the team context.\n- Duration: 3 weeks live, decision on day 28, so we still have about 3 weeks before the Diwali sale.\n- Guardrails: no fake countdowns or 'only 1 spot left' unless it's true - that's a dark pattern under the CCPA 2023 guidelines - and no contact-list scraping without consent."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "And what numbers would make you say yes?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "We write them down with the founder before launch, so nobody moves the goalposts:\n| Metric | Scale if | Kill if |\n| Blended CAC of invited new buyers vs paid CAC | at most 60% of paid | above 90% |\n| Contribution margin per team order | at least -Rs 5 | below -Rs 15 |\n| Invitee D30 repeat | at least equal to paid-acquired users | clearly below |\n| RTO rate on team orders | within +2 points of control | more than +5 points |\nIn between, we iterate once - team size, discount, category - and decide again."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Suppose he hears all this and still says: 'Ship it to everyone. My call.'"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then it's his call and I commit. I'd do three things. One, put my concern in writing once - a short note with the numbers and the risks - so the decision is informed and on the record, not to cover myself. Two, build it as well as possible with guardrails: a kill switch, per-order discount caps, a holdout so we can still measure the effect, and margin alerts. Three, agree a review date - say two weeks after Diwali - when we look at the numbers together. What I won't do is drag my feet or let the team feel this is the founder's project and not ours."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What are you explicitly not doing?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'm not taking him on in a public forum. I'm not launching to all users on gut feel without a holdout. I'm not running an open-ended test that's really a polite no. And I'm not dropping the COD-to-prepaid work - the test uses one squad, so the other squad keeps the RTO savings on track."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How will you know if your approach was right?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Hypothesis: team buying brings in Tier-3 first-time shoppers at no more than 60% of paid CAC, with contribution margin no worse than minus Rs 5 an order. Early signals in week one: invite-to-install rate, team completion rate, invitee first-order conversion. By day 28: CAC versus paid, contribution margin, D30 repeat proxy using D14, RTO. If it clears the bar, we scale it into Diwali for the winning segment and categories. If it's in between, we iterate once. If it fails, the founder and I present the result together - and I'd pitch him the next best way to cut CAC, such as a referral credit on prepaid first orders."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Last one - what if the founder was right and you were wrong?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then that's a good outcome: we found a cheaper acquisition channel and I learned that our pilots need sharper design. I'd say so openly. The process works either way because the decision comes from a fair test, not from who's more senior or who's more stubborn."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Summarise for me."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I separated the founder's goal - cheaper Tier-3 users - from his feature. I checked my own data first and found the pilot was unfair: wrong users and a broken invite link. I'm proposing a 3-week, one-squad test on new Tier-3 users in shareable categories, with kill and scale rules we agree upfront, while the RTO work keeps going. If he overrules me, I disagree once in writing, then commit fully with guardrails and a review date. Either way we decide on evidence, together."
+    }
+  ],
+  "answer_and_recommendation": "Ranked options: (1) RECOMMENDED - Option C, reframe and test: agree on the founder's goal (cheaper Tier-3 new users), admit the first pilot's flaws (existing users only, about a third of invite links broken), and run a 3-week, one-squad test on new Tier-3/4 users in kitchen, home and kids' wear with 2-person teams and a part seller-funded 10% discount, with scale/kill thresholds signed off before launch (CAC at most 60% of paid; contribution margin at least -Rs 5/order; RTO within +2 points). Decision on day 28, leaving time to scale into Diwali. (2) Option A, build for everyone - only if the founder overrules; then disagree once in writing and commit with a kill switch, discount caps, a holdout and a post-Diwali review. (3) Option B, flat no - rejected: it ignores real Tier-3 signal and costs founder trust. Risks and mitigation: test becomes a stalling tactic (fixed date and pre-agreed thresholds); founder feels managed (private 1:1, co-owned criteria, open to being wrong); margin bleed (seller co-funding, per-order caps, category limits); dark-pattern exposure (honest timers, consented sharing). Closing line: 'I'm not here to win the argument - I'm here to find out fast whether he's right, at a cost we can afford, and to back the call fully once it's made.'",
+  "counter_metrics_guardrails": "Primary: blended CAC of invited new buyers vs paid CAC; contribution margin per team order. Guardrails: RTO and cancellation rate on team orders vs control (COD-heavy Bharat orders make this the hidden cost); cannibalisation share (team orders from users who would have bought solo); invitee D14/D30 repeat vs paid-acquired users; seller margin and seller opt-out rate if sellers co-fund; WhatsApp spam/block reports and app uninstalls after invites; customer-support contacts about 'team failed, price changed'; delivery of the RTO-savings roadmap (the other squad's milestones must not slip); team morale/attrition signal if the feature is forced through. Process guardrail: kill/scale thresholds documented before launch and not changed mid-test.",
+  "follow_up_twists": [
+    {
+      "twist": "The founder has already tweeted that group buying launches at Diwali.",
+      "response": "Then the launch happens, but scoped: 'Team Deals' in selected categories for new users, with a holdout and kill switch - the public promise is kept and the downside is contained."
+    },
+    {
+      "twist": "Your manager (the CPO) agrees with you and wants you to quietly slow-walk it.",
+      "response": "No - slow-walking is dishonest and erodes trust; I'd ask the CPO to join the 1:1 so the founder hears the concern openly, then we all commit to the test or the decision."
+    },
+    {
+      "twist": "The test comes back mixed: CAC great, margin at -Rs 12.",
+      "response": "Iterate once on the margin lever - smaller discount, higher seller share, or a minimum basket - with a second 2-week read; CAC wins don't justify a margin hole that scales with growth."
+    }
+  ],
+  "common_pitfalls": [
+    "Treating 'the data' as infallible - here the pilot tested the wrong users with a broken invite link; a strong candidate audits their own evidence before using it against the founder.",
+    "Making it a power struggle ('I'd escalate to the board' or 'I'd show the data in the all-hands') - founders reward people who disagree privately and commit publicly.",
+    "Saying 'just run an A/B test' with no segment, duration, sample or pre-agreed kill/scale thresholds - an open-ended test reads as a polite no.",
+    "Caving instantly ('the founder knows best') with no recorded concern, no holdout and no guardrails - and forgetting the opportunity cost (the RTO-savings roadmap) the full build would push out."
+  ],
+  "skills_tested": [
+    "communication",
+    "empathy",
+    "structuring",
+    "prioritisation",
+    "business sense",
+    "execution",
+    "quant"
+  ],
+  "linked_teardown": "meesho_product_teardown (meesho_product_teardown/results/New_bets.json). Key fact used: Meesho scaled back its Superstore grocery bet in 2022 (about 90% of cities closed, Nagpur and Mysore kept), then revived grocery as a capped Horizon 2 bet in FY27, with new-initiative EBITDA burn rising from Rs 13 cr to Rs 42 cr - a real example of founder bets being narrowed to where they work, not killed or scaled blindly.",
+  "uncertain": [
+    "round_and_level",
+    "source_and_verification",
+    "context_as_of",
+    "regulatory_context"
+  ]
+}

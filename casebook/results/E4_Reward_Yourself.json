@@ -1,0 +1,183 @@
+{
+  "pun_title": "Reward Yourself",
+  "case_type": "Metrics",
+  "asked_at": "CRED (reported via The Product Folks)",
+  "subject_company": "CRED (members-only credit-card bill payment and rewards app). Same company as asked_at.",
+  "round_and_level": "PM round (product sense / metrics), APM and PM levels; CRED also asks variants in product-analyst and data-scientist loops. [uncertain]",
+  "difficulty": "Medium - easy to list engagement metrics, hard to say why a rewards feature exists for CRED's business (moving bill-pay share and cross-sell, which earn money) and to guard against rewards that only buy activity people would do anyway, or that are gamed.",
+  "market_and_industry": "India; fintech (credit-card bill payments via BBPS, UPI, rewards/loyalty marketplace, lending and wealth cross-sell); affluent, credit-card-holding metro and Tier-1 users (a high-trust, high-credit-score base); iOS-heavy relative to the Indian average.",
+  "time_box_minutes": "15-20",
+  "exact_prompt": "CRED is launching a new rewards feature for members who pay their bills on CRED. How would you define success for it?",
+  "source_and_verification": "Level: reported (listed in the casebook outline as asked at CRED via The Product Folks; no dated TPF page with this exact wording was found in this session). Close CRED-specific variants online: Dataford CRED data-scientist guide - 'design a metric to measure the success of a new rewards feature' (https://dataford.io/interview-guides/cred/data-scientist); Dataford CRED PM guide (https://dataford.io/interview-guides/cred/product-manager); Jobmentis CRED PM guide - 'define and measure success of CRED's Boost feature, which offers rewards for timely payments' (https://www.jobmentis.com/de/interviews/cred/pm). Year: not established; treated as 2023-2026. The Product Folks, NextLeap and AmbitionBox were not searched in depth. [uncertain]",
+  "context_as_of": "As of Nov 2026. 1) FY25 (year to Mar 2025, reported Jan 2026): operating revenue about Rs 2,735 cr (+16% YoY); operating loss narrowed about 51% to Rs 298 cr; net loss about Rs 1,457 cr (Entrackr, https://entrackr.com/news/cred-reports-rs-2735-cr-revenue-in-fy25-operating-losses-fall-51-11058243; PTI via The Week, 30 Jan 2026, https://www.theweek.in/wire-updates/business/2026/01/30/cred-narrows-operating-loss-to-rs-298-cr-in-fy25.html; NewsBytes). 2) Company-stated: about 45% of active members use three or more products, ARPU about Rs 2,000; more than 1.5 cr members and about 1.26 cr monthly transacting users (Indian Startup Times, citing company figures). 3) CRED Coins are earned on bill payments and redeemed on CRED's in-app store and offers; a pilot lets members spend coins at offline F&B outlets via QR and online (Inc42 exclusive, undated, https://inc42.com/buzz/cred-members-can-now-use-cred-coins-for-offline-online-purchases). Community sources put coin value at roughly Rs 5-10 per 1,000 coins. 4) Rewards events and adjacent products: 'Coin Rush' (Jan-Feb 2025, CXOToday); digital gold savings with 1% gold cashback on bill payments for select members and an IndusInd RuPay co-branded card (YourStory, Sep 2025, https://yourstory.com/2025/09/cred-takes-on-jar-with-digital-gold-rewards-and-savings-feature). 5) Inc42 ran a 2026 feature titled 'CRED After Kunal Shah: Can The Walled Garden Business Model Pay For Itself?' (https://inc42.com/features/cred-after-kunal-shah-can-the-walled-garden-business-model-pay-for-itself/), indicating leadership change and pressure to monetise the base; details not verified here. Stale-risk: FY26 numbers not yet public in this session; member counts are company-stated; coin value is from deal forums. [uncertain]",
+  "regulatory_context": "1) RBI directive that credit-card bill payments go through the Bharat Bill Payment System (BBPS) from 1 July 2024: CRED had to be live on BBPS with each issuer, so bill-pay 'share' depends on issuer onboarding, and a reward cannot require a non-BBPS route. 2) RBI Master Direction on Credit Cards (2022, amended): issuers own card reward points; a third-party app's rewards are its own marketing cost, and messaging must not misrepresent card benefits. 3) RBI PPI Master Directions: if coins become cash-like stored value redeemable across merchants (the offline QR pilot), they risk being treated as a prepaid instrument; keep them as closed-loop loyalty points. 4) CCPA dark-patterns guidelines (2023): no false urgency or disguised conditions on rewards ('you won Rs 500' that needs further spends). 5) Income-tax: gifts/prizes from games of chance (scratch cards, spin-the-wheel) can attract TDS under Section 194B above thresholds, and the Online Gaming Act 2025 banned real-money games - chance-based reward mechanics must not look like betting. 6) DPDP Act 2023: using spend data to target rewards needs valid consent. 7) RBI digital lending rules apply if rewards are tied to CRED Cash / loans. [uncertain]",
+  "public_data_anchors": "1) CRED FY25 operating revenue Rs 2,735 cr (+16%), operating loss Rs 298 cr (-51% from Rs 609 cr), net loss Rs 1,457 cr (Entrackr; PTI via Devdiscourse/The Week, 30 Jan 2026). 2) About 45% of active members use 3+ products; ARPU about Rs 2,000 (company-stated, FY25). 3) Members 1.5 cr+; monthly transacting users about 1.26 cr (company-stated, via Indian Startup Times, FY25). 4) CRED Coins value about Rs 5-10 per 1,000 coins (TechStory / DesiDime, 2025-26, indicative). 5) Digital gold: 1% cashback in gold on bill payments for select members (YourStory, Sep 2025). 6) India credit cards in force: about 11 crore (RBI, 2025-26 range; check the latest RBI monthly card data). [uncertain] 7) BBPS mandatory for credit-card bill payments since 1 Jul 2024 (RBI). Not public: CRED's bill-pay share of wallet, reward redemption rate, reward cost per member - all such numbers in the walkthrough are illustrative.",
+  "framework_applied": "Success Metrics framework (frameworks.md section 5: Company, Users and value, North Star plus levers, Guardrails). 1) Company and product: CRED is a members-only app for creditworthy Indians; bill pay is the acquisition and habit hook but earns little, while money comes from brands paying for reward placements, lending (CRED Cash), cards, UPI and other cross-sell; it is still net loss-making, so the rewards feature must move bill-pay frequency and share of wallet and feed monetisable cross-sell, at a sustainable reward cost. 2) Users and value: members (feel rewarded for being responsible, redeem something they value), brand partners (reach high-value customers, pay CPA/CPM), and CRED (retained, engaged members to monetise); walk members through activation (see and understand the reward), engagement (pay bill, earn), conversion (redeem), retention (come back next cycle, keep paying on CRED). 3) North Star: monthly members who pay a bill on CRED and redeem a reward they value, broken into eligible members x bill-pay rate on CRED x earn-to-redeem rate x repeat next cycle; supporting metrics: bill-pay share of wallet, on-time payment rate, redemption rate and time-to-redeem, cross-sell attach, brand-partner revenue per redemption. 4) Guardrails: net reward cost per incremental payment, fraud and gaming (self-transfer loops, rent-pay abuse), member trust (complaints, 'rewards are worthless' sentiment), cannibalisation of existing coin redemptions, and compliance.",
+  "clarifying_questions": [
+    {
+      "q": "What exactly is the feature: a new reward currency, a new way to redeem coins, or rewards for a new behaviour (e.g. paying on time, paying multiple bills)?",
+      "a": "Say it's 'Rewards for on-time, full payment': members who pay their full card bill on CRED before the due date unlock a monthly reward - a choice of brand vouchers, cashback or gold."
+    },
+    {
+      "q": "What problem is it meant to solve: acquiring members, getting more bills paid on CRED, or driving cross-sell?",
+      "a": "Members often pay one card on CRED and other cards on bank apps or GPay. We want more of their bills on CRED and a reason to open the app every month."
+    },
+    {
+      "q": "Who pays for the rewards: CRED, or brand partners?",
+      "a": "A mix. Brand vouchers are partly funded by brands; cashback and gold are CRED-funded."
+    },
+    {
+      "q": "Is it rolling out to everyone or as a test?",
+      "a": "A/B test on 10% of active members first."
+    },
+    {
+      "q": "What's the time horizon for 'success'?",
+      "a": "Decide at 8 weeks whether to scale, but tell me what you'd watch at 6 months."
+    },
+    {
+      "q": "Are there constraints I should know: budget, regulatory, or issuer relationships?",
+      "a": "Fixed reward budget per member per month. And don't break anything with the issuer banks."
+    },
+    {
+      "q": "How do current CRED Coins fit in - does this replace them?",
+      "a": "No, coins stay; this sits on top."
+    }
+  ],
+  "interviewer_data_reveals": "Exhibit 1 (illustrative) - Baseline, active members (pre-launch): average credit cards held 2.6; cards paid on CRED per member 1.4 (bill-pay share of wallet about 54%); 72% pay in full and on time; monthly app opens 4.1; 22% redeem coins in a month. Exhibit 2 (illustrative) - Week-8 A/B result, test vs control: cards paid on CRED 1.62 vs 1.41 (+15%); share of wallet 62% vs 54%; on-time full payment 77% vs 72%; reward unlock rate 64% of test members; redemption of the unlocked reward 58%; next-cycle bill-pay retention 91% vs 88%; monthly app opens 5.0 vs 4.1. Exhibit 3 (illustrative) - Reward choice mix: brand vouchers 31%, cashback 52%, gold 17%; brand partners' revenue per voucher redemption Rs 18; CRED-funded cost per cashback reward Rs 35. Exhibit 4 (illustrative) - Cost and gaming: incremental cards moved to CRED 0.21 per test member; net reward cost per incremental card-payment Rs 140; 3% of unlocks show 'pay from one card to another / round-trip' patterns; support tickets on rewards up 2.4x ('reward not credited'). Exhibit 5 (illustrative) - 'Already behaving' share: 70% of unlocks were by members who already paid that card on CRED on time last month (i.e. rewarded behaviour that would have happened anyway). Real anchors to use: FY25 operating revenue Rs 2,735 cr, operating loss Rs 298 cr, 1.26 cr monthly transacting users (company-stated).",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "CRED is launching a new rewards feature for members who pay their bills on CRED. Define success."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Can I first pin down the feature? Is it a new way to earn, a new way to redeem, or a reward for a specific behaviour?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "It rewards on-time, full payment. Pay your full card bill on CRED before the due date and you unlock a monthly reward: brand vouchers, cashback or gold."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "And what problem does CRED want it to solve - acquisition, more bills on CRED, or cross-sell?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Members pay one card on CRED and others elsewhere. We want more of their bills on CRED and a monthly reason to come back."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Who funds the rewards, and is this a test? I'm asking because the answer changes whether success is 'engagement' or 'engagement at a cost per incremental payment'."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Brand vouchers are partly brand-funded; cashback and gold are CRED's cost. It's an A/B test on 10% of members, decision at 8 weeks, with a fixed budget per member."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Let me set context. CRED is a members-only app for people with good credit. Bill payment is the habit and acquisition hook, but it makes little money on its own, especially now that card bills go through BBPS. Revenue comes from brands paying to reach members, lending like CRED Cash, cards, UPI and other cross-sell. In FY25 it made about Rs 2,735 crore of operating revenue with an operating loss of about Rs 298 crore, so it's close to operating break-even but still net loss-making. That means a rewards feature has to earn its keep: more bills on CRED, more app visits that feed cross-sell, at a sustainable reward cost."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "There are three sides. Members want to feel rewarded for being financially responsible and get something they actually value. Brand partners want high-value customers and measurable redemptions. CRED wants retained, engaged members to monetise. The member journey: activation is seeing and understanding the reward offer; engagement is paying the full bill on CRED before the due date; conversion is redeeming the reward; retention is doing it again next cycle and moving more cards to CRED. Is that the right understanding?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Yes. What's your North Star?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Monthly members who pay their card bill in full and on time on CRED and redeem a reward. It captures member value - they were responsible and got something - and business value - the bill came through CRED and the redemption either generates brand revenue or a reason to open the app. As a formula: eligible active members x share of their cards paid on CRED x on-time full-payment rate x reward redemption rate, and its repeat next cycle."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Supporting metrics by lever:\n- Activation: % of eligible members who see and understand the offer (offer viewed, 'how it works' completion).\n- Share of wallet: cards paid on CRED per member / cards held - the core business metric.\n- Behaviour: on-time full-payment rate.\n- Redemption: unlock-to-redeem rate, time to redeem, reward choice mix.\n- Retention: next-cycle bill-pay retention; monthly app opens.\n- Monetisation: brand revenue per redemption; cross-sell attach (UPI, CRED Cash, gold) among rewarded members."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Here's week 8. Test vs control: cards paid on CRED 1.62 vs 1.41 per member, share of wallet 62% vs 54%, on-time full payment 77% vs 72%. 64% of test members unlocked the reward and 58% of those redeemed. Success?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "The direction is good: about 15% more cards paid on CRED and an 8-point share-of-wallet gain is exactly what the feature is for, and a 5-point on-time gain is good for members. But before I call it success I need the cost side. What does each incremental payment cost us?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Incremental cards moved to CRED are 0.21 per test member. Net reward cost per incremental card payment is about Rs 140. And 70% of unlocks went to members who already paid that card on CRED on time last month."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's the key insight. Most of the reward money is going to people who would have paid on CRED anyway - it's a subsidy, not an incentive. Rs 140 per incremental card payment is probably more than CRED earns from a bill payment directly, so it only pays back if those members generate cross-sell or brand revenue later. I'd redefine success as incremental share of wallet per rupee of reward, and redesign so the reward is earned for the next card moved to CRED, not the card already there."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What about the reward mix: 52% chose cashback, 31% brand vouchers, 17% gold?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Cashback is the most expensive for CRED and earns no brand revenue. Brand vouchers earn about Rs 18 per redemption in this data. I wouldn't force vouchers - that kills perceived value - but I'd test making vouchers worth more than the cashback equivalent, so brands fund more of the reward. Gold at 17% is interesting as an on-ramp to CRED's savings products; I'd track whether gold choosers go on to buy more gold."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What would make you kill the feature even if share of wallet keeps rising?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Guardrails. First, cost per incremental payment above a set ceiling tied to member lifetime value. Second, gaming: I'd look at the 3% of unlocks that show round-tripping, paying one card from another or using rent payment to manufacture spend. Third, trust: support tickets on rewards are up 2.4x for 'reward not credited' - for a premium brand, rewards that feel broken or worthless damage the brand more than no reward. Fourth, cannibalisation: are members redeeming fewer coins or engaging less with existing offers? And fifth, compliance: nothing that makes coins look like cash-like stored value, and no chance-based mechanics that look like gambling."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "And at 6 months?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Three things: is share-of-wallet gain persisting after the novelty wears off; are rewarded members more likely to adopt a second product - UPI, CRED Cash, gold - which is where CRED makes money; and is net reward cost per member trending down as brand-funded rewards replace CRED-funded cashback."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Give me your final answer."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Success is 'more of members' bills on CRED, at a reward cost that pays back'. North Star: monthly members who pay a bill in full on time on CRED and redeem a reward. The three metrics I'd decide on at week 8: incremental cards paid on CRED per member versus control; net reward cost per incremental payment against a ceiling; and next-cycle retention of rewarded members. Guardrails: gaming rate, reward-related complaints, cannibalisation of existing coins, and the regulatory line. On today's data I'd say promising but not yet a success: the lift is real but 70% of the spend rewards behaviour we already had. I'd iterate to reward the next card moved, push brand-funded rewards, and re-test. Closing line: 'A reward is a success when it changes behaviour, not when it pays people for what they were already doing.'"
+    }
+  ],
+  "answer_and_recommendation": "Ranked top 3 metrics: 1) North Star - monthly members who pay their card bill in full and on time on CRED and redeem a reward (eligible members x bill-pay share of wallet x on-time full-payment rate x redemption rate), measured against an A/B control. 2) Incremental share of wallet - extra cards paid on CRED per member vs control (illustrative: 1.62 vs 1.41, share of wallet 62% vs 54%). 3) Net reward cost per incremental payment (and per incremental retained member) against a ceiling tied to member lifetime value, with brand-funded share of reward cost. Supporting: offer-understood rate, unlock-to-redeem rate, time to redeem, next-cycle retention, monthly app opens, cross-sell attach (UPI, CRED Cash, gold), brand revenue per redemption. Recommendation: call the 8-week test 'promising, not yet successful' - the behaviour lift is real, but in the illustrative data 70% of unlocks rewarded members already paying that card on CRED, making cost per incremental payment about Rs 140. Redesign to reward the next card moved to CRED (or on-time payment streaks on newly added cards), make brand vouchers worth more than CRED-funded cashback, then re-test with incrementality as the decision metric. Risks and mitigations: subsidising existing behaviour - target and measure incrementality with holdouts; gaming (card-to-card round trips, rent-pay abuse) - velocity rules and excluding self-transfers; trust damage from rewards that feel worthless or arrive late - SLA on reward credit and clear terms (no dark patterns); regulatory - keep coins closed-loop loyalty, avoid chance mechanics that look like real-money gaming. Closing line: 'A reward is a success when it changes behaviour, not when it pays people for what they were already doing.'",
+  "counter_metrics_guardrails": "1) Net reward cost per incremental bill payment and per incremental retained member vs a ceiling (tied to member LTV and CRED's thin margins). 2) Incrementality: share of rewards going to behaviour that would have happened anyway (holdout comparison). 3) Fraud and gaming: card-to-card round-tripping, rent/education payments used to manufacture spend, multi-account abuse. 4) Member trust: reward-related support tickets ('not credited', 'worthless'), app-store rating, NPS among rewarded members. 5) Cannibalisation: change in existing CRED Coin redemptions and offer engagement, and in brand partners' organic spend. 6) Member financial health: on-time full-payment rate should not fall and revolving balances should not rise because of reward-chasing spend. 7) Brand partner ROI: voucher redemption-to-purchase rate, so partners keep funding. 8) Compliance: no stored-value/PPI-like coin behaviour, no chance mechanics that look like gambling, BBPS routing intact, dark-pattern-free terms.",
+  "follow_up_twists": [
+    {
+      "twist": "The CFO says rewards cost too much and wants to cut the budget by half. How do you decide what to cut?",
+      "response": "Cut by incrementality: stop rewarding cards already paid on CRED and keep rewards for newly moved cards and at-risk members, shift spend from CRED-funded cashback to brand-funded vouchers, and check share of wallet holds in a holdout."
+    },
+    {
+      "twist": "Redemption rate is only 20%. Is that bad?",
+      "response": "Not necessarily - unredeemed rewards cost less, but if members don't value the reward it won't change behaviour; I'd compare incremental share of wallet among redeemers vs non-redeemers and test simpler, higher-value rewards before chasing redemption rate."
+    },
+    {
+      "twist": "A competitor (e.g. a bank app or super.money) offers 1% cashback on all bill payments. What do you watch?",
+      "response": "Share of wallet and churn among our highest-value members, and whether they respond to cash; I wouldn't match flat cashback but would compete on curated, brand-funded rewards and the member experience."
+    }
+  ],
+  "common_pitfalls": [
+    "Giving engagement metrics (DAU, app opens, redemptions) without tying them to why CRED needs the feature - more bills on CRED and monetisable cross-sell.",
+    "Ignoring incrementality: high unlock and redemption rates can mean the reward is just paying members for what they already did.",
+    "Forgetting the cost side: CRED is still net loss-making, so a reward with no cost-per-incremental-payment ceiling is a growth hack, not a success.",
+    "Leaving out gaming and trust: card-to-card round trips and 'reward not credited' complaints can make a premium brand look cheap, and chance-based mechanics now carry real-money gaming risk."
+  ],
+  "skills_tested": [
+    "structuring",
+    "business sense",
+    "quant",
+    "prioritisation",
+    "empathy",
+    "communication"
+  ],
+  "linked_teardown": "None",
+  "uncertain": [
+    "round_and_level",
+    "source_and_verification",
+    "context_as_of",
+    "regulatory_context",
+    "public_data_anchors"
+  ]
+}

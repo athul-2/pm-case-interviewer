@@ -1,0 +1,213 @@
+{
+  "item_name": "Root Cause Analysis (metric drop diagnosis), e.g. 'Swiggy orders down 20% in Bangalore', 'Facebook Groups usage down 15%'",
+  "what_interviewers_test": "Whether the candidate can take an ambiguous metric movement and systematically narrow it to a most-likely cause before theorising, using data rather than guesses, then act on it. Meta grades RCA inside the Analytical Thinking (ex-Execution) round, where the signal is disciplined decomposition, metric fluency and the ability to handle a twist or follow-up case in the same session. Google and Microsoft treat it as an analytical/execution question ('something went wrong, how do you handle it'). Indian consumer-tech loops (Swiggy, Zomato, Flipkart, PhonePe, Meesho) use RCA as a core, often standalone, round alongside guesstimates and expect multi-sided marketplace awareness (customer, restaurant/seller, delivery partner) and domain specifics such as payment-gateway success rate (PhonePe) or festive-sale spikes (Flipkart).",
+  "format_variants": "Almost always live and interviewer-led: the interviewer holds the 'data' and reveals it only when the candidate asks a specific question, so the case is a dialogue rather than a monologue. Time box is typically 15-25 minutes inside a 45-minute Meta Analytical Thinking round (often paired with a goals/metrics or trade-off question, or a twist), and 30-45 minutes for a standalone RCA round at Indian companies (Flipkart loops report 60-90 minute rounds mixing RCA and guesstimates). Data-science variants (Meta DS Product Analytics) may add SQL or sizing; the interviewer there stopped a candidate who touched data before framing. Take-home RCA is rare. In interviewer-led format, quality of questions asked and use of revealed data is weighted more; in a candidate-led monologue variant (some Indian startups), breadth of hypothesis tree and structure carry more weight.",
+  "dimensions": [
+    {
+      "name": "Metric clarification and problem scoping",
+      "definition": "Pins down exactly what moved before diagnosing: metric definition (orders placed vs delivered, DAU definition), magnitude, comparison baseline (WoW, YoY), time shape (sudden vs gradual), geography/platform scope, and product context.",
+      "signal_sought": "Narrow before you theorise; refuses to brainstorm on an undefined metric.",
+      "transcript_evidence": "Quote the candidate's opening clarifying questions, e.g. 'Is this orders placed or delivered?', 'Compared with last week or the same week last year?', 'Was it a sudden drop on one day or gradual?' and any stated assumption when the interviewer declines to answer."
+    },
+    {
+      "name": "Data integrity and measurement check",
+      "definition": "Explicitly verifies the drop is real before investigating the product: logging/instrumentation change, pipeline delay, tracking bug in a new app version, metric definition change, dashboard filter, and normal seasonality or day-of-week effects.",
+      "signal_sought": "Checks the measurement before the product; treats 'is it real?' as a first-class hypothesis.",
+      "transcript_evidence": "Quote lines like 'First I'd confirm this isn't a logging or pipeline issue, e.g. did a new release change how events fire?' or 'Is this normal for this week of the year?'"
+    },
+    {
+      "name": "Structured decomposition and segmentation",
+      "definition": "Breaks the metric into a MECE structure: user funnel/journey stages (open app, browse, cart, pay, accept, deliver), metric formula (orders = users x frequency), and segments (region, platform/app version, new vs returning, payment method, time of day, supply side). Also covers internal vs external cause buckets.",
+      "signal_sought": "Uses segmentation to localise the drop ('where and for whom') and a clear internal/external split, not a flat list.",
+      "transcript_evidence": "Quote the stated structure ('I'll find where in the order journey and for which customers the drop happened'), the funnel stages named, and segment cuts requested, plus the interviewer's answer to each."
+    },
+    {
+      "name": "Hypothesis generation and prioritisation",
+      "definition": "Generates plausible causes across buckets (something broke, product got worse, external change: competitor, regulation, weather, outage) and ranks them by fit with the evidence (e.g. a sudden one-day drop fits 'something broke' best) and by likelihood x impact.",
+      "signal_sought": "Picks a most-likely cause and says why; reasons from the data revealed so far rather than listing eight causes with no favourite.",
+      "transcript_evidence": "Quote ranking statements ('Given it's sudden and Android-only, my top hypothesis is the Thursday release') and explicit eliminations ('Since it's consistent across iOS and Android, a platform bug is unlikely')."
+    },
+    {
+      "name": "Validation plan and evidence use",
+      "definition": "For leading hypotheses, specifies the data or test that would confirm or refute it and that separates competing explanations (crash rate by app version, payment success rate by gateway, delivery time by zone, competitor promo timing), and updates the hypothesis when the interviewer reveals data.",
+      "signal_sought": "Asks for discriminating data; changes course correctly when evidence contradicts the current hypothesis.",
+      "transcript_evidence": "Quote requests for specific cuts/metrics and the candidate's interpretation after each interviewer reply; note any case where the candidate ignored or misread supplied data."
+    },
+    {
+      "name": "Conclusion, fix and prevention",
+      "definition": "Lands on a root cause (or the leading hypothesis with next check), sizes impact where possible, proposes an immediate fix or mitigation and a longer-term prevention (alerting, release guardrails, A/B holdouts, monitoring dashboards), and summarises crisply as if to leadership.",
+      "signal_sought": "Ends with a clear one-sentence recommendation plus prevention, not an open list.",
+      "transcript_evidence": "Quote the final summary ('Orders fell because payment failures on gateway X spiked after Thursday; roll back, then add a payment success-rate alert'), any impact sizing, and prevention steps."
+    },
+    {
+      "name": "Communication and collaboration",
+      "definition": "Signposts the plan up front, thinks out loud, states assumptions explicitly, checks in at transitions, and treats the interviewer as a data partner.",
+      "signal_sought": "Easy-to-follow narrative; assumptions said aloud so they can be credited or challenged.",
+      "transcript_evidence": "Quote roadmap statements ('I'll confirm the metric, localise it, then rank causes'), explicit assumptions, and check-ins ('Does that match what you're seeing?')."
+    }
+  ],
+  "weights": {
+    "summary": "No company publishes numeric weights for RCA. Prep platforms agree on the ordered steps (clarify -> validate data -> segment/decompose -> hypothesise and rank -> validate -> conclude/fix) and repeatedly flag skipping clarification and listing without ranking as the top failures. Weights below are therefore inferred from emphasis frequency across independent prep-platform and interviewer accounts.",
+    "per_dimension": [
+      {"dimension": "Metric clarification and problem scoping", "weight_pct": 15, "provenance": "prep-platform", "source": "https://igotanoffer.com/blogs/product-manager/product-metric-interview-questions ; https://www.theproductfolks.com/product-management-blog/product-manager-case-study-interview-frameworks-50-questions", "note": "IGotAnOffer calls skipping 'define the metric change' a big red flag; TPF's one-line test is 'Do you narrow before you theorise?'. Universal agreement on importance; weight capped at 15 because it is short in time and also gated."},
+      {"dimension": "Data integrity and measurement check", "weight_pct": 10, "provenance": "prep-platform", "source": "https://www.pmmockr.com/blogs/rca-interview-framework-for-sudden-engagement-drops ; https://medium.com/agileinsider/how-i-prepared-for-facebook-pm-interviews-execution-metrics-8067d942a6d1", "note": "Present in PMMockr ('check the measurement before the product'), IGotAnOffer ('data accuracy' as first internal bucket) and a Meta candidate account; HelloPM folds it into 'System' factors. Agreement on presence, disagreement on whether it is a separate step or one bucket."},
+      {"dimension": "Structured decomposition and segmentation", "weight_pct": 20, "provenance": "prep-platform", "source": "https://www.theproductfolks.com/product-management-blog/product-manager-case-study-interview-frameworks-50-questions ; https://hellopm.co/how-to-approach-rca-questions/ ; https://dataford.io/interview-guides/phonepe/product-manager", "note": "All sources: funnel plus segment cuts plus internal/external MECE split. HelloPM (India) and IGotAnOffer lean toward breadth/MECE exhaustiveness ('think of every possible problem'); TPF and PMMockr lean toward narrowing. Recommended 20 rather than higher so breadth alone cannot carry the score."},
+      {"dimension": "Hypothesis generation and prioritisation", "weight_pct": 20, "provenance": "inferred", "source": "https://www.theproductfolks.com/product-management-blog/product-manager-case-study-interview-frameworks-50-questions ; https://stellarpeers.com/meta-product-manager-interview-process/", "note": "TPF: 'Eight possibilities with no favourite is brainstorming, not analysis' and 'listing causes without ranking them' is a scored mistake. Breadth-oriented guides (IGotAnOffer, HelloPM) weight exhaustive brainstorming more than ranking; this rubric resolves toward ranking because it is the insight signal."},
+      {"dimension": "Validation plan and evidence use", "weight_pct": 15, "provenance": "inferred", "source": "https://www.pmmockr.com/blogs/rca-interview-framework-for-sudden-engagement-drops ; https://stellarpeers.com/meta-product-manager-interview-process/ ; https://medium.com/agileinsider/how-i-prepared-for-facebook-pm-interviews-execution-metrics-8067d942a6d1", "note": "PMMockr: 'ask for data that separates two explanations'; StellarPeers: specify which internal or external data isolates the cause; Meta candidate: 'come up with hypothesis and validate', treat interviewer as partner with the data."},
+      {"dimension": "Conclusion, fix and prevention", "weight_pct": 12, "provenance": "prep-platform", "source": "https://igotanoffer.com/blogs/product-manager/product-metric-interview-questions ; https://www.theproductfolks.com/product-management-blog/product-manager-case-study-interview-frameworks-50-questions ; https://www.pmmockr.com/blogs/rca-interview-framework-for-sudden-engagement-drops", "note": "IGotAnOffer 'Conclude', TPF 'Land it' / 'ending without a recommendation' mistake, PMMockr 'choose a recovery step and a way to verify it', StellarPeers 'recommend solutions'. Prevention (monitoring/alerts) is less consistently mentioned - mostly inferred."},
+      {"dimension": "Communication and collaboration", "weight_pct": 8, "provenance": "prep-platform", "source": "https://www.theproductfolks.com/product-management-blog/product-manager-case-study-interview-frameworks-50-questions ; https://hellopm.co/how-to-approach-rca-questions/", "note": "Both list communication/structural thinking as scored criteria; kept low because it is partly double-counted by structure."}
+    ],
+    "total_pct": 100,
+    "disagreements": "Breadth vs narrowing: IGotAnOffer and HelloPM reward an exhaustive MECE root-cause list; TPF and PMMockr (2026) explicitly penalise unranked lists. Meta-specific accounts (Aakash Gupta 2024) describe Analytical Thinking rubric axes as rationale / goals / metrics / trade-offs with no separate RCA axis, so at Meta RCA performance is folded into metric fluency and trade-off judgement [uncertain]. HelloPM adds 'domain knowledge' and 'product sense' as evaluated areas, which Indian loops seem to weight more (role-related knowledge at PhonePe).",
+    "recommended_reasoning": "Put 40% on hypothesis prioritisation plus validation/evidence use because those are where insight differs from recitation and where a small LLM can see whether the candidate reasons from revealed data. Keep clarification and data check together at 25% but enforce them via gates. Structure at 20% so a framework walk-through alone tops out around a 2-3 overall."
+  },
+  "must_pass_gates": [
+    {"gate": "No clarification of the metric (definition, baseline/timeframe, shape) before brainstorming causes", "cap": "Max lean hire (overall 2.5/4); if no recovery after interviewer prompt, max no hire", "source": "https://igotanoffer.com/blogs/product-manager/product-metric-interview-questions (called a big red flag); https://www.finalroundai.com/community/t/meta-data-scientist-product-analytics-e5-2026-the-analytical-execution-round-caught-me-off-guard/91 (interviewer stopped candidate for not framing)"},
+    {"gate": "Never checks whether the drop is real (data/logging/seasonality) at any point", "cap": "Max lean hire [uncertain - inferred severity]", "source": "https://www.pmmockr.com/blogs/rca-interview-framework-for-sudden-engagement-drops"},
+    {"gate": "Jumps to solutions/fixes before identifying a cause", "cap": "Max lean hire", "source": "https://www.interviewpilot.app/interview-guides/product-manager ; https://www.theproductfolks.com/product-management-blog/product-manager-case-study-interview-frameworks-50-questions"},
+    {"gate": "Ends with an unranked list of possible causes and no stated most-likely cause or next check", "cap": "Max lean hire", "source": "https://www.theproductfolks.com/product-management-blog/product-manager-case-study-interview-frameworks-50-questions"},
+    {"gate": "Ignores or contradicts data the interviewer revealed (e.g. keeps pursuing a platform bug after told the drop is identical on iOS and Android)", "cap": "Max no hire / 2 overall [uncertain - inferred]", "source": "inferred from https://medium.com/agileinsider/how-i-prepared-for-facebook-pm-interviews-execution-metrics-8067d942a6d1 (treat interviewer as data partner)"},
+    {"gate": "For marketplace prompts (Swiggy/Zomato/Uber), never considers the supply side (restaurants, delivery partners, drivers)", "cap": "Max lean hire at Indian food/quick-commerce companies [uncertain]", "source": "https://www.theproductfolks.com/product-management-blog/product-manager-case-study-interview-frameworks-50-questions"}
+  ],
+  "score_anchors": {
+    "Metric clarification and problem scoping": {
+      "1": "Starts listing causes immediately; no questions about definition or timeframe. 'Orders could be down because of competition, or the app is slow...'",
+      "2": "Asks one generic question ('What's the timeframe?') but not definition or shape; assumptions unstated.",
+      "3": "Clarifies definition, baseline, magnitude and sudden-vs-gradual; states assumptions when not given. 'I'll assume orders placed, WoW, sudden drop on Thursday.'",
+      "4": "As 3, plus ties clarification to diagnosis ('A sudden one-day drop would point to something breaking, gradual to a competitive or quality shift') and confirms related metrics moved (sessions vs conversion)."
+    },
+    "Data integrity and measurement check": {
+      "1": "Never questions whether the drop is real.",
+      "2": "Mentions 'check data quality' as a throwaway bucket without specifics.",
+      "3": "Names concrete checks: logging change in new release, pipeline delay, definition change, seasonality/day-of-week compared against last year. 'Is this pattern present last Diwali week too?'",
+      "4": "As 3, plus proposes a cross-check from an independent source ('Do backend order counts match client events?') and sequences it first because it is cheap."
+    },
+    "Structured decomposition and segmentation": {
+      "1": "Flat, unstructured list of causes; no funnel or segments.",
+      "2": "Recites a framework (internal/external, or a generic funnel) but segments are generic and not used to localise.",
+      "3": "Maps the specific user journey for this product and requests relevant segment cuts (region, platform/version, new vs returning, payment method, time of day), using results to narrow. 'App opens are flat but checkout fell, so it's after cart.'",
+      "4": "As 3, plus decomposes the metric formula (users x frequency x conversion), covers all sides of the marketplace, and explains why each cut discriminates ('one platform only would point to a release bug')."
+    },
+    "Hypothesis generation and prioritisation": {
+      "1": "One guess with no reasoning, or no hypotheses.",
+      "2": "Many hypotheses across buckets but no ranking: 'It could be X, Y, Z, W...'",
+      "3": "Ranks top 2-3 hypotheses with reasons tied to evidence. 'Sudden, Bangalore-only, Android-only: the Thursday release is my top suspect, then a local payment gateway issue.'",
+      "4": "As 3, plus explicitly eliminates hypotheses as data arrives, weighs likelihood vs impact, and notes interacting causes (e.g. rain plus partner shortage at dinner peak)."
+    },
+    "Validation plan and evidence use": {
+      "1": "No validation; asserts a cause as fact.",
+      "2": "Says 'I'd look at the data' without naming which metric or cut.",
+      "3": "Names discriminating data for each top hypothesis (crash rate by app version, payment success rate by gateway, delivery ETA by zone) and correctly interprets interviewer answers.",
+      "4": "As 3, plus designs a check that separates two explanations at once, updates course gracefully on surprising data, and may size impact ('if 30% of the drop is Android 5.2 users, rollback recovers ~X orders')."
+    },
+    "Conclusion, fix and prevention": {
+      "1": "No conclusion; runs out of time mid-list.",
+      "2": "Generic conclusion or fix without a cause ('improve the app experience').",
+      "3": "States the root cause or leading hypothesis, an immediate fix (rollback, gateway failover, incentive for partners) and the next check if unconfirmed.",
+      "4": "As 3, plus prevention (alerting, staged rollout, guardrail metrics), communication to stakeholders, and a crisp leadership summary in one or two sentences."
+    },
+    "Communication and collaboration": {
+      "1": "Rambling, no signposting; interviewer cannot follow.",
+      "2": "Some structure but assumptions silent; rarely checks in.",
+      "3": "Gives a roadmap upfront, thinks aloud, states assumptions, checks in at transitions.",
+      "4": "As 3, plus concise summaries at each narrowing step and treats interviewer as data partner with targeted, purposeful questions."
+    }
+  },
+  "level_expectations": {
+    "APM / entry": "Solid (3) = clean clarification, a correct funnel and a few relevant segments, at least a ranked top hypothesis and a sensible fix. Data-quality check and prevention may be lighter; hints are expected and penalised less. Indian APM/associate PM rounds weight structure and guesstimate-style quantification heavily.",
+    "PM (Meta IC5 / Google L5 / Flipkart PM)": "Solid = all of the APM bar, plus explicit data-integrity check, discriminating validation data, correct updating on revealed data, and a fix with prevention. Should handle a twist (e.g. 'a second metric went up') without restarting.",
+    "Senior PM (IC6+ / L6+ / Swiggy-Zomato Senior PM)": "Solid = drives the case with minimal hints, sizes impact, considers second-order and ecosystem effects (supply side, other surfaces, cannibalisation), frames trade-offs of the fix (rollback vs revenue), and proposes organisational prevention (monitoring, release process). Breadth without prioritisation is scored more harshly at this level. [uncertain: level split is inferred; no source publishes per-level RCA anchors]"
+  },
+  "green_flags": [
+    "Asks precise definition questions first ('placed or delivered?', 'WoW or YoY?', 'sudden or gradual?')",
+    "Checks whether the drop is real (logging, pipeline, seasonality) before investigating the product",
+    "States a plan upfront: confirm metric, localise where and for whom, then rank causes",
+    "Uses funnel stages specific to the product and segment cuts that discriminate between causes",
+    "Names a most-likely cause and explains why it fits the evidence shape (sudden, single-region, single-platform)",
+    "Requests specific data that separates two hypotheses and updates correctly on the interviewer's answer",
+    "Considers all sides of a marketplace (customer, restaurant/seller, delivery partner/driver)",
+    "Lands with a one-sentence diagnosis, immediate fix and a prevention mechanism"
+  ],
+  "red_flags": [
+    "Brainstorms causes before defining the metric or timeframe",
+    "Recites internal/external or a generic funnel framework without tailoring it to the product or using it to narrow",
+    "Lists eight-plus causes with no ranking or favourite",
+    "Jumps to solutions (redesign, discounts) before a cause is identified",
+    "Ignores or misreads data the interviewer provides, or keeps asking questions already answered",
+    "Asks too many or irrelevant clarifying questions with no stated purpose",
+    "Never considers data quality or seasonality",
+    "Runs out of time without a conclusion or recommendation"
+  ],
+  "recitation_vs_insight": "Recitation: the candidate announces 'internal vs external factors' or a generic pirate-metrics funnel and walks every bucket with equal depth regardless of what the interviewer revealed; segments are a fixed checklist (region, device, age) asked all at once; hypotheses are generic ('competition', 'bug', 'seasonality') and never ranked. Insight: the structure is tailored to the product's actual journey and economics (e.g. Swiggy's three-sided marketplace, PhonePe payment success rates); each question has a stated purpose ('if it's one platform, that points to a release'); the candidate reasons from the evidence shape to prune branches and ends up discussing only 1-3 live hypotheses; eliminations are explicit. Grader test: for each segment/question asked, did the candidate later use the answer? A high proportion of unused questions indicates recitation. Also score down if the conclusion would be identical regardless of what data the interviewer supplied.",
+  "process_signals": {
+    "clarifying_questions": "Expect 3-6 targeted questions up front covering definition, baseline, magnitude, shape and scope; HelloPM flags too many or irrelevant questions as a mistake. Quality (each linked to a hypothesis) matters more than count. Unanswered questions should be converted into stated assumptions.",
+    "check_ins": "One at the plan stage and one before concluding is good practice; constant permission-seeking is a mild negative.",
+    "use_of_interviewer_data": "Central to scoring: in this interviewer-led format each revealed fact should change the candidate's next move. Ignoring revealed data is a gate-level failure.",
+    "response_to_hints_and_pushback": "Strong candidates incorporate a hint and articulate why it changes the ranking; weak ones restate the framework. Interviewer twists (e.g. a second case or a counter-metric moving) are expected at Meta.",
+    "hint_penalty": "Suggested: a nudge to clarify or to check data quality caps that dimension at 2; a directional hint that reveals the root-cause area lowers prioritisation/validation by 1 point; more than two substantive rescues caps overall at lean hire. [uncertain - inferred, no published penalty]"
+  },
+  "time_allocation": "For a ~20-minute RCA slot: clarify and confirm metric 2-4 min; data-quality/seasonality check 1-2 min; decomposition and segmentation 5-7 min; hypothesis ranking and validation 5-7 min; conclusion, fix and prevention 2-3 min. For a 40-minute standalone Indian RCA round, roughly double each. Penalty: running out of time before landing a cause and recommendation caps Conclusion at 1 and overall at lean hire; spending more than ~25% of time on clarification alone is a pacing negative (Aakash Gupta notes candidates losing trade-off time at the end of Meta Analytical Thinking scores 0 on that area).",
+  "hire_thresholds": {
+    "strong_hire": "Weighted average >= 3.5 with no dimension below 3 and no gates triggered; drove the case with at most one minor hint.",
+    "hire": "Weighted average 3.0-3.49, prioritisation and validation both >= 3, no gates triggered.",
+    "lean_hire": "Weighted average 2.5-2.99, or any single gate triggered with otherwise solid work.",
+    "no_hire": "Weighted average < 2.5, or ignoring interviewer data, or two or more gates triggered.",
+    "sources_and_caveats": "Thresholds are inferred; Meta and Google use a 4-point hire scale (strong no hire to strong hire) per interviewer feedback, but numeric mappings are not published. Meta may offer a retake if one first-round interview is weak (StellarPeers). Senior levels should require prioritisation and validation >= 3.5 for hire. [uncertain]"
+  },
+  "company_differences": {
+    "Meta": "RCA sits inside the 45-minute Analytical Thinking round (rebrand of Product Execution, 2024) next to goal-setting, metrics and trade-offs; expect a twist or second case. Grading emphasises metric fluency (north star, counter-metrics) and trade-off judgement; an RCA answer that also names guardrail metrics for the fix scores better. DS variant interviewers stop candidates who touch data before framing.",
+    "Google": "Asked in analytical/execution or metrics interviews (e.g. YouTube watch time drop). Hiring committee reads written feedback, so clear structure and explicit reasoning matter. [uncertain - few 2022+ RCA-specific accounts]",
+    "Amazon": "RCA tends to appear inside Leadership Principle discussions (Dive Deep, Ownership) or as a metrics follow-up; expect deeper interrogation of data mechanisms and a mechanism-based prevention. [uncertain - inferred]",
+    "Microsoft": "Product Alliance describes analytical questions as root-causing a problem found in metrics, sometimes framed as handling a problem while leading the team ('something went wrong - how do you handle it?'), so stakeholder/team response is part of the answer.",
+    "Uber": "Classic prompts are cancellations up or active riders down; two-sided marketplace (riders and drivers), supply-demand, ETA and surge are expected considerations. [uncertain - based on prep-platform examples]",
+    "Indian companies (Swiggy, Zomato, Flipkart, PhonePe, Meesho)": "RCA is a core, often standalone round together with guesstimates. Swiggy/Zomato expect all three marketplace sides to be checked and local factors (rain, city shutdowns, zone-level partner availability). Flipkart prompts often revolve around festive-sale spikes and delivery slippage. PhonePe evaluates fintech domain depth: payment gateway success rates, transaction funnels, UPI/bank downtime, plus quantitative rigour. Indian prep platforms (HelloPM) list domain knowledge as an evaluated area, implying higher weight on domain specifics than in US loops; candidate-led monologues with the interviewer only confirming or denying are more common. [uncertain - prep-platform level evidence]"
+  },
+  "calibration_exemplars": {
+    "score_1": "Prompt: 'Swiggy orders dropped 20% in Bangalore.' Candidate immediately says it might be Zomato discounts, bad weather or app bugs, suggests running a promotion, asks no questions, never checks data, and ends without a cause.",
+    "score_2": "Candidate asks the timeframe, announces internal vs external factors and walks a generic checklist (tech, marketing, competition, seasonality, regulation), asks for region/device/age segments all at once, but does not use the answers to narrow; ends with 'it could be any of these, I'd investigate further'.",
+    "score_3": "Candidate clarifies orders placed, WoW, sudden Thursday drop; checks logging and seasonality; maps the journey and finds checkout down while app opens are flat; asks for platform and payment-method cuts, learns it is one gateway; ranks the payment failure top; proposes gateway failover and a success-rate alert.",
+    "score_4": "As 3, plus decomposes orders into users x conversion x frequency, checks restaurant and delivery-partner supply, separates release bug vs gateway outage with a single cut (failure rate by gateway and app version), sizes the recoverable orders, recommends failover plus staged-rollout guardrails, and delivers a two-sentence leadership summary; handles a twist (AOV went up) by explaining the mix shift."
+  },
+  "coachable_feedback": {
+    "Metric clarification and problem scoping": "Before saying any cause, ask three questions every time: exact definition, comparison baseline, and sudden vs gradual; say your assumption aloud if unanswered.",
+    "Data integrity and measurement check": "Make 'Is the drop real?' your first hypothesis: name one logging check and one seasonality comparison.",
+    "Structured decomposition and segmentation": "Draw the product's actual journey and pick only segment cuts that would change your hypothesis; say what each result would imply.",
+    "Hypothesis generation and prioritisation": "After each data point, say your current top hypothesis and what you just ruled out.",
+    "Validation plan and evidence use": "For your top two hypotheses, name the one metric cut that would tell them apart.",
+    "Conclusion, fix and prevention": "Reserve the last 3 minutes for a one-sentence diagnosis, one immediate fix and one prevention mechanism.",
+    "Communication and collaboration": "Open with a one-line roadmap and summarise briefly each time you narrow the problem."
+  },
+  "llm_grading_notes": [
+    "Interviewer-supplied facts: in RCA the interviewer reveals the cause area; the grader must credit the candidate only for asking the discriminating question and interpreting the answer, never for the fact itself. Instruct the model to attribute each fact to speaker turns.",
+    "Length bias: long, exhaustive cause lists look thorough; explicitly score down unranked lists and require a quoted ranking statement for prioritisation >= 3.",
+    "Framework keyword bias: phrases like 'MECE', 'internal vs external', 'funnel' should not raise scores unless followed by product-specific content and narrowing; add a check 'was the answer to each segment question used later?'",
+    "Leniency: small models default to 3s; force evidence quotes per dimension and require a quote for any score >= 3, defaulting to 2 when no quote exists.",
+    "Gate detection: run gate checks as separate yes/no questions before scoring (did the candidate clarify before brainstorming? did they ever check data validity? did they name a most-likely cause?) to avoid the cap being forgotten.",
+    "Order sensitivity: clarification must precede brainstorming; ask the model to locate the turn index of the first clarifying question vs first hypothesis.",
+    "Time/truncation: if the transcript ends before a conclusion, score Conclusion as 1 rather than inferring intent.",
+    "Context window: for Qwen3 8B, pass the transcript with numbered turns and grade dimensions in separate calls or a compact JSON schema to reduce drift; include the 1-4 calibration exemplars as few-shot."
+  ],
+  "sources": [
+    {"title": "Product Manager Case Study Interview: Frameworks & 50+ Questions (The Product Folks)", "url": "https://www.theproductfolks.com/product-management-blog/product-manager-case-study-interview-frameworks-50-questions", "date": "2026-10-14", "verification": "prep platform (India)"},
+    {"title": "RCA interview framework for sudden engagement drops (PMMockr)", "url": "https://www.pmmockr.com/blogs/rca-interview-framework-for-sudden-engagement-drops", "date": "2026-10-11", "verification": "prep platform"},
+    {"title": "How to Crack Product Metrics Questions in PM Interviews - DEC method (IGotAnOffer)", "url": "https://igotanoffer.com/blogs/product-manager/product-metric-interview-questions", "date": "2026-11-02 (updated)", "verification": "prep platform"},
+    {"title": "Mastering RCA Questions in Product Management Interviews (HelloPM)", "url": "https://hellopm.co/how-to-approach-rca-questions/", "date": "2024-04-24", "verification": "prep platform (India)"},
+    {"title": "Cracking Meta's New 'Analytical Thinking' PM Interview (Aakash Gupta)", "url": "https://aakashgupta.medium.com/cracking-metas-new-analytical-thinking-pm-interview-insights-and-tips-ab3b0b8f40c6", "date": "2024-06-19", "verification": "interviewer account / insider-sourced prep content"},
+    {"title": "Crack the Product Execution Interview (Aakash Gupta newsletter)", "url": "https://www.news.aakashg.com/p/crack-the-product-execution-interview", "date": "2023-11-14 (modified 2026-08-31)", "verification": "prep platform (paywalled; only metadata read)"},
+    {"title": "Meta PM Interview Process: Rounds, Questions (StellarPeers)", "url": "https://stellarpeers.com/meta-product-manager-interview-process/", "date": "2026", "verification": "prep platform"},
+    {"title": "How I prepared for Facebook PM interviews: Execution & Metrics (Agile Insider)", "url": "https://medium.com/agileinsider/how-i-prepared-for-facebook-pm-interviews-execution-metrics-8067d942a6d1", "date": "pre-2022 [uncertain]", "verification": "candidate account (background)"},
+    {"title": "Meta Data Scientist (Product Analytics) E5 2026 - analytical execution round (Final Round AI community)", "url": "https://www.finalroundai.com/community/t/meta-data-scientist-product-analytics-e5-2026-the-analytical-execution-round-caught-me-off-guard/91", "date": "2026-06-14", "verification": "candidate account"},
+    {"title": "PhonePe Product Manager Interview Guide (Dataford)", "url": "https://dataford.io/interview-guides/phonepe/product-manager", "date": "2026-10-05", "verification": "prep platform"},
+    {"title": "Microsoft PM Interview Cheat Sheet (Product Alliance)", "url": "https://www.productalliance.com/guides/microsoft-pm-interview-cheat-sheet", "date": "undated [uncertain]", "verification": "prep platform"},
+    {"title": "Product Manager Interview Guide (InterviewPilot)", "url": "https://www.interviewpilot.app/interview-guides/product-manager", "date": "undated [uncertain]", "verification": "prep platform"}
+  ],
+  "uncertain": [
+    "weights.disagreements (Meta rubric axes)",
+    "must_pass_gates (data-check, ignored-data and supply-side caps)",
+    "level_expectations",
+    "process_signals.hint_penalty",
+    "hire_thresholds",
+    "company_differences (Google, Amazon, Uber, Indian companies)",
+    "sources (Agile Insider date, Product Alliance date, InterviewPilot date)"
+  ]
+}

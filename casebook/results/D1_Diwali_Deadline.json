@@ -1,0 +1,222 @@
+{
+  "pun_title": "Diwali Deadline",
+  "case_type": "Situational",
+  "asked_at": "By the Authors (synthetic, Flipkart/Myntra style)",
+  "subject_company": "Flipkart (Big Billion Days). The same case works for Myntra's Big Fashion Festival, which runs alongside BBD.",
+  "round_and_level": "PM round 2 or hiring-manager round (execution / situational), PM and SPM levels; also used as a lighter APM campus question. Synthetic, so the round placement is the authors' suggestion. [uncertain]",
+  "difficulty": "Medium - the structure (scope, options, decision, success) is simple, but scoring well needs you to separate what the sale actually needs from what the feature promised, respect a code freeze, and say clearly what you will NOT do (add engineers, skip load tests).",
+  "market_and_industry": "India; horizontal e-commerce marketplace (electronics, mobiles, appliances, fashion); festive-sale peak where about 60% of orders come from non-metro (Tier-2/3) shoppers on mid-range Android phones; Hindi and other vernacular interfaces; UPI, cards with bank offers, EMI and Pay Later at checkout.",
+  "time_box_minutes": "15-20",
+  "exact_prompt": "You are the PM for a key feature planned for Flipkart's Big Billion Days. It is two weeks before the sale, and engineering tells you the feature will slip. What do you do?",
+  "source_and_verification": "Level: synthetic (written by the authors in a Flipkart/Myntra style). No dated report of this exact prompt at Flipkart was found. Closest public analogues: Dataford 'How would you handle a situation where engineering tells you a key feature will delay the launch by six months' (https://dataford.io/questions/how-would-you-handle-a-situation-where-engineering-tells-you-a-key-feature-will-delay-the-launch-by-six-months); Exponent 'Approach stakeholders when feature delayed' (https://www.tryexponent.com/questions/1962/approach-stakeholders-when-feature-delayed); PracHub 'PM behavioral: reducing launch scope to hit a date and handling what was deferred' (https://prachub.com/interview-questions/pm-behavioral-reducing-launch-scope-to-hit-a-date-and-handling-what-was-deferred) and 'Getting a launch back on track when a partner team you depend on falls behind' (https://prachub.com/interview-questions/getting-a-launch-back-on-track-when-a-partner-team-you-depend-on-falls-behind). Flipkart PM interview guides (Interview Query https://www.interviewquery.com/interview-guides/flipkart-product-manager ; Institute of Product Leadership https://www.productleadership.com/flipkart-product-manager-interview-questions/) list execution and launch questions in this family. Year: 2026 (synthetic). NextLeap, The Product Folks and AmbitionBox were not searchable in this session.",
+  "context_as_of": "As of Nov 2026. 1) Big Billion Days 2026 ran from 9 Oct (early access 8 Oct for Plus, Black and Flipkart credit-card members) to about 19 Oct; bank offers of up to 10% on Axis and ICICI cards (FoneArena, https://www.fonearena.com/blog/492423/flipkart-big-billion-days-sale-2026-date.html ; YourStory, https://yourstory.com/2026/10/flipkart-big-billion-days-sale-oct-9-myntra-cleartrip-announce-similar-sales). Myntra and Cleartrip ran parallel sales. 2) Opening hour: 6.3 million concurrent users in one minute; new customers +34%; about 60% of day-one orders from non-metro cities; 31% of transacting sellers did at least 2x their usual business; Flipkart Minutes orders 3.5x regular days in the first hour (company-reported; BW Retail World https://bwretailworld.com/sector/e-commerce-marketplaces/flipkart-big-billion-days-opens-with-6-3-mn-concurrent-users ; Outlook Business https://www.outlookbusiness.com/corporate/non-metros-drive-flipkarts-the-big-billion-days-sale-on-day-1-with-60-pc-of-orders). 3) Demand was soft in value: Counterpoint saw smartphone sales -16% YoY in the first three days; Datum put early festive online sales 7-10% below 2025, partly because 2025 was lifted by the 22 Sep 2025 GST cuts; Counterpoint said traffic was strong but conversions weak (Inc42, https://inc42.com/features/festive-sales-see-shoppers-log-in-but-hold-back-on-big-ticket-purchases/). 4) Flipkart Group FY26 revenue about Rs 1.46 lakh cr (+18%), net loss Rs 8,468 cr; IPO deferred with an EBITDA-profitability target for FY27, so festive features are judged on profitable growth, not just GMV (Inc42 https://inc42.com/buzz/flipkart-to-defer-ipo-till-2028-eyes-ebitda-profitability-in-fy27/). 5) Flipkart's stated values: audacity, bias for action, customer-first with integrity, inclusion (Flipkart Stories, https://stories.flipkart.com/flipkart-values-ambassadors). 6) Diwali 2026 was Sun 8 Nov, so a second 'Big Diwali' leg after BBD is a natural fallback date. Stale-risk: sale end date reported as 19 Oct by some outlets; all traffic figures are company-reported; the 'two weeks before' date (about 24-25 Sep 2026) is the authors' framing. [uncertain]",
+  "regulatory_context": "Not the core of the case, but these shape which scope cuts are safe: 1) CCPA Guidelines for Prevention and Regulation of Dark Patterns (Nov 2023) list 13 patterns including false urgency, basket sneaking and drip pricing; a rushed 'countdown' or 'only 2 left' widget built to save the date must show genuine data. 2) Consumer Protection (E-Commerce) Rules 2020: seller details, total price and return/refund terms must be clear; marketplace neutrality. 3) FDI policy (Press Note 2 of 2018): an inventory-free marketplace must not set or influence seller prices, so a 'price-lock' feature must be funded and framed carefully (seller-funded deal or platform coupon). 4) RBI rules: card tokenisation (no stored card numbers), e-mandate and pre-authorisation limits, and the 2022 digital lending guidelines for Pay Later/EMI; any feature that takes a pre-payment or blocks an amount needs payments and compliance sign-off, which is often the long pole. 5) DPDP Act 2023 and Rules (notified Nov 2025, phased in): price-drop alerts and push notifications need valid consent and purpose limitation. 6) NPCI UPI limits and peak-load behaviour (bank downtime at sale peaks) matter for any checkout change. [uncertain]",
+  "public_data_anchors": "1) 6.3 million concurrent users in one minute at BBD 2026 opening; new customers +34% (BW Retail World, Oct 2026, https://bwretailworld.com/sector/e-commerce-marketplaces/flipkart-big-billion-days-opens-with-6-3-mn-concurrent-users). 2) About 60% of day-one BBD orders from non-metros (Outlook Business, Oct 2026). 3) Redseer: first leg of festive sales (8-18 Oct 2026) about USD 7-8 bn online GMV, about 100 mn shoppers, 350 mn+ orders, consumption about 3x a normal day; Tier-2 and smaller towns about two-thirds of shoppers (Inc42, Oct 2026). 4) Rs 24,000 cr of e-commerce sales in the first two days (Redseer via YourStory, Oct 2026, https://yourstory.com/2026/10/ecomm-firms-goods-worth-rs-24k-cr-first-two-days-festive-sales-redseer). 5) Smartphone sales -16% YoY in the first three days (Counterpoint via Inc42, Oct 2026). 6) Flipkart Minutes about 1,200 dark stores in 150+ cities at BBD 2026 launch; orders 3.5x regular days in the first hour (local blinkit teardown C3_Flipkart_Minutes.json, citing YourStory and medianews4u, Oct 2026). 7) Flipkart Group FY26 revenue about Rs 1.46 lakh cr, net loss Rs 8,468 cr (Inc42/Outlook Business, 2026). Derived (illustrative): Rs 24,000 cr in 2 days is about Rs 500 cr an hour across the industry; if Flipkart Group holds about half, every hour of a broken checkout at peak is worth well over Rs 100 cr GMV, which is why freeze and load-test rules beat feature dates. [uncertain]",
+  "framework_applied": "Situational: SODS (frameworks.md section 3). Values first: Flipkart's audacity, bias for action and customer-first with integrity show up as moving fast on a scope cut, while refusing to ship something that could break checkout at 6 mn concurrent users. S - Scope: find out what the feature is for (the sale goal it serves), why it is slipping (scope, dependency, quality or load), the hard dates (code freeze about 7 days before the sale, load test, early access 8 Oct) and how success is measured (BBD conversion and GMV per session, not 'feature shipped'). O - Options: (A) ship full scope on time by adding people or cutting the load test - speed vs quality; (B) cut scope to a smaller v1 behind a flag for an early-access cohort - coverage vs focus; (C) move the feature to the Big Diwali leg and fill the BBD gap with an existing capability - momentum vs confidence. D - Decision: B, with C as the fallback for the parts that touch payments; explicitly NOT adding engineers in week 13, NOT skipping the freeze or load test, NOT faking urgency. S - Success: hypothesis that the v1 (price-drop alerts on wishlisted items) recovers most of the planned conversion lift; leading signals are alert opt-in, alert-to-session and wishlist-to-order conversion in early access, plus crash-free and latency guardrails; double down by widening to all users on day 1, adjust by narrowing to categories, re-prioritise by switching the flag off.",
+  "clarifying_questions": [
+    {
+      "q": "What is the feature, and which sale goal does it serve - GMV, new customers, conversion, or a partner commitment?",
+      "a": "'Deal Lock': users wishlist items before the sale, get price-drop alerts, and can pay Rs 99 to lock the BBD price for 48 hours. The goal is higher conversion from the pre-sale wishlist, where most electronics intent sits."
+    },
+    {
+      "q": "Why is it slipping - is it scope, an external dependency, quality, or load capacity?",
+      "a": "Alerts and wishlist sync are done. The Rs 99 pre-payment and refund flow depends on the payments team, which needs about 3 more weeks plus compliance sign-off, and it has not been load-tested."
+    },
+    {
+      "q": "What are the hard dates - code freeze, load test, early access?",
+      "a": "Code freeze is 7 days before the sale; the final load test is 9 days before. Early access for Plus and Black members starts one day before the main sale."
+    },
+    {
+      "q": "Has anything been promised externally - brands, banks, a TV campaign that names the feature?",
+      "a": "Two smartphone brands planned 'lock your price' banners, and the marketing film mentions 'lock your deal' in one line. The banks are not involved."
+    },
+    {
+      "q": "How will leadership judge success - the feature launching, or the sale metric it moves?",
+      "a": "The category head cares about electronics conversion and GMV per session during the first 48 hours."
+    },
+    {
+      "q": "Is there a feature-flag and kill-switch setup, and can we target cohorts such as Plus/Black or specific categories?",
+      "a": "Yes, flags exist with targeting by membership tier, category and app version."
+    },
+    {
+      "q": "Do we have any baseline evidence for the lift - a test or last year's data?",
+      "a": "A small 2-week test of price-drop alerts in July lifted wishlist-to-order conversion by about 18% relative. The lock has never been tested."
+    }
+  ],
+  "interviewer_data_reveals": "All numbers are illustrative (invented for teaching) unless a source is cited.\n\nExhibit 1 - Status of Deal Lock components (illustrative):\n| Component | Status | Days left | Owner | Risk |\n| Wishlist sync + price-drop alerts | Built, QA passing | 2 | Feature team | Low |\n| Alert push/SMS/WhatsApp at scale | Built, needs rate-limit test | 3 | Notifications | Medium |\n| Rs 99 lock pre-payment + auto-refund | 40% built | 18 + compliance | Payments | High |\n| Lock-price honouring at checkout | Not started | 10 | Checkout | High |\n\nExhibit 2 - Calendar (illustrative, BBD 2026 dates are real):\n| Date | Event |\n| T-14 (about 24 Sep) | Today |\n| T-9 (about 29 Sep) | Final load test |\n| T-7 (1 Oct) | Code freeze |\n| T-1 (8 Oct) | Early access, Plus/Black/credit card |\n| T (9 Oct) | BBD main sale (real: FoneArena, YourStory) |\n| about 1 Nov | Big Diwali leg (illustrative) |\n\nExhibit 3 - Where the expected lift comes from (illustrative, from the July test and planning model):\n| Driver | Share of planned lift |\n| Price-drop alert brings the user back | about 70% |\n| Lock removes fear of stock-out | about 30% |\n\nExhibit 4 - Peak load reference (real): 6.3 mn concurrent users in one minute at BBD 2026 opening (BW Retail World, Oct 2026). Planned alert volume for wishlisted electronics: about 4 crore notifications in the first hour (illustrative).\n\nExhibit 5 - Option comparison the candidate builds (illustrative):\n| Option | Lift kept | Peak-day risk | Promise kept |\n| A: full scope, add engineers, shorten load test | 100% if it works | High | Yes |\n| B: alerts only, Plus/Black first, lock later | about 70% | Low | Partly (reword) |\n| C: move all of it to Big Diwali | 0% at BBD | None | No |",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "You're the PM for a feature planned for Big Billion Days. It's two weeks out and your engineering lead says it will slip. What do you do?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Before I answer, a word on how I'll approach it. At Flipkart I'd want to show bias for action without betting the sale on something untested, because at 6 million concurrent users a checkout bug is the most expensive thing we can ship. I'll use four steps: scope the problem, lay out options with their trade-offs, make a decision including what I won't do, then define success and the triggers to change course. Can I start with a few questions?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Go ahead."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "First, what's the feature and what sale goal is it serving? I want to protect the goal, not the feature."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "It's called Deal Lock. Users wishlist items before the sale, get price-drop alerts, and can pay Rs 99 to lock the BBD price for 48 hours. The goal is better conversion of pre-sale wishlist intent in electronics."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Got it. Second, why is it slipping? Is the whole feature late, or one part of it? And is the cause scope, a dependency on another team, quality, or load?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Here's the status. [Shares Exhibit 1.] Alerts are basically done. The Rs 99 pre-payment and refund is 40% built, sits with the payments team, needs compliance sign-off, and checkout hasn't started honouring the lock price."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So 'the feature slips' really means the payment half slips. The alerts half is two to three days away. What are the hard dates?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "[Shares Exhibit 2.] Load test at T-9, code freeze at T-7, early access the day before the sale."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That leaves about 5 working days before the load test. The payments and checkout pieces need 18 and 10 days, so they won't make it whatever we do. Has anything been promised outside the team, like brand banners or a TV spot?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Two phone brands planned 'lock your price' banners, and the marketing film says 'lock your deal' in one line."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Last ones. How is success judged, and do we have evidence for where the lift comes from?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "The category head watches electronics conversion and GMV per session in the first 48 hours. [Shares Exhibit 3.] The July test showed alerts alone lifted wishlist-to-order conversion about 18%. Roughly 70% of the planned lift comes from the alert, 30% from the lock."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's the key number. Let me summarise the scope. The goal is converting wishlist intent in the first 48 hours. Most of the value, about 70%, is in the part that's nearly done. The part that's late touches money movement, RBI-regulated refunds and checkout pricing, at the one time in the year when checkout can't break. So this isn't really 'ship or slip'. It's which slice of the feature is worth the risk."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Fine. What are your options?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Three, each with a trade-off.\nOption A - Full scope on time: add engineers from other teams, run payments QA in parallel and shorten the load test. Trade-off: speed over quality. Brooks's law says late hires slow things down, and skipping the load test risks the checkout that carries about Rs 500 crore an hour of industry sales on day one.\nOption B - Cut to a v1: ship wishlist plus price-drop alerts behind a flag, start with Plus and Black members in early access, move the lock to the Big Diwali leg. Trade-off: focus over coverage. We keep about 70% of the lift and lose the stock-out reassurance.\nOption C - Move all of it to Big Diwali and use existing tools at BBD, such as standard wishlist notifications. Trade-off: confidence over momentum. Zero risk, but we give up the lift during the biggest sale of the year."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Which one?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Option B. Here's why. It keeps most of the value: the July test is real evidence for alerts, while the lock has never been tested. It keeps the risk away from payments and checkout during the freeze. And it gives us a real test of the lock later, in a smaller sale where a bug costs less."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "And what are you not doing?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Four things. I'm not adding engineers to payments in the last two weeks. I'm not asking for an exception to the code freeze or the load test. I'm not shipping a fake 'price locked' badge or countdown to cover the gap, because that's false urgency under the CCPA dark-patterns guidelines and it breaks the customer-first-with-integrity value. And I'm not hiding the slip. Leadership hears it from me today, with a plan."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Walk me through the next 48 hours."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Day 0: a 30-minute meeting with the engineering lead, payments PM, QA and the category head to agree the cut, written as a one-page decision note: what ships, what moves, why, and the risks.\nDay 1: tell marketing and brand partnerships. The banners change from 'lock your price' to 'get alerted the second your price drops'. If the film can't be re-cut, we swap the end card or drop that line, because promising something we don't ship is worse than a weaker line.\nDay 1-3: the notifications team rate-limit tests about 4 crore alerts in the first hour, staggered by category so SMS and WhatsApp gateways and our own servers aren't flooded at 12 a.m.\nT-9: the alerts path goes into the main load test. The freeze is at T-7 with the flag off by default."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What about the payments team? They've already built 40%."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That work isn't wasted. They keep building after the freeze on a separate branch with a target of the Big Diwali leg, with compliance sign-off on refund timelines and a proper test. I'd also protect their time during BBD, because they'll be on call for peak payment issues anyway."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How do you know the v1 worked?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "The hypothesis: price-drop alerts to wishlisters raise electronics wishlist-to-order conversion by at least 10% relative in the first 48 hours. The July test showed 18%, and I'm discounting for sale noise. Leading signals in early access: alert opt-in rate, alert delivery within 5 minutes of the price drop, alert-to-session rate and wishlist-to-order conversion against a 10% holdout. Guardrails: app crash-free sessions, page latency, notification opt-out and uninstall rate, and customer contacts about 'price shown vs price charged'."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "And the decision rules?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Double down: if early access shows the lift and guardrails hold, widen to all users at 12 a.m. on sale day, keeping the 10% holdout. Adjust: if opt-outs spike, cap alerts to one per user per hour and keep only high-intent categories like phones and TVs. Re-prioritise: if crash-free sessions or latency move at all, turn the flag off. A kill switch costs us a few points of lift; a slow app costs us the sale."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Twist: the category head says the brands are paying for 'lock your price' placements, and wants the lock even if it's half-done."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'd separate the commercial promise from the feature. Option one: a seller-funded 'pre-book' coupon that already exists in our deals tooling, which gives brands a similar story without new payment code. Option two: give the brands the Big Diwali lock launch as a make-good. What I won't do is ship an untested refund flow at peak. If payments fail, we refund late, and that's an RBI and consumer-trust problem. I'd take this to the business head together with the category head, so it's a joint decision with the risk written down."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Last one. What would you do differently next year?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Three things. Pull the payments dependency forward and give it its own go/no-go date at T-30, not T-14. Split festive features into an 'alerts-type' layer that can ship late and a 'money-movement' layer that must be done by T-21. And review the marketing copy against what's in the build at T-21 so the film never names an unbuilt feature."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Summarise."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Ship price-drop alerts behind a flag to Plus and Black members in early access, then widen on sale day if it works. Move the Rs 99 lock to Big Diwali. That keeps about 70% of the planned lift, keeps payments and checkout frozen, and replaces the brand promise honestly. We watch alert-driven conversion against a holdout, with crash-free sessions and opt-outs as guardrails, and the kill switch is there if they move. I'd rather ship 70% of the value safely than 100% of the risk."
+    }
+  ],
+  "answer_and_recommendation": "Ranked options: (1) RECOMMENDED - Option B, scope cut: ship wishlist sync plus price-drop alerts behind a flag, Plus/Black early access first, widen to all users on sale day if guardrails hold; move the Rs 99 lock to the Big Diwali leg. Keeps about 70% of planned lift (illustrative) with low peak-day risk. (2) Option C, move everything to Big Diwali - zero risk, zero BBD lift; the fallback if the alerts path fails the load test. (3) Option A, full scope with extra engineers and a shortened load test - rejected: late headcount slows teams, and it puts untested money movement on a checkout carrying peak sale traffic. Not doing: no code-freeze exception, no skipped load test, no fake urgency badge, no hiding the slip. Risks and mitigation: brand promise broken - reword banners, offer a seller-funded pre-book coupon or a Big Diwali make-good; notification flood at 12 a.m. - stagger by category and rate-limit; alerts annoy users - frequency cap and opt-out monitoring; payments team demoralised - keep building on a branch with a dated Big Diwali target. Closing line: 'I'd rather ship 70% of the value safely at Big Billion Days than 100% of the risk - alerts go live behind a flag, the lock launches at Big Diwali, and everyone hears it from me today.'",
+  "counter_metrics_guardrails": "Primary: electronics wishlist-to-order conversion and GMV per session in the first 48 hours, against a 10% holdout. Guardrails: app crash-free sessions (keep at or above baseline, e.g. 99.5%+); p95 page and checkout latency; payment success rate (must not move, since the feature avoids checkout); notification opt-out and app uninstall rate within 24 hours of an alert; delivery lag of alerts (price drop to alert within 5 minutes); customer-support contacts about price mismatch; cancellation and return rate of alert-driven orders (impulse buys); SMS/WhatsApp cost per incremental order; seller-funded vs platform-funded discount share (profitability target for FY27).",
+  "follow_up_twists": [
+    {
+      "twist": "The CEO has already announced Deal Lock in a press briefing.",
+      "response": "Then the cost of a public miss is higher, but a payments failure at peak is still worse; I'd brief the CEO's office the same day with the reworded message ('alerts now, lock at Big Diwali') and a date we can actually hit."
+    },
+    {
+      "twist": "Engineering now says even alerts may not pass the load test.",
+      "response": "Fall back to Option C for the new path and reuse the existing wishlist notification pipeline with its tested rate limits; a smaller lift on proven infrastructure beats a new path at 6 mn concurrent users."
+    },
+    {
+      "twist": "Leadership adds a goal: new-customer acquisition, not just conversion.",
+      "response": "Alerts mainly help existing wishlisters, so I'd add a lightweight 'wishlist and get alerted' prompt for logged-out and new users on pre-sale landing pages, which uses the same shipped component, and measure new-user wishlist-to-first-order."
+    }
+  ],
+  "common_pitfalls": [
+    "Treating it as 'ship or delay' - the feature has parts with very different risk; the strong answer splits it and ships the low-risk, high-value slice.",
+    "Throwing people at the problem two weeks out, or asking for a code-freeze or load-test exception - at BBD scale (6.3 mn concurrent users) these are how outages happen.",
+    "Solving the engineering problem but forgetting the external promises - brand banners and the marketing film must be reworded, or the platform runs a misleading claim.",
+    "Covering the gap with a cosmetic 'price locked' badge or countdown timer - false urgency under the CCPA dark-patterns guidelines and a trust hit."
+  ],
+  "skills_tested": [
+    "execution",
+    "prioritisation",
+    "communication",
+    "business sense",
+    "structuring",
+    "empathy"
+  ],
+  "linked_teardown": "blinkit_product_teardown (blinkit_product_teardown/results/C3_Flipkart_Minutes.json). Key facts used: BBD 2026 started 9 Oct with Flipkart Minutes at about 1,200 dark stores in 150+ cities, Minutes orders 3.5x regular days and new customers 11x in the first hour, and Plus/Black early access, which shows the sale's peak-load scale and the early-access cohort used for the staged rollout.",
+  "uncertain": [
+    "round_and_level",
+    "context_as_of",
+    "regulatory_context",
+    "public_data_anchors"
+  ]
+}

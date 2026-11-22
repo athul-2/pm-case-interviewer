@@ -1,0 +1,160 @@
+{
+  "pun_title": "Paradox of Choice",
+  "case_type": "Product Design",
+  "asked_at": "Swiggy",
+  "subject_company": "Swiggy (Food Delivery)",
+  "round_and_level": "[uncertain] Product sense round (about 60 min per prep-site descriptions of the Swiggy PM loop), PM or APM level",
+  "difficulty": "Medium - a familiar 'choice overload' theme, but a strong answer must separate users who know what they want from users who are stuck, and must not hurt the ad-funded discovery feed that pays Swiggy's bills",
+  "market_and_industry": "India; food delivery; urban Tier 1 and Tier 2 smartphone users (mostly Android); English/Hinglish UI; heavy lunch-at-desk and late-dinner occasions; a catalogue of about 2.5-3 lakh restaurants",
+  "time_box_minutes": "30-40",
+  "exact_prompt": "\"Users take too long to decide what to order on Swiggy. How would you reduce decision time?\"",
+  "source_and_verification": "Reported (Swiggy, per the casebook outline). The same prompt ('How would you reduce the decision time of user when ordering from food delivery apps like Swiggy?') is listed in a Swiggy PM question bank: https://productmanagementjob.com/interview/swiggy-product-manager ; related: Remasto 'optimise Swiggy UI for faster decision-making during lunch and dinner rush': https://remasto.com/questions_bank/question/how-would-you-optimize-the-user-interface-of-swiggy-for-faster-decision-making-during-the-lunch-and-dinner-rush-hours-NBaMfuEzRB3V7jcTbDHf ; Dataford Swiggy PM guide: https://dataford.io/interview-guides/swiggy/product-manager . User research: a UX case study quotes a user browsing about 20 minutes and then making instant noodles (https://khushioffwork.github.io/swiggy_case_study.html); a Scribd product doc targets users who browse more than 5 minutes and drop off (https://www.scribd.com/document/666113359/Swiggy). Year reported unknown [uncertain].",
+  "context_as_of": "As of Nov 2026: Swiggy already ships several 'decide for me' tools. WhatToEat (Jul 2023): the user picks a mood bubble and gets 10 personalised dish recommendations based on mood, location, order history and time of day, with a 'why' reason shown (https://blog.swiggy.com/news/swiggys-industry-first-whattoeat-feature-helps-users-order-food-attuned-to-their-moods-and-cravings/). Generative-AI/natural-language search ('food for a lazy Sunday afternoon', 'high protein under 300') (https://blog.swiggy.com/news/here-are-small-but-impactful-tech-driven-features-to-enhance-convenience-for-you-on-the-swiggy-app/). Earlier, Swiggy POP narrowed the choice to a few single-serve daily dishes (https://bytes.swiggy.com/story-of-how-swiggy-pop-was-built-773e34d4ff87). Bolt is 10-minute food from nearby kitchens with limited quick-prep menus, more than 10% of orders. Since Jan 2026, MCP servers let users order through ChatGPT, Claude and Gemini (swiggy-product-teardown) [uncertain]. The home feed mixes ads, offers and collections, and ad-ranked listings are a key driver of food EBITDA (Rs 341 cr, 3.4% of GOV in Q2 FY27). Choice overload therefore partly comes from Swiggy's own monetisation. Stale-risk: feature names and placement change often; WhatToEat may no longer be prominent [uncertain].",
+  "regulatory_context": "None material for the core design. Minor considerations: CCPA Guidelines for Prevention and Regulation of Dark Patterns (2023) - 'decide for me' or pre-filled carts must not add items or subscriptions by default (basket sneaking) and sponsored picks must be labelled as ads; DPDP Act 2023 - using order history, location or mood/health signals for personalisation needs clear consent and notice; ASCI disclosure norms for sponsored listings.",
+  "public_data_anchors": "Swiggy Food GOV Rs 10,054 cr in Q2 FY27 (+17.7% YoY); food adj. EBITDA Rs 341 cr (3.4% of GOV) - https://www.investywise.com/swiggy-shareholders-letter-for-q2-fy27/ (Oct 2026) ; Food MTU about 18.3 M in Q4 FY26 [uncertain, swiggy-product-teardown] ; core users order about 4-5 times a month; Swiggy One members 2-3x non-members [uncertain, swiggy-product-teardown] ; Bolt more than 10% of food orders (late 2025) - https://www.restaurantindia.in/news/restaurant-india-news-swiggy-s-bolt-hits-10-pc-of-all-orders-as-quick-commerce-changes-how-india.n14446 ; WhatToEat gives 10 recommendations per session (Swiggy blog, Jul 2023) ; about 2.5-3 lakh active restaurant partners [uncertain]. Behavioural anchor: the Iyengar & Lepper 'jam study' (2000), where 24 options drew more browsers but about one tenth of the purchases of a 6-option display (often cited; replication is mixed).",
+  "framework_applied": "Product Design: CIRCLES + List and Trim (frameworks.md section 1). C - Comprehend: goal is faster time-to-order that lifts conversion (fewer abandoned sessions) without hurting AOV or ad revenue; scope is open-app to first add-to-cart; I am Swiggy's consumer PM. I - Identify: list 'mission' users (know the dish), habitual re-orderers, 'stuck browsers' (hungry, undecided), group/office orderers, and new users; pick the stuck browser at weekday lunch and dinner (high pain, high abandonment). R - Report needs as JTBD: 'When I'm hungry and open Swiggy without a plan, I want a few good options I trust, so I can eat soon without scrolling for 15 minutes.' C - Cut: prioritise 'narrow to 3 trustworthy options fast' over 'better search' (mission users already search well). L - List: safe (a 'Your usual + 2 picks' home module with one-tap reorder); ambitious (a 'Decide for me' 3-card picker by context - budget, time, mood - with ETA and all-in price shown); visionary (a conversational food agent, in-app or via MCP/WhatsApp, that learns preferences and proactively proposes lunch at 12:30). E - Evaluate on impact vs effort. S - Summarise: ship the 3-card contextual picker as a top-of-home module for undecided users, A/B with decision time and conversion, and guard AOV, ad revenue and restaurant diversity.",
+  "clarifying_questions": [
+    "Q: How do we measure 'decision time' - app open to first add-to-cart, or to order placed? A: App open to first add-to-cart; the median is about 7 minutes (illustrative).",
+    "Q: Is the goal conversion (fewer people leaving without ordering) or speed for its own sake? A: Conversion and satisfaction. A long session that ends in an order is less of a problem than one that ends in abandonment.",
+    "Q: Is the problem uniform, or concentrated in some users or times? A: Concentrated in weekday lunch and late dinner, and among users who open the app without searching. (Illustrative.)",
+    "Q: Who am I, and what are the constraints? A: Swiggy food consumer PM, one quarter, one pod plus a data-science partner. Don't break the ads business.",
+    "Q: Are there existing features like WhatToEat or reorder, and how do they perform? A: WhatToEat exists but sits deep in the app with low usage; reorder works well for habitual users.",
+    "Q: Mobile app only, or also web and the new AI channels? A: Focus on the Android and iOS app.",
+    "Q: Does speed matter more for some occasions? A: Yes. Weekday lunch at the office has a hard 30-45 minute window."
+  ],
+  "interviewer_data_reveals": [
+    "Exhibit 1 (illustrative) - Session segmentation by first action, weekday lunch: search typed in the first 30 s 34% (median time to cart 2.1 min, conversion 71%); reorder tap 12% (0.8 min, 88%); browse home feed with no search 54% (median 9.4 min, conversion 38%). The browse-first group drives about 80% of total decision minutes and most abandonment.",
+    "Exhibit 2 (illustrative) - Among browse-first sessions: an average of 11 restaurant menus opened; 41% open 3 or more menus and then leave; 'back' taps per session 14; 23% end with the user opening Zomato within 10 minutes (from panel data).",
+    "Exhibit 3 (illustrative) - Reasons in an exit survey of browse-first abandoners: 'couldn't decide / too many options' 37%, 'final price higher than expected' 26%, 'ETA too long' 18%, 'nothing looked new' 12%, other 7%.",
+    "Exhibit 4 (illustrative) - WhatToEat today: reached by 3% of sessions; when used, conversion is 61% and time to cart 3.5 min, but it shows 10 options and no all-in price or ETA.",
+    "Exhibit 5 (illustrative) - Home feed composition above the fold: 2 ad slots, 1 offer carousel, 1 collection, about 6 restaurant cards; ads are about 30% of food contribution margin growth."
+  ],
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "Users take too long to decide what to order on Swiggy. Reduce decision time."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'll first make sure I'm solving the right problem. When you say decision time, do you mean from app open to first add-to-cart?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Yes. The median is about seven minutes."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "And is the goal speed itself, or the fact that slow sessions end without an order? A family taking 15 minutes over a Saturday biryani treat may be enjoying it."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Conversion and satisfaction. Long sessions that end in abandonment are the issue."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then I'll treat the real goal as 'turn hungry-but-undecided sessions into orders faster', with time-to-cart as the leading metric. I'm Swiggy's consumer PM, with a quarter and one pod, and I shouldn't damage the ads business. I'll scope this to the app, from open to first add-to-cart. Does that work?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Yes. (Shares Exhibit 1) Search-first users take about 2 minutes and reorderers under 1 minute. Browse-first users take 9.4 minutes and convert at 38%."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That changes the problem. It isn't 'everyone is slow'. Users who know what they want are already fast. Now the user types. One: mission users who search 'paneer butter masala'. Two: habitual reorderers, for example the same idli place every Sunday. Three: stuck browsers, hungry but with no plan, scrolling the feed. Four: group or office orderers coordinating a cart for five. Five: new users who don't know the restaurants yet. I'll pick the stuck browser, particularly at weekday lunch. Picture a 26-year-old analyst in Gurugram at 1 pm with a 40-minute break. The pain is high, they're 54% of lunch sessions, they convert at 38%, and that's where most wasted minutes and Zomato leakage come from."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What do they need?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "The JTBD: when I'm hungry and open Swiggy without a plan, I want a few options I trust, so I can eat soon without scrolling for 15 minutes. Their pain points: too many near-identical options, about 11 menus opened per session (Exhibit 2); comparing is hard because price, fees and ETA only show up late; ads and offers make it hard to tell what's actually good; and they get bored of 'the same three places' but are afraid of a bad new one. Can I see why abandoners say they leave?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "(Shares Exhibit 3) 37% couldn't decide, 26% said the final price was higher than expected, 18% said the ETA was too long."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So the need I'll prioritise is narrowing to a few trustworthy options fast, with the deal-breakers, all-in price and ETA, visible upfront. That covers the top three exit reasons together, about 80%. Better search would help mission users, but they're already fast, so I'll cut it."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Solutions. Safe: a top-of-home 'Your usual + 2 new picks' strip with one-tap reorder and a 'similar but new' slot, so habit users finish in seconds and get a little novelty."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Ambitious: 'Decide for me', a 3-card picker. Above the fold, for users who don't search within about 10 seconds, show exactly three dish-level cards, not restaurants. Each card shows the dish photo, the all-in price including fees, the ETA, and a reason, for example 'You loved this place's rajma chawal' or 'Popular in your office'. Two quick toggles, budget and 'under 20 minutes' (Bolt), reshuffle the three. A 'Show me 3 more' button replaces endless scroll. Basically, WhatToEat redone: 10 options become 3, it moves from buried to the home page, and it adds price and ETA."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Visionary: a conversational food agent. In-app, on WhatsApp, or through the MCP integration Swiggy already has with ChatGPT and Claude. It knows your diet, budget and office location, and at 12:30 it messages: 'Lunch? Your usual dal-chawal, Rs 189, 18 min, or try this new Kerala thali, Rs 229, 22 min. Reply 1 or 2.' Decision time drops to near zero for opted-in users."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How do you choose?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Impact versus effort. The usual strip: low effort, but medium impact. It mainly helps habitual users who are already fast, so it's a quick win. The 3-card picker: high impact, since it targets the 54% browse-first segment, and medium effort. The recommendation models exist from WhatToEat; the new work is the all-in-price API on cards, the trigger logic and design. The agent: potentially the highest impact for heavy users, but high effort, it needs opt-in, and trust is fragile. One bad pick and people turn it off. There's also DPDP consent to handle. So I'd ship the picker first, include the usual strip as the first card where it fits, and pilot the agent with Swiggy One users."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What about ads? (Shares Exhibit 5) Ads are a big part of food margin growth, and you're taking over the top of the feed."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's the main trade-off. I'd make one of the three cards sponsorable, clearly labelled under CCPA dark-pattern and ASCI norms. It has to pass a relevance threshold, so a sponsored card wins only when it's a good match. A sponsored slot in a 3-card picker that converts at around 60% may be worth more than a banner ignored at the top of the feed. The A/B test will show that with ad revenue per session as a guardrail. I'd also show the picker only to users who haven't searched within about 10 seconds. Mission users never see it, so search ads are untouched."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Edge cases?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "New users with no history get location and time-based popular picks plus a two-question onboarding: veg or non-veg, and budget. For groups, a 'for 4' toggle can shift picks to combos. Late-night, when many restaurants are closed, means only open restaurants within the ETA. And in Tier 2 cities with fewer restaurants, three is still fine, since the problem there is less about overload. Zomato has similar recommendation rails, but putting all-in price and ETA on the card would be a differentiator."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How will you measure success?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Primary: median time from open to first add-to-cart for browse-first sessions, aiming from 9.4 to under 5 minutes, and conversion for that segment, aiming from 38% to 45%. Supporting: picker engagement rate, the share of orders from the first three cards, and the drop in menus opened per session. Guardrails: AOV, ad revenue per session, restaurant diversity so we don't concentrate orders on a few big brands and annoy the long tail, cuisine novelty for users, and 7-day repeat rate, so speed doesn't become boredom."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Risks?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Three. A filter bubble, where users eat the same thing and churn from boredom. Mitigate with one exploration slot out of three. Restaurant fairness, where small restaurants lose visibility. Mitigate with diversity constraints in ranking and an exposure floor for new, well-rated restaurants. And bad picks hurting trust. Mitigate with 'not today' feedback that retrains the model quickly, plus a visible reason on each card. Rollout: an A/B test at weekday lunch in Bengaluru and Gurugram for four weeks, then dinner, then national."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "To summarise: the slow users aren't everyone. They're hungry browsers with no plan. Instead of making them search better, I'd decide with them: three trustworthy, fully priced options with ETA at the top of home. That's measured on time-to-cart and conversion, with guardrails on ad revenue, AOV and restaurant diversity."
+    }
+  ],
+  "answer_and_recommendation": "Ranked options: (1) Recommended - the 'Decide for me' 3-card picker: above-the-fold, dish-level, context-aware (time, budget, Bolt ETA), showing all-in price, ETA and a reason; triggered only for users who don't search within about 10 s; one optional labelled sponsored card. (2) Quick win bundled into it - a 'Your usual + 2 new' strip with one-tap reorder. (3) Visionary pilot - an opt-in proactive food agent (in-app, WhatsApp or MCP) for Swiggy One users. Why: browse-first sessions are 54% of weekday-lunch sessions, take 9.4 min and convert at 38% (illustrative); the top exit reasons (indecision, price surprise, ETA) are all fixed by fewer options with full information shown. Success: browse-first time-to-cart under 5 min, conversion 38% to 45%, fewer menus opened. Risks and mitigations: ad cannibalisation (sponsorable card, ad revenue guardrail); filter bubble (one exploration slot); long-tail restaurant fairness (diversity and exposure floors); bad picks (feedback loop and visible reasons). Closing line: \"Fast users don't need help. Hungry browsers do, so instead of more choice we give them three good, fully priced options at the top of the app and let them say yes in under a minute.\"",
+  "counter_metrics_guardrails": "AOV and items per order (speed must not shrink baskets); ad revenue and ad CTR per session (the picker must not cannibalise ad inventory without compensating); restaurant-level order concentration (Gini) and new-restaurant exposure (protect the long tail and the supply side); cuisine and restaurant novelty per user and 30-day retention (avoid boredom and filter bubbles); 'not today' / dismiss rate on picks (recommendation quality); search usage among mission users (the picker must not get in their way); order cancellation and complaint rate (a fast decision should not mean a worse decision).",
+  "follow_up_twists": [
+    "Twist: 'Data shows long sessions actually have higher AOV. Should we still cut decision time?' Response: Only cut it for sessions that abandon. Leave leisurely browsing alone for weekend treats and target the picker to time-boxed occasions like weekday lunch.",
+    "Twist: 'Ads team says the picker kills top-of-feed banner revenue.' Response: Make one card a relevance-gated sponsored slot and A/B it on ad revenue per session. High-intent placement usually earns more per impression than an ignored banner.",
+    "Twist: 'Why not just build a chatbot?' Response: Typing is slower than tapping for an undecided user. Chat works best for proactive, opted-in heavy users, so I'd pilot it as phase 3, not lead with it."
+  ],
+  "common_pitfalls": [
+    "Treating all users as slow. Mission searchers and reorderers are already fast, and redesigning search for them wastes the quarter.",
+    "Adding more filters, tags or collections. That increases choice and cognitive load, which is the opposite of the goal.",
+    "Recommending ten options again (the WhatToEat trap). The fix is fewer options with deal-breakers (all-in price, ETA) shown upfront.",
+    "Ignoring the business model. The home feed is ad inventory, so a design that wipes it out without a monetisation answer will be rejected.",
+    "Optimising time-to-order alone without a conversion or satisfaction guardrail. Fast but regretted orders hurt retention."
+  ],
+  "skills_tested": "empathy, structuring, prioritisation, business sense, communication, execution",
+  "linked_teardown": "swiggy-product-teardown (swiggy-product-teardown/results/Food_Delivery_core.json and Swiggy_MCP_agentic_ordering.json): the ux_flow and pain_points note an ad-heavy home feed and fee details collapsed behind an 'i' icon ('bill shock'), which motivates showing all-in price on picks. ai_personalisation notes WhatToEat-style collections and generative-AI search. agentic_distribution notes MCP ordering from LLM clients since Jan 2026, which backs the visionary agent. Bolt (more than 10% of orders) backs the 'under 20 minutes' toggle.",
+  "uncertain": [
+    "round_and_level",
+    "source_and_verification",
+    "context_as_of",
+    "public_data_anchors"
+  ]
+}

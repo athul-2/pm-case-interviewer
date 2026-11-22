@@ -1,0 +1,211 @@
+{
+  "pun_title": "North Star Mart",
+  "case_type": "Metrics",
+  "asked_at": "Swiggy style (classic metrics prompt asked across Indian consumer-internet PM loops; not tied to one dated Swiggy report)",
+  "subject_company": "Swiggy Instamart (quick commerce), a unit of Swiggy Ltd, being moved into an Indian-owned-and-controlled subsidiary for an inventory-led model from mid-Q3 FY27.",
+  "round_and_level": "PM round (product sense / metrics), APM campus to PM; SPM versions add the profitability twist and ask for the formula and guardrails in more depth. [uncertain]",
+  "difficulty": "Medium - the framework is standard, but a strong answer has to reject GOV and plain order count, define a 'good order' precisely, and handle Swiggy's growth-vs-profitability tension (CM -1.0% of GOV in Q2 FY27) without making margin the north star.",
+  "market_and_industry": "India; quick commerce (10-30 minute grocery and essentials delivery from dark stores); metros and large Tier-2 cities (133 cities), UPI-first payments with COD in Tier-2; smartphone-first urban households and young professionals; three-way race with Blinkit and Zepto plus Flipkart Minutes, Amazon Now and BB Now.",
+  "time_box_minutes": "20-25",
+  "exact_prompt": "You're the PM for Swiggy Instamart. What should Instamart's north-star metric be? Walk me through how you'd pick it, break it down, and what you'd guard against.",
+  "source_and_verification": "Level: classic. North-star prompts for quick commerce (Blinkit, Zepto, Instamart) circulate widely in Indian PM prep; no dated, company-tagged report of this exact Instamart wording was found in this session. Analogues: PracHub 'Picking the key metrics that track Instacart's health as a grocery delivery service' (Google-tagged) https://prachub.com/interview-questions/picking-the-key-metrics-that-track-instacarts-health-as-a-grocery-delivery-service ; Exponent 'Metric - Instacart data' https://www.tryexponent.com/questions/2308/metric-instacart-data ; PracHub 'Should you roll out if NSM decreases' (Instacart, NSM = profit per order) https://prachub.com/interview-questions/should-you-roll-out-if-nsm-decreases . Year: 2023-2026 (classic). NextLeap, The Product Folks, AmbitionBox and Glassdoor were not directly searchable in this session. [uncertain]",
+  "context_as_of": "As of Nov 2026 (Swiggy Q2 FY27 results, 22-23 Oct 2026, via the local teardown and Inc42/Upstox/Open coverage). 1) Scale: Instamart Q2 FY27 GOV Rs 9,230 cr (+31% YoY), NOV Rs 6,594 cr (+35% YoY, +13.4% QoQ), ~130.3 mn orders (+29% YoY) (Inc42, https://inc42.com/features/growth-vs-profitability-swiggys-tug-of-war/ ; Upstox, https://upstox.com/news/market-news/earnings/swiggy-q2-results-loss-narrows-yo-y-to-922-crore-revenue-surges-36-check-numbers/article-202243/). 2) Users: ~14.8 mn monthly transacting users (local teardown; not confirmed in public coverage in this session) [uncertain]. 3) Unit economics: contribution margin -1.0% of GOV in Q2 FY27 after -0.2% in Q1 FY27 (monthly CM breakeven in May 2026), adj EBITDA -Rs 895 cr; management says losses have peaked (Open, https://openthemagazine.com/business/swiggy-q2-analysis-have-instamarts-losses-finally-peaked). Breakeven roadmap per the teardown: ~Rs 30 contribution per order at ~2.3x scale. 4) Network: 1,240 dark stores in 133 cities (+69 net in Q2 FY27) vs Blinkit 2,751; >45% of Instamart stores CM-positive in Q1 FY27. 5) Model change: inventory-led model from mid-Q3 FY27 over 2-3 quarters, ~80 bps CM uplift expected (Inc42, https://inc42.com/buzz/swiggy-to-begin-instamart-inventory-model-transition-eyes-pivot-within-three-quarters/). 6) Leadership: Nandita Sinha (ex-Myntra CEO) heads Instamart from Aug 2026 (local teardown) [uncertain]. 7) Product: standalone Instamart app since Jan 2025 plus in-app tab; Megapods (~50k SKUs); Maxxsaver bigger-basket tier; Swiggy One membership; MCP/agentic ordering via LLM clients since Jan 2026. 8) Competitors: Blinkit Q2 FY27 NOV Rs 20,940 cr (+79% YoY) and adj EBITDA positive; Zepto similar scale to Instamart. Stale-risk: MTU and leadership facts come from the local teardown; '10-minute' branding was dropped industry-wide in Jan 2026 after government pressure.",
+  "regulatory_context": "1) FDI rules: foreign-owned marketplaces cannot run an inventory model, which is why Instamart is moving into an Indian-owned-and-controlled entity (foreign ownership capped at 49.5%); the move changes which metrics matter (inventory turns, wastage, first-party margin). 2) Gig-worker rules: Code on Social Security (notified late 2025) platform levy of 1-2% of turnover (capped at 5% of worker payouts), plus Karnataka and Rajasthan gig-worker acts - rider cost per order is partly regulated, and rider-safety pressure is why '10-minute' promises were dropped in Jan 2026; a speed-only NSM invites regulatory and labour backlash. 3) CCPA dark-patterns guidelines (Nov 2023): drip pricing (fees shown late), false urgency and basket sneaking are banned - a metric that rewards fee extraction or forced add-ons is a compliance risk. 4) FSSAI: dark-store hygiene and expiry rules (raids in 2025) - near-expiry or expired items are a quality and legal issue, so they belong in the 'perfect order' definition. 5) CCI and trader-body (AICPDF/CAIT) complaints about predatory discounting in quick commerce - an NSM gamed by discounts carries scrutiny. 6) GST: 18% on delivery fees from Sep 2025. [uncertain]",
+  "public_data_anchors": "1) Instamart Q2 FY27: GOV Rs 9,230 cr; NOV Rs 6,594 cr; ~130.3 mn orders; CM -1.0% of GOV; adj EBITDA -Rs 895 cr; 1,240 dark stores in 133 cities (Inc42 and Upstox, Oct 2026; local teardown Instamart.json). 2) MTU ~14.8 mn (+23% YoY) and net AOV ~Rs 506 (local teardown) [uncertain]. 3) Derived: ~2.9 orders per MTU per month (130.3 mn / 3 / 14.8 mn); GOV-based AOV ~Rs 708 (9,230 cr / 130.3 mn); ~1,140 orders per dark store per day (130.3 mn / 92 days / 1,240 stores); ~Rs 7 contribution loss per order (1.0% x Rs 708). 4) Breakeven target ~Rs 30 contribution per order (local teardown, management roadmap) [uncertain]. 5) Blinkit Q2 FY27: NOV Rs 20,940 cr (+79% YoY), 2,751 stores, adj EBITDA +Rs 184 cr (local teardown Blinkit.json). 6) Market share ~24% for Instamart vs ~46% Blinkit and ~22% Zepto (Datum Intelligence, Jan 2026, via local teardown) [uncertain].",
+  "framework_applied": "Success Metrics (frameworks.md section 5). 1) Company and product: Swiggy is a listed super-app; Instamart is ~44% of B2C GOV and the main cash burn, now pivoting to inventory-led and a 'losses have peaked' story, so the goal is profitable habit-forming growth, not GOV at any cost. 2) Users and value: three sides - customers (activation = first order delivered complete; engagement = weekly ordering; conversion = search-to-order; retention = M1/M3 cohorts), dark-store/brand side (in-stock rate, ads ROI, sell-through), riders (orders per hour, earnings); money from customer fees, margin/commission (moving to 1P margin), ads and private label. 3) North Star: Weekly Perfect Orders - orders delivered complete, within the promised ETA, with no refund, missing-item or quality complaint. Formula: weekly transacting customers x orders per customer per week x perfect-order rate, with levers serviceable households, store availability, in-stock rate, search-to-cart conversion, ETA adherence, picking accuracy. Supporting metrics: repeat rate (M1 retention), in-stock rate on top SKUs, ETA adherence, orders per store per day. 4) Guardrails: contribution per order (path to ~Rs 30), discount and fee burden per order, rider safety and earnings, complaint and refund rate, ad load vs search conversion, food-delivery cannibalisation.",
+  "clarifying_questions": [
+    {
+      "q": "Is this NSM for Instamart as a business unit, or for one surface such as the standalone app or the in-app tab?",
+      "a": "The whole Instamart business, across both surfaces."
+    },
+    {
+      "q": "What's the goal right now - growth, profitability, or both? Swiggy just reported CM at -1.0% of GOV.",
+      "a": "Both. Leadership says losses have peaked and wants profitable growth; the inventory-led model starts this quarter."
+    },
+    {
+      "q": "Who is the metric for - a company-level number the CEO reports, or a product north star the teams steer by?",
+      "a": "A product north star that all Instamart teams (supply, app, ops) can steer by. Finance will still report GOV and EBITDA."
+    },
+    {
+      "q": "Do we define success at the customer level (habit) or the order level (each order)?",
+      "a": "Your call - justify it."
+    },
+    {
+      "q": "Which cities - all 133, or the top metros?",
+      "a": "All, but most volume is in the top 8 metros."
+    },
+    {
+      "q": "Can I assume we can measure order quality - missing items, late delivery, refunds - per order?",
+      "a": "Yes, ops logs ETA, item-level picking and refunds. Exhibit 2 has the numbers."
+    },
+    {
+      "q": "How do Swiggy One members fit - is membership in scope?",
+      "a": "In scope as a lever, not as the north star itself."
+    }
+  ],
+  "interviewer_data_reveals": "Real numbers cite a source; all others are illustrative (invented for teaching).\n\nExhibit 1 - Instamart Q2 FY27 (real, Inc42/Upstox Oct 2026 and local teardown): GOV Rs 9,230 cr; ~130.3 mn orders; MTU ~14.8 mn [uncertain]; CM -1.0% of GOV; 1,240 stores. Derived: ~2.9 orders/MTU/month; GOV AOV ~Rs 708; ~1,140 orders/store/day.\n\nExhibit 2 - Order quality, last 4 weeks (illustrative):\n| Order outcome | Share of orders |\n| Complete, on promised ETA, no complaint (perfect) | 84% |\n| Late by >10 min vs promised ETA | 7% |\n| Missing or wrong item | 5% |\n| Damaged / near-expiry item | 2% |\n| Cancelled after placement (OOS, no rider) | 2% |\n\nExhibit 3 - Does a perfect order predict retention? (illustrative, new-customer cohorts):\n| First order outcome | Ordered again within 30 days |\n| Perfect | 58% |\n| Late only | 47% |\n| Missing / damaged item | 33% |\n| Cancelled | 21% |\n\nExhibit 4 - Discount-led growth test last quarter (illustrative): a flat Rs 75 off on orders above Rs 299 in two metros lifted weekly orders 14% and GOV 11%, but contribution per order fell from -Rs 7 to -Rs 31; 60 days later, retention of discount-acquired users was 18 points below organic users.\n\nExhibit 5 - Store cohort economics (illustrative): stores above ~1,400 orders/day and 96%+ in-stock on the top 500 SKUs are CM-positive; stores below 900 orders/day lose ~Rs 25/order.",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "What should Instamart's north-star metric be?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'll go in four steps: what Instamart is trying to do for Swiggy right now, who gets value and how, the north star and its formula, and the guardrails. First, a few questions to frame it. Is this for the whole Instamart business, and is the goal growth or profitability?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "The whole business. Both - leadership says losses have peaked and wants profitable growth."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "And this is a north star the teams steer by, not the number finance reports?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Right. Finance will still report GOV and EBITDA."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Good. So, the company context. Swiggy is listed and has two engines: food delivery, which makes money, and Instamart, which is about 44% of B2C GOV and most of the burn. Last quarter Instamart did about Rs 9,230 cr GOV and 130 million orders, but contribution margin slipped to minus 1% of GOV as it reinvested in pricing. Blinkit has more than twice the stores and is EBITDA-positive. The inventory-led model starts this quarter. So Instamart's product goal is to become the habit for a household's top-up and planned grocery, in a way that improves unit economics as it scales. Is that a fair read?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Fair."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Now the users and the value. Three sides. Customers: activation is a first order that arrives complete and on time; engagement is ordering weekly instead of occasionally; conversion is search to cart to order; retention is whether they come back in month one and month three. Dark stores and brands: in-stock rate, sell-through, ads return. Riders: orders per hour and earnings. Swiggy earns from customer fees, margin - moving from commission to first-party margin - ads and private label like Noice. The core value moment for everyone is one thing: an order that arrives complete, fast and right. The customer gets their job done, the store sells, the rider earns, and Swiggy earns fees, margin and ad revenue."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "So the north star is orders?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Close, but not plain orders, and definitely not GOV. Let me list the candidates and cut them. GOV: easy to inflate with discounts and expensive electronics, and it says nothing about whether the customer was happy. Monthly transacting users: counts someone who ordered once and churned. Total orders: can be bought with discounts and doesn't separate a perfect order from one with a missing item. Contribution margin: it matters a lot, but as a north star it pushes teams to raise fees and cut service, which kills the habit. Delivery time: one lever, and since the '10-minute' branding was dropped in January, a speed-only metric also invites rider-safety backlash."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "My pick is Weekly Perfect Orders: orders delivered complete, within the promised ETA, with no refund, missing-item, damage or expiry complaint, counted per week. It's where user value - the job done right - meets business growth, because good orders are what bring people back. Weekly, because grocery is a weekly rhythm; monthly hides churn."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Why should I believe perfect orders drive the business?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'd want to check that a perfect order predicts the next order. Do we have retention by first-order outcome?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Exhibit 3. New customers whose first order was perfect reorder within 30 days at 58%; missing or damaged item 33%; cancelled 21%."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's the evidence I wanted. A bad first order cuts the chance of a second by almost half. So a perfect order isn't just a quality metric - it's the input to retention, and retention drives frequency, which is what fixes the economics. Now the formula."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Weekly Perfect Orders = Weekly transacting customers x Orders per customer per week x Perfect-order rate.\nBreaking each down:\n- Weekly transacting customers = Serviceable households (store coverage) x App reach (Swiggy super-app + standalone) x Search-to-order conversion x Week-on-week retention.\n- Orders per customer per week = driven by assortment breadth (Megapods, categories), price perception, Swiggy One and Maxxsaver, and habit.\n- Perfect-order rate = In-stock rate x Picking accuracy x ETA adherence x Item quality (no damage or near-expiry) x (1 - post-order cancellation).\nRough baseline: 130 million orders a quarter is about 10 million a week; if 84% are perfect, that's roughly 8.4 million Weekly Perfect Orders."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Where's the 84% from?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'm assuming you have it - can I see the order-quality split?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Exhibit 2. 84% perfect, 7% late, 5% missing or wrong item, 2% damaged or near-expiry, 2% cancelled."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So the biggest levers on quality are lateness and missing items - 12 points between them. That tells the ops and picking teams exactly where to work. And the store-coverage and frequency levers belong to the supply and growth teams. Every team can see how its work moves the one number."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Which supporting metrics would you put on the dashboard?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Four. One, M1 repeat rate of new customers - the habit loop. Two, in-stock rate on each store's top 500 SKUs - the biggest driver of search-to-order and of missing items. Three, ETA adherence - orders within the promised time, not raw minutes. Four, orders per store per day - roughly 1,140 today across 1,240 stores - because density is what makes a dark store pay back."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Now the tension. Leadership wants losses down. Last quarter we ran a flat Rs 75 off - Exhibit 4. Orders up 14%, contribution per order went from minus Rs 7 to minus Rs 31, and discount-acquired users retained 18 points worse."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's exactly why I want guardrails sitting right next to the north star. The discount moved total orders, but it would barely have moved Weekly Perfect Orders from retained customers, and it wrecked unit economics. So guardrail one is contribution per order, with a path toward the roughly Rs 30 the breakeven roadmap needs; any experiment that lifts the north star but pushes contribution per order down past a set threshold doesn't ship without a finance review."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Other guardrails: discount plus fee burden per order as the customer sees it - so we don't buy orders with discounts or claw them back with hidden fees, which is also a dark-pattern risk under the CCPA rules; rider safety and earnings per hour, since a perfect-order push can't come from pressuring riders on speed; complaint and refund rate by category; ad load against search conversion, because ads are a big revenue line but sponsored clutter hurts finding things; and food-order cannibalisation for users who move snacking from food delivery to Instamart."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Why not just make contribution-positive orders the north star, given the situation?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "It's tempting, and I'd report it every week. But as a north star it rewards the wrong things: raising fees, cutting assortment, shutting late-night hours. Those improve margin this quarter and erode the habit, and Blinkit is happy to take those customers. Perfect orders from customers who come back create the density that makes stores CM-positive. Store data would show that, if you have it."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Exhibit 5. Stores above about 1,400 orders a day with 96%-plus in-stock are CM-positive; below 900 they lose about Rs 25 an order."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's the link. Perfect orders drive retention, retention drives density, and density drives margin. So the north star and the profitability goal point the same way, as long as the guardrail stops us buying volume. One refinement as the inventory-led model rolls out: add wastage and inventory days to the guardrails, because owning stock creates a new way to lose money."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Summarise."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Instamart's north star should be Weekly Perfect Orders - orders delivered complete, on the promised ETA, with no complaint - about 8.4 million a week today on my rough numbers. It equals weekly customers times orders per customer times perfect-order rate. The levers to watch are M1 repeat rate, top-SKU in-stock rate, ETA adherence and orders per store per day. The guardrails are contribution per order on the path to about Rs 30, discount and fee burden, rider safety, refunds and ad load. It captures the job done right for the customer, and it's the engine of the density that gets Instamart to profit."
+    }
+  ],
+  "answer_and_recommendation": "Ranked candidates: (1) Weekly Perfect Orders - orders delivered complete, within the promised ETA, with no refund, missing-item, damage or expiry complaint - recommended; (2) weekly transacting customers with 2+ orders a month (a habit metric) - strong alternative, but slower to move and less actionable for ops; (3) contribution-positive orders - essential to report but rejected as the north star because it rewards fee hikes and service cuts. Rejected outright: GOV (inflated by discounts and high-ticket electronics), total orders (buyable), raw delivery minutes (one lever, and rider-safety risk). Formula: Weekly Perfect Orders = weekly transacting customers x orders per customer per week x perfect-order rate (in-stock x picking accuracy x ETA adherence x item quality x (1 - cancellation)). Baseline (derived/illustrative): ~10 mn orders a week x 84% perfect = ~8.4 mn. Supporting metrics: M1 repeat rate, top-500-SKU in-stock rate, ETA adherence, orders per store per day (~1,140 today, derived). Risks and mitigation: teams buy volume with discounts - contribution per order guardrail with a threshold that blocks launch; 'perfect' gets gamed by padding ETAs - cap promised ETA per store and track ETA promised as its own metric; complaint suppression (making refunds harder) - track complaint rate on contacts and app-store/social sentiment, not just logged refunds; inventory-led model adds wastage risk - add wastage and inventory days. Closing line: 'Instamart wins when a household trusts it with every top-up, so I'd steer by Weekly Perfect Orders and let contribution per order keep us honest - perfect orders build the density that makes stores profitable.'",
+  "counter_metrics_guardrails": "1) Contribution per order (and CM % of GOV): must trend toward ~Rs 30 per order; experiments that lift the NSM but cut contribution per order beyond a set threshold need finance sign-off. 2) Customer-visible discount and fee burden per order (delivery, handling, small-cart, surge): prevents buying orders with discounts or recovering them through late-shown fees (CCPA drip-pricing risk). 3) Rider safety and earnings: earnings per hour, accidents/incidents, rider churn; no speed-pressure incentives. 4) Promised ETA (not just adherence): stops teams padding ETAs to make more orders 'on time'. 5) Complaint and contact rate, refund rate by category, app-store rating: guards against suppressing complaints to inflate 'perfect'. 6) Ad load vs search-to-cart conversion: ads revenue cannot degrade findability. 7) Food-delivery cannibalisation and super-app health: snack orders moving from Swiggy food to Instamart. 8) After the inventory-led shift: wastage %, inventory days, near-expiry write-offs.",
+  "follow_up_twists": [
+    {
+      "twist": "The CFO says, 'Make the north star contribution margin until we break even.'",
+      "response": "Report CM weekly and make it a hard guardrail, but keep perfect orders as the north star - Exhibit 5 shows margin follows density, and a margin north star would cut the assortment and service that create density."
+    },
+    {
+      "twist": "Weekly Perfect Orders rose 6%, but M1 retention fell. What happened?",
+      "response": "The growth came from existing heavy users or a promo, not new-customer habit - split the NSM into new vs existing cohorts and check whether a discount or a store-coverage change drove it."
+    },
+    {
+      "twist": "How would the north star change for the agentic (MCP/ChatGPT) channel?",
+      "response": "Same north star, but attribute perfect orders by channel and add a completion-rate metric for agent sessions, since payment and substitutions often bounce back to the app."
+    }
+  ],
+  "common_pitfalls": [
+    "Picking GOV or total orders - both can be bought with discounts, which Swiggy's own Q2 FY27 reinvestment showed hurts contribution margin.",
+    "Making delivery time the north star - it's one lever, and after the Jan 2026 retreat from '10-minute' branding it carries rider-safety and regulatory risk.",
+    "Making contribution margin the north star - it drives fee hikes and service cuts that hand customers to Blinkit; it belongs as a guardrail.",
+    "Listing metrics without a formula or without showing that the north star predicts retention (Exhibit 3), and forgetting the store/rider sides of the marketplace."
+  ],
+  "skills_tested": [
+    "structuring",
+    "business sense",
+    "quant",
+    "prioritisation",
+    "communication",
+    "empathy"
+  ],
+  "linked_teardown": "swiggy-product-teardown (swiggy-product-teardown/results/Instamart.json, with Blinkit.json for comparison). Key facts used: Q2 FY27 Instamart GOV Rs 9,230 cr, ~130.3 mn orders, MTU ~14.8 mn, CM -1.0% of GOV, 1,240 stores; breakeven roadmap of ~Rs 30 contribution per order; >45% of stores CM-positive in Q1 FY27; missing items, late ETAs and hidden fees as the top pain themes; Blinkit at 2,751 stores and EBITDA-positive.",
+  "uncertain": [
+    "round_and_level",
+    "source_and_verification",
+    "context_as_of",
+    "regulatory_context",
+    "public_data_anchors"
+  ]
+}

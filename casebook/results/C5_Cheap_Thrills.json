@@ -1,0 +1,205 @@
+{
+  "pun_title": "Cheap Thrills",
+  "case_type": "Product Strategy",
+  "asked_at": "Flipkart",
+  "subject_company": "Flipkart (Walmart-owned), against Amazon India; same as asked_at",
+  "round_and_level": "[uncertain] PM round (product sense / strategy), APM to PM level",
+  "difficulty": "Medium-Hard - the trap is to 'cut prices' when prices already match; the candidate must treat it as a price-image problem, find where the perception comes from (final payable vs listed price, fees, bank-offer-dependent prices, a few known-value items, Prime trust) and fix it within marketplace rules that stop Flipkart setting seller prices",
+  "market_and_industry": "India; horizontal e-commerce marketplace (electronics, mobiles, fashion, home, grocery). Flipkart is strong in Tier 2-3 and value shoppers via Shopsy; Hindi and vernacular UI; budget and mid-range Android; Amazon is stronger with Prime metro households",
+  "time_box_minutes": "30",
+  "exact_prompt": "\"Flipkart's prices match Amazon's on most products, but users believe Amazon is cheaper. What do you do?\"",
+  "source_and_verification": "Reported (Flipkart PM interview, per the casebook outline). An exact public posting was not found in Nov 2026 searches of PracHub (https://prachub.com/companies/flipkart), Glassdoor (Flipkart reviews mention pricing case studies and 'Why not Amazon?', e.g. https://www.glassdoor.co.uk/Interview/Flipkart-Interview-E300494-RVW66227034.htm) or The Product Folks [uncertain]. The perception gap itself is real and documented: in 2018 Flipkart's CEO told staff it led on business metrics but trailed Amazon on customer perception, by 12 points among non-metro users and 26 points among Prime users (Factor Daily: https://archive.factordaily.com/the-walmart-effect-flipkart-plans-a-loyalty-program-mega-warehouses-and-a-pharmacy-bet/). Year reported: about 2024-2026 [uncertain].",
+  "context_as_of": "As of Nov 2026: Flipkart completed its redomicile from Singapore to India in Mar 2026 ahead of a planned Indian IPO (https://www.thestar.com.my/tech/tech-news/2026/03/09/walmart039s-flipkart-shifts-base-to-india-as-it-prepares-for-ipo); later reports say Walmart deferred the IPO until EBITDA breakeven, but this is unconfirmed [uncertain]. Market share estimates: Flipkart about 50-60% of e-commerce GMV vs Amazon 25-30% and Meesho about 10% (ICICI Securities, via inkl), or about a 10-point GMV lead every year since 2019 (Goldman Sachs/Euromonitor, via The Hans India); the estimates conflict. Big Billion Days 2026 began 9 Oct (8 Oct early access for Plus/Black); Redseer put online festive GMV at $7-8 bn for the first leg, 8-18 Oct (https://inc42.com/features/festive-sales-see-shoppers-log-in-but-hold-back-on-big-ticket-purchases/). Fees: Flipkart added a Rs 3 platform fee in Aug 2024 and Rs 5 on Flipkart Minutes; checkout add-ons such as 'Offer Handling Fee', 'Payment Handling Fee' and 'Protect Promise Fee' were flagged as drip pricing (https://www.deceptive.design/articles/drip-pricing-on-flipkart); on iPhone 17 orders Flipkart's offer handling fee was reported at Rs 355 vs Amazon's Rs 199 (https://smartprix.com/bytes/if-youre-buying-an-iphone-17-on-flipkart-or-amazon-be-ready-to-pay-extra-fees). Independent cross-platform price studies are weak: blog comparisons show Amazon cheaper on some Apple/Samsung SKUs and Flipkart cheaper on others and on fashion. DataWeave found Flipkart offered higher discounts than Amazon across categories in festive sales. Stale-risk flags: IPO timing, fee levels and Plus/Black membership terms change often.",
+  "regulatory_context": "Material. (1) FDI policy (Press Note 2, 2018): foreign-owned marketplaces like Flipkart and Amazon may not own inventory sold on the platform or directly or indirectly influence sale prices, so 'just match Amazon' must work through platform-funded coupons, bank offers, SuperCoins and seller incentives, not by setting prices. (2) CCPA Guidelines for Prevention and Regulation of Dark Patterns (Nov 2023) list drip pricing and false urgency as banned patterns; in 2025 CCPA asked e-commerce firms to self-audit and remove them [uncertain on 2026 enforcement]. Hidden checkout fees are both the perception problem and a legal risk. (3) Consumer Protection (E-Commerce) Rules 2020: show the total price including all charges and the seller's details. (4) Legal Metrology rules on MRP and 'per unit' price display. (5) CCI antitrust probe (from Jan 2022) into deep discounting, preferred sellers and exclusive phone launches; DG findings reported, final order pending, so aggressive below-cost price leadership invites scrutiny [uncertain on current status]. (6) RBI rules on bank-offer cashback and no-cost EMI disclosure.",
+  "public_data_anchors": "1) Perception gap: non-metro users -12 points vs Amazon; Prime users +26 points preference for Amazon, which customers rated ahead on price, selection and experience (Factor Daily, 2018 - dated, use as historical anchor). 2) GMV share: Flipkart 50-60%, Amazon 25-30%, Meesho about 10% (ICICI Securities via https://www.inkl.com/news/flipkart-pulls-ahead-how-india-s-e-commerce-giant-is-winning-hearts-and-carts) vs a 10-point Flipkart lead (Goldman Sachs via https://www.thehansindia.com/business/flipkart-gains-ground-as-amazon-loses-online-users-1119704) [uncertain]. 3) Flipkart platform fee Rs 3 (Aug 2024; https://inc42.com/?p=473758); Flipkart Minutes Rs 5. 4) Offer handling fee on iPhone 17: Flipkart Rs 355, Amazon Rs 199 (Smartprix, 2025-26). 5) Festive 2026 first leg: $7-8 bn online GMV (Redseer via Inc42, Oct 2026); smartphone units -16% YoY in the first three sale days (Counterpoint). 6) Flipkart and Myntra about 35% of e-commerce MAU share YTD (Hans India, 2026) [uncertain].",
+  "framework_applied": "Product Strategy: Clarify, Context (4 pillars), Recommend (frameworks.md section 2); a strategic plan question ('what do we do'). Step 1 Clarify - confirm 'prices match' means listed selling price on the same SKUs vs the final amount paid; which users believe it (Prime households? metros? electronics buyers?); how it's measured (brand tracker, survey, cross-shopping behaviour); goal (conversion and share of wallet, not just survey scores); constraints (FDI rules: Flipkart can't set seller prices; no margin-burning price war before an IPO). Step 2 Context - (1) Company: Flipkart leads GMV and value commerce, earns from commissions, ads and fees; weakness is price image and the drip-fee stack it added; (2) Customers: users judge price from a few known-value items (iPhone, top phones, detergent), the final payable at checkout, sale-day comparisons and whether they 'trust they got the best deal'; segment by Prime vs non-Prime, metro vs Tier 2, category; (3) Competition: Amazon (Prime free delivery, fewer visible fees, 'everyday low price' image), Meesho and Shopsy on value, quick commerce (Blinkit, Zepto, Instamart, Flipkart Minutes) on daily needs; price comparison tools; (4) Market forces: shoppers have high bargaining power and low switching cost; brands and sellers control many prices; banks fund a large share of 'discounts'. Step 3 Recommend - reframe: this isn't a price problem but a price-truth and price-signal problem. Make the price people see the price they pay, win visibly on the 200-500 items people actually compare, and prove it with a guarantee; phased rollout, risks (margin, CCI/FDI, seller pushback) and success metrics.",
+  "clarifying_questions": [
+    {
+      "q": "When we say prices match, is that the listed price on identical SKUs, or the final amount the customer pays after fees, delivery and offers?",
+      "a": "Listed price on matched SKUs, on the product page. We haven't compared final payable."
+    },
+    {
+      "q": "How do we know users believe Amazon is cheaper: a brand tracker, surveys, or behaviour like checking Amazon before buying?",
+      "a": "A quarterly brand tracker: 'Which app has the lowest prices?' Amazon wins by about 15 points. We also see cross-shopping in exit surveys."
+    },
+    {
+      "q": "Which users and categories show the gap most?",
+      "a": "It's biggest among metro Prime households and in electronics and mobiles. Tier 2-3 and fashion are close to even."
+    },
+    {
+      "q": "What's the business goal: survey scores, conversion, or share of wallet?",
+      "a": "Share of wallet among high-value metro customers, ahead of the IPO."
+    },
+    {
+      "q": "Can we change seller prices, or only fees, coupons and the experience?",
+      "a": "We're a marketplace. We can't set seller prices. We can change our own fees, fund coupons and SuperCoins, and change the experience."
+    },
+    {
+      "q": "Is there a budget for price investment?",
+      "a": "Limited. Leadership won't fund a broad price war. Targeted investment is fine if you can show the return."
+    }
+  ],
+  "interviewer_data_reveals": [
+    {
+      "exhibit": "Exhibit 1 - Listed price vs final payable, 10 high-search SKUs (illustrative)",
+      "data": "| Metric | Flipkart | Amazon |\n|---|---|---|\n| SKUs with lower or equal listed price | 7 of 10 | 6 of 10 |\n| SKUs with lower final payable (no bank card) | 4 of 10 | 6 of 10 |\n| Average fee stack at checkout (platform + handling + protect) | Rs 45 | Rs 15 |\n| Lowest price shown requires a specific bank card | 6 of 10 | 3 of 10 |"
+    },
+    {
+      "exhibit": "Exhibit 2 - Where price perception forms (illustrative survey, n = 3,000 metro shoppers)",
+      "data": "| Source of 'which is cheaper' belief | % citing |\n|---|---|\n| Price of 2-3 items I compared recently (phones, appliances) | 41% |\n| Final amount at checkout ('extra charges') | 27% |\n| Prime: free fast delivery, no surprises | 18% |\n| Sale-day ads and news | 9% |\n| Friends and family | 5% |"
+    },
+    {
+      "exhibit": "Exhibit 3 - Funnel for cross-shoppers on mobiles (illustrative)",
+      "data": "| Step | Flipkart | Amazon |\n|---|---|---|\n| Product page view to add-to-cart | 14% | 13% |\n| Add-to-cart to checkout start | 58% | 61% |\n| Checkout start to order | 52% | 63% |\nThe biggest gap is at the checkout page, where fees and bank-offer conditions appear."
+    },
+    {
+      "exhibit": "Exhibit 4 - Real anchors on fees and share",
+      "data": "Flipkart platform fee Rs 3 (Aug 2024); iPhone 17 offer handling fee Rs 355 on Flipkart vs Rs 199 on Amazon (Smartprix). Flipkart 50-60% GMV share vs Amazon 25-30% (ICICI Securities). Historical perception gap: -12 points in non-metro, +26 points Amazon preference among Prime users (Factor Daily, 2018)."
+    }
+  ],
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "Flipkart's prices match Amazon's on most products, but users believe Amazon is cheaper. What do you do?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'll first clarify what 'match' and 'believe' mean, then look at Flipkart, customers, competition and market forces, and end with a recommendation. First: is 'match' the price on the product page, or the final amount paid?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Listed price on matched SKUs. We haven't compared final payable."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's my first hypothesis already: perception may be based on what people pay, not what they see. How are we measuring the belief?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "A quarterly brand tracker. Amazon wins 'lowest prices' by about 15 points. It's biggest in metro Prime households and in electronics and mobiles."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "And the goal: better survey scores, or share of wallet? And can we touch prices?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Share of wallet among high-value metro customers, ahead of the IPO. We're a marketplace, so you can't set seller prices. You can change our fees, fund coupons and change the experience. No broad price war."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Good, that rules out the lazy answer of cutting prices across the board, which FDI rules wouldn't allow anyway. Let me look at Flipkart. It leads Indian e-commerce on GMV, by most estimates 50-60% against Amazon's 25-30%, and it's strongest in value and Tier 2-3. It earns from seller commissions, ads and, increasingly, customer fees: a Rs 3 platform fee since 2024 and handling fees at checkout. Its weakness is exactly this price image among richer metro users, the segment that matters most for profit and for an IPO story."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Now customers. People don't check 10,000 prices. They form a price image from a few known-value items, like an iPhone or a Samsung phone; from the final bill; from how often they're surprised; and from sale-day noise. I'd segment by Prime vs non-Prime metro households, Tier 2-3 value shoppers, and category. The pain I'd bet on for metro Prime households is: 'I saw the same price, but by the time I paid, Flipkart cost more, or the low price needed a card I don't have.'"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "(Shares Exhibit 1.) Here's an illustrative comparison on 10 high-search SKUs."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "This is telling. On listed price, Flipkart wins or ties 7 of 10. On final payable without a specific bank card, it wins only 4. The checkout fee stack is about Rs 45 vs Rs 15, and 6 of 10 'lowest prices' need a particular bank card. So the perception isn't irrational. For a user without that card, Amazon is often cheaper at the moment of paying."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "(Shares Exhibit 2.) And here's where the belief forms."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "41% cite a few items they compared, 27% cite the final amount, 18% cite Prime. So about two-thirds of the perception comes from two things Flipkart controls: its prices on the few items people compare, and its checkout fees. Let me check the funnel too."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "(Shares Exhibit 3.) On mobiles, the biggest gap vs Amazon is checkout start to order: 52% vs 63%."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That confirms it: customers discover the real price at checkout and leave. Probably to Amazon, since these are cross-shoppers."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Competition. Amazon's edge isn't lower prices; it's Prime: free fast delivery, few visible fees, and a long-built 'no surprises' image. Meesho and Shopsy own the absolute-lowest-price image in value segments, and quick commerce is taking daily-needs baskets. Price trackers and deal channels on Telegram and YouTube amplify any visible gap."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Market forces. Buyers have high power: switching costs nothing. Sellers and brands set prices, and banks fund many of the 'discounts', which is why Flipkart's best prices are tied to cards. Regulation matters too: FDI rules stop Flipkart from setting prices, CCI is still examining deep discounting, and CCPA's 2023 dark-pattern guidelines name drip pricing. So the hidden-fee pattern is both the perception problem and a legal risk."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "So what do you do?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "My reframe: this isn't a price problem, it's a price-truth problem. Flipkart is matching on the number that doesn't matter and losing on the numbers that do. The strategy is: make the price you see the price you pay, win visibly on the few items people compare, and prove it with a guarantee. Three moves."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Move one, safe and fast: all-in pricing. Fold the platform and handling fees into the product price shown on the page, or remove them on electronics and on Plus members' orders, and show 'You pay Rs X' on the listing, not only at checkout. Show the best price available to this user, based on cards they actually have saved, not a theoretical bank-offer price. Move two, targeted: a known-value item programme. Pick 300-500 SKUs that drive comparison, like the top phones, TVs, appliances and staples, and fund coupons or SuperCoins so Flipkart's final payable is at or below Amazon's every day, not only during Big Billion Days. Under FDI rules this is platform-funded, not set prices. Move three, ambitious: a 'Lowest Price Promise' on those items: if you find it cheaper on Amazon within 7 days, Flipkart credits the difference in SuperCoins. That turns a belief into a guarantee and makes the message easy to market."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Isn't removing fees expensive?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "It's real money, so I'd size it. Say the fees are Rs 30-40 per order on electronics. That's under 0.5% of a Rs 15,000 phone order, against an 11-point checkout conversion gap in Exhibit 3. Even recovering a third of that gap on high-value orders pays for it. On low-value orders I'd keep a transparent, flat fee shown upfront, which is also what CCPA wants."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What are the risks?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Four. Margin: cap the KVI programme budget and measure incrementality with holdout cities. Amazon matching: likely, but a guarantee plus all-in pricing is a positioning shift that's hard to copy quickly without giving up Amazon's own fees. Regulatory: platform-funded coupons must stay non-discriminatory between sellers to avoid CCI concerns, and the guarantee must be in SuperCoins or wallet credit with clear terms. Sellers: brands may push back if we undercut MRP narratives, so we fund it ourselves and don't force sellers' prices."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How do you know it worked?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "North Star: share of wallet among metro high-value cross-shoppers. Leading indicators: checkout-to-order conversion on electronics; the share of KVI SKUs where Flipkart's final payable is at or below Amazon's; and the 'lowest prices' brand-tracker score, which I'd expect to move in 2-3 quarters. Guardrails: contribution margin per order, fee revenue lost vs GMV gained, seller NPS, and complaints about the guarantee."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Close it out."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Users aren't wrong; they're reacting to the final bill and to a few prices they remember. So Flipkart should stop matching on the sticker price and start winning on the receipt: all-in prices, everyday leadership on the 300-500 items people compare, and a lowest-price promise that turns belief into proof. Pilot in two metros on electronics for one quarter, and scale if checkout conversion and the tracker move."
+    }
+  ],
+  "answer_and_recommendation": "Ranked levers: (1) RECOMMENDED first - all-in, personalised price display: fold platform/handling fees into the shown price (or waive them on electronics and Plus orders) and show the best price this user can actually get with their saved payment methods, removing the checkout surprise that drives an illustrative 52% vs 63% checkout conversion gap. (2) Known-value item (KVI) leadership: fund coupons/SuperCoins on the 300-500 most-compared SKUs so Flipkart's final payable is at or below Amazon's every day (platform-funded, FDI-compliant). (3) 'Lowest Price Promise' on KVIs: refund the difference in SuperCoins if the item is cheaper on Amazon within 7 days, plus marketing built on the guarantee. Not doing: broad price cuts or a sitewide price war (margin, FDI and CCI risk). Reframe: 'Flipkart matches on the sticker; it must win on the receipt.' Risks and mitigation: margin (capped budget, holdout-city incrementality), Amazon response (guarantee plus no-fee positioning is hard for Amazon to copy quickly), regulation (non-discriminatory funding, clear guarantee terms, CCPA-compliant fee display), seller pushback (platform funds the gap). Rollout: 2 metros, electronics and mobiles, one quarter. Closing line: 'People believe Amazon is cheaper because, at the moment they pay, it often is. Fix the receipt and the belief follows.'",
+  "counter_metrics_guardrails": "Guardrails: (1) contribution margin per order and total KVI subsidy as a % of GMV; (2) fee revenue lost vs incremental GMV and orders (net revenue per customer); (3) seller NPS and the share of sellers exiting KVI categories; (4) return and cancellation rate (cheap prices must not pull in fraud or resellers); (5) guarantee abuse rate and claim-handling time; (6) Amazon price-match response, tracked weekly on KVIs; (7) CCPA/consumer complaints on pricing display; (8) Tier 2-3 and fashion conversion (the fix for metro electronics must not hurt the value core).",
+  "follow_up_twists": [
+    {
+      "twist": "Amazon immediately matches every KVI price.",
+      "response": "Fine, since parity on the receipt removes the perception gap; the guarantee and all-in pricing make Flipkart the one that's 'never more expensive', and I'd shift investment to Plus benefits."
+    },
+    {
+      "twist": "Finance says waiving fees costs Rs 500 crore a year.",
+      "response": "Then waive only on high-AOV categories and Plus orders where conversion gains are proven, and keep a flat, upfront fee elsewhere; the legal and perception problem is hiding the fee, not charging it."
+    },
+    {
+      "twist": "The gap is actually biggest in Tier 2 fashion, not metro electronics.",
+      "response": "Then the KVIs change to fashion basics and Shopsy price points, and the comparison set is Meesho, not Amazon; the price-truth principle stays the same."
+    }
+  ],
+  "common_pitfalls": [
+    "Cutting prices across the board: it ignores that prices already match, burns margin before an IPO, and isn't allowed for a marketplace under FDI rules.",
+    "Treating it as pure branding ('run an ad campaign saying we're cheaper') without checking whether the final payable actually differs.",
+    "Comparing listed prices only, and missing checkout fees and bank-card-dependent prices that create the gap.",
+    "Ignoring segments: the gap is concentrated among metro Prime households and electronics, so a sitewide fix wastes money."
+  ],
+  "skills_tested": "structuring, empathy, business sense, quant, prioritisation, communication",
+  "linked_teardown": "None (no Flipkart teardown folder; meesho_product_teardown is the closest local research for value-shopper price behaviour)",
+  "uncertain": [
+    "round_and_level",
+    "source_and_verification",
+    "context_as_of",
+    "regulatory_context",
+    "public_data_anchors"
+  ]
+}

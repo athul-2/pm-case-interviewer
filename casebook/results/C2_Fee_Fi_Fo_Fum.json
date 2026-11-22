@@ -1,0 +1,215 @@
+{
+  "pun_title": "Fee Fi Fo Fum",
+  "case_type": "Product Strategy",
+  "asked_at": "By the Authors (synthetic case framed on Medianama-style coverage of Eternal's Q4 FY26 results)",
+  "subject_company": "Eternal Ltd (Zomato food delivery; Zomato Gold). Swiggy is the reference competitor.",
+  "round_and_level": "PM round 2 (product strategy / monetisation), PM to SPM level; a good fit for growth or pricing PM roles at food, quick-commerce or ride-hailing companies. [uncertain]",
+  "difficulty": "Medium-Hard - the strategic decision is binary on the surface, but a strong answer has to separate fee design (who pays what, and is it seen as fair) from discount design (who gets subsidised, and is it incremental), and handle Indian consumer-protection rules on drip pricing and device-based pricing.",
+  "market_and_industry": "India; food delivery (Zomato vs Swiggy duopoly, low-commission challengers such as Rapido's Ownly and magicpin); metro and Tier-1 core, growing Tier-2/3 where users are more price-elastic; Android-heavy; UPI-dominant.",
+  "time_box_minutes": "25-30",
+  "exact_prompt": "Eternal charges the same flat platform fee on every Zomato order - about Rs 15 now - but hands out discounts only to targeted users and locations. Is this the right pricing strategy? What would you change?",
+  "source_and_verification": "Level: synthetic (written by the casebook authors; the 'Medianama Q4FY26' tag refers to the news framing). No Medianama article on this exact theme was found in this pass; the factual anchors come from Inc42 on Eternal's Q4 FY26 ('platform fees have gone up, but discounts are still being used carefully across select user segments and locations': https://inc42.com/?p=556754), Inc42 on Zomato's Mar 2026 fee hike (https://inc42.com/buzz/zomato-hikes-platform-fees-by-20-to-%E2%82%B914-9/) and Business Today (https://www.businesstoday.in/technology/story/zomato-hikes-platform-fee-to-rs-15-per-order-521610-2026-03-20). NextLeap, The Product Folks and Glassdoor were not searched directly for this prompt. Year: 2026. [uncertain]",
+  "context_as_of": "As of Nov 2026. Zomato's platform fee: introduced at Rs 2 per order (Aug 2023), raised in steps to Rs 6, Rs 10 (Oct 2024), Rs 12 then Rs 12.5 (Sep 2025), and Rs 14.90 from 20 Mar 2026 (+19-20%), applied across Indian markets (Inc42, Business Today, Mar 2026). Swiggy charged Rs 14.99 incl. GST at the time and moved to Rs 17.58 incl. GST days later (Storyboard18, Mar 2026). Eternal Q4 FY26 (Jan-Mar 2026): consolidated net profit Rs 174 cr (4.5x YoY), adjusted EBITDA about Rs 429 cr; food delivery adjusted EBITDA margin reported at about 5.5% (https://upstox.com/news/market-news/earnings/eternal-q4-results-net-profit-jumps-346-to-174-crore-blinkit-fuels-196-yo-y-revenue-rise/article-192850/). On the targeted side, Eternal cut the Gold free-delivery threshold to Rs 99 from Rs 199, ran targeted customer activation, and curated sub-Rs 250 meals; Gold subscriber additions slowed after the pricing changes (https://inc42.com/buzz/eternal-q4-profit-surges-4-5x-yoy-to-%e2%82%b9174-cr/). Management said it prioritises absolute profit over margin % and reinvests fee revenue in growth (https://www.investywise.com/eternal-limited-q4fy26-earnings-conference-call-transcript/). Gold waives delivery fees but not the platform fee. Q2 FY27: Zomato food NOV about Rs 11,445 cr, +21.5% YoY (local teardown, Eternal_Zomato_District.json). Naming: Zomato Ltd became Eternal Ltd in 2025; 'Zomato' is now the food app brand. Stale-risk: the 5.5% margin may be on NOV or on adjusted revenue depending on source, and the Rs 14.90 figure is described as excl. GST in some reports. [uncertain]",
+  "regulatory_context": "1) CCPA Guidelines for Prevention and Regulation of Dark Patterns, 2023 (under the Consumer Protection Act, 2019): drip pricing (revealing fees only at checkout), basket sneaking and false urgency are listed dark patterns; CCPA's 2025 advisory asked e-commerce platforms to self-audit for dark patterns. A flat, visible fee is easier to defend than variable or hidden fees. 2) Differential or personalised pricing: in Jan 2025 CCPA issued notices to Ola and Uber over alleged different fares for iPhone vs Android users - a warning against per-user or per-device platform fees. 3) GST: 18% GST applies to the platform fee and, from 22 Sep 2025, to delivery fees, so every Rs 1 of fee carries Rs 0.18 tax. 4) Code on Social Security (Nov 2025): aggregators pay 1-2% of turnover into a gig-worker fund, a cost platforms have partly recovered through fees. 5) CCI: ongoing scrutiny of food aggregators (NRAI complaints on commissions, discounts funded by restaurants and parity) - restaurant-funded targeted discounts need care. [uncertain]",
+  "public_data_anchors": "1) Zomato platform fee Rs 14.90 per order from 20 Mar 2026, up from Rs 12.50 (Inc42, Business Today, Mar 2026). 2) Fee history: Rs 2 (Aug 2023) to Rs 14.90 (Mar 2026), about 7x in under 3 years (Inc42; local teardown). 3) Swiggy platform fee Rs 17.58 incl. GST since Mar 2026 (Storyboard18, Mar 2026). 4) Eternal Q4 FY26 adjusted EBITDA about Rs 429 cr; net profit Rs 174 cr (Upstox / Inc42, May 2026). 5) Zomato processes 2.5M+ food orders a day (2026 press, https://www.angelone.in/news/unlisted-companies/rapido-s-ownly-plans-multi-city-expansion-as-it-crosses-50-000-daily-orders). 6) Derived: about 2.5M x 91 days = about 23 crore orders a quarter; at Rs 14.90 that is about Rs 340 cr of platform-fee revenue a quarter, and the Rs 2.40 hike adds about Rs 55 cr a quarter (illustrative derivation, before GST treatment). 7) Zomato food NOV Q2 FY27 about Rs 11,445 cr, +21.5% YoY (local teardown). 8) Gold free-delivery threshold cut to Rs 99 from Rs 199 (Inc42, Q4 FY26). [uncertain]",
+  "framework_applied": "Product Strategy: Clarify, Context (4 pillars), Recommend (frameworks.md section 2); a strategic-decision question ('is this right?'). Step 1 Clarify - success = profit pool (absolute food EBITDA) without losing order growth or Gold value; scope = customer-side pricing on Zomato food only, not restaurant commission; constraints = CCPA dark-patterns rules, GST, competitor parity with Swiggy. Step 2a Company positioning - Eternal leads food delivery (55-58% duopoly share, higher margins); platform fee is now a large share of food profit, so the fee is strategic, not cosmetic. Step 2b Customers - segment by price elasticity: heavy urban users (low elasticity, notice fee stacking), Gold members (feel 'paid twice'), price-sensitive Tier-2 and students (high elasticity), lapsed users. Step 2c Competition - Swiggy matches fees within days (fees are a tacit duopoly floor), Ownly/magicpin/ONDC attack with low-commission lower menu prices; the substitute is dine-in or home cooking. Step 2d Market forces - buyers multi-home and are price-aware, restaurants resent funding discounts, regulators target drip and personalised pricing. Step 3 Recommend - reframe: 'Keep the fee flat and visible as the price of the service, but make discounts the only personalised lever - and judge them on incrementality, not reach.' Fix two leaks: Gold does not cover the fee, and fees appear late in the funnel.",
+  "clarifying_questions": [
+    {
+      "q": "What is the goal of the pricing strategy - absolute food profit, order growth, or both? Is there a margin floor?",
+      "a": "Grow absolute food EBITDA while keeping order growth near 18-20% YoY. That is the stated management priority."
+    },
+    {
+      "q": "Is the scope just the customer platform fee and discounts, or also delivery fees, Gold and restaurant commission?",
+      "a": "Customer side: platform fee, delivery fee, Gold and discounts. Restaurant commission is out of scope."
+    },
+    {
+      "q": "How are targeted discounts decided today - by segment, location, or a model? And who funds them?",
+      "a": "A mix: city and cohort rules plus a propensity model. About half the discount value is restaurant-funded. Exhibit 2."
+    },
+    {
+      "q": "Has the last fee hike hurt order volume or complaints?",
+      "a": "Volume dipped briefly then recovered; complaints about fees rose. Exhibit 1."
+    },
+    {
+      "q": "Does Gold cover the platform fee today?",
+      "a": "No. Gold waives delivery above Rs 99 but not the platform fee."
+    },
+    {
+      "q": "Any regulatory red lines we should know about?",
+      "a": "Legal says no per-user platform fee and no hidden fees at checkout, given CCPA's dark-patterns rules and the Ola/Uber device-pricing notices."
+    },
+    {
+      "q": "What does Swiggy do when we move fees?",
+      "a": "Historically matches or exceeds within 1-2 weeks."
+    }
+  ],
+  "interviewer_data_reveals": "All numbers are illustrative (invented for teaching) unless a source is cited.\n\nExhibit 1 - Effect of the Mar 2026 fee hike (Rs 12.50 to Rs 14.90, a real change per Inc42), illustrative outcomes:\n| Metric | 4 weeks before | 4 weeks after | 12 weeks after |\n| Daily orders (lakh) | 250 | 244 | 252 |\n| Cart-to-order conversion | 71.0% | 69.6% | 70.6% |\n| Fee-related complaints per 10k orders | 4 | 11 | 8 |\n| Platform fee revenue per quarter (Rs cr) | 285 | - | 340 |\n\nExhibit 2 - Targeted discount programme, last quarter (illustrative):\n| Segment | Share of users | Got discount | Discount Rs per order | Incremental orders per Rs 100 of discount |\n| Heavy metro (8+ orders/mo) | 18% | 40% | 35 | 0.2 |\n| Regular metro (3-7) | 32% | 30% | 40 | 0.6 |\n| Tier-2 / students | 30% | 55% | 45 | 1.4 |\n| Lapsed (no order 45 days) | 20% | 70% | 60 | 1.1 |\nTotal discount spend is about 4% of NOV (illustrative).\n\nExhibit 3 - Gold members vs non-members (illustrative):\n| Metric | Gold | Non-Gold |\n| Orders per month | 7.5 | 2.8 |\n| Platform fee paid per month | Rs 112 | Rs 42 |\n| 'Gold is worth it' (survey) | 52%, down from 64% a year ago | - |\n(Gold free-delivery threshold cut to Rs 99 is real, per Inc42; slowing Gold subscriber additions are reported by Inc42.)\n\nExhibit 4 - Price elasticity of orders to the total fee stack (illustrative): heavy metro -0.1; regular metro -0.3; Tier-2/students -0.8.",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "Eternal charges every Zomato order the same flat platform fee, about Rs 15, but gives discounts only to targeted users and locations. Is this the right pricing strategy?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Let me restate: the customer pays a uniform per-order fee, while the subsidy side is personalised. You're asking whether that combination is right and what I'd change. Is the goal profit, growth, or both?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Grow absolute food EBITDA while keeping orders growing around 18-20%."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "And is scope just customer-side pricing - platform fee, delivery fee, Gold, discounts - not restaurant commission?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Yes, customer side only."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Two more: does Gold cover the platform fee, and are there regulatory red lines?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Gold doesn't cover it. Legal says no per-user fees and nothing hidden until checkout - CCPA's dark-patterns rules, and the notices to Ola and Uber over iPhone vs Android pricing."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's important, it rules out personalising the fee itself. My structure: Zomato's position and why the fee matters, then customer segments, then competition, then market forces, then a decision with conditions."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Position first. The fee went from Rs 2 in Aug 2023 to Rs 14.90 in Mar 2026. At about 2.5 million orders a day, that's roughly 23 crore orders a quarter, so about Rs 340 crore of fee revenue a quarter. Food EBITDA is in the hundreds of crores a quarter, so the fee is now a big chunk of the food profit pool. It's strategic, not a rounding charge."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Here's what happened after the March hike. Exhibit 1."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Orders dipped about 2.4% in the first four weeks and recovered beyond baseline by week 12, while fee revenue rose about 19%. Conversion recovered too. So demand overall is inelastic to a Rs 2-3 change. The cost shows up in trust: fee complaints nearly tripled and are still double the old level."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Customers next, by price elasticity:\n| Segment | Elasticity | What they feel |\n| Heavy metro | low | annoyed by fee stacking, still order |\n| Gold members | low-mid | 'I pay for Gold and still pay a fee' |\n| Regular metro | mid | compare with Swiggy |\n| Tier-2 / students | high | fee is 8-10% of a Rs 150 meal |\n| Lapsed | high | need a reason to come back |\nA flat fee is regressive: Rs 15 on a Rs 600 order is 2.5%, on a Rs 150 order it's 10%."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "So you'd scrap the flat fee?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Not yet. A flat fee has real strengths: it's simple, it's seen as fair because everyone pays the same, it's easy to show upfront, and it's defensible under CCPA. Varying it per user would hit exactly the device-pricing concern legal raised. The question is whether discounts are doing the targeting job well. Can I see the discount data?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Exhibit 2."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "This is the leak. Heavy metro users get discounts 40% of the time, but each Rs 100 of discount buys only 0.2 extra orders - they'd order anyway. Tier-2 and students return 1.4 orders per Rs 100, seven times more. So the targeting principle is right, but the allocation is partly going to people who aren't price-sensitive."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Competition. Swiggy matches fee moves within days - Rs 14.99 to Rs 17.58 right after Zomato's March hike - so the fee works as a duopoly floor rather than a competitive weapon. The real price competition comes from Ownly, magicpin and ONDC, which use low commissions so restaurants list lower menu prices. Those hit the high-elasticity segments first."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Market forces. Buyers multi-home and screenshot bills on X and Reddit, so fee salience is high. Restaurants fund about half the discounts and resent it, which is a CCI and NRAI pressure point. Regulators police drip pricing and personalised pricing. And GST of 18% on the fee means each Rs 1 of fee is Rs 1.18 to the user."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "And Gold? Exhibit 3."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Gold members pay Rs 112 a month in platform fees, nearly 3x non-members, and 'worth it' has fallen from 64% to 52%. They're the most valuable users, ordering 7.5 times a month, and they feel taxed twice. That matches Inc42's note that Gold additions slowed after the pricing changes."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "So, is the strategy right?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Mostly yes, with three fixes. My reframe: the fee is the price of the service and should stay flat, public and rule-based; discounts are the only personalised lever, and they should be judged on incrementality, not reach."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Fix 1, reallocate discounts by uplift. Move spend from heavy metro users, where incremental orders are 0.2 per Rs 100, to Tier-2, students and lapsed users at 1.1-1.4. Use uplift modelling with holdout groups so every rupee is measured against a control. Shifting even half the heavy-user budget could add a few percent to orders at the same spend."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Fix 2, make Gold cover part of the fee. A Gold member pays half the platform fee above a Rs 199 cart. On Exhibit 3 numbers it costs about Rs 56 per member a month, but Gold members order 2.7x more, so a 5% lift in Gold retention or adds pays for it. It turns the fee into the reason to buy Gold."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Fix 3, keep the fee flat in rupees but rule-based for small carts, and show it early. Instead of a blanket Rs 14.90, show the all-in price on the menu and cap the fee at, say, 8% of the cart for sub-Rs 150 orders. The rule is public and the same for everyone, so it stays fair and CCPA-safe, while removing the regressive bite on value meals."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Doesn't Fix 3 lose revenue?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "A little. If sub-Rs 150 orders are about 10% of volume and the cap cuts their fee by Rs 3 on average, that's about Rs 7 crore a quarter against Rs 340 crore of fee revenue. With elasticity of -0.8 in that segment, I'd expect part of it back in volume. Compared to Swiggy's Rs 17.58, it also becomes a price story for value users."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What's the risk in all this?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Three. Heavy users notice they lost discounts - mitigate by keeping Gold value and loyalty perks for them. Swiggy copies the Gold fee waiver - fine, that's a quality race, not a price war. And the small-cart cap invites order splitting - set a single-restaurant cap per hour."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "When would you change the flat-fee model entirely?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "If complaint and churn data showed the fee itself driving lapse - say, fee complaints sustained above 10 per 10k orders and a measurable churn gap - I'd move to distance or cart-value tiers, still public and rule-based. I would not move to per-user dynamic fees, given CCPA and trust."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "To close: the flat fee plus targeted discounts is the right skeleton - simple, fair and compliant on the fee, efficient on the subsidy. But today discounts leak to users who'd order anyway, Gold members feel taxed twice, and the flat fee bites hardest on value meals. Re-target discounts by uplift, let Gold absorb half the fee, and add a public small-cart cap. I'd track absolute food EBITDA, incremental orders per Rs 100 of discount, Gold retention and fee complaints."
+    }
+  ],
+  "answer_and_recommendation": "Decision: yes, keep the flat, uniform platform fee plus targeted discounts as the skeleton, but fix it. Ranked changes: (1) Re-target discounts by measured incrementality (uplift models with holdouts) - shift spend from heavy metro users (0.2 incremental orders per Rs 100, illustrative) to Tier-2, students and lapsed users (1.1-1.4). (2) Let Zomato Gold absorb half the platform fee above a Rs 199 cart, so the fee becomes a reason to subscribe instead of a 'paid twice' complaint; pay-back via Gold retention and frequency. (3) Keep the fee public and the same for all, but rule-based for small carts (cap at about 8% of cart under Rs 150) and show the all-in price on the menu, not only at checkout. Not doing: per-user or per-device platform fees (CCPA dark patterns and the Ola/Uber notices), and blanket fee cuts to chase Swiggy. Risks: heavy users notice reduced discounts (offset with Gold perks); Swiggy copies the Gold fee waiver (accept a quality race); order splitting under the cap (per-hour limits); small revenue loss from the cap (about Rs 7 cr a quarter, illustrative, partly recovered by volume). Conditions to change: sustained fee-driven churn would justify moving to public distance or cart tiers. Closing line: 'Keep the fee boring and fair, make the discounts smart - and make Gold the place where loyal users stop feeling the fee.'",
+  "counter_metrics_guardrails": "1) Absolute food adjusted EBITDA and fee revenue per order (the profit goal). 2) Order growth YoY and cart-to-order conversion, overall and in Tier-2 (the growth guardrail). 3) Incremental orders per Rs 100 of discount, measured against holdout groups. 4) Gold net adds, Gold retention and Gold member frequency. 5) Fee-related complaints per 10k orders and app-store rating mentions of fees (trust). 6) Heavy-user churn after discount reallocation. 7) Restaurant-funded discount share and restaurant churn (CCI/NRAI exposure). 8) Order-splitting rate on sub-Rs 150 carts. 9) Competitive price gap vs Swiggy on a standard basket.",
+  "follow_up_twists": [
+    {
+      "twist": "Swiggy cuts its platform fee to zero for one quarter. Do you follow?",
+      "response": "No blanket match - demand is inelastic for most users; I'd protect the high-elasticity segments with targeted offers and Gold, and let Swiggy burn margin, revisiting if our order share drops more than 1 point in a month."
+    },
+    {
+      "twist": "The CFO wants to personalise the platform fee by willingness to pay - Rs 10 to Rs 25. Your view?",
+      "response": "Decline: it breaches the fairness users expect from a fee, invites a CCPA dark-pattern or differential-pricing notice like Ola/Uber in 2025, and the same revenue can come from better-targeted discounts."
+    },
+    {
+      "twist": "Government caps platform fees at Rs 10. What changes?",
+      "response": "Recover margin through delivery-fee tiers, Gold pricing and ads, and cut low-incrementality discounts first - the targeting machinery becomes even more valuable when the fee lever is capped."
+    }
+  ],
+  "common_pitfalls": [
+    "Answering 'yes, it's fine' because orders recovered after hikes - ignores the trust cost (complaints) and Gold value erosion that show up later as churn.",
+    "Proposing dynamic or per-user platform fees as 'smarter' pricing - runs into CCPA dark-pattern rules and the device-based pricing notices to Ola and Uber.",
+    "Evaluating discounts by reach or redemption instead of incrementality - most heavy-user discounts subsidise orders that would happen anyway.",
+    "Treating the fee as a rounding charge - at 2.5M orders a day it is a profit pool of roughly Rs 340 cr a quarter, so changes must be sized."
+  ],
+  "skills_tested": [
+    "business sense",
+    "quant",
+    "structuring",
+    "prioritisation",
+    "empathy",
+    "communication"
+  ],
+  "linked_teardown": "swiggy-product-teardown (swiggy-product-teardown/results/Eternal_Zomato_District.json and Food_Delivery_core.json). Key facts used: Zomato fee ladder from Rs 2 (Aug 2023) to the Mar 2026 hike; Gold waives delivery but not the platform fee; Q2 FY27 Zomato food NOV about Rs 11,445 cr (+21.5%); Swiggy's matching fee ladder to Rs 17.58 incl. GST.",
+  "uncertain": [
+    "round_and_level",
+    "source_and_verification",
+    "context_as_of",
+    "regulatory_context",
+    "public_data_anchors"
+  ]
+}

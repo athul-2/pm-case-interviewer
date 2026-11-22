@@ -1,0 +1,132 @@
+{
+  "pun_title": "Hear Me Out",
+  "case_type": "Product Design",
+  "asked_at": "Google India (reported via The Product Folks case library)",
+  "subject_company": "Google (Google Home Mini / Nest Mini smart speaker and its successor, the Gemini-powered Google Home Speaker); the market for the design is the US",
+  "round_and_level": "Product-sense / product design round in Google's APM or PM loop (typically one of the 45-minute on-site interviews) [uncertain - The Product Folks page does not state the round, level or date]",
+  "difficulty": "Medium - accessibility questions look easy because the device is already voice-first, but strong answers find the visual dependencies hiding in a 'voice' product (app-based setup, QR codes, LED status lights) and design for a specific blind segment instead of 'blind people' in general",
+  "market_and_industry": "US; consumer hardware / smart speakers and voice assistants (Google, Amazon Alexa/Echo, Apple HomePod); accessibility for blind and low-vision users, skewing older (most vision loss is age-related); English-first, with Spanish as a second language",
+  "time_box_minutes": "30-40",
+  "exact_prompt": "How would you design Google Home Mini for blind people? (As reported by The Product Folks. Interviewers typically add: who exactly are you designing for, what would you change, and how would you measure success?)",
+  "source_and_verification": "Verification: reported. The Product Folks case study 'How would you design Google Home Mini for the blind people' (Google; no date or author shown): https://theproductfolks.com/product-management-case-studies/how-would-you-design-google-home-mini-for-the-blind-people . That write-up targets blind and partially sighted users aged 18-50, picks tactile buttons and textured surfaces as the RICE-prioritised solution, and measures satisfaction, usage frequency and task completion. Close variants asked at Google: PracHub 'Google product design: home automation for people who are blind' (https://prachub.com/interview-questions/google-product-design-home-automation-for-people-who-are-blind) and 'Building a Google Accessibility Feature for Users With No Sight' (https://prachub.com/interview-questions/building-a-google-accessibility-feature-for-users-with-no-sight); Glassdoor 'How would you build Google Maps for blind people' (https://static.glassdoor.at/Interview/How-would-you-build-google-maps-for-blind-people-QTN_4203255.htm). Year reported: not stated [uncertain]; the Google Home Mini name dates the question to about 2018-2021.",
+  "context_as_of": "As of 2026-11-11. (1) Product line: the Google Home Mini (2017) was succeeded by the Nest Mini (2nd gen, 2019; adds a wall mount, better bass, capacitive touch zones and an ultrasound sensor that lights up the volume LEDs as a hand approaches). Google's first new smart speaker in six years, the Gemini-powered Google Home Speaker, went on sale on 25 Jun 2026 at $99.99 (preorders 17 Jun), dropping the Nest branding (https://www.eweek.com/news/google-gemini-home-speaker/; https://techcrunch.com/2025/10/01/google-unveils-its-new-gemini-powered-google-home-speaker). (2) Assistant: Gemini for Home replaced Google Assistant on speakers and displays from Oct 2025. It supports natural follow-ups, mid-sentence corrections and multi-step requests. Basic features are free; Google Home Premium adds Gemini Live and camera intelligence (https://9to5google.com/2025/10/06/gemini-for-home-rolling-out-schedule-countries/). (3) Known accessibility gaps: setup runs through the Google Home phone app (screen-reader-dependent, sometimes QR codes); device state is shown with LEDs (mute, listening, volume, Wi-Fi errors). Strategy Analytics (2021) found most blind and visually impaired participants use smart speakers - mainly weather, cooking timers and recipes - but that visual-feedback-heavy design and QR-code setup exclude them (https://www.iotm2mcouncil.org/iot-library/news/smart-building-construction-news/visually-impaired-struggle-with-smart-home-devices/). A user study links more frequent smart-speaker use with lower loneliness among visually impaired users, alongside privacy concerns (https://par.nsf.gov/biblio/10644263). (4) Adjacent Google assets: Android TalkBack, Lookout (camera-based object, text and currency recognition), Gemini Live with camera, Pixel and Nest integrations. Competitors: Amazon Echo with Alexa+ and Show and Tell on Echo Show (identifies items for blind users); Be My Eyes and Aira (human or AI visual help). Possibly stale: whether Google sells the Nest Mini alongside the new speaker; current accessibility settings in the Google Home app [uncertain].",
+  "regulatory_context": "(1) 21st Century Communications and Video Accessibility Act (CVAA, 2010) and Section 255 of the Communications Act: manufacturers of equipment for telecom and advanced communications services (calling, messaging, video calls - the speaker's 'call' and 'broadcast' features) must make them accessible where achievable, under FCC enforcement. (2) ADA Title III: courts are split on whether apps and websites count as 'places of public accommodation', but the Google Home app is a recurring accessibility-litigation target; WCAG 2.1/2.2 AA is the practical benchmark. (3) Section 508 (Rehabilitation Act): only applies to federal procurement, which matters if the device is sold to the VA, which serves blinded veterans. (4) European Accessibility Act (in force 28 Jun 2025) for EU sales of consumer computing and communication devices - relevant if the design ships globally. (5) Privacy: always-listening devices in the homes of disabled and older users; FTC Act Section 5 and state laws (CCPA/CPRA in California; Illinois BIPA if voice prints are used for Voice Match). COPPA applies if children use the device. (6) Medical claims: medication reminders are fine, but any 'health monitoring' or fall-detection claims could bring FDA device regulation into scope - keep features non-diagnostic.",
+  "public_data_anchors": "1) More than 1 million Americans are blind and more than 8 million are visually impaired by uncorrected refractive error (US government-hosted research, https://par.nsf.gov/biblio/10644263, citing CDC/NEI-type estimates) [uncertain - the precise CDC VEHSS figure, about 7 million with vision loss, not re-verified]. 2) Most blindness in the US is age-related (macular degeneration, glaucoma, diabetic retinopathy, cataract), so the population skews 65+ [uncertain - qualitative, from NEI]. 3) Strategy Analytics (2021): most blind/VI participants use smart speakers; top uses are weather, cooking timers and recipes; QR-code setup and visual feedback are barriers. 4) Michigan Medicine survey (JMIR mHealth 2025): 69.7% (152/218) of patients with physical and visual disabilities had used a digital voice assistant, but regular use was low (https://mhealth.jmir.org/2025/1/e66185). 5) Among 113 visually impaired respondents, smart-speaker use was 47% in their 30s, 67% in their 40s and 58% in their 50s (study cited in search results, country unconfirmed) [uncertain]. 6) Google Home Speaker price $99.99, on sale 25 Jun 2026 (eWeek). 7) Braille literacy among blind Americans is often cited at under 10% (NFB) [uncertain - widely quoted, methodology disputed], which argues against Braille-only tactile solutions.",
+  "framework_applied": "CIRCLES + List-and-Trim + JTBD (frameworks.md section 1). C - Comprehend: goal = make Google's speaker the most independent-living device for blind users (adoption and engagement in this segment, plus brand/mission 'universally accessible'); scope = the device and its companion setup, not a new product line; who am I = a PM on Google Home; constraints = existing hardware, with only small hardware changes possible in the next revision, privacy, and no visual output. I - Identify: congenitally blind young adults (tech-fluent, use screen readers), people who lose sight later in life (45-80, adventitious blindness, low tech confidence, often living alone), low-vision users, and caregivers/family who set up devices; pick late-life sight loss - the largest group and the one with the highest pain, because they are learning a non-visual life and existing tech assumes screen-reader skills. R - Report needs (JTBD): set up and fix the device without sighted help; know what the device is doing without seeing lights; get everyday 'seeing' tasks done (read mail, identify a can, check if lights are on); stay safe and connected (calls, reminders, emergencies); manage the home independently. C - Cut: prioritise 'independent setup and status' (the gate to everything, and today's biggest dependency on sighted help) and 'everyday seeing tasks' (highest frequency). L - List: safe = Eyes-Free Mode (voice-guided setup with no QR or app dependency, earcons and spoken status for every state, tactile hardware cues); ambitious = 'Read and Tell' through the paired phone camera (Lookout/Gemini Live: 'Hey Google, what's this?' or 'read my mail') plus proactive routines; visionary = a home-wide 'find my stuff' and situational-awareness layer (UWB tags, spoken room-by-room status, one-command Be My Eyes/Aira or family video help). E - Evaluate: impact vs effort grid; edge cases (false wakes, hearing loss alongside vision loss, multiple users, privacy of camera images); competitors (Echo Show's Show and Tell, Apple's VoiceOver ecosystem, Be My Eyes). S - Summarise: ship Eyes-Free Mode as a software update plus Read and Tell, piloted with the NFB/ACB and the VA's blind rehabilitation centres; the NSM is weekly independent tasks completed per blind user; guardrails are false wakes, privacy complaints and mainstream-user satisfaction.",
+  "clarifying_questions": "1) Q: Is the goal more blind users, more usage, or a mission/brand win? A: Make it genuinely the best device for blind people; adoption and engagement in that segment are the measures. 2) Q: Can I change the hardware or only software? A: Software now; you can propose small hardware changes for the next revision. 3) Q: 'Blind' - totally blind, or low vision too? A: Focus on people with little or no usable sight; low vision benefits too. 4) Q: Which market? A: The US first. 5) Q: Can it rely on the user's phone? A: Assume most have a smartphone, but many older users are not confident with screen readers. 6) Q: Any budget or partnership constraints? A: You can partner with blindness organisations; no big acquisition. 7) Q: Are we competing with Amazon here? A: Yes - Echo Show has Show and Tell; we want to lead.",
+  "interviewer_data_reveals": "Exhibit 1 - Segment sizing (illustrative, anchored to US estimates of 1 mn+ blind and about 7-8 mn with vision loss): late-life sight loss (45+) about 70% of the target users; congenitally or early blind adults about 15%; low vision with some sight about 15%. Exhibit 2 - Diary study with 40 blind owners of Google speakers (illustrative): 62% needed sighted help for initial setup; 48% could not tell whether the mic was muted; 35% had abandoned a feature after 'it didn't say anything back'; top daily uses: time/weather 95%, timers 80%, music/radio/audiobooks 70%, calls 45%; top unmet wish: 'read this for me' (mail, medicine labels, appliance displays) 68%. Exhibit 3 - Support tickets tagged 'accessibility' (illustrative): 41% setup and Wi-Fi reconnection, 22% 'device not responding / don't know its state', 14% accidental purchases or calls, 23% other. Exhibit 4 - Prototype test of spoken status and earcons (illustrative): task success for 'mute and confirm muted' rose from 52% to 96%; sighted users in the same household rated the earcons 'annoying' 18% of the time when always on, 3% when tied to Eyes-Free Mode.",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "How would you design Google Home Mini for blind people?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Let me restate it. The Home Mini is already voice-first, so the interesting question is where it still assumes sight - and what more it could do for someone who can't see. Before I go on: is the goal adoption in this segment, deeper engagement, or a mission and brand win?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Make it genuinely the best device for blind people. Adoption and engagement in that segment are how we'll judge it."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Can I change hardware, or only software? And are we talking about people with no usable sight, or low vision too?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Software now, with small hardware changes for the next revision. Focus on little or no usable sight, US market."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Assumptions: I'm a PM on Google Home; most users have a smartphone but many aren't confident with screen readers; we can partner with groups like the National Federation of the Blind and the American Council of the Blind. First I'll audit the visual dependencies in a 'voice' product: setup happens in the phone app, sometimes with QR codes; mute, listening, volume and errors show as LEDs; and the device can't see anything for you."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Users. List: (a) congenitally blind young adults - fluent with VoiceOver and TalkBack; (b) people who lose sight later in life from macular degeneration, glaucoma or diabetes, typically 45 to 80 and often living alone; (c) low-vision users; (d) family members or caregivers who set things up for them. Can you tell me the mix?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "[Exhibit 1] Late-life sight loss is about 70% of the target users; early blind about 15%; low vision 15%."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then I'll pick (b). It's the biggest group and the one with the highest pain: they're learning a non-visual life, they don't have screen-reader skills, and today's tech assumes they do. Persona: Margaret, 72, retired teacher in Ohio, lost most of her sight to macular degeneration three years ago, lives alone, her daughter lives two hours away."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "[Exhibit 2] In a diary study, 62% needed sighted help to set up; 48% couldn't tell if the mic was muted; 68% wished it could 'read this for me'."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That confirms my audit. Needs as JTBD: 1) When I get a new device or the Wi-Fi changes, I want to set it up myself, so I don't wait for my daughter. 2) When I talk to it, I want to know what it's doing - listening, muted, done - so I trust it. 3) When I get mail or pick up a can, I want it read to me, so I don't need someone to see for me. 4) I want reminders and easy calls, so I'm safe and connected. 5) I want to control my home - lights, thermostat - without guessing."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Prioritise on pain, frequency, workaround and fit. Setup and status is the gate - if 62% need help, everything else is blocked, and the workaround is a family visit. 'Read this for me' is the most-wanted and daily. Reminders and calls already work reasonably. So my two needs: independent setup and status, then everyday seeing tasks."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Solutions. Safe: 'Eyes-Free Mode'. The speaker talks you through setup itself - 'I'm ready; tell me your Wi-Fi name' - with a one-time code read aloud for phone pairing, no QR code. Every state gets a spoken confirmation or earcon: 'Microphone off', 'I'm listening', 'Wi-Fi lost - say fix my Wi-Fi'. 'Hey Google, what's your status?' reads out everything. On the next hardware revision, raised tactile bumps on the mute switch and volume zones."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Ambitious: 'Read and Tell'. The speaker can't see, but Margaret's phone can. 'Hey Google, read my mail' launches the phone camera with Lookout or Gemini Live, guides her with audio ('move the letter left'), and reads the result through the speaker. It also handles medicine labels, cans and microwave displays. Add proactive routines: medication reminders, 'your package was delivered to the porch'."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Visionary: a home situational-awareness layer - UWB tags to 'find my keys' with spatial audio, spoken room-by-room status ('kitchen lights are on, back door unlocked'), and 'call for eyes', which connects to Be My Eyes, Aira or her daughter on video through her phone with one command."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "The Product Folks write-up picked tactile buttons as the top fix. Why not just do that?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Tactile cues matter, and I've included them for the hardware revision. But they're a hardware cycle away, they only solve 'which button', and many late-life blind users don't use Braille - it's often cited that fewer than 10% of blind Americans read it. Spoken status solves the same problem in software, for every device in the field, this quarter. Tactile is the complement, not the lead."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Evaluate. Eyes-Free Mode: high impact, low-to-medium effort, all software, addresses 41% of accessibility tickets on setup and 22% on state. Read and Tell: high impact, medium effort - it reuses Lookout and Gemini Live but needs cross-device handoff and privacy work. Situational layer: high impact for some, high effort, depends on tags and partners. Competitors: Echo Show's Show and Tell identifies items, but needs a screen device with a camera; we can do it on a $50 speaker with the phone she already has."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "[Exhibit 4] In a prototype, earcons raised 'mute and confirm' success from 52% to 96%, but sighted household members found always-on earcons annoying 18% of the time."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So earcons must be tied to Eyes-Free Mode, which brings annoyance down to 3% in the test, and be turned on by voice during setup - 'Do you use a screen reader or have low vision? I can describe everything I do.' Never buried in the app."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Edge cases. Dual sensory loss: many older blind users also have hearing loss, so we need adjustable speech rate and volume, and pairing with hearing aids. Accidental purchases and calls: 14% of tickets - require a spoken PIN for purchases and confirm-before-call. Privacy: camera images from Read and Tell are processed and deleted, never stored by default, and the speaker says when the camera is active. Multiple users: Voice Match keeps Margaret's reminders private."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Recommendation: launch Eyes-Free Mode plus Read and Tell as a software update, piloted with 500 users recruited through NFB, ACB and the VA's blind rehabilitation centres, then ship tactile cues in the next hardware revision. North Star: independent tasks completed per blind user per week - tasks finished without sighted help. Supporting: unassisted setup rate (target 90%+ from 38%), Read and Tell weekly users, 4-week retention of new blind users. Guardrails: false-wake and accidental-action rate, privacy complaints, mainstream user satisfaction, latency."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What's the business case? This is a small segment."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "It's 7-8 million Americans with vision loss, growing as the population ages, and their household and family buy devices too. Accessibility also feeds mainstream features: 'what's your status' and voice setup help everyone with no screen. And it protects Google against CVAA and accessibility complaints. But I'd make the case on mission first, measured honestly."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Closing: for a blind user, a speaker that just answers questions is a gadget. One that sets itself up, tells you what it's doing, and reads your world to you is independence. Hear me out - the best voice device for blind people isn't one with better buttons; it's one that never assumes you can see."
+    }
+  ],
+  "answer_and_recommendation": "Ranked options: (1) RECOMMENDED - 'Eyes-Free Mode' (software, ships to every device in the field): voice-guided setup run by the speaker itself with no QR code and a spoken pairing code; spoken confirmations and earcons for every state (listening, muted, volume, errors); a 'what's your status' command; adjustable speech rate and volume; spoken PINs for purchases and confirm-before-call. Turned on by voice during setup. (2) 'Read and Tell': 'Hey Google, read my mail / what's this?' hands off to the paired phone's camera (Lookout / Gemini Live) with audio guidance, then reads results on the speaker; plus proactive routines (medication reminders, package and doorbell announcements). (3) Next hardware revision: tactile bumps on the mute switch and volume zones; later, a situational layer (UWB 'find my keys', room status, one-command Be My Eyes / Aira / family video help). Why: the target segment is mostly late-life sight loss with low screen-reader skills; 62% need sighted help to set up and 48% can't tell if the mic is muted, so setup and status is the gate; 'read this for me' is the top unmet wish (68%). A software fix reaches every device now, whereas tactile hardware takes a cycle and Braille literacy is low. Pilot: 500 users via NFB, ACB and VA blind rehabilitation centres, then general availability. Risks and mitigation: earcons annoying sighted housemates (only in Eyes-Free Mode); camera privacy (on-device or ephemeral processing, spoken camera-on notice, no storage by default); hearing loss alongside vision loss (rate and volume controls, hearing-aid pairing); misreading medicine labels (state confidence, suggest a human check through Be My Eyes for medication); accidental purchases (voice PIN). Closing line: 'The best voice device for blind people isn't one with better buttons - it's one that never assumes you can see. Hear me out: independence is the product.'",
+  "counter_metrics_guardrails": "North Star: independent tasks completed per blind user per week (tasks finished with no sighted help). Guardrails: (1) false-wake and accidental-action rate (purchases, calls), especially with more proactive features; (2) privacy complaints and camera-use opt-outs for Read and Tell; (3) satisfaction of sighted household members and mainstream users (earcon annoyance, verbosity); (4) Read and Tell error rate on critical items (medicine labels, bills) - track 'wrong read' reports and confidence-flag rates; (5) latency of spoken responses and phone handoff (a slow reply looks like failure for a blind user); (6) support contacts per active blind user (should fall, not rise); (7) accessibility regression rate in new releases (automated and panel testing before launch).",
+  "follow_up_twists": "1) 'Leadership says this segment is too small to justify the team.' Strong response: size it honestly (7-8 mn with vision loss in the US and growing with ageing), show the mainstream spillover (voice setup and spoken status help every screenless user), and the compliance and brand benefit - then scope the MVP to software reuse of Lookout and Gemini Live so it's cheap. 2) 'The user has no smartphone.' Strong response: Eyes-Free Mode still works because setup and status are on the speaker; Read and Tell falls back to a Nest Hub with a camera or a human-help call, and we can partner with carriers or the VA for a preconfigured device. 3) 'How do you test with blind users without bias?' Strong response: recruit through blindness organisations, pay participants, run remote in-home diary studies with screen-reader users on the research team, and include blind people in design reviews - not sighted people with blindfolds.",
+  "common_pitfalls": "1) Treating 'blind people' as one segment - congenitally blind screen-reader experts and 75-year-olds with recent sight loss need very different things. 2) Assuming the problem is solved because the device is voice-first, and missing the visual dependencies (app/QR setup, LED status, camera-dependent tasks). 3) Leading with Braille labels or a hardware redesign - a slow hardware cycle, and most blind adults don't read Braille. 4) Ignoring privacy (always-on mic plus camera images in the home), hearing loss alongside vision loss, and the risk of misreading medicine labels; and measuring success only with satisfaction surveys instead of independent task completion.",
+  "skills_tested": "empathy, structuring, prioritisation, communication, execution, business sense",
+  "linked_teardown": "None - no local teardown folder covers Google Home or smart speakers.",
+  "uncertain": [
+    "round_and_level",
+    "source_and_verification",
+    "context_as_of",
+    "public_data_anchors"
+  ]
+}

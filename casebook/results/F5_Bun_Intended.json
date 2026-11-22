@@ -1,0 +1,184 @@
+{
+  "pun_title": "Bun Intended",
+  "case_type": "Guesstimate",
+  "asked_at": "PhonePe",
+  "subject_company": "McDonald's India - run by two master franchisees: Westlife Foodworld (West and South, listed) and Connaught Plaza Restaurants Pvt Ltd / CPRL, part of MMG Group (North and East)",
+  "round_and_level": "[uncertain] PM round 1 or screening guesstimate, APM campus and PM (0-4 yrs) levels",
+  "difficulty": "Medium - store counts and Westlife revenue are public, so a revenue-anchored bottom-up is possible; the hard parts are the two-franchisee split, average order value, and burgers per order (fries, McFlurry, McCafe and wraps are a big share of orders)",
+  "market_and_industry": "India; QSR (quick-service restaurants), burger category (McDonald's vs. Burger King India / Restaurant Brands Asia, KFC, Wow! Burger); metro and Tier-1 heavy with Tier-2 expansion; ~75% of Westlife sales via digital channels (app, kiosks, Swiggy and Zomato delivery); no beef or pork on the India menu, with a large vegetarian share",
+  "time_box_minutes": "10-15",
+  "exact_prompt": "How many McDonald's burgers are sold in India each year?",
+  "source_and_verification": "[uncertain] Level: reported (listed in the casebook item as asked at PhonePe). No public post with this exact wording at PhonePe was found on NextLeap, The Product Folks, AmbitionBox, Glassdoor, PracHub, LinkedIn or Medium in a Nov 2026 search; 'how many burgers does McDonald's sell' is a classic consulting and PM guesstimate globally and in India. Year reported: not confirmed (likely 2024-2026).",
+  "context_as_of": "[uncertain] As of Nov 2026: (1) Westlife Foodworld (McDonald's West and South) reported Q2 FY27 (Jul-Sep 2026) revenue of Rs 747 cr, +16% YoY, same-store sales growth 10.1%, digital sales above 75%, and a small net loss; it added 11 restaurants to reach 492 outlets in ~80 cities and plans 60+ openings in FY27 and 580-630 restaurants by Dec 2027 (exchange4media: https://www.exchange4media.com/marketing-news/westlife-foodworld-q2-revenue-rises-16-to-rs747-crore-digital-sales-cross-75-159467.html ; Free Press Journal: https://www.freepressjournal.in/business/westlife-foodworld-reports-16-revenue-increase-to-747-crore-in-q2-fy27-sssg-up-101 ; Sahi: https://www.sahi.com/news/westlife-foodworld-q1-profit-falls-to-6m-plans-580-630-restaurants-by-december-2027-652-PE1_CORP). (2) FY26 (Apr 2025-Mar 2026) consolidated revenue ~Rs 2,600-2,625 cr, network 478 restaurants after 48 openings; average sales per comparable store (TTM) ~Rs 6.08 cr (Whalesbook: https://www.whalesbook.com/corporate-news/English/consumer-products/Westlife-Foodworld-FY26-Revenue-indian-rupee2600-Cr-Profit-indian-rupee32-Cr-Auditors-Give-Clean-Opinion/69fc6386fba933f42cc50faa ; Quartr Q4 FY26 summary: https://quartr.com/events/westlife-foodworld-limited-505533-q4-25-26_FPNFDRjb). (3) CPRL (MMG Group) runs McDonald's in North and East India: ~245 outlets reported in early 2025 with a target of 600 by 2030, and a later report of 320+ restaurants with a target of 500+ by 2028 (Outlook Business: https://www.outlookbusiness.com/corporate/cprl-to-double-mcdonalds-store-count-to-600-by-2030-eyes-investments-up-to-150mn). Flag: CPRL is private, so its 2026 store count and per-store sales are not officially disclosed - treat ~320-340 as an estimate. Westlife's Q2 FY27 loss amount differs across outlets (Rs 2.0-2.7 cr).",
+  "regulatory_context": "Mostly none material to the count. Background: (1) GST on restaurant services is 5% without input tax credit, so menu prices and AOV are GST-inclusive while reported revenue is net of GST - remove GST before converting revenue into orders. (2) FSSAI labelling and food-safety rules apply; in 2024 Maharashtra FDA action over a 'cheese analogue' at a McDonald's outlet led Westlife to relabel items - a reminder that menu naming and ingredients are regulated. (3) Delivery orders through Swiggy and Zomato carry platform commissions but are still McDonald's sales and count toward burgers sold.",
+  "public_data_anchors": "1) Westlife restaurants: 492 at end-Sep 2026 (Q2 FY27), 478 at end-Mar 2026 (FY26) - exchange4media, Oct-Nov 2026; Whalesbook, May 2026 (links above). 2) Westlife FY26 revenue ~Rs 2,625 cr (net of GST) and average sales per comparable store (TTM) ~Rs 6.08 cr (Whalesbook / Quartr, May 2026). 3) Westlife Q2 FY27 revenue Rs 747 cr, +16% YoY; SSSG 10.1%; digital >75% of sales (exchange4media, Nov 2026). 4) CPRL North and East: 245 outlets (early 2025), 320+ in a later report; targets 500-600 by 2028-2030 (Outlook Business, 2025). 5) [uncertain] Average order value at McDonald's India is not disclosed each quarter; Rs 250-350 for dine-in and takeaway and Rs 350-450 for delivery is a reasonable assumption based on menu prices (McAloo Tikki ~Rs 60-70, McChicken ~Rs 150-170, Maharaja Mac ~Rs 250-300, meals Rs 250-400). 6) India population ~145 crore (frameworks.md anchor).",
+  "framework_applied": "Guesstimates: Clarify, Pick framework, Constraints/MECE, Calculate, Sanity check (frameworks.md section 6). Step 1 Clarify - count burgers (including McAloo Tikki, McChicken, Maharaja Mac, McVeggie, Filet-o-Fish) sold by all McDonald's restaurants in India over a year (FY27 run-rate), across dine-in, takeaway, drive-thru and delivery; exclude wraps, nuggets, fries, McCafe and desserts. Step 2 Pick framework - bottom-up: stores x orders per store per day x burgers per order x 365, with orders anchored on Westlife's published revenue (revenue / AOV) rather than invented footfall. Step 3 Constraints and MECE - segment by franchisee (Westlife West and South vs. CPRL North and East), because store productivity differs; within orders, split by channel (dine-in/takeaway vs. delivery) since AOV and burgers per order differ; natural constraint = kitchen throughput (~1 burger a minute per assembly line at the peak). Step 4 Calculate - Westlife ~485 stores x ~2.2 lakh burgers = ~10.7 crore; CPRL ~330 stores x ~1.6 lakh = ~5.3 crore; total ~16 crore burgers a year (range 12-20 crore). Step 5 Sanity check - revenue-share test (burgers at ~Rs 140 net each are ~50% of system sales), per-store throughput (~600 burgers a day, ~40 an hour) and a 1-in-N test (~0.11 burgers per Indian per year).",
+  "clarifying_questions": [
+    {
+      "q": "Which period - the last financial year or a current run-rate?",
+      "a": "A current annual run-rate, roughly FY27."
+    },
+    {
+      "q": "Does 'McDonald's India' include both franchisees - Westlife in the West and South and CPRL in the North and East?",
+      "a": "Yes, all McDonald's restaurants in India."
+    },
+    {
+      "q": "What counts as a burger - only buns with a patty, or also wraps, McSpicy rolls and breakfast muffins?",
+      "a": "Burgers and breakfast muffins in a bun count. Wraps, nuggets, fries, McCafe and desserts don't."
+    },
+    {
+      "q": "Does a burger in a combo meal count the same as a standalone burger?",
+      "a": "Yes, one burger is one burger regardless of how it's sold."
+    },
+    {
+      "q": "Do delivery orders through Swiggy and Zomato count?",
+      "a": "Yes, all channels."
+    },
+    {
+      "q": "Can I use public financials, like Westlife's revenue and store counts?",
+      "a": "Yes, use what you know."
+    },
+    {
+      "q": "Units or value?",
+      "a": "Units - number of burgers."
+    }
+  ],
+  "interviewer_data_reveals": "Exhibit 1 - Real anchors (cite sources):\n| Anchor | Value | Source |\n|---|---|---|\n| Westlife restaurants | 492 (Sep 2026); 478 (Mar 2026) | Westlife Q2 FY27 / FY26 results |\n| Westlife FY26 revenue | ~Rs 2,625 cr | Westlife FY26 results, May 2026 |\n| Westlife Q2 FY27 revenue | Rs 747 cr, +16% YoY | Westlife Q2 FY27 results, Nov 2026 |\n| Average sales per comparable store (TTM) | ~Rs 6.08 cr | Westlife FY26 commentary |\n| CPRL restaurants (North and East) | ~245 (early 2025), 320+ (later report) | Outlook Business, 2025 |\n\nExhibit 2 - Order economics (illustrative):\n| Parameter | Westlife (West and South) | CPRL (North and East) |\n|---|---|---|\n| Average stores in FY27 | ~485 | ~330 |\n| Sales per store per year (net of GST) | ~Rs 6.0 cr | ~Rs 4.2 cr (newer stores, fewer highway and mall flagships) |\n| Blended AOV (net of GST, dine-in + delivery) | ~Rs 280 | ~Rs 270 |\n| Orders per store per day | ~590 | ~425 |\n| Burgers per order | ~1.05 | ~1.05 |\n| Burgers per store per day | ~620 | ~445 |\n\nExhibit 3 - Burgers per order (illustrative):\n| Order type | Share of orders | Burgers per order |\n|---|---|---|\n| Burger meal or burger a la carte (single person) | 55% | 1.0 |\n| Group or family order (2-4 people, often delivery) | 20% | 2.5 |\n| No burger (McCafe coffee, McFlurry, fries only, wraps, nuggets) | 25% | 0 |\n| Weighted | 100% | ~1.05 |\n\nExhibit 4 - Result (illustrative):\n| Franchisee | Calculation | Burgers per year |\n|---|---|---|\n| Westlife | 485 x 620 x 365 | ~11.0 crore |\n| CPRL | 330 x 445 x 365 | ~5.4 crore |\n| Total McDonald's India | | ~16 crore (160 mn); range 12-20 crore |",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "Let's do a guesstimate. How many McDonald's burgers are sold in India each year?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "A few clarifications. Is this a current annual run-rate, and does it cover both franchisees - Westlife in the West and South, and CPRL, the MMG Group company, in the North and East?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Yes, current run-rate, all of McDonald's India."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "What counts as a burger? I'd include McAloo Tikki, McChicken, McVeggie, Maharaja Mac and breakfast muffins, but exclude wraps, nuggets, fries, McCafe and desserts. And burgers inside combo meals count?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "That's right on all counts. Delivery counts too."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "My approach: bottom-up. Burgers = stores x orders per store per day x burgers per order x 365. Rather than guessing footfall, I'll anchor orders on revenue, since Westlife is listed: orders = sales per store / average order value. Then I segment by franchisee because store productivity differs, and by order type for burgers per order. Structure:\n  Burgers per year\n  |- Westlife (West and South): stores x (sales per store / AOV) x burgers per order x 365\n  |- CPRL (North and East): same formula, lower per-store sales\n  Burgers per order = burger orders x 1 + group orders x 2.5 + non-burger orders x 0"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Why not top-down from population?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Top-down needs 'how many Indians eat McDonald's and how often', which is two weak assumptions. Store counts and Westlife revenue are public, so bottom-up needs fewer guesses."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Stores: Westlife had 492 restaurants at end-September 2026, up from 478 in March, so ~485 on average this year. CPRL was ~245 in early 2025 and reported 320+ later, so ~330. Total ~815 McDonald's in India."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Fine. Now sales per store."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Westlife's FY26 revenue was ~Rs 2,625 crore, and average sales per comparable store is about Rs 6 crore a year. CPRL is private; its stores are newer and it has fewer high-traffic highway and mall flagships, so I'll take ~70% of that, ~Rs 4.2 crore."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "And average order value?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Menu prices: McAloo Tikki ~Rs 65, McChicken ~Rs 160, a meal Rs 250-400, McCafe coffee ~Rs 150. Delivery baskets are bigger. Blended, net of the 5% GST, ~Rs 280 at Westlife and ~Rs 270 at CPRL. So Westlife orders per store = 6 crore / 280 = ~2.1 lakh a year, ~590 a day. CPRL = 4.2 crore / 270 = ~1.55 lakh a year, ~425 a day."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How many burgers in an order?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Three types. About 55% of orders are a single person's burger or burger meal - 1 burger. About 20% are group or family orders, often delivery - ~2.5 burgers. About 25% have no burger at all - coffee, McFlurry, fries, wraps, nuggets. Weighted: 0.55 + 0.5 + 0 = ~1.05 burgers per order."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Calculate."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Westlife: 590 orders x 1.05 = ~620 burgers per store per day; x 485 stores x 365 = ~11 crore. CPRL: 425 x 1.05 = ~445 a day; x 330 x 365 = ~5.4 crore. Total ~16 crore burgers a year - about 160 million, or ~4.4 lakh a day across India."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Sanity-check it."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Three ways. Throughput: ~600 burgers a day over ~15 operating hours is ~40 an hour, with maybe 80-100 at the lunch and dinner peak - one or two assembly lines can do that, so it's plausible. Revenue share: 16 crore burgers at ~Rs 140 net average, after combo allocation, is ~Rs 2,250 crore - about half of the ~Rs 4,300 crore combined system sales, which fits a burger chain where fries, drinks, McCafe and desserts make up the rest. 1-in-N: ~0.11 burgers per Indian per year, or about one every nine years per person - low, but McDonald's is concentrated in ~80 cities for Westlife and a similar footprint for CPRL, so for urban middle-class customers it's a few a year."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What's your biggest uncertainty?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "CPRL's store productivity - it's private, so its per-store sales could be Rs 3.5-5 crore, swinging the total by +/-1.5 crore. Second is AOV: if the blended AOV is Rs 330 instead of 280, orders and burgers fall by ~15%."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Does the 16% revenue growth change anything?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "It means the run-rate is rising: Westlife's Q2 FY27 revenue of Rs 747 crore annualises to ~Rs 3,000 crore, and same-store sales grew 10%. If half of that growth is price and mix, burger units grow ~8-10% a year, so FY28 would be ~17-18 crore."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Summarise."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "McDonald's sells about 16 crore - 160 million - burgers a year in India: ~11 crore through Westlife's ~485 stores in the West and South, and ~5 crore through CPRL's ~330 stores in the North and East. That's about 600 burgers per store per day, and burgers are roughly half of system sales."
+    }
+  ],
+  "answer_and_recommendation": "Estimate: ~16 crore (160 mn) McDonald's burgers a year in India (range 12-20 crore), ~4.4 lakh a day. Ranked components: (1) Westlife (West and South): ~485 stores x ~590 orders a day (Rs 6 cr sales / Rs 280 AOV) x 1.05 burgers x 365 = ~11 crore; (2) CPRL (North and East): ~330 stores x ~425 orders x 1.05 x 365 = ~5.4 crore; (3) the swing factor is burgers per order (~1.05, driven by the ~25% of orders with no burger and ~20% group orders). Risks in the estimate: CPRL store count and per-store sales are not disclosed (+/-1.5 crore); AOV assumption (+/-15%); the unit count grows ~8-10% a year with 60+ Westlife openings and CPRL expansion. Closing line: 'About 16 crore burgers a year - roughly 600 per store per day across ~815 restaurants - anchored on Westlife's ~Rs 6 crore sales per store, and it checks out because burgers come to about half of McDonald's India's ~Rs 4,300 crore system sales.'",
+  "counter_metrics_guardrails": "Pure guesstimate - sanity checks used instead of guardrails: (1) Kitchen throughput constraint: ~620 burgers per store per day = ~40 an hour over 15 hours and ~80-100 at the peak hour - within one or two assembly lines' capacity; 3,000 a day would break this test. (2) Revenue-share ratio test: 16 crore burgers x ~Rs 140 net = ~Rs 2,250 cr, ~50% of combined system sales of ~Rs 4,300 cr (Westlife ~Rs 3,000 cr annualised + CPRL ~Rs 1,350-1,400 cr estimated) - plausible for a burger-led menu. (3) 1-in-N test: ~0.11 burgers per Indian a year; restricted to ~20-25 crore urban middle-class consumers in McDonald's cities, ~0.7 a year each - reasonable for an occasional-treat QSR brand. (4) Peak-day stress test: on a delivery-app sale day or a long weekend, daily burgers may rise 1.5-2x to ~7-9 lakh - still within store capacity.",
+  "follow_up_twists": [
+    {
+      "twist": "PhonePe angle: what share of these burgers is paid via UPI, and how many UPI transactions is that?",
+      "response": "Roughly 60-70% of non-delivery orders in Indian metros are paid by UPI, and delivery is paid in-app (also mostly UPI); at ~2.4 lakh orders a day nationally, that's ~1.5-1.7 lakh UPI transactions a day, or ~5.5-6 crore a year - a rounding error against India's ~20 bn+ monthly UPI transactions."
+    },
+    {
+      "twist": "How would the number change if McDonald's India added a Rs 49 burger value menu?",
+      "response": "Units rise faster than revenue - if the value menu adds 0.1 burgers per order and pulls in 5% more orders, burgers rise ~15% to ~18-19 crore while revenue grows only ~5-7%; I'd watch AOV and margin as counter-metrics."
+    },
+    {
+      "twist": "Estimate Burger King India's burgers per year using the same method.",
+      "response": "Restaurant Brands Asia has ~500+ India stores at roughly Rs 3.5-4 crore sales per store and a lower AOV of ~Rs 230 with more burger-heavy orders (~1.2 per order), so ~500 x 450 x 1.2 x 365 = ~10 crore - about 60% of McDonald's."
+    }
+  ],
+  "common_pitfalls": [
+    "Forgetting there are two franchisees - using only Westlife's ~490 stores misses the ~320-340 CPRL stores in the North and East and undercounts by about a third.",
+    "Assuming every order contains one burger - McCafe coffee, McFlurry, fries-only and wrap orders are a meaningful share, while family and delivery orders carry several burgers; the weighted ~1.05 is the honest number.",
+    "Converting revenue to orders without removing the 5% GST, or using the McAloo Tikki price as the AOV - both inflate the order count by 2-4x.",
+    "Starting top-down from 145 crore Indians with an arbitrary 'x% eat McDonald's monthly' - it ignores that McDonald's is present in only ~150-200 cities, and the result cannot be reconciled with public revenue."
+  ],
+  "skills_tested": [
+    "structuring",
+    "quant",
+    "business sense",
+    "communication"
+  ],
+  "linked_teardown": "None",
+  "uncertain": [
+    "round_and_level",
+    "source_and_verification",
+    "context_as_of",
+    "public_data_anchors"
+  ]
+}

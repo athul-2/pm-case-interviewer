@@ -1,0 +1,219 @@
+{
+  "pun_title": "Cart Before the Horse",
+  "case_type": "RCA",
+  "asked_at": "Flipkart; checkout-conversion variant reported at Groww",
+  "subject_company": "Flipkart (e-commerce marketplace). The checkout variant applies the same logic to Groww's order-placement funnel (mutual funds / stocks).",
+  "round_and_level": "PM round (product sense / analytical RCA), APM and PM levels; also used in Flipkart APM campus rounds. The Groww variant is reported for APM rounds where Glassdoor reviewers mention RCA plus guesstimates. [uncertain]",
+  "difficulty": "Medium-Hard - add-to-cart has many plausible causes (seasonality, cannibalisation by Buy Now, pricing), and the twist that checkout conversion fell too forces the candidate to find one upstream cause that explains both.",
+  "market_and_industry": "India; horizontal e-commerce marketplace (Flipkart vs Amazon India, Meesho, quick commerce); about 60% of festive demand from non-metro (Tier-2/3) pincodes; Android-first, price-sensitive, COD still material.",
+  "time_box_minutes": "25-30",
+  "exact_prompt": "You're the PM for Flipkart. Add-to-cart has dropped 10% over the last 3 days. Diagnose what happened. (Follow-up twist: checkout conversion has also dropped over the same period. What changes?)",
+  "source_and_verification": "Level: reported. Flipkart version: NextLeap 'Examine the factors contributing to a 10% decrease in cart additions on Flipkart over the past three days' (asked at Flipkart): https://nextleap.app/problem/examine-the-factors-contributing-to-a-10-decrease-in-cart-additions-on-flipkart-over-the-past-three-days/discussion ; InterviewBee LinkedIn post with a 15% add-to-cart-rate variant: https://www.linkedin.com/posts/interviewbee_flipkart-pm-crisis-solving-the-add-to-cart-activity-7328141346823708676-u_YS ; Flipkart PM mock-interview video on cart additions dropping: https://www.youtube.com/watch?v=DSV-vuvmIro ; Amazon variants on Medium PM Club and HelloPM. Groww checkout variant: not found verbatim in public sources; Glassdoor Groww APM reviews mention RCA questions (https://www.glassdoor.co.in/Interview/Groww-Interview-E2549469-RVW65278110.htm) and JobMentis lists a Groww RCA on a 15% drop in first mutual-fund purchase conversion (https://www.jobmentis.com/en/interviews/groww/pm). Years reported: about 2023-2025. [uncertain]",
+  "context_as_of": "As of Nov 2026: Flipkart (Walmart-owned, about 80%) got NCLT/government approval to re-domicile from Singapore to India ahead of a planned IPO; by mid-2026 the IPO was reported delayed, with an EBITDA-breakeven target for end FY27 (Outlook Business, Angel One, 5paisa reports, 2026). Big Billion Days 2026 (13th edition) opened with 6.3 million concurrent users, 34% more new customers, about 60% of demand from non-metros, and 20-22% YoY growth in orders and buyers (company-reported; BW Retail World, Trak.in, Oct 2026). Flipkart Minutes (quick commerce) crossed 1 million daily orders by Aug 2026 and was planned to become a standalone app. Flipkart with Myntra is reported to lead Indian e-commerce MAUs at about 35% share. Calendar flag: an interview 'last 3 days' in mid-Nov 2026 falls just after Diwali (8 Nov 2026) and the festive sales, when post-sale demand normally drops - a classic red herring. Sources: https://www.outlookbusiness.com/corporate/flipkart-homecoming-ecommerce-major-secures-final-approval-for-reverse-flip-ahead-of-ipo ; https://bwretailworld.com/sector/e-commerce-marketplaces/flipkart-big-billion-days-opens-with-6-3-mn-concurrent-users ; https://trak.in/stories/flipkart-big-billion-days-2026-63-lakh-live-users-34-more-new-users/ ; https://www.newsbytesapp.com/news/business/flipkart-minutes-sees-3x-growth-now-handles-over-1m-daily-orders/story . Stale-risk: IPO status reports conflict (delayed vs shelved). [uncertain]",
+  "regulatory_context": "Flipkart: (1) FDI rules for e-commerce (Press Note 2, 2018) - marketplace model only, no inventory ownership or control of seller pricing, which limits how Flipkart can respond to price-driven cart drops. (2) Consumer Protection (E-Commerce) Rules 2020 - country-of-origin, seller details, and grievance officer requirements on the PDP. (3) CCPA Guidelines for Prevention and Regulation of Dark Patterns (Nov 2023) and the 2025 advisory asking platforms to self-audit - bans drip pricing, basket sneaking and false urgency; a fee or default-option change that touches the cart can be a compliance issue. (4) GST rate rationalisation of Sep 2025 changed prices across categories. (5) RBI rules on card tokenisation, e-mandates and payment aggregators affect checkout, not add-to-cart. Groww variant: SEBI rules (F&O changes from Nov 2024, KYC and nomination requirements, market hours), NPCI UPI AutoPay/mandate limits, and RBI payment aggregator rules shape order-placement conversion. [uncertain]",
+  "public_data_anchors": "1) Big Billion Days 2026: 6.3 million concurrent users at the opening peak hour, over 6x a regular hour; new customers +34%; about 60% of demand from non-metros (BW Retail World and Trak.in, Oct 2026: https://bwretailworld.com/sector/e-commerce-marketplaces/flipkart-big-billion-days-opens-with-6-3-mn-concurrent-users). 2) BBD 2026 orders, units and buyers +20-22% YoY (company-reported, lapaasvoice/businessnewsweek, Oct 2026). 3) Flipkart Minutes crossed 1 million daily orders (NewsBytes, Aug 2026: https://www.newsbytesapp.com/news/business/flipkart-minutes-sees-3x-growth-now-handles-over-1m-daily-orders/story). 4) Flipkart plus Myntra about 35% of India e-commerce MAUs (NewsBytes). 5) Typical e-commerce benchmarks for sizing (illustrative, industry rules of thumb): PDP-to-add-to-cart about 8-12%; cart-to-order about 30-40% in India where COD and price comparison are common. 6) India smartphone users about 700 million+ (frameworks.md anchor). [uncertain]",
+  "framework_applied": "Root Cause Analysis: Clarify, 4 cause buckets, Hypothesise-Test-Repeat (frameworks.md section 4). Step 1 Clarify - metric: add-to-cart events or add-to-cart rate (ATC per PDP view), by users or sessions; time frame: sudden, 3 days, starting a Tuesday; scope: categories, platforms, app versions, metro vs non-metro pincodes. Step 2 Buckets - (1) Data: ATC event schema after a release, bot traffic filters; (2) Internal: funnel (search -> PDP -> ATC -> checkout -> payment -> order), releases, Buy Now cannibalisation tests, pricing/fee changes, the delivery-promise engine, ad-load changes; (3) External: post-Diwali post-sale lull, competitor sales (Amazon, Meesho), courier capacity, payment outages; (4) Behaviour: post-sale fatigue, quick-commerce substitution. Step 3 Hypothesise-test-repeat - rule out data, then split rate vs volume, then split by pincode tier where the drop concentrates; twist (checkout also down) points to a cause that sits on both PDP and checkout: delivery date/serviceability. Step 4 Land - promise-engine config change pushed later delivery dates and false 'not deliverable' messages for Tier-2/3 pincodes; validate with pincode cohorts and the config timestamp; fix by rollback and add a promise-accuracy guardrail.",
+  "clarifying_questions": [
+    {
+      "q": "Is it the absolute number of add-to-cart events or the add-to-cart rate (ATC per product-page view) that fell 10%?",
+      "a": "Both. ATC events are down 10%; PDP views are down only about 2%, so the rate is down about 8%."
+    },
+    {
+      "q": "Was it sudden, and on which day did it start?",
+      "a": "Sudden, from Tuesday morning, three days ago. Flat for the two weeks before."
+    },
+    {
+      "q": "Is it across all categories or concentrated, say in electronics or fashion?",
+      "a": "All the large categories, a bit worse in Home and Large Appliances."
+    },
+    {
+      "q": "Platforms and app versions - Android, iOS, mobile web, and any new release?",
+      "a": "Android and mobile web both down, iOS slightly less. No app release in the window."
+    },
+    {
+      "q": "Metro vs non-metro pincodes, and new vs repeat users?",
+      "a": "Interesting you ask. Metros are down about 3%; Tier-2/3 pincodes are down about 15%. New and repeat users are similar."
+    },
+    {
+      "q": "Did anything change on the backend or in policy - pricing, fees, Buy Now tests, delivery promise, ads?",
+      "a": "No customer fee change. A Buy Now A/B test has been running for six weeks at the same allocation. The logistics team pushed a delivery-promise configuration update on Monday night."
+    },
+    {
+      "q": "Is the rest of the funnel affected - checkout and order conversion?",
+      "a": "Hold that thought; I'll tell you later."
+    },
+    {
+      "q": "Is this the post-sale week, and how did the same period look last year?",
+      "a": "Yes, it's the week after Diwali. Last year the equivalent days were down about 3-4% vs the prior fortnight."
+    }
+  ],
+  "interviewer_data_reveals": "All numbers are illustrative (invented for teaching) unless a source is cited.\n\nExhibit 1 - Daily add-to-cart events, Android + mWeb + iOS (illustrative, lakh):\n| Day | PDP views (crore) | ATC (lakh) | ATC rate |\n| Avg prior 14 days | 6.0 | 60.0 | 10.0% |\n| Tue | 5.9 | 54.3 | 9.2% |\n| Wed | 5.9 | 53.7 | 9.1% |\n| Thu | 5.85 | 54.0 | 9.2% |\n\nExhibit 2 - Data integrity (illustrative): ATC client events match the cart-service database writes within 0.5%; bot filter unchanged. Drop is real.\n\nExhibit 3 - ATC rate by pincode tier (illustrative):\n| Tier | Share of PDP views | Before | After | Change |\n| Metro (top 8) | 40% | 10.5% | 10.2% | -3% |\n| Tier-2 | 35% | 9.8% | 8.4% | -14% |\n| Tier-3 and below | 25% | 9.5% | 8.0% | -16% |\n\nExhibit 4 - Buy Now test (illustrative): Buy Now taps flat at 1.1% of PDP views in both test and control; test allocation unchanged for six weeks. Cannibalisation ruled out.\n\nExhibit 5 - Delivery promise shown on PDP, Tier-2/3 pincodes (illustrative):\n| Metric | Before Mon config push | After |\n| Median promised delivery days | 3 | 6 |\n| PDPs showing 'Currently not deliverable to your pincode' | 4% | 11% |\n| Actual median delivery days (shipments created) | 3.2 | 3.3 |\nPromise got worse but actual delivery did not - the promise engine is wrong, not the logistics network.\n\nExhibit 6 - Twist: checkout funnel (illustrative):\n| Step | Before | After |\n| Cart -> checkout start | 55% | 52% |\n| Checkout start -> address/pincode confirmed | 88% | 79% |\n| Address confirmed -> payment success | 82% | 81% |\nThe address step fails because serviceability is re-checked when the pincode is confirmed, and the same faulty config marks items undeliverable.\n\nExhibit 7 - External checks (illustrative): Amazon India and Meesho show no new sale event; post-Diwali seasonal dip last year was -3% to -4%; no UPI outage; Ekart and 3PL capacity normal.",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "You're the PM for Flipkart. Add-to-cart is down 10% over the last three days. Diagnose."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So Flipkart's add-to-cart has dropped 10% over three days. I'll clarify the metric, timing and scope before I hypothesise. On the metric: is it ATC events in absolute terms, or the ATC rate per product-page view?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Events are down 10%, PDP views only about 2%. So the rate is down about 8%."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's important - traffic is mostly intact, so this is mainly people seeing products and choosing not to add them. Timing: sudden or gradual, and starting when?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Sudden, from Tuesday morning. It's the week after Diwali."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Post-Diwali is a natural suspect, but post-sale fatigue usually shows up as fewer visits, not lower conversion on the visits we get. What did the same days look like last year?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Down 3-4% against the prior fortnight."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So seasonality explains maybe a third of this at most. Scope: categories, platforms, app versions?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "All major categories, worse in Home and Large Appliances. Android, mWeb and iOS all down; no app release."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "No release and all platforms down means it's probably server-side - a backend config, pricing, ranking or a data issue - rather than a client bug. My structure:\n1. Data - is the ATC event real?\n2. Internal - funnel step, backend changes, tests, pricing, ads, delivery promise.\n3. External - post-sale lull, competitor sales, courier capacity.\n4. Behaviour - fatigue, quick-commerce substitution.\nFirst, data. Do client ATC events match cart-service writes?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Within 0.5%. Bot filters unchanged."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Real drop, then. Next, a wide split: metro vs non-metro pincodes?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Metros down 3%. Tier-2 down 14%, Tier-3 and below about 16%."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's a very strong signal. Metros at -3% is almost exactly last year's seasonal dip. The extra drop is location-specific. What differs by pincode on a product page? Price is the same nationally. What changes is the delivery promise - the date we show, whether it's deliverable, COD availability - plus some seller assortment. Heavy items in Home and Large Appliances are the most sensitive to delivery and installation dates, which fits the category skew. Did anything change in delivery promise, serviceability or COD rules?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Logistics pushed a delivery-promise config update on Monday night. Also, there's a Buy Now A/B test running."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Let me eliminate Buy Now first, because a Buy Now button can cannibalise ATC without losing orders. Has its allocation or tap rate changed?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Unchanged for six weeks, taps flat."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then it can't explain a step change on Tuesday. The promise config fits the timing exactly. Can I see the promised delivery days and the 'not deliverable' rate in Tier-2/3 before and after?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Median promise went from 3 to 6 days. 'Not deliverable' messages rose from 4% to 11% of PDPs. Actual delivery times on shipments are unchanged at about 3.3 days."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So the network can still deliver in three days, but we're telling customers six days or 'not deliverable'. A Tier-2 shopper buying a mixer-grinder or a TV sees six days on Flipkart, opens Amazon or a local store, and doesn't add to cart. That gives me my main hypothesis: the Monday config change broke the promise engine for non-metro pincodes. Sizing: about 60% of PDP views are Tier-2/3, and their ATC rate fell about 15% vs the metro's 3%, so roughly 0.6 x 12 points of excess drop is about 7 points of the 10, with the remaining 3 points the seasonal post-Diwali dip across all tiers."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Twist. Checkout conversion has also dropped over the same three days. Does that change your answer?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "It actually strengthens it, but I need to check which checkout step fell. If it were seasonality or a pricing issue, I'd expect drop-off at payment or across the board. Can I see checkout by step?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Cart to checkout start down from 55% to 52%. Address/pincode confirmation down from 88% to 79%. Payment success flat."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "The big break is at address confirmation, which is exactly where serviceability is re-checked. Items users added before Monday, or added despite the bad date, now get flagged 'not deliverable' when they confirm the pincode. So one root cause explains both metrics: ATC drops at the PDP and checkout drops at the address step. If checkout had fallen at payment instead, I'd have looked for a separate cause - a UPI or bank outage, an RBI card rule, or a COD change - because two unrelated causes can stack."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How would you validate it before telling logistics to roll back?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Three checks:\n1. Pincode cohort: compare ATC rate for pincodes whose promise changed vs those whose promise didn't - the drop should sit only in the changed ones.\n2. Time alignment: hourly ATC should break at the config deploy time on Monday night, not at midnight.\n3. A quick holdback: revert the config for 5% of affected pincodes for a few hours and see if ATC recovers.\nIf all three line up, roll back fully."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "And the fix plus prevention?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Fix: roll back the config, then re-ship with the logistics team after testing against actual delivery times. Re-engage users who abandoned at the address step with a 'now delivering to your pincode' notification. Prevention: a promise-accuracy guardrail - promised vs actual delivery days by pincode tier - plus an alert when the 'not deliverable' rate moves more than 2 points in a day, and treat promise-engine configs like code with staged rollout."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What would you tell the business about the other 3 points?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "It's the normal post-Diwali lull; last year looked the same, so no action beyond the usual post-festive retention campaigns. I wouldn't throw discounts at it."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Summarise."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Add-to-cart fell 10%: about 7 points come from a Monday delivery-promise config change that showed Tier-2/3 shoppers six-day or 'not deliverable' promises even though we still deliver in three days, and about 3 points are the normal post-Diwali dip. The same faulty config explains the checkout drop at the address step. Roll it back, validate with a pincode holdback, and put a promise-accuracy guardrail on every logistics config change."
+    }
+  ],
+  "answer_and_recommendation": "Ranked causes: (1) A delivery-promise engine configuration change (Monday night) inflated promised delivery days (median 3 -> 6) and false 'not deliverable' flags (4% -> 11% of PDPs) for Tier-2/3 pincodes while actual delivery stayed at about 3.3 days - about 7 of the 10 points, and the cause of the checkout drop at the address/serviceability step (illustrative). (2) Post-Diwali seasonal lull - about 3 points, matching last year's -3% to -4% and the metro-only drop. (3) Ruled out: data/instrumentation (events reconcile), Buy Now cannibalisation (test unchanged), price or fee change (none), competitor sale (none), payment outage (payment success flat). Recommendation: validate with a pincode cohort comparison and a 5% holdback revert, then roll back fully; re-engage address-step abandoners in affected pincodes; re-ship the config only after a shadow test that compares promised vs actual delivery days. Prevention: promise accuracy (promised minus actual days by tier) and the not-deliverable rate as guardrails with alerts; logistics configs go through staged rollout. Risks: a too-optimistic rollback can over-promise and raise late-delivery complaints - mitigate by using the shadow-test data; logistics may have changed the config for a real capacity reason - confirm with them before rollback. Closing line: 'One bad config is costing us 7 points of add-to-cart and a chunk of checkout in Bharat; we roll it back today and make delivery-promise accuracy a guardrail so it can't happen silently again.'",
+  "counter_metrics_guardrails": "1) Promise accuracy: share of orders delivered on or before the promised date, by pincode tier - the rollback must not create late deliveries. 2) Not-deliverable rate on PDPs by tier. 3) Orders per PDP view (end-to-end conversion), not ATC alone, so a Buy Now test cannot fake an ATC 'drop' or 'gain'. 4) Return and cancellation rate on large appliances (late deliveries cause refusals). 5) Customer contacts tagged 'delivery date' or 'not deliverable'. 6) Logistics cost per shipment - a promise that is too aggressive can force expensive air or express routing. 7) For the Groww variant: order-placement success, payment/mandate failure rate, and complaint rate to SEBI SCORES.",
+  "follow_up_twists": [
+    {
+      "twist": "Checkout conversion dropped, but at the payment step, not the address step.",
+      "response": "Then there are two stacked causes - I'd split payment success by method and bank to find a UPI/bank downtime, a card-tokenisation or RBI e-mandate change, or a COD-limit change, independent of the promise bug."
+    },
+    {
+      "twist": "The Groww version: order-placement (checkout) conversion for mutual-fund and stock orders fell 10% over 3 days. How does your approach change?",
+      "response": "Same structure, different buckets: check market hours and holidays, SEBI rule changes (e.g., new KYC or nomination checks, F&O margin rules), UPI AutoPay/mandate failures and bank-side outages, and app changes to the order or OTP/2FA step - and split by order type (SIP vs lumpsum vs equity) because each fails at different steps."
+    },
+    {
+      "twist": "Logistics says the config change was intentional - they lengthened promises because courier partners were overloaded after Diwali.",
+      "response": "Then the trade-off is promise accuracy vs conversion: I'd use actual delivery data to set promises per lane rather than a blanket +3 days, and only lengthen promises where actual times really got worse."
+    }
+  ],
+  "common_pitfalls": [
+    "Blaming the post-Diwali lull for everything - seasonality would hit metros as much as Tier-2/3 and would lower traffic more than conversion; it explains only about 3 points.",
+    "Assuming a Buy Now or one-tap checkout test is cannibalising ATC without checking whether its allocation changed in the window - a stable test cannot cause a step change.",
+    "Treating the checkout twist as a separate problem and launching a second laundry list, instead of asking which checkout step fell and whether one cause explains both.",
+    "Ignoring server-side configs: with no app release and all platforms affected, client bugs are unlikely, and backend configs (promise, ranking, pricing, serviceability) are the right place to look."
+  ],
+  "skills_tested": [
+    "structuring",
+    "quant",
+    "prioritisation",
+    "business sense",
+    "communication",
+    "execution"
+  ],
+  "linked_teardown": "None - no Flipkart teardown folder exists under . (The gokwik_product_teardown folder covers D2C checkout conversion and could support the checkout twist, but it is not linked to this case.)",
+  "uncertain": [
+    "round_and_level",
+    "source_and_verification",
+    "context_as_of",
+    "regulatory_context",
+    "public_data_anchors"
+  ]
+}

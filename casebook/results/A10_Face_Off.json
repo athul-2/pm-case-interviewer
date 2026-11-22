@@ -1,0 +1,187 @@
+{
+  "pun_title": "Face Off",
+  "case_type": "RCA",
+  "asked_at": "Flipkart",
+  "subject_company": "Meta (Facebook app)",
+  "round_and_level": "[uncertain] PM round (product sense / execution), PM or APM level; reported as a Flipkart PM interview question on prep sites, round not confirmed",
+  "difficulty": "Medium - a classic, well-known prompt, but the interviewer gives almost no data, so the candidate must drive the segmentation; weekly seasonality and Facebook's notification-heavy DAU make it easy to go wrong",
+  "market_and_industry": "US (with a global user base); consumer social media / ad-funded social network; mobile-first (Android and iOS apps account for the large majority of DAU), plus web and Facebook Lite",
+  "time_box_minutes": "25-30",
+  "exact_prompt": "\"You're the PM for Facebook. This morning the dashboard shows Facebook DAU dropped week over week. Find the root cause.\"",
+  "source_and_verification": "Reported (Flipkart PM interview, per the casebook outline and prep-site tags); also a classic Meta execution prompt. Close matches: PracHub 'Root-causing a steep weekly decline in Facebook daily active users' (Meta prompt, about Jan 2024): https://prachub.com/interview-questions/root-causing-a-steep-weekly-decline-in-facebook-daily-active-users ; Dataford 'diagnose facebook dau drop': https://dataford.io/questions/diagnose-facebook-dau-drop ; Dataford 'investigate facebook dau anomaly': https://dataford.io/questions/investigate-facebook-dau-anomaly ; Exponent 'Facebook DAU spike in Indonesia': https://www.tryexponent.com/questions/226/facebook-dau-spark-indonesia ; YouTube 'Flipkart Product Manager Mock Interview: Root Cause Analysis': https://yt.dorper.me/v/yt/DSV-vuvmIro . No primary Flipkart interview transcript found; year reported unknown [uncertain].",
+  "context_as_of": "As of Nov 2026: (1) Meta Q3 2026 results (21 Oct 2026): Family daily active people (DAP) 3.64 bn on average in Sep 2026, +3% YoY; revenue $64.60 bn, +26% YoY; ad impressions +10% YoY; a $9.89 bn legal charge tied to the state attorneys-general settlement; Q4 2026 revenue guidance $73-76 bn (https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/ ; https://www.news4jax.com/business/2026/10/21/meta-q3-revenue-tops-estimates-and-zuckerberg-says-muse-accounts-have-topped-10-million/ ; https://socialmediatoday.com/news/meta-adds-users-and-revenue-as-ai-costs-climb/833671). (2) Meta stopped publicly reporting Facebook-only DAU/MAU and the US & Canada split from Q1 2024; the last disclosed figures were about 2.11 bn global Facebook DAU and about 205 M US & Canada Facebook DAU for Q4 2023 (https://www.axios.com/2024/06/04/facebook-meta-gen-z-users). So any Facebook-only DAU number in the case is internal/illustrative. (3) Facebook's feed is now heavily AI-recommended (Reels and unconnected content) and the app competes with TikTok, YouTube Shorts and Meta's own Instagram/Threads for time. (4) Historically, Facebook DAU counted logged-in users who visited Facebook via web or mobile, or used Messenger [uncertain on whether the internal definition still includes Messenger]. Stale-risk flags: Meta metric definitions change; the 'Muse' AI product cited in Q3 2026 coverage is new and its effect on Facebook sessions is unknown.",
+  "regulatory_context": "None material for a one-week drop in most cases, but worth one sentence: (1) US state youth social-media laws (e.g. Florida HB3 restricting under-14 accounts, Utah/Texas age-verification and parental-consent laws) can force account removals or age-gating in a single state on an effective date, which would show as a sudden, state-concentrated DAU drop among teens; (2) the 2026 state attorneys-general settlement (Meta took a $9.89 bn charge in Q3 2026) may carry teen-safety product obligations [uncertain on terms]; (3) outside the US: the EU DMA consent/'less personalised ads' changes and Australia's under-16 social-media ban (from Dec 2025) can move global DAU; (4) app-store policy changes (Apple/Google) on tracking or notification permissions. Privacy rules (CCPA/GDPR) also limit how far the PM can slice user-level data.",
+  "public_data_anchors": "Meta Family DAP 3.64 bn (Sep 2026 average, +3% YoY) - Meta Q3 2026 press release, 21 Oct 2026: https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/ ; DAP grew by about 40 M QoQ in Q3 2026 - Social Media Today, Oct 2026: https://socialmediatoday.com/news/meta-adds-users-and-revenue-as-ai-costs-climb/833671 ; Meta Q3 2026 revenue $64.60 bn (+26% YoY), ad impressions +10% YoY - AP via News4Jax, 21 Oct 2026 ; Facebook US & Canada DAU about 205 M at end-2023, last disclosed - Axios, 4 Jun 2024: https://www.axios.com/2024/06/04/facebook-meta-gen-z-users ; Facebook global DAU about 2.11 bn in Q4 2023, last disclosed [uncertain, from memory of Meta Q4 2023 earnings]. Rule of thumb for the case: a 1% WoW move in US & Canada Facebook DAU is about 2 M people/day, so 'noise' is usually well under 0.5%.",
+  "framework_applied": "RCA: Clarify, 4 cause buckets, Hypothesise-Test-Repeat (frameworks.md section 4). Step 1 Clarify - metric: DAU = unique logged-in users with at least one qualifying session per day (does it include Messenger-only or Facebook Lite?); time frame: compare this week's 7-day average to last week's and to the same week last year (weekly seasonality, US holidays); scope: magnitude (-4% WoW vs a normal +/-0.5%), and whether it is global or US-only, by platform, app version, country/state, age band and entry point. Step 2 Buckets in order - (a) data/instrumentation: logging change, pipeline lag, bot/fake-account purge, dedup change; (b) internal: user funnel (open app -> logged in -> session counted) and entry points (organic, push notification, email, Messenger deep link), plus releases, A/B tests, ranking or notification-volume changes, login/auth bugs; (c) external: US holiday or event calendar, iOS/Android OS updates, app-store issues, outages (AWS/CDN/SMS for 2FA), competitor launches, state youth laws, PR backlash; (d) consumer behaviour: feed fatigue, shift of time to Instagram/TikTok. Step 3 Hypothesise-test - wide questions first (all platforms or one? all entry points or one?), each answer halves the board: drop is Android-only, on the newest app version, and only in notification-driven sessions. Step 4 Land - root cause is an Android release whose push-token refresh bug stopped notifications reaching a share of users; validate with notifications delivered per user, DAU by app version, and recovery after rollback; fix and prevent with a release guardrail on notification delivery.",
+  "clarifying_questions": [
+    "Q: How is DAU defined here - unique logged-in users with one session in the day, and does it include Messenger-only and Facebook Lite users? A: Logged-in users who open the Facebook app or website at least once per day; Messenger-only users are excluded. Facebook Lite is included.",
+    "Q: How big is the drop and how are we comparing - 7-day average versus the prior 7 days? A: The 7-day average is down about 4% WoW. The normal weekly band is about +/-0.5%.",
+    "Q: Was it sudden or gradual, and since when? A: Sudden. It starts on Tuesday of this week and has stayed down since.",
+    "Q: Is this global or US-only? A: It shows in every major market, slightly larger in the US.",
+    "Q: Is the same week last year flat, so we can rule out a calendar effect? A: Yes, the same week last year was flat; there is no holiday this week.",
+    "Q: Have other Meta apps (Instagram, WhatsApp, Messenger) moved too? A: No, they are flat. Overall family DAP is down only slightly.",
+    "Q: Are there any known releases, experiments or incidents in the last two weeks? A: The normal weekly app release went out on Monday on Android and iOS. Nothing flagged as an incident.",
+    "Q: Have engagement metrics for people who did show up (time spent, sessions per DAU) changed? A: Time spent per DAU is flat; sessions per DAU are down slightly."
+  ],
+  "interviewer_data_reveals": [
+    "Exhibit 1 (illustrative) - DAU 7-day average, index last week = 100: Platform split - Android app 93.5 (about 55% of DAU), iOS app 100.2 (about 35%), Web 99.8 (about 7%), Facebook Lite 99.6 (about 3%). Blended about 96.3. Implication: almost all of the drop is Android.",
+    "Exhibit 2 (illustrative) - Android DAU by app version: version N (new, rolled out to 60% of Android users from Monday) 89.0; version N-1 (40% still on it) 100.1. Implication: the new version is the cause; the old version is a clean control group.",
+    "Exhibit 3 (illustrative) - Android sessions by entry point, version N vs N-1: Push-notification opens -38% vs +0%; organic app-icon opens -1% vs 0%; Messenger/email deep links -2% vs 0%. Implication: it is the notification channel, not the app experience.",
+    "Exhibit 4 (illustrative) - Notification pipeline on version N: notifications sent per user flat (server side); delivered per user -45%; open rate on delivered notifications flat at about 6%. Implication: the server still sends; devices are not receiving, so something on the device (token, permission or channel) is broken.",
+    "Exhibit 5 (illustrative) - Push token health: share of Android N devices with an invalid or expired FCM token jumped from 2% to 41% after upgrade; the release notes include a migration of the notification-settings module. Notification permission opt-out rate unchanged. Implication: a token-refresh bug in the migration, not users turning notifications off.",
+    "Exhibit 6 (illustrative) - Counter-check: no change in login success rate, crash rate (0.4% vs 0.4%), feed load time, or ranking experiments in the window; the same week last year was flat; no bot purge in the data pipeline."
+  ],
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "You're the PM for Facebook. DAU dropped week over week. Find the root cause."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Before I go into causes, I'd like to pin down three things: what exactly DAU counts, the time frame, and how big and how widespread the drop is. Is that okay?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Go ahead."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "First the metric. I'll assume DAU is unique logged-in users who open the Facebook app or website at least once a day. Does it include Messenger-only users or Facebook Lite?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Messenger-only is excluded. Lite is included."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Good. Next, magnitude and timing. Comparing 7-day averages, how big is the drop versus normal noise, and did it start suddenly?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "About 4% down; normal is plus or minus half a percent. It starts sharply on Tuesday and has stayed down."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So that is about eight times the normal noise, and sudden. Sudden drops usually mean something discrete changed: a release, an outage, a logging change or an event. Gradual drops point to behaviour or competition. I'll keep behaviour as a low prior. Is the same week last year flat, so it isn't a holiday effect?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Yes, flat last year and no holiday this week."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then I'll go through four buckets in order: data issues, internal changes, external factors, and user behaviour. First, data. Did anything change in logging, the DAU pipeline, or fake-account removal? And are Instagram and WhatsApp flat? If they are, a shared Meta pipeline or an infrastructure outage is less likely."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "No logging or pipeline change, no purge. The other apps are flat."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So it is probably real and specific to the Facebook app. Before I list hypotheses, the widest cut I can make is by platform. Can I see DAU by Android, iOS, web and Lite?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "(Shares Exhibit 1) Android is about 93.5, everything else is flat."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That rules out most external causes at once. A competitor launch, news event or state law would hit iOS too. An Android-only drop points to something tied to the Android client: our release, a Google Play or Android OS change, or an Android-only experiment. Did we ship anything on Android this week?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "The normal weekly release went out Monday on both platforms."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "The timing fits: it shipped Monday and the drop starts Tuesday as rollout climbs. Can we split Android DAU by app version? If the old version is flat, it is a ready-made control group."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "(Shares Exhibit 2) The new version is at 89, the old version is flat at about 100."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's close to a natural A/B test, so I'm now fairly confident it's the release. 60% of Android users on version N at 11% down is about 6.6% down for Android. At about 55% share, that is roughly 3.6 points of the 4% drop. The next question is which part of the release. I'll split it using the path to a counted day: something brings the user in, they log in, and a session is counted. I'll look at the entry points first, because a lot of Facebook visits are triggered by notifications. Can I see sessions by entry point for version N against N-1?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "(Shares Exhibit 3) Push-notification opens are down 38% on N. Organic and deep-link opens are basically flat."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's the key cut. If the app itself were broken, with crashes, failed logins or a slow feed, organic opens would fall too. So the app works; people just aren't being pulled back in. There are three possible causes. The server sends fewer notifications, for example because a ranking or volume experiment was dialled down. Or notifications are sent but never reach the device. Or they arrive and users ignore them or switch them off. Can we see sent, delivered and opened per user?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "(Shares Exhibit 4) Sent is flat. Delivered is down 45%. Open rate on delivered is flat."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So the server still sends and users still respond to what they receive. The break is on the device side. That points to the push token, the notification permission, or Android notification channels. Was the opt-out rate unchanged, and what about token validity?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "(Shares Exhibit 5) Opt-outs flat. Invalid or expired FCM tokens on version N went from 2% to 41%. The release migrated the notification-settings module."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then my root cause is a bug in the notification-settings migration in Monday's Android release. It fails to refresh or re-register the Firebase Cloud Messaging token, so about 40% of upgraded devices stop getting pushes. Those are mostly lighter users who open Facebook when a notification arrives. Heavy users open the app on their own, which explains why time spent per DAU is flat while DAU falls."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How would you validate that before you tell leadership?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Three checks. First, the dose-response: DAU loss by user cohort should scale with how notification-dependent they were last month. Users with more than half their sessions from pushes should drop the most, and organic heavy users barely at all. Second, a clean control: version N-1 users and iOS users on the same days are flat. Third, causal confirmation: pause the rollout or hotfix the token re-registration for a holdout. Delivered-per-user and DAU should recover within one to two days for the fixed group. I'd also make sure no second cause is hiding. About 0.4 points of the drop isn't explained by Android, so I'd check whether that's just noise."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What do you do now, and how do you stop it happening again?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Right now: halt the Android rollout, ship a hotfix that forces token re-registration on app start, and run a server-side re-sync for affected devices. Then send a catch-up digest notification through email or in-app once tokens are valid, so we win back people we missed. To prevent it, I'd add 'notifications delivered per user by app version' as a launch-blocking guardrail in staged rollout. At 1%, 5% and 20% stages, any drop of more than 5% against the previous version auto-pauses the rollout. I'd also add an alert on token-invalid rate."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Suppose instead that every platform had dropped equally. What would you have looked at?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then I'd move to things that hit everyone: a backend or ranking change, a login or auth service such as SMS 2FA delivery, an infrastructure or CDN outage, or a logging change. If all of those are clean, I'd look at external events by country, for example a national event, a ban or an outage at a telecom provider. Only after that would I look at behaviour shifts."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Good. Wrap it up."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "To sum up: Facebook DAU fell about 4% WoW, sudden and real, and Facebook-specific. Nearly all of it is Android version N, and nearly all of that is lost notification-driven sessions. The cause is a push-token refresh bug in the notification-settings migration. We confirm it with the version split, cohort dose-response and a hotfix holdout. Then we fix it, run a catch-up re-engagement, and add notification delivery as a staged-rollout guardrail."
+    }
+  ],
+  "answer_and_recommendation": "Ranked causes: (1) Root cause - Monday's Android release (version N) broke FCM push-token refresh during a notification-settings migration; notifications delivered fell about 45% on N, push-driven sessions fell about 38%, and Android DAU on N fell about 11%, which explains about 3.6 of the 4 points (illustrative). (2) Ruled out - data/instrumentation (no logging change; other Meta apps flat; same week last year flat). (3) Ruled out - external or behavioural causes (iOS, web and Lite flat; organic opens flat; no holiday). Recommendation: halt rollout, hotfix forced token re-registration, server-side token re-sync, then a capped catch-up notification or email for affected users; post-mortem. Risks: a catch-up blast can feel spammy and raise opt-outs, so cap it at one notification and target only affected users. The hotfix may itself regress, so ship it in a staged rollout with guardrails. Closing line: \"The drop is real but self-inflicted. One Android release silently cut off our notifications. Roll it back, fix the token, win back the missed users, and make notification delivery a launch-blocking guardrail so a release can't do this again.\"",
+  "counter_metrics_guardrails": "Guardrails during the fix and the catch-up: notification opt-out and 'turn off notifications' rate (do not over-notify to claw DAU back); app uninstall rate; negative feedback on notifications (hide/report); time spent per DAU and meaningful-interaction metrics (DAU recovered through low-quality pings is hollow); crash rate and ANR rate on the hotfix version; iOS and web DAU (make sure nothing else regressed); ad impressions and revenue per DAU (a commercial check). Process guardrail for the future: 'delivered notifications per user' and 'DAU by app version vs previous version' as auto-pause metrics in staged rollout.",
+  "follow_up_twists": [
+    "Twist: 'The drop was the same on every platform and app version.' Response: Move to shared causes: auth/login (2FA SMS delivery), a backend ranking or notification-volume experiment, logging, or a regional outage. Split by country and by entry point next.",
+    "Twist: 'DAU is down but time spent is up. Is that bad?' Response: It's mix shift. We lost light, notification-driven users and kept heavy ones. Per-user averages rise even though the business lost reach and ad impressions, so judge by total time and impressions, not per-DAU averages.",
+    "Twist: 'Leadership wants DAU back this week. Can we just send more notifications?' Response: Only to the affected cohort, once, after the token fix. Blanket volume increases raise opt-outs and burn the channel long term, so I'd hold an opt-out guardrail."
+  ],
+  "common_pitfalls": [
+    "Jumping to TikTok, 'Facebook is dying' or teen churn. Those are gradual, multi-month trends and cannot explain a sudden 4% one-week drop.",
+    "Skipping the version split. Platform plus app-version is the cheapest and most powerful cut, and it acts as a natural control group.",
+    "Stopping at 'it's the release' without finding the mechanism (entry point, then sent/delivered/opened). The interviewer wants the funnel, not a guess at a bug.",
+    "Ignoring weekly seasonality and the US holiday calendar (Thanksgiving, July 4, Super Bowl Sunday). Always compare 7-day averages and the same week last year before calling a drop real.",
+    "Reading flat or rising time spent per DAU as 'engagement is fine'. Losing light users mechanically lifts per-user averages."
+  ],
+  "skills_tested": "structuring, quant, communication, execution, business sense",
+  "linked_teardown": "None",
+  "uncertain": [
+    "round_and_level",
+    "source_and_verification",
+    "context_as_of",
+    "regulatory_context",
+    "public_data_anchors"
+  ]
+}

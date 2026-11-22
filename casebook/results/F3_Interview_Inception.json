@@ -1,0 +1,191 @@
+{
+  "pun_title": "Interview Inception",
+  "case_type": "Guesstimate",
+  "asked_at": "Swiggy, Groww",
+  "subject_company": "None (India's job market as a whole); asked at Swiggy and Groww as a curveball guesstimate",
+  "round_and_level": "[uncertain] Screening or first PM round (guesstimate warm-up), APM campus and PM (0-4 yrs) levels. It is a meta question because the candidate is themselves in an interview, so interviewers use it to test composure and a clear unit definition",
+  "difficulty": "Hard - there is no single public anchor for 'interviews', so the candidate must define the unit (a person in a live interview session), build it from hires x interviews per hire, and convert an annual flow into a concurrent stock with duration and working-hour assumptions",
+  "market_and_industry": "India; labour market and recruiting (white-collar, formal blue-collar, campus, government, informal); urban-skewed (white-collar interviews cluster in Bengaluru, NCR, Mumbai, Hyderabad, Pune, Chennai); interviews increasingly on Google Meet, Zoom and Teams, and on phone calls for blue-collar roles",
+  "time_box_minutes": "10-15",
+  "exact_prompt": "How many people in India are in a job interview right now?",
+  "source_and_verification": "[uncertain] Level: reported (listed in the casebook item as asked at Swiggy and Groww). No public post with this exact wording at Swiggy or Groww was found on NextLeap, The Product Folks, AmbitionBox, Glassdoor, PracHub, LinkedIn or Medium in a Nov 2026 search; the same pattern ('how many people are doing X right now in India') is a classic Indian PM and consulting guesstimate. Similar PracHub guesstimates for Indian PM roles: https://prachub.com/interview-questions/city-guesstimate-sizing-bengalurus-restaurant-count . Year reported: not confirmed (likely 2024-2026).",
+  "context_as_of": "As of Nov 2026: (1) White-collar hiring is growing - the Naukri JobSpeak index was 2,836 in Oct 2026, up ~14% YoY from 2,480 in Oct 2025 (partly a low festive base), and down from 3,053 in Sep 2026; AI/ML hiring +32% YoY, GCC hiring +18%, fresher hiring +15%, IT services only +5% (Naukri JobSpeak Oct 2026, released 3 Nov 2026: https://www.investywise.com/?p=127999 ; https://www.staffingindustry.com/news/global-daily-news/indias-white-collar-hiring-jumps-14-in-october-auto-sector-leads). (2) Formal payroll additions run at roughly 19-21 lakh net EPFO members a month - 19.29 lakh in June 2026 with ~10.25 lakh new subscribers (Business Today, 13 Jun 2026 report on EPFO payroll data: https://www.businesstoday.in/amp/personal-finance/news/story/epfo-adds-over-19-lakh-members-in-june-rolls-out-easier-online-update-facility-536695-2026-06-13); EPFO data is provisional and revised. (3) MoSPI now publishes a monthly PLFS bulletin (since April 2025); all-India unemployment rate (CWS, 15+) was ~5.1-5.6% in mid-2025 (MoSPI PLFS monthly bulletins: https://www.mospi.gov.in/uploads/publications_reports/publications_reports1765793969210_4cc3881d-7905-494b-90a3-cbecc6afacfb_PLFS_Monthly_Bulletin_November_2025_15122025.pdf). (4) Most screening rounds for white-collar roles are now virtual and 30-60 minutes long; AI interviewers and asynchronous video screens are spreading in campus and BPO hiring, which raises the 'does an AI interview count?' scoping question. Flag: the latest PLFS figures for 2026 months were not checked; use the 2025 bulletins as approximate anchors.",
+  "regulatory_context": "None material to the estimate. Background only: the four Labour Codes (wages, industrial relations, social security, OSH) consolidate labour law and affect formal hiring (appointment letters, fixed-term employment), but they do not regulate interview volume. Government recruitment interviews are set by UPSC, state PSCs and PSUs; the central government removed interviews for Group C, Group B (non-gazetted) posts from 2016, which keeps government interview counts small relative to private hiring.",
+  "public_data_anchors": "1) India population ~1.45 bn (frameworks.md India anchor, 2025-26). 2) Labour force participation (15+, CWS) ~55-59%; rural LFPR 58.6%, urban 50.4% in Nov 2025 (MoSPI PLFS monthly bulletin Nov 2025, 15 Dec 2025: https://www.mospi.gov.in/uploads/publications_reports/publications_reports1765793969210_4cc3881d-7905-494b-90a3-cbecc6afacfb_PLFS_Monthly_Bulletin_November_2025_15122025.pdf). Implied labour force ~55-60 crore. 3) Unemployment rate ~5.1% in Aug 2025 (Tribune, Sep 2025: https://www.tribuneindia.com/news/business/indias-unemployment-rate-falls-for-second-month-to-5-1-in-august-female-workforce-participation-gains-momentum). 4) EPFO net payroll additions 19.29 lakh in June 2026, of which ~10.25 lakh new subscribers (Business Today, Jun 2026, link above); 21.04 lakh in July 2025 (Outlook Business: https://www.outlookbusiness.com/news/epfo-adds-2104-lakh-net-members-in-july-up-555). So ~2.3 crore formal joiners or rejoiners a year. 5) Naukri JobSpeak index 2,836 in Oct 2026, +14% YoY (Info Edge, 3 Nov 2026, link above). 6) [uncertain] Regular salaried workers are ~21-22% of all workers in PLFS annual reports (PLFS 2023-24), i.e. ~12-13 crore people - verify against the latest PLFS annual report.",
+  "framework_applied": "Guesstimates: Clarify, Pick framework, Constraints/MECE, Calculate, Sanity check (frameworks.md section 6). Step 1 Clarify - 'people in an interview' = candidates plus interviewers inside a live, scheduled job interview session (in person, video or phone), at ~11 AM IST on a normal weekday; exclude written tests, AI-only screens and casual informal hiring chats. Step 2 Pick framework - bottom-up flow-to-stock: annual hires x interview sessions per hire = sessions per year; then sessions per working day x average duration / interviewing hours = concurrent sessions; then x people per session. Top-down from population is a weak fit because almost nobody is interviewing at any moment. Step 3 Constraints and MECE - segment hires into white-collar private, formal blue/grey-collar, campus/freshers, government, and informal; apply the natural constraints of working days (~250), an interviewing window (~8 hours, 10 AM-6 PM) and session length (30-60 min). Step 4 Calculate - ~11-12 crore sessions a year, ~4.6 lakh a day, ~45,000 at an average moment, ~55,000-60,000 at the 11 AM peak, ~1.4-1.5 lakh people including interviewers. Step 5 Sanity check - 1-in-N test (about 1 in 10,000 Indians, or 1 in ~2,000 salaried workers, is in an interview right now) and a ratio test against Naukri/EPFO hiring volumes.",
+  "clarifying_questions": [
+    {
+      "q": "Who counts as 'in a job interview' - only candidates, or interviewers and panel members too?",
+      "a": "Both. Count every person in the room or on the call."
+    },
+    {
+      "q": "What does 'right now' mean - this exact moment, say 11 AM on a weekday, or an average across the day?",
+      "a": "Assume it is 11 AM IST on a regular Tuesday, outside the festive season."
+    },
+    {
+      "q": "Does a video or phone interview count, and does an AI-run or asynchronous video screen count?",
+      "a": "Live video and phone interviews count. One-way recorded or AI-only screens do not - there must be a live human interviewer."
+    },
+    {
+      "q": "Do written aptitude tests, group discussions and assessment centres count?",
+      "a": "No, only one-on-one or panel interviews. You can mention group discussions as an extension."
+    },
+    {
+      "q": "Should I include informal hiring - a shop owner chatting to a helper, a contractor picking daily-wage labour?",
+      "a": "Leave out daily-wage labour and gig onboarding. Include structured hiring conversations even for blue-collar roles, such as a retail store manager interview or a delivery-fleet hiring call."
+    },
+    {
+      "q": "Are internal interviews - promotions, internal job postings - in scope?",
+      "a": "Include them if they are a formal interview. Keep it simple."
+    },
+    {
+      "q": "What level of precision do you want - an order of magnitude or a range?",
+      "a": "A defensible point estimate with a range is fine."
+    }
+  ],
+  "interviewer_data_reveals": "Exhibit 1 - Real anchors the interviewer can hand over (cite sources):\n| Anchor | Value | Source |\n|---|---|---|\n| India population | ~145 crore | frameworks.md anchor, 2025-26 |\n| Labour force participation (15+, CWS) | ~56% | MoSPI PLFS monthly bulletins, 2025 |\n| EPFO net payroll additions | ~19-21 lakh per month | EPFO payroll data, Jun 2026 and Jul 2025 |\n| Naukri JobSpeak (white-collar hiring) | 2,836 in Oct 2026, +14% YoY | Info Edge, 3 Nov 2026 |\n\nExhibit 2 - Hires per year by segment (illustrative, built on EPFO and PLFS scale):\n| Segment | Hires per year | Interview sessions per hire | Sessions per year |\n|---|---|---|---|\n| White-collar private (IT, GCC, BFSI, startups, sales and ops managers) | 80 lakh | 8 (about 4 candidates interviewed x 2 rounds each) | 6.4 crore |\n| Campus and freshers (included in white-collar flow above for counting hires, but interview-heavy) | +1 crore extra interviewees not hired (of ~1 crore+ graduates a year) | 1.5 | 1.5 crore |\n| Formal blue/grey-collar (retail, BPO voice, factory, security, logistics supervisors) | 1.5 crore | 2.5 (about 2 candidates x 1-1.5 rounds) | 3.75 crore |\n| Government (UPSC, state PSC, PSU, bank officer interviews) | ~2 lakh selections | 3 | ~6 lakh (negligible) |\n| Informal structured (small business, domestic staff via agencies) | ~50 lakh | 1 | 0.5 crore |\n| Total | ~2.9 crore hires | ~4 on average | ~12 crore sessions |\n\nExhibit 3 - Time constraints (illustrative):\n| Parameter | Value |\n|---|---|\n| Working days with interviews | 250 per year (Mon-Fri, minus holidays; some Saturday drives) |\n| Interviewing window | 8 hours (10 AM-6 PM) |\n| Average session length | 45 min (white-collar 45-60 min; blue-collar 20-30 min) |\n| 11 AM peak vs. daily average | 1.3x (morning slots fill first; lunch dip 1-2 PM) |\n| Average people per session | 2.5 (1 candidate + 1.5 interviewers; panels for senior and government roles) |\n\nExhibit 4 - Calculation summary (illustrative):\n| Step | Value |\n|---|---|\n| Sessions per working day | 12 crore / 250 = ~4.8 lakh |\n| Concurrent sessions at an average moment | 4.8 lakh x 0.75 h / 8 h = ~45,000 |\n| Concurrent sessions at 11 AM | 45,000 x 1.3 = ~58,500 |\n| People in interviews at 11 AM | 58,500 x 2.5 = ~1.46 lakh |",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "Here's a fun one, given where you are sitting. How many people in India are in a job interview right now?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Including me, I hope. Before I estimate, let me pin down the definition. Do we count only candidates, or interviewers as well?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Everyone in the interview - candidates and interviewers."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "And 'right now' - should I take this moment, roughly 11 AM on a weekday, rather than a daily average?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Yes, 11 AM on a normal Tuesday."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Does a live video or phone interview count? What about one-way recorded or AI-only screens, written tests and group discussions?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Live human interviews only, any channel. No tests, GDs or AI-only screens. Skip daily-wage and gig onboarding too."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Clear. Approach: the population lens is weak here, because only a tiny slice of people interview at any moment. So I'll go bottom-up. Annual hires times interview sessions per hire gives sessions per year. Then I convert that flow into a stock: sessions per working day times average duration divided by the interviewing window gives concurrent sessions. Finally I multiply by people per session. Formula: People now = (Hires/yr x Sessions per hire / Working days) x (Duration / Window) x Peak factor x People per session."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Why not start from job seekers instead of hires?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Job seekers is a fuzzier number - many passive seekers never interview. Hires are anchored in real data like EPFO payroll additions, and the interview-to-hire ratio is something recruiters actually track. So hires needs fewer assumptions."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Segmenting hires MECE by what drives the interview count:\n  Hires per year\n  |- White-collar private (IT, GCC, BFSI, startups, managers) - many rounds, many candidates\n  |- Formal blue/grey-collar (retail, BPO, factory, security, logistics) - 1-2 short rounds\n  |- Government (UPSC, PSC, PSU, banks) - few, long panel interviews\n  |- Informal but structured (small firms, domestic staff via agencies) - one chat\n  Plus campus interviewees who aren't hired."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Good. What anchors do you have for the size of hiring?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "EPFO adds about 19-21 lakh net members a month as of mid-2026, which is ~2.3 crore formal joiners or rejoiners a year. PLFS puts regular salaried workers at about 12-13 crore. Annual turnover plus new entrants of ~20% on 12.5 crore gives ~2.5 crore - consistent. So I'll use ~2.3 crore formal hires: ~80 lakh white-collar and ~1.5 crore blue/grey-collar. Add ~50 lakh informal-but-structured hires and ~2 lakh government selections."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Fine. Interviews per hire?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "White-collar: a recruiter typically interviews about 4 candidates per hire, and each goes through about 2 live rounds on average - some drop after the screen, finalists do 3-4. That's ~8 sessions per hire, so 80 lakh x 8 = 6.4 crore. Campus: add ~1 crore graduating students who interview but aren't hired, ~1.5 sessions each, ~1.5 crore. Blue/grey-collar: about 2 candidates per hire and 1-1.5 rounds, so ~2.5, giving 1.5 crore x 2.5 = 3.75 crore. Government is tiny - ~6 lakh sessions. Informal: 50 lakh x 1 = 0.5 crore. Total about 12 crore interview sessions a year."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Now turn that into 'right now'."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Constraints: interviews happen on about 250 working days and mainly in an 8-hour window, 10 AM to 6 PM. 12 crore / 250 = 4.8 lakh sessions a day. Average length: white-collar 45-60 minutes, blue-collar 20-30, so a blended 45 minutes. Concurrent sessions = 4.8 lakh x 0.75 / 8 = ~45,000 at an average moment."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Is 11 AM an average moment?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "No - it's above average. Morning slots fill first, there's a lunch dip, and late-evening slots are for US-overlap roles. I'll apply a 1.3x peak factor: 45,000 x 1.3 = ~58,500, call it 55,000-60,000 live interviews."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "And people?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "One candidate plus on average 1.5 interviewers - many screens are one-on-one, but panels are common in final rounds, government and campus. So 2.5 people per session: 58,500 x 2.5 = ~1.46 lakh. My answer: about 1.5 lakh people are in a job interview right now, of whom about 60,000 are candidates. Range 1-2.5 lakh."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Sanity-check that."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "1-in-N test: 1.5 lakh out of 145 crore is about 1 in 10,000 Indians; out of ~12.5 crore salaried workers it's about 1 in 2,000 - and 2,000 candidates at a medium-sized company's careers page at any time feels right. Ratio test: 60,000 candidates live at the peak, times ~8 hourly slots, is ~4-5 lakh interviews a day, or ~1 crore a month against ~20 lakh EPFO payroll additions a month - about 5 interviews per formal hire, which matches recruiter funnels. If I had used 'every job seeker interviews weekly', I'd get ~3-4x higher, and the hires cross-check would fail."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What is the biggest swing factor?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Sessions per white-collar hire - it's half the total. If it's 5 instead of 8, the answer drops by about 20%, to ~1.2 lakh. Second is the duration-to-window ratio: if interviews average 30 minutes, the stock drops by a third."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Wrap it up."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "About 1.5 lakh people - roughly 60,000 candidates and 90,000 interviewers - are in a live job interview in India at 11 AM on a weekday, driven mostly by white-collar private hiring. It's about 1 in 10,000 Indians, and it ties back to EPFO's ~20 lakh monthly payroll additions at ~5 interviews per hire."
+    }
+  ],
+  "answer_and_recommendation": "Estimate: ~1.5 lakh people (range 1-2.5 lakh) are in a live job interview in India at 11 AM IST on a weekday - ~58,000 concurrent sessions x 2.5 people. Ranked drivers: (1) white-collar private hiring, ~80 lakh hires x ~8 sessions = ~6.4 crore sessions a year, more than half the total; (2) formal blue/grey-collar hiring, ~1.5 crore hires x ~2.5 = ~3.75 crore; (3) campus and fresher interviews, ~1.5 crore. Flow-to-stock: 12 crore sessions / 250 days = 4.8 lakh a day; x 0.75 h / 8 h window = 45,000 average; x 1.3 peak at 11 AM = ~58,500. Risks in the estimate: sessions per white-collar hire (5-10 range) and average duration (30-60 min) swing the answer by +/-30%; Diwali, the March appraisal cycle and campus placement season (Aug-Dec) change it seasonally. Closing line: 'Roughly 1.5 lakh people - about 60,000 candidates and 90,000 interviewers - are in a job interview right now, about 1 in 10,000 Indians, and it reconciles with EPFO's ~20 lakh monthly payroll additions at about 5 interviews per hire.'",
+  "counter_metrics_guardrails": "Pure guesstimate - sanity checks used instead of guardrails: (1) 1-in-N test: 1.5 lakh / 145 crore is ~1 in 10,000 people, and ~1 in 2,000 salaried workers - plausible; 1 in 100 would be absurd. (2) Ratio test against EPFO: ~4.8 lakh sessions a day x ~21 working days = ~1 crore a month vs. ~20 lakh monthly EPFO net additions, i.e. ~5 sessions per formal hire - consistent with recruiter funnels. (3) Peak-day stress test: during campus placement week at IITs/NITs/IIMs or a mass BPO hiring drive, local concurrency spikes, but national hiring calendars smooth it; in Diwali week the count could fall by 40-50% as Naukri JobSpeak dips show. (4) Capacity check: ~90,000 interviewers busy at once is a small share of India's ~1 crore+ managers and HR staff, so interviewer capacity is not a binding constraint.",
+  "follow_up_twists": [
+    {
+      "twist": "What if I ask at 11 AM on the first Monday of campus placement season (1 December)?",
+      "response": "Add a campus spike: ~1,500 top campuses x ~200 interviews in a morning slot gives ~3 lakh extra sessions that day, much of it concurrent - the count could briefly double to ~3 lakh people, then normalise."
+    },
+    {
+      "twist": "Should AI interviewers count? Many BPO and campus screens are now AI-run.",
+      "response": "If they count, add candidates in AI screens but not interviewers - at maybe 20% of blue-collar and fresher screens, that's roughly +10,000 candidates; I'd report it separately because the question implies a human conversation."
+    },
+    {
+      "twist": "How would you estimate this for Bengaluru only?",
+      "response": "Bengaluru is ~10-12% of India's white-collar hiring (Naukri city splits) but only ~1% of population, so ~10% of white-collar sessions plus ~3% of the rest - roughly 11,000-13,000 people right now."
+    }
+  ],
+  "common_pitfalls": [
+    "Starting top-down from 145 crore people with arbitrary percentages ('5% are job seekers, 10% of those interview today') - it skips the hires anchor and usually overshoots by 3-5x.",
+    "Forgetting to convert a daily or annual flow into a concurrent stock - multiplying by duration over the interviewing window is the step most candidates miss.",
+    "Counting only candidates even though the question says 'people', or not asking whether interviewers count; this alone changes the answer by 2-2.5x.",
+    "Treating all hires alike - a delivery-fleet hire with one 15-minute call and a GCC engineer with five 60-minute rounds differ by ~20x in interview minutes, so segmentation by collar and seniority matters more than by city."
+  ],
+  "skills_tested": [
+    "structuring",
+    "quant",
+    "business sense",
+    "communication"
+  ],
+  "linked_teardown": "None",
+  "uncertain": [
+    "round_and_level",
+    "source_and_verification",
+    "public_data_anchors"
+  ]
+}

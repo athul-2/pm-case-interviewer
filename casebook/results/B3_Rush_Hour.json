@@ -1,0 +1,184 @@
+{
+  "pun_title": "Rush Hour",
+  "case_type": "Product Design",
+  "asked_at": "Swiggy",
+  "subject_company": "Swiggy (delivery partner app, shared fleet for Food, Instamart and Bolt)",
+  "round_and_level": "[uncertain] Product sense / design round, PM onsite; APM campus and PM levels. The round and level are not stated in any public report I found.",
+  "difficulty": "Medium. The user is clear, but strong answers must look past 'better navigation' and handle the tension between rider safety and the delivery-time promise.",
+  "market_and_industry": "India; food delivery and quick commerce; supply side (two-wheeler gig riders in Tier-1 metros such as Bengaluru, Pune, Mumbai, Delhi NCR); riders often speak Hindi, Kannada, Tamil or Telugu and use budget Android phones (3-4 GB RAM) mounted on the handlebar.",
+  "time_box_minutes": "30-35",
+  "exact_prompt": "Design a product for Swiggy delivery partners riding through rush-hour traffic.",
+  "source_and_verification": "Level: reported (catalogued in this casebook's outline as asked at Swiggy). [uncertain] I found no public page with this exact wording. Search (Nov 2026) found adjacent Swiggy PM questions about delivery-partner design, such as a stakeholder dashboard for restaurant partners, delivery partners and leadership (https://interviewbee.ai/resources/interview-questions/swiggy/product-manager) and a LinkedIn Swiggy question bank that stresses empathy for delivery partners (https://www.linkedin.com/posts/bismayymohapatra_swiggy-qs-bank-activity-7411435854469988352--5x0). Year reported: [uncertain] 2024-25.",
+  "context_as_of": "As of Nov 2026: (1) A single Swiggy delivery-partner app serves Food, Instamart (1,240 dark stores in 133 cities in Q2 FY27) and Bolt, so one rider pool runs both 30-minute food and 10-15 minute grocery orders (Swiggy Q2 FY27 shareholder letter; see the local teardown). (2) Swiggy disclosed about 5.4 lakh average monthly transacting delivery partners in FY24 (DRHP); a Feb 2025 report says it gave its roughly 4 lakh riders reflector strips, raincoats and BIS-approved helmets (https://www.sightsinplus.com/news/industry-news/ecommerce-firms-step-up-for-delivery-partner-health-and-safety/). (3) Safety features already live: in-app SOS linked to helplines, police and hospitals; free ambulance service since 2021; accident cover up to Rs 2 lakh from the first order; Swiggy says Rs 18 cr in claims were paid in FY25 and SOS response time is 11 minutes (https://www.swiggy.com/corporate/?p=11813, https://www.thenewsminute.com/atom/swiggy-launches-free-ambulance-service-delivery-executives-and-their-dependants-172025). (4) Instamart added QR-based emergency alerts and free vehicle checks in Jan 2026 and ran 22+ road-safety workshops with city traffic police in 2025 (https://indiantelevision.com/news-headline/instamart-shifts-gears-on-road-safety-with-qr-alerts-and-free-vehicle-checks-260129/). (5) Gig unions held nationwide strikes on Dec 25 and Dec 31, 2025, and one demand was an end to 10-minute delivery targets. [uncertain] Reports say the Labour Ministry then pushed platforms in Jan 2026 to drop '10-minute' branding. Stale-risk flags: Instamart CEO changed in Aug 2026; rider counts are FY24 data.",
+  "regulatory_context": "(1) Code on Social Security, 2020, in force from Nov 21, 2025: recognises gig and platform workers; aggregators pay 1-2% of turnover, capped at 5% of payouts to gig workers, into a welfare fund. (2) State gig-worker laws: the Rajasthan Platform Based Gig Workers Act (2023) and the Karnataka Platform-Based Gig Workers Act (2025) both require transparency about automated decisions (assignment, deactivation) and a grievance mechanism, so any feature that changes routing or nudges riders must be explainable. (3) The Motor Vehicles Act and state traffic rules: helmets are mandatory and using a handheld phone while riding is an offence, so the product must work hands-free and eyes-free (voice, large glanceable cards, no typing while moving). (4) DPDP Act 2023 and its 2025 rules: collecting continuous location, speed or harsh-braking data needs notice and consent, and limits on purpose. (5) [uncertain] Reported Jan 2026 government pressure on '10-minute' promises means a design that visibly rewards speed over safety carries regulatory and PR risk.",
+  "public_data_anchors": "1) Bengaluru is the world's second-most congested city (TomTom Traffic Index 2025): about 36 min per 10 km on average, about 41 min in the morning rush and about 45 min in the evening rush (about 14.6 km/h), with 168 hours lost a year to rush hours. Pune takes about 33 min per 10 km and Chennai about 34 min in the morning rush. Source: https://www.tomtom.com/traffic-index/city/bengaluru and https://www.deccanherald.com/india/karnataka/bengaluru/bengaluru-worlds-2nd-most-congested-city-commuters-lose-seven-days-a-year-on-roads-traffic-tom-tom-traffic-index-2025-3870635 (Jan 2026). Bengaluru Traffic Police disputes this and gives about 34.5 min per 10 km at peak. 2) MoRTH Road Accidents in India 2023 (released Aug 2025): 1,72,890 deaths, of which two-wheeler riders were 44.8%, or about 77,539; about 70% of those riders were not wearing helmets. Source: https://www.theweek.in/wire-updates/business/2025/08/28/del82-biz-road-accidents-report.html. 3) Swiggy: about 5.4 lakh average monthly transacting delivery partners (FY24 DRHP); Instamart did 130.3 Mn orders in Q2 FY27 (Swiggy Q2 FY27 shareholder letter). 4) Swiggy: Rs 18 cr in insurance claims paid in FY25 and an 11-minute SOS response time (https://www.swiggy.com/corporate/?p=11813). 5) New Year's Eve 2025: Swiggy offered riders up to Rs 2,000 in peak-hour pay from 6pm to midnight (https://www.businesstoday.in/amp/india/story/new-years-eve-strike-zomato-swiggy-announce-higher-payouts-for-delivery-workers-during-peak-hours-508874-2025-12-31).",
+  "framework_applied": "CIRCLES + List and Trim (frameworks.md, section 1). C - Comprehend: the goal is rider safety and earnings per hour during the 6-10pm dinner peak in Bengaluru without hurting on-time delivery; I am the Swiggy partner-app PM; there is no hardware budget beyond a pilot. I - Identify: list full-time bike riders, part-time students, EV/cycle riders and multi-app riders; pick full-time petrol two-wheeler riders working the dinner peak (highest volume and the most exposure to traffic). R - Report needs as JTBD: 'When I am stuck in a jam with a hot order and a ticking ETA, I want to know the time is not counting against me, so I can ride safely without losing incentives'; also navigation to the exact gate, fuel and toilet breaks, and less phone handling. C - Cut: prioritise ETA anxiety and phone handling while moving (most painful, every order, workarounds are unsafe, and it fits the business goal of fewer late orders and fewer accidents). L - List: safe (traffic-aware fair ETA that pauses the clock plus a voice-first riding mode), ambitious (dynamic assignment that keeps rush-hour riders inside a micro-zone and batches along their direction), visionary (a 'Rush Hour Shield' combining a guaranteed peak-hour earnings floor, crowd-sourced hazard map and a partner helmet with a heads-up display or bone-conduction audio). E - Evaluate: impact vs effort grid, edge cases (GPS drift under flyovers, fraud by riders who idle) and competitors (Zomato, Blinkit, Rapido). S - Summarise: ship a 'Rush Mode' (fair ETA plus voice-first UI) as a 4-week pilot in 3 Bengaluru zones, with success metrics and guardrails.",
+  "clarifying_questions": [
+    {
+      "q": "What is the goal: rider safety, rider earnings and retention, or on-time delivery for customers?",
+      "a": "Primarily rider safety and earnings during peak hours, but you must not make customer delivery times noticeably worse."
+    },
+    {
+      "q": "Is this for Food, Instamart, or both?",
+      "a": "The fleet is shared, so both. Assume most rush-hour orders are dinner food orders, with Instamart top-ups mixed in."
+    },
+    {
+      "q": "Which city and which rush hour?",
+      "a": "Start with Bengaluru, evening peak 6-10pm, which is both commute traffic and dinner demand."
+    },
+    {
+      "q": "Software only, or can we touch hardware and partnerships (helmets, traffic police, OEMs)?",
+      "a": "Software first. Hardware is fine as a pilot or a later phase."
+    },
+    {
+      "q": "Do we know what the main pain is today: delays, accidents, earnings, or something else?",
+      "a": "Tell me what you would hypothesise and I will share data."
+    },
+    {
+      "q": "Any constraints on changing how ETAs are promised to customers?",
+      "a": "Customer ETA changes need sign-off from the consumer team, but they are open if you can justify them."
+    },
+    {
+      "q": "How do riders use the phone today while riding?",
+      "a": "Mostly mounted on the handlebar, with Google Maps open and the Swiggy app in the background; many also run Zomato or Rapido."
+    }
+  ],
+  "interviewer_data_reveals": "Exhibit 1 (illustrative): Bengaluru evening peak vs off-peak, per rider. Average speed 14 km/h vs 24 km/h; orders per hour 1.6 vs 2.3; earnings per hour Rs 135 vs Rs 150 (peak incentives cover only part of the lost orders); share of orders delivered late 22% vs 8%. Exhibit 2 (illustrative): survey of 1,200 riders, top rush-hour pains. 'ETA timer and late penalties make me rush' 48%; 'Have to touch the phone to check route or call customer' 41%; 'Last 200 m: wrong gate or building' 37%; 'Long wait at restaurant, then stuck in traffic' 33%; 'No place for a toilet, water or a fuel stop' 21%. Exhibit 3 (illustrative): incident log. 62% of reported rider accidents happen between 7 and 10pm; in 58% of incident reports the rider said they were behind on the ETA; 1 in 4 riders admit to wrong-side riding at least once a week. Exhibit 4 (real): TomTom 2025 Bengaluru evening rush about 45 min per 10 km; MoRTH 2023 two-wheeler riders 44.8% of road deaths (sources in public_data_anchors).",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "Design a product for Swiggy delivery partners riding through rush-hour traffic."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Let me restate it. Swiggy riders, who serve Food, Instamart and Bolt from one app, spend the evening peak in some of the slowest traffic in the world. Bengaluru's evening rush is about 45 minutes per 10 km per TomTom. I want to design something that makes that time safer and more productive for them. Before I go further, what is the goal: safety, earnings, or customer on-time delivery?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Rider safety and earnings first, but don't make customer ETAs noticeably worse."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Good. I'll assume I'm the PM on the delivery-partner app, Bengaluru 6-10pm, software first with hardware only as a pilot. Is that fine?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Yes."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Users first. I see four segments: (1) full-time riders on petrol two-wheelers who log in 10+ hours a day; (2) part-time students or office workers who log in only for the evening peak; (3) EV and bicycle riders with shorter range; (4) multi-app riders juggling Swiggy, Zomato and Rapido. I'll pick segment 1, full-time riders working the dinner peak. They do most rush-hour orders, they depend on this income, and they have the most hours exposed to traffic. I'd keep multi-apping as an edge case, because it shapes how they use the phone."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Why not part-timers? They churn more."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Fair, and churn is real. But part-timers come exactly for the peak, so a fix for peak traffic helps them too. Full-timers have higher volume and higher risk, so I start there and check that the solution carries over."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Now needs. Picture Ramesh, 27, from Bihar, riding a Splendor in Koramangala with a Redmi phone on the handlebar. His job: 'When I'm stuck at Silk Board with a hot biryani and the ETA turning red, I want to know the delay isn't held against me, so I can ride safely and still hit my weekly incentive.' Other needs: 'When I'm moving, I want to see or hear only the next turn and the next action, so I don't have to touch the phone'; 'When I reach a big apartment complex, I want the right gate, so I don't lose five minutes'; and basics like water, toilets and fuel. Do you have any data on what hurts most?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Here's a rider survey (Exhibit 2) and an incident log (Exhibit 3)."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That helps. 48% say the ETA timer makes them rush, and 58% of incident reports say the rider was behind on the ETA, so time pressure looks like the main driver of risk. Phone handling is next at 41%, and the last 200 metres at 37%. I'll prioritise on pain, frequency, whether workarounds exist, feasibility and fit to the goal:\n| Need | Pain | Frequency | Workaround | Fit |\n| ETA pressure | High | Every peak order | Unsafe: wrong-side riding, jumping signals | Safety + on-time |\n| Phone handling | High | Every order | Unsafe | Safety |\n| Last 200 m | Medium | ~1 in 3 orders | Calling the customer | Speed |\n| Breaks | Medium | Daily | Ad hoc | Retention |\nSo I'll take ETA pressure plus phone handling as one combined problem: in a jam, the rider feels he must rush and must keep checking his phone."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "OK. What would you build?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Three options, safe to visionary. Safe: 'Rush Mode'. When the system detects heavy traffic on the rider's route, from live speed data across Swiggy's own fleet plus the maps provider, it (a) re-computes a fair ETA and stops counting the delay against the rider's lateness score and incentive targets, and (b) switches the app into a voice-first, glanceable layout: one big card with the next action, voice prompts in the rider's language, and one-tap or voice 'I'm stuck' and 'call customer' buttons that only work while stopped."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Ambitious: rush-hour-aware assignment. Between 6 and 10pm, keep each rider inside a 2-3 km micro-zone, prefer orders along the rider's current direction, batch Instamart top-ups that sit on the route, and avoid assignments that cross known choke points like Silk Board or Hebbal. Visionary: 'Rush Hour Shield'. A guaranteed peak-hour earnings floor (say Rs 150 an hour if logged in and accepting), a crowd-sourced hazard map that riders feed with one voice tap (waterlogging, accident, police check), safe 'pit stops' at partner restaurants and dark stores with water and toilets, and a pilot of helmets with bone-conduction audio so instructions arrive without looking down."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How do you choose?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Impact vs effort:\n| Option | Impact | Effort | Notes |\n| Rush Mode (fair ETA + voice UI) | High: removes the incentive to rush, cuts phone handling | Medium: needs ETA model and UI work, plus consumer-team buy-in | Fastest proof |\n| Zone-locked assignment | High on orders per hour | High: dispatch changes, risk to customer ETA | Phase 2 |\n| Shield (floor + hazard map + helmets) | Very high on trust and retention | Very high: cost, hardware, ops | Phase 3, fund from results |\nEdge cases: GPS drift under flyovers and in basements could wrongly trigger or miss Rush Mode, so I'd use fleet speed across many riders, not one phone. Fraud: a rider could idle to get delays excused, so the excuse only applies when fleet data confirms the jam on that segment. Competitors: Zomato and Blinkit share the same riders, so if we are the safer app to ride for at peak, we win supply."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Doesn't excusing delays hurt customers? They still get late food."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "The customer gets a more honest ETA. If the fleet detects a jam, we update the customer's ETA early with a short reason, 'heavy traffic near Silk Board', instead of letting it silently slip. Late orders don't come from the rider being lazy; they come from the road. Today we pass that risk to the rider, who rides unsafely to absorb it. I'd test whether honest ETAs move customer ratings much. My hypothesis is that early updates hurt less than surprise lateness."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Let's say we pick Rush Mode. How do you roll it out?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "A 4-week A/B test in 3 Bengaluru zones (Koramangala-HSR, Whitefield, Hebbal) with about 3,000 riders, randomised at the rider level for the UI and at the zone level for the ETA policy so customers in a zone see consistent ETAs. Week 0: fleet-speed jam detection and the voice UI in Kannada, Hindi, Tamil, Telugu and English. Then show riders a clear explainer in the app: 'In heavy traffic your late score is paused. Ride safe.' That transparency also meets the Karnataka gig-worker law's expectation that automated rules are explained."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What metrics?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "North Star for this feature: safe completed peak-hour orders per rider-hour. Supporting: rider earnings per peak hour, phone touches per order while moving (from app telemetry), harsh-braking and speeding events per 100 km (with consent), incident reports per 1,000 peak orders, peak-hour login and retention for riders in week 4. Guardrails: customer on-time rate and customer CSAT for affected orders, cancellation rate, cost per order, and abuse of the delay excuse."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What are the risks?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Three. (1) Riders read it as 'slow down = lose money' if incentives still count orders; mitigation: pause the order-count target too, not just lateness. (2) Customer ETAs look worse; mitigation: the honest early ETA test and a guardrail that stops the pilot if on-time rate drops more than 2 points. (3) Data privacy: speed and braking telemetry is sensitive; mitigation: DPDP-compliant consent, use it only to improve safety, never to deactivate riders."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Wrap it up."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'd build Rush Mode for full-time dinner-peak riders: a fair, fleet-verified ETA that stops traffic delays from counting against riders, plus a voice-first riding screen so they don't touch the phone while moving. It goes after the main driver of risk, time pressure, and it makes Swiggy the safest app to ride for at peak, which matters when riders multi-app. Pilot in three Bengaluru zones for four weeks; if safe orders per rider-hour rise and on-time rate holds, move to zone-locked assignment, then the Shield."
+    }
+  ],
+  "answer_and_recommendation": "Ranked options: (1) Rush Mode: a traffic-aware fair ETA that pauses lateness and incentive penalties when the fleet confirms a jam, plus a voice-first, glanceable riding UI in the rider's language; (2) rush-hour-aware assignment with micro-zones and on-route batching; (3) Rush Hour Shield, combining a peak earnings floor, a crowd-sourced hazard map, pit stops and a pilot of audio helmets. Recommendation: ship Rush Mode as a 4-week pilot with about 3,000 riders in 3 Bengaluru zones. Risks and mitigation: riders may slow down if order-count targets still apply (pause those too); worse customer ETAs (show honest ETAs early, with a 2-point on-time stop rule); fraud by idling (verify against fleet-wide speed data); privacy (DPDP consent, no use for deactivation). Closing line: 'The road causes the delay, but today the rider pays for it with his safety. Rush Mode moves that cost back to the system, and makes Swiggy the safest app to ride for when the city is at its slowest.'",
+  "counter_metrics_guardrails": "Guardrails: customer on-time delivery rate and order-level CSAT in pilot zones (stop if on-time falls more than 2 points); order cancellation rate; cost per delivery and incentive spend per order; Instamart 10-15 minute SLA adherence for batched orders; abuse rate of delay excuses (excused minutes per rider vs fleet baseline); rider churn to Zomato or Blinkit (multi-app share); app crash rate and battery drain on low-end Android phones in voice mode. Counter-metric to watch: orders per rider-hour must not fall so far that earnings per hour drop.",
+  "follow_up_twists": [
+    {
+      "twist": "The consumer team refuses any change to customer ETAs.",
+      "response": "Keep the customer ETA unchanged and absorb the gap internally: pause the rider's lateness score only, and measure the cost as extra late orders that are no longer penalised. That gives a clean price for safety to take back to the consumer team."
+    },
+    {
+      "twist": "It's monsoon week and half of Bengaluru is waterlogged.",
+      "response": "Rush Mode extends naturally: rain plus jam triggers a stronger version, with surge pay already funded by the customer rain fee, crowd-sourced waterlogging alerts, and routing away from flooded underpasses."
+    },
+    {
+      "twist": "Leadership asks: how does this make money?",
+      "response": "It lowers cost per order through fewer accidents, claims and support calls, and it raises peak-hour supply by retaining riders who would otherwise move to Zomato or Blinkit; peak-hour supply is what limits dinner GOV."
+    }
+  ],
+  "common_pitfalls": [
+    "Jumping to 'build a better navigation app'. Google Maps already exists and riders use it; the real issue is incentive design and time pressure, not maps.",
+    "Designing for the customer (better tracking) instead of the delivery partner, who is the user in this prompt.",
+    "Ignoring that riders multi-app: a feature that needs exclusive attention or extra steps will be ignored at peak.",
+    "Proposing features that need typing or reading while moving, which is unsafe and illegal; everything must be voice-first or glanceable.",
+    "Treating the rider's speed as the lever to optimise, which runs straight into the strike demands and regulatory pressure against 10-minute targets."
+  ],
+  "skills_tested": "structuring, empathy, prioritisation, business sense, execution, communication",
+  "linked_teardown": "swiggy-product-teardown (swiggy-product-teardown/results/Delivery_partner_app_labour.json): one rider pool serves Food, Instamart and Bolt; about 5.4 lakh monthly transacting riders (FY24 DRHP); Dec 2025 strikes demanded an end to 10-minute targets; riders multi-app and benchmark pay against Zomato, Blinkit and Zepto.",
+  "uncertain": [
+    "round_and_level",
+    "source_and_verification",
+    "context_as_of",
+    "regulatory_context"
+  ]
+}

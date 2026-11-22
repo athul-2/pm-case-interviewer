@@ -1,0 +1,199 @@
+{
+  "pun_title": "Rule Breaker",
+  "case_type": "Situational",
+  "asked_at": "By the Authors (synthetic, fintech style; modelled on the BBPS credit-card mandate of 2024 and the 2026 UPI MDR / 30% market-cap deadlines)",
+  "subject_company": "Illustrative: 'PayBuddy', a large Indian consumer fintech app (CRED / PhonePe / Paytm style) where credit-card bill payment is a core, high-frequency flow. Real precedent: CRED, PhonePe, Paytm and Amazon Pay when card bill payments had to move to BBPS from 1 Jul 2024.",
+  "round_and_level": "PM round 2 or hiring-manager round at fintechs (execution under regulatory constraint), PM and SPM in payments/compliance-heavy products; a lighter version for APMs. Synthetic, so placement is the authors' suggestion. [uncertain]",
+  "difficulty": "Hard - the deadline is not negotiable, the dependency (issuer banks going live on BBPS) is outside your control, and the answer must balance compliance, user trust (people miss card due dates and pay 36-42% interest plus late fees) and revenue, while saying clearly what you will not do (keep the old rail 'quietly', or build dark-pattern workarounds).",
+  "market_and_industry": "India; consumer fintech / payments - credit-card bill payment, UPI, rewards; users are mostly metro and Tier-1/2 salaried card holders (rewards-driven, multi-card), payments funded largely by UPI from savings accounts; regulated by RBI and NPCI (BBPS / Bharat Connect, UPI).",
+  "time_box_minutes": "20-25",
+  "exact_prompt": "An RBI/NPCI rule change gives you 30 days to change a core payment flow. What do you do? (Opened as: 'You're the PM for credit-card bill payments at a large fintech app. RBI says that in 30 days, all card bill payments through third-party apps must go through BBPS. Today you pay issuers through your payment aggregator over IMPS/NEFT. Three big issuers say they won't be live on BBPS by the deadline. What do you do?')",
+  "source_and_verification": "Level: synthetic (written by the authors in a fintech style). The scenario is modelled on real events: (1) RBI's requirement that credit-card bill payments via third-party apps route through BBPS from 1 Jul 2024, when HDFC Bank (about 20 mn cards) and Axis Bank (about 14 mn) were not live at the deadline and apps like CRED and PhonePe could not take their payments (Business Today, 3 Jul 2024, https://www.businesstoday.in/personal-finance/news/story/credit-card-payment-users-cant-use-cred-phonepe-amazon-pay-paytm-to-make-payments-know-more-435582-2024-07-03 ; Business Standard, 1 Jul 2024, https://www.business-standard.com/finance/personal-finance/credit-card-users-can-still-use-third-party-apps-for-repayment-know-more-124070100588_1.html ; Free Press Journal, https://www.freepressjournal.in/amp/business/customers-cannot-pay-credit-card-bills-through-cred-and-phonepe-after-june-30-unless); RBI's original notice gave about 90 days, the 30-day window is the authors' compression. [uncertain] (2) NPCI's 15 Sep 2026 circular setting 0.4% UPI MDR above Rs 2,000 from 15 Oct 2026 - a real 30-day window, later deferred to post-Diwali (Entrepreneur India, https://india.entrepreneur.com/business-news/npci-announces-0-4-mdr-on-upi-transactions-above-inr-2000 ; Inc42, https://inc42.com/buzz/upi-mdr-rollout-may-be-deferred-to-january-2027-amid-pushback-by-retailers/). (3) NPCI's 30% UPI market-share cap for third-party apps, deadline 31 Dec 2026 after the Dec 2024 extension (Business Today, 31 Dec 2024, https://www.businesstoday.in/tech-today/news/story/npci-extends-30-upi-market-share-cap-deadline-on-3rd-party-apps-to-december-2026-459171-2024-12-31). No interview report of this exact prompt was found; NextLeap/AmbitionBox/Glassdoor not searchable this session. Year: 2026.",
+  "context_as_of": "As of 11 Nov 2026. 1) BBPS precedent (2024): from 1 Jul 2024 card bill payments via third-party apps had to route through BBPS; at the deadline HDFC Bank and Axis Bank were not live, ICICI's status was reported inconsistently, and HDFC appeared on the live list by about 3 Jul 2024; users of non-live issuers were told to pay via the bank's own app or NEFT (Business Today, Business Standard, Jul 2024). NPCI Bharat BillPay was later rebranded 'Bharat Connect' (2024). [uncertain] 2) UPI MDR (2026): NPCI circular 15 Sep 2026 - 0.4% on eligible P2M UPI payments above Rs 2,000, Rs 300 cap, flat Rs 5 for bills/utilities/education/fuel, not to be passed to consumers; due 15 Oct 2026, deferred by NPCI's steering committee to 'immediately post Diwali (8 Nov 2026), date to be notified'; Inc42 reported a possible 1 Jan 2027 start; Supreme Court declined an interim stay (Moneylife; Inc42 8 Oct 2026). 3) UPI 30% cap: third-party apps above 30% of UPI volume (3-month rolling) must comply by 31 Dec 2026; PhonePe (about 46-48%) and Google Pay (about 35-37%) are over it; no further extension found as of this date - check NPCI before relying on it. 4) Scale: UPI did a record 25.47 bn transactions, Rs 31.53 lakh cr in Oct 2026; daily volume crossed 800 mn for the first time in Sep 2026, peaking around 873 mn on 9 Oct (Inc42 / Entrepreneur India, Nov 2026). Stale-risk: MDR start date and cap enforcement are both live decisions and may change within weeks. [uncertain]",
+  "regulatory_context": "The core of the case. 1) RBI requirement (2024) that credit-card bill payments through third parties be processed via BBPS; issuers must be live as billers and apps must be BBPS Operating Units (BBPOU) or partner with one; the old route (app collects funds, pays the issuer via IMPS/NEFT) is no longer allowed. [uncertain on the exact circular reference] 2) RBI Master Direction - Credit Card and Debit Card (2022, amended) - due dates, late-fee and interest rules; payments must be credited correctly and on time, so a failed or delayed payment that causes a late fee is a real customer harm. 3) NPCI BBPS / Bharat Connect procedural guidelines - biller onboarding, fetch-and-pay, complaint handling and turnaround times. 4) UPI MDR framework (NPCI, 15 Sep 2026) - MDR cannot be passed to consumers; bill payments above Rs 2,000 carry a flat Rs 5 under the reported structure, which affects unit economics of BBPS card-bill payments funded by UPI. [uncertain on whether card-bill payments fall in the flat-fee category] 5) NPCI 30% TPAP market-share cap, deadline 31 Dec 2026 - a TPAP over the cap would be expected to stop onboarding new UPI users until under it. 6) RBI (Regulation of Payment Aggregators) Directions 2025 - settlement and escrow rules for the PA leg. 7) DPDP Act 2023 / Rules (Nov 2025, phased) - consent for fetching bill data and for using card data in reminders. 8) CCPA dark-patterns guidelines (2023) - no false urgency in 'pay now before it stops working' messaging.",
+  "public_data_anchors": "1) HDFC Bank about 20 mn and Axis Bank about 14 mn credit cards were not BBPS-live at the 1 Jul 2024 deadline (Free Press Journal / OnePercentClub, Jun-Jul 2024). 2) UPI Oct 2026: 25.47 bn transactions, Rs 31.53 lakh cr, +5.8% MoM; Sep 2026 24.07 bn (Inc42, Nov 2026, https://inc42.com/buzz/upi-transactions-rise-5-8-mom-to-record-25-47-bn-in-october/). 3) UPI daily volume first above 800 mn in Sep 2026; about 873 mn on 9 Oct 2026 (Angel One / Entrepreneur India). 4) UPI MDR: 0.4% above Rs 2,000, Rs 300 cap; fee split about 0.28% issuer bank, 0.12% payer PSP of which 0.08% to the app; Centre told the Supreme Court about 96% of merchant transactions are unaffected (Inc42, 8 Oct 2026). 5) UPI 30% cap deadline 31 Dec 2026; PhonePe and Google Pay together over 85% of UPI (Business Today / YourStory, Dec 2024). 6) India credit cards outstanding about 11 crore (110 mn) in 2025-26 (RBI data, authors' recollection). [uncertain] App-level numbers in the case are illustrative.",
+  "framework_applied": "Situational: SODS (frameworks.md section 3). Values first: for a regulated fintech - trust and compliance first, then bias for action and customer obsession (no one should pay a late fee because of our migration). S - Scope: read the actual circular with Legal (what exactly changes, from when, who is liable), map the flow end to end (fetch bill, pay, confirm, credit to card), list what is in our control (our BBPOU integration, UX, comms) vs. outside it (issuer go-live, BBPS uptime), and define success (100% compliant on day 30, zero late fees caused by us, retain payment volume). O - Options: (A) big-bang cut-over on day 30 - simple, but users of non-live issuers hit a wall; (B) seek an extension / keep the old rail for non-live issuers - protects volume, but non-compliant and a licence risk; (C) phased migration: move live issuers to BBPS from week 2 behind flags, build a compliant 'pay via your bank' handoff for non-live issuers, proactive reminders, and daily issuer tracking - more work, but compliant and user-safe. D - Decision: C, and NOT doing: running the old IMPS/NEFT rail past the deadline, lobbying as the plan, or pausing the whole card-bill feature. S - Success: compliance on the day, payment success rate on BBPS at or above old-rail baseline, share of due-date payments made on time, retention of payers per issuer, and issuer go-live tracked daily.",
+  "clarifying_questions": [
+    {
+      "q": "What exactly does the rule say - which payments, from what date, and who is liable if a non-compliant payment goes through?",
+      "a": "From day 30, all credit-card bill payments through third-party apps must go through BBPS. Payments to issuers not on BBPS cannot be processed by apps. Liability sits with the app and its PA/BBPOU partner."
+    },
+    {
+      "q": "Are we already a BBPS Operating Unit, or do we use a partner?",
+      "a": "We're live on BBPS for electricity and DTH through a partner bank as BBPOU. Card bills were never routed there."
+    },
+    {
+      "q": "How many issuers are live on BBPS today, and what share of our volume do the non-live ones carry?",
+      "a": "7 of our top 10 issuers are live or will be by day 30. The 3 that won't be carry about 38% of payment volume. (illustrative)"
+    },
+    {
+      "q": "What does the user journey look like today, and where can it break on BBPS?",
+      "a": "User picks a card, we fetch the bill, they pay by UPI, we credit the issuer the same day. On BBPS, bill fetch can fail and credit can take up to T+1 for some issuers."
+    },
+    {
+      "q": "What does card-bill payment do for the business - revenue, engagement, rewards?",
+      "a": "It's the most frequent action in the app, drives about 45% of monthly active users and funds the rewards programme through issuer and PA economics. (illustrative)"
+    },
+    {
+      "q": "Is there any room for an extension, and is the regulator likely to give one?",
+      "a": "Industry bodies have asked. Assume no extension - plan for day 30."
+    },
+    {
+      "q": "How much engineering and ops capacity can I get?",
+      "a": "One payments squad plus a shared platform team; support can add 30% headcount for 6 weeks."
+    }
+  ],
+  "interviewer_data_reveals": "All numbers are illustrative (invented for teaching) unless a source is cited.\n\nExhibit 1 - Issuer readiness on BBPS (illustrative; mirrors the real 2024 situation where HDFC and Axis were not live at the deadline):\n| Issuer group | Share of our card-bill volume | BBPS status on day 30 | Expected go-live |\n| Issuers A-D (large private + PSU) | 41% | Live | - |\n| Issuers E-G (mid-size) | 21% | Live by day 20 | Day 20 |\n| Issuer H (large private) | 22% | Not live | Day 30-45 (claimed) |\n| Issuers I-J | 16% | Not live | 'Q next' (unclear) |\n\nExhibit 2 - Due-date pressure (illustrative):\n| Day of the month cycle | Share of payments made within 2 days of the due date |\n| Overall | 46% |\n| Salaried users, paid on 1st-5th | 58% |\n\nExhibit 3 - BBPS pilot on 2 live issuers, 2 weeks (illustrative):\n| Metric | Old rail | BBPS |\n| Payment success rate | 98.7% | 96.1% |\n| Bill-fetch failure | 0.4% | 2.8% |\n| Same-day credit to card | 99% | 91% (rest T+1) |\n| Support tickets per 10k payments | 6 | 14 |\n\nExhibit 4 - Rule-change calendar (real dates where cited):\n| Rule | Notice | Effective |\n| BBPS for card bills (real precedent) | early 2024 | 1 Jul 2024 |\n| UPI MDR 0.4% above Rs 2,000 (NPCI circular 15 Sep 2026) | 15 Sep 2026 | 15 Oct 2026, deferred post-Diwali |\n| UPI 30% TPAP cap (NPCI) | Dec 2024 extension | 31 Dec 2026 |\n\nTakeaway: about 38% of volume will hit a wall on day 30 through no fault of ours, almost half of payments are made near the due date (so late fees are a real risk), and BBPS is less reliable than the old rail in the first weeks.",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "You're the PM for credit-card bill payments at a big fintech app. RBI says in 30 days all card bill payments by third-party apps must go through BBPS. Today you pay issuers through your PA over IMPS and NEFT. Three big issuers won't be live in time. What do you do?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "In a regulated business I'd hold two lines that don't move: we will be compliant on day 30, and no user should pay a late fee because of our migration. Everything else is negotiable. I'll scope, lay out options, decide, and set success measures. First, I'd sit with Legal and Compliance on day one and read the actual circular. What exactly changes, and who's liable?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "From day 30, card bill payments by apps must go through BBPS. Payments to issuers not on BBPS can't be processed by apps. Liability is on you and your BBPOU partner."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So there's no grey zone for non-live issuers - we simply can't take their payments. Are we already on BBPS for anything?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Yes, electricity and DTH, through a partner bank. Never card bills."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Good - the integration and the partner relationship exist, so the build is extending billers, not starting from zero. Let me map the flow and what's in our control:\n| Step | Today | On BBPS | In our control? |\n| Fetch bill | Our parser + issuer data | BBPS bill fetch | Partly |\n| Pay | UPI collect into our PA | Same, then to BBPOU | Yes |\n| Credit to card | IMPS/NEFT to issuer | BBPS settlement to issuer | No |\n| Confirm and receipt | Our notification | BBPS reference + ours | Yes |\n| Complaints | Our support | BBPS dispute process + ours | Partly |\nThe big thing outside our control is when issuers go live. What does readiness look like?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "(Shares Exhibit 1.) 62% of volume will be live by day 20. Issuer H, 22%, says day 30 to 45. Issuers I and J, 16%, are unclear."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So about 38% of our volume hits a wall on day 30. Next I'd want to know how close to the due date people pay, because that tells me how much harm a block causes."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "(Exhibit 2.) 46% of payments are within two days of the due date; 58% for salaried users who pay right after salary day."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's the real risk. If someone who always pays on the 4th suddenly can't, they may miss the due date and pay a late fee plus interest of around 3% a month. And they'll blame us, not the issuer. One more - how did the BBPS pilot perform?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "(Exhibit 3.) Success rate 96.1% versus 98.7% on the old rail, bill-fetch failures 2.8% versus 0.4%, and 9% of credits land T+1."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So BBPS is also less reliable at first, and T+1 credit near a due date can cause late fees even for live issuers. Here are the options:\nA - Big-bang cut-over on day 30. Simple, compliant. But 38% of users hit an error with no warning, and the reliability gap shows up at full scale on one day.\nB - Push for an extension, and keep the old rail for non-live issuers until they're ready. Protects volume. But it's non-compliant, puts our BBPOU partner and our licences at risk, and in an IPO-era fintech that's not a trade worth making.\nC - Phased and user-safe: move live issuers to BBPS early behind flags, build a compliant handoff for non-live issuers, warn users ahead of their due date, and track issuer go-live daily. More work, but compliant and keeps trust."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "C sounds like the obvious answer. What makes it work in 30 days?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "A clear week-by-week plan:\n- Week 1: Legal sign-off on the reading of the circular. Extend our BBPS integration to card billers. Set up a war room with daily issuer status. Draft all user comms with Compliance.\n- Week 2: Move issuers A-D to BBPS for 10% of users, then 50%, watching success rate and fetch failures. Add a 'due-date buffer': if a credit could land T+1, tell the user and suggest paying a day earlier.\n- Week 3: All live issuers at 100% on BBPS. Ship the non-live-issuer experience: a clear in-app card that says 'From [date], payments to this card must go through the bank's own app or netbanking - here's how', with a deep link to the bank's app or the NEFT details, and a reminder before their due date.\n- Week 4: Old rail switched off for card bills by day 29, one day early, with a kill-switch only to pause new BBPS traffic, never to fall back to the old rail. Support staffed up 30%.\n- Day 30 onward: daily issuer outreach; switch each one on the day it goes live, and tell its users."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Why not keep paying the non-live issuers the old way for a few days until they catch up? Everyone else probably will."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Because then we're the one that wasn't compliant, and 'others did it too' doesn't help when the regulator or our BBPOU partner audits us. The cost of losing 38% of volume for a few weeks is recoverable; the cost of a compliance finding is not. I'd rather protect users through communication and the bank-app handoff than through a workaround."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What about revenue? You're about to lose a big chunk of your most engaging flow."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Yes, and I'd say that to leadership in week one with a number, not on day 31. Three things limit the damage. First, users don't leave - they still use rewards, reminders and other features, so I'd keep them in the app: 'track your bill here, pay through your bank, and we'll still give you the reminder'. Second, most of the 22% from issuer H probably comes back within two weeks if they go live on time. Third, I'd work with the BD team and our BBPOU partner to help the slow issuers onboard faster - every day earlier is volume back."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What are you explicitly not doing?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Not running the old rail after the deadline, for anyone. Not making the extension request our plan - it's a hope, not a strategy. Not hiding the change behind a generic 'payment failed' error. Not using scare messages like 'pay now or your card stops working' - that's false urgency. And not pausing card payments for everyone just to keep it simple."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How do you know if it went well?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Hypothesis: a phased, well-communicated migration gets us 100% compliant on day 30 while keeping at least 90% of payers from live issuers and causing no late fees. Leading signals: BBPS payment success rate back to at least 98% by day 30; bill-fetch failures below 1%; share of T+1 credits; support tickets per 10,000 payments. Outcome metrics: on-time payment rate for users near their due date; retention of payers by issuer group; users of non-live issuers who return to paying in-app within 7 days of their issuer going live. Compliance metric: zero card-bill payments outside BBPS after day 30 - checked daily."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "New twist: the same week, NPCI announces the UPI MDR - 0.4% above Rs 2,000 - from 30 days later. Most card bills are above Rs 2,000."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's the real 15 September 2026 circular, which was due on 15 October and later deferred until after Diwali. First, check with Legal whether card-bill payments to billers fall under the flat Rs 5 category for bills, which reports suggest. Second, MDR can't be passed to consumers, so no convenience fee for UPI above Rs 2,000. Third, it changes our unit economics, so finance re-models the rewards budget. I wouldn't let it pull engineers off the BBPS migration - it's mostly billing and reporting, and the start date is unconfirmed, so we plan for it in parallel."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Last one: your company is a UPI app over the 30% market-share cap, and the 31 December deadline is coming."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then I'd plan for the worst case - a pause on onboarding new UPI users - while hoping for another extension. For card bills, that means new users may have to link a UPI handle from a bank app or pay by netbanking or debit card. So I'd make sure the BBPS card-bill flow supports multiple payment instruments from day one. It's a nice example of building the migration so one regulation doesn't trap us when the next one arrives."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Summarise."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Two fixed lines: compliant on day 30, and no late fees caused by us. I'd move the 62% of volume from live issuers to BBPS early, in stages, and close the reliability gap before the deadline. For the 38% from non-live issuers, I'd switch off the old rail on time and give users a clear, honest path through their bank, with reminders before their due date, and switch each issuer back on the day it goes live. I'd tell leadership the revenue hit in week one, and design the flow so the next rule change - like the UPI MDR or the market cap - doesn't break it."
+    }
+  ],
+  "answer_and_recommendation": "Ranked options: (1) RECOMMENDED - Option C, phased and user-safe migration: Legal reading of the circular on day 1; extend the existing BBPS integration to card billers; ramp live issuers (62% of volume, illustrative) 10% -> 50% -> 100% by week 3 behind flags; close the reliability gap (success rate 96% -> 98%+, fetch failures below 1%); for non-live issuers (38%) switch off the old rail on time (day 29) and ship an honest in-app handoff to the bank's app/NEFT plus due-date reminders; daily issuer go-live tracking and same-day switch-on; leadership told the revenue impact in week 1. (2) Option A, big-bang cut-over - acceptable fallback only if the phased ramp slips, but with the same user comms. (3) Option B, keep the old rail / bank on an extension - rejected: non-compliant, puts the BBPOU partner and licences at risk. Risks and mitigation: BBPS reliability (early ramp, fetch retries, T+1 warnings); late fees for users near due date (reminders 3-5 days ahead, 'pay a day earlier' prompts); revenue and engagement dip (keep bill tracking and rewards in-app, help slow issuers onboard); next rule change (MDR, 30% cap) - support multiple payment instruments and keep the regulatory roadmap separate from feature work. Closing line: 'The deadline isn't the hard part - the hard part is making sure no customer pays a late fee because we changed the pipes. So: compliant on day 30, honest with users before their due date, and built so the next circular is a config change, not a crisis.'",
+  "counter_metrics_guardrails": "Primary: 100% of card-bill payments through BBPS after day 30 (zero exceptions); BBPS payment success rate at least 98%. Guardrails: on-time payment rate for users paying within 2 days of their due date (proxy for late fees caused by us); share of T+1 credits near due dates; bill-fetch failure rate; support tickets and complaint TAT, including BBPS dispute TAT; retention of card-bill payers by issuer group; app uninstalls and negative app-store reviews mentioning payments; payment volume for other BBPS categories (electricity, DTH) not degraded by load; rewards cost per payment after MDR; engineering time diverted from other regulatory items (MDR billing, cap readiness). Comms guardrail: no false-urgency or fear-based messages (CCPA 2023).",
+  "follow_up_twists": [
+    {
+      "twist": "On day 28 a competitor says it will keep accepting payments for non-live issuers 'until they're ready'.",
+      "response": "We don't follow; we tell users plainly how to pay through their bank, and if the competitor is acting out of line that's the regulator's call - our licence and trust are worth more than a few weeks of volume."
+    },
+    {
+      "twist": "Issuer H goes live on day 33 but its BBPS success rate is only 90%.",
+      "response": "Switch it on for 10% of its users with a 'pay a day earlier' prompt, share failure data with the issuer and BBPOU daily, and widen only when success rate passes 97%."
+    },
+    {
+      "twist": "Leadership asks you to also launch a new rewards campaign the same month.",
+      "response": "Not in the same 30 days on the same squad - I'd propose launching it the week after cut-over, ideally aimed at users of issuers that just went live, to win them back."
+    }
+  ],
+  "common_pitfalls": [
+    "Treating the extension request or 'others will keep the old rail' as the plan - it's non-compliant and puts the BBPOU partner and licences at risk.",
+    "Thinking only about engineering and forgetting the user harm: almost half of payments happen near the due date, so a blocked or T+1 payment means late fees and interest that users blame on the app.",
+    "Showing a generic 'payment failed' error for non-live issuers instead of an honest, proactive message and a path through the bank's own app or NEFT.",
+    "Letting a second rule change (UPI MDR, 30% cap) or a marketing launch pull the same squad mid-migration - or, the opposite, adding a 'convenience fee' to recover MDR, which NPCI forbids passing to consumers."
+  ],
+  "skills_tested": [
+    "execution",
+    "prioritisation",
+    "communication",
+    "business sense",
+    "structuring",
+    "empathy"
+  ],
+  "linked_teardown": "gokwik_product_teardown (gokwik_product_teardown/results/Secondary_players_and_regulatory_landscape.json). Key fact used: the RBI halt order of 25 Sep 2025 that stopped Simpl's pay-later checkout - a real example of a regulator switching off a core payment flow with little notice, which is why the case treats the deadline as fixed and asks for a flow built to absorb the next circular (also cited there: CCPA dark-pattern guidelines Nov 2023 and penalties on nine platforms in Aug 2026).",
+  "uncertain": [
+    "round_and_level",
+    "source_and_verification",
+    "context_as_of",
+    "regulatory_context",
+    "public_data_anchors"
+  ]
+}

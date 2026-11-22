@@ -1,0 +1,377 @@
+{
+  "item_name": "Success Metrics / North Star (including metric trade-off and A/B interpretation sub-type)",
+  "what_interviewers_test": "Whether the candidate can translate a product's purpose into a small, prioritised measurement system: one North Star that reflects user and business value, drivers the team can move, and guardrails that catch gaming or ecosystem harm. In the trade-off sub-type ('metric A up, B down: ship?') it tests decision quality under conflicting data: validity checks, goal-anchored weighing, and an explicit call. Meta tests this inside Analytical Thinking (goal setting, NSM, trade-offs, often RCA as follow-up); Google embeds it in analytical/product sense rounds with more estimation; Amazon frames it through customer obsession and controllable input metrics; Indian consumer companies (Swiggy, Zomato, Flipkart, PhonePe, Meesho) emphasise multi-sided marketplace effects, unit economics and scale events like festive sales.",
+  "format_variants": "Mostly interviewer-led and live: a 45-minute Meta Analytical Thinking round (~35 minutes of working time) with one main metric question plus 1-4 trade-off/RCA follow-ups; a 10-20 minute segment inside a product sense or execution round at Google, Microsoft, Uber and Indian companies; occasionally a take-home or assignment round in India where a metrics plan is part of a written case (expect written definitions and dashboards, more detail, less time pressure). Candidate-led openings (candidate sets goal and NSM) usually turn interviewer-led at the trade-off stage, where the interviewer supplies experiment results. In live formats, committing early and reaching the trade-off matters more; in take-homes, precision of definitions and thresholds matters more.",
+  "dimensions": [
+    {
+      "name": "Goal and context framing",
+      "definition": "Before naming any metric, states what the product/feature is for: mission link, who the users are (all sides of a marketplace), the user value delivered, the business goal for this cycle (acquisition, engagement, retention, monetisation) and product stage; states assumptions to narrow scope.",
+      "signal_sought": "Metrics derived from a goal, not from a memorised list; ecosystem awareness (e.g. customers, restaurants, delivery partners for Swiggy/Zomato).",
+      "transcript_evidence": "Quote the opening framing, e.g. 'Instamart Buy Again exists to cut time-to-cart for repeat grocery buyers; for this cycle I'll treat the goal as repeat-order frequency, not new users' and any named sides ('restaurants, riders, eaters')."
+    },
+    {
+      "name": "North Star selection and justification",
+      "definition": "Generates 2-4 candidate North Star metrics, compares them on explicit criteria (reflects user value, moves with long-term business value, sensitive to the team's work, hard to game, not a ratio/average that can rise while the ecosystem shrinks) and commits to ONE.",
+      "signal_sought": "Commitment with reasoned rejection of alternatives; awareness of the chosen metric's downside.",
+      "transcript_evidence": "Quote the candidate list and the elimination reasoning, e.g. 'GMV is lagging and discount-driven, orders per user is a ratio that rises if light users churn, so I'll pick weekly delivered orders from repeat users' plus the final committed NSM sentence."
+    },
+    {
+      "name": "Metric operationalisation",
+      "definition": "Defines each key metric precisely enough for a data scientist to build it: numerator, denominator/population, event definition (placed vs delivered), time window (daily/weekly/28-day), unit of analysis, and leading vs lagging nature.",
+      "signal_sought": "Precision and measurability rather than labels like 'engagement' or 'satisfaction'.",
+      "transcript_evidence": "Quote the definition sentence, e.g. 'WAU = distinct users with at least one completed UPI payment in a rolling 7-day window, excluding test and merchant accounts.'"
+    },
+    {
+      "name": "Levers / input-metric decomposition",
+      "definition": "Breaks the NSM into 2-5 driver or input metrics the team can actually move (funnel steps or a formula such as NSM = active users x frequency x completion rate), and links each to product levers.",
+      "signal_sought": "Understands the difference between output and controllable input metrics; can say what the team would work on.",
+      "transcript_evidence": "Quote the decomposition, e.g. 'Weekly bookings = searchers x search-to-book conversion x repeat rate; this feature should move conversion, so that is my primary team metric.'"
+    },
+    {
+      "name": "Guardrails and counter-metrics",
+      "definition": "Names 1-3 guardrail/counter metrics, each mapped to a specific way the NSM could be gamed or could harm another part of the ecosystem (other sides, trust and safety, cannibalisation, latency/cost, long-term retention), with an indication of tolerance.",
+      "signal_sought": "Second-order thinking: knows how the chosen metric can mislead.",
+      "transcript_evidence": "Quote the guardrail and the failure mode it covers, e.g. 'If we push repeat orders with discounts, contribution margin per order and delivery-partner wait time are my guardrails; I would not launch if cancellations rise more than ~0.5pp.'"
+    },
+    {
+      "name": "Trade-off analysis and ship decision",
+      "definition": "When metrics conflict (A up, B down) or an experiment result is given: checks result validity (sample size/duration, significance vs practical size, novelty/primacy, SRM/instrumentation), segments the effect, quantifies the net impact on the NSM/long-term goal and other stakeholders, then makes an explicit ship / no-ship / ship-with-changes / extend-test decision with conditions and a monitoring plan.",
+      "signal_sought": "Decision quality anchored to the goal and mission, not 'it depends'; guardrails used as decision rules.",
+      "transcript_evidence": "Quote the decision sentence and its rationale, e.g. 'I would not ship broadly: the 3% click lift is mostly novelty in week 1 and 7-day retention is down 1% in new users, which is our NSM driver; I'd ship to power users only and re-test with a holdout.'"
+    },
+    {
+      "name": "Prioritisation, synthesis and communication",
+      "definition": "Keeps a short prioritised metric set (NSM + few drivers + guardrails) instead of a dashboard dump, signposts structure, checks in at key points, and closes with a crisp summary within time.",
+      "signal_sought": "Can communicate a metric plan to a team; time management.",
+      "transcript_evidence": "Quote the closing summary, e.g. 'To recap: NSM is X, I'd watch Y and Z as drivers, and A and B as guardrails; if forced to pick one it is X.' Also note whether the candidate reached the trade-off part before time."
+    }
+  ],
+  "weights": {
+    "summary": "No company publishes numeric weights for success-metric/NSM questions. The closest thing to an official axis list is Meta's Analytical Thinking rubric as reported by insiders (rationale, goals, metrics, trade-offs) and Aakash Gupta's four test areas (structured approach, strategic metric selection, technical operationalisation, trade-off evaluation). Weights below are inferred from how often and how strongly independent prep-platform and interviewer accounts emphasise each area. Two profiles are given: the default 'define success metrics/NSM' profile and a 'trade-off / A/B interpretation' profile, because the latter is graded mainly on decision quality and guardrails.",
+    "per_dimension": [
+      {
+        "dimension": "Goal and context framing",
+        "weight_pct": 15,
+        "tradeoff_profile_pct": 15,
+        "provenance": "interviewer-account + prep-platform",
+        "source": "https://aakashgupta.medium.com/cracking-metas-new-analytical-thinking-pm-interview-insights-and-tips-ab3b0b8f40c6 ; https://igotanoffer.com/blogs/product-manager/product-metric-interview-questions ; https://medium.com/agileinsider/how-i-prepared-for-facebook-pm-interviews-execution-metrics-8067d942a6d1",
+        "note": "Meta insider axes include 'articulating the product rationale' and 'setting reasonable goals'; IGotAnOffer GAME starts with Goals; Rohan Katyal (Meta candidate) says the biggest gotcha is missing the shared long-term goal. Universal agreement it is necessary; kept at 15 because it is short and is also gated."
+      },
+      {
+        "dimension": "North Star selection and justification",
+        "weight_pct": 20,
+        "tradeoff_profile_pct": 10,
+        "provenance": "prep-platform",
+        "source": "https://igotanoffer.com/blogs/product-manager/product-metric-interview-questions ; https://www.lennysnewsletter.com/p/the-definitive-guide-to-mastering-f81 ; https://stellarpeers.com/meta-product-manager-interview-process/",
+        "note": "Every source treats picking and defending one NSM as the core deliverable (IGotAnOffer coach Khalid: good-enough metric aware of its downside; Ben Erez: avoid ratios/averages; StellarPeers: choose a North Star that actually measures the goal). Highest weight in default profile. In trade-off questions the NSM is often given or implicit, so it drops to 10."
+      },
+      {
+        "dimension": "Metric operationalisation",
+        "weight_pct": 15,
+        "tradeoff_profile_pct": 5,
+        "provenance": "prep-platform",
+        "source": "https://www.news.aakashg.com/p/product-metrics-interview ; https://www.lennysnewsletter.com/p/the-definitive-guide-to-mastering-f81",
+        "note": "Aakash Gupta lists 'technical operationalisation' as one of four test areas (sensitive, trustworthy, interpretable, actionable definitions); Ben Erez: specific enough for a data scientist to implement tomorrow. Indian prep content (TPF, HelloPM) emphasises it less, hence 15 not 20."
+      },
+      {
+        "dimension": "Levers / input-metric decomposition",
+        "weight_pct": 10,
+        "tradeoff_profile_pct": 5,
+        "provenance": "prep-platform + inferred",
+        "source": "https://igotanoffer.com/blogs/product-manager/product-metric-interview-questions ; https://www.lennysnewsletter.com/p/the-definitive-guide-to-mastering-f81",
+        "note": "IGotAnOffer (input vs output metrics) and Ben Erez ('altitude shift' to team-level goals) both stress it, but not all frameworks include an explicit driver tree; weight inferred."
+      },
+      {
+        "dimension": "Guardrails and counter-metrics",
+        "weight_pct": 15,
+        "tradeoff_profile_pct": 20,
+        "provenance": "interviewer-account + prep-platform",
+        "source": "https://www.news.aakashg.com/p/product-metrics-interview ; https://www.lennysnewsletter.com/p/the-definitive-guide-to-mastering-f81 ; https://stellarpeers.com/meta-product-manager-interview-process/ ; https://www.theproductfolks.com/product-management-blog/100-product-manager-interview-questions-with-answers ; https://www.interviewpilot.app/interview-guides/product-manager",
+        "note": "Strongest cross-source agreement after the NSM itself: Aakash's Strong Pass definition explicitly requires guardrail/tripwire metrics; Ben Erez maps guardrails to NSM drawbacks; TPF and InterviewPilot require a guardrail in every answer. Raised to 20 in the trade-off profile because guardrails become decision rules."
+      },
+      {
+        "dimension": "Trade-off analysis and ship decision",
+        "weight_pct": 15,
+        "tradeoff_profile_pct": 35,
+        "provenance": "interviewer-account + prep-platform",
+        "source": "https://www.news.aakashg.com/p/product-metrics-interview ; https://igotanoffer.com/blogs/product-manager/facebook-execution-interview ; https://stellarpeers.com/meta-product-manager-interview-process/ ; https://hellopm.co/what-are-trade-off-questions/ ; https://medium.com/agileinsider/how-i-prepared-for-facebook-pm-interviews-execution-metrics-8067d942a6d1",
+        "note": "Meta follow-ups almost always include a trade-off (IGotAnOffer reports up to four per case; Aakash notes running out of time before trade-offs is a common failure). For the A/B sub-type this is the primary graded construct (decision quality), hence 35."
+      },
+      {
+        "dimension": "Prioritisation, synthesis and communication",
+        "weight_pct": 10,
+        "tradeoff_profile_pct": 10,
+        "provenance": "prep-platform",
+        "source": "https://stellarpeers.com/meta-product-manager-interview-process/ ; https://www.theproductfolks.com/product-management-blog/100-product-manager-interview-questions-with-answers ; https://hellopm.co/what-are-trade-off-questions/",
+        "note": "StellarPeers: weak candidates list many metrics without prioritising; TPF: listing ten KPIs is a mistake; HelloPM scores communication and structure. Partly overlaps with gates, so 10."
+      }
+    ],
+    "disagreements": "(1) Operationalisation depth: US big-tech-oriented sources (Aakash Gupta, Lenny's/Ben Erez) weight precise metric definitions heavily; Indian prep sources (The Product Folks, HelloPM) focus more on goal-action-metric-guardrail flow and marketplace sides and say little about definitional precision. (2) Statistical rigour in trade-off/A-B questions: data-science sources expect significance, power, novelty and multiple-testing discussion; PM-focused sources (IGotAnOffer, HelloPM, StellarPeers) say the decision reasoning anchored on mission/goals matters more than stats ('no right or wrong answer, it is how you get to your decision'). Recommendation: in PM grading, give credit for naming 1-2 validity checks but do not require statistical formulas. (3) Whether to pick one NSM vs a small set: most sources insist on one; some Indian marketplace answers present a metric per side. Recommendation: require one NSM with per-side guardrails.",
+    "recommended": "Use the default profile for 'how would you measure success / pick an NSM' prompts and the trade-off profile when the prompt gives conflicting metric movements or experiment results. Both profiles are inferred and should be recalibrated against human-graded transcripts."
+  },
+  "must_pass_gates": [
+    {
+      "gate": "No goal or user/ecosystem framing before listing metrics (metrics not traceable to any stated goal)",
+      "cap": "Max lean hire (overall <= 2.5)",
+      "source": "https://igotanoffer.com/blogs/product-manager/product-metric-interview-questions ; https://medium.com/agileinsider/how-i-prepared-for-facebook-pm-interviews-execution-metrics-8067d942a6d1 ; https://www.theproductfolks.com/product-management-blog/100-product-manager-interview-questions-with-answers"
+    },
+    {
+      "gate": "Never commits to a single North Star / primary metric (lists metrics without prioritising, or ends with 'it depends')",
+      "cap": "Max lean hire; if still uncommitted after interviewer asks 'if you could pick only one?', max no hire",
+      "source": "https://stellarpeers.com/meta-product-manager-interview-process/ ; https://www.theproductfolks.com/product-management-blog/100-product-manager-interview-questions-with-answers ; https://igotanoffer.com/blogs/product-manager/product-metric-interview-questions"
+    },
+    {
+      "gate": "No guardrail or counter-metric anywhere in the answer",
+      "cap": "Max lean hire",
+      "source": "https://www.news.aakashg.com/p/product-metrics-interview ; https://www.lennysnewsletter.com/p/the-definitive-guide-to-mastering-f81 ; https://www.theproductfolks.com/product-management-blog/100-product-manager-interview-questions-with-answers"
+    },
+    {
+      "gate": "Trade-off / A-B sub-type: no explicit decision (ship, no-ship, partial ship, extend test) by the end",
+      "cap": "Max no hire for the trade-off sub-type; max lean hire if trade-off was only a follow-up",
+      "source": "https://hellopm.co/what-are-trade-off-questions/ ; https://igotanoffer.com/blogs/product-manager/facebook-execution-interview ; https://www.news.aakashg.com/p/product-metrics-interview"
+    },
+    {
+      "gate": "Trade-off / A-B sub-type: ships on the up-metric alone without addressing the down-metric or long-term/NSM impact (e.g. 'clicks are up 3%, ship it')",
+      "cap": "Max no hire",
+      "source": "https://www.interviewpilot.app/interview-guides/product-manager ; https://www.theproductfolks.com/product-management-blog/100-product-manager-interview-questions-with-answers"
+    },
+    {
+      "gate": "NSM is a pure vanity metric (downloads, page views, sign-ups) or an average/ratio, with no acknowledgement of its weakness after an interviewer challenge",
+      "cap": "Max lean hire [uncertain]",
+      "source": "https://medium.com/agileinsider/how-i-prepared-for-facebook-pm-interviews-execution-metrics-8067d942a6d1 ; https://www.lennysnewsletter.com/p/the-definitive-guide-to-mastering-f81"
+    },
+    {
+      "gate": "Runs out of time before reaching guardrails or the trade-off follow-up",
+      "cap": "Trade-off dimension scored 1; overall max lean hire [uncertain]",
+      "source": "https://aakashgupta.medium.com/cracking-metas-new-analytical-thinking-pm-interview-insights-and-tips-ab3b0b8f40c6"
+    }
+  ],
+  "score_anchors": {
+    "Goal and context framing": {
+      "1": "Starts listing metrics immediately; no product purpose or user named. 'I'd track DAU, MAU, retention, revenue...'",
+      "2": "Generic goal ('increase engagement') with no link to mission or users; one side of a marketplace only.",
+      "3": "States product purpose, users and a specific goal for this cycle with assumptions. 'This feature is for repeat grocery buyers; I'll assume the goal is order frequency, not acquisition.'",
+      "4": "As 3, plus covers all ecosystem sides and explains why this goal fits the product stage and company strategy. 'Zomato is post-growth in metros, so the goal is profitable frequency; restaurants and riders must also win or supply leaves.'"
+    },
+    "North Star selection and justification": {
+      "1": "No NSM, or names one with no reasoning; or picks a vanity metric (downloads).",
+      "2": "Picks an NSM with thin reasoning; no alternatives considered, or a ratio/average without noticing the flaw.",
+      "3": "Lists 2-3 candidates, compares on value capture, sensitivity and gameability, commits to one. 'Between GMV, orders and active buyers I pick weekly delivered orders because...'",
+      "4": "As 3, plus names the chosen NSM's blind spot and how the rest of the plan covers it; links NSM to long-term business value. 'Delivered orders can be bought with discounts, so margin is my guardrail.'"
+    },
+    "Metric operationalisation": {
+      "1": "Metrics are vague labels ('engagement', 'satisfaction', 'usage').",
+      "2": "Some metrics defined but missing time window, population or event definition.",
+      "3": "Key metrics have numerator, denominator, event and window. 'Repeat rate = users with 2+ delivered orders in 28 days / users with 1+ in prior 28 days.'",
+      "4": "As 3, plus notes leading vs lagging, measurement caveats (attribution, logging) and how quickly the metric will read in an experiment."
+    },
+    "Levers / input-metric decomposition": {
+      "1": "No drivers; NSM stands alone.",
+      "2": "Lists supporting metrics but not how they combine or which the team controls.",
+      "3": "Decomposes NSM into 2-5 drivers (formula or funnel) and identifies which this feature moves.",
+      "4": "As 3, plus prioritises the driver with the most headroom and ties each to a concrete product lever. 'Conversion from cart to payment is where Flipkart Pay Later should move the needle; I'd own that.'"
+    },
+    "Guardrails and counter-metrics": {
+      "1": "No guardrails.",
+      "2": "Generic guardrails not linked to NSM failure modes ('also watch NPS').",
+      "3": "1-3 guardrails each mapped to a specific risk of the NSM or another stakeholder. 'Pushing AutoPay mandates could raise failed debits and complaints, so those are guardrails.'",
+      "4": "As 3, plus explicit thresholds or decision rules and multi-sided coverage (users, merchants/partners, trust and safety, cost/latency, cannibalisation)."
+    },
+    "Trade-off analysis and ship decision": {
+      "1": "No decision, or decides on the up-metric alone. 'Engagement is up, so ship.'",
+      "2": "Lists pros and cons and says 'it depends'; decision vague or not tied to a goal; no validity check.",
+      "3": "Checks validity (duration, significance vs practical size, novelty), segments the effect, weighs against NSM/mission, and makes a clear call with conditions. 'Ship to returning users only, keep a 5% holdout and monitor retention for 4 weeks.'",
+      "4": "As 3, plus quantifies the net effect (e.g. rough value of a retention point vs click lift), considers long-term and ecosystem effects, proposes a way to get both (iterate the variant), and states what result would reverse the decision."
+    },
+    "Prioritisation, synthesis and communication": {
+      "1": "Long unprioritised list of metrics; no structure; no close.",
+      "2": "Some structure but recites a framework step by step without tailoring; weak or no summary.",
+      "3": "Signposts plan, keeps metric set short and prioritised, summarises at the end.",
+      "4": "As 3, plus a crisp one-line answer early ('My NSM is X'), adapts plan to interviewer cues and finishes with time for follow-ups."
+    }
+  },
+  "level_expectations": {
+    "APM / entry": "Solid (3) = clear goal, one well-reasoned NSM, basic definitions, at least one mapped guardrail, and a clear ship decision with reasoning. Driver decomposition and statistical validity checks may be light; hints are expected. Indian APM rounds (Flipkart APM, Swiggy/Zomato associate PM) tend to reward marketplace side coverage and structure over statistical depth [uncertain].",
+    "PM (Meta IC5 / Google L5 / Amazon L6 / Flipkart PM / Swiggy PM)": "Solid = APM bar plus precise operational definitions, driver tree linked to team levers, multi-sided guardrails with thresholds, and trade-off answers that check validity and segment before deciding. Should handle 2-4 trade-off follow-ups without losing the thread (IGotAnOffer reports multiple trade-off follow-ups at Meta).",
+    "Senior PM (Meta IC6 / Google L6 / Amazon L7 / Indian Senior PM, Director track)": "Solid = PM bar plus portfolio-level thinking: cannibalisation across products, long-term vs short-term value, how the NSM shapes team incentives and roadmap, and decisive calls under ambiguity with a stated reversal condition. Driving the conversation with minimal prompting is expected; needing hints to reach guardrails is a strong negative [uncertain]."
+  },
+  "green_flags": [
+    "Opens with the product's purpose and all sides of the ecosystem before any metric ('for Swiggy that is eaters, restaurants and delivery partners').",
+    "Lists 2-3 NSM candidates, kills each with a specific reason, and commits to one.",
+    "Defines metrics with window, population and event ('delivered, not placed; weekly; repeat users').",
+    "Maps each guardrail to a concrete way the NSM could mislead, with a threshold.",
+    "In trade-offs, asks how long the test ran and whether the effect is novelty before deciding.",
+    "Segments the conflicting effect (new vs existing users, platform, city tier) and reasons about where the loss comes from.",
+    "Makes a clear call with conditions ('ship to segment X, hold out 5%, revisit in 4 weeks') and states what would reverse it.",
+    "Anchors the decision on mission/long-term value and quantifies roughly which side matters more."
+  ],
+  "red_flags": [
+    "Recites a framework (GAME/AARRR/HEART) step by step and produces a generic dashboard that would fit any product.",
+    "Lists 8-15 metrics with no single NSM or prioritisation.",
+    "Picks a vanity or ratio NSM (downloads, time spent, average order value) without noticing how it can rise while the business worsens.",
+    "No guardrails, or guardrails unrelated to the NSM ('and NPS').",
+    "In trade-offs, answers 'it depends' and never decides, or ships on the up-metric alone.",
+    "Treats a statistically significant result as automatically worth shipping, ignoring effect size, novelty or the down-metric.",
+    "Ignores one side of a marketplace (riders, merchants, sellers) when the change clearly affects them.",
+    "Runs out of time before guardrails or trade-offs."
+  ],
+  "recitation_vs_insight": "Rehearsed answers name the framework steps and fill them with stock metrics (DAU, retention, NPS, revenue) that would apply to any app; insight shows up as product-specific choices with reasons that could only be said about this product. Tests a grader can apply: (1) Substitution test: if the product name were swapped for another app, would the metric list still read as correct? If yes, cap NSM and framing at 2. (2) Rejection test: did the candidate explicitly reject at least one plausible metric with a product-specific reason? (3) Failure-mode test: is each guardrail tied to a named way this NSM could be gamed or harm another side? (4) Decision test (trade-off): does the final call depend on numbers or facts from this conversation, and does the candidate say what would change it? Structured-but-generic answers should land at 2 on most dimensions even if every framework step is present.",
+  "process_signals": {
+    "clarifying_questions": "Expect 2-4 targeted questions or stated assumptions about product scope, goal/stage, platform and target users; for trade-off prompts, questions about test duration, sample, segments affected and size of each movement. Quality over count: each question should change the metric choice or decision. Asking more than ~5 before giving any structure is a pacing negative.",
+    "check_ins": "One check-in after stating the goal and one after committing to the NSM is good practice (Ben Erez recommends aligning on structure first); repeated permission-seeking is a mild negative.",
+    "use_of_interviewer_data": "In trade-off/A-B follow-ups the interviewer supplies the numbers; the decision must use them (effect sizes, segments, durations). Ignoring supplied numbers or contradicting them caps the trade-off dimension at 2.",
+    "response_to_pushback": "When the interviewer challenges the NSM ('can't that be gamed?'), strong candidates acknowledge, add a guardrail or switch with reasoning; defensive repetition or abandoning the choice without reasoning are negatives. Changing the decision when new data is supplied is positive if reasoned.",
+    "hint_penalty": "A hint that only unblocks pacing ('let's move to guardrails') costs nothing. A substantive hint that supplies the missing idea (e.g. interviewer names the guardrail or points out the novelty effect) should cap that dimension at 3 and lower it by 1 if the candidate needed it to reach any decision [uncertain]."
+  },
+  "time_allocation": "For a ~35-minute Meta-style working block: clarify and frame goal 4-6 min; NSM candidates and commitment 6-8 min; definitions and drivers 5-7 min; guardrails 3-5 min; trade-off follow-ups 8-12 min; summary 1-2 min. For a 10-15 minute segment inside another round, compress to: goal 2 min, NSM 3-4 min, guardrails 2 min, decision/summary 2-3 min. Penalty: not reaching guardrails or the trade-off caps those dimensions at 1 (Aakash Gupta's Meta insider notes flag running out of time before trade-offs); spending over a third of the time on framing alone is a pacing negative.",
+  "hire_thresholds": {
+    "strong_hire": "Weighted average >= 3.5, NSM and guardrails (default) or trade-off decision and guardrails (trade-off profile) both = 4, no gates triggered, at most one pacing hint.",
+    "hire": "Weighted average 3.0-3.49, NSM and guardrails >= 3, a clear decision on any trade-off follow-up, no gates.",
+    "lean_hire": "Weighted average 2.5-2.99, or exactly one gate triggered with otherwise solid work.",
+    "no_hire": "Weighted average < 2.5, or no decision on a trade-off-type prompt, or shipping on the up-metric alone, or two or more gates.",
+    "sources_and_caveats": "Thresholds are inferred [uncertain]. Meta and Google use 4-point hire recommendations per interview (strong no hire to strong hire) according to candidate and coach accounts, but no public numeric mapping exists. Aakash Gupta's 'Strong Pass' wording is the only published-style level descriptor found; it requires covering positive and negative sides and naming guardrail/tripwire metrics. At senior levels the same transcript should score one band lower if the candidate needed prompts to reach trade-offs. Indian companies generally use written debriefs on similar dimensions without published scales."
+  },
+  "company_differences": {
+    "Meta": "Dedicated Analytical Thinking round (formerly Product Execution): goal setting, NSM plus counter and health metrics, then trade-off and/or RCA follow-ups; trade-off follow-ups have become more frequent (up to four per case reported). Insider-reported axes: product rationale, goals, metrics, trade-offs. Ecosystem and scale thinking expected.",
+    "Google": "Metrics usually embedded in product sense/analytical rounds; more weight on estimation and technical depth, and on user-focused metrics; less formal NSM-plus-guardrail ritual [uncertain].",
+    "Amazon": "Framed through Leadership Principles (Customer Obsession, Dive Deep); emphasis on controllable input metrics over output metrics and on written precision; metric questions may appear inside bar-raiser or written exercises [uncertain].",
+    "Microsoft": "Metrics often asked as 'how would you measure success of feature X' in a product design loop; enterprise/B2B adoption and usage depth metrics common [uncertain].",
+    "Uber": "Two/three-sided marketplace emphasis (riders, drivers, eaters, merchants); guardrails on supply health, ETAs and cancellations expected; experimentation literacy valued, similar to DoorDash (where Aakash notes A/B testing expertise is emphasised) [uncertain].",
+    "Swiggy / Zomato": "Three-sided marketplace (customer, restaurant, delivery partner): The Product Folks says to check all three sides in every answer; unit economics and contribution margin guardrails are often expected given profitability focus [uncertain].",
+    "Flipkart / Meesho": "E-commerce scale and festive-season spikes (Big Billion Days) as context; buyer, seller and logistics sides; Meesho prompts tend to start from mission and value-conscious, tier-2/3 users [uncertain].",
+    "PhonePe": "Payments metrics: transaction success rate, trust and failure/complaint rates as guardrails, regulatory constraints (NPCI/RBI) as context [uncertain].",
+    "India vs US bar": "Indian prep sources stress marketplace sides and business viability; US sources stress operational definitions and experimentation rigour. No source states an explicit difference in hire bar [uncertain]."
+  },
+  "calibration_exemplars": {
+    "score_1": "Prompt: 'How would you measure success of Swiggy Instamart Buy Again shelf?' Candidate immediately lists DAU, MAU, retention, revenue, NPS and clicks on the shelf, gives no goal, no single NSM, no guardrail. On follow-up 'clicks up 8%, basket size down 3%: ship?', says 'yes, engagement is up'.",
+    "score_2": "Candidate names the GAME framework, states a generic goal ('improve engagement'), lists actions and metrics, picks 'shelf click-through rate' as NSM without alternatives, adds 'NPS' as guardrail. On the trade-off says 'it depends on business priorities; I'd look at more data' and does not decide.",
+    "score_3": "Candidate frames the shelf as reducing time-to-cart for repeat buyers, compares CTR, items added from shelf, and weekly repeat orders, commits to weekly repeat orders per active buyer with a 7-day window, decomposes into shelf exposure x add-to-cart rate x checkout completion, names basket size and contribution margin as guardrails. On the trade-off asks test duration, sees basket shrinkage is concentrated in high-value users, and recommends shipping to light users only while testing a variant, monitoring basket size.",
+    "score_4": "As 3, plus covers dark-store/picking load as an ops-side guardrail with a threshold, estimates that the 3% basket drop outweighs the click lift in margin terms, checks novelty by comparing week 1 vs week 2, proposes a variant that shows complementary items to recover basket size, states 'if basket drop persists in light users after 2 weeks, I'd roll back', and summarises in one sentence."
+  },
+  "coachable_feedback": {
+    "Goal and context framing": "Spend the first 60 seconds saying who the product serves, every side of the ecosystem, and the one goal for this cycle before naming any metric.",
+    "North Star selection and justification": "Always list three candidate NSMs and kill two out loud with a product-specific reason before committing.",
+    "Metric operationalisation": "For your NSM, say numerator, population, event and time window in one sentence, as if writing the SQL spec.",
+    "Levers / input-metric decomposition": "Write the NSM as a product of 3-4 drivers and say which one this feature moves.",
+    "Guardrails and counter-metrics": "For each guardrail, finish the sentence 'the NSM could go up while things get worse if...' and give a threshold.",
+    "Trade-off analysis and ship decision": "End every trade-off with one sentence: decision, scope, monitoring plan and the result that would reverse it.",
+    "Prioritisation, synthesis and communication": "Give your answer first ('My NSM is X'), keep to one NSM, three drivers and two guardrails, and close with a 20-second recap."
+  },
+  "llm_grading_notes": [
+    "Length bias: long metric lists look thorough; score prioritisation and the presence of one committed NSM, not metric count. Penalise lists over ~8 metrics without ranking.",
+    "Framework-name bias: do not award points for naming GAME/HEART/AARRR; apply the substitution test (would the answer fit any product?).",
+    "Interviewer-supplied facts: in trade-off follow-ups the numbers come from the interviewer; credit only the candidate's use of them (segmenting, weighing, deciding), not their restatement.",
+    "Decision detection: a small model may read 'I'd lean towards shipping but need more data' as a decision. Require an explicit call with scope; hedged non-decisions score max 2 on the trade-off dimension.",
+    "Guardrail mapping: check that each guardrail is linked to a stated NSM failure mode; generic 'NPS/CSAT' guardrails score 2.",
+    "Statistical jargon: do not over-reward p-values or power-analysis vocabulary in a PM interview if not tied to the decision; one or two relevant validity checks are enough for a 3.",
+    "Leniency drift: require a verbatim quote for every score of 3 or 4; if no quote supports it, drop one level.",
+    "Gate application: evaluate gates before computing the weighted average and apply caps after; small models tend to forget caps.",
+    "Profile selection: choose the trade-off weight profile when the prompt or a follow-up supplies conflicting metric movements or experiment results; state which profile was used."
+  ],
+  "sources": [
+    {
+      "title": "Product Metrics Interview: GAME Framework and 93 Questions (Aakash Gupta)",
+      "url": "https://www.news.aakashg.com/p/product-metrics-interview",
+      "date": "2025-06-27 (modified 2026-09-12)",
+      "verification": "prep platform / interviewer-account (author ex-PM and interviewer)"
+    },
+    {
+      "title": "PM's Keep Failing This Interview: How to Ace Success Metrics (Aakash Gupta)",
+      "url": "https://www.news.aakashg.com/p/success-metrics-interview",
+      "date": "2025-08-28",
+      "verification": "prep platform (content mostly paywalled; only title/framing used)"
+    },
+    {
+      "title": "Cracking Meta's New Analytical Thinking PM Interview (Aakash Gupta)",
+      "url": "https://aakashgupta.medium.com/cracking-metas-new-analytical-thinking-pm-interview-insights-and-tips-ab3b0b8f40c6",
+      "date": "2024-06-19",
+      "verification": "interviewer account / insider-sourced prep content"
+    },
+    {
+      "title": "How to Crack Product Metrics Questions in PM Interviews (IGotAnOffer)",
+      "url": "https://igotanoffer.com/blogs/product-manager/product-metric-interview-questions",
+      "date": "2026-11-02 (updated)",
+      "verification": "prep platform (named ex-FAANG coaches)"
+    },
+    {
+      "title": "Meta Analytical Thinking Interview (Product Execution) for PMs (IGotAnOffer)",
+      "url": "https://igotanoffer.com/blogs/product-manager/facebook-execution-interview",
+      "date": "2026-07-30 (updated)",
+      "verification": "prep platform (ex-Meta coach quotes)"
+    },
+    {
+      "title": "The definitive guide to mastering analytical thinking interviews (Ben Erez, Lenny's Newsletter)",
+      "url": "https://www.lennysnewsletter.com/p/the-definitive-guide-to-mastering-f81",
+      "date": "2025-07-01",
+      "verification": "interviewer account (ex-Meta PM, interview coach)"
+    },
+    {
+      "title": "Meta PM Interview Process: Rounds, Questions & Preparation Guide (StellarPeers)",
+      "url": "https://stellarpeers.com/meta-product-manager-interview-process/",
+      "date": "2025-09-10 (modified 2026-03-27)",
+      "verification": "prep platform"
+    },
+    {
+      "title": "Metrics framework collection (StellarPeers)",
+      "url": "https://stellarpeers.com/framework-collection/generic-metrics/",
+      "date": "undated [uncertain]",
+      "verification": "prep platform"
+    },
+    {
+      "title": "How I prepared for Facebook PM interviews: Execution & Metrics (Rohan Katyal, Agile Insider)",
+      "url": "https://medium.com/agileinsider/how-i-prepared-for-facebook-pm-interviews-execution-metrics-8067d942a6d1",
+      "date": "2022-07-11 (originally 2021)",
+      "verification": "candidate account (Meta PM hire)"
+    },
+    {
+      "title": "Mastering Trade-Off Questions: A Product Manager's Guide (HelloPM)",
+      "url": "https://hellopm.co/what-are-trade-off-questions/",
+      "date": "2025-08-21",
+      "verification": "prep platform (India)"
+    },
+    {
+      "title": "100+ Product Manager Interview Questions with Answers (The Product Folks)",
+      "url": "https://www.theproductfolks.com/product-management-blog/100-product-manager-interview-questions-with-answers",
+      "date": "2026-10-30",
+      "verification": "prep platform (India)"
+    },
+    {
+      "title": "Product Manager Interview Guide (Interview Pilot)",
+      "url": "https://www.interviewpilot.app/interview-guides/product-manager",
+      "date": "2026-08 (updated)",
+      "verification": "prep platform"
+    },
+    {
+      "title": "Product Metrics Interview Questions with Answers (The NooB PM), India company prompts (Swiggy, Zomato, PhonePe, Flipkart)",
+      "url": "https://www.thenoobpm.com/interview-questions/metrics",
+      "date": "undated [uncertain]",
+      "verification": "prep platform (question bank only)"
+    },
+    {
+      "title": "Capital One PM Interview Prep Guide (PracHub), metric-first trade-off expectations",
+      "url": "https://prachub.com/interview-prep/qc6U7tk5PcW1",
+      "date": "undated [uncertain]",
+      "verification": "prep platform"
+    },
+    {
+      "title": "7 A/B Testing Questions and Answers in Data Science Interviews (Towards Data Science)",
+      "url": "https://medium.com/data-science/7-a-b-testing-questions-and-answers-in-data-science-interviews-eee6428a8b63",
+      "date": "2021 [uncertain]",
+      "verification": "prep content (background for novelty/primacy and multiple testing)"
+    },
+    {
+      "title": "Top 100 Data Analyst Interview Questions (MockLingo), statistical vs practical significance",
+      "url": "https://mocklingo.com/blogs/top-100-data-analyst-interview-questions",
+      "date": "2026",
+      "verification": "prep platform (background)"
+    }
+  ],
+  "uncertain": [
+    "must_pass_gates (vanity-NSM and time-out caps)",
+    "level_expectations (APM India emphasis, Senior hint penalty)",
+    "process_signals.hint_penalty",
+    "hire_thresholds",
+    "company_differences (Google, Amazon, Microsoft, Uber, Indian companies, India vs US bar)",
+    "sources (StellarPeers metrics page, NooB PM, PracHub, TDS dates)"
+  ]
+}

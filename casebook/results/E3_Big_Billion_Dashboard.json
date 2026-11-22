@@ -1,0 +1,214 @@
+{
+  "pun_title": "Big Billion Dashboard",
+  "case_type": "Metrics",
+  "asked_at": "Flipkart",
+  "subject_company": "Flipkart (The Big Billion Days, its flagship annual festive sale; the 13th edition ran from 8-9 Oct 2026). Same company as asked_at.",
+  "round_and_level": "PM round (product sense / metrics), APM campus and PM levels; often a warm-up before an RCA follow-up such as 'add-to-cart dropped during BBD'. [uncertain]",
+  "difficulty": "Medium - the metrics are familiar e-commerce ones, but a strong answer has to be real-time (hour by hour against a plan, not a weekly dashboard), cover all three sides (shoppers, sellers, logistics), and guard against 'GMV at any cost' in a year when Flipkart is chasing profitability.",
+  "market_and_industry": "India; horizontal e-commerce marketplace (mobiles, electronics, large appliances, fashion, beauty, home) plus Flipkart Minutes quick commerce; festive peak in October; about 60% of demand from non-metros, nearly half of first-hour visits from Tier-3 and smaller towns; mostly mid-range Android phones; no-cost EMI, exchange offers and bank-card discounts drive the purchase.",
+  "time_box_minutes": "15-20",
+  "exact_prompt": "It's 8 am on Day 1 of The Big Billion Days. You are the PM on the sale war-room. Which metrics tell you the sale is going well, and which tell you something is going wrong?",
+  "source_and_verification": "Level: reported (as listed in the casebook outline; the exact wording and year could not be confirmed against a dated candidate report). Related Flipkart BBD prompts found online: Dataford 'How would you estimate the number of orders placed on Flipkart during a Big Billion Days sale?' (https://dataford.io/questions/how-would-you-estimate-the-number-of-orders-placed-on-flipkart-during-a-big-billion-days-sale); a 2020 Flipkart PM mock interview (RCA on a drop in cart additions during the sale) by a Razorpay PM (https://yt.dorper.me/v/yt/DSV-vuvmIro); Product Leadership's Flipkart PM question guide lists product metrics as a core round type (https://www.productleadership.com/flipkart-product-manager-interview-questions/); Glassdoor Flipkart PM interviews (https://www.glassdoor.co.uk/Interview/Flipkart-Product-Manager-Interview-Questions-EI_IE300494.0,8_KO9,24.htm). Year: not established; treated as 2024-2026. NextLeap, The Product Folks and AmbitionBox were not searched in depth in this session. [uncertain]",
+  "context_as_of": "As of Nov 2026. 1) BBD 2026 was the 13th edition. Early Access opened at midnight on 8 Oct 2026 for Flipkart Plus and Black members and co-branded cardholders; the sale opened to everyone on 9 Oct 2026 (Trak.in, 11 Oct 2026, https://trak.in/stories/flipkart-big-billion-days-2026-63-lakh-live-users-34-more-new-users/; BW Retail World, https://bwretailworld.com/sector/e-commerce-marketplaces/flipkart-big-billion-days-opens-with-6-3-mn-concurrent-users). 2) Flipkart's own opening disclosures were all activity metrics, not GMV: 6.3 mn concurrent users in one minute in the first hour, 287 mn+ sessions during Early Access, 34% more new customers, about 60% of demand from non-metros (same sources; Outlook Business, https://www.outlookbusiness.com/corporate/non-metros-drive-flipkarts-the-big-billion-days-sale-on-day-1-with-60-pc-of-orders). 3) Flipkart Minutes (quick commerce, about 1,200 dark stores in 150+ cities by Oct 2026) was woven into BBD: orders 3.5x a normal day and new customers 11x in the first hour (Trak.in; YourStory, https://yourstory.com/2026/10/amazon-flipkart-see-strong-start-to-2026-festive-sales). 4) Macro: festive 2026 was traffic-rich but conversion-poor according to Counterpoint, with discounts reported 35-40% lower than 2025 and early online festive sales 7-10% below 2025's GST-cut-boosted base (Inc42, Oct 2026, https://inc42.com/features/festive-sales-see-shoppers-log-in-but-hold-back-on-big-ticket-purchases/). 5) Flipkart Group reported an FY26 net loss of about Rs 8,468 cr, Walmart has pushed an FY27 profitability goal and the IPO was deferred, so 'GMV at any cost' is no longer the brief (Inc42 2026, as cited in this casebook's D3). Stale-risk: the 2026 dates come from one trade outlet (another outlet dated Day-1 data to 7 Oct); a widely syndicated 'USD 200 mn single-day record' claim appears only on low-quality pages and should not be used. [uncertain]",
+  "regulatory_context": "1) FDI policy for marketplaces (Press Note 2 of 2018): Flipkart, as a marketplace, cannot set or influence seller prices, so 'deal depth' is seller- and brand-funded plus bank offers; a dashboard metric like 'platform discount spend' must be framed as coupons and marketing, not price control. 2) CCPA Guidelines for Prevention and Regulation of Dark Patterns (Nov 2023): false urgency (fake countdowns, 'only 1 left'), drip pricing and basket sneaking are banned; the Flipkart group faced scrutiny over handling and payment-handling fees in Oct 2025, so a fee or urgency lever cannot be the reason a conversion metric looks good. 3) Consumer Protection (E-Commerce) Rules 2020 and Legal Metrology: genuine MRP and strike-through prices, seller details, and grievance redressal within set timelines; complaint volume is a real guardrail. 4) RBI rules on no-cost EMI (the interest must be disclosed and offset by a merchant or brand subvention) and card-offer disclosures. 5) DPDP Act 2023 and Rules (phased from Nov 2025): consent for push, SMS and WhatsApp re-targeting of cart abandoners. 6) Labour codes (Social Security Code, notified Nov 2025) and state gig-worker laws (e.g. Rajasthan, Karnataka) affect the cost of surge delivery staffing. None decides which metrics to pick, but they rule out some 'win at all costs' levers. [uncertain]",
+  "public_data_anchors": "1) 6.3 mn concurrent users in one minute in the first hour of BBD 2026; more than 6x the shoppers of a normal hour; nearly 1 in 15 Indian online shoppers visited in the first hour (Trak.in, 11 Oct 2026). 2) 287 mn+ sessions during Early Access (BW Retail World / Trak.in, Oct 2026). 3) New customer additions +34% (Trak.in, Oct 2026). 4) About 60% of demand / Day-1 orders from non-metros; nearly half of first-hour visits from Tier-3 and smaller towns (Outlook Business; Trak.in, Oct 2026). 5) Category growth YoY: large appliances +30%, tablets +73%, beauty +42%; 1 in 4 mobile buyers used an exchange and 1 in 3 used no-cost EMI; a peak of 1,600+ men's perfume units sold per minute (Trak.in, Oct 2026). 6) Flipkart Minutes: 3.5x orders vs a regular day and 11x new customers in the first hour; an iPhone 17 delivered in 3.4 minutes in New Delhi (Trak.in, Oct 2026). 7) Minutes footprint about 1,200 dark stores in 150+ cities (YourStory, Oct 2026; this casebook's Blinkit teardown C3). 8) Flipkart Group FY26 net loss about Rs 8,468 cr (Inc42, 2026). Not public: BBD GMV, orders, conversion, payment success rate - all dashboard numbers in the walkthrough are illustrative.",
+  "framework_applied": "Success Metrics framework (frameworks.md section 5: Company, Users and value, North Star plus levers, Guardrails). 1) Company and product: Flipkart is a mature marketplace now under a profitability mandate; BBD's goal is to win the festive season's share of wallet, acquire new (mostly non-metro) customers who stay, and make money on the sale, not just show a big GMV. 2) Users and value: shoppers (find the deal, pay easily with EMI or a bank offer, get it on time), sellers (sell the planned stock without SLA penalties), logistics and Minutes (deliver the promise); walk each through activation (land), engagement (browse, add to cart), conversion (pay), retention (no cancel or return, comes back); money comes from commissions, ads, fees and bank-partner funding. 3) North Star for the day: net GMV run-rate vs the hourly plan, defined as orders placed minus cancellations, broken down as sessions x session-to-order conversion x AOV x (1 - cancellation rate); supporting metrics per lever: concurrency and app health, add-to-cart and checkout conversion, payment success rate, hero-deal in-stock rate, new-customer and Tier-2/3 share, seller dispatch SLA. 4) Guardrails: contribution margin per order (discount, coupon and delivery cost), cancellations and COD/RTO risk, customer complaints and CSAT, fraud and reseller bots, delivery-promise breaches, and post-sale returns (a lagging guardrail).",
+  "clarifying_questions": [
+    {
+      "q": "Is this a real-time war-room view on the day, or a post-sale review of whether BBD worked?",
+      "a": "Real time. It's 8 am on Day 1 and you're looking at the dashboard every 15 minutes."
+    },
+    {
+      "q": "What does 'going well' mean for leadership this year: GMV, new customers, or profitability?",
+      "a": "All three, but this year leadership has said they won't buy GMV with unprofitable discounts. Plan is set on GMV and contribution margin."
+    },
+    {
+      "q": "Do we have an hourly plan or forecast to compare against, and last year's curve?",
+      "a": "Yes, there's an hour-by-hour plan by category and last year's Day-1 curve."
+    },
+    {
+      "q": "Scope: the whole Flipkart marketplace, or one category or surface? Does Flipkart Minutes count?",
+      "a": "Whole marketplace including Minutes. Shopsy and Myntra are out of scope."
+    },
+    {
+      "q": "Who's the audience for this dashboard: the CEO, or the on-call teams who act on it?",
+      "a": "Both. Tell me the top of the dashboard the CEO sees and what the teams below drill into."
+    },
+    {
+      "q": "Are there any known risks this year: a new checkout flow, a new payment partner, early access changes?",
+      "a": "Early Access is bigger this year, for Plus and Black members and co-branded cardholders. Payments added a new UPI flow."
+    },
+    {
+      "q": "What does the business consider a 'good' new customer: first order at any price, or one who orders again?",
+      "a": "Good question. Assume we care about new customers who don't cancel and who buy again within 90 days, but on the day you can only see the first order."
+    }
+  ],
+  "interviewer_data_reveals": "Exhibit 1 (illustrative) - Day 1, 8:00-9:00 am vs plan: Sessions 4.2 cr (plan 3.8 cr, +11%); peak concurrent users 6.3 mn (real, from Flipkart's 2026 disclosure); session-to-order conversion 2.1% (plan 2.6%); orders 8.8 lakh (plan 9.9 lakh, -11%); AOV Rs 3,900 (plan Rs 3,700); net GMV Rs 343 cr (plan Rs 366 cr, -6%). Exhibit 2 (illustrative) - Checkout funnel 8-9 am, this year vs last year: product page to add-to-cart 18% vs 19%; cart to checkout 55% vs 56%; checkout to payment attempt 80% vs 81%; payment success 71% vs 86% (by method: cards 84%, net banking 80%, UPI 58% vs 88% last year; COD n/a). Exhibit 3 (illustrative) - Hero deals: 14 of 40 hero SKUs out of stock within 20 minutes (plan: no more than 5 before 10 am); 22% of hero-SKU orders flagged as possible bulk/reseller buying. Exhibit 4 (illustrative) - Mix: Tier-2+ share of orders 61% (plan 58%; Flipkart's real 2026 disclosure was about 60%); new customers 19% of orders (plan 17%); mobiles 38% of GMV with 1 in 3 using no-cost EMI (real 2026 ratio). Exhibit 5 (illustrative) - Guardrails 8-9 am: cancellation rate 4.5% (normal 3%); COD share 34% (plan 30%); contribution margin per order -Rs 42 (plan -Rs 30); customer-support contacts per 1,000 orders 38 (normal 20; top reason: 'money debited, order not placed'); seller dispatch within SLA (previous day's Early Access orders) 93% (target 95%). Takeaway the interviewer wants spotted: traffic beats plan, so the GMV gap is a conversion problem, and the funnel isolates it to UPI payment success on the new flow.",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "It's 8 am on Day 1 of The Big Billion Days. You're the PM in the war-room. Which metrics tell you the sale is going well?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Before I list metrics, can I check a few things? First, is this a live dashboard on the day, or a post-sale review?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Live. You're watching it every 15 minutes."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "And what does 'well' mean to leadership this year? Pure GMV, new customers, or GMV at a margin? I ask because the group's FY26 losses and the profitability push make GMV-at-any-cost the wrong goal."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "GMV and contribution margin are both in the plan. New customers matter too. There's an hour-by-hour plan and last year's curve."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Great, so every number is read as 'actual vs plan for this hour', not as an absolute. Scope is the whole marketplace including Minutes? And who reads this - the CEO, or the teams who fix things?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Whole marketplace with Minutes. Both audiences: give me the top line and the drill-downs."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Let me set the context. Flipkart is a mature marketplace. BBD is its single biggest event: the aim is to win festive share of wallet, acquire new customers, mostly from Tier-2 and Tier-3 towns where about 60% of demand now comes from, and do it profitably. On the day there are three sides whose experience decides success: shoppers, sellers, and logistics including Minutes. Bank partners and brands funding offers are a fourth stakeholder."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Walking the shopper journey: activation is landing in the app without it crashing; engagement is finding the deal and adding to cart; conversion is paying, often with no-cost EMI, an exchange or a bank-card offer; retention is the order not being cancelled or returned, and the customer coming back. For sellers: their stock is live, orders flow, and they dispatch within SLA. For logistics: the delivery promise is kept. Flipkart earns commissions, ads, fees, and bank and brand-funded offers. Does that match how you think about it?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Yes. So what's your one number?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "For the day, my North Star is net GMV run-rate vs the hourly plan, where net means orders placed minus cancellations, at or above the planned contribution margin. It's where shopper value (they bought what they wanted) meets business value. I'd break it into a formula so the dashboard tells us which lever is off: Net GMV = Sessions x session-to-order conversion x AOV x (1 - cancellation rate)."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then the tree, top of dashboard to drill-downs:\n- Sessions / traffic: concurrent users, sessions vs plan, new vs returning, Tier-2+ share; app health (crash-free sessions, page-load p95, error rates).\n- Conversion: search-to-PDP, add-to-cart, cart-to-checkout, checkout-to-payment, payment success rate by method and bank.\n- AOV and mix: GMV by category vs plan (mobiles, large appliances), EMI and exchange attach.\n- Supply: hero-deal in-stock rate, sell-through vs planned stock, seller-side errors.\n- Post-order: cancellation rate, seller dispatch within SLA, delivery promise met, Minutes order and delivery time.\nAbove all of it sits the guardrail strip: contribution margin per order, complaints, fraud."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Okay. Here's the 8-9 am picture. Sessions 4.2 crore against a plan of 3.8. Peak concurrency 6.3 million. But orders are 8.8 lakh against 9.9 lakh planned and net GMV is 6% below plan. What do you read?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Traffic is beating plan by 11%, AOV is slightly ahead, so the miss is entirely conversion: 2.1% vs 2.6%. That's good news in a way: demand is there, so I don't need marketing; I need to find the leak. Can I see the funnel against last year?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Product page to add-to-cart 18% vs 19%. Cart to checkout 55 vs 56. Checkout to payment attempt 80 vs 81. Payment success 71% vs 86% last year."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "The top of the funnel is within a point of last year, which is normal noise for a bigger, more Tier-3-heavy crowd. Payment success has dropped 15 points; that's the leak. Do we have it split by method?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Cards 84%, net banking 80%, UPI 58% against 88% last year."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So it's UPI, and you mentioned a new UPI flow this year. That's my first escalation: page the payments on-call, check whether it's one PSP bank or our new flow, and if it's ours, fail over to last year's flow. I'd also look at support contacts - I'd expect 'money debited, order not placed' to be spiking, which hurts trust, especially for first-time Tier-3 buyers."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "It is: 38 contacts per 1,000 orders against 20 normally. What else would you look at before saying the sale is going well?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Supply on hero deals. If hero SKUs sell out in minutes, the headline numbers look great but most visitors leave disappointed and it's often resellers, not real customers, who get them. I'd watch hero-deal in-stock rate and the share of hero orders flagged as bulk buying."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "14 of 40 hero SKUs are out of stock in 20 minutes, and 22% of hero orders are flagged as possible resellers."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's a problem dressed as success. I'd ask category and trust and safety to tighten per-account and per-device limits on hero SKUs, and ask sellers whether staggered stock drops are planned. The metric I'd add is 'hero-deal orders by unique genuine customers', not hero units sold."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "And the good news in the data?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Tier-2+ share is 61% vs a 58% plan, and new customers are 19% vs 17%. That matches the real 2026 pattern Flipkart disclosed: about 60% non-metro demand and 34% more new customers. But a new customer only counts if they don't cancel; COD share is up to 34% and cancellations are 4.5% vs 3% normally, so I'd watch new-customer cancellations and COD RTO risk closely, not celebrate the acquisition number yet."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Leadership asks you at 10 am: is the sale going well, yes or no?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "'Demand is strong, but we're leaving money on the table.' Traffic is 11% over plan and the non-metro and new-customer mix is ahead. Net GMV is 6% under plan because UPI payment success fell from 88% to 58% on the new flow. That's fixable within the hour by rolling back. Contribution margin per order is Rs 12 worse than plan, so I'd not add coupons to close the gap - the fix is conversion, not discount."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Now the guardrails. What would stop you calling it a success even if GMV hits plan?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Five things. Contribution margin per order below plan, meaning we bought GMV. Cancellations and COD returns above normal, since today's GMV becomes tomorrow's RTO. Customer complaints per 1,000 orders and 'money debited' tickets. Seller dispatch SLA and delivery-promise breaches, because Day-1 orders become Day-3 delays. And fraud or reseller share on deals. Also returns 15-30 days out as a lagging guardrail, which is high for fashion and electronics."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How would you know a week later that BBD actually worked?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Three post-sale metrics. Net GMV after cancellations and returns vs plan. Contribution margin for the event, including bank and brand funding. And 90-day repeat rate of BBD-acquired customers, split by Tier and payment method. If we acquired a lot of Tier-3 COD shoppers who never come back, BBD was a marketing cost, not a win."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Summarise your dashboard for me."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Top line: net GMV run-rate vs hourly plan, with contribution margin per order next to it. Below it, four levers: traffic and app health, funnel conversion with payment success by method, hero-deal in-stock and genuine-buyer share, and post-order health (cancellations, dispatch SLA, delivery promise, Minutes delivery time). A guardrail strip: margin per order, complaints, cancellations and COD/RTO, fraud. Right now, the one action is to roll back the UPI flow. The closing line: 'A good BBD isn't the biggest GMV number at 10 am; it's net GMV at plan margin, from customers who keep the order and come back.'"
+    }
+  ],
+  "answer_and_recommendation": "Ranked top 3 metrics: 1) North Star - net GMV run-rate vs the hourly plan (orders placed minus cancellations, x AOV), read alongside contribution margin per order, because leadership will not buy GMV with unprofitable discounts. 2) Session-to-order conversion broken down by funnel step, with payment success rate by method and bank as the most sensitive real-time signal (in the illustrative data UPI fell from 88% to 58% on a new flow, explaining the whole GMV gap while traffic beat plan by 11%). 3) Quality of demand - new-customer share and Tier-2+ share of orders, net of cancellations and COD/RTO risk, and hero-deal orders by genuine (non-reseller) customers. Supporting: concurrent users and crash-free sessions, hero-deal in-stock rate, category GMV vs plan, EMI and exchange attach, seller dispatch within SLA, delivery promise met, Flipkart Minutes orders and delivery time. Recommendation: build the dashboard as 'actual vs plan for this hour', with the North Star at the top, the four lever groups underneath, and a guardrail strip; on the day, act on the largest lever gap first (roll back the UPI flow) rather than pushing more traffic or coupons. Risks and mitigations: vanity numbers (concurrency, sessions) look great while conversion breaks - mitigate by always reading them against conversion; hero-deal sell-outs captured by resellers - mitigate with account/device purchase limits and a genuine-buyer metric; GMV pulled forward with deep coupons - mitigate with a margin-per-order guardrail and a pre-agreed coupon budget; Day-1 orders turning into RTO and returns later - track post-sale net GMV and 90-day repeat of new customers. Closing line: 'A good Big Billion Day is net GMV at plan margin, from customers who keep their order and come back - and when we're short, the dashboard should tell us which lever to fix in the next 15 minutes.'",
+  "counter_metrics_guardrails": "1) Contribution margin per order (after coupons, platform-funded discounts, delivery and payment cost) vs plan - stops GMV being bought. 2) Cancellation rate (customer and seller-initiated) and COD share with predicted RTO - today's GMV can become tomorrow's return-to-origin cost, especially for new Tier-3 COD buyers. 3) Customer-support contacts per 1,000 orders, especially 'money debited, order not placed', and grievance volume (Consumer Protection E-Commerce Rules timelines apply). 4) Payment success rate by method and bank - doubles as a guardrail on trust. 5) Seller dispatch within SLA and delivery promise met (and Minutes delivery time) - Day-1 overselling shows up as Day-3 delays. 6) Fraud, bot and reseller share of hero-deal orders; bank-offer abuse. 7) App health: crash-free sessions and page-load p95 at peak concurrency. 8) Dark-pattern compliance: no false urgency, no drip fees, as a qualitative check given CCPA scrutiny. 9) Lagging: returns at 15-30 days and 90-day repeat rate of BBD-acquired customers. 10) Ecosystem cannibalisation: Minutes orders vs the main app (is quick commerce adding demand or just shifting it).",
+  "follow_up_twists": [
+    {
+      "twist": "At 11 am net GMV is 4% above plan, but contribution margin per order is Rs 25 worse than plan. Is the sale going well?",
+      "response": "No - we're buying GMV. I'd check which coupons or platform-funded offers are driving it, cap or pause the worst-margin ones, and accept slightly lower GMV, since the plan this year is GMV at margin."
+    },
+    {
+      "twist": "A competitor's sale starts the same day and our sessions are 15% below plan. What do you watch and do?",
+      "response": "Separate share from health: if conversion and payment success are normal, it's a traffic problem for marketing (push to Plus/Black members and lapsed buyers, bank offers on the categories we're losing); I'd track our share of category search and app opens, not just our own sessions."
+    },
+    {
+      "twist": "Leadership wants one number on a TV screen in the war-room. Which one?",
+      "response": "Net GMV vs hourly plan, shown with contribution margin per order beside it - a single GMV number invites people to buy it with discounts."
+    }
+  ],
+  "common_pitfalls": [
+    "Listing a generic dashboard (DAU, GMV, orders, revenue) with no plan or last-year baseline - on sale day every metric only means something against the hourly plan.",
+    "Celebrating vanity peaks like concurrent users and sessions; in 2026 Flipkart's own disclosures were traffic numbers, while analysts said festive traffic was strong but conversion weak - traffic without conversion is cost, not success.",
+    "Ignoring the supply and seller side: hero-deal stock-outs, reseller and bot buying, and seller dispatch SLA failures make Day 1 look great and Day 3 look terrible.",
+    "Treating GMV as the goal in a profitability year - closing a GMV gap with more coupons when the data shows the leak is payment success on one method."
+  ],
+  "skills_tested": [
+    "structuring",
+    "prioritisation",
+    "quant",
+    "business sense",
+    "execution",
+    "communication"
+  ],
+  "linked_teardown": "blinkit_product_teardown - results/C3_Flipkart_Minutes.json: Flipkart Minutes had about 1,200 dark stores in 150+ cities at the BBD 2026 launch, saw 11x new customers in BBD's first hour, and is tied to Flipkart Black SuperCoins; used here to add Minutes orders and delivery time as a dashboard lever and Minutes-vs-main-app cannibalisation as a guardrail.",
+  "uncertain": [
+    "round_and_level",
+    "source_and_verification",
+    "context_as_of",
+    "regulatory_context"
+  ]
+}

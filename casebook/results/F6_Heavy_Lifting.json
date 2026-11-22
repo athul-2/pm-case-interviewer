@@ -1,0 +1,166 @@
+{
+  "pun_title": "Heavy Lifting",
+  "case_type": "Guesstimate",
+  "asked_at": "Blinkit (as listed on The Product Folks)",
+  "subject_company": "Blinkit (Eternal Ltd, formerly Zomato Ltd)",
+  "round_and_level": "[uncertain] Screening or first PM round, APM to PM level; a standard quick-commerce warm-up guesstimate. The exact round is not given in the source",
+  "difficulty": "Easy-Medium. The maths is a one-line multiplication. The hard part is anchoring daily orders to current Eternal disclosures (about 44 lakh a day in 2026, not the 2 lakh in older write-ups) and building a basket weight from real items, not guessing a round 4 kg",
+  "market_and_industry": "India; quick commerce (dark-store grocery and essentials delivery); metro-heavy (top 8-10 cities carry most orders), smartphone-first urban middle class and affluent households; Tier-2/3 expansion under way with AOV at about 85-90% of metro levels",
+  "time_box_minutes": "12",
+  "exact_prompt": "\"What is the total weight of groceries Blinkit delivers in a day?\"",
+  "source_and_verification": "Reported. The Product Folks lists the question under Guesstimates with the Blinkit tag: https://www.theproductfolks.com/product-management-case-studies/what-is-the-total-weight-of-groceries-delivered-by-blinkit-in-a-day (no date on the page; its 200,000 orders/day assumption suggests it was written around 2021-22). Related Blinkit guesstimates (daily orders in a city, riders needed at peak in Gurgaon) appear on Product Leadership (https://www.productleadership.com/blinkit-product-manager-interview-questions/) and Dataford (https://dataford.io/interview-guides/blinkit/project-manager). Not checked on Glassdoor, AmbitionBox, NextLeap or PracHub for this exact wording.",
+  "context_as_of": "[uncertain] As of Nov 2026: (1) Blinkit is Eternal Ltd's quick-commerce arm (Zomato Ltd renamed to Eternal in 2025). Q2 FY27 (Jul-Sep 2026), reported 21 Oct 2026: NOV Rs 20,940 Cr (+79.3% YoY, +22.2% QoQ), 308 net new stores, 2,751 dark stores at end-Sep 2026, adjusted EBITDA Rs 184 Cr (0.9% of NOV) (Kotak Neo, https://www.kotakneo.com/news/stocks/eternal-q2-results-profit-rises-revenue-growth-blinkit-adds-stores/ ; Angel One, https://www.angelone.in/news/stocks/eternal-share-price-gains-2-7-as-blinkit-net-order-value-jumps-79-3-in-q2-fy27). (2) Average NOV per order about Rs 525 and NOV per store per day about Rs 9.02 lakh, per secondary coverage of the Q2 FY27 shareholder letter (single source, not verified against the letter). (3) Q1 FY27 (Apr-Jun 2026): 331 mn orders (about 36 lakh a day), 2,443 stores, NOV Rs 17,132 Cr (LapaasVoice, https://lapaasvoice.com/blinkit-q1-fy27-daily-orders-cross-36-lakh-as-dark-store-count-tops-2400/ ; Inc42 Jul 22 2026). (4) Assortment is widening beyond grocery: 30,000+ SKUs messaging since Jan 2026, plus electronics, beauty, pharmacy, print and Bistro, which lowers the average weight per rupee. (5) The '10-minute' ad claim was dropped in Jan 2026 after a Labour Ministry nudge; operations unchanged. Stale-flag: the Q2 FY27 order count was not found directly; daily orders here are derived from NOV/AOV. Older figures (125,000 orders/day in Nov 2021; 200,000/day in The Product Folks answer) are historical only.",
+  "regulatory_context": "Not material to the estimate itself. Context worth knowing: (1) Code on Social Security 2020 (notified 2025-26) and state gig-worker laws (e.g. Karnataka fee) add a per-order levy, which matters if the interviewer pivots to cost per kg. (2) FSSAI licensing and hygiene inspections of dark stores; perishables (dairy, produce) are a large weight share. (3) Motor Vehicles rules and rider-safety scrutiny (the Jan 2026 removal of 10-minute claims) cap practical load per two-wheeler trip, roughly 10-15 kg in a delivery bag. (4) Eternal's status as an Indian-owned and controlled company lets Blinkit hold inventory (1P model), so weight flows through its own stores.",
+  "public_data_anchors": "[uncertain] Blinkit Q2 FY27 NOV Rs 20,940 Cr; stores 2,751 at end-Sep 2026; +308 stores in the quarter (Kotak Neo, 21 Oct 2026, https://www.kotakneo.com/news/stocks/eternal-q2-results-profit-rises-revenue-growth-blinkit-adds-stores/) ; average NOV per order about Rs 525 and NOV/store/day about Rs 9.02 lakh (secondary coverage of the Q2 FY27 letter, Oct 2026; single source) ; Q1 FY27 orders 331 mn, about 36 lakh/day, 2,443 stores (LapaasVoice, Jul 2026, https://lapaasvoice.com/blinkit-q1-fy27-daily-orders-cross-36-lakh-as-dark-store-count-tops-2400/) ; store breakeven about 1,300 orders/day in metros and about 800 in Tier-2 (Emkay, via blinkit_product_teardown, 2026) ; competitor top-10-city store count Blinkit 969, Zepto 828, Flipkart Minutes 627, Instamart 615 (CLSA via PTI, 26 Aug 2026) ; historical: 125,000 orders/day (Nov 2021).",
+  "framework_applied": "Guesstimate: Clarify, Pick framework, Constraints/MECE, Calculate, Sanity check (frameworks.md section 6). Step 1 Clarify - 'groceries' means all items Blinkit delivers vs food-and-grocery only; one average day in 2026; all of India; output in tonnes; packaging weight excluded. Step 2 Pick framework - bottom-up: daily orders x average weight per order. Daily orders come from disclosed NOV and AOV, which needs fewer assumptions than a top-down household funnel. Step 3 Constraints/MECE - split orders into four non-overlapping basket types (daily top-up, stock-up grocery, snacks and beverages, non-grocery), and check against store throughput (orders per store per day) and the rider bag limit. Step 4 Calculate - about 44 lakh orders x about 2.6 kg gives about 11,500 tonnes a day; about 10,000 tonnes if only grocery is counted. Step 5 Sanity check - price per kg test (Rs 525 / 2.6 kg = about Rs 200 per kg, plausible for a packaged-plus-fresh mix), per-store test (about 4-5 tonnes outbound per store per day, matching 2-3 small-truck inbound loads), and a peak-day test (Diwali or rain days can run 1.3-1.5x).",
+  "clarifying_questions": [
+    "Q: By 'groceries' do you mean everything Blinkit delivers, including electronics and beauty, or only food and grocery? A: Give me the total weight of everything delivered, then call out the grocery-only number.",
+    "Q: Which time frame, an average day or a peak day? A: An average day in 2026.",
+    "Q: All of India or one city? A: All of Blinkit's network across India.",
+    "Q: Should I count packaging (bags, boxes, ice packs)? A: No, product weight only.",
+    "Q: Can I use public numbers such as Eternal's quarterly disclosures? A: Yes, use what you know, but state your assumptions.",
+    "Q: Do Bistro (prepared food) and print orders count? A: They are small; include them in non-grocery.",
+    "Q: Is the output tonnes per day? A: Yes, tonnes per day, with a range."
+  ],
+  "interviewer_data_reveals": [
+    "Exhibit 1 (real, Eternal Q2 FY27 coverage, Oct 2026): NOV Rs 20,940 Cr for Jul-Sep 2026 (92 days); 2,751 stores at end-Sep; average NOV per order about Rs 525 (single secondary source).",
+    "Exhibit 2 (real, Q1 FY27): 331 mn orders in Apr-Jun 2026, about 36 lakh a day, at 2,443 stores.",
+    "Exhibit 3 (illustrative, for teaching) - order mix by basket type: daily top-up (milk, bread, eggs, a vegetable) 35% of orders; stock-up grocery (atta, rice, oil, dal) 25%; snacks and beverages (chips, cold drinks, ice cream) 20%; non-grocery (beauty, personal care, electronics, pharmacy, gifts, Bistro) 20%.",
+    "Exhibit 4 (illustrative) - average weight per basket type: top-up 1.5 kg; stock-up 6 kg (a 5 kg atta bag alone is common); snacks and beverages 2 kg (one 1.25 L cold drink is 1.3 kg); non-grocery 0.7 kg.",
+    "Exhibit 5 (illustrative) - peak-day multipliers: Diwali week about 1.4x average orders with heavier baskets (sweets, dry fruits, puja items); monsoon rain days about 1.3x orders with lighter top-up baskets."
+  ],
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "What is the total weight of groceries Blinkit delivers in a day?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Let me clarify scope first. Do you want everything Blinkit delivers, or food and grocery only? Average day or peak? All of India?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Everything delivered, average day in 2026, all of India. Call out grocery-only separately."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "And product weight only, no packaging? Can I use Eternal's public disclosures?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Product weight only. Yes, use what you know."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then I'll go bottom-up: weight per day = orders per day x average weight per order. It needs fewer assumptions than starting from households, because Blinkit discloses order value and AOV."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Structure in text: Total kg/day = [Orders/day] x [Avg kg/order]. Orders/day = Quarterly NOV / days / AOV, cross-checked with stores x orders per store. Avg kg/order = sum over four basket types of (share of orders x kg per basket)."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Go ahead with orders."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Q2 FY27 NOV was about Rs 20,940 Cr over 92 days, so about Rs 228 Cr a day. At an AOV of about Rs 525, that is about 43 lakh orders a day."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Cross-check by stores: about 2,600 average stores in the quarter. At Rs 9 lakh NOV per store per day and Rs 525 per order, that is about 1,700 orders per store, giving about 44 lakh. Q1 was about 36 lakh a day, and a 20% quarterly increase fits the 22% NOV growth. I'll use 44 lakh."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Good. Now weight per order. Many candidates just say 4 kg."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'd rather segment by what drives weight, which is basket type, not city or user age. Four MECE buckets: daily top-up, stock-up grocery, snacks and beverages, and non-grocery."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Here are shares: top-up 35%, stock-up 25%, snacks and beverages 20%, non-grocery 20%."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Weights: a top-up basket is 1 L milk (about 1 kg), a bread loaf (0.4 kg) and some eggs or a vegetable, so about 1.5 kg. Stock-up often includes a 5 kg atta or rice bag plus oil, so about 6 kg. Snacks and beverages: a 1.25 L cold drink plus chips, about 2 kg. Non-grocery such as a face wash, earphones or a charger is about 0.7 kg."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Weighted average: 0.35 x 1.5 = 0.53; 0.25 x 6 = 1.5; 0.20 x 2 = 0.4; 0.20 x 0.7 = 0.14. Total about 2.6 kg per order."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "So the total?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "44 lakh orders x 2.6 kg = about 1.14 crore kg, so about 11,500 tonnes a day. Grocery-only (the first three buckets, 80% of orders, about 3.1 kg each) is about 11,000 tonnes, and the non-grocery part adds only about 600 tonnes."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How do you know it's not wildly off?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Three sanity checks. Price per kg: Rs 525 / 2.6 kg is about Rs 200 per kg. Atta is about Rs 50/kg, milk about Rs 60/L, and snacks and personal care are Rs 300-1,000/kg, so a Rs 200 blended average is plausible."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Per store: 1,700 orders x 2.6 kg is about 4.4 tonnes outbound a day, which matches two or three small-truck inbound loads from the mother warehouse. Rider check: 2.6 kg is far below a 10-15 kg delivery bag, so riders are limited by trips, not weight."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Ratio check: the old Product Folks answer of 800 tonnes used 2 lakh orders a day, which was right in 2021. Blinkit has grown about 20x since, so an order of magnitude jump is expected."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What would change on Diwali?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "About 1.4x orders and heavier baskets with sweets and dry fruits, so 3 kg or more per order. That gives roughly 18,000-19,000 tonnes on a peak day."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Give me a range and the biggest swing factor."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "9,000 to 14,000 tonnes a day, point estimate about 11,500. The biggest swing factor is the share of stock-up baskets: each 5 points of orders moving from top-up to stock-up adds about 0.2 kg per order, or about 900 tonnes a day."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Why would a Blinkit PM care about this number?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Weight drives last-mile cost through bag capacity and batching, mid-mile truck planning, and store racking. It also shows the shift to non-grocery: as electronics and beauty grow, rupees per kg rise, which is good for AOV per trip but changes how stores are designed."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Closing: Blinkit delivers about 11,500 tonnes a day in late 2026, about 11,000 of it grocery, from about 44 lakh orders at about 2.6 kg each. The estimate is most sensitive to the stock-up share, and I'd validate it with the warehouse dispatch tonnage report."
+    }
+  ],
+  "answer_and_recommendation": "Estimate: about 11,500 tonnes a day, range 9,000-14,000 tonnes (late 2026 average day); grocery-only about 11,000 tonnes. Ranked drivers: (1) daily orders, about 44 lakh (derived from Q2 FY27 NOV Rs 20,940 Cr / 92 days / Rs 525 AOV, cross-checked as about 1,700 orders x about 2,600 stores); (2) stock-up basket share, where a 5 kg atta or rice bag dominates weight; (3) category mix shift to light non-grocery items (electronics, beauty), which lowers kg per order over time. Peak day (Diwali): about 18,000-19,000 tonnes. Risks in the estimate: AOV comes from a single secondary source; basket weights are illustrative; the order count is derived rather than disclosed. Mitigation: triangulate with stores x throughput and price per kg. Closing line: 'Roughly 11-12 thousand tonnes a day, about 44 lakh orders at about 2.6 kg each. The number to pressure-test is the stock-up share, not the order count.'",
+  "counter_metrics_guardrails": "Pure guesstimate, so the sanity checks are listed instead: (1) Price-per-kg test: Rs 525 AOV / 2.6 kg = about Rs 200/kg, inside the plausible Rs 120-300/kg band for a mixed fresh-plus-packaged basket. (2) Store-throughput test: about 1,700 orders/store/day x 2.6 kg = about 4.4 tonnes per store, consistent with 2-3 small-truck inbound loads a day. (3) Rider-capacity test: 2.6 kg per order is well below a 10-15 kg bag limit, so weight is not the binding constraint. (4) Peak-day stress test: Diwali at about 1.4x orders and about 3 kg per order gives about 18,500 tonnes, which is plausible against festive records. (5) Ratio test against history: 2 lakh orders/day in 2021 gave about 800 tonnes; about 20x order growth explains about 14x weight growth with lighter baskets.",
+  "follow_up_twists": [
+    "Twist: 'Now estimate it for Mumbai only.' Response: Mumbai is about 10-12% of Blinkit orders, since Zepto leads store count there, so about 5 lakh orders a day; with smaller flats, top-up baskets are lighter, giving about 1,200 tonnes a day.",
+    "Twist: 'How many rider trips does that weight imply, and does batching change it?' Response: Weight does not bind; trips do. 44 lakh orders with about 1.2 orders per trip at peak batching gives about 37 lakh trips, so riders are sized by trips and ETA, not kg.",
+    "Twist: 'Electronics share doubles next year. What happens to weight?' Response: Orders rise but kg per order falls slightly (0.7 kg baskets replace about 2 kg snack baskets), so tonnes grow slower than NOV; rupees per kg rises, which is good for last-mile cost per rupee."
+  ],
+  "common_pitfalls": [
+    "Using a stale order count (2 lakh/day from 2021-22 write-ups, or 36 lakh from Q1 FY27) instead of deriving about 44 lakh from the latest NOV and AOV.",
+    "Picking a round 4-5 kg per order without building a basket. Blinkit's Rs 525 AOV is mostly top-up and impulse items, and 4 kg x 44 lakh implies a Rs 130/kg price that is too cheap for the mix.",
+    "Segmenting by city tier or user age instead of basket type. Weight is driven by what is in the bag (atta bag vs milk packet), not by who orders.",
+    "Counting packaging, or confusing NOV with GOV (gross order value before discounts), which inflates orders by about 10-15%."
+  ],
+  "skills_tested": "structuring, quant, business sense, communication",
+  "linked_teardown": "blinkit_product_teardown (blinkit_product_teardown/report.md) - key facts used: 2,443 stores and about 36 lakh daily orders at Q1 FY27; NOV Rs 17,132 Cr per quarter; store breakeven about 1,300 orders/day in metros (Emkay); widening non-grocery assortment (electronics, print, Bistro).",
+  "uncertain": [
+    "round_and_level",
+    "context_as_of",
+    "public_data_anchors"
+  ]
+}

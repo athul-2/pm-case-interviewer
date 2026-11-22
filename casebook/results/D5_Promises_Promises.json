@@ -1,0 +1,191 @@
+{
+  "pun_title": "Promises, Promises",
+  "case_type": "Situational",
+  "asked_at": "Razorpay style (classic B2B fintech situational question; no dated Razorpay report found) [uncertain]",
+  "subject_company": "Razorpay (payment gateway / payment aggregator). Merchant is illustrative: 'a top-5 omnichannel electronics retail chain' with about 300 franchise stores. Works equally for Cashfree, PayU, Juspay or any B2B SaaS.",
+  "round_and_level": "PM round 2 or hiring-manager round (situational / cross-functional), PM and SPM in B2B payments, merchant products or enterprise; also asked to APMs as 'how do you work with sales'. [uncertain]",
+  "difficulty": "Medium-Hard - the stakeholder part is standard, but in payments a strong answer must split the promise into what already exists, what is configurable, what is a real build, and what is not legal (passing UPI MDR to shoppers is barred by NPCI), and must save the deal and the trust without letting sales set the roadmap.",
+  "market_and_industry": "India; B2B fintech - online payment gateway / RBI-authorised payment aggregator serving enterprises and SMBs; merchant is an omnichannel electronics retailer (online + about 300 franchise stores across metros and Tier-2), high-ticket UPI, cards, EMI and BNPL mix; peak events are the Republic Day and festive sales.",
+  "time_box_minutes": "15-20",
+  "exact_prompt": "Sales promised an enterprise merchant a feature that is not on the roadmap. What do you do? (Opened as: 'Your enterprise sales lead just closed a large electronics retailer. To win it, they promised split settlements to 300 franchise stores, free same-day settlement, and a way to pass the new UPI MDR on to shoppers - live in 45 days, before the Republic Day sale. None of this is on your roadmap. The contract is signed. What do you do?')",
+  "source_and_verification": "Level: classic. The generic prompt is widely reported in PM interviews; the Razorpay framing is the casebook's. Public versions: Dataford 'How do you handle a situation where sales promises a feature to a customer that is not on the current product roadmap' (https://dataford.io/questions/how-do-you-handle-a-situation-where-sales-promises-a-feature-to-a-customer-that-is-not-on-the-current-product-roadmap); PracHub 'Biggest Customer Wants an Off-Roadmap Feature: How the PM Decides and Responds' (https://prachub.com/interview-questions/biggest-customer-wants-an-off-roadmap-feature-how-the-pm-decides-and-responds); Aha! 'Do This When the VP of Sales Promises Features' (https://www.aha.io/blog/hey-product-manager-do-this-when-the-vp-of-sales-promises-features); Mind the Product 'Negotiating with Sales' (https://www.mindtheproduct.com/negotiating-with-sales-a-guide-for-product-managers). Razorpay values used: Razorpay blog on values-driven interviews (https://razorpay.com/blog/beyond-resumes-setting-a-teams-through-values-driven-interviews/). No AmbitionBox/Glassdoor report of this exact question at Razorpay was found; those sites were not searchable in this session. Year: evergreen; this write-up 2026. [uncertain]",
+  "context_as_of": "As of Nov 2026. 1) Razorpay FY25 consolidated revenue Rs 3,783 cr (+65% YoY); FY25 loss driven by about Rs 1,209 cr ESOP costs plus one-time reverse-flip tax (about Rs 1,245 cr); core online payments reportedly EBITDA-positive; FY26 figures not yet public (Inc42, 6 Nov 2026, https://inc42.com/features/mdr-and-ai-inside-the-two-acronyms-that-could-shape-razorpays-%E2%82%B96000-cr-ipo/). 2) TPV about USD 180 bn annualised (end-2024); serves 105 of India's 119 unicorns (2025); about 80% of clients are SMBs and startups, so enterprise is a smaller but high-TPV, high-negotiation segment (same source). 3) IPO: SEBI approval reported; Rs 5,000-6,000 cr issue at about USD 5 bn valuation, listing expected Jan-Mar 2027 (same source; local teardown says confidential DRHP filed Jun 2026). An IPO year raises the cost of compliance mistakes and of public enterprise churn. 4) Razorpay is an RBI-authorised payment aggregator with a cross-border licence since Dec 2025 (local gokwik teardown, Razorpay_Magic_Checkout.json). 5) Existing products relevant to the promise: Razorpay Route (split payments to linked accounts) and Instant Settlements (paid, on-demand settlement) - so part of the 'promise' is already sellable. 6) Razorpay values include Customer First and Transparency among six core values (Razorpay blog). 7) UPI MDR: NPCI's 15 Sep 2026 circular set 0.4% MDR on eligible P2M UPI payments above Rs 2,000 (cap Rs 300; flat Rs 5 for bills, utilities, education, fuel), originally from 15 Oct 2026, deferred to 'immediately post Diwali, date to be notified'; Inc42 reported a possible 1 Jan 2027 start (Inc42, 8 Oct 2026, https://inc42.com/buzz/upi-mdr-rollout-may-be-deferred-to-january-2027-amid-pushback-by-retailers/). Stale-risk: MDR start date still unconfirmed as of 11 Nov 2026; product names and pricing should be checked on razorpay.com. [uncertain]",
+  "regulatory_context": "Central to the answer. 1) NPCI UPI MDR framework (circular 15 Sep 2026): 0.4% on eligible P2M UPI payments above Rs 2,000, capped at Rs 300; MDR cannot be passed on to consumers; small merchants under the zero-MDR framework exempt; start deferred to post-Diwali (date to be notified). So 'pass the UPI MDR to shoppers' cannot be built as a surcharge - it must be reframed (pricing, absorbing, or steering through honest offers). Sources: Entrepreneur India (https://india.entrepreneur.com/business-news/npci-announces-0-4-mdr-on-upi-transactions-above-inr-2000), Inc42 (above). 2) RBI (Regulation of Payment Aggregators) Directions, 2025 (15 Sep 2025, RBI/DPSS/2025-26/141): full KYC/CDD on merchants, merchant IDs, ongoing monitoring; settlement through escrow with defined timelines; marketplaces/franchise structures - each of the 300 franchise stores receiving funds via split settlement must be a KYC'd linked account, not just a bank account number (https://rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12896; Cyril Amarchand client alert, Oct 2025). 3) Card network and RBI rules on surcharging are restrictive; card MDR pass-through as a visible surcharge is generally disallowed by network rules. [uncertain] 4) DPDP Act 2023 for any shopper data shared in custom reports. 5) Contract law: a signed MSA with a feature commitment and go-live date creates an obligation; Legal must review what 'promised' means in the signed order form.",
+  "public_data_anchors": "1) Razorpay FY25 revenue Rs 3,783 cr, +65% YoY; TPV about USD 180 bn annualised; 105 of 119 unicorns as clients; about 80% of clients SMB/startups; IPO at about USD 5 bn, listing Jan-Mar 2027 (Inc42, 6 Nov 2026). 2) UPI MDR: 0.4% above Rs 2,000, Rs 300 cap; analysts estimate Rs 192-461 cr a year of extra revenue for Razorpay; about half of Razorpay's payment flow is UPI (Inc42, 6 Nov 2026). 3) Centre told the Supreme Court about 96% of merchant UPI transactions are unaffected by the MDR (Inc42, 8 Oct 2026). 4) UPI Oct 2026: 25.47 bn transactions, Rs 31.53 lakh cr (Inc42, Nov 2026, https://inc42.com/buzz/upi-transactions-rise-5-8-mom-to-record-25-47-bn-in-october/). 5) Retailer bodies (AICPDF) estimate MDR could add Rs 7,000-9,000 cr a year in costs across FMCG distribution and retail (Inc42, 8 Oct 2026) - explains why the merchant asked for pass-through. Merchant deal figures in the case are illustrative.",
+  "framework_applied": "Situational: SODS (frameworks.md section 3). Values first: Razorpay's Customer First and Transparency - delight the merchant, but tell them and sales the truth fast. S - Scope: get the exact words promised (order form, emails), the merchant's underlying job (franchise payouts, cash-flow for stores, MDR cost), deal size and strategic value, the hard date (Republic Day sale), legal/contract exposure, and how many other merchants want the same thing. O - Options: (A) build everything as promised - keeps the deal and sales happy vs. derails the roadmap, sets a precedent and one part is not legal; (B) refuse and send it back to sales - protects the roadmap vs. loses a large logo in an IPO year and burns trust; (C) unbundle the promise - deliver what exists (Route, Instant Settlements) and configure it, scope one real build if it serves many merchants, reframe the illegal part honestly, and renegotiate dates/terms jointly with sales. D - Decision: C, plus a process fix (deal desk / PM sign-off for non-standard commitments). NOT doing: building a UPI surcharge, a one-off fork for a single merchant, or blaming sales in front of the customer. S - Success: merchant live on time for Republic Day on the core flow, TPV ramp to plan, no compliance exceptions, and fewer off-roadmap promises next quarter.",
+  "clarifying_questions": [
+    {
+      "q": "What exactly was promised, in writing - the order form, the MSA, or emails - and with what dates or penalties?",
+      "a": "The order form says 'split settlement to franchise stores' and 'go-live by 15 Jan'. Same-day settlement and 'MDR pass-through' were in the sales lead's email and a pitch deck, not the contract."
+    },
+    {
+      "q": "What problem is the merchant trying to solve with each ask?",
+      "a": "Franchise owners want their share of online and in-store orders paid out daily instead of the HQ paying them monthly; the CFO is worried about the new UPI MDR on high-ticket orders, since the average order is about Rs 18,000."
+    },
+    {
+      "q": "How big and strategic is this merchant?",
+      "a": "About Rs 2,400 cr annual TPV moving from a competitor gateway, roughly 0.6% of Razorpay's annual TPV; a marquee logo in electronics retail. (illustrative)"
+    },
+    {
+      "q": "What do we already have that is close?",
+      "a": "Route already splits payments to linked accounts; Instant Settlements exists as a paid add-on. Route has never been run at 300 linked accounts for one merchant with franchise-level KYC."
+    },
+    {
+      "q": "Have other merchants asked for the same thing?",
+      "a": "Enterprise success has 14 open requests for 'franchise / dealer payouts with auto-reconciliation' from retail, auto and pharma chains."
+    },
+    {
+      "q": "What is the roadmap this quarter and what would slip?",
+      "a": "The squad owning Route is building MDR billing and reporting changes for the new UPI framework - a regulatory-driven item that every merchant needs."
+    },
+    {
+      "q": "Who owns the decision - me, the sales head, or a deal desk?",
+      "a": "There is no formal deal desk. You and the enterprise sales head jointly own it; the business head breaks ties."
+    }
+  ],
+  "interviewer_data_reveals": "All numbers are illustrative (invented for teaching) unless a source is cited.\n\nExhibit 1 - The promise, unbundled (illustrative):\n| Ask | Where it was promised | Exists today? | Effort to deliver | Legal/compliance |\n| Split settlement to 300 franchise stores | Order form (binding) | Yes - Route, not at this scale | 3-4 weeks: bulk linked-account onboarding, franchise KYC, recon report | Each store must be a KYC'd linked account (PA Directions 2025) |\n| Free same-day settlement | Sales email | Yes - Instant Settlements, paid | 1 day config; cost is pricing, not engineering | Fine |\n| Pass UPI MDR on to shoppers | Pitch deck | No | - | Not allowed - NPCI says MDR cannot be passed to consumers |\n| Custom store-wise dashboard | Verbal | Partly - reports API | 2 weeks | DPDP for shopper data |\n\nExhibit 2 - Merchant's payment mix and MDR exposure (illustrative):\n| Method | Share of TPV | Share of txns above Rs 2,000 |\n| UPI | 46% | 71% |\n| Credit/debit cards incl. EMI | 41% | 95% |\n| Cardless EMI / BNPL | 9% | 100% |\n| Netbanking/wallets | 4% | 60% |\nAt 0.4% capped at Rs 300 (NPCI framework, real), UPI MDR on this merchant is about Rs 3.5-4 cr a year (illustrative).\n\nExhibit 3 - Demand for the build beyond this merchant (illustrative):\n| Segment | Open requests | Est. annual TPV |\n| Retail chains / franchises | 6 | Rs 5,100 cr |\n| Auto dealers | 4 | Rs 3,300 cr |\n| Pharma chains | 4 | Rs 1,900 cr |\n\nExhibit 4 - Capacity (illustrative): Route squad has 6 engineers; MDR billing changes (regulatory) need 4 of them for 5 weeks; MDR start date is 'post Diwali, to be notified' (real), possibly 1 Jan 2027 (reported).\n\nTakeaway: only one ask is binding, it is mostly built and serves Rs 10,000 cr+ of pipeline; one ask is a pricing conversation; one ask is illegal and must be reframed; the dashboard can be phased.",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "Enterprise sales just closed a big electronics retailer. To win it they promised split settlements to 300 franchise stores, free same-day settlement and a way to pass the new UPI MDR on to shoppers, live in 45 days before the Republic Day sale. It's not on your roadmap. What do you do?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "My first reaction is: don't treat it as sales versus product. At Razorpay, customer first and transparency mean two things here - make this merchant successful, and tell everyone, including the merchant, the truth quickly. I'll scope it, lay out options, decide, and say how I'd measure success. First: what exactly was promised, and where is it written?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "The order form has 'split settlement to franchise stores' and 'go-live 15 January'. Same-day settlement and MDR pass-through were in an email and a deck."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That changes things a lot. One item is a contractual commitment, the other two are expectations we have to manage, but they're still expectations the customer believes. Next, what job is each ask doing for them?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Franchise owners want daily payouts of their share instead of monthly from HQ. The CFO is worried about MDR on UPI orders - average order is about Rs 18,000."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So the real needs are franchise cash flow and payment cost. Let me unbundle the promise. (Builds Exhibit 1 with the interviewer.)\n| Ask | Need behind it | Status |\n| Split to 300 stores | Franchise cash flow | Route exists; scale and KYC are the work |\n| Same-day settlement | Franchise cash flow | Instant Settlements exists; it's a pricing question |\n| MDR pass-through | CFO's cost worry | Can't be built - NPCI says MDR can't be passed to consumers |\n| Store dashboard | Franchise trust | Partly exists via reports API |\nSo this is not one off-roadmap feature. It's one real build, one commercial term, one compliance problem and one nice-to-have."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Is the Route build worth doing? It's not on the roadmap for a reason."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That depends on whether it's a one-off. Do other merchants want franchise or dealer payouts?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Fourteen open requests - retail, auto dealers, pharma chains. About Rs 10,000 crore of TPV combined."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then it's a roadmap gap that sales found first, not a one-off. Bulk linked-account onboarding with franchise KYC and store-level reconciliation is a reusable capability. That's the test I'd use for any sales promise: does it serve a segment, or just this logo? Last scope question - what would it displace?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "The Route squad is on MDR billing and reporting changes for the new UPI framework. Every merchant needs that once the start date is notified."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's regulatory, so it can't slip. The good news is NPCI deferred the start to after Diwali and reports suggest January 2027, but the date isn't notified, so I'd plan as if it's sooner. Options:\nA - Build everything as promised. Keeps the deal and sales happy. But it breaks the regulatory work, makes a one-merchant fork, and one item - MDR surcharge to shoppers - we simply cannot do.\nB - Say no and hand it back to sales. Protects the roadmap, but we lose a Rs 2,400 crore logo in an IPO year, and sales learns product is a wall.\nC - Unbundle: deliver what's binding using what we have, price what's commercial, reframe what's not allowed, and phase the rest - then fix how these promises get made."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Go with C. How does it actually play out?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Week 1, the same day: I meet the sales lead privately - no blame - and we agree one story. Then together we brief the merchant.\n- Split settlement to franchises: yes, on Route, live by 15 January for an initial 60 high-volume stores, all 300 by the end of February. The real limiter is KYC on 300 franchise entities, not code - I'd put a dedicated onboarding team on it.\n- Same-day settlement: available today through Instant Settlements. Whether it's free is a pricing decision for the business head - maybe free for the first 90 days, or bundled into a volume rate.\n- MDR pass-through: we tell them directly it's not permitted - NPCI says the MDR can't be charged to consumers. What we can do is help with the cost: a blended enterprise rate, reports showing exactly what the MDR costs by store and payment method, and honest offers like bank EMI that they already run.\n- Dashboard: phase 2, using the reports API, in March."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Won't the merchant feel misled about the MDR part?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Probably a little, which is why I'd rather say it in week one than in week six. A CFO would much rather hear 'that's not legal, here's what we can do' from their gateway than get a compliance notice later. Transparency is cheaper early. And the sales lead should hear me say it too - they may not have known the rule, since the circular only came out in September."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How do you protect the MDR work if the Route build needs the same engineers?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Split the capacity explicitly. Four engineers stay on MDR billing - non-negotiable. The franchise payout work is mostly onboarding and reconciliation, so two engineers plus a solutions engineer from the enterprise team, plus ops for KYC. I'd write this down with the business head so if something has to give, we decide it together. If MDR is notified for an earlier date, the 300-store rollout moves, not the regulatory work - and the merchant hears that on the day we know."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What are you explicitly not doing?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Not building a surcharge on UPI, under any name. Not making a custom fork for one merchant - everything goes into Route as a general franchise-payouts feature. Not throwing sales under the bus in front of the customer. And not quietly agreeing to 'free forever' instant settlement - that's a pricing call, not a product one."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "And how do you stop this happening again?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "A light deal desk: any non-standard commitment above a size threshold - say Rs 500 crore TPV - needs a PM and a compliance sign-off within 48 hours, so sales isn't slowed down. I'd also give sales a one-page 'what's live, what's coming, what's not allowed' sheet, refreshed monthly, and track off-roadmap promises per quarter as a metric. Sales found a real gap here - the process should capture that signal, not punish it."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How do you measure whether you handled this well?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Hypothesis: delivering the binding promise on existing rails keeps the merchant and opens the franchise segment without touching regulatory work. Leading signals: first 60 stores live and settling by 15 January; KYC completion rate per week; payout success rate and recon breaks per day during the Republic Day sale. Lagging: TPV ramp to plan in 90 days, franchise pipeline converted - of the 14 requests, how many sign in two quarters - and MDR billing shipped on the notified date. Guardrails: zero compliance exceptions, merchant NPS/CSAT, and off-roadmap promises trending down."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Wrap it up."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'd unbundle the promise. The binding part - franchise split settlement - is mostly Route, serves Rs 10,000 crore of pipeline, so we make it a product feature and ship it in phases from 15 January. Same-day settlement exists and is a pricing call. MDR pass-through is not allowed, and we say so in week one with a better alternative. MDR billing work is protected. Then I add a light deal desk so sales keeps its speed and product keeps the roadmap honest."
+    }
+  ],
+  "answer_and_recommendation": "Ranked options: (1) RECOMMENDED - Option C, unbundle and deliver: (a) the binding item, franchise split settlement, built as a general 'franchise/dealer payouts' capability on Route - 60 stores live by 15 Jan, all 300 by end-Feb, KYC-led; (b) same-day settlement through existing Instant Settlements, with price decided by the business head; (c) MDR pass-through declined clearly in week 1 because NPCI bars passing UPI MDR to consumers, replaced by a blended enterprise rate, store-wise MDR cost reporting and honest offers; (d) store dashboard in phase 2 via the reports API; plus a deal-desk sign-off for non-standard commitments. (2) Option A, build all - rejected: one item is illegal, and it would break regulatory MDR billing work. (3) Option B, refuse - rejected: loses a large logo in an IPO year and ignores Rs 10,000 cr of similar demand. Risks and mitigation: KYC on 300 franchises delays go-live (phased cohorts, dedicated ops); merchant feels misled (joint sales-PM briefing in week 1, written plan); MDR date moves earlier (regulatory work protected, rollout moves instead); precedent for sales (deal desk, monthly 'live/coming/not allowed' sheet). Closing line: 'I'd keep the promise that's binding, price the one that's commercial, say no early to the one that's illegal - and fix the process so sales' instincts become roadmap signal, not surprises.'",
+  "counter_metrics_guardrails": "Primary: merchant live on time (first cohort by 15 Jan), 90-day TPV ramp vs plan. Guardrails: zero compliance exceptions (no unKYC'd linked accounts, no consumer surcharge); payout success rate and reconciliation breaks per day during the Republic Day sale; settlement SLA adherence for other merchants on Route (no degradation from the large onboarding); MDR billing changes shipped by the NPCI-notified date; gross margin on the account after instant-settlement pricing; merchant CSAT and escalations; sales cycle time after the deal desk (must not add more than 48 hours); count of off-roadmap commitments per quarter; engineering time spent on single-merchant work.",
+  "follow_up_twists": [
+    {
+      "twist": "The merchant's CEO says: no MDR pass-through, no deal - we'll go back to our old gateway.",
+      "response": "Then we let that part go rather than break NPCI rules; every compliant gateway has to say the same, so we compete on blended pricing, payouts and reliability - and I'd bet they stay."
+    },
+    {
+      "twist": "The business head says: just build it all, this logo matters for the IPO.",
+      "response": "Agree on the logo, disagree on the method: I'd show that two of four items need no build, one cannot be built legally, and the one that can is on track - so the IPO story is protected without risking a compliance finding."
+    },
+    {
+      "twist": "NPCI notifies the MDR start for 1 December, six weeks earlier than planned.",
+      "response": "Regulatory work gets the full squad; the franchise rollout drops to the first 60 stores by 15 Jan and the rest moves to March, and the merchant hears it the same day with a new plan."
+    }
+  ],
+  "common_pitfalls": [
+    "Treating the promise as one feature to accept or reject - the strong answer unbundles it into binding vs. expected, existing vs. new, legal vs. not.",
+    "Missing the regulatory trap - offering to 'build a convenience fee' to pass UPI MDR to shoppers, which NPCI's framework forbids, or splitting funds to franchise bank accounts without KYC'd linked accounts under the PA Directions 2025.",
+    "Blaming sales, or escalating straight to leadership, instead of a private alignment and a joint customer briefing.",
+    "Fixing the deal but not the system - no deal-desk or sign-off rule, so the same thing happens next quarter; or the opposite, a heavy approval process that slows every enterprise deal."
+  ],
+  "skills_tested": [
+    "communication",
+    "business sense",
+    "prioritisation",
+    "execution",
+    "structuring",
+    "empathy"
+  ],
+  "linked_teardown": "gokwik_product_teardown (gokwik_product_teardown/results/Razorpay_Magic_Checkout.json). Key facts used: Razorpay is an RBI-authorised payment aggregator with a cross-border licence since Dec 2025, filed a confidential DRHP in Jun 2026 with SEBI approval reported at about a USD 5 bn valuation, and uses gateway margin to bundle add-ons - which is why instant settlement here is a pricing lever, not an engineering build.",
+  "uncertain": [
+    "asked_at",
+    "round_and_level",
+    "source_and_verification",
+    "context_as_of",
+    "regulatory_context"
+  ]
+}

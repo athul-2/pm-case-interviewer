@@ -1,0 +1,207 @@
+{
+  "pun_title": "Numbers Don't Lie?",
+  "case_type": "Situational",
+  "asked_at": "Paytm style (classic 'metric up, satisfaction down' question; Paytm framing by the Authors)",
+  "subject_company": "Paytm (One97 Communications) consumer app. The case uses a hypothetical launch: a redesigned post-payment success screen that shows rewards and pre-approved loan offers after each UPI payment.",
+  "round_and_level": "PM round or hiring-manager round (situational with a metrics core), PM and SPM levels in fintech; APM campus candidates get the segment split handed over earlier. [uncertain]",
+  "difficulty": "Medium-Hard - the candidate must rule out a measurement artefact, find who the detractors are, judge whether the metric gain is real value or borrowed from long-term trust, and land a decision that keeps most of the gain - all in a regulated lending context.",
+  "market_and_industry": "India; fintech - UPI payments plus lending distribution (personal loans and merchant loans through partner banks and NBFCs); mass-market users across metros and Tier-2/3, many on budget Android phones; Hindi and regional-language users; trust-sensitive after the 2024 RBI action on Paytm Payments Bank.",
+  "time_box_minutes": "20",
+  "exact_prompt": "Six weeks ago you launched a new post-payment screen in the Paytm app that shows rewards and loan offers. Your launch metric - loan applications per 1,000 payers - is up 22%. But consumer NPS has dropped from 41 to 33 over the same period. Your VP wants to know: is this a win or not, and what do you do next?",
+  "source_and_verification": "Level: classic. 'One metric went up, another went down' and 'core metric improved but complaints rose' are standard PM and product-analytics interview prompts: Dataford 'Diagnose rising complaints after metric gain' (https://dataford.io/questions/diagnose-rising-complaints-after-metric-gain); dev.to 'Metric trade-offs: deciding when one metric goes up and another goes down' (https://dev.to/xiaoming_nian_94953c8c9b8/metric-tradeoffs-in-data-science-deciding-when-one-metric-goes-up-and-another-goes-down-1e55); Exponent's Google 'launch metrics down' module (https://www.tryexponent.com/courses/google-pm-interview/google-craft-execution/google-launch-metrics-down); Codemia 'Diagnose a drop in NPS' (https://codemia.io/practice/diagnose-a-drop-in-nps). No dated report of this exact prompt at Paytm was found; the Paytm framing and launch are by the Authors. NextLeap, The Product Folks, AmbitionBox and Glassdoor were not directly searchable in this session. Year: classic (2023-2026 prep sites).",
+  "context_as_of": "As of Nov 2026. 1) Paytm Q2 FY27 (Jul-Sep 2026, announced 27 Oct 2026): revenue about Rs 2,648 cr (+28% YoY); net profit about Rs 225 cr; EBITDA about Rs 270 cr, first 10% margin; monthly transacting users (MTU) about 8.5 cr, up about 1 cr YoY; merchant GMV about Rs 7.1 lakh cr (+26%) (YourStory, Oct 2026, https://yourstory.com/2026/10/paytm-sees-10x-rise-in-net-profit-in-q2-of-fy27; Inc42, Oct 2026). Q1 FY27 MTU about 8 cr (Paytm IR blog, https://paytm.com/blog/investor-relations/paytm-q1-fy27-results-revenue-grows-28-to-2448-crore-highest-ever-quarterly-ebitda-at-203-crore/). 2) Paytm is third in UPI: about 8% of volume in Aug-Sep 2026, behind PhonePe (about 46%) and Google Pay (about 32%); UPI hit a record 25.47 bn transactions in Oct 2026 (Entrepreneur India, Nov 2026, https://india.entrepreneur.com/business-news/upi-hits-record-25-47-bn-transactions-in-october-daily-value-crosses-inr-1-l-cr). 3) Lending distribution (personal and merchant loans via partners) is a key revenue engine alongside payments (Inc42, 'Payments vs Lending: the tale of Paytm's two engines', 2026). 4) Trust history: RBI restricted Paytm Payments Bank in Jan-Mar 2024; Paytm moved UPI to a third-party app model with partner PSP banks. Stale-risk: the NPCI 30% market-share cap deadline (31 Dec 2026) and a reported 0.4% MDR on some P2M UPI transactions above Rs 2,000 have conflicting reports on timing. [uncertain]",
+  "regulatory_context": "1) RBI Digital Lending Directions (2025, consolidating the 2022 guidelines): the regulated lender must be clear to the borrower; a Key Fact Statement with all-in APR before signing; a cooling-off period; no automatic credit-limit increases without consent; the digital lending app must be reported and listed. A loan offer on a payment-success screen must follow these, and aggressive placement invites RBI scrutiny. 2) CCPA Dark Patterns Guidelines (Nov 2023): disguised ads, nagging, interface interference and false urgency ('offer expires in 5 minutes') are banned - a post-payment interstitial that delays the payment receipt is at risk. 3) DPDP Act 2023 and Rules: using payment data to target loan offers needs a valid purpose and consent, and sharing leads with lending partners needs clear notice; a spike in spam calls from lenders would be both an NPS and a DPDP issue. 4) NPCI UPI rules: the payment confirmation must be clear and quick; the proposed 30% per-app share cap is a tailwind for Paytm, so payment trust matters more than usual. 5) RBI Integrated Ombudsman: complaints about mis-selling count against the lender and the platform. These make 'keep the gain, fix the experience' a compliance issue as well as an NPS issue. [uncertain]",
+  "public_data_anchors": "1) Paytm MTU about 8.5 cr in Q2 FY27, up about 1 cr YoY (YourStory / Inc42, Oct 2026). 2) Revenue about Rs 2,648 cr, EBITDA about Rs 270 cr (10% margin) in Q2 FY27 (same). 3) Merchant GMV about Rs 7.1 lakh cr (+26% YoY) (same). 4) Paytm UPI share about 8.0% of volume in Aug 2026 (NPCI data via adda247 / Outlook Business, 2026). 5) UPI total 25.47 bn transactions in Oct 2026 (Entrepreneur India, Nov 2026). Derived (illustrative): if 8.5 cr MTU each see the post-payment screen about 15 times a month, that is over 120 cr impressions a month - even a 1% irritation rate touches about 85 lakh users. [uncertain]",
+  "framework_applied": "Situational: SODS (frameworks.md section 3), with an RCA pass (frameworks.md section 4) inside Scope because the first job is to understand why the two numbers diverge. Values shown without naming them: customer obsession (NPS is a trust signal in payments), ownership of the full P&L (loan revenue is real), intellectual honesty (the launch metric may be a vanity win). S - Scope: confirm both numbers (NPS sample mix, survey timing, metric definition - applications vs disbursals vs repayments), find whether the same users drive both, and define success as long-term value (retention, payment frequency, good loans), not applications. O - Options: (1) roll back the screen (protects trust, gives up revenue - speed vs confidence); (2) keep it as is and wait for NPS to recover (momentum vs risk); (3) keep the loan placement but redesign it - frequency caps, eligibility filters, no interstitial before the receipt, opt-out - and run a holdout (short-term revenue vs long-term trust). D - Decision: option 3 with a 10% holdout; NOT rolling back fully, NOT changing the launch metric to make the dashboard look good. S - Success: hypothesis that detractors are concentrated among high-frequency payers shown the offer many times; leading signals are segment NPS, payment frequency, D30 retention, disbursal and early-delinquency rates, and complaints; double down if NPS recovers to 39+ with loan applications at +15% or better; roll back for the affected segment if payment frequency falls.",
+  "clarifying_questions": [
+    {
+      "q": "How is the launch metric defined - applications, approvals, disbursals, or good loans after repayment?",
+      "a": "Applications started per 1,000 payers. Approvals are up 9%, disbursals up 6%. Repayment data isn't mature yet."
+    },
+    {
+      "q": "How is NPS collected - which users, which channel, how many responses, and did the survey change?",
+      "a": "In-app survey after a transaction, about 40,000 responses a month. The survey didn't change, but the sample mix shifted slightly towards newer users because MTU grew."
+    },
+    {
+      "q": "Did anything else change in the same six weeks - pricing, outages, other launches, competitors?",
+      "a": "A short UPI partner-bank outage in week 3, and a cashback programme was reduced in week 2."
+    },
+    {
+      "q": "Is there a control group or holdout for the new screen?",
+      "a": "It rolled out to 100% after a two-week 50/50 test; the test showed applications up, and NPS wasn't measured in the test."
+    },
+    {
+      "q": "Which segments drive the NPS drop?",
+      "a": "We have a split by payment frequency and by offer exposure - I'll share it."
+    },
+    {
+      "q": "What are detractors saying in the free-text comments?",
+      "a": "Common themes: 'too many loan ads', 'payment screen is slow', 'getting calls from loan companies'."
+    },
+    {
+      "q": "Are payment behaviours moving - payment frequency, retention, uninstalls?",
+      "a": "Payments per MTU are flat overall. Uninstalls are up slightly."
+    }
+  ],
+  "interviewer_data_reveals": "Exhibit 1 - Metric funnel (illustrative): loan applications per 1,000 payers 18 to 22 (+22%); approvals +9%; disbursals +6%; the gap means many low-intent or ineligible users are clicking. Exhibit 2 - NPS by segment (illustrative): users shown the offer 1-3 times/month NPS 40 (from 42); 4-10 times NPS 34 (from 41); 10+ times NPS 22 (from 44); the 10+ segment is high-frequency payers - kirana and small-shop daily users, about 18% of MTU but about 45% of payment volume. Exhibit 3 - Confounders (illustrative): cashback cut in week 2 lowered NPS about 2 points in a separate tracking survey; the week-3 bank outage caused a 1-week dip that recovered; new-user mix shift explains about 1 point. Exhibit 4 - Verbatims (illustrative): 38% of detractor comments mention loan ads or the screen; 21% mention lender calls/SMS; 14% mention payment receipt delay (the new screen adds about 1.2 seconds before the 'Paid' tick on low-end Android). Exhibit 5 - Behaviour (illustrative): payments per MTU flat overall, but down 4% in the 10+ segment; uninstalls up 0.3 pp. Real anchors: MTU about 8.5 cr and EBITDA margin 10% in Q2 FY27 (YourStory/Inc42, Oct 2026).",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "Launch metric up 22%, NPS down 8 points. Is this a win?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Not yet - I can't call it either way until I know whether the same users drive both numbers and whether the 22% is real value. I'll scope it first with a quick root-cause pass, then give options, a decision and how we'll measure it. Can I start with how the two numbers are defined?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Sure."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Is the launch metric applications, or disbursed loans? Applications are the easiest thing to inflate."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Applications per 1,000 payers, up 22%. Approvals up 9%, disbursals up 6%."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's the first important clue. The real business gain is closer to 6% than 22%. The gap means a lot of people are clicking who either aren't eligible or don't really want a loan - that's the kind of click that annoys people. Now NPS - did the survey or sample change?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Same survey, about 40,000 responses a month. The sample shifted slightly towards newer users because MTU grew."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So part of the drop could be mix. Anything else change in those six weeks - cashback, outages?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Cashback was reduced in week 2, and there was a partner-bank UPI outage in week 3."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then I want to separate the confounders before blaming the screen. Do we have any estimate of how much each explains?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Tracking suggests the cashback cut cost about 2 points, the outage dip recovered, and the mix shift is about 1 point."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So about 3 of the 8 points are other things, and about 5 points are possibly the screen. That's still big for a payments app. Next, I'd like to see NPS by how often users saw the offer."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "1-3 times a month: 42 to 40. 4-10 times: 41 to 34. 10+ times: 44 to 22. The 10+ group is about 18% of MTU but about 45% of payment volume."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's the real finding. There's a dose-response: the more often you see the offer, the angrier you are. And the angriest group is our most valuable one - daily payers at kiranas and chai stalls who scan 15 times a month. For them, a loan pitch after every Rs 20 payment is nagging. These users are also the easiest for PhonePe and Google Pay to take, because switching costs nothing."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What do detractors say?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Let me guess and you correct me: too many loan ads, and something about speed."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "38% mention loan ads, 21% mention calls from lenders, 14% mention the 'Paid' tick being slower - about 1.2 seconds on low-end Android."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Three separate problems, then. Frequency is a design problem. The receipt delay is a core-job problem - the shopkeeper is waiting to see the tick, and we've slowed the one thing the app must do perfectly. The lender calls are the most serious: if leads are being shared and partners are cold-calling, that's a consent and DPDP problem and a mis-selling risk under RBI's digital lending rules. Do behaviours show it yet?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Payments per user flat overall, down 4% in the 10+ group. Uninstalls up 0.3 points."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So it's starting to show up in behaviour in the segment that matters. Here are my options. Option 1: roll back the screen. Clean and fast, but we give up about 6% more disbursals, which is real revenue for a company that just reached a 10% EBITDA margin. Option 2: keep it and wait. Keeps the revenue, but we're spending trust in our highest-value segment, and NPS here leads payment share. Option 3: keep the loan placement but fix how it's shown, and measure it properly with a holdout."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Which one?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Option 3, with four changes. First, the 'Paid' tick and receipt always show first and immediately - the offer can never delay the payment. Second, a frequency cap, say once a week, and none on payments below about Rs 200. Third, show it only to users who are pre-approved and likely eligible - that also closes the gap between applications and disbursals. Fourth, a 'not interested' option that suppresses offers for 90 days. On the lender calls, I'd immediately audit how leads are shared and stop sharing anything without explicit consent - that one I wouldn't wait on."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What are you not doing?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'm not rolling back for everyone - the 1-3 group is barely affected and converts well. And I'm not changing the launch metric to make the dashboard look better. I'm changing the success metric to disbursals of good loans, with NPS and payment frequency as guardrails, so the team is rewarded for the right thing."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How do you know it's working?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Keep a 10% holdout with no offer screen, so we finally measure NPS and payment frequency against a control. Hypothesis: with the cap and targeting, NPS in the 10+ group recovers to the high 30s within 4 weeks and disbursals stay at least 4-5% above the holdout. If disbursals hold and NPS recovers, we double down and expand to other placements with the same rules. If payment frequency in the 10+ group keeps falling, I remove the offer for that segment entirely - payments are the reason the app gets opened."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Your VP says, 'The 22% was in the board update. Don't make us walk it back.'"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'd reframe it rather than walk it back: the launch proved demand for credit on the payment surface - disbursals up 6% - and we've found how to keep it without losing our best payers. That's a stronger story for the board than a number that's quietly costing payment share."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Wrap up."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "The 22% is mostly low-intent clicks; the real gain is about 6% more disbursals. About 5 of the 8 NPS points come from the screen, concentrated in daily payers who see it 10+ times - our most valuable users. So I keep the placement but put the payment tick first, cap frequency, target eligible users, fix lead-sharing consent now, and measure against a holdout with good loans as the goal and NPS and payment frequency as guardrails."
+    }
+  ],
+  "answer_and_recommendation": "Ranked causes of the divergence: 1) Over-exposure - a dose-response between offer frequency and NPS, with the 10+ exposures/month segment (high-frequency daily payers, about 45% of payment volume, illustrative) falling from 44 to 22. 2) Core-job damage - the new screen delays the 'Paid' confirmation by about 1.2 seconds on low-end Android. 3) Lead-sharing and lender cold calls - a trust, consent (DPDP) and mis-selling (RBI digital lending) risk. Confounders explain about 3 of 8 points (cashback cut, mix shift). Also: the 22% launch metric overstates value; disbursals are up only about 6%. Recommendation: keep the loan placement but redesign it - receipt first, weekly frequency cap, no offers on small-value payments, eligibility targeting, a 90-day 'not interested' opt-out - fix lead-sharing consent immediately, and run a 10% holdout. Change the success metric from applications to disbursals of loans that repay, with NPS, payment frequency and complaints as guardrails. Risks: disbursal gain shrinks after the cap (accept a smaller, cleaner gain; test cap levels); the board narrative (reframe as 'proved credit demand, protected the payments base'); regulatory exposure from aggressive placement (legal review of KFS, consent and dark-pattern compliance). Closing line: 'The numbers didn't lie - the launch metric just measured clicks. I'd keep the credit revenue, stop charging it to our best payers' trust, and measure it against a holdout from now on.'",
+  "counter_metrics_guardrails": "Success metric: incremental disbursals per 1,000 payers vs holdout, later adjusted for early delinquency (30+ DPD on first EMI). Guardrails: segment NPS (especially 10+ payers); payments per MTU and D30 retention of high-frequency payers; time to 'Paid' confirmation (p95 on low-end Android); uninstall rate; 'not interested' opt-out rate; complaints mentioning loan calls/SMS and ombudsman complaints; consent rates for lead sharing; UPI volume share trend vs PhonePe and Google Pay. Counter-metric: application-to-disbursal ratio - if applications rise while disbursals don't, the screen is generating irritation, not loans.",
+  "follow_up_twists": [
+    {
+      "twist": "After the cap, NPS recovers to 39 but the disbursal gain falls from 6% to 3% over holdout.",
+      "response": "Accept it as the true, sustainable gain, then test placements with intent (bill-pay success, balance check, merchant dashboard) to grow it without returning to nagging."
+    },
+    {
+      "twist": "The lending business head argues NPS doesn't pay the bills and wants the screen at 100% frequency.",
+      "response": "Show that the 10+ segment carries about 45% of payment volume and its payment frequency is down 4% - payments are the funnel lending depends on - and offer the holdout readout in 4 weeks as the deciding data."
+    },
+    {
+      "twist": "Legal finds a lending partner has been calling users who never consented to share their data.",
+      "response": "Stop lead sharing with that partner immediately, notify affected users as DPDP requires, review all partner contracts, and treat it as a trust incident - this outranks any metric discussion."
+    }
+  ],
+  "common_pitfalls": [
+    "Calling it a win or a loss straight away - the answer depends on whether the same users drive both numbers.",
+    "Taking the 22% at face value - applications are a vanity metric here; disbursals (6%) and repayment are what matter.",
+    "Blaming the whole 8-point NPS drop on the launch without separating the cashback cut, the bank outage and the new-user mix.",
+    "Rolling back for everyone - the low-exposure segment is barely affected and converts well; the fix is frequency, targeting and payment-first design.",
+    "Missing the regulatory angle - lender cold calls and nagging interstitials raise DPDP, RBI digital lending and CCPA dark-pattern risks for a brand that has already faced RBI action."
+  ],
+  "skills_tested": [
+    "quant",
+    "structuring",
+    "business sense",
+    "empathy",
+    "prioritisation",
+    "communication"
+  ],
+  "linked_teardown": "None. No local teardown covers Paytm; the closest related material is swiggy-product-teardown/results/Swiggy_UPI_Money_payments.json (UPI context), which is not used for any fact here.",
+  "uncertain": [
+    "round_and_level",
+    "context_as_of",
+    "regulatory_context",
+    "public_data_anchors"
+  ]
+}

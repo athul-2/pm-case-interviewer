@@ -1,0 +1,132 @@
+{
+  "pun_title": "Party of Ten",
+  "case_type": "Product Design",
+  "asked_at": "Airbnb-style classic (asked widely at travel and consumer companies; Airbnb variants on PracHub)",
+  "subject_company": "Airbnb (guest app: search, wishlists, booking, payments, messaging, Trips)",
+  "round_and_level": "Product-sense / product design round for PM or senior PM; a common on-site or take-home prompt [uncertain - classic prompt, no single reported round]",
+  "difficulty": "Medium - a familiar prompt, but strong answers name the organiser vs. the group as different users, handle the money problem (one person fronting thousands of dollars), and address the host side (party risk, occupancy limits) instead of only adding a group chat",
+  "market_and_industry": "US (global platform); online travel / short-term rental marketplace; leisure group trips (friend groups, bachelor/bachelorette parties, multi-family vacations, reunions) booked mostly on mobile, with 4+ bedroom entire homes as the key supply",
+  "time_box_minutes": "35-45",
+  "exact_prompt": "Redesign Airbnb for group travel. Imagine ten friends trying to plan a trip together - how would you change the product so that the group gets from 'we should go somewhere' to a booked stay, and how would you know it worked?",
+  "source_and_verification": "Verification: classic (a long-standing product-design prompt, reworded here). Closest reported variant: PracHub 'Airbnb Product Sense: Coordinating a Group of Travelers From First Idea to Booked Stay' (Airbnb, product sense; dated around Sep 2026 per search snippet) [uncertain on date], which also asks whether group features could bring more parties to hosts: https://prachub.com/interview-questions/airbnb-product-sense-coordinating-a-group-of-travelers-from-first-idea-to-booked-stay . Community case studies: UX Planet 'UX case study: Designing group planning experience in Airbnb' (https://uxplanet.org/ux-case-study-designing-group-planning-experience-in-airbnb-a92b1608d390) and a UX Bootcamp case study on group payment splitting (https://bootcamp.uxdesign.cc/case-study-airbnb-improvement-of-airbnb-booking-ux-process-beb51da06fd3). Not found as a dated report on NextLeap, The Product Folks, AmbitionBox or Glassdoor (searched Nov 2026).",
+  "context_as_of": "As of 2026-11-11. (1) Scale: Airbnb Q3 2026 (reported 5 Nov 2026): Nights and Seats Booked 155 mn (+16% YoY); gross booking value $27.7 bn (+21%); revenue $4.87 bn (+19%); ADR $179 (+4%). Reserve Now, Pay Later gave a 3-point lift to nights; the implied take rate fell to 17.6% (https://www.travelextra.ie/?p=158293; SEC 8-K: https://www.sec.gov/Archives/edgar/data/0001559720/000119312526449727/d437988dex991.htm). (2) Group features already shipped or announced: the 2024 Summer Release said more than 80% of bookings are group trips (2+ people, Apr 2023-Mar 2024) and launched shared wishlists with notes and voting, trip invitations and group messaging (https://www.entrepreneur.com/business-news/airbnb-reveals-major-changes-to-platform-for-hosts-guests/473610). The 2026 Summer Release (20 May 2026) added a shared, editable itinerary on the Trips map, Connections (friends' trips and reviews), direct messaging with connections, and an AI comparison of wishlisted homes 'later this year'. It also reported 5.5 mn+ hosts and 2.5 bn+ guest arrivals (https://news.airbnb.com/airbnb-2026-summer-release/). (3) Payments: Airbnb launched split payments in Nov 2017 (from the Tilt acquisition; up to 16 people, 72-hour hold, booking 10+ days ahead) (https://techcrunch.com/2017/11/28/airbnb-launches-payment-splitting-for-group-trips/). Business Insider reports it was discontinued around 2018, so the organiser now usually pays and collects through Venmo or Splitwise [uncertain - current status not confirmed on Airbnb's help centre]. (4) Demand signals: entire homes with 4+ bedrooms are among the fastest-growing segments in 2026 shareholder-letter coverage; rural stays draw 49% larger groups than city stays in Europe (https://news.airbnb.com/short-haul-domestic-stays-lead-european-summer-travel/). (5) Trust and safety: Airbnb's global party ban (made permanent Jun 2022) and anti-party technology screen high-risk local bookings by younger guests. Group features have to work with this, not against it. Possibly stale: the rollout status of 2026 Summer Release group features [uncertain].",
+  "regulatory_context": "(1) Payments: collecting money from several payers for one booking makes Airbnb (through Airbnb Payments) a payment facilitator or money transmitter. That requires state money-transmitter licences in the US, KYC/AML for each payer, PCI DSS, and chargeback handling per payer. (2) FTC Rule on Unfair or Deceptive Fees (effective 12 May 2025) for short-term lodging and live events: the total price, including mandatory fees, must be shown up front. Per-person splits must show the all-in share, not a teaser per-night rate. California SB 478 does the same. (3) Local short-term-rental rules: occupancy caps (often 2 per bedroom + 2), city registration (e.g. NYC Local Law 18, enforced from Sep 2023), noise and party ordinances. Group search must respect listing occupancy limits rather than encourage overbooking. (4) Consumer protection for cancellations: when a group member drops out, refund rules must be clear for each payer (state UDAP laws; EU/UK consumer law if global). (5) Privacy: inviting contacts and showing friends' travel history (Connections) - CCPA/CPRA consent, opt-in sharing and safety controls (for example, hiding live locations). (6) Anti-discrimination: hosts can't reject groups on protected characteristics (Fair Housing-type concerns, Airbnb's Community Commitment), so 'group screening' must be based on behaviour and risk signals, not demographics.",
+  "public_data_anchors": "1) Q3 2026: Nights and Seats Booked 155 mn (+16% YoY), GBV $27.7 bn (+21%), revenue $4.87 bn (+19%), ADR $179 (Airbnb Q3 2026 release, 5 Nov 2026; travelextra.ie / SEC 8-K). 2) More than 80% of bookings are group trips (2+ guests), Apr 2023-Mar 2024 (Airbnb 2024 Summer Release, via Entrepreneur). 3) 5.5 mn+ hosts; 2.5 bn+ guest arrivals all-time; 1 bn+ reviews (2026 Summer Release, 20 May 2026). 4) Reserve Now, Pay Later added 3 points to Q3 2026 nights growth; take rate 17.6%. 5) Split payments (2017): up to 16 payers, 72-hour hold, booking at least 10 days ahead and under 27 nights (TechCrunch, 28 Nov 2017). 6) Rural stays draw 49% larger groups than city stays in Europe (Airbnb newsroom, 2026). 7) Business travel: nearly 60% of bookings had more than one guest, nearly 40% three or more (Business Travel News Europe, older) [uncertain - date and scope]. 8) India: domestic searches for groups of 5+ including a child grew 55%+ YoY (Airbnb India survey via t2online) [uncertain - date].",
+  "framework_applied": "CIRCLES + List-and-Trim + JTBD (frameworks.md section 1), with an explicit two-sided marketplace check (guest group vs. host). C - Comprehend: goal = raise conversion of group planning into booked stays and GBV per group, without more host incidents; scope = the guest journey from idea to booking, plus the pre-stay phase (payment and roster), not in-trip experiences; who am I = a PM on Airbnb's guest team; constraints = host trust (the party ban), payments regulation, and features already shipped (shared wishlists, group messaging, the 2026 shared itinerary). I - Identify: the organiser vs. the passive members; segments = friend groups of 6-12 (bachelor/bachelorette, birthdays, reunions), multi-family vacations, extended-family events, corporate offsites; pick the organiser of a 6-12 person friend group, who does most of the work and controls the booking decision and the money. R - Report needs (JTBD): get everyone to agree on dates, budget and place quickly; find homes that fit the group's sleeping needs; not front $4,000-8,000 and chase friends for money; know who's actually in; keep everything in one place instead of WhatsApp + Splitwise + Google Sheets. C - Cut: prioritise 'group decision' (the stall point) and 'money' (the risk and resentment point), because both block conversion and the organiser has no in-product workaround. L - List: safe = a Group Trip Hub (date/budget polls, a ranked shortlist with votes, bed-per-person fit); ambitious = 'Split and Hold' (each member pays their own share within a hold window, Reserve Now Pay Later per person, automatic reallocation if someone drops out); visionary = an AI group concierge that collects each member's constraints and proposes 3 homes, or 'clusters' of nearby homes for 15-30 people, with a shared trip budget wallet. E - Evaluate: impact vs effort; edge cases (dropouts, uneven rooms, party risk, chargebacks); competitors (Vrbo, Booking.com, Splitwise, WhatsApp, Wanderlog). S - Summarise: ship Group Hub plus Split and Hold for 4+ bedroom bookings in the US, test against control; the NSM is booked group trips (3+ paying members) per week; guardrails are host incident rate, host acceptance and payment-failure cancellations.",
+  "clarifying_questions": "1) Q: What's the goal - more group bookings, bigger bookings, or better satisfaction? A: More group trips actually booked - many groups plan on Airbnb and never book, or book elsewhere. 2) Q: How big is a 'group' here? A: Think 6-12 adults; larger events are a stretch. 3) Q: Leisure or corporate? A: Leisure first. 4) Q: Which part of the journey - planning, booking, the stay? A: Mainly idea to booked stay; touch pre-trip if it matters. 5) Q: Can we change payments? A: Yes, within regulation. Assume Airbnb Payments can support multi-payer flows with some investment. 6) Q: Any host-side constraints? A: Hosts worry about parties and damage. Don't make that worse. 7) Q: What exists today? A: Shared wishlists with voting, group messaging, and a shared itinerary rolling out from the 2026 Summer Release.",
+  "interviewer_data_reveals": "Exhibit 1 - Group planning funnel, wishlists with 3+ collaborators, US, last 90 days (illustrative): wishlist created 100%; 3+ members added homes 58%; votes cast by 3+ members 34%; organiser started checkout 19%; booking completed 12%; median time from wishlist to booking 16 days vs 3 days for solo/couple trips. Exhibit 2 - Exit survey of organisers who didn't book (illustrative): 'couldn't get everyone to agree on dates/budget' 38%; 'didn't want to pay for everyone upfront' 27%; 'people dropped out / weren't sure who's coming' 17%; 'found a cheaper or bigger option elsewhere' 12%; other 6%. Exhibit 3 - Group booking economics (illustrative): average group booking (4+ bedrooms) $3,900 GBV vs $1,050 for all bookings; cancellation rate 9% vs 6%; host-reported incidents 1.8 per 1,000 group stays vs 0.7 overall. Exhibit 4 - Payment behaviour (illustrative): in 71% of group bookings one card pays the full amount; organisers report waiting a median of 11 days to be repaid, and 1 in 5 say at least one person never paid in full. Exhibit 5 - Real anchors: Q3 2026 GBV $27.7 bn, ADR $179, Nights and Seats Booked 155 mn; 80%+ of bookings are 2+ guest trips (2024).",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "Redesign Airbnb for group travel."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Let me restate it: make it much easier for a group to go from 'we should go somewhere' to a booked stay. A few questions first. What's the goal - more group bookings, bigger bookings, or happier groups?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "More group trips actually booked. Many groups start planning on Airbnb and never book, or book somewhere else."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "How big a group, and leisure or business? And what's already there - I know shared wishlists with voting and group messaging shipped in 2024, and the 2026 Summer Release added a shared itinerary."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "6-12 adults, leisure. Yes, those exist - assume they're live. You can change payments within regulation. And hosts are nervous about parties, so don't make that worse."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Got it. I'm a PM on the guest side, but I'll treat the host as a constraint throughout. Goal: booked group trips, with no rise in host incidents. Scope: idea to booking, plus the pre-trip money and roster phase."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Users. The first insight is that a group isn't one user. There's the organiser - who searches, herds and usually pays - and the members, who vote occasionally and pay late. Segments: (a) friend groups of 6-12 - bachelor/bachelorette, birthdays, reunions; (b) multi-family vacations; (c) extended-family events like weddings; (d) corporate offsites. I'll pick the organiser of a 6-12 friend group: the most frequent, the most pain, and the one who decides. Persona: Priya, 31, in Austin, planning a bachelorette weekend for 10 in Nashville."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "[Exhibit 1] For wishlists with 3+ collaborators: 58% get homes added by several people, 34% get votes from 3+ members, 19% start checkout, 12% book. The median time to book is 16 days vs 3 for solo trips."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So the funnel breaks twice: between 'everyone adds homes' and 'everyone votes' - a decision problem - and between 'voted' and 'booked' - which I suspect is money. And 16 days is long enough for the home to be taken. Can I see why organisers drop out?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "[Exhibit 2] 38% couldn't get agreement on dates or budget; 27% didn't want to pay for everyone upfront; 17% didn't know who was coming; 12% found something elsewhere."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's clean. Needs as JTBD for Priya: 1) When I propose a trip, I want everyone to agree on dates, budget and place fast, so we book before the house goes. 2) When we book, I don't want to front $4,000 and chase nine people on Venmo. 3) I want to know who's committed. 4) I want homes that fit our sleeping needs - ten people, not ten on couches. 5) I want one place for plans instead of WhatsApp plus Splitwise plus a Google Sheet."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Prioritise. Agreement is 38% of drop-off and money is 27% - together about two-thirds, both frequent, and the workarounds are painful and outside Airbnb. Commitment (17%) is actually solved by fixing money: when people pay, they're in. So I'll focus on 'decide together' and 'pay separately'."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "[Exhibit 4] 71% of group bookings go on one card, organisers wait a median 11 days to be repaid, and 1 in 5 say someone never paid in full."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That makes money the bigger trust problem for Priya - she's acting as a bank for her friends. Solutions. Safe: a 'Group Trip Hub' that builds on the shared wishlist: the organiser starts a trip with a date poll and a per-person budget poll; the wishlist ranks homes by votes and shows a per-person all-in price and a 'sleeps 10 in beds' badge; a 'decide by Friday' deadline nudges stragglers. Low effort - it extends what's live."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Ambitious: 'Split and Hold'. The organiser reserves the home and invites members; each member pays their own share within a 48-72 hour hold, by card or Reserve Now Pay Later. The roster shows who's paid. If someone drops out, the organiser chooses to re-split among the rest or cover it - no awkward money chase. Airbnb had split payments in 2017 from the Tilt acquisition, then dropped them, so I'd learn from why: probably holds expiring, host frustration with pending bookings, and payment complexity."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Visionary: an AI group concierge. Each member answers three questions - dates, budget, must-haves - and the agent proposes three homes, or for 15-30 people a 'cluster' of two or three homes within walking distance, booked together with a shared group wallet for the house, groceries and experiences."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Evaluate. Group Hub: impact medium-high on the 38% problem, effort low. Split and Hold: impact high on the 27% problem plus commitment, effort high - money-transmitter licensing, per-payer chargebacks, and host-side holds. Concierge and clusters: high impact for large events, high effort, and it needs the first two as building blocks. Competitors: Vrbo targets families with large homes; Splitwise and WhatsApp own the workaround; nobody owns 'decide and pay together'."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Hosts hate pending bookings and hate groups that turn into parties. What happens to them?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "[Exhibit 3] Group bookings are $3,900 GBV on average vs $1,050, but cancellations are 9% vs 6% and host incidents 1.8 per 1,000 vs 0.7."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Group stays are almost 4x the value, so worth winning - but the incident gap is real. Design for hosts: 1) the dates are blocked during the hold, and if the hold fails, Airbnb or the organiser covers the gap, so the host never sees a half-paid booking; 2) every paying member is a verified Airbnb account, so the host sees who's actually staying - which reduces anonymous party bookings; 3) group bookings run through the existing anti-party risk model, and hosts can set 'max group size' and 'event-friendly' flags; 4) occupancy limits are enforced in group search, which also keeps us aligned with local short-term-rental rules."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Payments and regulation: per-payer KYC and chargeback handling through Airbnb Payments, state money-transmitter compliance, and all-in per-person prices to meet the FTC's fee rule. I'd launch Split and Hold only for US bookings with 4+ bedrooms, at least 14 days out."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Recommendation: ship Group Hub plus Split and Hold as one 'Plan together, pay separately' release, A/B tested against today's flow on US group wishlists. North Star: booked group trips with 3+ paying members per week. Supporting: wishlist-to-booking conversion for 3+ collaborators (target 12% to 18%), days from wishlist to booking (16 to under 7), GBV per group booking. Guardrails: host incident rate, host acceptance rate on group requests, hold-failure cancellations, chargebacks, and solo/couple conversion."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Finance asks: doesn't splitting payments just delay cash and raise payment costs?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Somewhat - several transactions instead of one, and some risk on failed shares. But the cost of not doing it is the 27% of organisers who walk away from a $3,900 booking. Even a few points of conversion pays for it. We can also cap holds at 72 hours and require the organiser's card as backup, so Airbnb never carries the gap."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Closing: for a party of ten, the hard part isn't finding a house - it's getting ten people to say yes and pay. Airbnb already helps them dream together; this helps them decide and pay together, and gives hosts ten verified guests instead of one stranger's card."
+    }
+  ],
+  "answer_and_recommendation": "Ranked options: (1) RECOMMENDED - 'Plan together, pay separately', in two parts. (a) Group Trip Hub, built on shared wishlists: date and budget polls, a vote-ranked shortlist with all-in per-person prices and a 'sleeps N in beds' fit, a decision deadline and nudges, and a live roster. (b) Split and Hold: the organiser reserves; members pay their own share within a 48-72 hour hold (card or Reserve Now Pay Later per person); the organiser's card backs up any gap, so the host never sees a half-paid booking; dropouts can be re-split or covered in one tap. (2) Host-side safeguards bundled in: every payer is a verified guest on the reservation, group bookings run through the anti-party risk model, hosts can set group-size and event flags, and occupancy limits are enforced in search. (3) Later: an AI group concierge that collects each member's constraints, and 'clusters' of nearby homes for 15-30 people with a shared group wallet. Why: 38% of non-booking organisers stall on agreement and 27% on fronting the money; group bookings are about 4x the GBV of an average booking ($3,900 vs $1,050 illustrative); wishlist-to-booking takes 16 days vs 3. Rollout: US, 4+ bedroom homes, at least 14 days before check-in, A/B against today's flow. Risks and mitigation: host trust and parties (verified payers, risk model, host controls); payment regulation (money-transmitter licensing, per-payer KYC and chargebacks, FTC all-in pricing); hold expiry losing the home (organiser backup card, short holds); social friction (the organiser chooses re-split or cover; reminders come from Airbnb, not the organiser); cannibalising the solo flow (keep group tools behind 'Plan with others'). Closing line: 'For a party of ten, the hard part isn't finding the house - it's getting ten people to say yes and pay. Let Airbnb be the one who does the chasing.'",
+  "counter_metrics_guardrails": "North Star: booked group trips with 3+ paying members per week (US, test vs control). Guardrails: (1) host incident and damage-claim rate per 1,000 group stays; (2) host acceptance and cancellation rate on group requests, and host NPS; (3) hold-failure cancellations (homes released because shares weren't paid) and the share of gaps the organiser had to cover; (4) per-payer chargeback and payment-failure rate, plus payment cost per booking; (5) take rate and GBV per booking (watch for Pay Later lowering take rate, as it did in Q3 2026); (6) conversion of solo and couple bookings (no cannibalisation or added clutter); (7) guest-reported social friction - complaints that reminders felt like spam, invite opt-outs; (8) occupancy-limit violations and local-regulation complaints.",
+  "follow_up_twists": "1) 'Airbnb tried split payments in 2017 and dropped it - why will it work now?' Strong response: the earlier version put risk on hosts and the organiser (unpaid holds released the home); this design backs gaps with the organiser's card, ties payment to verification and roster, and reuses today's Reserve Now Pay Later rails - and we'd validate with a 4+ bedroom pilot before scaling. 2) 'A host says group features will bring more parties.' Strong response: they make groups less anonymous - every payer is a verified guest, the risk model sees the whole roster, and hosts get group-size and event controls - so measure incidents per 1,000 group stays as a launch-blocking guardrail. 3) 'What if the group is 25 people for a wedding?' Strong response: that's the cluster case - book 2-3 nearby homes as one 'group trip' with a shared itinerary and roster, as phase two, once single-home Split and Hold is proven.",
+  "common_pitfalls": "1) Treating 'the group' as a single user instead of separating the organiser (does the work, carries the money risk) from the passive members. 2) Proposing features that already exist - shared wishlists with voting, group messaging, the 2026 shared itinerary - without building on them or saying why they're not enough. 3) Ignoring the host side - party risk, half-paid pending bookings, occupancy limits and local short-term-rental rules - in a two-sided marketplace. 4) Hand-waving the money: splitting payments raises money-transmitter, chargeback and FTC all-in pricing issues, and Airbnb's own 2017 split-pay feature was later dropped, so you need to say what's different.",
+  "skills_tested": "structuring, empathy, prioritisation, business sense, execution, communication",
+  "linked_teardown": "None - no local teardown folder covers Airbnb or travel.",
+  "uncertain": [
+    "round_and_level",
+    "source_and_verification",
+    "context_as_of",
+    "public_data_anchors"
+  ]
+}

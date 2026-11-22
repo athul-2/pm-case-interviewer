@@ -1,0 +1,185 @@
+{
+  "pun_title": "Rotten Tomatoes",
+  "case_type": "Product Design",
+  "asked_at": "Swiggy",
+  "subject_company": "Swiggy Instamart (quick-commerce dark stores); Blinkit and Zepto as benchmarks",
+  "round_and_level": "[uncertain] Product sense / ops-product round, PM onsite; PM and SPM levels (often for supply-chain or Instamart ops-tech teams). The round and level are not stated in any public report I found.",
+  "difficulty": "Medium-Hard. The user is internal (dark-store staff and category managers), the levers cover forecasting, ops and the customer app, and the candidate has to trade waste against availability.",
+  "market_and_industry": "India; quick commerce (Instamart, Blinkit, Zepto); fresh fruits and vegetables (FnV) in 2,500-4,000 sq ft dark stores in Tier-1 metros; buying through mandis and farmer-producer organisations, and handled by staff on handheld Android devices.",
+  "time_box_minutes": "30-35",
+  "exact_prompt": "You run fresh produce for a quick-commerce dark store. Fruits and vegetables are being thrown away every day. Design a product to reduce that wastage.",
+  "source_and_verification": "Level: reported (catalogued in this casebook's outline as asked at Swiggy). [uncertain] I found no public page with this exact wording; search (Nov 2026) turned up related dark-store questions on AmbitionBox, for example Zepto's dark-store-manager questions about SOPs for FnV handling (https://www.ambitionbox.com/interviews/zepto-interview-questions/dark-store-manager) and Zepto PM-2 questions on mother-hub-to-dark-store inventory allocation (https://www.ambitionbox.com/interviews/zepto-interview-questions/product-manager-2). Year reported: [uncertain] 2024-25.",
+  "context_as_of": "As of Nov 2026: (1) Instamart has 1,240 dark stores in 133 cities, with Q2 FY27 GOV of Rs 9,230 cr and 130.3 Mn orders. It is moving into an Indian-owned-and-controlled subsidiary so it can switch to an inventory-led (first-party) model from mid-Q3 FY27, which means Swiggy, not sellers, will own the cost of spoiled produce (Swiggy Q2 FY27 shareholder letter; local teardown). (2) Blinkit already switched to first-party inventory and disclosed inventory losses (expiry, shrinkage, damage, pilferage and transit) of about 1.8% of NOV, roughly Rs 308 cr in Q1 FY27, close to 3x its adjusted EBITDA of Rs 102 cr. Management said perishables are a large share of these losses (https://inc42.com/buzz/blinkits-q1-adjusted-ebitda-rises-to-%e2%82%b9102-cr-others-losses-rise-on-nugget-rd/, https://lapaasvoice.com/blinkit-lost-%E2%82%B9308-crore-to-inventory-spoilage-damage-and-theft-in-q1/). (3) A 2026 scraping report found FnV availability below 75% on all three apps (Blinkit 72%, Zepto 61%, Instamart 58%), so the cure for waste must not make stock-outs worse (https://www.actowizsolutions.com/dark-store-data-report-quick-commerc.php; [uncertain] third-party scrape). (4) Platforms are moving toward private-label and premium FnV to lift margins. Stale-risk flags: Instamart's inventory-model timing is guidance; Blinkit's 1.8% figure is for all categories.",
+  "regulatory_context": "(1) FSSAI: dark stores need a licence and must follow hygiene and storage rules; FSSAI and state FDAs suspended several dark-store licences in 2025 for hygiene and expired stock, so any 'sell near-expiry' feature must keep products within safe-to-eat limits and must not sell expired items. (2) Legal Metrology (Packaged Commodities) Rules: packed or pre-cut produce needs declared weight and best-before or use-by dates; loose produce sold by weight needs accurate weighing. (3) FDI rules: foreign-owned marketplaces cannot hold inventory, which is why Instamart is moving to an Indian-owned-and-controlled entity before taking on first-party produce. (4) Consumer Protection (E-Commerce) Rules and the CCPA's 2023 dark-pattern guidelines: markdowns must be shown honestly (no false urgency or fake strike-through prices). (5) [uncertain] There is no Indian food-donation mandate, but FSSAI's Save Food Share Food initiative supports food donation to registered agencies.",
+  "public_data_anchors": "1) Blinkit inventory losses: about 1.8% of NOV, about Rs 308 cr in Q1 FY27, against Rs 102 cr adjusted EBITDA (https://inc42.com/buzz/blinkits-q1-adjusted-ebitda-rises-to-%e2%82%b9102-cr-others-losses-rise-on-nugget-rd/, Aug 2026). 2) NABCONS 2022 post-harvest loss study (for 2020-22): fruits 6.02-15.05%, vegetables 4.87-11.61%; guava is worst at 15.05% and tomato at 11.61%; losses worth about Rs 29,545 cr for fruits and Rs 27,459 cr for vegetables a year (https://eparlib.sansad.in/bitstream/123456789/2984698/1/AU1773_tyKJYF.pdf; https://www.global-agriculture.com/india-region/indias-highest-post-harvest-losses-guava-and-tomato-among-the-worst-hit/). 3) FnV availability: Blinkit 72%, Zepto 61%, Instamart 58% ([uncertain] Actowiz 2026 scrape, https://www.actowizsolutions.com/dark-store-data-report-quick-commerc.php). 4) Instamart Q2 FY27: 1,240 dark stores, 130.3 Mn orders, GOV Rs 9,230 cr, contribution margin -1.0% of GOV; inventory model expected to add about 80 bps of CM (Swiggy Q2 FY27 shareholder letter). 5) Zepto: about 2,140 orders per dark store per day in Q4 FY26, about 2x Instamart (Nomura, via local teardown).",
+  "framework_applied": "CIRCLES + List and Trim (frameworks.md, section 1). C - Comprehend: the goal is to cut FnV waste in rupees (shrink as % of FnV sales) without hurting availability or freshness ratings; scope is one dark store's FnV flow (inbound, storage, picking, selling); I am the Instamart supply-chain PM; constraint is no new cold-chain capex in phase 1. I - Identify: list the store manager, the FnV inbound and quality-check associate, pickers, the city category manager and the customer; pick the store manager plus the category manager, since together they decide how much to order and what to do with ageing stock. R - Report needs: 'When I place tomorrow's FnV order at 10pm, I want a demand number I can trust for each SKU, so I don't over-order and throw it away'; 'When stock is ageing, I want to know which units and what to do with them before they rot'. C - Cut: waste mainly comes from over-ordering (forecast) and from no way to sell ageing stock (liquidation); pick the forecast-to-order loop as primary and liquidation as secondary. L - List: safe (shelf-life-aware ordering with FEFO batch tracking), ambitious (dynamic markdowns and a 'Fresh Rescue' rail for ageing produce in the customer app), visionary (a city-level network that moves ageing stock between stores and into cut-fruit, Bolt kitchens or private-label processing, plus farmer-side grading). E - Evaluate: impact vs effort grid plus edge cases (festivals, rain, mandi price spikes) and the competitor benchmark (Blinkit's 1.8%). S - Summarise: ship the shelf-life-aware ordering engine plus FEFO in 20 Bengaluru stores, then layer markdowns, with shrink %, availability and freshness complaints as metrics.",
+  "clarifying_questions": [
+    {
+      "q": "How are we measuring wastage: kg thrown, rupee value written off, or shrink as a % of FnV sales?",
+      "a": "Rupee value written off as a % of FnV sales, which we call FnV shrink."
+    },
+    {
+      "q": "Is this one store or the whole network, and are we inventory-owning or marketplace?",
+      "a": "Design for one typical metro dark store that can scale. Assume we own the inventory, as Instamart is moving to that model."
+    },
+    {
+      "q": "What is the main goal: lower shrink, or lower shrink while keeping availability?",
+      "a": "Lower shrink, but availability and freshness complaints can't get worse."
+    },
+    {
+      "q": "How does FnV come into the store today?",
+      "a": "A city mother hub buys from mandis and FPOs early morning, grades it and sends one or two trucks a day. The store manager or system sets the order the night before."
+    },
+    {
+      "q": "Where in the flow is the waste happening?",
+      "a": "Good question. I'll show you the data."
+    },
+    {
+      "q": "Any constraints: capex, cold storage, team?",
+      "a": "No new cold rooms in phase 1. One data science pod and one app team for two quarters."
+    },
+    {
+      "q": "Can we change the customer app (prices, rails), or only internal tools?",
+      "a": "Both, but pricing changes need sign-off from the category team."
+    }
+  ],
+  "interviewer_data_reveals": "Exhibit 1 (illustrative): one Bengaluru store, FnV sales Rs 30 lakh a month, shrink 9% (Rs 2.7 lakh), against 1-2% for packaged FMCG. Exhibit 2 (illustrative): where FnV shrink comes from. Over-ordering and unsold stock reaching end of life 45%; damage in transit and handling 20%; poor storage (wrong temperature, ethylene producers such as bananas stored next to leafy greens) 15%; customer returns and refunds for bad quality 12%; inbound quality not caught at receiving 8%. Exhibit 3 (illustrative): top 5 SKUs by waste. Coriander and leafy greens (shelf life 1-2 days, 28% waste), tomato (3-4 days, 14%), banana (3-4 days, 12%), cut fruits (1 day, 20%), onion and potato (2-3 weeks, 2%). Exhibit 4 (illustrative): forecast accuracy. Current SKU-day forecast error (MAPE) is 35% for leafy greens and 18% for onion and potato; on weekends and rain days the error for leafy greens rises to 50%. Exhibit 5 (real): Blinkit's inventory losses across all categories are about 1.8% of NOV; national post-harvest losses are 5-15% for FnV (NABCONS 2022). Sources in public_data_anchors.",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "Fruits and vegetables are being thrown away every day in our dark stores. Design a product to reduce that."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Let me restate. In a dark store, FnV is the most perishable category: coriander lasts a day or two, tomatoes three or four. I want to design a product that cuts how much of it we write off. First, how do we measure wastage?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Rupee write-off as a percentage of FnV sales. We call it shrink."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "And the goal is lower shrink without worse availability or freshness complaints? Because the easiest way to cut waste is to stock less, and that kills availability, which is already below 75% for FnV across the apps."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Exactly. Shrink down, availability and freshness held."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'll assume I'm the Instamart supply-chain PM, we own the inventory (Instamart is moving to that model, so spoiled produce becomes our cost, like Blinkit's 1.8% of NOV), one metro store, and no new cold rooms for now. Where does the waste come from?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Here's the breakdown (Exhibits 1 and 2)."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So 9% shrink, Rs 2.7 lakh a month in one store. Nearly half is over-ordering and stock reaching end of life, then handling damage, storage and quality returns. Let me map the users. (1) The store manager places the FnV order and runs the floor. (2) The inbound and QC associate receives and grades stock. (3) Pickers choose which unit goes in a bag. (4) The city category manager sets the assortment and price. (5) The customer, whose freshness complaints become refunds. I'll pick the store manager working with the category manager. They make the two decisions behind most of the waste: how much to order and what to do with stock that's ageing."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Their needs as JTBD. Store manager: 'When I place tomorrow's FnV order at 10pm, I want a number per SKU I can trust, so I don't over-order coriander and throw it away on Sunday.' Second: 'When stock is getting old, I want to see which batches will expire today and what to do, so I can sell or move them before they rot.' Category manager: 'When a store has surplus tomatoes, I want to clear them at the smallest loss, without training customers to wait for discounts.' Picker: 'When I pick, I want to know which crate to pick from first.' Can I see per-SKU data?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Exhibits 3 and 4."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's sharp. Leafy greens and cut fruit have the shortest shelf life and the worst forecast error, 35% on normal days and 50% on weekends and rain days. Onion and potato barely matter. So prioritising:\n| Need | Share of shrink | Frequency | Feasibility | Fit |\n| Trusted order quantity (forecast) | ~45% | Daily | High: data exists | Shrink + availability |\n| Act on ageing stock (liquidate) | Part of the 45% plus returns | Daily | Medium: pricing sign-off | Shrink + revenue |\n| Handling and storage | ~35% | Every shift | Medium: ops SOPs | Shrink |\nI'll take ordering as primary, liquidation as secondary, and treat handling and storage as SOP fixes that the product supports."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What would you build?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Three options. Safe: 'Fresh Planner', a shelf-life-aware ordering engine. It forecasts demand per SKU per store per day using order history, day of week, weather, festivals and local events, then sets the order quantity using each SKU's shelf life, so coriander is ordered for one day of demand with a small buffer while onions can be ordered for a week. It comes with batch tracking: each crate is scanned at receiving with a lot ID and a 'sell by' time, and the picker app tells the picker which crate to pick first (first expiry, first out). The store manager sees a suggested order and can override it with a reason, which feeds learning."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Ambitious: 'Fresh Rescue'. Stock nearing its sell-by time gets an automatic, stepped markdown, for example 20% off at T minus 12 hours, then 40%, then it moves to a 'ripe today' or 'perfect for chutney' rail, for customers who are cooking tonight. Prices are honest and capped, and the items are never sold past their safe-to-eat limit. Visionary: a city 'fresh network'. Stores with surplus push it back on the return truck or sideways to a store short of stock, and anything left over goes to Bolt cloud kitchens, cut-fruit packs or private-label pulps and purees; upstream, we share demand signals with FPOs so they harvest to order and grade better."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How do you choose?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Impact vs effort:\n| Option | Impact on shrink | Effort | Risk |\n| Fresh Planner + FEFO | High: hits ~45% bucket | Medium: data science + picker app | Under-ordering hurts availability |\n| Fresh Rescue markdowns | Medium: recovers value | Medium: pricing engine, category sign-off | Customers wait for discounts |\n| City fresh network | High long-term | High: logistics, kitchens, FPO tie-ups | Ops complexity |\nEdge cases: festivals like Diwali and Onam spike demand for specific produce, rain days push demand online, and mandi price spikes (tomato at Rs 100+/kg in 2023) change what customers buy. The planner needs these as features, plus a manual 'event' flag. Competitors: Blinkit at 1.8% overall shows good loss control is achievable; Zepto's higher orders per store means faster turns, so density itself reduces waste."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Won't the planner just under-order and cause stock-outs?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's the main trade-off, so I'd make it explicit. The optimiser minimises the combined cost: cost of waste plus lost margin from a stock-out, plus a penalty for a lost customer, since a missing tomato can lose the whole basket. For high-attach items like onion, tomato and coriander, the stock-out penalty is high, so it keeps a buffer; for low-attach exotics like avocado, it orders lean. And availability is a hard guardrail on the pilot."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What do you ship first?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Fresh Planner with FEFO picking, in 20 Bengaluru stores for 6 weeks against 20 matched control stores. Week 1-2: batch scanning at receiving with sell-by labels; week 3: suggested orders shown alongside the manager's own, so we measure accuracy before it takes over; week 4-6: the suggestion becomes the default, with overrides logged. Fresh Rescue follows in phase 2 once we know how much surplus remains."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Metrics?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Primary: FnV shrink as % of FnV sales, target from 9% to 6% in the pilot. Supporting: SKU-day forecast error (MAPE) for leafy greens, share of orders picked FEFO, manager override rate and override accuracy, days of cover per SKU. Guardrails: FnV availability (in-stock %) at peak hours, freshness-related complaints and refunds per 1,000 orders, basket abandonment when an FnV item is out of stock, and FnV gross margin, so we don't fix waste by losing margin."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Risks?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "One, store managers don't trust the number and keep over-ordering 'to be safe'; mitigation: show the forecast next to their order for two weeks and share back how each would have done. Two, the model is wrong on a rain day or a festival; mitigation: weather and event features plus a manual flag. Three, food safety and regulation; mitigation: markdowns only within safe-to-eat windows, nothing past date, and FSSAI-compliant labelling."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Close it out."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Most produce waste in a dark store is decided at 10pm the night before, when someone guesses how much coriander to order. I'd build Fresh Planner, a shelf-life-aware ordering engine with first-expiry-first-out picking, for store and category managers, and pilot it in 20 Bengaluru stores aiming to cut FnV shrink from 9% to 6% while keeping availability. Once ordering is right, Fresh Rescue markdowns and a city fresh network recover value from what remains. With Instamart moving to owning inventory, every point of shrink saved is margin."
+    }
+  ],
+  "answer_and_recommendation": "Ranked options: (1) Fresh Planner, a shelf-life-aware ordering engine with lot and sell-by tracking and FEFO picking, aimed at the about 45% of shrink from over-ordering; (2) Fresh Rescue, stepped and honest markdowns plus a 'ripe today' rail for ageing stock; (3) a city fresh network with store-to-store transfers, reuse in Bolt kitchens and private-label processing, plus FPO demand sharing. Recommendation: ship Fresh Planner plus FEFO in 20 Bengaluru stores for 6 weeks against matched controls, targeting FnV shrink from 9% to 6% (illustrative) with availability held. Risks and mitigation: under-ordering and stock-outs (cost-based optimiser with high stock-out penalties for high-attach SKUs, plus an availability guardrail); managers not trusting the model (show suggestions alongside their orders, log overrides); demand shocks on rain days and festivals (weather and event features and a manual flag); food-safety and dark-pattern risk on markdowns (only within safe windows, honest pricing per CCPA guidelines). Closing line: 'Waste is decided the night before, at the order screen. Fix the order, and every point of shrink becomes margin now that we own the stock.'",
+  "counter_metrics_guardrails": "Guardrails: FnV in-stock rate at peak hours (no drop more than 1 point); freshness complaints and refunds per 1,000 FnV orders; basket abandonment and order loss when a high-attach FnV SKU is out of stock; FnV gross margin after markdowns (markdowns must not erase the gain); customer price perception and 'discount waiting' (share of FnV sold on markdown should stay below a cap, e.g. 10%); food-safety incidents and FSSAI non-compliance (must be zero); picker time per order (FEFO must not slow the 2-3 minute pick-and-pack target).",
+  "follow_up_twists": [
+    {
+      "twist": "Monsoon hits and demand doubles while inbound trucks run late.",
+      "response": "The planner already uses weather as a feature; add a rain playbook that front-loads orders for high-attach SKUs the day before, shifts more to long-life items, and accepts slightly higher shrink for availability during those days."
+    },
+    {
+      "twist": "The category team says markdowns will train customers to wait for discounts.",
+      "response": "Keep markdowns rare and unpredictable, limited to short-life SKUs and capped as a share of FnV sales, and route most surplus to transfers and kitchens rather than discounts."
+    },
+    {
+      "twist": "Leadership asks what this is worth.",
+      "response": "At Instamart's scale, and with FnV a large share of losses once it owns inventory, each 1 point of FnV shrink saved goes straight to contribution margin, which is still around -1% of GOV, so this is one of the cheapest margin levers available."
+    }
+  ],
+  "common_pitfalls": [
+    "Jumping straight to cold storage or new hardware: capex-heavy, and it ignores that most waste comes from ordering too much, not from storage.",
+    "Optimising waste alone: the easy fix of ordering less destroys FnV availability, which is already below 75% across apps and drives basket loss.",
+    "Designing for the customer first (an 'ugly produce' section) before fixing the internal ordering decision, which is where the waste is created.",
+    "Treating all FnV the same: coriander with a 1-day shelf life and onion with a 3-week shelf life need different order logic.",
+    "Ignoring the marketplace vs inventory model: who owns the loss determines who has the incentive, and Instamart's move to first-party ownership is what makes this a priority now."
+  ],
+  "skills_tested": "structuring, prioritisation, quant, business sense, execution, empathy",
+  "linked_teardown": "swiggy-product-teardown (swiggy-product-teardown/results/Instamart.json): Instamart has 1,240 dark stores (Q2 FY27), contribution margin of -1.0% of GOV, and a move to an inventory-led model from mid-Q3 FY27 expected to add about 80 bps of CM; also blinkit_product_teardown (blinkit_product_teardown/results/RV6_Inventory_model_capex_working_capital.json) for the inventory-model context.",
+  "uncertain": [
+    "round_and_level",
+    "source_and_verification",
+    "context_as_of",
+    "regulatory_context",
+    "public_data_anchors"
+  ]
+}

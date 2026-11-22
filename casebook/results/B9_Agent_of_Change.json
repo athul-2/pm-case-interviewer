@@ -1,0 +1,144 @@
+{
+  "pun_title": "Agent of Change",
+  "case_type": "Product Design",
+  "asked_at": "By the Authors (synthetic; GenAI-design trend question, 2025-26)",
+  "subject_company": "Blinkit (quick-commerce arm of Eternal Ltd, formerly Zomato Ltd)",
+  "round_and_level": "PM product-sense round (on-site or video), for APM to PM. Also works as a take-home 'GenAI feature spec' [uncertain - synthetic case, no reported round]",
+  "difficulty": "Hard - the candidate must design for user trust and autonomy (when an agent may spend money without asking), for India-specific rules (UPI mandates, CCPA dark patterns), and for Blinkit's ad and AOV incentives, not just draw a chatbot",
+  "market_and_industry": "India; quick commerce (10-30 minute grocery and household essentials); top-8 metro, dual-income and nuclear households on mid-to-premium Android and iOS phones; English/Hinglish UI with Hindi voice; UPI-first payments",
+  "time_box_minutes": "35-45",
+  "exact_prompt": "Blinkit wants to launch an AI shopping agent that reorders household essentials - atta, milk, detergent, diapers - so customers don't have to remember. Design it. Who is it for, what does it do, how much should it do on its own, and how would you know it's working?",
+  "source_and_verification": "Verification: synthetic (written by the authors). No reported interview source was found for this exact prompt on NextLeap, The Product Folks, AmbitionBox, Glassdoor, PracHub or Medium (searched Nov 2026). It reflects the 2025-26 'agentic commerce' design trend in India: Swiggy Instamart's MCP connector for ChatGPT, Claude and Gemini (Jan 2026; https://www.exchange4media.com/industry-briefing-news/swiggy-launches-model-context-protocol-to-enable-orders-via-chatgpt-and-other-ai-tools-151410.html), Razorpay and NPCI agentic payments on Claude with Zomato, Swiggy and Zepto live in pilot (Feb 2026; https://razorpay.com/newsroom/razorpay-npci-launch-agentic-payments-on-claude-powering-zomato-swiggy-zepto-at-the-india-ai-impact-summit/), and Deepinder Goyal's Oct 2026 comments on AI agents and reorders (https://www.businesstoday.in/technology/artificial-intelligence/story/can-ai-agents-disrupt-zomato-and-blinkit-deepinder-goyal-explains-why-their-business-models-may-be-protected-562842-2026-10-21). A related community write-up is 'Product Sense: Blinkit Smart Cart - Reducing Reorder Time by 95%' (Notion, unofficial): https://vijaybsehgal.notion.site/Product-Sense-Blinkit-Smart-Cart-Reducing-Reorder-Time-by-95-4m-10s-25af8aca882d81bc8c91eb7856407f87",
+  "context_as_of": "As of 2026-11-11. (1) Scale: Eternal Q2 FY27 (quarter to Sep 2026, reported 21 Oct 2026). Blinkit NOV Rs 20,940 Cr (+79% YoY), adjusted EBITDA Rs 184 Cr (vs a Rs 156 Cr loss a year earlier), 308 net new stores taking the total to 2,751. Guidance is 3,500 stores by Mar 2027 and about 5,000 by Mar 2028 (https://www.kotakneo.com/news/stocks/eternal-q2-results-profit-rises-revenue-growth-blinkit-adds-stores/). In Q1 FY27: 331 mn orders (about 3.6 mn a day), net AOV about Rs 518, MTC 31.8 mn (blinkit_product_teardown, citing the Eternal Q1 FY27 shareholder letter). (2) Management view on agents: on 21 Oct 2026, Deepinder Goyal said reorder carts are a low-single-digit share of activity on Zomato and Blinkit. He said AI agents or in-app assistants could take routine restocks, but an agent cannot handle stock, picking, rider assignment or on-time delivery, so fulfilment remains the moat. He added that 65%+ of Zomato app opens are exploratory (Business Today, link above). (3) Eternal-OpenAI strategic collaboration (announced Feb 2026) covers Zomato, Blinkit, District, Hyperpure and Nugget (the AI customer-support venture) (https://www.outlookbusiness.com/news/eternal-openai-partner-to-build-indias-first-ai-native-commerce-ecosystem). (4) Competitors: Swiggy Instamart took 40,000+ products into ChatGPT, Claude and Gemini via MCP in Jan 2026. Zepto is live in the Razorpay/NPCI Claude agentic-payments pilot. Zepto, Flipkart Minutes and Amazon Now compete on discounts and memberships. Blinkit has no paid membership (teardown R6). (5) Brand: Blinkit dropped its '10-minute' claim in Jan 2026 after Labour Ministry pressure, so its positioning now leans on assortment ('30,000+ products') (teardown A5). (6) Pain points that matter for an agent, from the teardown: wrong, damaged or expired items (R1); stockouts and pincode-level price variation (AC3); a fee stack of handling, small-cart, surge and rain fees (AC1); ad-heavy listings (RV2/RV3); multi-homing (R5). Possibly stale: Q1 FY27 MTC and AOV (Q2 MTC not found); whether Blinkit has an MCP or agent pilot (none found as of Nov 2026) [uncertain].",
+  "regulatory_context": "(1) CCPA Guidelines for Prevention and Regulation of Dark Patterns, 2023 (Consumer Protection Act 2019). 'Basket sneaking', 'drip pricing', 'subscription traps' and 'forced action' are banned. CCPA fined Zepto Rs 7 lakh on 4 Dec 2025 for drip pricing and for pre-selecting Zepto Pass (blinkit_product_teardown). An agent that adds items the user did not approve, or hides fees until after auto-checkout, is the textbook risk. The design needs explicit consent, editable carts and all-in pricing. (2) RBI e-mandate framework for recurring payments: pre-debit notification at least 24 hours before each debit, easy cancellation, and additional factor of authentication above Rs 15,000 per transaction (for most categories). This shapes autopay. (3) NPCI UPI Reserve Pay (single-block-multiple-debit): the user blocks an amount that the merchant debits in parts as orders are fulfilled (https://razorpay.com/blog/upi-reserve-pay/). An NPCI 'Unified Agent Protocol' for agent payments within preset limits was reported around Global Fintech Fest 2026 and reportedly needs RBI approval [uncertain - launch status and limits, reported as Rs 10,000 over 90 days, unconfirmed]. (4) DPDP Act 2023 and DPDP Rules 2025 (notified Nov 2025, phased compliance to about May 2027): consumption predictions use purchase history, so consent and purpose limitation apply. Inferences about health (diabetic products), babies (diapers) and religion (fasting-season items) are sensitive in practice. Users need a clear opt-out and deletion of 'household profile' data. (5) Legal Metrology (Packaged Commodities) Rules: unit-sale price disclosure. A substitute in a different pack size must show the per-unit price. (6) FSSAI: expiry and shelf-life for perishables (milk, bread) in auto-orders. (7) Labour and safety: the 10-minute claim was dropped after Ministry intervention (Jan 2026), so the agent should not promise ultra-fast delivery and should prefer scheduled slots.",
+  "public_data_anchors": "1) Blinkit Q2 FY27 NOV Rs 20,940 Cr (+79.3% YoY); adj. EBITDA Rs 184 Cr; 2,751 stores; targets 3,500 by Mar 2027 and about 5,000 by Mar 2028 (Kotak Neo / Outlook Business, 21 Oct 2026). 2) Blinkit Q1 FY27: 331 mn orders (about 3.6 mn/day), net AOV about Rs 518, MTC 31.8 mn, NOV Rs 17,132 Cr (Eternal Q1 FY27 shareholder letter via blinkit_product_teardown; https://b.zmtcdn.com/investor-relations/Eternal_Limited_Shareholders_Letter_Q1FY27_Results.pdf). 3) Reorder carts are a 'low-single-digit' share of activity on Zomato and Blinkit; 65%+ of Zomato app opens are exploratory (Goyal, Business Today, 21 Oct 2026). 4) Swiggy Instamart MCP: 40,000+ products orderable from ChatGPT, Claude and Gemini (Jan 2026; Analytics Insight / exchange4media). 5) Razorpay and NPCI agentic payments on Claude, live in pilot with Zomato, Swiggy and Zepto (Feb 2026; Razorpay newsroom). 6) CCPA dark-patterns fine on Zepto: Rs 7 lakh (4 Dec 2025). 7) Blinkit small-cart fee about Rs 20 under Rs 99, and a delivery fee of about Rs 30 under Rs 199 in some snapshots (Inc42 Mar 2026; Motilal Oswal Nov 2025, via teardown) [uncertain - fees vary by pincode]. 8) India anchors: about 300 mn households; UPI 20 bn+ transactions a month (frameworks.md).",
+  "framework_applied": "CIRCLES + List-and-Trim + JTBD (frameworks.md section 1), plus an 'autonomy ladder' as the trade-off lens. C - Comprehend: goal = more habit and share of wallet for planned essentials in a multi-homing market (retention, not new users); scope = the reorder journey for non-perishable and semi-perishable essentials, from prediction to approval, payment, substitution and delivery; who am I = a PM on Blinkit's retention/AI pod; constraints = CCPA dark-patterns rules, RBI/NPCI payment rules, store-level stock, and an ad business that must not hijack the agent. I - Identify: busy dual-income metro households, new parents (diapers/formula), elderly parents managed remotely by adult children, students/PG residents, and kirana-to-QC switchers; pick the 'household manager' in a dual-income metro family (high frequency, high basket, high pain from running out). R - Report needs (JTBD): 'When I'm about to run out of a staple, I want it replaced before I notice, at the price and brand I expect, so I never make an emergency run'; plus trust, control of the money, no surprise substitutions, and consolidated deliveries. C - Cut: prioritise 'never run out of my staples' (frequency x pain) and 'stay in control of what's bought' (the adoption barrier). L - List: safe = Smart Restock list (predicted run-out dates, one-tap add); ambitious = 'Blinkit Autopilot' (a weekly restock draft approved in one tap on the app, notification or WhatsApp, then a budget-capped auto-order through a UPI Reserve Pay envelope, with substitution rules); visionary = an open household agent (Hindi/Hinglish voice, pantry sensing from photos, Blinkit tools via MCP so ChatGPT, Gemini and Alexa can order). E - Evaluate: impact vs effort grid; edge cases (guests, festivals, travel, price spikes, stockouts, shared accounts); competitors (Instamart MCP, Amazon Subscribe and Save, Zepto's agent pilot, the milk-subscription apps). S - Summarise: ship Autopilot with an earned-autonomy ladder (suggest, then approve, then auto within budget) to 5% of high-frequency households in two cities; the NSM is agent-fulfilled restock orders per active household; guardrails are unwanted-item refunds, opt-outs and CCPA complaints.",
+  "clarifying_questions": "1) Q: What is the business goal - order frequency, retention, AOV or efficiency? A: Retention and share of wallet in planned essentials; we lose these baskets to DMart, BigBasket and Amazon. 2) Q: Is this inside the Blinkit app, or should third-party agents (ChatGPT, Gemini) order too? A: Start in-app; tell me your view on third-party agents. 3) Q: Which categories? Perishables like milk and bread? A: Household essentials first: staples, cleaning, personal care, baby care. Perishables are optional. 4) Q: May the agent pay without the user tapping? A: That's for you to design; stay inside RBI/NPCI and CCPA rules. 5) Q: Can it swap brands or pack sizes when out of stock? A: Your call. Substitution complaints are already a top issue. 6) Q: What data do we have? A: 12+ months of order history for loyal users, store-level stock, price history, and app-event data; no in-home sensors. 7) Q: Timeline and team? A: A pilot in one quarter with a pod of about 8 people, and access to Eternal's OpenAI models. 8) Q: Any constraint from the ads business? A: Brand-funded ads are big revenue, but leadership accepts that the agent shouldn't be an ad slot.",
+  "interviewer_data_reveals": "Exhibit 1 - Repeat-basket profile of the top 20% of households by frequency (illustrative): 9.2 orders/month; 38% of their GMV is 'repeat essentials' (bought 4+ times in 6 months); median essentials list = 23 SKUs; 61% of those SKUs repurchased within plus or minus 3 days of their personal cycle. Exhibit 2 - 'Ran out' signals (illustrative): 27% of essentials orders are placed between 7 and 9 am or 9 and 11 pm with 1-3 items and the search term matching a past purchase; these urgent orders carry a small-cart or surge fee 2.4x as often. Exhibit 3 - Survey of 1,200 loyal users on auto-ordering (illustrative): 'I'd let an app suggest my restock' 74%; 'I'd approve with one tap' 58%; 'I'd let it order without asking under a budget' 19%; top fears: wrong or expired items 41%, a price spike 33%, 'it'll push brands I don't want' 22%. Exhibit 4 - Pilot-week numbers for a Restock Draft prototype (illustrative): 10,000 households; draft opened 71%; approved 46% of drafts; median edits 1.8 items; refund rate on approved drafts 1.1% vs 2.6% baseline; substitution rejection 31% when a different brand, 9% for the same brand in a different size. Exhibit 5 - Real anchors: AOV about Rs 518 and MTC 31.8 mn (Q1 FY27); NOV Rs 20,940 Cr (Q2 FY27); reorder carts a 'low-single-digit share of activity' (Goyal, Oct 2026).",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "Blinkit wants an AI shopping agent that reorders household essentials. Design it."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Let me restate it. The agent is meant to remember and restock the things a household buys on a cycle - atta, dal, detergent, diapers - so the customer doesn't have to. Before I design anything I want to pin down the goal. Is this about frequency, retention, AOV or ops efficiency?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Retention and share of wallet in planned essentials. Today we win the 'I forgot' top-up but lose the monthly basket to DMart, BigBasket and Amazon."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's useful. So success isn't 'people chat with an AI'; it's that Blinkit becomes the default for planned, recurring spend. Two more questions. Should this live only in the Blinkit app, or also inside ChatGPT or Gemini, the way Instamart did with MCP in January? And can the agent pay without a tap?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Start in-app; give me your view on third-party agents later. Payment autonomy is your call, but you're in India - stay inside RBI, NPCI and CCPA rules."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Got it. My assumptions: I'm a PM in Blinkit's retention pod; we have 12+ months of order history, store stock and price history; one quarter to pilot. Constraint I'll respect: CCPA's dark-patterns guidelines - Zepto was fined Rs 7 lakh in December 2025 for drip pricing and pre-selecting a membership. An agent that sneaks items into a cart is exactly that violation, so consent is a design requirement, not a nice-to-have."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Users. List: (a) the household manager in a dual-income metro family; (b) new parents for diapers, wipes and formula; (c) adult children ordering for elderly parents in another city; (d) students and PG residents; (e) kirana switchers in newer polygons. I'll pick (a). They have the highest frequency and the biggest essentials basket, and running out hurts them most. New parents are a strong sub-segment I'll fold in."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Here's some data on that top cohort."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "[Exhibits 1-2] The top 20% of households order 9.2 times a month and 38% of their GMV is repeat essentials. A median of 23 SKUs. And 27% of essentials orders are 'ran-out' rush orders in the morning or late night, paying small-cart or surge fees 2.4x as often."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That says two things. There's a predictable list - 23 SKUs, mostly on a personal cycle - so prediction is tractable. And the pain is real and costly: a quarter of orders are panic top-ups with fees, which also hurt our unit economics through small baskets. Persona: Neha, 34, Gurugram, two kids, both parents working, orders 8-10 times a month, keeps a WhatsApp note of 'things to buy' that she forgets to check."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Needs as JTBD. 1) When a staple is about to run out, I want it replaced before I notice, so I never make an emergency order. 2) When something is reordered, I want my usual brand, size and price, so I don't need to check. 3) I want to control the money - a budget and approval - so I'm never surprised by a debit. 4) When an item is out of stock, I want a sensible substitute or a skip, not a random brand. 5) I want fewer, consolidated deliveries at a time that suits me."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Prioritising on pain, frequency, workarounds and business fit: need 1, never run out, scores highest - it's frequent and today's workaround is memory. Need 3, control, is the adoption barrier; without it nobody turns the feature on. So I'll design for 'never run out, while staying in control', and treat substitution as the key edge case."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How much autonomy would users actually give it?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "[Exhibit 3] 74% would accept suggestions, 58% one-tap approval, only 19% fully automatic ordering under a budget. Top fears: wrong or expired items, price spikes, brand pushing."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So autonomy has to be earned, not defaulted. I'll frame it as a ladder. Level 0: suggest. Level 1: draft, and one tap approves it. Level 2: auto-order within a budget envelope, with a veto window. Users move up only by opting in, and only after the agent has a track record with them."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Solutions. Safe: 'Smart Restock' - a list on the home screen with each staple's predicted run-out date and one-tap add to cart. Low effort, reuses order history. Ambitious: 'Blinkit Autopilot' - every week the agent builds a Restock Draft: items due, quantities sized to consumption, the all-in price including fees, and a slot. Neha approves it in one tap from a notification, the app, or WhatsApp. Level 2 users set a monthly budget, funded by a UPI Reserve Pay block, and the agent orders automatically with a 2-hour veto. Visionary: an open household agent - Hinglish voice, a pantry photo to update stock, and Blinkit exposed as MCP tools so ChatGPT, Gemini or Alexa can order through our fulfilment."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Under the hood: a per-household, per-SKU consumption-cycle model (inter-purchase intervals, pack size, household size signals, seasonality like festivals and summers), with an LLM layer only for the conversational edits - 'we're travelling next week', 'guests this weekend, double the milk'. Rules, not the LLM, control money and substitution."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Evaluate. Smart Restock: impact medium, effort low - but it still relies on Neha opening the app. Autopilot: impact high, effort medium - it turns 23 SKUs into a weekly habit, and consolidated baskets improve AOV and cut small-cart orders. Open agent/MCP: impact uncertain, effort high, and it gives the customer relationship to someone else's AI - Goyal's point is that fulfilment is our moat, but the interface still matters for ads and data. I'd do it later and selectively."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What about substitutions? That's where people get angry."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "[Exhibit 4] In a prototype week, 46% of drafts were approved with 1.8 edits on median; refunds 1.1% vs 2.6% baseline. Substitute rejection is 31% for a different brand but only 9% for the same brand in a different size."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That gives me the substitution policy. Default rule: same brand and variant, different pack size is OK if the per-unit price is within 10% - and we show the unit price, which Legal Metrology needs anyway. Different brand: never auto-substitute; skip and ask. Per-item 'locks' let Neha mark items as 'only this brand'. And the 1.1% refund rate is encouraging - planned baskets get checked against expiry at picking."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Edge cases. Price spikes: if any item is more than 15% above its 90-day median, it's pulled from auto and flagged. Stockouts: hold the item to the next slot instead of substituting. Travel and guests: one-line edits through chat. Shared accounts: a household owner approves. Festivals: pre-Diwali cleaning supplies are suggested, never auto-added. Ads: sponsored products never enter the draft without being labelled and opted in - that's the brand-pushing fear and the CCPA basket-sneaking risk."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Leadership will want ad revenue from this surface."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'd offer brands a labelled 'Try instead' card next to the draft, never inside it, and measure whether it raises opt-outs. If the agent is seen as an ad slot, trust breaks and Level 2 never happens. The trust is worth more than the ad impressions on 23 SKUs."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Recommendation: launch Blinkit Autopilot at Levels 0-1 for the top 20% of households in Gurugram and Bengaluru, with Level 2 by invitation after 4 clean drafts. Payments: Level 1 uses the normal UPI flow at approval; Level 2 uses a Reserve Pay envelope with pre-debit notifications and one-tap cancel, so it's RBI and NPCI compliant. North Star: agent-fulfilled restock orders per active household per month. Supporting: draft approval rate, edits per draft, essentials share of wallet, rush-order share. Guardrails: unwanted-item refund rate, opt-out rate, substitution rejection, CCPA/consumer complaints, and per-order contribution margin."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Neha says, 'I don't want another subscription.'"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then it shouldn't feel like one. No fee, no lock-in, pause in one tap, and a draft that does nothing unless she approves it. It's a smarter shopping list that happens to place the order. The day it feels like a trap, we've broken the CCPA rules and her trust together."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Closing: the agent shouldn't change what Neha buys; it should change when she has to think about it - which is never. That's how Blinkit becomes the default for planned essentials, not just the 'I forgot' app."
+    }
+  ],
+  "answer_and_recommendation": "Ranked options: (1) RECOMMENDED - 'Blinkit Autopilot': a weekly Restock Draft built from a per-household consumption-cycle model, with all-in prices (fees shown before approval), a delivery slot, brand/size locks and a strict substitution policy (same brand, different size only if the unit price is within about 10%; never a different brand automatically). It runs on an earned-autonomy ladder: Level 0 suggest, Level 1 one-tap approve (app, notification or WhatsApp), Level 2 auto-order within a monthly budget through a UPI Reserve Pay envelope, with a 2-hour veto, pre-debit notification and one-tap pause. (2) Smart Restock list as the low-effort fallback and entry point for all users. (3) Later: a Hinglish voice and conversational layer, plus selective MCP exposure to third-party agents (as Instamart did), so Blinkit fulfilment stays the default when users shop through ChatGPT or Gemini. Why: the cohort data shows a predictable 23-SKU list, and 27% of essentials orders are fee-heavy rush top-ups. Users trust suggestions (74%) far more than autonomy (19%), so the ladder matches trust. Consolidated drafts lift AOV, cut small-cart orders and win back planned baskets lost to DMart and BigBasket. Rollout: top 20% of households in two metros, A/B against the Smart Restock list; move to Level 2 by invitation after 4 clean drafts. Risks and mitigation: wrong or expired items (pick-time expiry checks, a refund-first policy for agent orders); price spikes (a 15% spike guard); CCPA basket sneaking and drip pricing (no auto-added items, all-in price before consent, labelled sponsored cards outside the draft); payment disputes (Reserve Pay caps, pre-debit alerts, easy cancellation); DPDP privacy (clear consent, a 'forget my household profile' control, no sensitive inferences used for ads); stockouts (hold to the next slot rather than substitute). Closing line: 'The agent shouldn't change what you buy - only how often you have to think about it. That's the agent of change Blinkit needs: from the I-forgot app to the default for planned essentials.'",
+  "counter_metrics_guardrails": "North Star: agent-fulfilled restock orders per active Autopilot household per month. Guardrails: (1) unwanted-item or wrong-item refund rate on agent orders (must stay at or below the non-agent baseline, about 2-3% illustrative); (2) Autopilot opt-out and pause rate, and notification unsubscribe rate; (3) substitution rejection rate; (4) consumer complaints and any CCPA/NCH dark-pattern complaints (target zero); (5) payment disputes, mandate revocations and failed debits; (6) per-order contribution margin (consolidated drafts should help, but subsidies to drive adoption must not); (7) waste signals - perishables returned or reported expired; (8) ad-revenue cannibalisation on the essentials surface (watched, not optimised); (9) cannibalisation check - whether agent orders replace already-loyal Blinkit orders (incremental share of wallet vs control) rather than adding planned baskets.",
+  "follow_up_twists": "1) 'OpenAI or Google wants Blinkit as a tool inside their agent - do we say yes?' Strong response: yes, selectively - expose catalogue, cart and order tools via MCP for essentials with Blinkit-owned checkout and consent, because fulfilment is the moat and staying out just sends those baskets to Instamart. 2) 'A big FMCG brand will pay to be the default detergent in drafts.' Strong response: no - defaults follow user history; brands can buy a labelled 'Try instead' card outside the draft, otherwise we invite a CCPA basket-sneaking case and lose trust. 3) 'Adoption of Level 2 is only 5% after three months.' Strong response: that's fine if Level 1 approvals and essentials share of wallet are growing - Level 1 is the business; Level 2 is for the few who want it, so don't push autonomy to hit a vanity number.",
+  "common_pitfalls": "1) Building a chatbot ('ask Blinkit anything') instead of a restock workflow; the job is to remove thinking, not add a conversation. 2) Defaulting to full autonomy and auto-debit - the survey shows only about 1 in 5 users want it, and it walks into CCPA basket-sneaking and RBI e-mandate problems. 3) Ignoring substitutions, stockouts and price spikes, which are where trust actually breaks (wrong or expired items is the top fear). 4) Letting the ads business place sponsored SKUs inside the agent's cart, or measuring success by AOV alone, so the agent inflates baskets and users churn.",
+  "skills_tested": "structuring, empathy, prioritisation, business sense, execution, communication",
+  "linked_teardown": "blinkit_product_teardown (blinkit_product_teardown/report.md). Key facts used: Q1 FY27 net AOV about Rs 518, MTC 31.8 mn and about 3.6 mn orders/day; retention issues R1 (wrong, damaged or expired items), R5 (multi-homing) and R6 (no paid membership); AC1/AC2 fee stack and the CCPA dark-patterns order against Zepto (Rs 7 lakh, Dec 2025); RV2/RV3 ad-heavy monetisation.",
+  "uncertain": [
+    "round_and_level",
+    "context_as_of",
+    "regulatory_context",
+    "public_data_anchors"
+  ]
+}

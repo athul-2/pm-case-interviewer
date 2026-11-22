@@ -1,0 +1,215 @@
+{
+  "pun_title": "Ready or Not",
+  "case_type": "Situational",
+  "asked_at": "Flipkart",
+  "subject_company": "Flipkart (the interviewer anchors the open question on a Flipkart feature: a GenAI shopping assistant that answers product questions in Hindi and English). Same as asked_at.",
+  "round_and_level": "PM round (execution / product sense) or hiring-manager round; APM campus to PM (0-4 yrs). Often asked as a short opener before a deeper case. [uncertain]",
+  "difficulty": "Medium - everyone can list 'QA passed, metrics defined'; scoring well needs you to make 'ready' depend on launch type and reversibility, set explicit go/no-go thresholds before seeing data, and separate hard blockers from acceptable trade-offs.",
+  "market_and_industry": "India; horizontal e-commerce marketplace; feature aimed at Tier-2/3 shoppers on mid-range Android phones who prefer Hindi or Hinglish, often first-time online buyers; GenAI/LLM quality and trust constraints.",
+  "time_box_minutes": "15-20",
+  "exact_prompt": "How do you decide a product is ready to launch?",
+  "source_and_verification": "Level: reported (Flipkart), wording generic. The prompt is listed for this casebook as a Flipkart PM question; this session could not open a dated Flipkart-specific report of the exact wording (NextLeap, The Product Folks, AmbitionBox and Glassdoor pages were not returned by search). Related public sources: Flipkart PM guides that list launch/execution questions - Interview Query (https://www.interviewquery.com/interview-guides/flipkart-product-manager), Prepfully (https://prepfully.com/interview-guides/flipkart-product-manager), Institute of Product Leadership (https://www.productleadership.com/flipkart-product-manager-interview-questions/), AmbitionBox Flipkart PM questions (https://www.ambitionbox.com/interviews/flipkart-interview-questions/product-manager/job-type). Generic versions: Sharebird 'How do you know when a product is launch ready' (https://sharebird.com/h/product-marketing/q/how-do-you-know-when-a-product-is-launch-ready); PracHub 'Launch-or-hold decision framework for a feature inherited as a new PM' (https://prachub.com/interview-questions/launch-or-hold-decision-framework-for-a-feature-inherited-as-a-new-pm) and 'Setting launch criteria and a rollout plan for an AI agent' (https://prachub.com/interview-questions/setting-launch-criteria-and-a-rollout-plan-for-an-ai-agent); Exponent 'Pre-launch metrics down' (https://www.tryexponent.com/courses/google-pm-interview/google-craft-execution/google-launch-metrics-down). Year: circulating 2023-2026. [uncertain]",
+  "context_as_of": "As of Nov 2026. 1) Flipkart Group FY26 revenue about Rs 1.46 lakh cr (+18%), net loss Rs 8,468 cr; IPO deferred while Walmart pushes for EBITDA profitability in FY27, so launches are expected to show a path to profitable growth (Inc42, https://inc42.com/buzz/flipkart-to-defer-ipo-till-2028-eyes-ebitda-profitability-in-fy27/ ; Outlook Business). 2) Scale: roughly 50-60% share of Indian e-commerce GMV and about 220 mn MAU per secondary trackers (not company-filed; https://www.ipomarket.in/news/flipkart-ipo-2026-date-price-gmp-review). 3) Shopper mix: about 60% of BBD 2026 day-one orders from non-metros; Redseer says Tier-2 and smaller towns were about two-thirds of festive shoppers and Gen Z 35-40% (Outlook Business; Inc42 Oct 2026). 4) Flipkart has run a GenAI shopping assistant (launched 2024 as 'Flippi') and Hindi/vernacular voice search; the case uses a Hindi/English assistant as the anchor feature - exact current product name and scope may have changed. 5) Flipkart values: audacity, bias for action, customer-first with integrity, inclusion (https://stories.flipkart.com/flipkart-values-ambassadors). 6) Calendar: Nov 2026 is just after Diwali (8 Nov) and BBD (9-19 Oct); the post-festive lull is a lower-risk launch window, while late Sep to early Nov is usually a code-freeze period. [uncertain]",
+  "regulatory_context": "1) DPDP Act 2023 and DPDP Rules (notified Nov 2025, phased in): chat logs and voice data are personal data; consent notices, purpose limitation, retention limits and children's data rules shape what the assistant can store and learn from. 2) MeitY advisories on AI (March 2024, revised): label AI-generated output, avoid unlawful or biased content; IT Rules 2021 due-diligence and grievance-officer duties apply to user-facing content. 3) CCPA dark-patterns guidelines (Nov 2023): the assistant must not nudge with false urgency, basket sneaking or disguised ads; sponsored products it recommends must be labelled. 4) Consumer Protection Act 2019 and E-Commerce Rules 2020: misleading claims about a product (wrong specs, warranty, returns) can count as misleading advertisement or unfair trade practice; the platform must show seller details and total price. 5) FDI marketplace rules: the assistant must stay seller-neutral and not favour group-linked sellers in ranking. 6) BIS/Legal Metrology: product facts the assistant states (MRP, net quantity, BIS marks) must match the listing. For a non-AI feature the regulatory gate is lighter, but the same habit - list who must sign off (legal, privacy, payments, compliance) - is part of 'ready'. [uncertain]",
+  "public_data_anchors": "1) Flipkart Group FY26 revenue about Rs 1.46 lakh cr, net loss Rs 8,468 cr (Inc42 / Outlook Business, 2026). 2) About 220 mn MAU and 50-60% GMV share (IPO Market tracker, 2026; secondary). 3) BBD 2026: 6.3 mn concurrent users in one minute at opening; new customers +34%; about 60% of day-one orders from non-metros (BW Retail World / Outlook Business, Oct 2026). 4) Redseer festive first leg 2026: about 100 mn shoppers, 350 mn+ orders, Tier-2 and below about two-thirds of shoppers, Gen Z 35-40% (Inc42, Oct 2026, https://inc42.com/features/festive-sales-see-shoppers-log-in-but-hold-back-on-big-ticket-purchases/). 5) Myntra about 93 mn MAU, +8% YoY (BofA note via Inc42, Oct 2026). Derived (illustrative): at 220 mn MAU a 1% ramp is about 2.2 mn users - large enough to detect a 2-3% relative conversion change within a week, which is why a 1% stage is enough as a first gate. [uncertain]",
+  "framework_applied": "Situational: SODS (frameworks.md section 3). Values first: Flipkart's customer-first with integrity (no misleading answers to first-time buyers) and bias for action (staged launch rather than waiting for perfect) shape the answer. S - Scope: 'ready' depends on the goal of the launch (learn vs scale), the launch type (internal, beta, GA, festive), reversibility (a flag-able UI vs a payments or pricing change) and who is exposed (new Tier-2 users vs power users). Define success before looking at the data. O - Options: (A) launch broadly now on 'good enough' quality - speed vs quality; (B) staged rollout with written go/no-go gates at each ring (dogfood, 1%, 10%, 50%, 100%) - speed vs confidence balanced; (C) hold until every metric is at target - confidence vs momentum. D - Decision: B, using a readiness scorecard of five gates - Valuable (evidence users want it), Works (quality and performance), Safe (trust, legal, privacy, fraud), Viable (business and cost), Operable (support, monitoring, rollback) - where some items are hard blockers and others are accepted trade-offs with an owner. NOT doing: waiting for 100% accuracy, launching during the festive freeze, or moving thresholds after seeing results. S - Success: hypothesis that the assistant raises conversion among sessions that use it without hurting returns or trust; leading signals per ring; double down (next ring), adjust (narrow to categories or languages), or roll back (kill switch) on pre-agreed triggers.",
+  "clarifying_questions": [
+    {
+      "q": "Is there a specific product in mind, or do you want my general approach? If general, can I anchor on one example?",
+      "a": "Use Flipkart's GenAI shopping assistant that answers product questions in Hindi and English. It's in internal testing."
+    },
+    {
+      "q": "What is this launch meant to achieve - learning, or scale? And who is it for?",
+      "a": "Scale eventually. The target is Tier-2/3 and first-time buyers who struggle with specs and comparisons, mostly on Android, many in Hindi."
+    },
+    {
+      "q": "What does 'launch' mean here - a beta to a cohort, or general availability to all users?",
+      "a": "Leadership wants it 'launched' this quarter. How you stage it is up to you."
+    },
+    {
+      "q": "Is it reversible - can we turn it off with a flag without breaking orders?",
+      "a": "Yes. It's an entry point on search and product pages, behind a feature flag. It doesn't touch checkout or payments."
+    },
+    {
+      "q": "What do we know so far from internal testing?",
+      "a": "Two weeks of employee dogfood. I'll share numbers."
+    },
+    {
+      "q": "Any hard dates or constraints - festive freeze, GPU cost budget, legal review?",
+      "a": "No festive freeze now that BBD and Diwali are done. Cost per conversation has a budget. Legal and privacy haven't signed off yet."
+    },
+    {
+      "q": "Who makes the final launch call - me, or a launch review with engineering, legal and the business?",
+      "a": "A launch review. You present the recommendation."
+    }
+  ],
+  "interviewer_data_reveals": "All numbers are illustrative (invented for teaching) unless a source is cited.\n\nExhibit 1 - Dogfood results, 2 weeks, about 6,000 employees (illustrative):\n| Metric | Result | Target set before dogfood |\n| Answer accuracy (human-graded, English) | 94% | 92% |\n| Answer accuracy (Hindi / Hinglish) | 86% | 92% |\n| Hallucinated spec or price (any language) | 1.8% of answers | below 1% |\n| p95 response time on a 4G mid-range Android phone | 3.9 s | below 3 s |\n| Sessions with assistant -> add to cart | +11% vs matched sessions | +5% |\n| Cost per conversation | Rs 0.70 | Rs 0.80 |\n\nExhibit 2 - Error breakdown of the 1.8% hallucinations (illustrative):\n| Type | Share |\n| Wrong price or offer (stale bank-offer data) | 55% |\n| Wrong spec (RAM, battery) | 30% |\n| Wrong return or warranty policy | 15% |\n\nExhibit 3 - Readiness checklist status (illustrative):\n| Gate | Status |\n| Privacy/DPDP review | Pending, 1 week |\n| Sponsored-product labelling in answers | Built |\n| Support macros and escalation for 'assistant gave wrong info' | Not started |\n| Kill switch and per-category flags | Done |\n| Monitoring dashboard and alerting | Done |\n\nExhibit 4 - Scale anchor (secondary source): about 220 mn MAU (IPO Market tracker, 2026). A 1% ring is about 2.2 mn users (derived).",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "How do you decide a product is ready to launch?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "My short answer: a product is ready when the evidence meets criteria we agreed on before we saw the data, for the kind of launch we're doing, and when we can detect and undo the damage if we're wrong. Ready for a 1% beta is very different from ready for Big Billion Days. Can I anchor this on a real example? It's easier to show than to list."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Sure. Take Flipkart's GenAI shopping assistant, which answers product questions in Hindi and English. It's in internal testing."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Great. I'll go in four steps: scope what 'launch' means here, lay out the options, decide using a readiness scorecard, and define how we'd know it's working. First, scope. Who's it for, and what's the goal?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Tier-2/3 and first-time buyers who struggle with specs and comparisons. Mostly Android, many in Hindi. Leadership wants it 'launched' this quarter."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So the goal is conversion and confidence for new buyers, and 'launched' is still open to definition. Is it reversible? Can we flag it off without touching orders?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Yes. It's an entry point on search and product pages behind a flag. No checkout or payments."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That matters a lot. A reversible, flag-able feature can launch earlier and learn in production. A payments or pricing change needs a much higher bar because the damage is to money and can't be undone. Any constraints? Legal, cost, dates?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "No festive freeze now. There's a cost-per-conversation budget. Legal and privacy haven't signed off."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then I see three options. A: launch to everyone now because the topline numbers look good. That's speed over quality. B: a staged rollout through rings, dogfood then 1%, 10%, 50%, 100%, with written go/no-go gates at each step. That balances speed and confidence. C: hold until every metric hits target. That's confidence over momentum, and with an LLM product you may never hit 100%."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Which do you pick?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "B, but the real answer is in the gates. I use a five-gate scorecard. 1. Valuable: is there evidence users want it and it moves the goal metric? 2. Works: accuracy, latency and crash rate on the devices our users actually have. 3. Safe: trust, privacy, legal, fraud, and the worst thing it can do to a user. 4. Viable: cost and business impact, including guardrails like returns. 5. Operable: monitoring, a kill switch, support playbooks and a named on-call owner. Each item is either a hard blocker or an accepted trade-off with an owner and a date."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Here's the dogfood data. [Shares Exhibit 1.]"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Let me read it gate by gate. Valuable: add-to-cart is up 11% against a 5% target. Strong signal, though employees aren't Tier-2 first-time buyers, so I'd discount it. Works: English accuracy 94% passes. Hindi is 86% against 92%, and Hindi users are the core segment, so this is a problem. Latency at 3.9 seconds on 4G mid-range Android misses the 3-second target. Safe: 1.8% hallucinations on spec or price against a 1% bar. Viable: Rs 0.70 per conversation is under budget."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "So is it ready?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "It's ready for some things and not others. Can I see what the hallucinations are? Not all wrong answers are equally bad."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "[Shares Exhibit 2.] 55% are wrong price or offer, mostly stale bank-offer data. 30% wrong spec. 15% wrong return or warranty policy."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That changes the picture. Wrong price, offer and return-policy answers are the dangerous ones. A first-time buyer in Gorakhpur who's told 'Rs 2,000 off with SBI card' and doesn't get it at checkout loses trust in Flipkart, not just the bot. And under the Consumer Protection Act a wrong claim about price or returns can be a misleading-claim issue. So that's a hard blocker. The fix is design, not more model training: price, offer and policy answers should be pulled live from the catalogue and offers service, not generated, and the assistant should link to the source."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "And the readiness checklist? [Shares Exhibit 3.]"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Privacy and DPDP review is a hard blocker for any external user. Chat logs are personal data and we need the consent notice and retention rules settled. Support macros are a blocker for the 10% ring, not the 1% ring, because at 1% the volume is small enough for a tiger team. The kill switch and monitoring are done, which is exactly why I'm comfortable with a small external ring."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "So what do you tell the launch review?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "My recommendation in one line: not ready for full launch, ready for a 1% English-and-Hinglish beta in two weeks, once two blockers close. Blocker 1: price, offer and policy answers come from live data, so hallucinations in those categories go to near zero. Blocker 2: privacy sign-off. Hindi-only users join at the 10% ring when Hindi accuracy reaches 92% on a test set built from real Tier-2 queries. Latency gets a fix target before 10% too: stream the answer and show the first line in under 1.5 seconds."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Why launch at all if Hindi isn't ready? Hindi users are the target."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Because 1% of about 220 million MAU is roughly 2.2 million users, which gives us real Tier-2 queries we can't get from employees. The flag and kill switch cap the downside, and it's English and Hinglish only. Waiting for perfect Hindi with no real traffic means tuning on the wrong data. What I won't do is put a Hindi experience below the bar in front of first-time buyers, because they're the least likely to give us a second chance."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What are your go/no-go criteria for each ring?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Written down and signed before the 1% starts, so nobody moves the goalposts.\n| Ring | Go if | Roll back if |\n| 1% (2 weeks) | ATC lift at least 3% vs holdout; price/offer errors below 0.1%; crash-free sessions unchanged | Any price/offer error cluster; complaints about wrong info above 0.5% of conversations |\n| 10% (2 weeks) | Hindi accuracy at least 92%; p95 first token below 1.5 s; support playbook live | Return rate on assistant-led orders up more than 1 point |\n| 50% to 100% | Conversion lift holds; cost per incremental order within budget; no rise in seller complaints about ranking | Lift decays below 1% or cost exceeds budget |"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Who signs off?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I own the recommendation and the scorecard. Engineering signs off on Works and Operable, legal and privacy on Safe, the category and finance leads on Viable. If one of them says no on a hard blocker, we don't ship that ring. If it's a trade-off, the owner writes down that they accept it. That keeps the 'customer-first with integrity' part real rather than a slogan."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Twist: leadership says 'launched this quarter' means a press announcement."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then I'd announce the beta honestly: 'now in beta for select users, Hindi coming soon', with a waitlist. It meets the quarter goal, gives us a waitlist of motivated users for the 10% ring, and avoids promising GA quality we don't have. I wouldn't do a full launch press release on 86% Hindi accuracy."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Summarise your answer to the original question."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Ready means three things. One: the evidence meets thresholds we agreed before seeing the data, across value, quality, safety, viability and operability. Two: the bar matches the launch type and how reversible it is. A flag-able beta can go early, while a payments change or a festive-week launch needs a much higher bar. Three: we can see problems fast and undo them, with a holdout, monitoring, a kill switch and a support plan. For the assistant, that means a 1% beta in two weeks after the price-accuracy and privacy blockers close, Hindi at 10%, and full launch only when the lift holds without hurting returns or trust."
+    }
+  ],
+  "answer_and_recommendation": "Ranked options: (1) RECOMMENDED - Option B, staged rollout with pre-agreed gates: 1% English/Hinglish beta in about two weeks once two hard blockers close (price/offer/policy answers grounded in live catalogue and offers data; DPDP privacy sign-off); Hindi-only users join at 10% when Hindi accuracy reaches 92% and p95 first-token latency is under 1.5 s; 50-100% only if the conversion lift holds within cost and return guardrails. (2) Option C, hold for perfection - safe but loses real Tier-2 query data and the quarter; acceptable only for irreversible changes (payments, pricing). (3) Option A, launch broadly now - rejected: 1.8% hallucinations, mostly wrong price/offer, would hit first-time buyers' trust and create misleading-claim risk. General rule the candidate states: ready = evidence meets pre-agreed thresholds across five gates (Valuable, Works, Safe, Viable, Operable), the bar is set by launch type and reversibility, and the team can detect and undo harm (holdout, monitoring, kill switch, support). Risks and mitigation: employee dogfood overstates lift - holdout at every ring; Hindi users feel left out - waitlist and dated Hindi target; LLM cost growth - per-conversation budget alarm and caching common answers; seller-neutrality concerns - ranking audit for sponsored and group-linked sellers. Closing line: 'It's ready when it clears the bar we wrote down before we saw the data, for the launch we're actually doing - so this is a yes to a 1% beta in two weeks and a not-yet to full launch.'",
+  "counter_metrics_guardrails": "Primary: add-to-cart and order conversion for sessions offered the assistant vs a holdout. Guardrails: wrong price/offer/policy answer rate (hard cap, near zero); overall hallucination rate; Hindi vs English accuracy gap; p95 first-token latency on 4G mid-range Android; app crash-free sessions; return and cancellation rate on assistant-led orders (it should not oversell); customer-support contacts mentioning the assistant; cost per conversation and per incremental order; share of answers recommending sponsored or group-linked sellers (neutrality); opt-out or dismiss rate of the entry point; DPDP consent and deletion-request handling.",
+  "follow_up_twists": [
+    {
+      "twist": "The 1% beta shows +2% ATC but returns on assistant-led orders are up 1.5 points.",
+      "response": "Not ready for 10%; the assistant is probably overselling or getting fit/spec wrong, so I'd sample the returned orders' conversations, fix the answer type causing it, and rerun the ring rather than average the two numbers away."
+    },
+    {
+      "twist": "What if this were a change to checkout payments instead of an assistant?",
+      "response": "Raise the bar sharply: payment success and refund correctness are hard blockers, RBI/NPCI and payments-partner sign-off is required, rollout is by bank/PSP cohort with real-time success-rate alarms, and it never ships inside a festive freeze."
+    },
+    {
+      "twist": "A competitor launches a similar assistant next week.",
+      "response": "It changes the urgency, not the blockers; I'd speed up the privacy review and live-data grounding rather than skip them, because a wrong-offer answer costs more trust than a week's delay costs share."
+    }
+  ],
+  "common_pitfalls": [
+    "Reciting a generic checklist (QA done, PRD signed, marketing ready) without tying 'ready' to launch type, reversibility and pre-agreed thresholds.",
+    "Treating all errors as equal - a wrong answer about price, offers or returns is a trust and legal problem, while a clumsy phrasing is a trade-off.",
+    "Trusting employee dogfood as proof of value for Tier-2 first-time buyers - it overstates lift and understates Hindi and low-end-device problems.",
+    "Waiting for perfection on a reversible, flag-able feature, or moving the thresholds after seeing the data to justify a launch date."
+  ],
+  "skills_tested": [
+    "execution",
+    "structuring",
+    "prioritisation",
+    "empathy",
+    "business sense",
+    "communication"
+  ],
+  "linked_teardown": "None. No local teardown covers Flipkart's shopping assistant; Flipkart scale facts come from public sources (BBD 2026 and FY26 filings coverage).",
+  "uncertain": [
+    "round_and_level",
+    "source_and_verification",
+    "context_as_of",
+    "regulatory_context",
+    "public_data_anchors"
+  ]
+}

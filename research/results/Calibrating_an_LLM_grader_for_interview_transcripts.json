@@ -1,0 +1,404 @@
+{
+  "item_name": "Calibrating an LLM grader for interview transcripts (cross-cutting grader design for a local Qwen3-8B PM case grader)",
+  "what_interviewers_test": "For this item the question is what the grader must reliably detect, not what interviewers test. Across all PM case types, human interviewers look for structured problem framing, user/customer focus, quantitative rigor, prioritisation with explicit trade-offs, and a landed recommendation, all judged from what the candidate says. A transcript-only grader can only see the verbal part. Huynh et al. (MMI, 2026) dropped their non-verbal criterion for this reason and list the video-vs-text gap as a limitation. Company differences, such as Amazon's leadership-principle framing, Meta's metric and execution depth, Google's user-first and structured reasoning, and the speed and unit-economics focus at Indian consumer-tech firms, should come in as per-company criterion text and weights. They should not be left to the 8B model to infer [uncertain].",
+  "format_variants": "The grader sees transcripts from three formats, and each needs different handling. (1) Candidate-led live cases such as product design, strategy and RCA: score the candidate's own structuring and driving of the case, and treat any interviewer prompting as hint usage. (2) Interviewer-led cases such as guesstimates and metric deep-dives at Meta and Google: interviewer questions are expected, so do not penalise following them. Penalise only failure to act on data the interviewer supplied. (3) Take-home or written answers: no process signals exist, so turn off check-in and hint dimensions and re-normalise weights. Typical live time box is 30-45 min, roughly 4k-9k transcript tokens. That fits Qwen3-8B's native 32k context, but each per-criterion pass should receive only the full transcript plus one criterion, so the prompt stays short. ASR noise matters, especially for Indian-English and Hinglish speech: HURIT (L2 English speakers) and the MMI paper both relied on transcripts. The MMI paper added a cleaning pass with the rule 'Do not add content or improve the response.'",
+  "dimensions": [
+    {
+      "name": "Per-criterion decomposition (one criterion per LLM pass)",
+      "definition": "Score each rubric criterion in its own prompt or conversation turn, not one holistic prompt covering all criteria. Compute the overall score in code from the criterion scores.",
+      "signal_sought": "Independent criterion scores with low halo correlation. The criteria should not all move together.",
+      "evidence_to_quote": "Each pass outputs {criterion_id, quotes[], reasoning, score}. Code then checks that the inter-criterion correlation on the calibration set is not near 1.0, which would indicate halo.",
+      "support": "MMI (2602.02360): best single prompt QWK 0.363 vs 0.533 multi-agent criterion-specific on Q3, with an average of 0.621 across 9 criteria. MTS (2404.04941): trait-by-trait conversation rounds beat vanilla prompting by up to 0.437 QWK (TOEFL11) and 0.355 (ASAP), and with MTS Llama2-13B beat ChatGPT."
+    },
+    {
+      "name": "Evidence-first, verifiable quotes from candidate turns only",
+      "definition": "Before scoring, the grader must extract verbatim quotes from speaker turns labelled CANDIDATE that bear on the criterion. Reasoning and score come after the quotes. Code verifies each quote is a substring (after normalisation) of a candidate turn and rejects quotes from interviewer turns.",
+      "signal_sought": "Scores grounded in what the candidate actually said. This blocks credit for interviewer-supplied facts and hallucinated evidence.",
+      "evidence_to_quote": "The quotes themselves, each with turn index. If no valid quote exists, the score is forced to 1 or capped at 2 (see gates).",
+      "support": "RULERS (2601.08654): removing evidence-grounded execution lowered QWK by about 0.02-0.05 across datasets. MTS v1 retrieves quotes before scoring. Prometheus 2 generates feedback before the score. Arize practitioner guidance: explanation-first reduces variance. Counter-evidence: Wang et al. (2503.03064) find CoT can collapse the judgment distribution."
+    },
+    {
+      "name": "Behaviourally anchored 1-4 scale in a locked rubric bundle",
+      "definition": "Each criterion has 4 anchors written as observable candidate behaviour with an example phrase. Anchor text, order and ID format are frozen, versioned and hashed in rubrics.py. Never paraphrase per call.",
+      "signal_sought": "Stable score semantics across runs and rubric edits.",
+      "evidence_to_quote": "The grader names which anchor's behaviour the quotes match ('matches anchor 3: states trade-off and picks one').",
+      "support": "RULERS locked rubric: removing Phase I lowered QWK on every dataset. MMI ASAP ablation: a reduced generic rubric dropped QWK 0.638 to 0.561 and 0.663 to 0.543. Li et al. (2506.22316): for Qwen3-8B specifically, rubric order and score-ID changes shifted correlation by more than 0.05 (vs within 0.03 for GPT-4o and Qwen3-32B). Synonym-substitution sensitivity (2601.08843)."
+    },
+    {
+      "name": "Few-shot calibration exemplars (low/medium/high)",
+      "definition": "For each criterion, include 3 short exemplar excerpts with their gold scores and quote-based rationales, spanning low, medium and high. Do not use 4 or more.",
+      "signal_sought": "The grader's scale use matches the human scale, with less leniency.",
+      "evidence_to_quote": "Exemplar IDs the grader compared against.",
+      "support": "MMI: zero-shot QWK 0.215 vs 3-shot L/M/H 0.363 (405B, Q3). Four or more shots degraded performance. RAG-retrieved examples (0.329) were worse than static 3-shot. ASAP: removing examples dropped QWK 0.638 to 0.508."
+    },
+    {
+      "name": "Bias controls (leniency, length, position/order, self-preference, interviewer-credit)",
+      "definition": "Explicit mitigations for known judge biases: an instruction and rule that length is not evidence; deterministic rubric order (descending, 4 to 1, is a reasonable default); no reference answer with a fixed mid score; a different model, or at least a different prompt persona, for interviewer vs grader; and code-level rejection of interviewer-turn quotes.",
+      "signal_sought": "Score distribution and mean close to human (SMD at most 0.15), with no correlation between transcript length and score beyond what humans show.",
+      "evidence_to_quote": "Not a quote. Logged diagnostics: score vs candidate-token-count correlation, and mean score vs human mean on the calibration set.",
+      "support": "Leniency: all LLM configs more lenient than humans in clinical interview transcripts (human M 3.19 vs small-model 3.52-3.9, 2509.19329). MMI notes overestimation. Length: Gemini, Flash and Llama favoured longer answers (+0.24 to +0.44), Claude favoured concise (2604.23178). Reference-score anchoring up to about 0.2 correlation shift for Qwen3-8B (2506.22316). Self-preference: Panickssery et al. 2404.13076."
+    },
+    {
+      "name": "Calibration set and agreement targets",
+      "definition": "Hold out a human-scored calibration set: 30-50 transcripts minimum for a go/no-go check, and about 100-200 to fit a post-hoc score map. Report per-criterion QWK, ICC(2,1) or ICC(3,1), exact and adjacent agreement, and SMD against human. Optionally fit a monotone or isotonic map from raw grader scores to the human distribution.",
+      "signal_sought": "Grader-human agreement at or near human-human agreement.",
+      "evidence_to_quote": "A calibration report per rubric version.",
+      "support": "Williamson et al. 2012 via ETS RM-23-01: QWK/r at least 0.70, degradation from human-human at most 0.10, SMD at most 0.15. RULERS calibration: N=100 already strong, N=200 moderate gains. Synthesis 2512.14561: LLM-human agreement mostly 0.30-0.80 and highly context-dependent. Human-human in interview-like tasks is often low: ICC 0.45 (2509.19329), Fleiss kappa 0.41-0.60 (HURIT)."
+    },
+    {
+      "name": "8B inference settings (temperature, thinking, aggregation)",
+      "definition": "Use temperature 0-0.2. Run 3 samples per criterion and take the median, or read score-token probabilities and use the expected value. Use Qwen3 thinking mode for per-criterion passes, but keep the visible output as JSON with quotes first. Use a constrained JSON schema.",
+      "signal_sought": "Test-retest stability (same transcript scored the same, ICC at least 0.8) and less inflation.",
+      "evidence_to_quote": "Run-to-run variance per criterion.",
+      "support": "High temperature inflated scores more for the small model (beta 0.26, with a large x high-temp interaction of -0.26, 2509.19329). Expected value of the judgment distribution beats the mode (2503.03064). Thinking mode added about 10 pts on RewardBench for Qwen3 at 0.6B-4B (2509.13332). Small models agreed poorly with humans (ICC under 0.20 for GPT-4o-mini) even when self-consistent, so self-consistency is not validity."
+    }
+  ],
+  "weights": {
+    "summary": "These are not candidate-dimension weights. They are recommended effort and priority weights for the grader design choices, inferred from reported effect sizes on agreement (QWK deltas) in published academic ablations. No source publishes such weights. For the candidate-facing PM criteria in rubrics.py, use the per-case-type weight files. This item supplies the mechanism, not the PM weights. The provenance tag 'published' here means the effect size behind the weight comes from published research. The weight itself is always inferred.",
+    "recommended": [
+      {
+        "dimension": "Per-criterion decomposition",
+        "weight_pct": 22,
+        "provenance": "inferred (from published ablations)",
+        "source_urls": [
+          "https://arxiv.org/abs/2602.02360",
+          "https://arxiv.org/abs/2404.04941"
+        ],
+        "reasoning": "Largest single reported gain: +0.17 QWK in MMI single vs multi-agent, and up to +0.36-0.44 in MTS. Both independent sources agree."
+      },
+      {
+        "dimension": "Locked BARS rubric",
+        "weight_pct": 18,
+        "provenance": "inferred (from published ablations)",
+        "source_urls": [
+          "https://arxiv.org/abs/2601.08654",
+          "https://arxiv.org/abs/2602.02360",
+          "https://arxiv.org/abs/2506.22316"
+        ],
+        "reasoning": "Generic vs detailed rubric cost about 0.08-0.12 QWK (MMI ASAP). Qwen3-8B is measurably sensitive to rubric order and ID format (2506.22316)."
+      },
+      {
+        "dimension": "Few-shot exemplars",
+        "weight_pct": 15,
+        "provenance": "inferred (from published ablations)",
+        "source_urls": [
+          "https://arxiv.org/abs/2602.02360"
+        ],
+        "reasoning": "Zero to 3-shot gave +0.15 QWK. Removing examples on ASAP cost 0.13-0.16. Only one strong source, and more than 3 shots hurt, so weight is moderate."
+      },
+      {
+        "dimension": "Calibration set and targets",
+        "weight_pct": 15,
+        "provenance": "inferred (published thresholds + RULERS)",
+        "source_urls": [
+          "https://www.ets.org/Media/Research/pdf/RM-23-01.pdf",
+          "https://arxiv.org/abs/2601.08654",
+          "https://arxiv.org/abs/2512.14561"
+        ],
+        "reasoning": "Without it you cannot know whether any other choice worked. Post-hoc calibration was RULERS' largest ablation drop on WebNLG (0.61 to 0.50)."
+      },
+      {
+        "dimension": "Evidence-first quotes",
+        "weight_pct": 12,
+        "provenance": "inferred (from published ablations + practitioner)",
+        "source_urls": [
+          "https://arxiv.org/abs/2601.08654",
+          "https://arxiv.org/abs/2404.04941",
+          "https://arize.com/blog/evidence-based-prompting-strategies-for-llm-as-a-judge-explanations-and-chain-of-thought/",
+          "https://arxiv.org/abs/2503.03064"
+        ],
+        "reasoning": "The direct QWK gain is modest (0.02-0.05), and sources disagree on CoT. Wang et al. find CoT can hurt. Weight is kept because quotes enable code-level verification and auditability, which matters more for a mock-interview product than the raw QWK gain."
+      },
+      {
+        "dimension": "Bias controls",
+        "weight_pct": 10,
+        "provenance": "inferred",
+        "source_urls": [
+          "https://arxiv.org/abs/2509.19329",
+          "https://arxiv.org/abs/2604.23178",
+          "https://arxiv.org/abs/2506.22316",
+          "https://arxiv.org/abs/2404.13076"
+        ],
+        "reasoning": "Biases are well documented, but effect on agreement depends on the model. Several controls (interviewer-quote rejection, length logging) are cheap code."
+      },
+      {
+        "dimension": "8B inference settings",
+        "weight_pct": 8,
+        "provenance": "inferred",
+        "source_urls": [
+          "https://arxiv.org/abs/2509.19329",
+          "https://arxiv.org/abs/2503.03064",
+          "https://arxiv.org/abs/2509.13332"
+        ],
+        "reasoning": "Smaller but real effects on inflation and stability. Evidence on thinking mode is mixed: it helps pairwise accuracy but CoT can collapse distributions."
+      }
+    ],
+    "disagreements": "(1) Reasoning before score: RULERS, Prometheus 2 and Arize favour it, while Wang et al. 2025 report CoT collapsing judgment spread. Resolution: keep quotes first, but read the score distribution or take the median of 3 samples. (2) Rationale fine-tuning: rationales hurt Llama-8B fine-tuning in MMI (0.316 to 0.288). (3) Model size: RULERS shows Llama-3.1-8B close to 70B on ASAP (0.683 vs 0.718), while the clinical-interview study found small models at ICC under 0.20 vs humans. 8B adequacy is task-dependent and must be measured on your own calibration set [uncertain]."
+  },
+  "must_pass_gates": [
+    {
+      "gate": "No verifiable candidate quote for a criterion",
+      "cap": "That criterion's score is capped at 2, or set to 1 if the criterion requires an explicit artefact such as a final recommendation or numeric estimate. Enforce in code, not in the prompt.",
+      "source": "inferred from RULERS evidence-validity checks (https://arxiv.org/abs/2601.08654)"
+    },
+    {
+      "gate": "Quote comes from an interviewer turn, or the credited fact was first introduced by the interviewer",
+      "cap": "Quote rejected. If the remaining quotes cannot support the score, re-score or cap at 2.",
+      "source": "inferred; motivated by the known judge failure of crediting supplied context. [uncertain] No direct study found."
+    },
+    {
+      "gate": "Candidate never lands a final answer or recommendation (any type)",
+      "cap": "Overall max 'lean hire'. Landing-type criteria are capped at 2.",
+      "source": "prep-platform consensus across case-type research items (e.g. https://www.tryexponent.com/courses/product-sense/product-sense-rubric) [uncertain]"
+    },
+    {
+      "gate": "Uncorrected arithmetic error that changes the conclusion (guesstimate, metrics, pricing)",
+      "cap": "Quant criterion max 2, and overall max 'lean hire'. Detect with a deterministic number-extraction check where possible, because 8B models are weak at verifying arithmetic.",
+      "source": "inferred; carries over the case-type gate"
+    },
+    {
+      "gate": "Heavy hint dependence: interviewer had to supply the structure or key insight",
+      "cap": "Driving/structure criterion max 2. Count interviewer hint turns via a separate classification pass.",
+      "source": "inferred / interviewer-account convention [uncertain]"
+    },
+    {
+      "gate": "Deployment gate for a rubric version",
+      "cap": "Do not ship a rubric version whose per-criterion QWK vs human is below 0.60, or below human-human minus 0.10, or whose |SMD| exceeds 0.15. Flag it as 'experimental feedback only'.",
+      "source": "published thresholds, Williamson et al. 2012 via https://www.ets.org/Media/Research/pdf/RM-23-01.pdf. The 0.60 floor is inferred from the MMI result (0.62)."
+    }
+  ],
+  "score_anchors": {
+    "note": "Two anchor sets. (A) A cross-type template for candidate-facing criteria that rubrics.py should instantiate per criterion. (B) Anchors for grader-output quality, used to audit the 8B grader itself.",
+    "A_candidate_template": {
+      "1": "Missing or wrong. No candidate statement addresses the criterion, or the statement is factually or logically wrong and uncorrected. Example: candidate jumps to 'I'd add a chatbot' with no user named.",
+      "2": "Shallow. Addresses the criterion with generic or framework-label language and no case-specific content. Example: 'I'll use CIRCLES, first comprehend the situation.'",
+      "3": "Solid. Case-specific, justified statement that makes a choice. Example: 'I'll focus on first-time Swiggy users in tier-2 cities because repeat users already convert; that's where the drop is.'",
+      "4": "Excellent. Solid, plus an explicit trade-off, risk or second-order effect, and links to the goal or metric without prompting. Example: 'Prioritising this hurts restaurant partner margins, so I'd cap the discount and watch partner churn as a guardrail.'"
+    },
+    "B_grader_output_quality": {
+      "Per-criterion decomposition": {
+        "1": "Single holistic score",
+        "2": "Criteria listed but scored in one pass with copied rationale",
+        "3": "Separate passes with distinct rationales",
+        "4": "Separate passes, low halo on the calibration set, overall computed in code"
+      },
+      "Evidence-first quotes": {
+        "1": "No quotes, or quotes invented",
+        "2": "Paraphrases presented as quotes",
+        "3": "Verbatim candidate quotes precede the score",
+        "4": "Verbatim quotes with turn IDs, validated by code, interviewer turns excluded"
+      },
+      "Locked BARS rubric": {
+        "1": "Free-form 'rate 1-10'",
+        "2": "Numeric scale with adjective labels only",
+        "3": "Behavioural anchors per level",
+        "4": "Behavioural anchors with example phrases, frozen and hashed, the grader names the matched anchor"
+      },
+      "Few-shot exemplars": {
+        "1": "None",
+        "2": "One high-quality example (anchors grader high)",
+        "3": "3 exemplars L/M/H",
+        "4": "3 exemplars L/M/H per criterion, drawn from real transcripts, gold-scored by two humans"
+      },
+      "Bias controls": {
+        "1": "None",
+        "2": "Instruction-only ('be strict')",
+        "3": "Instruction plus fixed order plus interviewer-quote rejection",
+        "4": "All of these plus length/score and mean/SMD diagnostics tracked per version"
+      },
+      "Calibration and targets": {
+        "1": "No human comparison",
+        "2": "Eyeballed spot checks",
+        "3": "30-50 transcript set with QWK/ICC per criterion",
+        "4": "100-200 set, per-criterion QWK, ICC, SMD, isotonic map, re-run on every rubric edit"
+      },
+      "8B inference settings": {
+        "1": "Default temp 0.7, single sample, free text",
+        "2": "Low temp, free text parsed with regex",
+        "3": "Low temp plus JSON schema",
+        "4": "Low temp, JSON schema, median of 3 or expected value over score tokens, retest ICC tracked"
+      }
+    }
+  },
+  "level_expectations": "Do not implement level by asking the model to 'be more lenient for APMs'. Instruction-driven leniency is uncontrolled, and persona prompts inflated small-model scores (2509.19329). Instead, keep one locked anchor set and apply level as a code-side threshold shift, or as level-specific anchor text for the 3 ('solid') level only. APM: solid means a clear structure, one justified user segment and a basic metric. A trade-off is not required for a 3. PM: solid requires an explicit trade-off and a success metric with a guardrail. Senior PM: solid requires strategic context (business model, competition, ecosystem effects such as two-sided marketplace dynamics at Swiggy, Zomato or Uber) and proactive risk handling. Content that would earn a 4 at APM earns a 3 at Senior [uncertain]. This is inferred, and no source gives level-shifted anchors for LLM graders.",
+  "green_flags": [
+    "In grader output: every score is preceded by 1-3 verbatim candidate quotes with turn IDs.",
+    "Criterion scores vary independently. For example, structure 4 and quant 2 within one transcript shows the grader is not haloing.",
+    "The grader explicitly notes when an insight was introduced by the interviewer and withholds credit.",
+    "Grader mean score and distribution on the calibration set sit within 0.15 SD of human scores.",
+    "The rationale names the matched anchor and the missing behaviour for the next level ('to reach 4: state a guardrail metric').",
+    "Stable across 3 re-runs (same score in at least 2 of 3) and across a paraphrased-but-equivalent transcript.",
+    "In candidate transcripts the grader should reward: case-specific choices, explicit trade-offs, numbers with sanity checks, and a landed recommendation."
+  ],
+  "red_flags": [
+    "Scores rise with transcript length or number of framework steps named. This is a length/verbosity bias, rewarding recitation.",
+    "All criteria get the same score (halo), usually 3, which also indicates central tendency.",
+    "Quotes that do not appear in the transcript, or appear only in interviewer turns.",
+    "Generic praise in the rationale ('well structured, good user focus') with no quote.",
+    "Score shifts when rubric options are reordered or IDs relabelled (A-D vs 1-4). Qwen3-8B showed shifts of more than 0.05 correlation.",
+    "Grader inflates relative to humans. LLM raters were consistently more lenient in transcript scoring studies.",
+    "Crediting candidate 'framework recitation' (CIRCLES, AARRR, MECE labels) as structure without case-specific content.",
+    "The same model acting as interviewer and grader, which risks self-preference toward its own hints and phrasing."
+  ],
+  "recitation_vs_insight": "Make the grader distinguish labels from content mechanically. For each structure-type criterion, require the grader to quote and then classify each quote as LABEL (framework name or step name with no case content), GENERIC (true of any product) or SPECIFIC (references this product, user, market, number or constraint). Allow a score above 2 only if there is at least one SPECIFIC quote that makes a choice ('I'll prioritise X over Y because Z'). Add an exemplar at score 2 that is fully structured but generic, so the 8B model sees that 'structured but shallow' is a 2. This applies MMI's finding that low/medium/high exemplars matter, and directly targets the length and verbosity bias reported in 2604.23178. Also log the candidate token count: if score correlates with length more strongly on the grader than on humans, the grader is rewarding recitation [uncertain on exact implementation efficacy; no study tests this exact classifier].",
+  "process_signals": "Score process with a separate pass that runs before the content passes. It labels each interviewer turn as one of: question / clarification answer / data provided / hint / pushback / time warning. From those labels, compute in code: count of candidate clarifying questions, and quality, scored by the LLM 1-4 on whether each question changes the solution; check-ins; use of interviewer data (did the candidate reference a data-provided turn later?); response to pushback (defends with reasoning, or updates with reasoning, vs capitulates or ignores); and hint count. Recommended hint penalty (inferred): 0 hints, no penalty. 1 minor nudge, none. 2 or more hints, or any hint that supplies structure or the key insight, caps the relevant criterion at 2 and the overall at 'lean hire'. Interviewer-led formats such as Meta-style execution and guesstimate follow-ups should not count routine probing questions as hints. That is why the turn labeller needs the format flag. Clarifying-question count alone should not be rewarded: 2-4 high-quality questions beats 8 generic ones [uncertain].",
+  "time_allocation": "Grader-side: the grader cannot see a clock unless the transcript carries timestamps, so include turn timestamps in the transcript. Compute in code the share of time per phase (clarify / structure / solve / recommend) using the phase-labelling pass. Penalty: if the transcript ends without a recommendation, apply the landing gate. If clarification or framing exceeds about 30% of the time box, flag it as feedback but do not reduce content scores. Compute budget for Qwen3-8B locally: about 7-9 per-criterion passes plus 1 turn-labelling pass, each with a full transcript of 5-9k tokens, at 3 samples. Expect several minutes on a laptop GPU. Use the expected value over score-token probabilities instead of 3 samples if latency matters [uncertain].",
+  "hire_thresholds": "Compute in code, not by the LLM, from per-criterion 1-4 scores, case-type weights and gates (inferred mapping, no company publishes one). Strong hire: weighted mean at least 3.5, no criterion below 3, no gate triggered. Hire: weighted mean at least 3.0, at most one criterion at 2, no gate. Lean hire: weighted mean 2.5-3.0, or any cap gate triggered. No hire: weighted mean below 2.5, or any criterion at 1 on a must-pass dimension such as no landed answer. Because LLM raters skew lenient, apply the isotonic calibration map before thresholding. Alternatively, report the hire band only when calibration-set QWK passes the deployment gate. Otherwise show criterion feedback only. Companies differ mostly in bar height. Meta and Google calibrate across committees, Amazon uses a bar-raiser with veto, and Indian consumer-tech firms run fewer and faster rounds. Implement these as per-company threshold offsets of ±0.25 [uncertain].",
+  "company_differences": "No source describes how any company grades with or calibrates LLM graders. Differences below are for parameterising the grader [uncertain]. Google: structured, user-centred reasoning with hiring-committee calibration. Raise the weight on structure and user insight, and use a strict 4-point anchor scale like Google's own 1-4 interview rating convention. Meta: product sense and execution are separate interviews, with heavy metric and trade-off depth. Grade execution transcripts with metric-specific anchors. Amazon: map criteria to leadership principles (Customer Obsession, Dive Deep, Bias for Action). Have the grader quote evidence per LP, and treat the bar raiser as a stricter threshold offset. Microsoft: more customer-scenario and collaboration emphasis. Uber: marketplace, two-sided trade-offs and ops metrics. India (Flipkart, Swiggy, Zomato, PhonePe, Meesho): more guesstimates, unit-economics and RCA cases, with emphasis on Bharat and tier-2/3 users, vernacular and low-bandwidth constraints, and price sensitivity. Add India-context anchors to the 4 level (for example, mentioning COD, UPI, vernacular UX or kirana networks where relevant) rather than penalising their absence. ASR quality for Indian-English and Hinglish may be lower, so the transcript-cleaning pass matters more.",
+  "calibration_exemplars": {
+    "how_to_build": "Use 3 exemplars per criterion (L/M/H). MMI found 3 optimal, with 4 or more degrading. Write them as 80-200 word transcript excerpts with gold score, quotes and a 1-2 sentence rationale. Keep a separate held-out set of 30-200 fully scored transcripts for measuring QWK. Never reuse held-out items as shots.",
+    "score_1": "Candidate jumps to solutions or numbers with no framing, names no user or segment, and gives no recommendation, or gives a conclusion contradicted by their own numbers. Rationale cites the absence of quotes for the criterion.",
+    "score_2": "Fully framework-structured ('Let me use CIRCLES: comprehend, identify customer, report needs...') but every step is generic. Lists 3 user segments without choosing. Metrics named without definition. This exemplar matters most, because it teaches the 8B model that structure without specificity is a 2.",
+    "score_3": "Picks a segment with a reason tied to the goal. Proposes 2-3 solutions and prioritises them with a stated criterion. Gives one success metric. Lands a recommendation. Little trade-off depth.",
+    "score_4": "Everything in 3, plus explicit trade-off and guardrail metric, a risk with mitigation, uses interviewer-provided data to change direction, and self-checks numbers ('that implies 40% of Bangalore orders, which is too high, so I'll halve my penetration assumption'). Concise: a 4 exemplar should be shorter than the 2 exemplar to counter length bias."
+  },
+  "coachable_feedback": {
+    "Per-criterion decomposition": "Feedback is emitted per criterion with the next-level behaviour named, e.g. 'Prioritisation 2 to 3: after listing options, say which one you'd build first and the single criterion you used.'",
+    "Evidence-first quotes": "Show the candidate their own quoted line and the missing element, rather than abstract advice. This was the weakest area for LLMs in HURIT (specific, actionable advice).",
+    "Locked BARS rubric": "Tell the candidate which anchor they matched and the exact behaviour in the next anchor's example phrase.",
+    "Few-shot exemplars": "Offer the score-4 exemplar excerpt for the weakest criterion as a model answer to practise against.",
+    "Bias controls": "Never give 'be more thorough' feedback, which rewards length. Prefer 'make one explicit trade-off statement'.",
+    "Calibration and targets": "Label feedback 'experimental' for criteria whose QWK is below the gate, so candidates do not over-trust it.",
+    "8B inference settings": "If 3 samples disagree by 2 or more points on a criterion, say the evidence was ambiguous, ask the candidate to be more explicit on that criterion, and do not report a confident score."
+  },
+  "llm_grading_notes": "Main pitfalls for a Qwen3-8B transcript grader and their mitigations. (1) Leniency and inflation: LLM raters were more lenient than humans in transcript studies (2509.19329, 2602.02360). Small models inflate more under high temperature or persona prompts. Mitigate with temperature at or below 0.2, no 'expert persona', a score-2 exemplar that looks good, and isotonic calibration to human scores. (2) Length and verbosity reward: mitigate with the LABEL/GENERIC/SPECIFIC quote classification, a concise score-4 exemplar, and a logged length-score correlation. (3) Crediting interviewer-supplied facts: speaker-label every turn, quote only candidate turns, and run code-side substring and speaker checks. (4) Rubric-format sensitivity: Qwen3-8B moved more than 0.05 correlation under rubric order and ID changes, and up to about 0.2 with a scored reference answer (2506.22316). Freeze the rubric. If you include a reference answer, make it a full-mark example, which the paper found best, rather than a mid-scored one. (5) Halo and central tendency: separate passes per criterion, and code-side aggregation. (6) Self-preference: if the interviewer is also Qwen3-8B, the grader may favour candidate echoes of the interviewer's own phrasing (2404.13076). Use a different system prompt and, ideally, a different model family for spot audits. (7) Self-consistency is not validity: small models can be internally consistent yet agree poorly with humans (ICC under 0.20 in 2509.19329). Always measure against humans. (8) Thinking mode: likely helps (+about 10 pts RewardBench at 0.6B-4B, 2509.13332), but CoT can collapse score spread (2503.03064). Keep thinking on, but aggregate over 3 samples or score-token probabilities. (9) Realistic targets: human-human agreement on interview-like ratings is often only ICC about 0.45 or kappa 0.41-0.60. MMI's best prompting reached QWK 0.62. The LLM essay literature spans 0.30-0.80 (2512.14561). Target per-criterion QWK at least 0.60 and within 0.10 of your own human-human figure, aiming for 0.70 (Williamson standard). Expect some criteria, especially abstract ones like 'insight' or 'judgement', to stay lower, as MMI c3 did at 0.29-0.60. (10) ASR noise: run a cleaning pass that must not add content, as MMI did.",
+  "sources": [
+    {
+      "title": "Automated Multiple Mini Interview (MMI) Scoring (Huynh, Guerin, Callwood)",
+      "url": "https://arxiv.org/abs/2602.02360",
+      "date": "2026-02-02",
+      "verification": "academic (preprint)"
+    },
+    {
+      "title": "Agreement Between LLMs and Human Raters in Essay Scoring: A Research Synthesis (Li et al.)",
+      "url": "https://arxiv.org/abs/2512.14561",
+      "date": "2025-12-16, rev 2026-05-25",
+      "verification": "academic (preprint, PRISMA synthesis of 65 studies)"
+    },
+    {
+      "title": "From Rubrics to Reliable Scores: Evidence-Grounded Text Evaluation with LLM Judges (RULERS, Hong et al.)",
+      "url": "https://arxiv.org/abs/2601.08654",
+      "date": "2026 (v3 Sep 2026)",
+      "verification": "academic (preprint)"
+    },
+    {
+      "title": "Evaluating Scoring Bias in LLM-as-a-Judge (Li et al., Ant Group), includes Qwen3-8B",
+      "url": "https://arxiv.org/abs/2506.22316",
+      "date": "2025-08-26 (v3)",
+      "verification": "academic (preprint)"
+    },
+    {
+      "title": "Improving LLM-as-a-Judge Inference with the Judgment Distribution (Wang, Zhang, Choi)",
+      "url": "https://arxiv.org/abs/2503.03064",
+      "date": "2025 (EMNLP Findings)",
+      "verification": "academic (peer-reviewed)"
+    },
+    {
+      "title": "Towards Smarter Hiring: zero/few-shot LLMs for HR interview transcripts (HURIT, Maity et al.)",
+      "url": "https://arxiv.org/abs/2504.05683",
+      "date": "2025-04-08",
+      "verification": "academic (preprint)"
+    },
+    {
+      "title": "How Model Size, Temperature, and Prompt Style Affect LLM-Human Assessment Score Alignment (Jung et al.)",
+      "url": "https://arxiv.org/abs/2509.19329",
+      "date": "2025-09-14",
+      "verification": "academic (preprint)"
+    },
+    {
+      "title": "Unleashing LLMs' Proficiency in Zero-shot Essay Scoring (MTS, Lee et al.)",
+      "url": "https://arxiv.org/abs/2404.04941",
+      "date": "2024 (EMNLP Findings)",
+      "verification": "academic (peer-reviewed); pre-2025 used as method background"
+    },
+    {
+      "title": "Prometheus 2: open-source evaluator LM",
+      "url": "https://arxiv.org/abs/2405.01535",
+      "date": "2024 (EMNLP)",
+      "verification": "academic (peer-reviewed)"
+    },
+    {
+      "title": "Explicit Reasoning Makes Better Judges / How far can SLMs go without thinking (Qwen3 0.6B-4B)",
+      "url": "https://arxiv.org/abs/2509.13332",
+      "date": "2025-09",
+      "verification": "academic (NeurIPS 2025 workshop/preprint)"
+    },
+    {
+      "title": "Judging the Judges: Systematic Evaluation of Bias Mitigation in LLM-as-a-Judge (Soumik)",
+      "url": "https://arxiv.org/abs/2604.23178",
+      "date": "2026-04-25 (TMLR 2026)",
+      "verification": "academic (peer-reviewed)"
+    },
+    {
+      "title": "LLM Evaluators Recognize and Favor Their Own Generations (Panickssery et al.)",
+      "url": "https://arxiv.org/abs/2404.13076",
+      "date": "2024-04-15",
+      "verification": "academic (NeurIPS 2024)"
+    },
+    {
+      "title": "ETS Research Memorandum RM-23-01 (cites Williamson et al. 2012 automated scoring criteria)",
+      "url": "https://www.ets.org/Media/Research/pdf/RM-23-01.pdf",
+      "date": "2023",
+      "verification": "published standard (via secondary summary)"
+    },
+    {
+      "title": "Evaluating QWK as the Standard Performance Metric for AES",
+      "url": "https://educationaldatamining.org/EDM2023/proceedings/2023.EDM-long-papers.9/index.html",
+      "date": "2023 (EDM)",
+      "verification": "academic"
+    },
+    {
+      "title": "IZA DP 18371: LLM performance ratings show human-like leniency and central tendency when rating individually",
+      "url": "https://docs.iza.org/dp18371.pdf",
+      "date": "2025",
+      "verification": "academic (discussion paper)"
+    },
+    {
+      "title": "Rasch analysis of LLM vs human raters on AP Chinese essays",
+      "url": "https://arxiv.org/abs/2505.18486",
+      "date": "2025-05",
+      "verification": "academic (preprint)"
+    },
+    {
+      "title": "Judge Reliability Harness (paraphrase invariance tests)",
+      "url": "https://arxiv.org/abs/2603.05399",
+      "date": "2026-03",
+      "verification": "academic (preprint)"
+    },
+    {
+      "title": "Rubric-conditioned short-answer grading: synonym-substitution sensitivity",
+      "url": "https://arxiv.org/abs/2601.08843",
+      "date": "2025-12",
+      "verification": "academic (preprint)"
+    },
+    {
+      "title": "Judging LLM-as-a-Judge: rubric artifacts (rubric reversal flip rates)",
+      "url": "https://arxiv.org/abs/2609.02942",
+      "date": "2026 [uncertain date]",
+      "verification": "academic (preprint, not date-verified)"
+    },
+    {
+      "title": "Arize: Evidence-based prompting strategies for LLM-as-a-judge",
+      "url": "https://arize.com/blog/evidence-based-prompting-strategies-for-llm-as-a-judge-explanations-and-chain-of-thought/",
+      "date": "2025",
+      "verification": "prep-platform/vendor blog"
+    },
+    {
+      "title": "Exponent product sense rubric",
+      "url": "https://www.tryexponent.com/courses/product-sense/product-sense-rubric",
+      "date": "accessed 2026-11",
+      "verification": "prep-platform"
+    }
+  ],
+  "uncertain": [
+    "what_interviewers_test",
+    "weights",
+    "must_pass_gates",
+    "level_expectations",
+    "recitation_vs_insight",
+    "process_signals",
+    "time_allocation",
+    "hire_thresholds",
+    "company_differences"
+  ]
+}

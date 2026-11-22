@@ -1,0 +1,431 @@
+{
+ "item_name": "Universal PM signals and hire/no-hire rollup (cross-case-type grader layer)",
+ "what_interviewers_test": "Across every PM case type, interviewers write evidence against a small set of company attributes and then give one overall recommendation. Google scores four attributes: General Cognitive Ability, Role-Related Knowledge, Leadership and Googleyness. Its March 2026 re:Work guide restates these as role-related knowledge, problem solving and leadership, and says questions test the analytical thought process, not a correct answer. Meta scores product sense (user empathy, value, intentional design, handling new data), execution/analytical thinking (goals and metrics, trade-offs, debugging) and leadership and drive. How independently the candidate drives the conversation is an explicit levelling signal. Amazon maps every answer to assigned Leadership Principles (Customer Obsession, Ownership, Dive Deep, Deliver Results, Bias for Action, Are Right A Lot). Indian consumer-tech loops (Flipkart, Swiggy, Zomato, PhonePe, Meesho) test structured first-principles breakdown, comfort with numbers (guesstimates, P&L) and pragmatic, India-specific trade-offs. Each round is often an elimination gate.",
+ "format_variants": "Interviewer-led (RCA, metrics, estimation) and candidate-led (design, improvement, strategy) formats apply the same universal signals with different emphasis. In candidate-led cases, owning direction and not needing steering is weighted more. In interviewer-led cases, using revealed data and updating on it is weighted more. Live rounds are usually 30-45 minutes (Google APM first round: one 45-minute design case; Meta product sense: 45 minutes). Second rounds may pack 2 or more prompts into 45 minutes, so a condensed but complete answer is expected. Take-homes (Google APM: about 4 hours of work inside a 72-hour window, then a 45-minute presentation; Indian campus loops: 45-minute timed case submissions) shift weight from conversational process to coverage, defensibility under follow-up and presentation. Process signals such as check-ins and hint usage apply only to the defence discussion. Indian loops are often shorter (20-30 minute case segments inside resume-heavy rounds) and more conversational. Candidates report that running out of time before solutions was not always penalised when diagnosis was strong.",
+ "dimensions": [
+  {
+   "name": "Problem framing and clarification",
+   "definition": "Turns an ambiguous prompt into a solvable problem: confirms goal, scope, user or platform and constraints, then states assumptions where answers are not given.",
+   "signal_sought": "Narrows before solving. Each question is tied to a decision it will change, not asked for show.",
+   "transcript_evidence": "Quote the candidate's opening questions and stated assumptions, e.g. 'Is the goal engagement or monetisation?', 'I'll assume Android users in tier-2 cities since that's where growth is.' Also quote any point where an assumption is revisited."
+  },
+  {
+   "name": "Structured reasoning (problem solving / GCA)",
+   "definition": "Breaks the problem into components that are mutually exclusive and collectively exhaustive (MECE), sequences them logically, and keeps the structure visible while still adapting it to the case.",
+   "signal_sought": "A tailored decomposition, not a recited acronym. The structure survives interruptions and new data.",
+   "transcript_evidence": "Quote the plan statement ('I'll split this into supply, demand and platform'), signposting ('Moving to the second bucket...'), and how the structure changed after an interviewer interjection."
+  },
+  {
+   "name": "Product and user insight (RRK / product sense)",
+   "definition": "Shows non-obvious understanding of users, the business model, the market or mechanisms specific to this product and context (e.g. India COD behaviour, tier-2 connectivity, marketplace supply dynamics).",
+   "signal_sought": "Says something a generic answer would not. Explains why a user or system behaves that way.",
+   "transcript_evidence": "Quote any insight that is specific to the product or context, and its stated mechanism, e.g. 'Kirana-dense areas mean 10-minute delivery competes with walking to the store, not with other apps.'"
+  },
+  {
+   "name": "Prioritisation and decisiveness",
+   "definition": "Ranks options against explicit criteria, names trade-offs and what is not being done, and commits to a recommendation.",
+   "signal_sought": "Makes the call under ambiguity. Treats indecision as a failure, not as thoughtfulness.",
+   "transcript_evidence": "Quote the ranking criteria, the explicit choice ('I'd pick X over Y because...'), the named downside, and the final recommendation sentence."
+  },
+  {
+   "name": "Quantitative and metric rigour",
+   "definition": "Uses numbers, metrics and sanity checks correctly: defines success metrics and guardrails, does arithmetic accurately, and checks magnitude.",
+   "signal_sought": "Numbers drive decisions. Any error is caught by the candidate, not the interviewer.",
+   "transcript_evidence": "Quote metric definitions ('primary: weekly orders per active user; guardrail: cancellation rate'), calculations, and sanity checks ('That's about 2 orders per user per week, which seems plausible')."
+  },
+  {
+   "name": "Communication and collaboration",
+   "definition": "Keeps the interviewer oriented, checks in at key decisions, incorporates data the interviewer supplies, and handles pushback by updating or defending with reasons.",
+   "signal_sought": "Treats the interview as a conversation, neither as a monologue nor as constant permission-seeking.",
+   "transcript_evidence": "Quote check-ins ('Does this split work before I go deeper?'), how the candidate used a fact the interviewer gave, and the reply to pushback ('Fair point, that weakens hypothesis 2. I'll drop it' or 'I'd still hold it because...')."
+  },
+  {
+   "name": "Ownership and independence (drive)",
+   "definition": "Drives the case end to end without steering: moves between phases unprompted, reaches a conclusion inside the time box, and closes with a summary, risks and next steps.",
+   "signal_sought": "Needs few or no hints. Lands the plane. This is the main levelling signal.",
+   "transcript_evidence": "Count and classify interviewer interventions (clarification, nudge, redirect, rescue). Quote unprompted transitions and the closing summary. Quote any interviewer line that supplied direction ('Have you considered the seller side?')."
+  }
+ ],
+ "weights": {
+  "summary": "No company publishes numeric weights for these signals. Google re:Work publishes the attributes and the four-level poor/borderline/solid/outstanding rubric idea, but not weights. Prep platforms and interviewer accounts agree on the set of signals but rarely on percentages. The weights below are a recommended default for the cross-type layer. Case-type rubrics should re-weight within this frame.",
+  "per_dimension": [
+   {
+    "dimension": "Problem framing and clarification",
+    "weight_pct": 15,
+    "provenance": "prep-platform",
+    "source": "https://www.aced.io/guides/google-associate-product-manager-interview ; https://www.theproductfolks.com/product-management-blog/product-manager-case-study-interview-frameworks-50-questions",
+    "note": "Aced lists scoping as the first first-round signal at Google APM. TPF and ISB alumni accounts stress that better scoping questions produce better answers. Weight capped because it is also enforced as a gate."
+   },
+   {
+    "dimension": "Structured reasoning (problem solving / GCA)",
+    "weight_pct": 20,
+    "provenance": "published (attribute) / inferred (weight)",
+    "source": "https://rework.withgoogle.com/intl/en/guides/a-guide-to-structured-interviewing-for-better-hiring-practices ; https://dataford.io/interview-guides/phonepe/product-manager",
+    "note": "Google names problem solving as one of three core attributes. Indian sources (Dataford PhonePe, ISB playbook) call structured first-principles breakdown the top differentiator. Highest weight together with insight."
+   },
+   {
+    "dimension": "Product and user insight (RRK / product sense)",
+    "weight_pct": 20,
+    "provenance": "published (attribute) / interviewer-account (emphasis)",
+    "source": "https://igotanoffer.com/blogs/product-manager/facebook-product-manager-interview ; https://productinterview.com/roles/senior-product-manager/",
+    "note": "Meta's rubric puts user empathy and value creation first. Senior-bar accounts say the senior answer names a strategic risk before features. This weight protects against structured but shallow answers."
+   },
+   {
+    "dimension": "Prioritisation and decisiveness",
+    "weight_pct": 15,
+    "provenance": "interviewer-account / prep-platform",
+    "source": "https://productinterview.com/roles/senior-product-manager/ ; https://prepfully.com/interview-guides/meta-product-manager",
+    "note": "Prepfully notes that Meta scores trade-offs separately and at the end of the round, so a candidate who never reaches them loses the signal. Productinterview.com calls indecision a disqualifier at L6."
+   },
+   {
+    "dimension": "Quantitative and metric rigour",
+    "weight_pct": 10,
+    "provenance": "prep-platform",
+    "source": "https://igotanoffer.com/blogs/product-manager/facebook-product-manager-interview ; https://www.scribd.com/document/983698243/BTC-Handbook-2025",
+    "note": "Meta execution scores goals and metrics. Indian loops test comfort with numbers in nearly every round. Raise to 20-30% in estimation, metrics and RCA rubrics."
+   },
+   {
+    "dimension": "Communication and collaboration",
+    "weight_pct": 10,
+    "provenance": "prep-platform",
+    "source": "https://www.aced.io/blog/product-sense-interview ; https://www.aced.io/guides/google-associate-product-manager-interview",
+    "note": "Aced scores communication and collaboration as a separate product sense dimension (check-ins, inviting pushback, adjusting to new information). Google APM second rounds explicitly score adaptability to pushback."
+   },
+   {
+    "dimension": "Ownership and independence (drive)",
+    "weight_pct": 10,
+    "provenance": "prep-platform / inferred",
+    "source": "https://prepfully.com/interview-guides/meta-product-manager",
+    "note": "Prepfully reports that driving the whole conversation unprompted reads as IC6 and needing steering reads as IC5. Weighted only 10% because hint usage also applies caps (see process_signals), which avoids double-counting."
+   }
+  ],
+  "disagreements": "(1) Rating scales differ between sources. Google is described with 5 levels (IGotAnOffer: strong hire, hire, leaning hire, no hire, strong no hire) or 6 levels (Preper, citing ex-recruiters). Meta is described with 4 levels (Prepfully: Strong Hire, Hire, Leaning No Hire, No Hire) or as rubric labels Below/Meets/Strong/Exceptional (IGotAnOffer). (2) Leadership weight: productinterview.com claims leadership and drive accounts for half or more of total weighting at senior levels. That applies to the whole loop (behavioural rounds), not to a case round, so it is not used here. (3) Communication: Aced treats it as a full dimension (1 of 5, about 20%). Most interviewer accounts treat it as a tie-breaker. We use 10%. (4) India: sources weight structure and numbers more and polish less, so for Indian targets shift about 5 points from communication to quantitative rigour.",
+  "recommended_case_type_reweighting": "Guesstimate: quantitative 30, structure 25, framing 15, insight 10, decisiveness 5, communication 5, independence 10. RCA: framing 15, structure 20, quantitative 15, insight 15, decisiveness (hypothesis ranking) 15, communication (use of revealed data) 10, independence 10. Design/improvement: insight 25, framing 15, decisiveness 20, structure 15, quantitative 5, communication 10, independence 10. Strategy: insight 25, decisiveness 20, structure 20, framing 10, quantitative 10, communication 5, independence 10. [inferred]"
+ },
+ "must_pass_gates": [
+  {
+   "gate": "Never commits to a recommendation, final answer or ranked top choice by the end",
+   "cap": "Max lean hire. Max no hire at Senior PM.",
+   "source": "https://productinterview.com/roles/senior-product-manager/ (indecision is a disqualifier); https://prepfully.com/interview-guides/meta-product-manager (trade-offs are scored at the end of the round)"
+  },
+  {
+   "gate": "Interviewer had to rescue: supplied the key insight or structure, and the candidate only executed it",
+   "cap": "The affected dimension is capped at 2 and the overall result is capped at lean hire. Two or more rescues mean no hire.",
+   "source": "https://prepfully.com/interview-guides/meta-product-manager (steering reads a level lower) [inferred cap]"
+  },
+  {
+   "gate": "Solves before framing: proposes solutions or causes with no clarifying question and no stated assumption",
+   "cap": "Framing capped at 1. Overall max lean hire unless the candidate recovers unprompted within the first third of the case.",
+   "source": "https://www.aced.io/guides/google-associate-product-manager-interview ; https://www.theproductfolks.com/product-management-blog/product-manager-case-study-interview-frameworks-50-questions"
+  },
+  {
+   "gate": "Ignores or contradicts data the interviewer supplied, or does not adjust when told an assumption is wrong",
+   "cap": "Communication capped at 1. Overall max lean hire.",
+   "source": "https://www.aced.io/blog/product-sense-interview (adjust when you get new information); https://igotanoffer.com/blogs/product-manager/facebook-product-manager-interview (handling new data is in the Meta rubric)"
+  },
+  {
+   "gate": "Uncorrected material arithmetic or logic error that changes the conclusion",
+   "cap": "Quantitative capped at 1. Overall max lean hire.",
+   "source": "https://www.theproductfolks.com/product-management-blog/product-manager-case-study-interview-frameworks-50-questions (logic easy to follow and sanity-checked) [inferred cap]"
+  },
+  {
+   "gate": "Framework recitation with no case-specific content (generic segments, pain points or features that would fit any product)",
+   "cap": "Insight capped at 1. Overall max lean hire, even if structure scores 4.",
+   "source": "https://dataford.io/interview-guides/phonepe/product-manager (generic frameworks struggle); https://productinterview.com/roles/senior-product-manager/ (generic 'use AI to personalise' is an automatic No Hire signal)"
+  },
+  {
+   "gate": "Runs out of time before reaching the main deliverable (solution, estimate or root cause) with no summary",
+   "cap": "Max lean hire at PM and Senior PM. At APM or in Indian diagnostic rounds, reduce the cap to a one-band penalty if diagnosis was strong.",
+   "source": "https://prepfully.com/interview-guides/meta-product-manager (most fail by running out of time); https://www.aced.io/blog/product-sense-interview ; https://www.scribd.com/document/983698243/BTC-Handbook-2025 (Indian candidate: time ended before solutions and it did not seem to matter)"
+  }
+ ],
+ "score_anchors": {
+  "Problem framing and clarification": {
+   "1": "Jumps to answers. No questions, no assumptions. 'I'd add a loyalty programme and dark mode.'",
+   "2": "Asks generic questions that change nothing ('What's the timeline? Any budget?') or asks too many without converting them into assumptions.",
+   "3": "Asks 2-5 targeted questions on goal, user or platform scope and constraints, and states assumptions. 'I'll assume the goal is retention of new users in tier-2 cities.'",
+   "4": "As 3, plus explains why each scoping choice matters to the answer and revisits an assumption when new information arrives. 'If this is about GMV rather than orders, I'd look at AOV first, so let me confirm.'"
+  },
+  "Structured reasoning (problem solving / GCA)": {
+   "1": "Stream of consciousness with no visible plan. Repeats points and jumps between ideas.",
+   "2": "Recites a named framework (CIRCLES, AARRR) step by step with generic buckets. The structure breaks or is abandoned when interrupted.",
+   "3": "States a tailored MECE plan up front, signposts transitions and covers the buckets in a logical order. 'Three buckets: demand, supply, platform. I'll start with supply since delivery times moved.'",
+   "4": "As 3, plus the structure is designed around the specific problem, prioritises which branch to explore first with a reason, and is re-cut cleanly after new data."
+  },
+  "Product and user insight (RRK / product sense)": {
+   "1": "Insights are absent or wrong. Personas or causes would fit any product.",
+   "2": "Plausible but obvious points ('users want it faster and cheaper') with no mechanism.",
+   "3": "At least one context-specific insight with a mechanism. 'COD users in tier-2 cities cancel more because they're not home when the rider arrives, so the slot choice matters.'",
+   "4": "Several non-obvious insights that reshape the problem, e.g. naming the strategic risk or the second-order effect before features. 'The real question is whether we own the trip graph or stay a navigation layer.'"
+  },
+  "Prioritisation and decisiveness": {
+   "1": "No ranking. Lists options and hands the decision back ('it depends, all are important').",
+   "2": "Picks one option, but the criteria are implicit or the trade-off is not named.",
+   "3": "Ranks against explicit criteria (impact, effort, confidence, strategic fit), names the main downside and commits. 'I'd ship X first. It costs us Y, which I accept because...'",
+   "4": "As 3, plus names what is explicitly not being done and the opportunity cost, gives a reversal trigger ('if retention doesn't move in 4 weeks I'd switch to Z'), and holds the decision under pushback with reasons."
+  },
+  "Quantitative and metric rigour": {
+   "1": "No metrics, or the wrong north star (vanity metrics). Arithmetic errors go uncorrected.",
+   "2": "Names metrics without definitions or guardrails. Numbers are stated but not sanity-checked.",
+   "3": "Defines a primary metric, one or two guardrails and the measurement window. The arithmetic is correct and it is sanity-checked once.",
+   "4": "As 3, plus links metrics to the specific hypothesis or decision, cross-checks with a second method, and quantifies the expected impact or a threshold for action."
+  },
+  "Communication and collaboration": {
+   "1": "Monologue, or ignores interviewer input. Gets defensive or caves immediately under pushback.",
+   "2": "Mostly clear but rarely checks in, or checks in after every sentence. Acknowledges new data but does not use it.",
+   "3": "Signposts, checks in at the 2-3 key decision points, uses the interviewer's data to change the next step, and either updates or defends with a reason under pushback. 'Good point, that rules out the supply side, so I'll focus on checkout.'",
+   "4": "As 3, plus invites challenge at the right moments, synthesises the interviewer's input into a sharper frame, and keeps answers concise and audience-aware throughout."
+  },
+  "Ownership and independence (drive)": {
+   "1": "Needed a rescue: the interviewer supplied the key direction or answer, or the case never reached a conclusion.",
+   "2": "Needed one or more substantive redirects to progress, or did not finish within the time box.",
+   "3": "At most minor nudges. Moves through phases unprompted and reaches a conclusion with a brief summary.",
+   "4": "No steering needed. Manages time explicitly ('I have about 10 minutes, so I'll go to the recommendation'), lands the conclusion with risks and next steps, and proactively raises what they would do next."
+  }
+ },
+ "level_expectations": {
+  "APM / entry (Google APM, Meta RPM, Indian APM and campus PM)": "Solid (3) means clean framing, a visible tailored structure, at least one context-specific insight, a committed recommendation and correct arithmetic. Insight may be lighter and strategy or business depth is optional. One or two minor nudges are expected and penalised less. Indian campus loops weight structure, guesstimate fluency and first-principles thinking most, and are conversational ('keep checking with the interviewer for alignment').",
+  "PM (Google L5-ish PM, Meta IC5, Amazon L6 PM, Flipkart/Swiggy PM)": "Solid means everything at the APM bar, plus explicit trade-offs and guardrail metrics, adapting to pushback without losing structure, and needing only minor nudges. Meta: needing some steering reads as IC5 per Prepfully. Amazon: answers must show Dive Deep and Customer Obsession through specific data and must survive several levels of 'why' follow-ups.",
+  "Senior PM (Google L6, Meta IC6, Amazon L7, Indian SPM/Lead)": "Solid means everything at the PM bar, plus setting the goal and the strategic frame before solutions (productinterview.com says roughly 60% strategic framing at staff level), naming the opportunity cost and what not to do, deciding between conflicting priorities, and driving the whole conversation unprompted (which reads as IC6). Any substantive redirect drops the result to the level below. Indecision is disqualifying.",
+  "rollup_rule": "Score every dimension against the PM anchors, then shift thresholds by level instead of rewriting anchors. APM: the hire threshold is lowered by 0.25, and one substantive redirect is allowed. Senior PM: the hire threshold is raised by 0.25, insight and decisiveness must be at least 3, and no substantive redirect is allowed. [inferred]"
+ },
+ "green_flags": [
+  "States a tailored plan up front and signposts each transition, so the interviewer always knows where the candidate is.",
+  "Turns unanswered clarifying questions into explicit assumptions and moves on ('I'll assume X; tell me if that's wrong').",
+  "Offers a context-specific insight with a mechanism (India: COD, vernacular users, tier-2 logistics, UPI behaviour) rather than a generic persona.",
+  "Ranks options against named criteria, says what is not being done, and commits to one recommendation.",
+  "Uses interviewer-supplied data to change the next step immediately and says how it changed the thinking.",
+  "Handles pushback by either updating explicitly or defending with a reason, without caving or getting defensive.",
+  "Manages the clock aloud and lands a summary with risks, metrics and next steps before time runs out.",
+  "Catches and corrects their own errors or sanity-checks numbers before the interviewer does."
+ ],
+ "red_flags": [
+  "Recites a framework acronym step by step with generic content that would fit any product (recitation without insight).",
+  "Solves before scoping: features or causes appear before any question or assumption.",
+  "Lists options without ranking, or ends with 'it depends' and no recommendation.",
+  "Ignores, forgets or contradicts data the interviewer supplied, or repeats a hypothesis the interviewer has already ruled out.",
+  "Needs the interviewer to supply direction ('What about the supply side?') and only then makes progress.",
+  "Constant permission-seeking ('Is that okay? Should I continue?') after every point, or the opposite: a 10-minute monologue.",
+  "Runs out of time mid-analysis with no conclusion or summary.",
+  "Buzzword solutions with no mechanism ('use AI to personalise it', 'gamify it') or vanity metrics as the north star."
+ ],
+ "recitation_vs_insight": "Test the content of each step, not whether the step is present. (1) Substitution test: would this segment, pain point, cause or feature be equally true of a different product? If yes, it is recitation. Score insight at most 2 regardless of how well structured it is. (2) Mechanism test: does the candidate say why (a behavioural, economic or technical mechanism)? Insight requires a 'because'. (3) Choice test: does the structure lead to a choice that eliminates options? Recitation covers every bucket equally and never prunes. (4) Adaptation test: after an interviewer interjection, does the candidate re-cut the structure, or return to the next framework step? Frameworks are expected to be loose enough to change direction when the interviewer cuts in (Aced, Google APM guide). (5) Follow-up depth: rehearsed answers collapse at the second 'why' (Amazon Bar Raiser accounts). Grader rule: Structured reasoning and Insight are scored independently. A perfectly structured answer with no case-specific content scores 3-4 on structure, 1-2 on insight, and triggers the recitation gate (max lean hire).",
+ "process_signals": {
+  "clarifying_questions": "Quality over count. Expect 2-5 targeted questions for candidate-led cases and 3-6 for RCA or metrics. Each should be tied to a decision. More than about 8, or questions whose answers are never used, is a mild negative. Zero questions with no stated assumptions triggers the framing gate. Aced suggests probing until the interviewer stops giving clues, but that advice is about extracting information, not about raising the count.",
+  "check_ins": "Ideal: one after the plan, one at the main prioritisation choice and one before the conclusion. No check-ins in 30+ minutes is a mild negative (communication at most 2). Checking in after nearly every point is also a negative (it signals dependence). Count check-ins separately from hint requests.",
+  "use_of_interviewer_data": "Each fact the interviewer supplies should visibly change the next move within 1-2 turns. Credit only the candidate's use of the fact, not the fact itself. Ignoring data triggers the gate.",
+  "response_to_pushback": "Score whether the candidate updates when the challenge is valid and holds with reasons when it is not (Google APM second round: 'when you adjust your answer and when you hold your position'). Immediate capitulation every time, or defensiveness, both score at most 2 on communication.",
+  "hint_taxonomy_and_penalty": "Classify each interviewer intervention. (a) Clarification answer (the interviewer answers a question the candidate asked): no penalty. (b) Pacing prompt ('We have 10 minutes left'): no penalty on content, but a mild negative on independence if repeated. (c) Nudge (a light pointer the candidate then develops independently): -0.25 on the affected dimension, and no cap if there is only one. (d) Redirect (the interviewer names the branch or approach the candidate missed): cap the affected dimension at 2, -0.5 on independence. (e) Rescue (the interviewer supplies the insight, root cause or structure): cap the affected dimension at 1-2, independence at 1, overall max lean hire. Level: any redirect reads one level lower (Prepfully on Meta IC6 vs IC5). At APM, one redirect is tolerated without the overall cap. [cap values inferred; direction of effect from interviewer accounts]",
+  "steering_detection_for_transcripts": "Mark an interviewer turn as steering if it introduces a new hypothesis, segment, metric or step that the candidate had not mentioned, especially when it is phrased as a question ('Have you thought about...?', 'What about...?'). Content appearing after such a turn is credited as interviewer-originated."
+ },
+ "time_allocation": "For a 30-45 minute live case: framing 10-15%, plan or structure 5-10%, analysis or exploration 40-50%, prioritisation and decision 15-20%, summary with risks and metrics 5-10%. Meta's trade-offs are scored at the end of the round, so reaching the decision stage is mandatory (Prepfully). Running out of time is the most common failure mode reported by both Prepfully (Meta) and Aced (a Discord interviewer across 30-40 candidates). Penalty: no main deliverable by the end means independence is at most 2 and the overall result is capped at lean hire (PM and Senior PM). A missing summary alone costs -0.25 on communication. Indian diagnostic rounds are more lenient when diagnosis is strong (ISB 2025 accounts).",
+ "hire_thresholds": {
+  "method": "Score each dimension 1-4 independently from transcript evidence. Compute a weighted mean. Then apply gates and hint caps. Then shift by level. This follows mechanical combination: Kuncel et al. (2013) found that holistic combination loses substantial validity compared with formula combination.",
+  "strong_hire": "Weighted mean >= 3.5, no dimension below 3, no gate triggered, at most one minor nudge, and the conclusion landed in time.",
+  "hire": "Weighted mean 3.0-3.49, no dimension at 1, Structured reasoning and Insight both >= 3, no gate triggered.",
+  "lean_hire": "Weighted mean 2.5-2.99, or a hire-level mean with exactly one gate triggered or one redirect (at PM or Senior PM).",
+  "no_hire": "Weighted mean < 2.5, or any rescue plus another gate, or two or more gates, or Insight and Decisiveness both at 1.",
+  "level_shift": "APM: thresholds -0.25. Senior PM: thresholds +0.25, Insight and Decisiveness >= 3 required for hire. [inferred]",
+  "company_scale_mapping": "Google: 5-6 point scale (strong hire, hire, leaning hire, leaning no hire, no hire, strong no hire). The hiring committee reads written evidence and seeks consensus; one weak interview with a specific concern can sink a packet (Four-Leaf). Meta: Strong Hire / Hire / Leaning No Hire / No Hire per Prepfully, with no neutral option. Map our lean hire to Leaning No Hire for Meta. Amazon: Strongly inclined / Inclined / Not inclined / Strongly not inclined, with no neutral vote, and the Bar Raiser can veto. Map lean hire to Not inclined, or 'inclined at the level below'. Microsoft: independent hire/no-hire per interviewer, plus an As-Appropriate senior interviewer with veto.",
+  "sources_and_caveats": "The numeric cut-offs are inferred. Published sources give only the scale labels and the process. The 4-level poor/borderline/solid/outstanding rubric idea is published by Google re:Work. The no-neutral-vote design is documented for Amazon and Meta."
+ },
+ "company_differences": {
+  "Google": "Rates the four attributes (GCA, RRK, Leadership, Googleyness). Googleyness was redefined in December 2024, and re:Work (March 2026) now says role-related knowledge, problem solving and leadership. Uses rubrics with poor/borderline/solid/outstanding example answers. A hiring committee that never met the candidate decides from the written packet, so the clarity of transcript evidence matters. APM loops add pushback adaptability and Googleyness (humility, comfort with ambiguity) inside cases.",
+  "Meta": "Rubric axes are product sense, execution/analytical thinking and leadership and drive. Rating labels are Below/Meets/Strong/Exceptional (IGotAnOffer) or SH/H/LNH/NH (Prepfully). Driving independently is a levelling signal (unprompted reads as IC6, steered as IC5). Trade-offs are scored at the end. A hiring committee sets the level. In 2026 a product sense with AI format was added.",
+  "Amazon": "Every answer is mapped to assigned Leadership Principles. The vote has no neutral option. The Bar Raiser runs a debrief where everyone reads assessments independently and re-votes, lists principles in hire and no-hire columns, and can veto (Bill Carr, ex-VP). Rewards data-specific, 'I'-centred evidence that survives several levels of 'why'. 'Inclined at the level below' is a common outcome.",
+  "Microsoft": "Each interviewer gives an independent hire/no-hire. An As-Appropriate senior interviewer (only if the loop went well) probes flagged weaknesses, validates the level and holds a veto. Growth mindset and collaboration are emphasised.",
+  "Uber": "Marketplace cases (supply-demand balance, pricing, ETA reliability, city-level growth) weight quantitative and trade-off reasoning. No reliable public source on Uber's rating rollup was found. [uncertain]",
+  "Indian companies (Flipkart, Swiggy, Zomato, PhonePe, Meesho)": "Loops are typically 3-6 rounds: exploratory or resume, problem solving or case, product management, then a hiring-manager or leadership round. Sources describe each round as a strict elimination gate (PhonePe per Dataford, which reports a 15% offer rate). The heaviest weight goes to structured first-principles breakdown, guesstimates and RCA, comfort with numbers and P&L, and India-specific trade-offs (growth vs margin vs customer trust, seller vs buyer incentives at Flipkart). Interviewers interrupt with 'how would you validate that?' and nudge toward 1-2 focus areas. Nudges are more normal and less punitive than at US big tech. Candidates report being praised for checking alignment often. Solutions are expected even when not asked for. Feedback such as 'think of bolder ideas' shows that insight and ambition still separate hire from lean hire."
+ },
+ "calibration_exemplars": {
+  "score_1": "The candidate restates the prompt and immediately lists 6 features or causes, with no questions, no structure and no metric. When pushed ('Why that one?') they add more options. The interviewer eventually says 'Let's focus on new users'. The candidate follows but never concludes. Expected: most dimensions at 1, rescue gate triggered, no hire.",
+  "score_2": "The candidate asks two generic questions, then walks through CIRCLES verbatim with generic personas ('students, professionals, seniors'), brainstorms obvious solutions, picks one without criteria and names DAU as the metric. Needed one redirect ('What about the supply side?'). Expected: structure 2-3, insight 1-2, recitation gate, lean hire or no hire.",
+  "score_3": "The candidate asks 3 targeted questions, states assumptions, lays out a tailored 3-bucket plan, offers one context-specific insight with a mechanism, ranks 3 options on impact and effort, commits, names a primary metric plus a guardrail, uses one interviewer fact to drop a branch, and lands a 30-second summary. At most one nudge. Expected: mostly 3s, hire.",
+  "score_4": "As score 3, plus the candidate names the strategic question before solutions, prunes branches with reasons, adapts structure cleanly after a twist, defends the recommendation under pushback with evidence, gives a reversal trigger and the opportunity cost, manages time aloud, and needs no steering. Expected: 4s on insight, decisiveness and independence, strong hire."
+ },
+ "coachable_feedback": {
+  "Problem framing and clarification": "Before any solution, ask at most 3 questions about goal, user and scope, then say 'I'll assume X' aloud for anything left unanswered.",
+  "Structured reasoning (problem solving / GCA)": "State your plan in one sentence with 3 problem-specific buckets, and say which bucket you'll do first and why.",
+  "Product and user insight (RRK / product sense)": "For each user or cause you name, add a 'because' that would not be true of a different product.",
+  "Prioritisation and decisiveness": "End every list with 'I'd pick X because [criterion]; the cost is Y; I'd revisit if Z.'",
+  "Quantitative and metric rigour": "Name one primary metric with its exact definition and one guardrail, and sanity-check every number you compute aloud.",
+  "Communication and collaboration": "Check in exactly at the plan, the choice and the conclusion. When given data, say how it changes your next step.",
+  "Ownership and independence (drive)": "Announce time checkpoints ('About 10 minutes left, moving to the recommendation') and always finish with a 3-sentence summary, the risks and next steps."
+ },
+ "llm_grading_notes": "(1) Independent dimension scoring: prompt the 8B model to score one dimension at a time (separate calls or a strictly ordered JSON with evidence quotes first), and compute the overall in code, never in the model. This mirrors BARS practice of rating each dimension separately to limit halo, and mechanical combination (Kuncel et al. 2013). (2) Evidence-before-score: require a verbatim candidate quote for every score of 3 or higher. If there is no quote, cap at 2. If the dimension cannot be evaluated, output 'insufficient evidence' rather than a guess (Datadog: give the judge an abstain option). (3) Interviewer credit leakage: small models attribute interviewer-supplied facts and hints to the candidate. Pre-label turns by speaker, run a separate step that extracts and classifies interviewer interventions (clarification, nudge, redirect, rescue), and tell the grader that content first introduced by the interviewer earns no credit. (4) Length and verbosity bias: longer answers are rewarded independent of quality (LLM-judge bias literature, e.g. arXiv 2510.12462). Add an explicit instruction that length is not quality, and monitor the correlation between transcript length and score. (5) Leniency and central tendency: small judges cluster at 3. Give few-shot exemplars at all four levels (calibration_exemplars), and make the anchors behaviour-specific with example phrases. Detailed rubric prompts make judges stricter and less influenced by superficial features. (6) Framework keyword bias: models reward named frameworks (CIRCLES, AARRR). Instruct that framework names earn nothing, and run the substitution test for insight. (7) Gates in code: have the model output boolean gate flags with quotes, then apply caps deterministically. (8) Qwen3 8B specifics: use non-thinking or short-thinking mode with a constrained JSON schema, keep transcripts within context by chunking, and validate against a small human-labelled set. Re-check periodically for drift. [uncertain: model-specific behaviour not verified]",
+ "sources": [
+  {
+   "title": "A guide to structured interviewing for better hiring practices (Google re:Work)",
+   "url": "https://rework.withgoogle.com/intl/en/guides/a-guide-to-structured-interviewing-for-better-hiring-practices",
+   "date": "2026-03-31 (updated)",
+   "verification": "published (company)"
+  },
+  {
+   "title": "Sackett, Zhang, Berry & Lievens (2022), Revisiting meta-analytic estimates of validity in personnel selection, J Appl Psychol 107(11)",
+   "url": "https://psycnet.apa.org/record/2022-17327-001",
+   "date": "2022",
+   "verification": "academic"
+  },
+  {
+   "title": "Revisiting the design of selection systems in light of new findings (Sackett et al., Industrial and Organizational Psychology; structured interview .42, 80% credibility interval .18-.66)",
+   "url": "https://www.cambridge.org/core/journals/industrial-and-organizational-psychology/article/revisiting-the-design-of-selection-systems-in-light-of-new-findings-regarding-the-validity-of-widely-used-predictors/A20984B138319E3D432E643978BF026D",
+   "date": "2023",
+   "verification": "academic"
+  },
+  {
+   "title": "Kuncel, Klieger, Connelly & Ones (2013), Mechanical versus clinical data combination in selection and admissions decisions",
+   "url": "https://psycnet.apa.org/record/2013-32416-001",
+   "date": "2013 (background)",
+   "verification": "academic"
+  },
+  {
+   "title": "Kell et al. (2017), Exploring methods for developing BARS for evaluating structured interview performance (ETS)",
+   "url": "https://files.eric.ed.gov/fulltext/EJ1168380.pdf",
+   "date": "2017 (background)",
+   "verification": "academic"
+  },
+  {
+   "title": "Berry, Lievens, Zhang & Sackett (2024), Insights from an updated personnel selection meta-analytic matrix",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38695805/",
+   "date": "2024",
+   "verification": "academic"
+  },
+  {
+   "title": "Meta Product Manager Interview: grading rubrics (IGotAnOffer)",
+   "url": "https://igotanoffer.com/blogs/product-manager/facebook-product-manager-interview",
+   "date": "2026-04-15",
+   "verification": "prep platform (insider-sourced)"
+  },
+  {
+   "title": "Meta Product Manager interview guide (Prepfully)",
+   "url": "https://prepfully.com/interview-guides/meta-product-manager",
+   "date": "2026",
+   "verification": "prep platform (interviewer-sourced)"
+  },
+  {
+   "title": "Google Interview Experiences: rating scale and hiring committee (IGotAnOffer)",
+   "url": "https://igotanoffer.com/en/advice/google-interview-experience",
+   "date": "2026-06-15",
+   "verification": "prep platform"
+  },
+  {
+   "title": "Google behavioral interview guide: six-point scale (Preper)",
+   "url": "https://preper.app/guides/google-behavioral-interview-prep",
+   "date": "2026",
+   "verification": "prep platform (cites ex-recruiters)"
+  },
+  {
+   "title": "The Google hiring process and how the hiring committee decides (Four-Leaf)",
+   "url": "https://four-leaf.ai/blog/google-hiring-process",
+   "date": "2025-2026 [uncertain]",
+   "verification": "prep platform"
+  },
+  {
+   "title": "Google APM Interview Guide (Aced, formerly Exponent)",
+   "url": "https://www.aced.io/guides/google-associate-product-manager-interview",
+   "date": "2026-11 (updated)",
+   "verification": "prep platform"
+  },
+  {
+   "title": "Product Sense Interview Prep 2026 (Aced): five dimensions, four-point scale, time failure",
+   "url": "https://www.aced.io/blog/product-sense-interview",
+   "date": "2026-11 (updated)",
+   "verification": "prep platform (includes interviewer accounts)"
+  },
+  {
+   "title": "Senior PM interview guide L5/L6 (productinterview.com)",
+   "url": "https://productinterview.com/roles/senior-product-manager/",
+   "date": "2026",
+   "verification": "prep platform"
+  },
+  {
+   "title": "How Amazon's debriefs determine candidate quality (Bill Carr, ex-VP Amazon, Bar Raiser)",
+   "url": "https://www.linkedin.com/posts/bill-carr_one-of-the-most-important-parts-of-amazon-activity-7377073667341594625-V50e",
+   "date": "2025-09-25",
+   "verification": "interviewer account"
+  },
+  {
+   "title": "Amazon Interview Debrief: four-point inclination (techinterview.coach)",
+   "url": "https://techinterview.coach/blog/amazon-interview-debrief",
+   "date": "2026 [uncertain]",
+   "verification": "prep platform"
+  },
+  {
+   "title": "An Amazon Bar Raiser on the Leadership Principles (About Amazon)",
+   "url": "https://www.aboutamazon.com/news/workplace/what-do-each-of-amazons-leadership-principles-really-mean",
+   "date": "2023-08-23",
+   "verification": "published (company)"
+  },
+  {
+   "title": "Amazon Leadership Principles interview questions 2026 (techscreen.app)",
+   "url": "https://techscreen.app/articles/amazon-leadership-principles-interview-questions-2026",
+   "date": "2026",
+   "verification": "prep platform"
+  },
+  {
+   "title": "Microsoft Interview Process 2026: As-Appropriate veto (Medhly)",
+   "url": "https://medhly.com/blog/microsoft-interview-process-2026/",
+   "date": "2026",
+   "verification": "prep platform"
+  },
+  {
+   "title": "Microsoft PM Interview Process in 2026 (Product Alliance)",
+   "url": "https://www.productalliance.com/post/microsoft-pm-interview-process-in-2026-everything-you-need-to-know",
+   "date": "2026",
+   "verification": "prep platform"
+  },
+  {
+   "title": "PhonePe Product Manager Interview Guide (Dataford)",
+   "url": "https://dataford.io/interview-guides/phonepe/product-manager",
+   "date": "2026",
+   "verification": "prep platform (aggregated candidate reports)"
+  },
+  {
+   "title": "PM Case Study Interview: Frameworks and 50+ Questions (The Product Folks)",
+   "url": "https://www.theproductfolks.com/product-management-blog/product-manager-case-study-interview-frameworks-50-questions",
+   "date": "2026-10-14",
+   "verification": "prep platform (India)"
+  },
+  {
+   "title": "ISB Placement Playbook, Class of 2025 (PM interview experiences incl. Zomato, Swiggy)",
+   "url": "https://www.scribd.com/document/983698243/BTC-Handbook-2025",
+   "date": "2025",
+   "verification": "candidate accounts (India)"
+  },
+  {
+   "title": "Flipkart PM interview guide post (Interviewbee)",
+   "url": "https://www.linkedin.com/posts/bismayymohapatra_flipkart-product-manager-interview-guide-activity-7480950473592795137-MS9n",
+   "date": "2026-07-09",
+   "verification": "prep platform (India, low detail)"
+  },
+  {
+   "title": "APM vs PM vs Senior PM responsibilities (LinkedIn post)",
+   "url": "https://www.linkedin.com/posts/chikka_productmanagement-productmanager-careergrowth-activity-7518306396518641665-MX09",
+   "date": "2026-10-20",
+   "verification": "practitioner opinion"
+  },
+  {
+   "title": "Evaluating and mitigating LLM-as-a-judge bias (arXiv 2510.12462)",
+   "url": "https://arxiv.org/html/2510.12462v3",
+   "date": "2025-2026",
+   "verification": "academic (preprint)"
+  },
+  {
+   "title": "What is LLM-as-a-judge: rubric, abstain option, verbosity bias (Datadog)",
+   "url": "https://www.datadoghq.com/knowledge-center/llm-as-a-judge/",
+   "date": "2026",
+   "verification": "vendor documentation"
+  }
+ ],
+ "uncertain": [
+  "weights (all numeric percentages inferred; no published weights)",
+  "weights.recommended_case_type_reweighting",
+  "must_pass_gates (cap levels inferred)",
+  "process_signals.hint_taxonomy_and_penalty (numeric penalties inferred)",
+  "hire_thresholds (numeric cut-offs and level shifts inferred)",
+  "level_expectations.rollup_rule",
+  "company_differences.Uber",
+  "llm_grading_notes (Qwen3 8B-specific behaviour)",
+  "sources (Four-Leaf and techinterview.coach dates)"
+ ]
+}

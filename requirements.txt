@@ -1,0 +1,8 @@
+# Core: the interview engine, grader and web app (Python 3.10+)
+fastapi>=0.110
+uvicorn>=0.29
+numpy>=1.26
+
+# Optional: API interviewers. DeepSeek, Qwen, MiniMax and OpenRouter need nothing extra.
+anthropic>=0.40     # Claude
+google-genai>=1.0   # Gemini

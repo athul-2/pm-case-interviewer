@@ -1,0 +1,221 @@
+{
+  "pun_title": "Help Wanted",
+  "case_type": "Metrics",
+  "asked_at": "By the Authors (synthetic, Urban Company style)",
+  "subject_company": "Urban Company (UC), specifically InstaHelp, its 10-15 minute instant house-help line (cleaning, dishes, laundry folding, kitchen prep) launched as 'Insta Maids' in March 2025.",
+  "round_and_level": "PM round (product sense / metrics), PM and SPM level; also usable for APM campus with lighter unit economics. [uncertain]",
+  "difficulty": "Hard - the obvious NSM (orders) is exactly the metric that is hiding the problem: orders grew 63% QoQ while the average order fell to about Rs 115 and each order still loses about Rs 279, so the candidate must define a value-and-price-aware NSM and guard three sides (household, professional, Core business).",
+  "market_and_industry": "India; home services / instant (10-15 minute) house help; metro micro-markets in about 10 cities (Mumbai, Delhi NCR, Bengaluru, Hyderabad, Pune etc.); middle- and upper-middle-income nuclear households in apartment societies; supply is mostly women professionals on salaried or assured-income models; Android and iOS app in English and Hindi.",
+  "time_box_minutes": "25-30",
+  "exact_prompt": "You're the PM for InstaHelp at Urban Company. Set the success metrics and the guardrail metrics for InstaHelp. What is the one number you'd run the business on, and what would stop you from gaming it?",
+  "source_and_verification": "Level: synthetic (written by the authors in an Urban Company interview style, 2026). No dated report of this exact prompt was found in this session; web searches in this session were limited (Firecrawl credits exhausted; WebSearch used). Closest analogues: classic 'define success metrics for X' marketplace prompts (e.g., 'success metrics for Uber Eats / Swiggy Instamart'), and the authors' own Urban Company teardown (urban_company_teardown/teardown_instahelp_subsidy.md, section 20 'Metrics'). Context sources: Kotak Neo on UC Q2 FY27 results (19 Oct 2026, https://www.kotakneo.com/news/stocks/urban-company-share-price-and-q2-fy-27-results/); Inc42 (https://inc42.com/buzz/urban-company-q2-loss-widens-over-3x-yoy-to-%E2%82%B9182-5-cr-revenue-up-41/). NextLeap, The Product Folks, AmbitionBox and Glassdoor were not separately searchable this session.",
+  "context_as_of": "As of 11 Nov 2026. 1) Q2 FY27 (Jul-Sep 2026, reported ~16-19 Oct 2026): InstaHelp fulfilled 6.2M orders (+63% QoQ), NTV Rs 71 cr (+34% QoQ), adjusted EBITDA loss per order Rs 279 (from Rs 346 in Q1 FY27), and UC invested Rs 174 cr in InstaHelp in the quarter (Kotak Neo, 19 Oct 2026, https://www.kotakneo.com/news/stocks/urban-company-share-price-and-q2-fy-27-results/). Implied NTV per order about Rs 115 [E: 71 cr / 6.2M], down from Rs 138 in Q1 FY27 and Rs 150 in Q4 FY26 (UC shareholder letters via urban_company_teardown). 2) Core ex-InstaHelp adjusted EBITDA Rs 30 cr (+213% YoY); consolidated revenue Rs 537 cr (+41%), net loss about Rs 182.5 cr, adjusted EBITDA loss Rs 144 cr; ATU nearly 10M; cash about Rs 1,901 cr; board approved a fundraise of up to Rs 2,500 cr partly to strengthen InstaHelp leadership; shares fell ~9% on the day (Kotak Neo; Inc42, Oct 2026). 3) Competition: Snabbit (raised $56M, May 2026) and Pronto ($45M Series B at ~$200M) - monthly orders June 2026 Snabbit ~1.51M vs InstaHelp ~1.50M vs Pronto ~0.95M (UC-cited industry data, Q1 FY27 letter, via teardown); pricing: Pronto Rs 1/hr intro offers, Snabbit Rs 169-199/hr, InstaHelp Rs 150-180/hr list (The Week, May 2026, via teardown). 4) Management: 'current pricing is unsustainable for anyone'; breakeven needs ~Rs 200/hr and AOV ~Rs 300; monthly retention 30-33% at subsidised prices (Q4 FY26 letter); consolidated adjusted EBITDA breakeven target Q3 FY28. Stale-risk: competitor order share for Jul-Sep 2026 not found; Q2 FY27 GOV/discount per order and retention not found in this session. [uncertain]",
+  "regulatory_context": "1) Code on Social Security, 2020 (in force with the four labour codes from 21 Nov 2025): aggregators contribute 1-2% of annual turnover (capped at 5% of payments to gig/platform workers) to a social security fund; raises the cost per professional-hour. 2) State gig-worker laws: Rajasthan Platform-Based Gig Workers Act 2023, Karnataka Platform-based Gig Workers (Social Security and Welfare) Act 2025 (welfare fee on payouts, transparency of automated decisions such as deactivation and fines), Telangana and Jharkhand moves in 2025. Fines, ratings-led blocks and auto-assignment rules for professionals become auditable, so 'partner earnings after penalties' is a regulatory guardrail, not only a nice-to-have. 3) Domestic work: no central domestic-workers law; some states (e.g., Maharashtra Domestic Workers Welfare Board, minimum-wage notifications for domestic work in several states) set wage floors that frame per-hour pay. 4) CCPA Guidelines for Prevention and Regulation of Dark Patterns (Nov 2023): drip pricing, false urgency and subscription traps are banned - relevant when intro prices like Rs 49 end or when a plan/subscription is pushed. 5) DPDP Act 2023 and DPDP Rules (notified Nov 2025, phased): household address, entry codes and in-home data need purpose-limited consent. 6) Safety: police verification of in-home workers and women-safety obligations (state police verification norms, POSH for the platform's own staff). None decides the metric set, but they make partner earnings, safety incidents and price transparency mandatory guardrails. [uncertain]",
+  "public_data_anchors": "1) InstaHelp orders: 1.6M (Q3 FY26) -> 2.67M (Q4 FY26) -> 3.82M (Q1 FY27) -> 6.2M (Q2 FY27) (UC shareholder letters; Kotak Neo 19 Oct 2026). 2) InstaHelp NTV Rs 71 cr in Q2 FY27, implied ~Rs 115 per order [E]; AOV Rs 150 (Q4 FY26) -> Rs 138 (Q1 FY27). 3) Adjusted EBITDA loss per order: Rs 381 (Q3 FY26) -> Rs 447 (Q4 FY26) -> Rs 346 (Q1 FY27) -> Rs 279 (Q2 FY27); InstaHelp investment Rs 174 cr in Q2 FY27 (Kotak Neo). 4) Discounting: GOV Rs 377 / discount Rs 285 / NOV Rs 92 (Q4 FY25) -> GOV Rs 345 / discount Rs 173 / NOV Rs 172 (Q3 FY26) (UC letter Jan 2026). 5) Monthly retention 30-33% (Q4 FY26, subsidised prices); >30% of orders at or above Rs 200 (Mar 2026) (UC letters via teardown). 6) Breakeven anchor: ~Rs 200/hr consumer price, ~Rs 300 AOV; partner cost Rs 130-160/hr; assured income Rs 20-25K a month (UC commentary, press, via teardown). 7) Category share June 2026: Snabbit ~1.51M, InstaHelp ~1.50M, Pronto ~0.95M monthly orders (UC-cited industry data). 8) UC consolidated: ATU nearly 10M, Q2 FY27 orders 15.1M, NTV Rs 1,432 cr (Kotak Neo, Oct 2026).",
+  "framework_applied": "Success Metrics (frameworks.md section 5). Step 1 Company and product: UC is a listed, Core-profitable home-services marketplace; InstaHelp is a subsidised land-grab to own daily household habit and feed Core, and it is now the main drag on the P&L. Step 2 Users and value: three sides - household (activation = first booking fulfilled within ETA; engagement = weekly bookings; conversion = paying near real price; retention = staying after intros end), professional (activation = first shift; engagement = utilised hours; retention = still working after 90 days at Rs 130-160/hr net), and UC (revenue per order, loss per order, cross-sell into Core); money is the take on NTV, so value only counts at a sustainable price. Step 3 NSM: weekly 'owned' households - households in serviceable micro-markets that completed at least one on-time InstaHelp booking in the week at an effective price of at least Rs 160/hr, 30+ days after their first order; formula = serviceable households x trial rate x fulfilment within ETA x repeat rate x share retained at real price; supporting = fill rate, ETA adherence, hours per owned household, discount as % of GOV, loss per order, professional utilisation, InstaHelp-to-Core 90-day conversion. Step 4 Guardrails: professional net earnings per hour and 90-day pro churn, safety and theft incidents, cancellations and no-show credits, Core cleaning cannibalisation and Core NPS, order share vs Snabbit, price-complaint/CCPA exposure.",
+  "clarifying_questions": [
+    {
+      "q": "What is InstaHelp's goal this year - market leadership on orders, a path to breakeven, or a funnel into Core?",
+      "a": "All three are on the slide, but the CEO's message after Q2 is 'leadership that we can afford': keep share with Snabbit while moving towards breakeven before Q3 FY28. Cross-sell is a bonus, not the core thesis."
+    },
+    {
+      "q": "Which services and durations are in scope - only the 60/90/120 minute instant slots, or also scheduled and the new plans?",
+      "a": "Instant slots plus any recurring/plan bookings that run on the same InstaHelp professional network. Core deep-cleaning is out of scope."
+    },
+    {
+      "q": "Which geographies - all InstaHelp cities or only dense micro-markets?",
+      "a": "About 10 metros; within them, roughly 150 micro-markets (illustrative). Metrics should be readable at micro-market level."
+    },
+    {
+      "q": "How are professionals engaged and paid - per order or salaried/assured income?",
+      "a": "Mostly an assured monthly income (Rs 20-25K) with incentives for utilisation; so idle time is UC's cost, not the pro's."
+    },
+    {
+      "q": "What is 'the real price' - is there a target?",
+      "a": "Management talks about Rs 200 an hour and an AOV near Rs 300 for breakeven. Today's effective price is far below that."
+    },
+    {
+      "q": "Is this to set a goal for the team, or to judge an experiment?",
+      "a": "Set the team's scorecard for the next two quarters; you can say how you'd use it in experiments."
+    },
+    {
+      "q": "Do we have reliable identity for households (one household, many phones) and for repeat use of the same professional?",
+      "a": "Household = verified address plus primary account; same-pro repeat is tracked."
+    }
+  ],
+  "interviewer_data_reveals": "All numbers are illustrative (invented for teaching) unless a source is cited.\n\nExhibit 1 - Real headline trend (sourced; UC letters and Kotak Neo, Oct 2026):\n| Quarter | Orders | NTV per order | Loss per order |\n| Q4 FY26 | 2.67M | ~Rs 150 | Rs 447 |\n| Q1 FY27 | 3.82M | ~Rs 138 | Rs 346 |\n| Q2 FY27 | 6.2M | ~Rs 115 [E] | Rs 279 |\nRead: orders up 2.3x in two quarters, price per order down ~23%, loss per order down because of density, not price.\n\nExhibit 2 - Cohort by first-order offer (illustrative), Jul 2026 cohorts, Mumbai:\n| First-order price | Share of new households | Booked again in 30 days | Still booking at >= Rs 160/hr at day 90 |\n| Rs 49 intro | 55% | 48% | 6% |\n| Rs 99-129 | 30% | 41% | 14% |\n| Full price / plan | 15% | 37% | 29% |\n\nExhibit 3 - Funnel for one week, one city (illustrative): app opens with InstaHelp tile 1,000K -> ETA shown (serviceable) 620K -> booking attempted 140K -> pro assigned within promised ETA 118K (84% fill) -> started within ETA+5 min 104K -> completed and rated 101K.\n\nExhibit 4 - Professional side (illustrative): average utilisation 58% of logged-in hours; pros with utilisation <40% churn at 3x the rate of the rest; 7% of pros had net earnings below Rs 130/hr after fines and walking time.\n\nExhibit 5 - Core interaction (illustrative): among InstaHelp households who were already UC customers (about 45% of InstaHelp users), Core cleaning bookings fell 9% vs a matched control; Core salon and repairs bookings rose 4%.",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "You run InstaHelp at Urban Company. Set the success metrics and the guardrails. What's the one number you'd run it on?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'll go in four steps: what InstaHelp is for in UC's strategy, who gets value on each side, a North Star with its levers, and then guardrails. Before that, a few questions on goal and scope."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Sure."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "What is the goal this year - order leadership, breakeven, or a funnel into Core? And which services are in scope?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "'Leadership we can afford' - hold share with Snabbit while moving towards breakeven before Q3 FY28. Instant and recurring bookings on the InstaHelp network; Core deep cleaning is out."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "And how are professionals paid? If it's assured income, idle time is our cost and utilisation becomes a core lever."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Mostly assured income of about Rs 20-25K a month plus incentives."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Step 1, company and product. UC is listed, the Core business is profitable - about Rs 30 crore adjusted EBITDA in Q2 FY27 - and InstaHelp is the land-grab: 6.2 million orders last quarter, up 63%, but it lost about Rs 279 per order and absorbed Rs 174 crore. Its job is to make UC a weekly habit in the household, at a price that eventually pays. So any metric that rewards orders at any price would be rewarding the problem."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Fine. Who are the users?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Three sides. Let me lay out each journey.\nHousehold (working couples in metro apartment societies, often with an unreliable local maid): activation = first booking fulfilled within the shown ETA; engagement = bookings per week, hours per booking; conversion = paying close to the real price, or joining a plan; retention = still booking after the intro price ends.\nProfessional (mostly women, often migrants, living near the hub): activation = first week of shifts; engagement = utilised hours vs logged-in hours; retention = still active at 90 days, earning a fair hourly net.\nUC: revenue per order (take on NTV), loss per order, and whether InstaHelp households cross into Core.\nUC makes money as the difference between what the household pays and what the pro costs plus hubs and marketing. Does that match how you see it?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Yes. Here's the trend for the last three quarters (Exhibit 1)."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So orders are up 2.3x in two quarters, NTV per order fell from about Rs 150 to about Rs 115, and loss per order improved because of density, not price. Orders are telling a growth story that the price line contradicts. That pushes me away from orders or GMV as the North Star."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Then what is it?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Step 3. I'd pick weekly owned households: households that completed at least one on-time InstaHelp booking in the week, at an effective price of at least Rs 160 an hour, and who are at least 30 days past their first order. It's where user value - reliable help, every week - meets business growth - a household that pays close to cost and stays. 'Owned' separates them from 'rented' households who only come for a Rs 49 coupon."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Why Rs 160 and not Rs 200?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Rs 200 is the breakeven management has cited; Rs 160 is a stepping stone above partner cost of Rs 130-160 an hour. I'd ratchet the bar each quarter - 160, then 180, then 200 - so the metric gets harder as we approach breakeven. The threshold is a policy choice; I'd agree it with finance."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Break it into levers."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Weekly owned households = serviceable households x trial rate x fulfilment within ETA x repeat rate x share retained at real price.\n- Serviceable households: micro-markets where a pro can reach in 15 minutes.\n- Trial rate: share who book once.\n- Fulfilment within ETA: pro assigned and started within ETA+5 minutes.\n- Repeat rate: booked again within 14 days.\n- Retained at real price: still booking at >= Rs 160/hr at day 90.\nThen hours per owned household per week turns this into revenue."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Here's one city's weekly funnel (Exhibit 3)."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "62% of tile viewers are serviceable, 14 in 100 attempt, fill is 84%, and on-time starts are 104 of 118 assigned. The biggest controllable loss inside our walls is the 16% unfilled plus late starts - a household whose first booking fails rarely comes back. So fill rate and ETA adherence are my first two supporting metrics."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "And the cohort table (Exhibit 2)?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's the heart of it. Rs 49 intro households repeat best at 30 days - 48% - but only 6% still book at a real price by day 90. Full-price or plan households repeat less early but 29% are owned at day 90. If we used 30-day repeat as the metric, we'd double down on the Rs 49 coupon. The NSM rewards the opposite. I'd also add CAC per owned household - subsidy plus marketing for a cohort, divided by owned households at day 90 - as the efficiency metric for every offer and micro-market."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "So what's your full set of supporting metrics?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Five, in priority order:\n1. Fill rate within ETA, by micro-market (reliability).\n2. Share of households retained at >= Rs 160/hr at day 90, by acquisition offer (price health).\n3. Discount as % of GOV and loss per order (unit economics; Rs 279 today).\n4. Professional utilisation - utilised over logged-in hours (cost of the assured-income model).\n5. Hours per owned household per week and plan attach rate (depth and lock-in).\nI'd track InstaHelp-to-Core 90-day conversion as a reported metric but not a target until we have a clean holdout."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Now guardrails. What could go wrong if the team chases owned households?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Step 4, side by side:\nProfessional: pushing utilisation can mean overwork or longer walks. Guardrail: net earnings per hour after fines >= Rs 130, 90-day pro churn, and share of pros below the floor (7% in your Exhibit 4 is already too high).\nHousehold: pushing price up can raise failed or poor jobs. Guardrails: cancellation and no-show rate, 'no professional available' rate, rating < 4, and safety or theft incidents per 10,000 visits - that one is a hard stop.\nBusiness: owned households could come at the cost of Core. Guardrail: Core cleaning bookings of InstaHelp households vs control, and Core NPS.\nMarket: if we raise price too fast we lose share. Guardrail: monthly order share vs Snabbit and Pronto, not falling more than an agreed number of points a quarter.\nCompliance: price-related complaints and any drip-pricing pattern when intros end."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Exhibit 5 shows Core cleaning bookings fell 9% for overlapping households. Is that bad?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Partly expected - a Rs 115 hour substitutes for a Rs 1,000+ bathroom clean. The test is net: if Core salon and repairs rose 4% and overall UC spend per household is up vs control, it's fine. If total contribution per household falls, InstaHelp is cannibalising, and I'd stop discounting to existing Core customers - they don't need the coupon."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Leadership says 'order share is everything right now'. Doesn't your NSM lose us share?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "It might lose coupon-hoppers, and I'd make that explicit: order share stays a guardrail with a floor, so we don't collapse. But the Rs 2,500 crore fundraise can't buy owned households forever. I'd rather report 'share of owned households' alongside order share - if Snabbit's extra orders are Rs 1 intro orders, that share isn't worth matching."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How would you use these in an experiment, say a weekly 'Regular Help' plan?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Randomise by micro-market. Primary: owned households at day 90 and CAC per owned household. Secondary: hours per household, same-pro repeat. Guardrails: pro net earnings, cancellations, order share in that micro-market. Ship if owned households rise at least 1.5x vs coupon cells without breaching any guardrail."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Summarise."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "North Star: weekly owned households - on-time bookings at >= Rs 160/hr from households past day 30. Levers: fill rate within ETA, price-retained share by offer, discount % of GOV and loss per order, pro utilisation, hours per household. Guardrails: pro net earnings and churn, safety incidents, cancellations, Core cannibalisation, and an order-share floor. One line: InstaHelp should count households it keeps at a real price, not orders it rents with a coupon."
+    }
+  ],
+  "answer_and_recommendation": "North Star: weekly owned households - households that completed at least one on-time InstaHelp booking in the week at an effective price >= Rs 160/hr (ratcheting to Rs 200), at least 30 days after their first order. Formula: serviceable households x trial rate x fulfilment within ETA x 14-day repeat rate x share retained at real price; multiplied by hours per household for revenue. Top 3 supporting metrics (ranked): (1) fill rate within ETA by micro-market - reliability drives first-to-second booking; (2) day-90 retained-at-real-price share and CAC per owned household by acquisition offer - kills rented growth; (3) loss per order (Rs 279 in Q2 FY27) with discount % of GOV and pro utilisation - the path to the Q3 FY28 breakeven. Also tracked: hours per owned household, plan attach, InstaHelp-to-Core 90-day conversion (report, not target, until a holdout exists). Risks and mitigation: losing share to Snabbit/Pronto (order-share floor guardrail; report owned-household share); overworking pros (earnings floor and churn guardrail); threshold gaming by bundling longer bookings (measure price per hour, not per order). Closing line: 'InstaHelp should be run on the households it keeps at a real price, not the orders it rents with a coupon - and the professional's hourly earnings is the line we never cross to get there.'",
+  "counter_metrics_guardrails": "Professional side: net earnings per hour after fines and walking time (floor Rs 130/hr), share of pros below the floor, 90-day pro churn, hours worked per pro per day (overwork cap), pro grievance and deactivation-appeal rate (Karnataka gig-law transparency). Household side: safety, theft or harassment incidents per 10,000 visits (hard stop), cancellation and no-show rate, 'no professional available' rate, rating < 4 share, refunds and goodwill credits per order. Business side: Core cleaning bookings and total UC contribution per household for InstaHelp users vs matched control (cannibalisation), Core NPS / brand perception, loss per order not rising. Market side: monthly order share vs Snabbit and Pronto (agreed floor, e.g., no fall of more than 3 points a quarter - illustrative). Compliance: price-related complaints and CCPA dark-pattern exposure when intro prices end (all-inclusive price, no pre-ticked plans). Metric-integrity guardrail: price is measured per hour, so pushing longer bookings cannot inflate the 'real price' bar.",
+  "follow_up_twists": [
+    {
+      "twist": "The CFO says: 'Just use contribution margin per order as the North Star.'",
+      "response": "It's the right guardrail but a poor North Star - you can hit it by shrinking to a few rich micro-markets; owned households forces growth and price health together, and loss per order sits directly under it."
+    },
+    {
+      "twist": "Snabbit cuts to Rs 99 for 3 hours in Bengaluru and our orders there fall 20% in a week.",
+      "response": "Check owned households, not orders: if owned households hold, let the coupon-hoppers go and defend with reliability and plans; act only if the order-share floor breaches, and then with a targeted, time-boxed offer to lapsing owned households."
+    },
+    {
+      "twist": "How do you know InstaHelp actually feeds Core?",
+      "response": "Run a geo or user-level holdout of InstaHelp promotion for existing and new users and compare 90-day Core bookings and total contribution per household; until then cross-sell is reported, not claimed."
+    }
+  ],
+  "common_pitfalls": [
+    "Picking orders, GMV or DAU as the North Star - InstaHelp grew orders 63% QoQ while price per order fell to ~Rs 115 and each order lost ~Rs 279, so orders reward exactly the subsidy problem.",
+    "Using 30-day repeat rate as the retention metric - Rs 49 intro cohorts repeat best early but almost none stay at a real price by day 90.",
+    "Ignoring the professional side - on an assured-income model, utilisation is UC's cost and net hourly earnings is both a moral and regulatory (gig-law) guardrail.",
+    "Treating cross-sell into Core as proven upside, or forgetting cannibalisation of Core cleaning bookings."
+  ],
+  "skills_tested": [
+    "structuring",
+    "business sense",
+    "quant",
+    "prioritisation",
+    "empathy",
+    "communication"
+  ],
+  "linked_teardown": "urban_company_teardown (urban_company_teardown/teardown_instahelp_subsidy.md and report.md). Key fact used: InstaHelp users are 'rented, not owned' - discounts of 50-76% of GOV, monthly retention of 30-33% measured only at subsidised prices, and a breakeven needing ~Rs 200/hr and ~Rs 300 AOV; the teardown's proposed North Star 'households retained at the real price' is the basis for this case's NSM.",
+  "uncertain": [
+    "round_and_level",
+    "context_as_of",
+    "regulatory_context"
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "pun_title": "Cold Hard Cash",
+  "case_type": "Guesstimate",
+  "asked_at": "US classic (no single reporting company; classic PM / consulting market-sizing prompt)",
+  "subject_company": "Starbucks (US coffeehouses, company-operated and licensed)",
+  "round_and_level": "[uncertain] Screening or PM round market-sizing question, APM to PM level; classic prompt, round not confirmed",
+  "difficulty": "Medium - the candidate must scope 'market size' (Starbucks' own cold brew revenue vs a TAM), separate cold brew from the much larger cold beverage platform, and reconcile a store-level bottom-up with a revenue top-down",
+  "market_and_industry": "US; quick-service coffee / beverages (QSR); Starbucks coffeehouses, about 16,900 US stores (company-operated + licensed), mobile order and drive-thru heavy; Gen Z-led demand for cold, customised drinks",
+  "time_box_minutes": "12-15",
+  "exact_prompt": "\"Estimate the US market size for cold brew coffee at Starbucks.\"",
+  "source_and_verification": "Classic - a common product-flavoured market-sizing prompt in US PM and consulting prep ('estimate annual sales of X at Starbucks'); estimation guides such as RocketBlocks (https://www.rocketblocks.me/guide/pm/estimation-interviews.php), IGotAnOffer (https://app.igotanoffer.com/blogs/product-manager/estimation-interview-questions) and Exponent (https://www.tryexponent.com/courses/pm/estimation/introduction-estimation-questions) teach this pattern. No verbatim company-attributed Glassdoor report for 'Starbucks cold brew' was confirmed in this search. Year: [uncertain] in circulation since cold brew's 2015 national launch.",
+  "context_as_of": "As of Nov 2026: (1) Starbucks FY2025 (ended 28 Sep 2025): net revenue about $37.18bn; North America revenue about $27.37bn, of which company-operated stores about $24.79bn (90.6%) and licensed about $2.58bn; 16,864 US stores and 18,311 North America stores at year end; about 627 stores closed in the Sept 2025 restructuring, over 90% in North America (Starbucks Q4 FY25 release: https://investor.starbucks.com/news/financial-releases/news-details/2025/Starbucks-Reports-Q4-and-Full-Fiscal-Year-2025-Results/default.aspx ; 10-K: https://www.sec.gov/Archives/edgar/data/829224/000082922425000114/sbux-20250928.htm). (2) At its Feb 2026 Investor Day Starbucks said roughly two-thirds of beverages sold in US company-operated coffeehouses are cold, and about 60% internationally (Starbucks Stories: https://about.starbucks.com/press/news-blog/page/4/ ; Food Business News). The often-quoted 75% figure is from fiscal Q3 2023 cold beverage sales share (Yahoo Finance: https://finance.yahoo.com/news/starbucks-cold-business-made-up-75-of-us-beverage-sales--bring-on-the-ice-nuggets-201812097.html) - note the definitional difference (units vs sales). (3) Q3 FY2026 (reported 29 Jul 2026): US comparable sales +7.9%, transactions +4.2%, ticket +3.6% under CEO Brian Niccol's 'Back to Starbucks' plan (AP via ClickOnDetroit: https://www.clickondetroit.com/business/2026/07/29/starbucks-reports-strong-quarterly-sales-and-raises-annual-outlook/). (4) Cold foam is a growth engine: sales +23% YoY in one 2025 quarter and used in about 1 in 7 beverages; a later quarter reported +40%, inside a roughly $1bn beverage-modifier business (Starbucks / Food Business News). (5) Starbucks does not disclose cold brew revenue separately; cold brew launched nationally in 2015, Nitro Cold Brew in 2016. Stale-risk flags: cold brew's share of cold beverages is not public; menu prices vary by market and change frequently.",
+  "regulatory_context": "None material for the size estimate. Minor context: (1) FDA menu-labelling rules for chains with 20+ locations require calorie disclosure, relevant to sweet-cream and cold-foam variants. (2) US import tariffs on green coffee (2025 reciprocal tariffs, including on Brazil, later exempted for coffee in Nov 2025) affected input costs and price increases [uncertain on current status]. (3) Workers United union bargaining at unionised US stores may affect labour cost and store hours, not cold brew demand directly.",
+  "public_data_anchors": "- Starbucks FY2025 net revenue: about $37.18bn (+2.8%) - Starbucks Q4 FY25 release, 29 Oct 2025.\n- North America FY2025 revenue: about $27.37bn; company-operated about $24.79bn; licensed about $2.58bn - same release.\n- US stores: 16,864 at FY2025 year-end (company-operated + licensed) - same release.\n- Cold share of US company-operated beverages: about two-thirds (Feb 2026 Investor Day); 75% of US beverage sales in fiscal Q3 2023 - Starbucks / Yahoo Finance.\n- Q3 FY2026 US comps +7.9% (transactions +4.2%, ticket +3.6%) - AP, 29 Jul 2026.\n- Cold foam used in about 1 in 7 beverages; modifier business about $1bn - Starbucks, 2025.\n- Beverages as share of company-operated store revenue: about 60%, food about 18-20% (historical 10-K revenue disaggregation) [uncertain for FY2025].\n- US company-operated store count: about 9,800-10,000 (FY2025) [uncertain; derived from historical 10-K splits].\n- Grande Cold Brew menu price: about $4.95-5.45; sweet-cream / cold-foam cold brew variants about $5.75-6.25 (2025-26, varies by city) [uncertain].\n- US population: about 340 million (Census, 2025).",
+  "framework_applied": "Guesstimate framework (frameworks.md section 6: Clarify, Pick framework, Constraints/MECE, Calculate, Sanity check). Clarify: market size = Starbucks' annual US in-store revenue (at retail prices) from cold brew-based drinks - plain Cold Brew, Nitro, and cold brew with sweet cream or cold foam - across company-operated and licensed stores, FY2026; exclude bottled/grocery cold brew (Channel Development) and iced coffee. Pick framework: bottom-up (stores x drinks/store/day x cold share x cold brew share x price x 365); top-down cross-check from reported company-operated revenue. Constraints/MECE: segment stores MECE by ownership (company-operated vs licensed - very different throughput) and drinks by temperature then by cold platform (cold brew, iced espresso/shaken espresso, Refreshers, Frappuccino, iced tea/other); natural constraint = store throughput (transactions/day, barista capacity). Calculate: about 690k cold brew drinks/day (about 40/store) x about $5.40 x 365 = about $1.35bn (company-operated about $1.0bn + licensed about $0.3bn); top-down about $1.1bn for company-operated stores. Sanity check: 1 in about 12 drinks is cold brew; about $4 per American per year; cold brew about 4-5% of US company-operated revenue.",
+  "clarifying_questions": "1. Q: By 'market size', do you mean Starbucks' own annual cold brew revenue in the US, or the total US cold brew market that Starbucks could capture? A: Starbucks' own annual US revenue from cold brew.\n2. Q: Which products count - plain cold brew only, or also Nitro and cold brew drinks with sweet cream or cold foam? A: All cold brew-based drinks. Iced coffee is a different product - exclude it.\n3. Q: In-store only, or also bottled Starbucks cold brew sold in grocery stores? A: In-store only.\n4. Q: Company-operated stores only, or licensed stores too (Target, airports, grocery)? A: Both, at retail value.\n5. Q: Annual revenue at menu price, including customisation add-ons? A: Yes, annual, at what the customer pays.\n6. Q: Current fiscal year? A: FY2026, roughly today's run-rate.\n7. Q: Do you want seasonality? A: Mention it, but give an annual number.",
+  "interviewer_data_reveals": "Exhibit 1 - US store base (illustrative split of the real 16,864 total): company-operated about 10,000 stores; licensed about 6,900 stores.\nExhibit 2 - Store throughput (illustrative): company-operated store about 650 beverages/day; licensed store about 300 beverages/day (shorter hours, captive locations).\nExhibit 3 - Cold platform mix of cold beverages (illustrative): iced espresso and shaken espresso 35%; Refreshers and iced tea 25%; Frappuccino 15%; cold brew (incl. Nitro, sweet cream, cold foam) 12%; iced coffee and other 13%.\nExhibit 4 - Pricing (illustrative, national average): plain grande cold brew about $5.00; sweet-cream / cold-foam cold brew about $6.00; about 45% of cold brew orders carry a foam or cream modifier; average realised price about $5.40 after a size mix.\nExhibit 5 - Seasonality (illustrative): cold beverages about 75% of drinks in summer, about 55% in winter; annual average about two-thirds.\nReal anchors on request: cold is about two-thirds of US company-operated beverages (Feb 2026 Investor Day); North America company-operated revenue about $24.79bn (FY2025); 16,864 US stores (FY2025).",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "Estimate the US market size for cold brew coffee at Starbucks."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "First, scope. Do you mean Starbucks' own annual revenue from cold brew in the US, or the total US cold brew market Starbucks could capture?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Starbucks' own US cold brew revenue."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Which products count - plain cold brew only, or Nitro and cold brew with sweet cream or cold foam too? And I'll assume iced coffee is excluded, since it's a different brew."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "All cold brew-based drinks. Exclude iced coffee."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "In-store only, or also the bottled cold brew in grocery stores? And company-operated plus licensed stores?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "In-store only, both store types, at the price the customer pays. Annual, FY2026."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'll go bottom-up, because Starbucks is a throughput business:\nRevenue = stores x drinks/store/day x cold share x cold brew share of cold x average price x 365.\nI'll segment stores by ownership - company-operated vs licensed - because a licensed Target kiosk sells far fewer drinks than a drive-thru coffeehouse. Then I'll cross-check top-down from Starbucks' reported revenue."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Here's the store base. [Exhibit 1: about 10,000 company-operated, about 6,900 licensed.]"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Throughput. A busy company-operated store is open about 15 hours. At peak it might do 100+ drinks an hour, but averaged across the day maybe 40-45 an hour - about 600-650 drinks a day. Licensed stores are shorter-hours and captive, maybe half that."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "That's close. [Exhibit 2: 650 and 300 a day.]"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So total drinks per day: 10,000 x 650 = 6.5M plus 6,900 x 300 = about 2.1M - about 8.6M drinks a day across the US. Starbucks has said about two-thirds of US beverages are cold, so about 5.7M cold drinks a day."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Now how much of that is cold brew?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'd break the cold platform MECE: iced espresso and shaken espresso, Refreshers and iced tea, Frappuccino, cold brew, and iced coffee/other. Iced lattes and shaken espresso are the biggest, Refreshers are huge with Gen Z, so I'd guess cold brew at around 10-15% of cold drinks."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "[Exhibit 3: cold brew 12% of cold beverages.]"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "12% of 5.7M = about 690k cold brew drinks a day nationally - about 40 per store per day, or roughly 1 in 12 cold drinks."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Price?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "A plain grande cold brew is around $5; with sweet cream or cold foam it's about $6, and cold foam is now in about 1 in 7 Starbucks drinks overall, higher for cold brew. Blending sizes and modifiers, I'd say about $5.40."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "That matches Exhibit 4."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Daily revenue: 690k x $5.40 = about $3.7M. Annual: x 365 = about $1.36bn. But my two-thirds cold share is an annual average, and seasonality is already baked into that, so I'll keep 365 days. Let me split by ownership to check: company-operated 6.5M x 2/3 x 12% x $5.40 x 365 = about $1.02bn; licensed 2.1M x 2/3 x 12% x $5.40 x 365 = about $0.33bn. Total about $1.35bn."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Cross-check it top-down."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "North America company-operated revenue was about $24.8bn in FY2025; about 90% is US, so about $22.3bn. Historically beverages are about 60% of company-operated revenue - about $13.4bn. Cold is two-thirds of beverage units, but cold drinks skew pricier, so roughly 70% of beverage dollars - about $9.4bn. At 12% cold brew, that's about $1.1bn for company-operated stores."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's close to my bottom-up $1.02bn - within 10%. The gap is that my 650 drinks a day may be slightly low for company stores. Licensed stores add roughly $0.3bn at retail value. So I'll land at about $1.3-1.4bn, with a range of $1.0-1.6bn."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Sanity-check the final number."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Three ways. Ratio: about 40 cold brew drinks per store per day out of about 500 average drinks - about 1 in 12 drinks - feels right if you stand in a store. Per capita: $1.35bn / 340M Americans = about $4 per person per year, or one cold brew a year for an average American, concentrated in a heavy-user base. Share of business: about $1.0bn of about $22bn US company-operated revenue = about 4.5% - plausible for one sub-platform of a cold platform that dominates beverages."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What drives the most uncertainty?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Cold brew's share of cold drinks - Starbucks doesn't disclose it. Moving it from 12% to 10% or 15% swings the answer from $1.1bn to $1.7bn. The second is licensed-store throughput."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "If you were the PM, how would you grow it?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "The biggest lever is attach rate on modifiers: cold foam sales are growing 23-40% a quarter, and each foam add-on adds about $1 to a $5 drink. Pushing cold brew + foam in the mobile app could add 10-15% to cold brew revenue without needing more transactions."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Land it."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Starbucks' US cold brew business is about $1.3-1.4bn a year at retail - about $1bn from company-operated stores and about $0.3bn from licensed stores - roughly 690k cold brew drinks a day, about 40 per store, at about $5.40 each. The top-down from reported revenue gives about $1.1bn for company stores, so I'm confident in the order of magnitude: a billion-dollar-plus product line, with modifier attach as the main growth lever."
+    }
+  ],
+  "answer_and_recommendation": "Estimate: about $1.3-1.4bn per year (range $1.0-1.6bn) of US in-store cold brew revenue at retail value for FY2026 - about $1.0bn from about 10,000 company-operated stores and about $0.3bn from about 6,900 licensed stores. Build: about 8.6M US drinks/day x two-thirds cold x 12% cold brew = about 690k cold brew drinks/day x about $5.40 x 365. Top-down cross-check: about $22.3bn US company-operated revenue x 60% beverages x about 70% cold dollar share x 12% = about $1.1bn (company-operated only). Ranked sensitivities: (1) cold brew's share of cold drinks (not disclosed); (2) store throughput, especially licensed; (3) modifier attach (cold foam/sweet cream) driving average price. Recommendation if asked to grow it: push cold foam and sweet cream attach through the app and personalised offers, and protect throughput at peak (cold brew is batch-brewed, so it is faster to hand off than espresso drinks). Risks: unpublished mix data; menu-price variation across cities; licensed stores reported by Starbucks as royalties, not retail. Closing line: 'Starbucks' cold brew is a $1.3-1.4bn US business, about 690k cups a day, and the cheapest growth is a $1 foam on every cup.'",
+  "counter_metrics_guardrails": "Pure guesstimate, so sanity checks instead of guardrails: (1) Ratio (1-in-N) test - about 40 cold brew drinks per store per day is about 1 in 12 drinks sold; 1 in 2 would be absurd given iced espresso and Refreshers. (2) Per-capita test - $1.35bn / 340M = about $4 per American per year (about one cup), concentrated in heavy users. (3) Share-of-revenue test - about $1.0bn of about $22bn US company-operated revenue = about 4.5%; it should be well below the cold platform's about 40% of revenue (two-thirds of about 60%). (4) Throughput test - 650 drinks/day over a 15-hour day = about 43 per hour, inside peak capacity of 100+ per hour.",
+  "follow_up_twists": "1. 'Now size the total US cold brew market.' - Add other coffee chains (Dunkin', Dutch Bros, independents) and ready-to-drink grocery cold brew; Starbucks in-store would be a large but minority share of a multi-billion-dollar category [uncertain size].\n2. 'Starbucks raises the price of cold brew by 50 cents. What happens?' - About 9% price uplift; with low elasticity among loyal Rewards members, revenue rises roughly 6-8% while some volume shifts to iced coffee or Refreshers - watch cannibalisation, not just the cold brew line.\n3. 'Winter is coming - what's the Q1 number?' - Cold share falls from about 75% in summer to about 55% in winter, so quarterly cold brew revenue swings about +/-15-20% around the annual average; Q1 (Oct-Dec) is also the holiday hot-drink season.",
+  "common_pitfalls": "1. Sizing the whole cold beverage platform (about two-thirds of drinks) instead of cold brew specifically - that overstates the answer about 8x.\n2. Treating every US store alike - licensed kiosks in Target or airports have roughly half the throughput of a company-operated drive-thru store.\n3. Using the old '75% of beverage sales are cold' figure (fiscal Q3 2023, a sales-dollar share) as if it were today's unit share (about two-thirds, Feb 2026).\n4. Forgetting modifiers (cold foam, sweet cream), which lift average price by about $0.50-1.00 per cold brew and are Starbucks' fastest-growing add-on.",
+  "skills_tested": "quant, structuring, business sense, communication",
+  "linked_teardown": "None",
+  "uncertain": [
+    "round_and_level",
+    "source_and_verification",
+    "regulatory_context",
+    "public_data_anchors",
+    "follow_up_twists"
+  ]
+}

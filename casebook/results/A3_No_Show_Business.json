@@ -1,0 +1,208 @@
+{
+  "pun_title": "No Show Business",
+  "case_type": "RCA",
+  "asked_at": "Urban Company (reported via The Product Folks)",
+  "subject_company": "Urban Company (home services marketplace). Same as asked_at.",
+  "round_and_level": "PM round (RCA / analytical), APM and PM levels. The Product Folks publishes it as an Urban Company case study; round and level are not stated. [uncertain]",
+  "difficulty": "Medium-Hard - a two-sided marketplace metric: the drop can sit on the customer side (cancellations, reschedules) or the partner side (no-shows, declines), and the candidate must find which side and which category before naming a cause.",
+  "market_and_industry": "India; home services marketplace (beauty, cleaning, appliance and AC repair, plumbing, electrician, InstaHelp house-help); Bengaluru is a top-3 market with dense gated communities and high-rise apartments; supply is gig professionals, many multi-skilled and multi-apping with offline work.",
+  "time_box_minutes": "25-30",
+  "exact_prompt": "Urban Company's service completion rate has fallen by 18% in Bengaluru. Why?",
+  "source_and_verification": "Level: reported. The Product Folks case study 'Urban Company's service completion rate has fallen by 18% in Bengaluru' (RCA category): https://www.theproductfolks.com/product-management-case-studies/urban-companys-service-completion-rate-has-fallen-in-bengaluru . In TPF's version the interviewer says completion rate = services completed / services booked, product (Native RO etc.) orders are excluded, the drop is sudden (past month vs previous month), consistent across user segments, associated with repair services, and many orders were cancelled a day after being placed. Also listed on TPF's RCA index and its '50+ PM case study questions' post (https://www.theproductfolks.com/product-management-blog/product-manager-case-study-interview-frameworks-50-questions). Year: about 2023-2024. [uncertain]",
+  "context_as_of": "As of Nov 2026: Urban Company Ltd listed on NSE/BSE in Sep 2025 (IPO price Rs 103). Q2 FY27 (Jul-Sep 2026, reported 16 Oct 2026): consolidated NTV about Rs 1,432 cr (+39% YoY), revenue about Rs 537 cr (+41%), net loss about Rs 182.5 cr driven by InstaHelp investment (InstaHelp adjusted EBITDA loss about Rs 144 cr), core business ex-InstaHelp adjusted EBITDA profit about Rs 30 cr; board approved a raise of up to Rs 2,500 cr (Inc42, Kotak Neo, Oct 2026). Monthly transacting service professionals about 57,251 in Q2 FY26 (local teardown). Partner economics: 9M FY26 Earnings Index average Rs 28,322/month, about 91 hours/month, about Rs 313/hour; commission about 20-30% plus product kits and lead-credit plans; rating floor about 4.7 triggers re-training; cancellation caps and ID blocks are recurring partner grievances (Gurugram protest Dec 2025). Customer side: cancellation-fee and 'professional didn't show up' complaints rose on Trustpilot and consumercomplaints.in through Sep-Oct 2026. Bengaluru competitors: Snabbit and Pronto (instant cleaning), Yes Madam (beauty), and offline local technicians. Sources: https://inc42.com/buzz/urban-company-q2-loss-widens-over-3x-yoy-to-%E2%82%B9182-5-cr-revenue-up-41/ ; https://www.kotakneo.com/news/stocks/urban-company-share-price-and-q2-fy-27-results/ ; local urban_company_teardown results. Stale-risk: city-level completion data is not public; standalone vs consolidated figures conflict in one source. [uncertain]",
+  "regulatory_context": "1) Karnataka Platform-Based Gig Workers (Social Security and Welfare) Act, 2025: welfare fee on aggregators (a percentage of payouts), worker registration and grievance requirements, and rules against arbitrary deactivation; a Karnataka High Court interim order (Jul 2026) on deposits is part of the local teardown context. Any change to partner payouts, rate cards or blocking rules in Bengaluru sits under this law. 2) Code on Social Security, 2020 (in force 21 Nov 2025): aggregators contribute 1-2% of turnover, capped at 5% of gig payouts; e-Shram onboarding of partners. 3) Consumer Protection Act and CCPA guidance: cancellation fees charged for partner no-shows and unclear surge fees are complaint risks. 4) DPDP Act 2023 (rules phased to 2027) for partner and customer data. None of these is the root cause here, but a Bengaluru-only drop should prompt a check on whether a state-law compliance change altered partner behaviour. [uncertain]",
+  "public_data_anchors": "1) Q2 FY27 consolidated NTV about Rs 1,432 cr, +39% YoY; revenue about Rs 537 cr (+41%) (Kotak Neo and Inc42, 16 Oct 2026: https://www.kotakneo.com/news/stocks/urban-company-share-price-and-q2-fy-27-results/). 2) Net loss about Rs 182.5 cr; InstaHelp adjusted EBITDA loss about Rs 144 cr; core ex-InstaHelp adjusted EBITDA about +Rs 30 cr (Inc42, Oct 2026). 3) Monthly transacting service professionals: FY25 average 45,619; Q2 FY26 57,251 (UC disclosures via local teardown). 4) Partner earnings: average Rs 28,322/month, about 91 hours/month, about Rs 313/hour (UC 9M FY26 Earnings Index, 4 Feb 2026, via local teardown). 5) Bengaluru Handyman example: AOV Rs 446 (Q3 FY24) to Rs 450 (Q3 FY26), partner daily net earnings Rs 720 to Rs 1,054 (UC shareholder letter via local teardown, Revenue_unit_economics.json). 6) Bengaluru was about 20% of a key cohort in UC's acquisition data (local teardown, Acquisition.json). 7) Bengaluru urban population about 1.4 crore (2025 estimate). [uncertain]",
+  "framework_applied": "Root Cause Analysis: Clarify, 4 cause buckets, Hypothesise-Test-Repeat (frameworks.md section 4). Step 1 Clarify - metric: completed / booked services (excluding Native product orders); 18% relative drop; time frame: sudden, October vs September 2026; scope: Bengaluru only, which categories, who cancels (customer, partner, system), when (same day vs day before). Step 2 Buckets - (1) Data: status-mapping change (e.g., a new 'rescheduled' state counted as not completed); (2) Internal: booking -> partner assignment -> partner acceptance -> partner arrival -> service done -> marked complete; product changes (rate cards, auto-assign, cancellation penalties, slot inventory), partner policy changes; (3) External: Karnataka gig law, festive demand surge (Dasara/Diwali), monsoon rains, competitor partner poaching; (4) Behaviour: customers booking speculatively, partners taking repair jobs offline. Step 3 Hypothesise-test-repeat - split by category (repair only), by cancelling party (partner), by timing (day before service), then by rate-card and auto-assign change. Step 4 Land - a Bengaluru spare-parts rate-card change made many repair jobs unprofitable for partners, who cancel next day after auto-assignment; festive demand overbooked thin supply. Validate with partner cohorts and job-value bands; fix with a parts-margin floor, smarter assignment and supply-aware slot caps.",
+  "clarifying_questions": [
+    {
+      "q": "How is completion rate defined - completed services divided by services booked? Are Native product orders (RO purifiers, smart locks) included?",
+      "a": "Completed divided by booked, for services only. Native products are excluded. The calculation hasn't changed."
+    },
+    {
+      "q": "Is 18% a relative drop, and over what period? Sudden or gradual?",
+      "a": "Relative: from about 90% to about 74%. It's October 2026 against September 2026, and it started fairly sharply in the first week of October."
+    },
+    {
+      "q": "Is it only Bengaluru, or are Hyderabad, Pune and NCR also affected?",
+      "a": "Mainly Bengaluru. Other cities moved by less than 2 points."
+    },
+    {
+      "q": "Is it all categories, or concentrated in beauty, cleaning or repairs?",
+      "a": "It's concentrated in appliance and AC repair, and electrician/plumber jobs. Beauty and cleaning are roughly flat."
+    },
+    {
+      "q": "When a booking doesn't complete, who cancels - the customer, the partner, or the system after failing to assign - and when?",
+      "a": "Mostly partner-initiated or 'no partner found' system cancellations, and many happen the day after booking, before the service slot."
+    },
+    {
+      "q": "Were there any product or policy changes in Bengaluru recently - pricing, rate cards, assignment logic, penalties?",
+      "a": "Yes. On 1 October, a new standard spare-parts rate card launched for repair in Bengaluru as a pilot. Auto-assign was also extended to repair partners."
+    },
+    {
+      "q": "Are customer segments (new vs repeat, Plus members, localities) affected differently?",
+      "a": "No, it's consistent across customer segments."
+    }
+  ],
+  "interviewer_data_reveals": "All numbers are illustrative (invented for teaching) unless a source is cited.\n\nExhibit 1 - Bengaluru completion rate by category (illustrative):\n| Category | Share of bookings | Sep 2026 | Oct 2026 |\n| Beauty (salon at home) | 38% | 94% | 93% |\n| Cleaning | 27% | 91% | 90% |\n| Appliance and AC repair | 20% | 86% | 52% |\n| Electrician / plumber / carpenter | 15% | 88% | 67% |\n| All | 100% | 90% | 74% |\n\nExhibit 2 - Data integrity (illustrative): no change to booking-status mapping; completion confirmed by partner OTP close and customer payment. A new 'rescheduled' status did not ship. Drop is real.\n\nExhibit 3 - Non-completion by cause, repair categories, Bengaluru (illustrative, % of bookings):\n| Cause | Sep | Oct |\n| Customer cancelled | 7% | 8% |\n| Partner cancelled after acceptance | 3% | 19% |\n| No partner found (system cancel) | 2% | 11% |\n| Partner no-show | 2% | 6% |\n70% of the October partner cancellations happen 12-30 hours after booking.\n\nExhibit 4 - Repair jobs by expected parts value (illustrative), Oct partner-cancel rate:\n| Job type | Partner cancel rate |\n| Inspection / no parts | 6% |\n| Parts under Rs 500 | 9% |\n| Parts Rs 500-2,000 (capacitors, PCBs, gas top-up) | 34% |\n| Parts above Rs 2,000 | 28% |\n\nExhibit 5 - Policy change (illustrative): from 1 Oct, the Bengaluru pilot rate card fixed customer prices for 140 spare parts, set below many partners' local sourcing cost plus their usual margin, and required parts from the UC store. Auto-assign pushed repair jobs to partners without an accept step; partners can cancel up to 3 per week without penalty.\n\nExhibit 6 - Supply and demand (illustrative): Bengaluru repair bookings +22% month on month (Dasara/Diwali pre-festive servicing plus northeast-monsoon appliance faults); active repair partners -9% month on month; partner-reported offline job share up (survey: 41% say they now take parts-heavy jobs directly with customers).\n\nExhibit 7 - External checks (illustrative): no Bengaluru-specific labour action; no new Karnataka rule change in October; competitors (Snabbit, Pronto) are in cleaning, not repair.",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "Urban Company's service completion rate in Bengaluru has fallen by 18%. Why?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Let me restate: in Bengaluru, the share of booked services that actually get completed has fallen 18%. I'll clarify the metric, timing and scope first. Is completion rate completed divided by booked, and does it include Native product orders?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Completed over booked, services only. No Native products. Definition unchanged."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Is 18% relative or in points, and since when?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Relative - about 90% to 74%. October against September, starting sharply in the first week of October."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "A sharp start usually means a discrete event - a launch, a policy or an external shock - rather than gradual decay. Scope: is it only Bengaluru?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Mostly. Other cities moved less than 2 points."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then I'm looking for something Bengaluru-specific: a city pilot, a local supply shock, a Karnataka rule, or local weather. Here's my structure:\n1. Data - did a status change count something as incomplete?\n2. Internal - walk the service funnel: booking -> partner assigned -> accepted -> arrives -> service done -> closed. Look for pricing, rate-card, assignment and penalty changes.\n3. External - Karnataka gig law, festive demand, monsoon, competitor poaching.\n4. Behaviour - customers booking speculatively, partners moving jobs offline.\nAnd since it's two-sided, I'll keep asking which side broke. First, data: any change in status mapping or how completion is closed?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "None. Completion is confirmed by partner OTP and payment."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Real drop. The widest split now is by category - beauty, cleaning and repair have completely different supply."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Beauty and cleaning are flat. Appliance and AC repair went from 86% to 52%; electrician and plumber from 88% to 67%."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So repair is basically the whole problem - 35% of bookings with a 25-34 point drop gets you to about 74% overall. Next split: who cancels? If it's customers, it's a demand or pricing issue; if it's partners or the system, it's supply."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Customer cancellations barely moved. Partner cancellations after acceptance went from 3% to 19%, 'no partner found' from 2% to 11%, no-shows 2% to 6%. Most partner cancels happen the day after booking."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's a supply-side failure. A next-day cancel is telling: partners see the job, think about it, and back out before the slot. People back out when the job looks bad for them - too far, too little money, or something they can't do. Did anything change in Bengaluru repair on the partner side - pricing, rate card, assignment?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Two things on 1 October: a standard spare-parts rate card pilot in Bengaluru, and auto-assign extended to repair partners."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Both fit. Let me test the rate card first, since it touches partner earnings directly. If the rate card is the cause, cancellations should be highest on parts-heavy jobs. Can I see the cancel rate by expected parts value?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Inspection-only jobs: 6%. Parts under Rs 500: 9%. Rs 500-2,000: 34%. Above Rs 2,000: 28%."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's the fingerprint. Repair partners in India often make a big share of their income on parts margin - buying a capacitor or PCB locally and charging a markup. If the rate card fixed customer prices below their sourcing cost plus margin, and forced parts from the UC store, a Rs 1,500 AC job may now pay less than the partner's time. So they cancel once they see it's a parts job. Auto-assign makes it worse: before, they'd just decline at the accept step; now they get the job pushed and cancel the next day, which is later and more painful for the customer."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Is that the whole story?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Probably not - the 'no partner found' rise suggests supply was also short. What happened to demand and active partners?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Repair bookings up 22% month on month. Active repair partners down 9%. In a partner survey, 41% say they now take parts-heavy jobs directly with customers offline."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So three things stack:\n| Cause | Bucket | Evidence | Rough share of the drop |\n| Parts rate card makes parts-heavy jobs unprofitable | Internal (pricing/policy) | Cancel rate 34% on Rs 500-2,000 parts jobs vs 6% inspection | Largest, about half |\n| Auto-assign removes the accept step, turning declines into next-day cancels | Internal (product) | 70% of cancels 12-30 hrs after booking | About a quarter |\n| Festive and monsoon demand +22% while partners -9%, plus partners going offline | External + behaviour | 'No partner found' 2% -> 11% | About a quarter |\nThe offline shift is a symptom of the rate card, not an independent cause. Let me also rule out the external checks quickly - any Karnataka gig-law change or labour action in October?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "No."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then the core cause is our own rate-card pilot, amplified by auto-assign and a demand spike. To validate: first, compare Bengaluru repair partners who did mostly parts-heavy jobs vs inspection jobs before 1 October - the first group's cancel rate should have jumped. Second, partner earnings per job before and after the rate card in each parts band. Third, a difference-in-differences against Hyderabad, which didn't get the pilot but had similar festive demand."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What would you do?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Short term:\n- Add a parts-margin floor to the rate card, or let partners source locally with a receipt up to a cap, so parts jobs pay at least the pre-pilot average.\n- Restore the accept step for repair jobs with parts above Rs 500, so partners decline upfront and we reassign immediately.\n- Cap festive repair slots by available partner-hours per micro-market, so we don't sell slots we can't fill.\n- For affected customers: auto-refund cancellation and visit fees and offer a priority rebooking.\nLonger term: price parts from local market data, and give repeat repair partners a guaranteed earnings floor per job. The goal of the rate card - price transparency for customers - is right; the execution shifted all the cost to partners."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How do you stop this happening again?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Any partner-earnings change - rate card, commission, penalty - must ship as a city A/B with partner earnings per hour and partner-cancel rate as guardrails, alongside customer price. And completion rate should be split by cancelling party in the daily dashboard, so a supply-side break shows up in days, not a month."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Wrap it up."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Bengaluru's completion rate fell from 90% to 74% because repair jobs broke on the supply side: our 1 October spare-parts rate card made parts-heavy jobs unprofitable for partners, auto-assign turned their declines into next-day cancellations, and a festive demand spike hit a shrinking partner base. Fix the parts margin, restore the accept step for parts jobs, cap slots to supply, make customers whole, and guardrail partner earnings on every pricing pilot."
+    }
+  ],
+  "answer_and_recommendation": "Ranked causes (illustrative data): (1) The 1 Oct 2026 Bengaluru spare-parts rate-card pilot fixed customer parts prices below partners' sourcing cost plus margin and mandated UC-store parts, making Rs 500-2,000 parts jobs unprofitable - partner cancel rate 34% on those jobs vs 6% on inspection-only jobs; about half the drop. (2) Auto-assign extended to repair removed the accept step, so partners who would have declined instead cancel 12-30 hours after booking, leaving no time to reassign; about a quarter. (3) Supply-demand gap: repair bookings +22% MoM (pre-festive servicing and monsoon faults) while active repair partners fell 9% and some moved parts jobs offline; 'no partner found' rose from 2% to 11%; about a quarter. Ruled out: data/status mapping, customer-side cancellations, Karnataka regulatory change, competitor poaching in repair. Recommendation: parts-margin floor or receipt-based local sourcing; accept step restored for parts jobs above Rs 500; supply-aware slot caps per micro-market; auto-refund of fees and priority rebooking for affected customers; validate by partner-cohort comparison and diff-in-diff vs Hyderabad. Risks: raising parts prices erodes the customer price-transparency goal and AOV competitiveness against local technicians - mitigate by setting prices from local market data and keeping the visible rate card; restoring the accept step can slow assignment - mitigate by applying it only to parts-heavy jobs. Closing line: 'Customers didn't stop wanting repairs - our partners stopped wanting our repair jobs, because a pricing pilot moved the cost onto them. Fix their economics and completion comes back.'",
+  "counter_metrics_guardrails": "1) Partner net earnings per hour and per job by category (the rate card must not push these below the pre-pilot level). 2) Partner-initiated cancel rate and no-show rate per 1,000 bookings, by category and micro-market. 3) Customer price per repair job and AOV - fixing partner margin should not make UC uncompetitive with local technicians. 4) Time to assign and reassign; share of jobs reassigned more than 12 hours before the slot. 5) Customer NPS and rebooking rate for customers who had a cancellation. 6) Cancellation/visit-fee reversal rate and complaint volume (Trustpilot, consumer forums, National Consumer Helpline). 7) Active repair partner count and 30-day partner churn, plus offline-leakage signals (repeat customers who stop booking a category). 8) Contribution margin per repair job, including refunds and goodwill credits.",
+  "follow_up_twists": [
+    {
+      "twist": "What if the drop were in cleaning, not repair, and mostly customer cancellations on the morning of service?",
+      "response": "Then it's demand-side - I'd check InstaHelp or Snabbit cannibalising scheduled cleaning, a surge or slot-fee change, or a reschedule bug, and look at cancellation reasons and time-to-service."
+    },
+    {
+      "twist": "Leadership insists the rate card stays because customer price complaints fell 40% in the pilot.",
+      "response": "Keep the customer-facing price, but fund the gap - pay partners a parts-margin top-up from UC's take rate on parts jobs during the pilot, and measure whether higher completion and repeat bookings pay for it."
+    },
+    {
+      "twist": "Suppose the partner survey shows a union in Bengaluru called for a boycott of auto-assigned jobs.",
+      "response": "Then it's also a labour-relations issue under the Karnataka gig-workers law - engage the union, publish the rate-card economics transparently, and give partners an accept/decline choice, because forcing assignment would raise both regulatory and churn risk."
+    }
+  ],
+  "common_pitfalls": [
+    "Treating it as a customer problem (bad reviews, pricing, competition) without first asking who cancelled - here customers barely changed behaviour; the partner side broke.",
+    "Not splitting by category - beauty and cleaning were flat, so any city-wide explanation (traffic, rains, a gig-law change) would have to explain why only repair moved.",
+    "Assuming the festive demand spike or monsoon is the whole answer - it explains the 'no partner found' rise but not the 34% cancel rate on parts-heavy jobs.",
+    "Proposing to fix it with stricter partner penalties or ID blocks - that increases churn, offline leakage and regulatory risk under the Karnataka gig-workers law, and is a known UC pain point."
+  ],
+  "skills_tested": [
+    "structuring",
+    "empathy",
+    "quant",
+    "prioritisation",
+    "business sense",
+    "communication",
+    "execution"
+  ],
+  "linked_teardown": "urban_company_teardown (urban_company_teardown/results/). Key facts used: partner economics from Partner_retention_earnings_algorithmic_management.json (avg Rs 28,322/month, about Rs 313/hour, commission 20-30%, kit and credit plans, rating floor 4.7, max 3 auto-assigned cancellations, ID-block grievances); Cancellation_surge_fee_fairness.json (partner no-shows and cancellation fees charged to customers); Revenue_unit_economics.json (Bengaluru Handyman AOV Rs 446 -> 450 and partner daily net Rs 720 -> 1,054); Expansion_regulatory_investor_constraints.json (Karnataka gig-worker law and Code on Social Security).",
+  "uncertain": [
+    "round_and_level",
+    "source_and_verification",
+    "context_as_of",
+    "regulatory_context",
+    "public_data_anchors"
+  ]
+}

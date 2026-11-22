@@ -1,0 +1,452 @@
+{
+  "item_name": "Situational / judgment questions (hypothetical 'what would you do if...': deadline vs quality, stakeholder conflict, launch go/no-go, outage or incident response, ethical/user-trust dilemmas)",
+  "what_interviewers_test": "Whether the candidate exercises sound product judgment in a messy, ambiguous scenario they have not seen before: frames what is really at stake, weighs real options, commits to a decision with explicit reasoning, brings stakeholders along and plans for what could go wrong. Unlike behavioural questions it tests reasoning on the spot, not recall of a past story. Google: asked in the 'Leadership & execute with judgment' / Googleyness & Leadership round and graded against Googleyness (thrive in ambiguity, put the user first, do the right thing, value feedback, challenge the status quo) plus emergent leadership; Google's own re:Work guide lists hypotheticals as a standard structured question type with follow-ups on factors, pros/cons and organisational impact. Amazon: mostly behavioural, but hypotheticals and follow-ups ('what would you do now?') are scored against published Leadership Principles (Customer Obsession, Ownership, Bias for Action, Have Backbone; Disagree and Commit, Insist on the Highest Standards). Meta: appears as trade-off and 'what would you do' prompts inside Analytical Thinking and Leadership & Drive, testing data-driven trade-off calls and influence without authority. Indian consumer-tech firms (Zomato, Swiggy, Meesho, Flipkart, PhonePe) use them in hiring-manager/leadership rounds, weighting bias for action, ownership and multi-sided marketplace impact.",
+  "format_variants": "Almost always live and interviewer-led: a 5-15 minute prompt inside a 45-60 minute leadership, Googleyness, hiring-manager or execution round, often 2-4 scenarios per round, each followed by escalating twists ('the VP still insists', 'the bug affects 2% of payments'). Rarely a standalone case; never take-home in the sources found. Variants: (a) pure hypothetical ('Your eng lead says the committed release will slip, what do you do?'); (b) hybrid, where the interviewer accepts or asks for 'have you faced this before?' and a short past example; (c) go/no-go decision, closer to a mini case with data (desirability/feasibility/viability, per Thinksters); (d) incident/outage drill, expected to be time-sequenced (first hour, first day, post-mortem). Expectation shifts: in short slots, the bar is a clear decision plus reasoning in about 3-5 minutes; in mini-case formats, more structure, data asks and metrics are expected. IGotAnOffer (Mark K., ex-Google EM) warns against slipping into storytelling without checking with the interviewer; a grader should accept a brief supporting anecdote but require the hypothetical itself to be answered.",
+  "dimensions": [
+    {
+      "name": "Situation framing and clarification",
+      "definition": "Establishes what is actually at stake before deciding: the goal or commitment involved, severity and scope (how many users, which segment, revenue/trust impact), constraints (date, contract, regulatory), reversibility, and who owns what. Converts unknowns into stated assumptions.",
+      "signal": "Narrows ambiguity with a few decision-relevant questions instead of either charging ahead or stalling. Maps to Googleyness 'thrive in ambiguity' and IGotAnOffer's 'ask clarifying questions / share logical assumptions'.",
+      "transcript_evidence": "Quote the clarifying questions and stated assumptions, e.g. 'Is the date tied to an external commitment like a festive sale or a partner contract?', 'How many users does the bug hit and is it data loss or cosmetic?', 'I'll assume this is a two-way-door decision unless you tell me otherwise.'"
+    },
+    {
+      "name": "Options and trade-off analysis",
+      "definition": "Generates at least two genuinely different courses of action, including non-binary middle paths (scope cut, phased or flagged rollout, beta to a segment, hotfix window, temporary workaround), and states the concrete pros, cons and risks of each against the goal.",
+      "signal": "Sees beyond the false binary the prompt offers (ship vs delay; side with A vs B). Re:Work's published follow-ups probe exactly this: factors considered, pros and cons, sustainability.",
+      "transcript_evidence": "Quote the option list and the trade-off sentences, e.g. 'Three options: hold the date with a cut scope, slip two weeks with full scope, or ship to 5% behind a flag. Option one keeps the marketing launch but drops offline mode, which hurts tier-2 users most.'"
+    },
+    {
+      "name": "Decision and principled reasoning",
+      "definition": "Commits to a specific recommendation, names the decision criteria and their priority (user harm first, then trust, business impact, team cost), and explains why the chosen option wins. Uses data or a test where it would change the call; distinguishes reversible from irreversible decisions; states what would change their mind.",
+      "signal": "'Take a stand, explain your reasoning, and stay open to pushback' (IGotAnOffer, Christian, Google). Amazon bar raisers look for 'high-quality decisions with limited data' (Steinman, ex-Bar Raiser).",
+      "transcript_evidence": "Quote the explicit recommendation and its 'because', e.g. 'I would not launch on Friday. Payments double-charging is a trust issue that is hard to reverse; a two-week slip is recoverable. If the bug were cosmetic I would ship with a hotfix next sprint.'"
+    },
+    {
+      "name": "Stakeholder alignment and communication",
+      "definition": "Identifies who is affected and who decides (eng, design, leadership, sales/ops, partners such as restaurants, sellers or delivery partners), how and when each is told, how disagreement is resolved (data, shared goal, escalation), and shows influence without authority, including disagree-and-commit once a decision is made.",
+      "signal": "Brings people along rather than overriding them or simply deferring upward. Meta expects early escalation of friction (Bosworth, 'escalate early'); Amazon scores Have Backbone; Disagree and Commit; Google's leadership rubric scores working as a team and getting things done.",
+      "transcript_evidence": "Quote named stakeholders and the communication/escalation plan, e.g. 'I would first sit with the eng lead to understand the estimate, then go to the VP with two options and my recommendation rather than just the problem; if the VP still chooses the date, I commit and make the risk visible in the launch doc.'"
+    },
+    {
+      "name": "User-centricity and integrity",
+      "definition": "Keeps the end user's interests and trust at the centre of the decision, and refuses options that harm users, mislead them or break privacy, security or legal obligations, even under business or deadline pressure. Considers all sides of a marketplace where relevant.",
+      "signal": "Googleyness 'put the user first' and 'do the right thing'; Amazon Customer Obsession; IGotAnOffer (ex-Amazon PMM Jessica) says the answer to conflict should centre on the consumer. TPF notes Swiggy/Zomato answers must check all three sides of the marketplace.",
+      "transcript_evidence": "Quote user-impact reasoning, e.g. 'The question I'd anchor on is what the customer experiences: a late feature they never knew about, or a checkout that fails during dinner peak. The second costs trust with users and restaurants.'"
+    },
+    {
+      "name": "Execution plan and risk mitigation",
+      "definition": "Turns the decision into concrete next steps: sequence and timing (first hour/day for incidents), owners, mitigations (rollback, kill switch, feature flag, staged rollout, support scripts), success and guardrail metrics, and a checkpoint to revisit the decision.",
+      "signal": "Shows they can actually land the decision, matching Google's 'getting things done / project management' rubric and IGotAnOffer's 'think about how you measure success'.",
+      "transcript_evidence": "Quote the plan, e.g. 'Roll out to 5% with a kill switch, watch payment success rate and support tickets for 48 hours, with a go/no-go review on Monday; status page and in-app banner within 30 minutes if the outage continues.'"
+    },
+    {
+      "name": "Ownership, humility and adaptability",
+      "definition": "Takes ownership of the outcome rather than blaming others or the process, responds to interviewer pushback and twists by updating (or defending) the position with reasons, and names learning or prevention (post-mortem, process fix).",
+      "signal": "Googleyness 'value feedback' / intellectual humility and Amazon Ownership; bar raisers mark 'no blame-shifting, ownership even when results were mixed' as hire signals (Steinman).",
+      "transcript_evidence": "Quote reactions to twists, e.g. 'That changes my answer; if the partner contract has penalties, I'd...', and ownership lines such as 'I committed that date, so I own resetting expectations', 'After it's stable, I'd run a blameless post-mortem.'"
+    }
+  ],
+  "weights": {
+    "summary": "No company publishes numeric weights for situational questions. Google publishes the attributes (re:Work: role-related knowledge, problem solving, leadership; Googleyness) and that rubrics use outstanding/solid/borderline/poor levels; Amazon publishes the Leadership Principles; neither assigns percentages. Weights below are inferred from how often and how strongly independent prep-platform and interviewer accounts emphasise each behaviour. Strongest consensus: a committed decision with reasoning and real trade-offs (every source), followed by stakeholder handling and clarification.",
+    "per_dimension": [
+      {
+        "dimension": "Situation framing and clarification",
+        "weight_pct": 15,
+        "provenance": "prep-platform",
+        "source": "https://igotanoffer.com/en/advice/google-hypothetical-interview-questions ; https://igotanoffer.com/blogs/tech/googleyness-leadership-interview-questions",
+        "note": "IGotAnOffer's hypothetical method opens with 'ask clarifying questions' and 'share logical assumptions'; Googleyness 'thrive in ambiguity' rewards it. Kept at 15 because over-clarifying is itself a failure mode in short slots."
+      },
+      {
+        "dimension": "Options and trade-off analysis",
+        "weight_pct": 20,
+        "provenance": "published",
+        "source": "https://rework.withgoogle.com/intl/en/guides/a-guide-to-structured-interviewing-for-better-hiring-practices ; https://trymockly.com/blog/50-pm-interview-questions ; https://igotanoffer.com/blogs/product-manager/facebook-execution-interview",
+        "note": "Google re:Work's published hypothetical follow-ups ask for factors considered and pros/cons; Mockly says the strong answer to a competitor-launch hypothetical is not 'ship faster' but re-assessing options; Meta scores trade-offs separately (Prepfully). The weight value itself is inferred."
+      },
+      {
+        "dimension": "Decision and principled reasoning",
+        "weight_pct": 20,
+        "provenance": "interviewer-account",
+        "source": "https://igotanoffer.com/blogs/tech/google-behavioral-interview ; https://www.linkedin.com/posts/howardsteinman_inside-the-debrief-the-3-questions-every-activity-7419390463280898048-wIyz ; https://igotanoffer.com/blogs/product-manager/facebook-execution-interview",
+        "note": "Christian (Google, via IGotAnOffer): playing it safe is a red flag, take a stand; Steinman (ex-Amazon Bar Raiser): high-quality decisions with limited data; IGotAnOffer Meta: it is about how you get to your decision. Ties with trade-offs as the top weight."
+      },
+      {
+        "dimension": "Stakeholder alignment and communication",
+        "weight_pct": 15,
+        "provenance": "prep-platform",
+        "source": "https://igotanoffer.com/blogs/product-manager/google-product-manager-interview ; https://www.productalliance.com/guides/meta-pm-interview-cheat-sheet ; https://prepfully.com/interview-guides/meta-product-manager ; https://www.amazon.jobs/content/en/our-workplace/leadership-principles",
+        "note": "Google 'execute with judgment' questions centre on cross-functional pushback (e.g. eng says committed release can't ship); Meta L&D is 'influence rather than formal authority'; Amazon LP 'Disagree and Commit'. Some Meta-focused sources would weight this higher (20-25) for stakeholder-conflict prompts."
+      },
+      {
+        "dimension": "User-centricity and integrity",
+        "weight_pct": 10,
+        "provenance": "published",
+        "source": "https://igotanoffer.com/blogs/tech/googleyness-leadership-interview-questions ; https://www.amazon.jobs/content/en/our-workplace/leadership-principles ; https://igotanoffer.com/blogs/product-manager/product-manager-interview-questions",
+        "note": "Published values (Googleyness 'do the right thing' / 'put the user first', Amazon Customer Obsession). Weight is modest because a failure here is handled by a must-pass gate (user-harming or deceptive choice caps the rating), so the dimension mostly differentiates 3 from 4."
+      },
+      {
+        "dimension": "Execution plan and risk mitigation",
+        "weight_pct": 10,
+        "provenance": "inferred",
+        "source": "https://practice-interviews.ghost.io/googleyness-leadership-interview-leadership-rubrics/ ; https://igotanoffer.com/en/advice/google-hypothetical-interview-questions ; https://thethinksters.com/pm-interview-strategy-how-to-nail-go-no-go-decision-questions/",
+        "note": "Google leadership rubric 'project management / getting things done' and IGotAnOffer 'how you measure success'. Should rise to ~20 for outage/incident prompts (take 5 from clarification and 5 from options)."
+      },
+      {
+        "dimension": "Ownership, humility and adaptability",
+        "weight_pct": 10,
+        "provenance": "interviewer-account",
+        "source": "https://www.linkedin.com/posts/howardsteinman_inside-the-debrief-the-3-questions-every-activity-7419390463280898048-wIyz ; https://prachub.com/resources/googleyness-what-it-is-and-how-to-pass-the-google-behavioral-interview-2026 ; https://igotanoffer.com/en/advice/google-hypothetical-interview-questions",
+        "note": "Bar Raiser 'no blame-shifting'; PracHub lists relitigating a lost argument and not valuing feedback as red flags; IGotAnOffer stresses 'stay open to pushback'."
+      }
+    ],
+    "total_pct": 100,
+    "disagreements": [
+      "Clarification depth: IGotAnOffer (Google) puts clarifying questions first; Google interviewers quoted by IGotAnOffer also warn against over-explaining and too many details. Recommendation: reward 2-4 decision-relevant questions, and do not reward more.",
+      "Data vs decisiveness: Meta and Indian sources (Zomato 'bias for action', Meesho 'ownership') reward fast calls; Google re:Work-style follow-ups reward weighing factors. Recommended: decision and trade-offs weighted equally (20/20) so neither speed nor analysis alone carries the score.",
+      "Stakeholder weight: Meta Leadership & Drive and Amazon disagree-and-commit sources emphasise influence more than Google sources do. Keep at 15 by default; raise to 25 for explicit stakeholder-conflict prompts.",
+      "Prompt-type re-weighting (recommended, inferred): deadline vs quality: options 25, decision 20, user 10, stakeholders 15; go/no-go: options 20, decision 25, plan 15; outage: plan 20, user 15, stakeholders/comms 20, options 10; stakeholder conflict: stakeholders 25, decision 15."
+    ],
+    "recommended_default": {
+      "Situation framing and clarification": 15,
+      "Options and trade-off analysis": 20,
+      "Decision and principled reasoning": 20,
+      "Stakeholder alignment and communication": 15,
+      "User-centricity and integrity": 10,
+      "Execution plan and risk mitigation": 10,
+      "Ownership, humility and adaptability": 10
+    }
+  },
+  "must_pass_gates": [
+    {
+      "gate": "No decision: candidate lists considerations but never commits ('it depends', 'I'd gather more data') even after being asked for a recommendation",
+      "cap": "Max lean hire (overall <= 2.5/4); if the interviewer explicitly asks for a call and none is given, max no hire",
+      "source": "https://igotanoffer.com/blogs/tech/google-behavioral-interview (Christian: playing it safe is a red flag)"
+    },
+    {
+      "gate": "Chooses an option that knowingly harms or deceives users or breaks legal, privacy or security obligations (e.g. ship a known payment double-charge, hide an outage from affected users, fake a metric to hit a date) without mitigation",
+      "cap": "Max no hire regardless of other scores",
+      "source": "https://igotanoffer.com/blogs/tech/googleyness-leadership-interview-questions ; https://www.amazon.jobs/content/en/our-workplace/leadership-principles (Do the right thing / Customer Obsession); cap level inferred"
+    },
+    {
+      "gate": "Unilateral override or pure deferral: either forces the decision on the team with no consultation ('I'm the PM, we ship'), or only escalates the problem to a manager with no own recommendation",
+      "cap": "Max lean hire",
+      "source": "https://www.productalliance.com/guides/meta-pm-interview-cheat-sheet ('If you see the role of the PM to be the CEO of a product, Meta is likely not the place for you') ; https://boz.com/articles/escalate-early (escalate early, but with a view); cap inferred"
+    },
+    {
+      "gate": "Blame-shifting: attributes the situation to engineering, leadership or another team and stops there without owning the response",
+      "cap": "Max lean hire",
+      "source": "https://www.linkedin.com/posts/howardsteinman_inside-the-debrief-the-3-questions-every-activity-7419390463280898048-wIyz (deflecting or throwing others under the bus is a fail pattern)"
+    },
+    {
+      "gate": "Does not answer the hypothetical: replaces it entirely with a past story or a recited framework and never states what they would do in this scenario",
+      "cap": "Max lean hire",
+      "source": "https://igotanoffer.com/en/advice/google-hypothetical-interview-questions (Mark K.: avoid switching into storytelling mode without checking; textbook best practices that do not sound real)"
+    },
+    {
+      "gate": "Outage/incident prompts only: no immediate mitigation or user/stakeholder communication step in the first response (jumps straight to root-cause analysis or post-mortem)",
+      "cap": "Max lean hire",
+      "source": "inferred from incident-response guidance; https://www.mariogerard.com/tpm-at-google-preparing-for-tpm-interviews-at-amazon-microsoft-google-part-iii/ (hypothetical TPM scenarios) [uncertain]"
+    }
+  ],
+  "score_anchors": {
+    "Situation framing and clarification": {
+      "1": "Starts answering immediately with no questions or assumptions, or misreads the scenario. 'I would just delay the launch.'",
+      "2": "Asks generic questions not tied to the decision ('What's the company's mission?') or many questions without using the answers; assumptions unstated.",
+      "3": "Asks 2-4 decision-relevant questions on severity, scope, commitment and reversibility, or states assumptions when the interviewer says 'you decide'. 'How many users are affected, and is the date contractual?'",
+      "4": "As 3, plus reframes the real question and links each unknown to how it would change the decision. 'If this is a cosmetic bug, it's a scope question; if it's data loss, it's a trust question. Which is it?'"
+    },
+    "Options and trade-off analysis": {
+      "1": "Only one option considered, or a binary with no pros/cons.",
+      "2": "Two options listed with generic pros/cons ('faster vs better quality') not tied to users or the business in this scenario.",
+      "3": "Two or three distinct options including a middle path (scope cut, flag, phased rollout) with scenario-specific pros, cons and risks.",
+      "4": "As 3, plus surfaces a non-obvious option or second-order effect (precedent for the team, partner trust, festive-sale timing, regulatory exposure) and compares options against stated criteria. 'Shipping to 5% behind a flag gets us the marketing date without exposing all users.'"
+    },
+    "Decision and principled reasoning": {
+      "1": "No decision, or a decision with no reason. 'It depends on many factors.'",
+      "2": "Decision stated, but the reasoning is a slogan ('quality always comes first', 'the customer is king') or follows authority ('whatever leadership wants').",
+      "3": "Clear recommendation with the criteria and why this option wins in this case; notes what data or test would validate it.",
+      "4": "As 3, plus explicit reversibility logic and the conditions that would flip the call, delivered confidently and briefly. 'Delay, because double-charging is hard to undo; if the fix slips past the sale, I'd ship with payments on the old flow.'"
+    },
+    "Stakeholder alignment and communication": {
+      "1": "No stakeholders mentioned, or overrides/blames them. 'I'd tell engineering they need to work the weekend.'",
+      "2": "Mentions 'align with stakeholders' or 'communicate with leadership' generically, with no who/how/when.",
+      "3": "Names the key stakeholders, the order of conversations, how disagreement is resolved (data, shared goal), and when to escalate with a recommendation.",
+      "4": "As 3, plus anticipates each stakeholder's incentive, pre-wires the decision, and shows disagree-and-commit or how they would keep the relationship. 'Sales cares about the client demo, so I'd offer them a guided beta for that account.'"
+    },
+    "User-centricity and integrity": {
+      "1": "User impact absent, or proposes an option that harms or misleads users.",
+      "2": "Mentions users in passing ('users won't like it') without letting it shape the decision.",
+      "3": "User impact (and, in marketplaces, each side) explicitly drives the trade-off; rejects harmful shortcuts.",
+      "4": "As 3, plus distinguishes segments with different impact (new vs loyal, tier-2 low-bandwidth users, merchants vs buyers) and builds trust-preserving measures (proactive notice, make-goods)."
+    },
+    "Execution plan and risk mitigation": {
+      "1": "Ends at the decision; no next steps.",
+      "2": "Vague next steps ('monitor it', 'fix it fast') with no owners, metrics or timing.",
+      "3": "Concrete steps with sequence, a mitigation (rollback/flag/staged rollout), and success plus guardrail metrics with a checkpoint.",
+      "4": "As 3, plus time-boxed plan tailored to the scenario (first hour/day/week for incidents), pre-defined kill criteria, and prevention afterwards. 'If payment success drops below 98% in the 5% cohort, we roll back automatically.'"
+    },
+    "Ownership, humility and adaptability": {
+      "1": "Blames others, gets defensive or repeats the same answer when challenged.",
+      "2": "Accepts pushback but either capitulates immediately without reasoning or ignores the new information.",
+      "3": "Engages with the twist: updates or defends the position with reasons, and owns the outcome of their decision.",
+      "4": "As 3, plus names what they would learn or change (blameless post-mortem, process fix) and models disagree-and-commit. 'Fair point, that changes the risk; I'd revise to... and I own the reset with the client.'"
+    }
+  },
+  "level_expectations": {
+    "APM / entry": "Solid (3) = clarifies the key unknowns, offers two options with a middle path, makes a reasoned call that protects users, and names who they would talk to. Stakeholder handling can be simpler (consult eng lead, inform manager) and the plan can be lighter; one hint or nudge to commit is acceptable. Google APM and Indian APM rounds weight structured thinking and attitude (humility, bias for action) over organisational savvy.",
+    "PM (mid-level, e.g. Google L5, Meta IC5, Amazon L6 PM, India PM/Senior PM-1)": "Solid (3) = all of the above unprompted, plus explicit decision criteria, reversibility, named stakeholders with an escalation path and a concrete rollout/mitigation plan with guardrail metrics. Should handle at least one twist without losing the thread. Prepfully (Meta): needing steering reads as IC5 rather than IC6.",
+    "Senior PM / Group PM (Google L6+, Meta IC6+, Amazon L7)": "Solid (3) = drives the scenario end to end without prompts, frames second-order and organisational effects (precedent, team health, partner/merchant trust, cross-org dependencies), pre-wires leadership, sets decision principles the team can reuse, and plans prevention or mechanisms (Amazon 'mechanisms that scale', Steinman). Blind (L6) accounts say seniors are expected to break or adapt a framework when it does not fit. A merely correct, mid-level answer reads as lean hire at this level.",
+    "per_dimension_shift": {
+      "Situation framing and clarification": "APM: 2-3 basic questions; PM: questions tied to the decision; Senior: reframes the problem and surfaces hidden stakes.",
+      "Options and trade-off analysis": "APM: two options plus a middle path; PM: scenario-specific risks; Senior: second-order and org-level effects.",
+      "Decision and principled reasoning": "APM: commits with a reason; PM: explicit criteria plus reversibility; Senior: reusable principle and flip conditions.",
+      "Stakeholder alignment and communication": "APM: names eng/design/manager; PM: sequence plus escalation with a recommendation; Senior: incentives, pre-wiring, exec communication.",
+      "User-centricity and integrity": "Same floor at all levels (gate); seniors add segment-level and partner-ecosystem nuance.",
+      "Execution plan and risk mitigation": "APM: basic next steps and a metric; PM: rollout/rollback and guardrails; Senior: mechanisms and prevention.",
+      "Ownership, humility and adaptability": "APM: accepts feedback gracefully; PM: updates with reasons; Senior: owns org outcome and models disagree-and-commit."
+    }
+  },
+  "green_flags": [
+    "States a clear recommendation within the first few minutes and then justifies it ('My call is to slip by a week, here's why').",
+    "Breaks the false binary with a concrete middle path: scope cut, feature flag, staged or segment rollout, or a hotfix window.",
+    "Names decision criteria in priority order and uses reversibility (one-way vs two-way door) to decide how much certainty is needed.",
+    "Says which stakeholder they would speak to first, what they would bring (data, options, a recommendation) and when they would escalate.",
+    "Keeps the user (and every side of a marketplace: customers, restaurants/sellers, delivery partners) at the centre, and refuses shortcuts that erode trust.",
+    "Gives a time-sequenced plan with mitigation and guardrail metrics (e.g. 'kill switch if payment success drops below X').",
+    "Engages a twist by explicitly updating or defending the answer, and owns the outcome without blame.",
+    "States what would change their mind, showing calibrated rather than dogmatic confidence."
+  ],
+  "red_flags": [
+    "Fence-sitting: 'it depends' or 'I'd gather more data' with no decision, even when pushed.",
+    "False binary: only ship vs delay, or side with A vs B, with no middle path considered.",
+    "Slogan reasoning: 'quality always comes first', 'customer obsession', 'disagree and commit' recited as values with no link to the scenario.",
+    "Authority shortcut: 'I'd escalate to my manager' or 'I'd do what the VP says' as the whole answer; or the opposite, overriding the team ('I'm the PM, we ship').",
+    "Blaming engineering, leadership or another team for the situation.",
+    "Ignores user harm, or proposes hiding a problem from users or leadership.",
+    "Framework recitation: walks a memorised acronym (e.g. STAR, CIRCLES, RICE) without applying it, or turns the hypothetical into a long past story without answering it.",
+    "Rambling or over-explaining: many considerations, no prioritisation, runs out of time before the decision."
+  ],
+  "recitation_vs_insight": "Recitation: the candidate announces a generic structure ('First I'd clarify, then list stakeholders, then weigh pros and cons, then decide') and fills each slot with boilerplate that would fit any scenario: 'align stakeholders', 'look at the data', 'put the customer first', 'communicate transparently'. Options are generic ('ship or delay'), and values are named rather than applied (quoting an Amazon LP or 'Googleyness' by name). The decision does not depend on any fact the interviewer gave, and a twist produces the same answer restated. Insight: the answer contains scenario-specific facts and consequences (who exactly is harmed, by how much, how reversible it is), a middle-path option that is particular to the situation, criteria that visibly drive the choice, and explicit conditions under which the call would flip. When the interviewer adds a twist, the recommendation changes or is defended with a new reason. Grader test: (1) Could this paragraph be pasted into a different scenario unchanged? If yes, cap the dimension at 2. (2) Does the decision reference at least one scenario-specific fact? (3) Did the candidate change or defend their answer with a reason after a twist? Mark K. (ex-Google EM, IGotAnOffer) states principled approaches must come across as real, not textbook quotes of best practices; PracHub lists over-rehearsed, word-perfect delivery as a red flag.",
+  "process_signals": {
+    "clarifying_questions": "Expect 2-4 decision-relevant questions (severity/scope, external commitments, reversibility, who decides). More than about 5 before any position, or questions whose answers are never used, should lower Situation framing to 2. If the interviewer says 'assume whatever you like', stating assumptions earns the same credit as asking.",
+    "check_ins": "One brief check-in after framing or before going deep ('I'll lay out three options and then recommend one, does that work?') is a positive signal. Asking permission repeatedly or asking the interviewer what they would do is negative.",
+    "use_of_interviewer_data": "When the interviewer supplies facts (bug affects 2% of payments; contract penalty), the decision must visibly use them. Credit the candidate for asking the discriminating question and for interpreting the fact, never for the fact itself.",
+    "response_to_pushback": "Situational rounds are built around twists. Strong: updates with a reason, or holds the position with a reason, while acknowledging the point. Weak: caves instantly with no reasoning, or repeats the original answer unchanged. Amazon 'Have Backbone' and Google 'value feedback' both apply, so either a reasoned update or a reasoned hold can score 3-4.",
+    "hint_penalty": "If the interviewer has to ask 'so what would you actually do?' to get a decision, cap Decision at 2 for that scenario. One minor hint (e.g. a reminder about a stakeholder) costs about 0.5 on the relevant dimension; two or more substantive hints should prevent a strong hire. APM candidates are penalised about half as much. [uncertain: hint penalty magnitudes are inferred, not sourced]"
+  },
+  "time_allocation": "For a typical 5-10 minute situational prompt: framing and clarifying 1-2 min; options and trade-offs 2-3 min; decision with reasoning 1 min (a headline recommendation can come early); stakeholders and plan 2-3 min; handling the interviewer's twist 1-3 min. For a 15-20 minute go/no-go mini case, roughly double framing and trade-offs. Penalty: if time runs out before a decision is stated, apply the 'no decision' gate; if the decision is stated but no plan, cap Execution at 2. Spending over a third of the time on clarifying or on a past anecdote should lower Situation framing or Decision by one point. [uncertain: minute splits are inferred from round lengths, not published]",
+  "hire_thresholds": {
+    "scale_mapping": "Grader dimension scores (1-4) are combined using the weights into a 1-4 average and mapped to the company vote scales: Google interviewers write Strong Hire / Hire / Leaning Hire / Leaning No Hire / No Hire / Strong No Hire into the packet for the hiring committee; Amazon debriefs use four options with no neutral vote: Strong Hire, Inclined to Hire, Not Inclined, Strong No Hire. Google re:Work describes rubric levels outstanding / solid / borderline / poor, which map to 4 / 3 / 2 / 1.",
+    "strong_hire": "Weighted average >= 3.5, Decision and Options both >= 3.5, no dimension below 3, no gate triggered, at most one minor hint across the scenario(s).",
+    "hire": "Weighted average 3.0-3.49, Decision >= 3, Stakeholder >= 3, no gate triggered.",
+    "lean_hire": "Weighted average 2.5-2.99, or any single cap-to-lean-hire gate triggered with otherwise solid scores.",
+    "no_hire": "Weighted average < 2.5, or the user-harm/integrity gate triggered, or no decision after explicit prompting.",
+    "level_and_company_notes": "At Senior PM level shift every threshold up by about 0.25 (a 3.0 average reads as lean hire). Amazon's lack of a neutral vote means a 2.5-2.99 result should be reported as 'Not Inclined' unless the bar-raiser-type signals (Ownership, decision quality with limited data) are >= 3. Google hiring committees read the written evidence, so an answer with good scores but thin quotable evidence should be marked down. Indian companies typically make a single overall call per round; bias for action and ownership weigh heavily, so a slow, over-analysed answer with a correct decision can read as lean hire. [uncertain: numeric cut-offs are inferred]",
+    "sources": "https://substack.com/home/post/p-197539715 ; https://www.scribd.com/document/849039832/MGHD-1-20-09-Hand-out ; https://rework.withgoogle.com/intl/en/guides/a-guide-to-structured-interviewing-for-better-hiring-practices"
+  },
+  "company_differences": {
+    "Google": "Hypotheticals are a core, explicitly published question type (re:Work) and appear in the Googleyness & Leadership and 'execute with judgment' rounds; graded against Googleyness (thrive in ambiguity, value feedback, challenge the status quo, put the user first, do the right thing, care about the team) and leadership (emergent leadership, project management, getting things done, working as a team). Rewards a stand plus openness to pushback. Interviewers write evidence for a hiring committee, so specific, quotable reasoning matters. Example: committed release but eng says it can't ship in time.",
+    "Meta": "Situational content shows up as trade-off decisions in Analytical Thinking (data-driven: e.g. one metric up, another down, ship or not) and as conflict/alignment in Leadership & Drive (mostly behavioural, but probes 'how would you handle it next time'). Values: move fast, escalate friction early (Bosworth), influence without authority; 'PM as CEO' framing is a negative. Trade-off judgement is scored at the end of the round, so candidates must reach it.",
+    "Amazon": "Predominantly behavioural; hypotheticals appear as follow-ups or for scenario questions and are scored against published Leadership Principles. Highest-signal LPs for judgment prompts: Customer Obsession, Ownership, Bias for Action (two-way-door decisions fast), Have Backbone; Disagree and Commit, Insist on the Highest Standards, Dive Deep. Bar raiser focuses on decision quality with limited data, mechanisms, and no blame. Debrief vote has no neutral option.",
+    "Microsoft": "[uncertain] No recent PM-specific source on hypothetical grading was found. Prep accounts describe a mix of behavioural and scenario questions with emphasis on collaboration, customer empathy and growth mindset; treat as Google-like default weights with stakeholder alignment at 20.",
+    "Uber": "[uncertain] No recent PM-specific source on hypothetical grading was found. Marketplace and operations scenarios (rider/driver trade-offs, city launch go/no-go, incident handling) are reported informally; recommend user-centricity weighted for both sides of the marketplace and execution plan weighted at 15.",
+    "Indian companies (Flipkart, Swiggy, Zomato, PhonePe, Meesho)": "Situational questions are mostly asked in hiring-manager, leadership or 'bar raiser' rounds (Meesho lists a final bar raiser), often mixed with past-experience probes. Dataford (2026) lists bias for action, hustle, ownership and humility as Zomato's culture signals and empathy, bias for action and ownership for Meesho; example prompts include 'a key engineering stakeholder disagrees with your prioritisation' and rollback decisions (checkout change raises AOV but increases abandonment). TPF: Swiggy/Zomato answers must check all three sides (customers, restaurants, delivery partners); Flipkart leans on festive-sale scale (Big Billion Days) where deadlines are immovable, so scope-cut and staged-rollout answers are favoured over delays. PhonePe (payments) scenarios carry higher integrity stakes (failed or double debits, regulatory obligations), so the user-trust gate is stricter. India-specific bar difference: more weight on speed and ownership, and on concrete operational realities (tier-2 users, low bandwidth, partner economics); less emphasis on formal rubric language. [uncertain: India weights are inferred from prep-platform culture descriptions, not interviewer accounts]"
+  },
+  "calibration_exemplars": {
+    "prompt_used": "'You committed to launch a new checkout flow before a festive sale in 10 days. Engineering says it needs 3 more weeks for full quality; there is a known bug that occasionally double-charges UPI payments. What do you do?'",
+    "score_1": "Candidate says 'I'd ask engineering to work weekends and launch on time because the sale is important', asks no questions, ignores the payment bug, names no stakeholders except telling engineering, and gives no plan. Triggers user-harm and unilateral-override gates.",
+    "score_2": "Candidate asks one generic question, says 'there's a trade-off between speed and quality', lists ship vs delay with generic pros/cons, and concludes 'I'd talk to stakeholders and look at the data before deciding'. Decision only comes after the interviewer pushes, and is 'delay because quality comes first' with no scenario-specific reason or plan.",
+    "score_3": "Candidate asks how often the bug fires and whether the sale date is fixed, lays out three options (ship full, delay, ship the old flow for UPI and new flow for cards behind a flag), recommends the flagged partial launch because double-charging is a trust issue that is hard to reverse, names the eng lead, payments team and marketing, sets a guardrail on payment success rate with a rollback, and adjusts sensibly when told the VP wants the full launch.",
+    "score_4": "As 3, plus reframes the decision as 'what must be true on sale day', quantifies the exposure from the interviewer's data, identifies a second-order risk (support load during sale, refund turnaround obligations), pre-wires the VP with the option set and a clear recommendation, defines kill criteria and a war-room plan for sale day, states the condition that would flip the call, owns the date slip personally and proposes a post-launch review. Delivered concisely, with the decision stated early."
+  },
+  "coachable_feedback": {
+    "Situation framing and clarification": "Before answering, ask the two questions that would change your decision (how bad / how many, and how reversible or fixed the constraint is), then say your assumption aloud if unanswered.",
+    "Options and trade-off analysis": "Every time, name at least one middle-path option (scope cut, flag, staged rollout) before choosing between the two extremes the prompt offers.",
+    "Decision and principled reasoning": "Say 'My recommendation is X because Y' within the first third of your answer, and end with 'I'd change my mind if Z'.",
+    "Stakeholder alignment and communication": "Name the first person you would talk to, what you would bring them (options plus your recommendation), and when you would escalate.",
+    "User-centricity and integrity": "State explicitly what the user (and each marketplace side) experiences under each option, and rule out any option that hides harm from them.",
+    "Execution plan and risk mitigation": "Close with three concrete next steps, one guardrail metric with a rollback trigger, and a checkpoint date.",
+    "Ownership, humility and adaptability": "When challenged, say whether the new fact changes your answer and why, in one sentence, and own the outcome in first person ('I committed the date, so I reset it')."
+  },
+  "llm_grading_notes": [
+    "Length and keyword bias: an 8B model tends to reward long answers that mention 'stakeholders', 'data', 'customer' and 'trade-off'. Mitigation: require the grader to quote the exact sentence that is the decision, the specific options, and a scenario-specific fact used in the reasoning; if it cannot quote them, cap the dimension at 2.",
+    "Slogan detection: instruct the grader to apply the paste test (would this sentence fit any scenario?) and to give no credit for naming values or LPs (e.g. 'customer obsession', 'Googleyness', 'disagree and commit') without an applied action.",
+    "Interviewer-supplied content: twists and facts come from the interviewer; credit only how the candidate uses them. Label each turn with its speaker before scoring and never credit an option the interviewer suggested unless the candidate evaluated it.",
+    "Decision extraction first: have the model first output 'Decision: <quote or NONE>' and 'Turn at which decision appeared'; apply the no-decision gate mechanically before scoring other dimensions.",
+    "Gate checks as separate yes/no questions (user harm, override/deferral, blame, unanswered hypothetical, incident without mitigation), each with a quoted justification, before the weighted score; small models are more reliable on binary checks than holistic judgments.",
+    "Leniency and central tendency: small models cluster at 3. Provide the four calibration exemplars as few-shot anchors and require a one-line justification that contrasts the answer with the adjacent anchor ('why 3 not 4').",
+    "Ethics false positives: do not penalise a candidate for choosing to ship on time if they mitigate user harm (flag, partial rollout, disclosure); the gate is for knowingly harmful or deceptive choices, not for the 'ship' choice itself.",
+    "Hybrid answers: a brief past anecdote supporting the hypothetical is fine; only trigger the 'did not answer the hypothetical' gate if no forward-looking action is stated for this scenario.",
+    "Pushback scoring is symmetric: either a reasoned change or a reasoned hold can score high; instruct the model not to reward agreement with the interviewer by itself.",
+    "Multiple scenarios in one transcript: score each scenario separately and average, so one strong answer does not mask a gated one; report the worst gate."
+  ],
+  "sources": [
+    {
+      "title": "Google re:Work - A guide to structured interviewing (hypothetical questions, rubric levels)",
+      "url": "https://rework.withgoogle.com/intl/en/guides/a-guide-to-structured-interviewing-for-better-hiring-practices",
+      "date": "2026-03-31",
+      "verification": "published (Google official guidance; not PM-specific weights)"
+    },
+    {
+      "title": "Google's sample structured interview grading rubric (Poor/Mixed/Good/Excellent; 1-5 proficiency anchors)",
+      "url": "https://pers.oa.mo.gov/sites/g/files/zuston146/files/media/pdf/2022/09/sample-scoring-rubric.pdf",
+      "date": "2022-09 (hosted copy)",
+      "verification": "published sample rubric (background; generic, not PM)"
+    },
+    {
+      "title": "Google's Hypothetical Interview Questions (IGotAnOffer; quotes Mark K., ex-Google EM)",
+      "url": "https://igotanoffer.com/en/advice/google-hypothetical-interview-questions",
+      "date": "2024-12-03",
+      "verification": "prep platform with interviewer accounts"
+    },
+    {
+      "title": "Google Behavioral Interview (IGotAnOffer; Christian: 'take a stand')",
+      "url": "https://igotanoffer.com/blogs/tech/google-behavioral-interview",
+      "date": "2026 (updated)",
+      "verification": "prep platform with interviewer account"
+    },
+    {
+      "title": "Googleyness & Leadership Interview Questions (IGotAnOffer; cites Google's prep pack)",
+      "url": "https://igotanoffer.com/blogs/tech/googleyness-leadership-interview-questions",
+      "date": "2026-06-15",
+      "verification": "prep platform quoting official Google material"
+    },
+    {
+      "title": "Google Product Manager Interview - 'Leadership & execute with judgment' (IGotAnOffer)",
+      "url": "https://igotanoffer.com/blogs/product-manager/google-product-manager-interview",
+      "date": "2026-11-10",
+      "verification": "prep platform"
+    },
+    {
+      "title": "Googleyness & Leadership Interview: Leadership Rubrics (Practice Interviews)",
+      "url": "https://practice-interviews.ghost.io/googleyness-leadership-interview-leadership-rubrics/",
+      "date": "2026-01-27",
+      "verification": "prep platform / coach account (unverified rubric names)"
+    },
+    {
+      "title": "Googleyness & Google Behavioral Interview Questions 2026 (PracHub)",
+      "url": "https://prachub.com/resources/googleyness-what-it-is-and-how-to-pass-the-google-behavioral-interview-2026",
+      "date": "2026-03-10 (modified 2026-11-03)",
+      "verification": "prep platform"
+    },
+    {
+      "title": "Inside the Google 2026 Loop: Rounds, Rubric (vote scale)",
+      "url": "https://substack.com/home/post/p-197539715",
+      "date": "2026",
+      "verification": "prep newsletter / interviewer-sourced [uncertain author]"
+    },
+    {
+      "title": "How to Crack the NEW Google PM Interview (Aakash Gupta) - paywalled, used only for loop context",
+      "url": "https://www.news.aakashg.com/p/google-pm-interview-guide-2026",
+      "date": "2026-07-16",
+      "verification": "prep newsletter (paywalled; minimal use)"
+    },
+    {
+      "title": "Inside the Debrief: The 3 Questions Every Amazon Bar Raiser Is Really Asking (Howard Steinman, former Bar Raiser)",
+      "url": "https://www.linkedin.com/posts/howardsteinman_inside-the-debrief-the-3-questions-every-activity-7419390463280898048-wIyz",
+      "date": "2026-01-20",
+      "verification": "interviewer account"
+    },
+    {
+      "title": "Amazon Leadership Principles (official)",
+      "url": "https://www.amazon.jobs/content/en/our-workplace/leadership-principles",
+      "date": "current",
+      "verification": "published (values, no weights)"
+    },
+    {
+      "title": "Amazon Behavioral Interview Questions (IGotAnOffer)",
+      "url": "https://igotanoffer.com/blogs/tech/amazon-behavioral-interview",
+      "date": "2026",
+      "verification": "prep platform"
+    },
+    {
+      "title": "Amazon Interviewing: Hiring Principles Guide (four-option vote, no neutral)",
+      "url": "https://www.scribd.com/document/849039832/MGHD-1-20-09-Hand-out",
+      "date": "unknown",
+      "verification": "leaked/shared internal-style handout (unverified)"
+    },
+    {
+      "title": "Meta PM Interview Cheat Sheet (Product Alliance) - Leadership & Drive",
+      "url": "https://www.productalliance.com/guides/meta-pm-interview-cheat-sheet",
+      "date": "2025-2026",
+      "verification": "prep platform"
+    },
+    {
+      "title": "Meta Product Manager interview guide 2026 (Prepfully)",
+      "url": "https://prepfully.com/interview-guides/meta-product-manager",
+      "date": "2026",
+      "verification": "prep platform with coach accounts"
+    },
+    {
+      "title": "Escalate Early (Andrew Bosworth, Meta CTO)",
+      "url": "https://boz.com/articles/escalate-early",
+      "date": "background",
+      "verification": "published executive essay (background)"
+    },
+    {
+      "title": "Meta Leadership & Drive Interview (IGotAnOffer)",
+      "url": "https://igotanoffer.com/en/advice/meta-leadership-and-drive-interview",
+      "date": "2026",
+      "verification": "prep platform"
+    },
+    {
+      "title": "Meta Analytical Thinking Interview - trade-offs (IGotAnOffer)",
+      "url": "https://igotanoffer.com/blogs/product-manager/facebook-execution-interview",
+      "date": "2026",
+      "verification": "prep platform"
+    },
+    {
+      "title": "The 8 types of PM Interview Questions (IGotAnOffer; ex-Amazon PMM on centring the consumer)",
+      "url": "https://igotanoffer.com/blogs/product-manager/product-manager-interview-questions",
+      "date": "2026-11-10",
+      "verification": "prep platform with interviewer accounts"
+    },
+    {
+      "title": "PM interview strategy: Go/No-Go decision questions (The Thinksters)",
+      "url": "https://thethinksters.com/pm-interview-strategy-how-to-nail-go-no-go-decision-questions/",
+      "date": "2025-10-14",
+      "verification": "prep platform"
+    },
+    {
+      "title": "50 PM Interview Questions + what interviewers test (Mockly)",
+      "url": "https://trymockly.com/blog/50-pm-interview-questions",
+      "date": "2025-2026",
+      "verification": "prep platform"
+    },
+    {
+      "title": "100+ PM Interview Questions by round and Indian company (The Product Folks)",
+      "url": "https://www.theproductfolks.com/product-management-blog/100-product-manager-interview-questions-with-answers",
+      "date": "2026-10-30",
+      "verification": "prep platform (India)"
+    },
+    {
+      "title": "Zomato Product Manager Interview Guide 2026 (Dataford)",
+      "url": "https://dataford.io/interview-guides/zomato/product-manager",
+      "date": "2026-08-01",
+      "verification": "prep platform (India company guide)"
+    },
+    {
+      "title": "Meesho Product Manager Interview Guide 2026 (Dataford)",
+      "url": "https://dataford.io/interview-guides/meesho/product-manager",
+      "date": "2026-08-01",
+      "verification": "prep platform (India company guide)"
+    },
+    {
+      "title": "Preparing for TPM interviews at Amazon, Microsoft & Google (Mario Gerard)",
+      "url": "https://www.mariogerard.com/tpm-at-google-preparing-for-tpm-interviews-at-amazon-microsoft-google-part-iii/",
+      "date": "background",
+      "verification": "interviewer/coach podcast (TPM, adjacent role)"
+    }
+  ],
+  "uncertain": [
+    "weights (all percentages inferred; prompt-type re-weighting inferred)",
+    "must_pass_gates (cap levels inferred; incident-response gate not directly sourced)",
+    "process_signals.hint_penalty",
+    "time_allocation",
+    "hire_thresholds (numeric cut-offs)",
+    "company_differences.Microsoft",
+    "company_differences.Uber",
+    "company_differences.Indian companies (weights inferred from culture descriptions)",
+    "sources (Google 2026 loop substack author; Amazon handout provenance)"
+  ]
+}

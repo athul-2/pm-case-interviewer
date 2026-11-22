@@ -1,0 +1,211 @@
+{
+  "pun_title": "Last Over Outage",
+  "case_type": "Situational",
+  "asked_at": "By the Authors (synthetic, JioStar style)",
+  "subject_company": "JioHotstar (JioStar, the Reliance-Disney joint venture formed Feb 2025 by merging JioCinema and Disney+ Hotstar), during a live IPL final.",
+  "round_and_level": "PM round or hiring-manager round (situational / incident leadership under pressure), PM and SPM levels for streaming, platform or live-sports product roles; APM candidates get a simpler version with the error split handed over. [uncertain]",
+  "difficulty": "Hard - the clock is in seconds, not sprints. The candidate must separate the PM's job (decisions on trade-offs, comms, stakeholders) from the SRE incident commander's job, and choose continuity over quality and revenue in the highest-value 4 minutes of the season.",
+  "market_and_industry": "India; OTT / live sports streaming; mass-market audience on mid-range and budget Android phones over 4G/5G (Jio-heavy), plus a fast-growing connected-TV segment; multiple language feeds (JioStar says regional languages are about 90% of IPL watch time); free-with-ads and paid tiers.",
+  "time_box_minutes": "20-25",
+  "exact_prompt": "It's the IPL final. Last over, 12 needed off 6 balls, and the JioHotstar stream starts failing for a large chunk of viewers. You're the PM on call. Walk me through what you do - in the next 5 minutes, the next hour and the next week.",
+  "source_and_verification": "Level: synthetic (written by the authors in a JioStar style). No dated report of this exact prompt was found on NextLeap, The Product Folks, AmbitionBox, Glassdoor, PracHub, LinkedIn or Medium in this session (Firecrawl credits ran out; searched via WebSearch). The scenario is grounded in real incidents: JioCinema buffering and crashes during the IPL 2023 opener (exchange4media, Apr 2023, https://www.exchange4media.com/ipl-news/jiocrash-viewers-complain-of-buffering-issues-app-crashes-during-csk-gt-ipl-match-126395.html); a reported Hotstar glitch with drops to 480p during RCB vs RR in IPL 2025 (mykhel, 2025, https://www.mykhel.com/cricket/rcb-vs-rr-hotstar-glitch-virat-kohli-batting-ipl2025-fans-angry-after-telecast-disrupt-chinnaswamy-357335.html); and a multi-hour JioHotstar outage (search, login, history down) in Oct 2025 (Free Press Journal, https://www.freepressjournal.in/tech/jiohotstar-down-in-india-users-report-streaming-crashes-and-vanishing-of-search-icon). Year: 2026 (synthetic).",
+  "context_as_of": "As of Nov 2026. 1) IPL 2026 final: RCB beat GT by 5 wickets at Narendra Modi Stadium, Ahmedabad, on 31 May 2026; JioStar called it the most-watched IPL match ever, with 400 mn+ reach across screens; season reach 1.2 bn, +7% YoY (Outlook India, Jun 2026, https://www.outlookindia.com/sports/cricket/rcb-vs-gt-ipl-2026-most-watched-match-indian-premier-league-history; The Week, 1 Jun 2026, https://www.theweek.in/news/sports/2026/06/01/ipl-2026-final-virat-kohli-carries-rcb-to-5-wicket-win-over-gt-to-clinch-second-title.amp.html). Note: the real final was not a last-over finish (RCB won with two overs to spare), so the case is a hypothetical. 2) Opening weekend reach 515 mn across screens (exchange4media, Apr 2026). 3) Scale benchmarks: IPL 2025 peak concurrency 55.2 mn and digital reach 652 mn; JioHotstar crossed 300 mn subscribers in Jun 2025 (Outlook Business, 25 Jun 2025, https://www.outlookbusiness.com/news/jiohotstar-closes-in-on-netflix-subscribers-touch-300-million). A secondary blog reports 65.2 mn peak concurrency for the India vs England T20 World Cup 2026 semi-final, EKS with 800+ microservices, a multi-CDN load optimiser and an ABR ladder from 4K down to a 2G tier (abhs.in, 20 Mar 2026, unverified, https://abhs.in/blog/jiohotstar-ipl-2026-streaming-infrastructure-65-million-concurrent-viewers-aws). 4) JioHotstar reported about 451 mn monthly users for FY26 (indiantelevision, 2026). 5) Ownership: Reliance about 63%, Disney about 37%. Stale-risk: concurrency for the 2026 final itself was not found; the T20 WC 2026 final concurrency figures conflict across outlets. [uncertain]",
+  "regulatory_context": "1) CERT-In Directions (28 Apr 2022) under s.70B IT Act: specified cyber incidents (including DDoS and attacks on servers) must be reported to CERT-In within 6 hours of noticing them - relevant if the outage turns out to be an attack rather than a capacity failure. 2) DPDP Act 2023 and Rules (phased from Nov 2025): if the failure involves login/identity systems, any personal-data breach must be notified to the Data Protection Board and affected users; failing open on entitlement must not expose account data. 3) Consumer Protection Act 2019 / CCPA: paid subscribers who lost the stream can claim deficiency of service; refund or extension promises must be honoured, and comms must not mislead. 4) Contracts, not regulation, matter most: BCCI media-rights obligations and advertiser contracts (impression guarantees, make-good clauses for missed spots in the final over). 5) TRAI does not regulate OTT content delivery; no licence condition on uptime. Overall: not decision-shaping in the first 5 minutes, but it shapes the first hour (CERT-In clock if malicious, honest comms, make-goods). [uncertain]",
+  "public_data_anchors": "1) IPL 2026 final reach 400 mn+ across TV and digital; season reach 1.2 bn (JioStar via Outlook India, Jun 2026). 2) IPL 2025 peak concurrency 55.2 mn; digital reach 652 mn; 425 advertisers across 40 categories (Outlook Business, Jun 2025). 3) T20 WC 2026 India vs England semi-final peak concurrency 65.2 mn (abhs.in blog, Mar 2026 - secondary, unverified). 4) JioHotstar subscribers 300 mn (Jun 2025). 5) Digital rights value: Viacom18 paid Rs 20,500 cr for IPL 2023-27 digital rights (Outlook Business, 2025), about Rs 50 cr+ per match across 410 matches - so the final's last over is the most expensive inventory of the cycle. Derived (illustrative): at 50 mn concurrent viewers, each minute of a full outage is roughly 50 mn viewer-minutes lost, and every 10-second ad spot missed in the final over is an advertiser make-good. [uncertain]",
+  "framework_applied": "Situational: SODS (frameworks.md section 3), run at incident speed. Values shown without naming them: viewer obsession (protect the live moment), ownership (the PM owns the decision, not the debugging), bias for action with judgement (no risky deploys mid-over). S - Scope: in 60 seconds establish blast radius (who: platform, language feed, region, CDN, free vs paid), the failing layer (playback/CDN, manifest/origin, entitlement/login, ad insertion, app crash), and the goal - restore watchable video for the most viewers before the last ball, then recover trust. O - Options: (1) degrade gracefully - cap the bitrate ladder, shed non-essential features, fail traffic over to the healthy CDN (continuity vs quality); (2) fail open on entitlement/login so already-watching or returning users skip auth (continuity vs revenue and fraud); (3) pause server-side ad insertion if the ad stitcher is in the path (continuity vs ad revenue); (4) 'fix forward' with a hotfix deploy (speed vs risk). D - Decision: options 1 and 2 immediately, 3 only if the ad path is implicated, never 4 mid-over; route users to TV/scorecard as a fallback message; NOT doing root-cause debugging, blame posts, or any new deploy until the match ends. S - Success: hypothesis that 80%+ of failures sit in one CDN/manifest path; leading signals are play-start success rate, rebuffer ratio, concurrency recovery curve and error-code mix every 30 seconds; double down if concurrency recovers within 3 minutes, adjust (next shed level) if not, and re-prioritise to post-match recovery (highlights push, credits, make-goods, post-mortem) once the final ball is bowled.",
+  "clarifying_questions": [
+    {
+      "q": "What exactly is failing - the app crashing, the video not starting, or video buffering for people already watching?",
+      "a": "Mostly people already watching: the player shows a spinner, then 'Something went wrong'. On reopen, many can't get past the loading screen."
+    },
+    {
+      "q": "What's the blast radius - all users, or a segment such as Android, a language feed, a region or connected TV?",
+      "a": "About 40% of concurrent viewers are hit. Android is worst, connected TV and iOS are mostly fine. Hindi and Kannada feeds are the most affected."
+    },
+    {
+      "q": "When did it start and is it getting worse?",
+      "a": "At ball 19.1. Concurrency fell from about 52 mn to about 33 mn in 90 seconds, and errors are still climbing."
+    },
+    {
+      "q": "Is there an incident commander on the bridge already, and what's my role in this org - decision-maker on trade-offs, or comms?",
+      "a": "The SRE on-call is incident commander. You own product decisions (what to switch off, what to tell users) and stakeholder comms to leadership, ad sales and BCCI liaison."
+    },
+    {
+      "q": "Was anything deployed or changed in the last few hours - app release, config, ad campaign, feature flag?",
+      "a": "No app release. A new ad creative package for the final over went live at 19.0 via server-side ad insertion, and a fan-vote widget was turned on for the final over."
+    },
+    {
+      "q": "Do we have pre-built kill switches and a degrade playbook - bitrate caps, feature shedding, CDN weights, entitlement fail-open?",
+      "a": "Yes: bitrate caps, CDN traffic weights and a 'lite mode' that turns off widgets, comments and recommendations. Entitlement fail-open exists but needs a VP approval."
+    },
+    {
+      "q": "Is there any sign this is malicious - traffic from unusual sources, a DDoS signature?",
+      "a": "Security sees no attack pattern so far. It looks like load."
+    },
+    {
+      "q": "How much time is left in real terms?",
+      "a": "The over usually takes 4-5 minutes, plus the presentation ceremony, which is also high-viewership."
+    }
+  ],
+  "interviewer_data_reveals": "Exhibit 1 - Error mix in the last 2 minutes (illustrative): manifest/segment 5xx from CDN-B 64%; entitlement/login timeouts 22% (users who restarted the app); ad-stitch (SSAI) timeouts 9%; app crashes 5%. Exhibit 2 - CDN health (illustrative): CDN-A 38% of traffic, error rate 0.4%; CDN-B 47% of traffic, error rate 31%; CDN-C 15%, error rate 0.6%; CDN-A and CDN-C have about 25% headroom each at 1080p, about 60% headroom if top rungs are capped at 480p. Exhibit 3 - Segment split (illustrative): Android 78% of failures, connected TV 6%, iOS 9%, web 7%; Hindi and Kannada feeds sit mostly on CDN-B. Exhibit 4 - Thundering herd (illustrative): login requests jumped from about 40k/s to about 900k/s within 60 seconds as users force-closed and reopened the app; entitlement service is at 3x its tested peak. Exhibit 5 - Revenue at stake (illustrative): about 8 ad spots booked for the final over and presentation, contracted at premium CPMs with make-good clauses. Real anchors: final reach 400 mn+ (JioStar via Outlook India, Jun 2026); IPL 2025 peak concurrency 55.2 mn (Outlook Business, Jun 2025).",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "IPL final, last over, 12 needed off 6. The JioHotstar stream is failing for a lot of viewers. You're the PM on call. Go."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "First, I join the incident bridge, not Slack threads. I confirm who is incident commander, because my job is not to debug - it's to make the product trade-off calls fast and handle comms. I'll use a simple structure: scope in 60 seconds, options, a decision, and how we'll know it's working. Can I ask three quick questions?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Quick ones."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "What's failing - start, mid-stream or app crash? What's the blast radius by platform, feed and CDN? And did anything change in the last hour?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Mid-stream failures, then people can't get back in. About 40% of viewers hit, mostly Android, Hindi and Kannada feeds. No app release, but a new ad creative package went live at 19.0 through server-side ad insertion, and a fan-vote widget turned on."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So it's not an app bug - it's server-side. Two changes at 19.0 make me suspicious, but I won't anchor yet. Can I see the error mix by layer?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Here: 64% are 5xx from CDN-B on manifests and segments. 22% are login timeouts. 9% ad-stitch timeouts. 5% crashes."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That tells me there are two problems feeding each other. The primary one is CDN-B. The secondary one is self-inflicted: users who got kicked are force-restarting the app and hammering login, and that's why they can't get back in. If I only fix the CDN, the login stampede still keeps them out."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "OK. Options?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I see four, each with a cost. Option 1, degrade gracefully: shift CDN-B traffic to CDN-A and C, and cap the ladder at 480p so the healthy CDNs have headroom. Cost: picture quality in the biggest moment. Option 2, fail open on entitlement for 30 minutes: anyone with a valid session token, or any free-tier user, skips the live entitlement check. Cost: some revenue leakage and token abuse. Option 3, bypass ad insertion and serve the clean feed. Cost: ad revenue and make-goods. Option 4, hotfix and deploy. Cost: risk of making it worse in a 4-minute window."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Which do you pick?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Options 1 and 2 now, together. In a final over, a blurry live ball beats a sharp spinner every time - viewers forgive 480p, they don't forgive missing the winning shot. I ask the IC to move CDN-B weight to zero in steps, cap at 480p for Android and web, and turn on lite mode: kill the fan-vote widget, comments and recommendation rails. Then I get the VP on the line for entitlement fail-open - I'll take the call to them with a one-line ask, not a discussion."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What about the ads? Sales will scream."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Ad-stitch is only 9% of errors, so I don't pull ads sitewide. I ask for SSAI to be bypassed only on the CDN-B-routed feeds, where the stitcher timeouts cluster. I'll tell the ad sales head in one message: 'Spots on two feeds are being skipped to keep the stream alive; we'll log every missed impression for make-goods.' A missed ad is a make-good; a dead stream is a headline."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "And what are you explicitly not doing?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "No deploys, no code changes, no root-cause hunt until the match ends. No public blame on a CDN partner. And no 'we're aware' tweet that promises a fix time I can't keep. Also, I'm not turning off the fan-vote widget's backend permanently - just the client-side call."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What do you tell users right now?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Two things, inside 2 minutes. In-app: a banner for users who reconnect - 'High demand. We've switched you to a lighter stream so you don't miss the finish.' On social, from the official handle: 'Some viewers are facing playback issues. We're restoring streams now - please don't restart the app, it'll reconnect on its own.' That second line matters because it slows the login stampede. Where we can, we also show the live score card so people aren't staring at a spinner."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Ninety seconds later: concurrency recovers from 33 to 41 mn, but login is still choking."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Good - that's the CDN shift working. Login is the herd. I'd ask for three things: fail-open approved, client retry back-off with jitter pushed via remote config if we have it, and a queue page that auto-retries instead of users hammering. The leading signal I watch is play-start success rate every 30 seconds. If it isn't above 95% in 2 minutes, the next shed level is dropping connected-TV 4K to 1080p to free more headroom."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Last ball, RCB win. Stream is back for most people. Now what?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Now the next hour. The presentation ceremony is still high-traffic, so we keep the degrade settings until concurrency drops below 60% of peak, then restore in steps. I push a 'Relive the last over' highlight to everyone who had an error, ready within 30 minutes. I send leadership a status note: what broke, what we switched off, users affected, missed ad spots. If security finds any attack signature, the CERT-In 6-hour clock starts and legal is looped in."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "And the next week?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "A blameless post-mortem within 72 hours. Three questions: why did CDN-B fail at a load it should have handled - was it the new ad package's manifest size or plain capacity; why did our retry logic create a stampede; and why did fail-open need a VP call instead of being an automatic tier in the playbook. Fixes become owned action items. For users: a goodwill gesture for paid subscribers who were affected - say a few days' extension, targeted by error logs. For advertisers: make-goods in the next marquee event."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How do you define success for this incident?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Three numbers. Time to recover watchable video for 95% of viewers - target under 3 minutes. Peak concurrency regained versus pre-incident - target 90%+. And trust over the next week - paid churn and app rating among affected users versus unaffected. If affected-user churn is within a point of baseline, the recovery worked. If not, the goodwill gesture wasn't enough."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Leadership says, 'Why didn't you just fix the bug?'"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Because a hotfix in a 4-minute window is the highest-risk move on the table, and the degrade levers restored most viewers in 90 seconds with no code change. The fix comes after the match, with the post-mortem."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Wrap it up."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "In the last over, my job was to keep the moment alive, not to find the bug. I shifted traffic off the failing CDN, capped quality, shed non-essential features and failed entitlement open, while making sure no one deployed code. Then I protected trust: honest comms that slowed the stampede, a highlight for everyone who missed it, make-goods for advertisers, and a post-mortem that turns the VP phone call into an automatic playbook step."
+    }
+  ],
+  "answer_and_recommendation": "Top 3 levers, ranked: 1) Shift traffic off the failing CDN-B and cap the bitrate ladder at 480p on mobile/web to create headroom on the healthy CDNs (biggest effect, no code change). 2) Fail open on entitlement and add client back-off/queueing to break the login stampede caused by force-restarts. 3) Shed non-essential load - fan-vote widget, comments, recommendation rails - and bypass ad insertion only on the affected feeds. Recommendation: in the final over, continuity beats quality and revenue; act through pre-built kill switches and never deploy mid-over. The PM owns trade-off calls and comms; the SRE incident commander owns the technical fix. Next hour: keep degrade settings through the presentation, restore in steps, push a 'relive the last over' highlight to affected users, update leadership and ad sales, and start the CERT-In clock only if an attack is found. Next week: blameless post-mortem in 72 hours; make entitlement fail-open and retry back-off automatic playbook tiers; load-test new ad packages and widgets before marquee overs; give targeted goodwill to affected paid users and make-goods to advertisers. Risks: fail-open leaks revenue or enables token abuse (mitigate with a 30-minute time box and existing-session-only rules); 480p cap annoys CTV and premium users (exclude CTV where its CDN path is healthy); public comms backfire if they promise a time (promise action, not a time). Closing line: 'In the last over I wasn't there to find the bug - I was there to make sure 50 million people saw the winning shot, and then to make sure it never needs a phone call to a VP again.'",
+  "counter_metrics_guardrails": "Primary: play-start success rate and concurrent viewers regained vs pre-incident peak; time to recover watchable video for 95% of viewers. Guardrails during the incident: rebuffer ratio and average bitrate (don't over-degrade once healthy); entitlement fail-open abuse (new device or token sign-ups during the window); ad impressions missed (logged for make-goods); healthy-CDN utilisation (don't push A and C past about 85% and cause a second failure); login service saturation. Guardrails after: paid-subscriber churn and renewal among affected vs unaffected users over 7-30 days; app-store rating and review volume; support tickets and refund requests; social sentiment; advertiser make-good cost. Counter-metric to the 'success': if recovery was fast but the same failure mode recurs in the next marquee match, the post-mortem failed.",
+  "follow_up_twists": [
+    {
+      "twist": "The ad sales head calls: a sponsor paid a premium for the final-over spot and demands it runs, even on the affected feeds.",
+      "response": "Keep the spot on healthy feeds, log missed impressions on the two affected feeds, and commit a make-good in the next marquee match; a stream that dies during the sponsor's ad is worse for the sponsor than a skipped spot."
+    },
+    {
+      "twist": "Security now says the CDN-B traffic has a DDoS signature.",
+      "response": "Keep the same degrade levers, add WAF/rate-limiting at the edge, loop in legal, and start the CERT-In 6-hour reporting clock; comms still say 'playback issues', not 'attack', until security confirms."
+    },
+    {
+      "twist": "A VP refuses entitlement fail-open: 'We'll lose subscription revenue.'",
+      "response": "Offer a narrower version - fail open only for existing valid session tokens for 30 minutes - and size it: the leakage is a few lakh rupees at most, against tens of millions of paying and ad-supported viewers missing the winning ball."
+    }
+  ],
+  "common_pitfalls": [
+    "Jumping into root-cause debugging - the PM is not the incident commander, and finding the bug is not the goal in a 4-minute window.",
+    "Proposing a hotfix or app release mid-over - the riskiest action, and app releases can't reach phones in minutes anyway.",
+    "Anchoring on the new ad package because it changed at 19.0 - it explains only 9% of errors; the error mix points to CDN-B plus a login stampede.",
+    "Forgetting the self-inflicted second wave: users force-restarting the app create a thundering herd on login, so comms ('don't restart') and back-off are part of the fix.",
+    "Stopping at the last ball - the presentation, highlights push, advertiser make-goods, CERT-In check and post-mortem are half of the answer."
+  ],
+  "skills_tested": [
+    "execution",
+    "prioritisation",
+    "communication",
+    "business sense",
+    "structuring",
+    "empathy"
+  ],
+  "linked_teardown": "None. The local teardown folders cover Blinkit, Swiggy, Meesho, Urban Company and GoKwik; none covers OTT or live streaming.",
+  "uncertain": [
+    "round_and_level",
+    "context_as_of",
+    "regulatory_context",
+    "public_data_anchors"
+  ]
+}

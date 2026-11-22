@@ -1,0 +1,223 @@
+{
+  "pun_title": "Code Red",
+  "case_type": "Situational",
+  "asked_at": "Google / Meta style (classic PM behavioural-situational prompt; not tied to one dated report)",
+  "subject_company": "Generic US big-tech product team. The walkthrough uses a Gmail-style email product at a Google-like company as the anchor (spec: 'Smart Follow-ups', an AI nudge to reply to unanswered threads); the logic holds at Meta, Microsoft or Amazon.",
+  "round_and_level": "Behavioural / 'Googleyness and leadership' round at Google, or the 'Behavioral' / product-leadership round at Meta; PM and Senior PM. Often asked in two forms: hypothetical ('what would you do') and past-tense ('tell me about a time an engineer disagreed with you'). [uncertain]",
+  "difficulty": "Medium - no maths, but it tests composure, ego control and judgement at once; weak answers either cave to seniority or 'win' the argument, and both fail.",
+  "market_and_industry": "US; consumer software / big tech (email and productivity); engineering-led culture where senior and staff engineers have strong informal authority and design reviews are a normal place to challenge specs.",
+  "time_box_minutes": "10-15",
+  "exact_prompt": "You're presenting your spec in a review meeting with about a dozen people, including your director. A senior engineer on the team says, in front of everyone, that the spec is wrong and the approach won't work. What do you do - in the room, and afterwards?",
+  "source_and_verification": "Level: classic. Widely circulated in Google and Meta PM prep as a conflict-with-engineering prompt, in both hypothetical and 'tell me about a time' forms; no single dated report of this exact wording was found. Closest tagged versions: PracHub 'PM Behavioral: Working Through Conflict With an Engineer, Designer or Peer' (Google-tagged) https://prachub.com/interview-questions/pm-behavioral-working-through-conflict-with-an-engineer-designer-or-peer ; PracHub 'PM Behavioral: A Conflict With Your Engineering Partners and How It Ended' (Meta-tagged) https://prachub.com/interview-questions/pm-behavioral-a-conflict-with-your-engineering-partners-and-how-it-ended ; PracHub 'Engineer pushes back on a data-backed product call' https://prachub.com/interview-questions/engineer-pushes-back-on-a-data-backed-product-call-reaching-a-shared-decision ; PracHub 'PM Collaboration with Engineering: Decision Rights, Trade-offs and Disagreements' https://prachub.com/interview-questions/pm-collaboration-with-engineering-decision-rights-trade-offs-and-disagreements ; Exponent 'How to handle opposing opinions' https://www.tryexponent.com/questions/1021/how-to-handle-opposing-opinions-PM ; Blind TPM thread 'disagree with the technical lead' https://www.teamblind.com/post/tpm-question-tell-me-a-time-when-you-disagree-with-the-technical-lead-kmnuqk7d . Years: 2022-2026. NextLeap, The Product Folks, AmbitionBox and Glassdoor were not directly searched in this session. [uncertain]",
+  "context_as_of": "As of Nov 2026. 1) Google's hiring rubric includes 'Googleyness and leadership' (comfort with ambiguity, collaborative, challenging ideas respectfully, doing the right thing) - Google re:Work and Google careers material describe structured behavioural interviews scored on such attributes (https://rework.withgoogle.com/ ; https://www.google.com/about/careers/applications/how-we-hire/). 2) Google's Project Aristotle found psychological safety the strongest predictor of team effectiveness (re:Work, 'Guide: Understand team effectiveness', https://rework.withgoogle.com/guides/understanding-team-effectiveness/). A public challenge is a sign the team feels safe to dissent - the PM should protect that, not punish it. 3) Meta's stated values (2022 refresh): Move fast; Focus on long-term impact; Build awesome things; Live in the future; Be direct and respect your colleagues; Meta, Metamates, me (https://www.metacareers.com/ ; Meta newsroom, Feb 2022). 'Be direct and respect your colleagues' is almost literally this case. 4) Engineering design-review culture: at Google, design docs are reviewed and challenged by senior engineers before build; a spec challenged in review is normal process, not insubordination. 5) 2024-26 context: flatter orgs and 'year of efficiency'-style cuts at Meta and Google mean fewer managers and more senior ICs with informal authority; AI features raise new technical-risk questions (latency, cost per inference, evals, privacy) that senior engineers are often right to flag. Stale-risk: value wording on careers pages changes; check before quoting. [uncertain]",
+  "regulatory_context": "None material for the conflict itself. Two side notes: 1) If the engineer's objection is about user data (e.g., an AI feature scanning email content), privacy and compliance are real constraints - GDPR (EU users), CCPA/CPRA (California), and for Google the FTC consent-decree privacy-review obligations (2011 Buzz order) and for Meta the 2019/2020 FTC order requiring privacy reviews of new products. A concern framed as 'this needs privacy review' is not optional. 2) Workplace norms: never handle the disagreement in a way that could read as retaliation for raising a safety, privacy or legal concern - most big-tech codes of conduct protect people who raise concerns. [uncertain]",
+  "public_data_anchors": "1) Project Aristotle: Google studied 180+ teams; psychological safety was the top of five team-effectiveness dynamics (re:Work, https://rework.withgoogle.com/guides/understanding-team-effectiveness/ ; reported 2015-2016). 2) Meta values list (Feb 2022 refresh) including 'Be direct and respect your colleagues' (Meta newsroom / metacareers.com). 3) Rule-of-thumb from software estimation research: early-stage estimates commonly vary by up to 4x (the 'cone of uncertainty', Steve McConnell, Software Estimation, 2006) - useful when a senior engineer says your timeline is off by 2x. No hard numbers decide this case; the exhibits below are illustrative. [uncertain]",
+  "framework_applied": "Situational: SODS (frameworks.md section 3). Company traits shown, not named: Google - respectful challenge, collaboration, humility, data over opinion; Meta - be direct and respect colleagues, move fast, focus on long-term impact. S - Scope: separate the two problems (is the spec actually wrong? and how do I handle a public challenge?); clarify the goal of the meeting, the deadline, who decides, and what the objection is about (feasibility, scope, quality, or the problem itself). O - Options: (a) defend the spec in the room (speed vs. trust), (b) concede and rewrite to the engineer's view (harmony vs. product judgement), (c) acknowledge in the room, capture the specific objection, park it into a time-boxed technical deep-dive with explicit decision criteria, and keep the rest of the review moving (momentum vs. some delay). D - Decision: option (c), plus a 1:1 with the engineer within 24 hours; NOT arguing it out in front of the director, NOT escalating, NOT silently caving. Decide on evidence (spike/prototype, latency and cost data), with a named decider (PM owns the problem and 'what', eng lead owns the 'how', disagree-and-commit if still split). S - Success: hypothesis that the objection is about the 'how' (architecture/latency), not the 'why'; leading signals are a written decision within one week, the engineer co-authoring the revised design, launch date holding or a consciously re-set date, and the engineer raising future concerns earlier (in doc comments, not in the room).",
+  "clarifying_questions": [
+    {
+      "q": "What exactly did the engineer object to - the problem we're solving, the scope, the technical approach, or the timeline?",
+      "a": "The technical approach and the timeline. She said the spec assumes real-time server-side scanning of every thread, and that it would blow the latency and inference-cost budget and can't ship by the launch date."
+    },
+    {
+      "q": "Who is she, and what's our relationship like?",
+      "a": "A staff engineer, the most senior IC on the team; she's respected and usually right on infra. You've worked together for four months; it's been fine but not close."
+    },
+    {
+      "q": "Was this the first time she'd seen the spec, or had she commented before?",
+      "a": "The doc was shared a week ago. She left two short comments that you resolved; she didn't escalate them."
+    },
+    {
+      "q": "What's the meeting's purpose and who decides?",
+      "a": "A spec review to get sign-off to start build. The director is there; the eng manager and you are the decision-makers on scope; the tech lead role on this project is shared between her and another senior engineer."
+    },
+    {
+      "q": "Is there a hard deadline?",
+      "a": "Yes - the feature is slotted for a big annual launch event in about 14 weeks, with leadership attention on it."
+    },
+    {
+      "q": "Is there any data on the technical concern - latency budgets, cost per call, a prototype?",
+      "a": "There's a rough prototype from the hackathon. No load test. Exhibit 1 shows what each side estimated."
+    },
+    {
+      "q": "Does the objection touch user privacy or policy, or is it purely engineering?",
+      "a": "Mainly engineering, but she also hinted that scanning all threads server-side may need a fresh privacy review."
+    },
+    {
+      "q": "How did the room react?",
+      "a": "Awkward silence; the director looked at you to respond. Two other engineers nodded."
+    }
+  ],
+  "interviewer_data_reveals": "All numbers are illustrative (invented for teaching).\n\nExhibit 1 - Estimates for 'Smart Follow-ups' (illustrative):\n| Item | PM spec assumption | Staff engineer's view |\n| Approach | Server-side scan of all threads in real time | Batch nightly scoring + on-open check for recent threads |\n| p95 added latency on inbox load | ~50 ms | 250-400 ms for real time (above the 100 ms budget) |\n| Inference cost | 'Small' | ~3x the team's quarterly ML budget at full scale |\n| Build time | 10 weeks | 18-20 weeks for real time; ~10-11 weeks for batch |\n| Privacy review | Existing approval covers it | New review likely (new data processing) - 3-4 weeks |\n\nExhibit 2 - What users actually need (illustrative, from the hackathon pilot with 2,000 internal dogfooders):\n| Nudge timing | Share of useful nudges |\n| Within 1 hour of the email going unanswered | 12% |\n| Next morning / after 1-3 days | 71% |\n| After 4+ days | 17% |\nImplication: real-time detection adds little user value; most value comes from next-day nudges.\n\nExhibit 3 - The 1:1 afterwards (illustrative): she says she raised the cost concern in doc comments, felt it was 'resolved without discussion', and spoke up in the room because sign-off would have locked the design.\n\nExhibit 4 - Two-week spike result (illustrative): batch scoring meets the 100 ms latency budget (adds ~20 ms on open), costs ~0.6x the ML budget, and fits a 12-week build including privacy review.",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "You're presenting your spec in a review. A senior engineer says in front of everyone that it's wrong and won't work. What do you do?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Two problems are tangled together here, and I want to separate them. One is substantive: is the spec actually wrong? The other is interpersonal: how do I handle a public challenge so the team keeps trusting each other? I'd solve the first with evidence and the second with how I behave in the room and afterwards. Can I ask a few questions first?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Go ahead."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "What exactly did she object to - the problem, the scope, the approach or the timeline?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "The approach and the timeline. Real-time server-side scanning, she says, blows the latency and cost budget and can't ship by the launch."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's useful. It means she's challenging the 'how' and the 'when', not the 'why'. That's her area of expertise, so I should take it seriously. Who is she, and had she seen the doc before?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Staff engineer, usually right on infra. She left two comments last week, which you resolved."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then part of this is on me. If I resolved her comments without a real conversation, she may have felt her only option was to say it in the room before sign-off locked the design. What's the deadline, and who decides?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Launch event in 14 weeks. You and the eng manager decide scope; the director is in the room."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Scope, then. Goal: leave with a design the team believes in and can ship for the launch, and keep the relationship strong. Constraints: 14 weeks, a fixed latency budget, an ML cost budget and a possible privacy review. Success: a decision within a week that both product and engineering stand behind. Now the options - there are three realistic paths."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Option A: defend the spec in the room. It's fast and keeps sign-off on track, but I'd be arguing about latency with the person who knows latency best, in front of the director. Even if I win, I lose the team. Speed against trust."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Option B: concede on the spot and promise to rewrite it her way. The room calms down, but I'd be giving up product judgement to seniority without evidence, and we'd still not know whether her approach meets the user need. Harmony against getting it right."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Option C: acknowledge in the room, pin the objection down precisely, and take it offline into a short, time-boxed deep-dive with agreed decision criteria, while we finish reviewing the parts of the spec that aren't in dispute. Some delay against momentum and trust."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Which one, and what do you actually say in the room?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Option C. In the room I'd say something like: 'Thanks - that's exactly the kind of risk I want to find now rather than in week eight. Let me make sure I've got it: your concern is that real-time scanning costs us 250-plus milliseconds and about three times our ML budget, and that it pushes us past the launch. Is that right?' Restating it shows I listened and stops it becoming personal. Then: 'I don't want to resolve architecture with twelve people watching. Can you and I, with the eng manager, take 48 hours to compare real time against a batch approach on latency, cost, timeline and the user need? We'll bring back a recommendation by Thursday. Meanwhile, let's review the UX and metrics sections, which don't depend on this.'"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "What I'm not doing: I'm not defending, not escalating to the director, not asking for sign-off on a disputed design, and not promising to adopt her design before we've seen the data."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "The director is watching. Doesn't that look weak?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I think it looks like judgement. The director wants to see that I can take a hard challenge calmly and turn it into a decision quickly. Arguing would show I care about being right; caving would show I don't own the product. A clear owner, a clear question and a date is the strongest thing I can show."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "OK. What happens after the meeting?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "A 1:1 the same day or the next morning, over coffee rather than in a conference room. Two goals. First, understand the full objection, including anything she didn't want to say publicly, like privacy. Second, repair the process - I'd own that I closed her doc comments without a conversation, and agree how we raise concerns earlier, such as a pre-read with the tech leads before any wide review. I'd also ask her what she'd need to see to be comfortable."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "In the 1:1 she says exactly that: she felt her comments were brushed off, and she spoke up because sign-off would have locked the design. She also flags that server-side scanning of every thread probably needs a fresh privacy review."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then her public challenge was a rational response to a process failure I caused, and the privacy point is a real constraint that would have hit us in week ten. I'm grateful she raised it. Now I bring the user side, because that's my job. Our hackathon pilot data shows when nudges are actually useful."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Here it is - Exhibit 2. 71% of useful nudges come the next morning or after 1-3 days; only 12% within the first hour."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That changes the framing. The spec asked for real time because I assumed users want immediate nudges, but the data says next-day nudges deliver most of the value. So her batch approach isn't a compromise on the user need - it fits it better. My one product requirement is that a nudge shows the morning after a thread goes quiet. The engineering choice, nightly batch scoring plus a light check when the user opens the inbox, is hers to make."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Suppose she still prefers a design you think is over-engineered. Then what?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Decision rights do that work. I own the problem, the user requirements and the success criteria; the tech lead owns how we build it. If we still disagree after the evidence, we write down both options against the criteria - latency under 100 ms, cost within budget, ships in 14 weeks, next-day nudge coverage - and the eng manager and I decide. Whoever loses disagrees and commits. I'd only bring it to the director if it changes the launch commitment, and then together, with one page showing both views."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "The two-week spike comes back - Exhibit 4. Batch meets latency, costs 0.6x budget, 12-week build including privacy review."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then the decision is easy: we go with batch scoring and next-morning nudges, start the privacy review this week, and keep the launch date with two weeks' buffer. I'd ask her to co-present the revised design at the follow-up review. That shows the room the disagreement improved the product, and it gives her credit in public, in the same forum where she challenged me."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How do you know you handled it well?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Hypothesis: the objection was about the 'how', and fixing the process plus using evidence would turn a critic into a co-owner. Leading signals: a written decision within a week; the revised spec signed off by both tech leads; build on track at each milestone; latency and cost within budget in dogfood; and, the softer one, that next time she raises concerns in doc comments or a pre-read rather than in the room - and that others speak up earlier too. Double down: make the tech-lead pre-read standard. Adjust: if the spike had shown batch fails the user need, I'd have pushed for a narrower real-time scope, such as starred threads only, rather than the full design. Re-prioritise: if privacy review threatens the date, cut scope to opted-in users for launch."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Last one. What if she was simply wrong and the real-time approach was fine?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then the spike shows it in two days, we keep the original design, and I still thank her, because we now ship with evidence rather than an assumption. The behaviour in the room doesn't change based on who turns out to be right - that's the point."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "To sum up: in the room, acknowledge, restate and time-box; afterwards, a 1:1 to understand and fix the process; decide on evidence with clear decision rights; and give her credit publicly. The goal isn't winning the meeting. It's shipping the right thing on time with a team that still tells me when I'm wrong."
+    }
+  ],
+  "answer_and_recommendation": "Ranked options: (1) Acknowledge and restate the objection in the room, park the architecture question into a 48-hour, time-boxed deep-dive with explicit criteria (latency, cost, timeline, user need), and keep reviewing the undisputed sections - recommended; (2) concede and rewrite to the engineer's design - rejected, gives up product judgement without evidence; (3) defend the spec in the room - rejected, wins the argument and loses the team. Recommendation: Option 1, plus a same-day 1:1 to hear the full concern and own the process failure (her doc comments were closed without discussion), user evidence brought by the PM (Exhibit 2: 71% of useful nudges are next-day, illustrative), a decision by evidence (spike) with explicit decision rights (PM owns problem and requirements, tech lead owns the how, disagree-and-commit), and public credit by having her co-present the revised design. Risks and mitigation: launch slip - time-box the spike to 48 hours and cut scope (opted-in users first) if privacy review runs long; the director reads it as indecision - give a date and an owner in the room; the engineer feels managed rather than heard - the 1:1 asks what evidence would change her mind before arguing anything; precedent of 'loudest voice wins' - criteria are written down before the spike. Closing line: 'I'm not trying to win the meeting. I'm trying to ship the right thing on time with a team that still tells me when I'm wrong - so I'd thank her in the room, take it offline with a deadline, decide on data, and give her credit when it ships.'",
+  "counter_metrics_guardrails": "Outcome signals: written decision within 5 working days; revised spec signed off by both tech leads; launch milestone on track (or a consciously re-set date communicated within a week). Product guardrails for the feature itself: p95 inbox-load latency added under 100 ms; inference cost within the quarterly ML budget; privacy review passed before dogfood; nudge usefulness (share of nudges acted on or rated useful) not below the pilot level; nudge-dismissal and 'turn off' rate. Team-health guardrails: the engineer and others still raise concerns (count of substantive doc comments before review rising, not falling); no escalation needed to the director; retro or pulse feedback on the review process. Counter-metric to watch: decision cycle time - if every challenge now triggers a two-week spike, the process is too slow; keep spikes time-boxed and only for disputes that change cost, risk or timeline.",
+  "follow_up_twists": [
+    {
+      "twist": "The director pulls you aside afterwards and says, 'Just overrule her - we need this for the launch.'",
+      "response": "Agree on the goal, not the method: 'I want the launch too - give me 48 hours; if real time can't meet latency and cost, overruling her ships something we'd have to roll back on stage.' Then bring the spike result back with a date."
+    },
+    {
+      "twist": "The spike shows she was wrong: real time meets the budget.",
+      "response": "Keep the original design, thank her publicly for pressure-testing it, and keep the tech-lead pre-read anyway - the value was the evidence, not who was right."
+    },
+    {
+      "twist": "Make it past tense: 'Tell me about a time a senior engineer disagreed with you publicly.'",
+      "response": "Use the same arc as a STAR story - the objection, how I restated and time-boxed it, the 1:1 where I owned my part, the evidence and decision, the result with a number, and the process change I kept - and include one thing I'd do differently."
+    }
+  ],
+  "common_pitfalls": [
+    "Treating it as a win-lose argument - rebutting the latency point in the room, or retelling the story as 'I convinced the engineer' - signals ego, not leadership.",
+    "Caving to seniority - 'she's staff, so I'd rewrite it her way' - abdicates the PM's ownership of the problem and the user requirements.",
+    "Escalating to the director or the engineer's manager first - it turns a design question into a political one and breaks trust for good.",
+    "Ignoring your own part - missing that the closed doc comments caused the public challenge, so the process repeats; and forgetting to bring user evidence, which is the PM's unique contribution to the technical debate."
+  ],
+  "skills_tested": [
+    "communication",
+    "empathy",
+    "execution",
+    "prioritisation",
+    "structuring",
+    "business sense"
+  ],
+  "linked_teardown": "None. The case is a US behavioural-situational prompt with no local teardown folder; context comes from public Google re:Work (Project Aristotle) and Meta values material.",
+  "uncertain": [
+    "round_and_level",
+    "source_and_verification",
+    "context_as_of",
+    "regulatory_context",
+    "public_data_anchors"
+  ]
+}

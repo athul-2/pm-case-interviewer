@@ -1,0 +1,215 @@
+{
+  "pun_title": "Sale or Fail",
+  "case_type": "Situational",
+  "asked_at": "By the Authors (synthetic, Indian e-commerce style)",
+  "subject_company": "A Myntra-style fashion and lifestyle marketplace (the walkthrough uses Myntra as the anchor; the logic holds for Flipkart fashion, Ajio or Meesho).",
+  "round_and_level": "Hiring-manager or PM round (situational / stakeholder conflict with an RCA core), PM and SPM levels; also works for APM campus with lighter data. [uncertain]",
+  "difficulty": "Hard - it looks like a stakeholder-politics question, but it needs a quick root-cause pass before any decision, a cost comparison of a discount vs a fix, and a way to give both heads a role without splitting the difference.",
+  "market_and_industry": "India; fashion and lifestyle e-commerce; post-festive November lull after Big Fashion Festival and Diwali; majority of new shoppers from non-metros on mid-range Android phones; size and fit uncertainty and returns are the core economics.",
+  "time_box_minutes": "20-25",
+  "exact_prompt": "Add-to-cart has dropped over the last few weeks. The marketing head wants to run a sale to bring it back; the product head says the product is broken and wants a fix. You're the PM and it's your call. What do you do?",
+  "source_and_verification": "Level: synthetic (written by the authors in an Indian e-commerce style). No dated report of this exact prompt was found. Closest analogues: the classic 'add-to-cart / conversion dropped' RCA prompts (e.g., this casebook's A2 'Cart Before the Horse', Flipkart) and stakeholder-conflict situational questions such as PracHub 'Handle conflict and missed delivery deadlines' (https://prachub.com/interview-questions/handle-conflict-and-missed-delivery-deadlines). Context source: Inc42 on festive 2026, where Counterpoint said platforms saw strong traffic but weak conversions (https://inc42.com/features/festive-sales-see-shoppers-log-in-but-hold-back-on-big-ticket-purchases/). Year: 2026 (synthetic). NextLeap, The Product Folks and AmbitionBox were not searchable in this session.",
+  "context_as_of": "As of Nov 2026. 1) Festive 2026 was traffic-rich but conversion-poor: Counterpoint said traffic was strong and conversions weak; Datum put early festive online sales 7-10% below 2025 (whose base was boosted by the 22 Sep 2025 GST cuts); Economic Times reported festive discounts 35-40% lower than last year; retail inflation 5.54% and food inflation 7.74% in Sept (Inc42, Oct 2026, https://inc42.com/features/festive-sales-see-shoppers-log-in-but-hold-back-on-big-ticket-purchases/). 2) Fashion grew 20-25% in the festive first leg and was nearly a fifth of festive GMV (Redseer via Inc42). 3) Myntra: Big Fashion Festival 8-25 Oct 2026; DAU up about 40% in the first six days vs the September average; MAU about 93 mn (+8% YoY) (BofA note cited by Inc42, Oct 2026). EORS 24 (June 2026) saw first-time shoppers up 1.3x YoY, 55% from non-metros (webindia123, Jun 2026). M-Now quick fashion delivery in 11 cities with 100,000+ styles (same). 4) Parent Flipkart Group FY26 net loss Rs 8,468 cr and an FY27 EBITDA-profitability target with the IPO deferred, so an unplanned sitewide sale has a real cost (Inc42, 2026). 5) Calendar: Diwali was 8 Nov 2026; mid-to-late November is the usual post-festive dip, with wedding-season fashion demand and the next EORS (usually December) ahead. Stale-risk: Myntra FY26 revenue and profit figures are from secondary blogs; the Myntra EORS winter date is the authors' assumption. [uncertain]",
+  "regulatory_context": "1) FDI policy for marketplaces (Press Note 2 of 2018): the marketplace entity must not directly or indirectly influence seller prices, so a 'sale' is run through seller- or brand-funded discounts and platform coupons, and deep platform-funded discounting draws regulatory and seller scrutiny (CAIT/AIOVA complaints, CCI investigation of Flipkart and Amazon). 2) CCPA dark-patterns guidelines (Nov 2023): fake countdown timers, false scarcity ('only 1 left'), drip pricing and basket sneaking are banned; a hastily run sale is where these creep in. 3) Consumer Protection (E-Commerce) Rules 2020 and Legal Metrology: MRP and strike-through 'original' prices must be genuine; inflating MRP to show a bigger discount is an unfair trade practice. 4) GST: apparel slabs after the Sept 2025 rationalisation (5% up to Rs 2,500 per piece, 18% above) affect the final price shown; the discount base must be clear. 5) DPDP Act 2023 and Rules (phased from Nov 2025): re-targeting cart abandoners by push, SMS or WhatsApp needs valid consent. None of these decides the case, but they rule out 'just turn on a big sitewide discount' as a costless lever. [uncertain]",
+  "public_data_anchors": "1) Myntra MAU about 93 mn (+8% YoY); DAU +40% in first six days of Big Fashion Festival vs September (BofA via Inc42, Oct 2026). 2) Fashion +20-25% in the festive first leg, nearly a fifth of festive GMV; about 100 mn festive shoppers, two-thirds from Tier-2 and smaller towns (Redseer via Inc42, Oct 2026). 3) Festive discounts 35-40% lower than last year (Economic Times via Inc42, Oct 2026). 4) Flipkart Group FY26 net loss Rs 8,468 cr; FY27 EBITDA-profitability target (Inc42, 2026). 5) Myntra EORS 24: first-time shoppers 1.3x YoY, 55% from non-metros (webindia123, Jun 2026). 6) Industry checkout benchmark: Shiprocket claims its checkout cuts cart abandonment by 25% and lifts conversions up to 60% - a vendor claim, useful only to show how much friction in the cart costs (local gokwik teardown, Shiprocket_Checkout_Fastrr.json). Derived (illustrative): a sitewide 10% extra-off coupon on about Rs 1,500 AOV costs about Rs 150 per order on every order, including the ones that would have happened anyway. [uncertain]",
+  "framework_applied": "Situational: SODS (frameworks.md section 3), with a quick RCA pass (frameworks.md section 4) inside the Scope step, because you can't choose between a sale and a fix until you know whether the cause is demand or product. Values: customer obsession and bias for action (decide within 48-72 hours, not after a month of analysis) and ownership (the PM makes the call and gives both heads a role). S - Scope: define the metric (add-to-cart per product-page view vs per session), the time frame (gradual over 3 weeks after Diwali), the segments (platform, city tier, category, new vs repeat), and the goal both heads share (orders and contribution margin, not ATC itself). Rule out data issues, then split the drop into seasonal/demand vs product/friction causes. O - Options: (A) Marketing's sitewide sale - fast vs scalable, and it pays every buyer to hide a possible bug; (B) Product's fix only - impact vs momentum, a 2-3 week ship could miss the wedding-season window; (C) fix the root cause now (rollback or hotfix) plus a small, targeted, time-boxed offer only for the residual demand gap - focus vs coverage. D - Decision: C, led by the fix; NOT running a sitewide sale, NOT waiting for a full redesign, NOT treating it as a vote between two heads. S - Success: hypothesis that the PDP release explains most of the drop; leading signals are Android PDP-to-ATC recovering within a week of rollback and the targeted offer's incremental orders vs holdout; double down, adjust (change offer depth or segment) or re-prioritise (if ATC doesn't recover, the cause is elsewhere).",
+  "clarifying_questions": [
+    {
+      "q": "How is add-to-cart measured - ATC events per product-page view, per session, or absolute ATC count?",
+      "a": "The dashboard shows ATC per PDP view, which fell from 9.0% to 7.6% over three weeks. Absolute ATC is down about 18%."
+    },
+    {
+      "q": "Sudden or gradual, and since when? Anything else that changed at that time - a release, a pricing change, the end of the festive sale?",
+      "a": "It started about three weeks ago, the week after Big Fashion Festival ended, and slid gradually. There was an Android app release around then."
+    },
+    {
+      "q": "Is it across the board or concentrated - platform, city tier, category, new vs repeat users?",
+      "a": "You can ask for cuts. I'll show you."
+    },
+    {
+      "q": "Has sessions or traffic changed too, or only conversion within the PDP?",
+      "a": "Sessions are down about 6%, which is normal for after Diwali."
+    },
+    {
+      "q": "What goal do both heads actually own - GMV, orders, or contribution margin?",
+      "a": "Orders and GMV this quarter, with contribution margin as a hard guardrail. Finance won't fund an open-ended sale."
+    },
+    {
+      "q": "Is there a sale already on the calendar, and what are competitors doing?",
+      "a": "The next big sale is EORS in December. Two competitors are running small wedding-season promotions."
+    },
+    {
+      "q": "How quickly can product ship a fix or rollback, and can we target an offer by segment?",
+      "a": "A rollback via remote config can go out in a day. A proper redesign is 2-3 weeks. Coupons can be targeted by segment and cart."
+    }
+  ],
+  "interviewer_data_reveals": "All numbers are illustrative (invented for teaching) unless a source is cited.\n\nExhibit 1 - Data check (illustrative): ATC events in analytics match the cart service database within 0.5%. No tracking change in the release. The drop is real.\n\nExhibit 2 - ATC per PDP view by segment, 3 weeks before vs last week (illustrative):\n| Segment | Before | Last week | Change |\n| Android, metro | 9.4% | 8.6% | -9% |\n| Android, Tier-2/3 | 8.8% | 6.6% | -25% |\n| iOS (all) | 10.5% | 10.0% | -5% |\n| Mobile web | 7.0% | 6.7% | -4% |\n| All | 9.0% | 7.6% | -16% |\n\nExhibit 3 - Android app v6.2 release, three weeks ago (illustrative): new PDP layout. The size selector moved below a carousel of 'similar styles'; the 'delivery by' date and 'easy 14-day return' badge moved into a collapsed section; the size chart opens in a new screen. Size-chart opens fell 30%, and 'select size' errors on tapping Add to Bag rose 2.4x.\n\nExhibit 4 - Demand and price check (illustrative):\n| Signal | Change |\n| Same weeks last year, ATC per PDP view (post-festive) | -4% |\n| Price index vs two main competitors, top 500 styles | flat (within 1%) |\n| Search-to-PDP click rate | flat |\n| Wishlist adds | -3% |\n\nExhibit 5 - Cost of options (illustrative):\n| Option | Cost | Expected ATC recovery |\n| Sitewide 10% extra off for 7 days | about Rs 150 per order on all orders; about Rs 18 cr for a week | Lifts all segments a few points; hides the Android gap |\n| Remote-config rollback of PDP (v6.1 layout) | Near zero; 1 day | Most of the Tier-2 Android gap |\n| Targeted offer: Rs 100 off for Tier-2 Android cart abandoners above Rs 999, 5 days | about Rs 1.2 cr | Residual seasonal gap |",
+  "solution_walkthrough": [
+    {
+      "speaker": "Interviewer",
+      "text": "Add-to-cart has been dropping for a few weeks. Marketing wants a sale to bring it back. Product says the product is broken and wants a fix. It's your call."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'll start by reframing the decision. It's not 'sale or fix'. It's 'what is causing the drop'. A sale is the right answer if demand is weak, and a fix is the right answer if something in the product is broken. If I pick before I know the cause, I'm just picking a side. So I'll do a quick scoping pass, ideally in 48 hours, then lay out options, decide, and say how we'll know it worked. Can I ask a few questions about the metric first?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Go on."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "How is add-to-cart measured? Per product-page view, per session, or absolute count? And over what period?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "ATC per PDP view went from 9.0% to 7.6% over three weeks. Absolute ATC is down about 18%."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "So conversion inside the product page fell about 16%, and absolute ATC fell more because traffic also dropped. Did it start suddenly or slide? And did anything happen around the start?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "It slid gradually from about three weeks ago, the week after Big Fashion Festival ended. There was also an Android release around then."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Two suspects already: the post-festive hangover and the Android release. Before anything else, is the data right? Did the release change tracking?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "[Shares Exhibit 1.] Analytics matches the cart database within 0.5%. The drop is real."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Good, that's ruled out. Now the most useful split: platform and city tier. If it's demand or seasonality, every segment should fall about the same. If it's the release, Android should stand out."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "[Shares Exhibit 2.]"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That's clear. iOS and mobile web are down 4-5%. Tier-2/3 Android is down 25%. A seasonal effect wouldn't care what phone you use, so the extra 20 points on Android, concentrated in Tier-2/3, points at the release. Can I see what changed in that release?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "[Shares Exhibit 3.] New PDP layout. The size selector moved below a 'similar styles' carousel, delivery date and the return badge moved into a collapsed section, and the size chart opens in a new screen. Size-chart opens fell 30%, and 'select size' errors when tapping Add to Bag rose 2.4 times."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "That fits the Tier-2/3 pattern well. In fashion, the two big hesitations for a first-time buyer in, say, Indore are 'will it fit' and 'can I return it'. The release hid both of them. Smaller screens on mid-range Android phones push the size selector further down. Last check on the demand side: price competitiveness and same period last year?"
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "[Shares Exhibit 4.] Last year the same weeks were down 4%. Price index against two competitors is flat. Search-to-PDP clicks are flat."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then here's my read. About 4-5 points of the 16 is normal post-Diwali seasonality, which shows up on iOS and web and in last year's data. The rest, about 11-12 points, is the Android PDP change. Prices are competitive, so a discount wouldn't be fixing the cause. Both heads are partly right: there is a small demand dip, and the product did break."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "So what are your options?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Three.\nA - Marketing's sale: sitewide 10% extra off for a week. Fast, and it'll lift ATC. But it pays about Rs 150 on every order, including the 84% of ATC that never went away, about Rs 18 crore for the week. It also hides the Android bug, so ATC drops again when the sale ends. Speed now vs a lasting fix.\nB - Product's fix only: a 2-3 week PDP redesign. It fixes the cause, but we lose three weeks of wedding-season demand while we wait. Impact vs momentum.\nC - Fix now, offer later and small: roll back the PDP layout on Android tomorrow through remote config, then a targeted, time-boxed offer only for the residual seasonal gap, aimed at Tier-2/3 cart abandoners. Focus vs coverage."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "And you choose?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "C, and it starts with the fix. Day 1: roll back to the v6.1 PDP on Android for all users, keeping 10% on v6.2 as a comparison so we can prove causality, not just assume it. Days 2-7: product works on a proper v6.3 where size selection, the delivery date and the return badge are above the fold, tested against v6.1. Marketing gets a real role: a 5-day Rs 100-off offer on carts above Rs 999 for Tier-2/3 Android users who added to cart and didn't buy, about Rs 1.2 crore, with a 10% holdout to measure lift. Their bigger push goes into the December EORS where it belongs."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What are you explicitly not doing?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Not running a sitewide sale. It costs about 15 times the targeted offer and treats a product bug as a demand problem. Not waiting three weeks for a redesign when a one-day rollback recovers most of the gap. Not adding urgency tricks like countdown timers or 'only 2 left' to push ATC. Those are dark patterns under the CCPA guidelines and they raise returns in fashion. And not running this as a vote. I'll take the data to both heads together, so it's a shared diagnosis, not a ruling against one of them."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "The marketing head pushes back: 'Competitors are running wedding promotions. If we don't run a sale we lose share.'"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Fair point, and I'd test it rather than argue. Our price index is flat and search-to-PDP is flat, so we're not losing at the shelf yet. Users find us and click; they drop on our page. If the rollback recovers Android and we still see a gap against competitors in the wedding categories, like ethnic wear and footwear, I'd fund a brand-funded wedding edit with the marketing team, which costs us much less than a platform-funded sale. Under the marketplace FDI rules, discounts should come from sellers and brands or clearly labelled platform coupons anyway."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "How do you measure whether you were right?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Hypothesis: the v6.2 PDP explains most of the Android Tier-2/3 drop. Leading signals in the first 72 hours: Android Tier-2/3 PDP-to-ATC on v6.1 vs the 10% still on v6.2, size-chart opens, and 'select size' error rate. I'd expect v6.1 to be back near 8.5% ATC within a week. For the offer: incremental orders vs holdout, and margin per incremental order. Guardrails: contribution margin per order, return rate, especially size-related returns, cancellation rate, and app crash rate."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "And if the rollback doesn't move ATC?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Then my hypothesis is wrong and I re-prioritise. I'd look at the next suspects in the same release: images, app performance on low-RAM phones, or a change in recommendations. I'd also check whether something external hit Tier-2 specifically, such as a COD policy change or a logistics delay in those pin codes. I'd hold the marketing offer until we know, because discounting into an unknown cause wastes money."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "What process change would you make so this doesn't happen again?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Two things. Every PDP or checkout release ships behind a flag with a holdout and ATC per PDP view as a release guardrail, split by platform and tier, with auto-alerts when a segment moves more than 5%. And our design reviews should test on a mid-range Android phone with a Tier-2 user profile, not just a flagship in Bengaluru. Most of our new festive buyers are on those phones."
+    },
+    {
+      "speaker": "Interviewer",
+      "text": "Summarise your decision."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "It's a fix, with a small, targeted sale on top. About three-quarters of the drop comes from the Android PDP release that hid size, delivery and returns, and that mostly hurt Tier-2/3 buyers. The rest is normal post-Diwali seasonality. We roll back tomorrow with a holdout, product ships a tested v6.3, and marketing runs a Rs 1.2 crore targeted cart offer for the seasonal gap and saves its big push for EORS. A sitewide sale would cost about Rs 18 crore and hide the bug. We'll know within a week if I'm right, and if I'm not, we change course before spending the marketing money."
+    }
+  ],
+  "answer_and_recommendation": "Diagnosis (ranked causes, illustrative): (1) Android app v6.2 PDP redesign hid the size selector, delivery date and return badge, worst on small-screen Tier-2/3 phones - about 11-12 of the 16-point drop in ATC per PDP view; (2) normal post-Diwali seasonality - about 4-5 points (matches iOS/web and last year); (3) ruled out: data error, price competitiveness, search/discovery. Ranked options: (1) RECOMMENDED - Option C: roll back the PDP on Android via remote config within a day with a 10% v6.2 holdout, ship a tested v6.3 with size/delivery/returns above the fold, and run a small targeted offer (Rs 100 off carts above Rs 999 for Tier-2/3 Android cart abandoners, 5 days, about Rs 1.2 cr, with holdout) for the seasonal gap; marketing's big push moves to December EORS. (2) Option B, fix only - right cause, but a 2-3 week redesign loses wedding-season weeks; the rollback captures most of this value in a day. (3) Option A, sitewide sale - rejected: about Rs 18 cr a week, subsidises orders that were never lost, hides the bug, and clashes with the FY27 profitability target. Not doing: no sitewide discount, no waiting for a full redesign, no fake urgency, no win/lose vote between heads. Risks and mitigation: rollback doesn't recover ATC - re-prioritise to other release changes and hold the offer; competitors win wedding share - brand-funded wedding edit; targeted offer trains users to abandon carts - cap one offer per user and holdout-test incrementality. Closing line: 'This isn't sale or fix - it's fix the cause today and spend a little on the part that really is seasonal. We'll know within a week, and if I'm wrong we change course before the marketing money goes out.'",
+  "counter_metrics_guardrails": "Primary: ATC per PDP view and orders per session by platform and city tier, rollback vs v6.2 holdout; incremental orders from the targeted offer vs its holdout. Guardrails: contribution margin per order and total discount cost per incremental order; return rate, especially size/fit returns (a sale or a pushy PDP can raise ATC while raising returns); cancellation and RTO rate for Tier-2/3 COD orders; share of orders that used a coupon (discount dependency); repeat cart-abandon rate among offer recipients (are we training abandonment?); app crash-free sessions and PDP load time on low-RAM Android; notification opt-outs from abandoned-cart nudges (DPDP consent); seller-funded vs platform-funded discount share.",
+  "follow_up_twists": [
+    {
+      "twist": "The CEO wants a number for the quarter and says, 'Just run the sale, we can fix the app later.'",
+      "response": "Show the cost side by side - about Rs 18 cr for a sitewide week vs a one-day rollback plus a Rs 1.2 cr targeted offer that recovers most of the same orders - and offer to report the rollback result within 72 hours before any sitewide spend."
+    },
+    {
+      "twist": "What if all segments had fallen equally by 16%?",
+      "response": "Then it's demand, not the release; I'd check price index by category, competitor promotions and macro signals (inflation, post-festive spend), and a well-targeted, brand-funded sale becomes a reasonable answer, measured against a holdout."
+    },
+    {
+      "twist": "The rollback works, but the design team says v6.2's 'similar styles' carousel lifted cross-category browsing.",
+      "response": "Keep the carousel but move it below the size selector, delivery date and returns badge in v6.3, and A/B test it with ATC per PDP view as the primary metric and browse depth as secondary."
+    }
+  ],
+  "common_pitfalls": [
+    "Picking a side (sale or fix) before diagnosing - the question is about the cause, and the segment split answers it.",
+    "Stopping at 'it's post-Diwali seasonality' - seasonality explains only 4-5 points; the Android Tier-2/3 gap is the real story.",
+    "Running a sitewide sale for a product bug - it pays every buyer, lifts ATC only while it lasts, and hides the problem.",
+    "Splitting the difference to please both heads (half sale, half fix) without tying each action to a cause and a measurable result."
+  ],
+  "skills_tested": [
+    "structuring",
+    "quant",
+    "prioritisation",
+    "business sense",
+    "communication",
+    "empathy",
+    "execution"
+  ],
+  "linked_teardown": "gokwik_product_teardown (gokwik_product_teardown/results/Shiprocket_Checkout_Fastrr.json and KwikCheckout.json). Key fact used: vendors claim checkout and cart fixes cut cart abandonment by about 25% (Shiprocket claim), showing that friction in the cart/PDP is often worth more than a discount. Also meesho_product_teardown Competitive_pressure.json for festive-acquired Tier-2/3 buyers being multi-app and price-sensitive.",
+  "uncertain": [
+    "round_and_level",
+    "context_as_of",
+    "regulatory_context",
+    "public_data_anchors"
+  ]
+}
